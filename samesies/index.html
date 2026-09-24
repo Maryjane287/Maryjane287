@@ -1,0 +1,677 @@
+<title>Samesies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;600;800&display=swap">
+<style>
+:root {
+  color-scheme: light;
+  --ground: #F3F1FF;
+  --card: #FFFFFF;
+  --ink: #1D1646;
+  --muted: #6A6390;
+  --line: #1D1646;
+  --pink: #FF4F8B;
+  --aqua: #16BFB3;
+  --sun: #FFD23F;
+  --bar: #FFC2D7;
+  --bar-top: #FF7EAA;
+  --you: #16BFB3;
+  --shadow: #1D1646;
+  --display: "Bricolage Grotesque", "Arial Black", system-ui, sans-serif;
+  --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --ground: #120F2A; --card: #1E1940; --ink: #F3F0FF; --muted: #A9A2D6;
+    --line: #F3F0FF; --pink: #FF6FA0; --aqua: #3EE0D2; --sun: #FFD84D;
+    --bar: #4A2A55; --bar-top: #B8336A; --you: #3EE0D2; --shadow: #000000;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ground: #120F2A; --card: #1E1940; --ink: #F3F0FF; --muted: #A9A2D6;
+  --line: #F3F0FF; --pink: #FF6FA0; --aqua: #3EE0D2; --sun: #FFD84D;
+  --bar: #4A2A55; --bar-top: #B8336A; --you: #3EE0D2; --shadow: #000000;
+}
+
+html, body { height: 100%; }
+body { margin: 0; background: var(--ground); color: var(--ink); font: 400 16px/1.45 var(--body); -webkit-tap-highlight-color: transparent; }
+#app { max-width: 520px; margin: 0 auto; padding-inline: 16px; padding-block: 12px 40px; box-sizing: border-box; min-height: 100%; display: flex; flex-direction: column; gap: 18px; }
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--aqua); outline-offset: 3px; }
+
+/* header */
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.brand { display: flex; align-items: center; gap: 8px; border: 0; background: none; padding: 0; }
+.brand svg { width: 38px; height: 26px; }
+.brand b { font: 800 1.45rem/1 var(--display); letter-spacing: -.02em; }
+.chips { display: flex; gap: 8px; }
+.chip { font: 800 .85rem var(--body); padding: 5px 11px; border: 2px solid var(--line); border-radius: 999px; background: var(--card); white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+/* type */
+h1, h2 { font-family: var(--display); letter-spacing: -.025em; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(2.3rem, 11vw, 3.4rem); line-height: .95; font-weight: 800; }
+h2 { font-size: clamp(1.6rem, 7vw, 2.1rem); line-height: 1.05; font-weight: 800; }
+.eyebrow { font: 800 .75rem var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--pink); margin: 0; }
+.muted { color: var(--muted); margin: 0; }
+.small { font-size: .85rem; }
+p { margin: 0; }
+
+/* cards & buttons */
+.card { background: var(--card); border: 2.5px solid var(--line); border-radius: 18px; padding: 18px; box-shadow: 5px 5px 0 var(--shadow); display: flex; flex-direction: column; gap: 14px; }
+.btn { border: 2.5px solid var(--line); border-radius: 999px; padding: 13px 22px; min-height: 52px; background: var(--pink); color: #fff; font: 800 1.1rem var(--display); box-shadow: 4px 4px 0 var(--shadow); transition: transform .08s, box-shadow .08s; }
+.btn:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--shadow); }
+.btn.alt { background: var(--card); color: var(--ink); }
+.btn.aqua { background: var(--aqua); color: #10233A; }
+.btn[disabled] { opacity: .45; pointer-events: none; }
+.row { display: flex; gap: 10px; flex-wrap: wrap; }
+.row > .btn { flex: 1 1 auto; }
+.link { border: 0; background: none; padding: 4px 0; color: var(--muted); text-decoration: underline; text-underline-offset: 3px; font-weight: 600; }
+
+/* home */
+.hero { display: flex; flex-direction: column; gap: 12px; padding-top: 8px; }
+.venn { width: 150px; height: 96px; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.stat { text-align: center; }
+.stat b { display: block; font: 800 1.5rem/1.1 var(--display); font-variant-numeric: tabular-nums; }
+.stat span { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; font-weight: 800; }
+.count { font: 800 1.2rem var(--display); font-variant-numeric: tabular-nums; }
+.field { display: flex; gap: 8px; }
+.field input { flex: 1; min-width: 0; border: 2.5px solid var(--line); border-radius: 12px; padding: 12px 14px; background: var(--ground); font-weight: 600; }
+
+/* question */
+.progress { display: flex; gap: 6px; }
+.progress i { flex: 1; height: 8px; border-radius: 99px; background: color-mix(in srgb, var(--ink) 15%, transparent); }
+.progress i.done { background: var(--pink); }
+.progress i.now { background: var(--sun); }
+.qtag { align-self: flex-start; font: 800 .75rem var(--body); letter-spacing: .1em; text-transform: uppercase; background: var(--sun); color: #1D1646; border: 2px solid var(--line); border-radius: 999px; padding: 3px 10px; }
+.prompt { font: 800 clamp(1.7rem, 7.5vw, 2.3rem)/1.08 var(--display); letter-spacing: -.02em; text-wrap: balance; }
+.answer { width: 100%; box-sizing: border-box; border: 2.5px solid var(--line); border-radius: 14px; padding: 16px; font: 800 1.35rem var(--display); background: var(--ground); }
+.options { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; }
+.options.nums { grid-template-columns: repeat(5, 1fr); }
+.opt { border: 2.5px solid var(--line); border-radius: 14px; background: var(--card); padding: 14px 10px; font: 800 1.1rem var(--display); box-shadow: 3px 3px 0 var(--shadow); }
+.opt:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--shadow); }
+.slider { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+.slider output { font: 800 3.2rem/1 var(--display); color: var(--pink); font-variant-numeric: tabular-nums; }
+.slider input { width: 100%; accent-color: var(--pink); height: 32px; }
+.hint { font-size: .85rem; color: var(--muted); }
+
+/* reveal board */
+.board { display: flex; flex-direction: column; gap: 7px; }
+.bar { position: relative; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 10px; border: 2px solid var(--line); border-radius: 10px; padding: 9px 12px; overflow: hidden; background: var(--card); }
+.bar .fill { position: absolute; inset: 0 auto 0 0; width: 0; background: var(--bar); transition: width .7s cubic-bezier(.2, .8, .2, 1); z-index: 0; }
+.bar.top .fill { background: var(--bar-top); }
+.bar > span { position: relative; z-index: 1; font-weight: 800; }
+.bar .pct { font-variant-numeric: tabular-nums; }
+.bar.mine { outline: 3.5px solid var(--you); outline-offset: 2px; }
+.bar.mine .lbl::after { content: "YOU"; margin-left: 8px; font: 800 .65rem var(--body); letter-spacing: .08em; background: var(--you); color: #10233A; padding: 2px 6px; border-radius: 6px; vertical-align: 2px; }
+.bar.other { border-style: dashed; }
+.points { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.points b { font: 800 2.6rem/1 var(--display); color: var(--pink); font-variant-numeric: tabular-nums; }
+.react { font: 800 1.2rem/1.2 var(--display); text-wrap: balance; }
+.scale { position: relative; height: 56px; margin-top: 22px; border: 2px solid var(--line); border-radius: 10px; background: linear-gradient(90deg, var(--bar), var(--bar-top)); }
+.pin { position: absolute; top: -26px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; font: 800 .75rem var(--body); white-space: nowrap; }
+.pin i { width: 4px; height: 60px; background: var(--ink); border-radius: 2px; margin-top: 2px; }
+.pin.you i { background: var(--you); }
+.pin.you { color: var(--you); }
+.note { font-size: .75rem; color: var(--muted); }
+
+/* results */
+.score { font: 800 clamp(3.4rem, 16vw, 4.6rem)/.9 var(--display); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.score small { font-size: .35em; color: var(--muted); letter-spacing: 0; }
+.title { font: 800 1.5rem/1.1 var(--display); }
+.grid { font-size: 1.9rem; letter-spacing: .12em; }
+.recap { display: flex; flex-direction: column; gap: 8px; }
+.recap div { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; font-size: .92rem; }
+.recap b { font-variant-numeric: tabular-nums; }
+.toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: var(--ground); padding: 10px 18px; border-radius: 999px; font-weight: 800; z-index: 50; }
+.copybox { width: 100%; box-sizing: border-box; min-height: 120px; border: 2px dashed var(--line); border-radius: 12px; padding: 10px; background: var(--ground); font: 600 .9rem var(--body); }
+
+/* duel */
+.duel { display: flex; flex-direction: column; gap: 10px; }
+.duel .q { font-weight: 800; font-size: .9rem; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.pair span { border: 2px solid var(--line); border-radius: 10px; padding: 8px 10px; font-weight: 800; background: var(--ground); overflow-wrap: anywhere; }
+.pair.jinx span { background: var(--sun); color: #1D1646; }
+.jinx-tag { font: 800 .72rem var(--body); letter-spacing: .08em; color: var(--pink); }
+.vs { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; text-align: center; gap: 8px; }
+.vs b { display: block; font: 800 2rem var(--display); font-variant-numeric: tabular-nums; }
+
+/* archive */
+.days { display: grid; grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); gap: 8px; }
+.day { border: 2px solid var(--line); border-radius: 12px; background: var(--card); padding: 10px 4px; font: 800 1rem var(--display); display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.day small { font: 600 .7rem var(--body); color: var(--muted); }
+.day.played { background: var(--sun); color: #1D1646; }
+.day.played small { color: #1D1646; }
+
+.confetti { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 40; }
+.confetti i { position: absolute; top: -12px; width: 9px; height: 13px; border-radius: 2px; animation: fall 1.7s ease-in forwards; }
+@keyframes fall { to { transform: translate(var(--dx), 105vh) rotate(var(--r)); } }
+@keyframes pop { from { transform: scale(.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.pop { animation: pop .35s cubic-bezier(.3, 1.6, .5, 1); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+</style>
+
+<div id="app"></div>
+
+<script>
+(() => {
+"use strict";
+
+/* ============================================================
+   QUESTION BANK — one entry per day, five questions each.
+   name: free text, matched against the crowd's answers (+ aliases)
+   pick: tap one option
+   pct : guess a percentage
+   Crowd numbers below are the Samesies FORECAST used until live
+   player results are connected.
+   ============================================================ */
+const N = (c, q, a) => ({ t: "name", c, q, a: a.map(([l, p, al]) => ({ l, p, al: al ? al.split("|") : [] })) });
+const P = (c, q, a) => ({ t: "pick", c, q, a: a.map(([l, p]) => ({ l, p, al: [] })) });
+const S = (c, q, v) => ({ t: "pct", c, q, v });
+
+const BANK = [
+  [ N("Food", "Name a fruit. First one that pops into your head.", [["Apple",34,"apples"],["Banana",21,"bananas"],["Orange",12,"oranges"],["Mango",9,"mangoes|mangos"],["Strawberry",8,"strawberries"],["Grape",5,"grapes"],["Pineapple",4,"pineapples"]]),
+    N("Home", "Name something that goes missing in every home.", [["Keys",30,"key|car keys|house keys"],["TV remote",24,"remote|remote control|the remote|tv remote"],["Phone",14,"mobile|cell phone|smartphone|my phone"],["One sock",12,"sock|socks"],["Charger",8,"phone charger|charging cable|cable"],["Glasses",6,"sunglasses|spectacles|specs"]]),
+    P("Numbers", "Pick a number from 1 to 10.", [["7",28],["3",14],["5",11],["8",9],["4",8],["6",8],["2",7],["9",7],["10",5],["1",3]]),
+    N("Life", "Name something people pretend to understand.", [["Crypto",24,"bitcoin|cryptocurrency|nft|nfts|blockchain"],["Taxes",20,"tax|tax returns"],["Wine",12,"wine tasting"],["Politics",11,"politicians|elections"],["Modern art",9,"art|abstract art"],["The offside rule",8,"offside|football rules|soccer rules"],["The stock market",7,"stocks|stock market|investing"]]),
+    S("Habits", "What % of people check their phone within 5 minutes of waking up?", 71) ],
+
+  [ N("Nope", "Name an animal you'd NOT want to find in your bed.", [["Snake",38,"snakes"],["Spider",26,"spiders|tarantula"],["Rat",11,"rats|mouse|mice"],["Cockroach",9,"cockroaches|roach|roaches"],["Scorpion",6,"scorpions"],["Crocodile",4,"alligator|croc|crocs"]]),
+    N("Dreams", "Name a superpower everyone secretly wants.", [["Flying",30,"fly|flight|to fly"],["Invisibility",22,"invisible|be invisible|being invisible"],["Teleportation",18,"teleport|teleporting"],["Mind reading",11,"read minds|reading minds|telepathy"],["Time travel",9,"stop time|control time|time control"],["Super strength",4,"strength|strong"]]),
+    P("Great debate", "Cats or dogs?", [["🐶 Dogs",58],["🐱 Cats",42]]),
+    N("Music", "Your favourite song comes on. What do you do?", [["Sing along",34,"sing|singing"],["Dance",30,"dancing"],["Turn it up",18,"volume up|louder|turn up the volume|turn up"],["Nod along",6,"tap my feet|nod my head|head bop|nod"],["Replay it",4,"repeat|replay|put it on repeat"],["Cry",4,"tear up|crying"]]),
+    S("Breakfast crimes", "What % of people pour the milk BEFORE the cereal?", 9) ],
+
+  [ N("Quick!", "Name a colour. Go!", [["Blue",38,""],["Red",24,""],["Green",12,""],["Purple",9,"violet"],["Yellow",7,""],["Pink",5,""],["Black",3,""]]),
+    N("Emergency", "Your house is on fire. What do you grab first?", [["Phone",28,"mobile|my phone|cell phone"],["The pet",22,"pet|dog|cat|my dog|my cat|pets"],["Family",14,"kids|my kids|children|baby|my baby|family"],["Passport",10,"documents|papers|id|passport"],["Laptop",9,"computer|pc"],["Photos",6,"photo album|pictures"],["Wallet",5,"money|purse"]]),
+    P("Would you rather", "Would you rather always be…", [["⏰ 10 minutes early",68],["🐢 10 minutes late",32]]),
+    N("Weakness", "Name something that's always \"just one more\".", [["Episode",32,"one more episode|show|netflix|tv|series"],["Snack",18,"chips|crisps|cookie|biscuit|bite|snacks"],["Game",14,"level|round|one more game|match"],["Five more minutes",12,"minute|minutes|snooze|sleep|5 more minutes"],["Video",10,"tiktok|reel|reels|scroll|scrolling|youtube"],["Drink",6,"beer|wine|coffee|cup"]]),
+    S("Confessions", "What % of people have fallen asleep in a cinema?", 38) ],
+
+  [ N("Parents", "Name something parents ALWAYS say.", [["Because I said so",30,"because i said so|cause i said so|said so"],["Ask your dad / mum",14,"ask your dad|ask your mum|ask your mom|ask your father|ask your mother"],["Money doesn't grow on trees",13,"money doesnt grow on trees|grow on trees"],["Turn off the lights",12,"lights|switch off the light|turn off the light"],["I'm not angry, just disappointed",8,"disappointed|not angry"],["Close the door",6,"shut the door|born in a barn"]]),
+    N("Science", "Name something you can't do with your eyes open.", [["Sneeze",44,"sneezing"],["Sleep",38,"sleeping|fall asleep"],["Blink",6,"blinking"],["Dream",5,"dreaming"],["Kiss",4,"kissing"]]),
+    P("Great debate", "Pineapple on pizza?", [["🍍 Delicious",46],["🚫 A crime",54]]),
+    N("Dreams", "Name a job every kid wants to have.", [["Doctor",22,""],["Astronaut",16,""],["Footballer",14,"football player|soccer player|athlete|footballer"],["YouTuber",12,"youtuber|influencer|streamer|tiktoker|content creator"],["Firefighter",10,"fireman|firefighter"],["Teacher",9,""],["Pilot",7,""],["Vet",5,"veterinarian"]]),
+    S("Pets", "What % of people talk to their pets like they're human?", 82) ],
+
+  [ N("Mystery", "Name something at the bottom of every handbag.", [["Receipts",24,"receipt|paper|papers"],["Lip balm",16,"lipstick|chapstick|lip gloss|lipgloss|makeup"],["Coins",14,"change|money|coin"],["Gum",12,"chewing gum|mints|mint"],["Keys",10,"key"],["Crumbs",8,"snacks|food"],["Pen",6,"pens"]]),
+    N("Pain", "Name the most annoying sound in the world.", [["Alarm clock",26,"alarm|alarms"],["Nails on a chalkboard",22,"chalkboard|nails on chalkboard|nails"],["Loud chewing",14,"chewing|eating|chewing loudly|slurping"],["Mosquito",12,"mosquitoes|buzzing|fly|flies"],["Baby crying",10,"crying baby|crying"],["Snoring",8,"snore"]]),
+    P("Week", "Which day of the week is the worst?", [["Monday",72],["Sunday",7],["Tuesday",8],["Wednesday",5],["Thursday",4],["Friday",2],["Saturday",2]]),
+    N("Shower thoughts", "Name something people do in the shower.", [["Sing",42,"singing"],["Think",20,"thinking|overthink|overthinking"],["Win old arguments",7,"argue|practice arguments|rehearse arguments|talk to myself|arguments"],["Cry",10,"crying"],["Pee",9,"wee"],["Shave",6,"shaving"]]),
+    S("Confessions", "What % of people have faked a phone call to avoid someone?", 64) ],
+
+  [ N("Food", "Name a pizza topping.", [["Pepperoni",40,""],["Cheese",16,"extra cheese|mozzarella"],["Mushrooms",12,"mushroom"],["Pineapple",8,""],["Sausage",7,""],["Olives",6,"olive"],["Chicken",5,""]]),
+    N("Space", "Name something you'd find in space.", [["Stars",30,"star"],["Planets",18,"planet|mars|jupiter|saturn"],["Aliens",16,"alien|ufo|ufos"],["The Moon",12,"moon"],["Astronauts",8,"astronaut"],["Black holes",7,"black hole"],["Asteroids",5,"asteroid|meteor|comet"]]),
+    P("Great debate", "Morning person or night owl?", [["🦉 Night owl",61],["🌅 Morning person",39]]),
+    N("Money", "Name something that gets more expensive every year.", [["Rent",24,"housing|houses|house|homes"],["Food",20,"groceries"],["Fuel",15,"gas|petrol|gasoline"],["Everything",12,"literally everything"],["Coffee",8,""],["School fees",7,"tuition|education|college|university"],["Concert tickets",5,"tickets|concerts"]]),
+    S("Little lies", "What % of people text \"on my way\" while still at home?", 69) ],
+
+  [ N("Magic", "Name a famous wizard.", [["Harry Potter",45,"harry|potter"],["Gandalf",22,""],["Merlin",16,""],["Dumbledore",10,""],["Voldemort",4,""]]),
+    N("Dating", "Name something you should NEVER say on a first date.", [["I love you",22,"love you"],["Anything about your ex",20,"ex|my ex|exes"],["Can you pay?",12,"pay|split the bill|you pay"],["Let's get married",11,"marry|marriage|wedding|married"],["My mum says…",8,"mum|mom|mother|my mom"],["How much do you earn?",6,"salary|money|earn"]]),
+    P("Fears", "Which is scarier?", [["🦈 Sharks",44],["🕷️ Spiders",30],["🧗 Heights",26]]),
+    N("Jackpot", "You win the lottery. First thing you buy?", [["A house",38,"house|home|mansion"],["A car",24,"car|cars|new car|lamborghini|ferrari|lambo"],["A holiday",12,"holiday|vacation|trip|travel"],["An island",8,"island|private island"],["A yacht",6,"yacht|boat"],["Pay off debt",5,"debt|debts|loans"]]),
+    S("Awkward", "What % of people have laughed at completely the wrong moment?", 78) ],
+
+  [ N("Kitchen", "Name something that's been in the fridge way too long.", [["Leftovers",30,"old food|leftover"],["Milk",16,""],["Cheese",12,""],["Sauces",10,"ketchup|sauce|condiments|mustard|mayo"],["Vegetables",9,"veggies|lettuce|salad"],["Eggs",7,"egg"],["Butter",5,""]]),
+    N("Game night", "Name a board game.", [["Monopoly",40,""],["Chess",20,""],["Scrabble",14,""],["Ludo",8,""],["Snakes and ladders",7,"snakes & ladders|chutes and ladders"],["Cluedo",6,"clue"],["Uno",5,""]]),
+    P("Great debate", "Toilet roll: over or under?", [["⬆️ Over",70],["⬇️ Under",30]]),
+    N("Excuses", "Name a reason people are late for work.", [["Traffic",44,"jam|traffic jam|stuck in traffic"],["Overslept",26,"slept in|alarm|sleep|oversleep|alarm didnt go off"],["Late bus or train",10,"bus|train|public transport"],["Car trouble",8,"car broke down|flat tyre|flat tire|car"],["The kids",6,"kids|children|school run"],["Weather",4,"rain|snow"]]),
+    S("Oops", "What % of people have sent a text to the wrong person?", 76) ],
+
+  [ N("Quick!", "Name something with wheels.", [["Car",46,"cars"],["Bicycle",20,"bike"],["Bus",9,""],["Skateboard",7,""],["Train",6,""],["Wheelchair",5,""],["Shopping trolley",4,"shopping cart|trolley|cart"]]),
+    N("Fears", "Name something people fear that's actually harmless.", [["Spiders",26,"spider"],["Clowns",18,"clown"],["The dark",16,"dark|darkness"],["Moths",10,"moth|butterfly|butterflies"],["The dentist",8,"dentist|dentists"],["Balloons",6,"balloon|balloons popping"],["Frogs",6,"frog"]]),
+    P("Routine", "First thing you do when you get home?", [["👟 Kick off shoes",40],["🍪 Find a snack",22],["📱 Scroll",18],["🚿 Shower",12],["😴 Nap",8]]),
+    N("Senses", "Name a smell everyone loves.", [["Fresh bread",22,"bread|baking|bakery"],["Coffee",18,""],["Rain",16,"after rain|petrichor|wet earth"],["Clean laundry",10,"laundry|clean clothes|washing|fabric softener"],["Cookies",8,"cookie|biscuits|baking cookies"],["Popcorn",6,""],["New car",6,"new car smell"],["Flowers",5,"flower|roses|rose"]]),
+    S("Hope", "What % of people re-check the fridge hoping new food appeared?", 81) ],
+
+  [ N("Kids", "Name a vegetable kids hate.", [["Broccoli",40,""],["Brussels sprouts",24,"sprouts|brussel sprouts|brussels"],["Spinach",10,""],["Peas",8,"pea"],["Carrots",6,"carrot"],["Cabbage",5,""],["Okra",4,""]]),
+    N("Survival", "You're stuck on a desert island. What do you bring?", [["Water",22,""],["Phone",16,"mobile"],["A knife",14,"knife|pocket knife|swiss army knife"],["Food",12,""],["A lighter",10,"lighter|matches|fire"],["A book",6,"book|books"],["My best friend",6,"friend|best friend|partner|wife|husband"]]),
+    P("Texting", "Someone texts you. You reply…", [["⚡ Instantly",38],["🕰️ After a while",45],["👀 Leave them on read",17]]),
+    N("Gym", "Name something people do at the gym besides exercise.", [["Take selfies",34,"selfies|selfie|photos|take pictures|mirror selfie"],["Scroll their phone",20,"phone|scroll|text|texting"],["Chat",14,"talk|gossip|socialise|socialize"],["Stare at people",10,"stare|people watch|look at people"],["Grunt",7,"grunting|noises"],["Sit on machines",6,"rest|sit|sitting"]]),
+    S("Curiosity", "What % of people have googled their own name?", 74) ],
+
+  [ N("World", "Name a country famous for its food.", [["Italy",44,"italian"],["Japan",12,"japanese"],["Mexico",12,"mexican"],["France",10,"french"],["India",9,"indian"],["China",6,"chinese"],["Thailand",4,"thai"]]),
+    N("Life", "Name something that should come with an instruction manual.", [["Babies",34,"baby|kids|children|parenting"],["Relationships",18,"love|partner|men|women|marriage"],["Life",16,""],["Adulting",10,"adulthood|being an adult|taxes"],["Printers",6,"printer"],["Cats",6,"cat"]]),
+    P("Holiday", "Dream holiday?", [["🏖️ Beach",57],["🏙️ City break",43]]),
+    N("Ouch", "You stub your toe. What comes out of your mouth?", [["(Unprintable) 🤬",36,"swear|swear word|curse|f word|damn|shit|fuck|dammit"],["Ouch!",30,"ow|oww|ouch|ow ow ow"],["Oh my God",12,"omg|oh god|jesus|god"],["Just screaming",10,"scream|aaah|argh|aah|ahh"],["Why me?!",4,"why me|why"]]),
+    S("Apocalypse", "What % of people think they'd survive a zombie apocalypse?", 58) ],
+
+  [ N("Travel", "Name a famous landmark.", [["Eiffel Tower",40,"eiffel"],["Statue of Liberty",14,"liberty"],["Great Wall of China",12,"great wall"],["Pyramids",12,"pyramid|pyramids of giza|giza"],["Big Ben",8,""],["Taj Mahal",6,""],["Colosseum",4,"coliseum"]]),
+    N("Chill", "Name something that's better cold.", [["Ice cream",28,""],["Drinks",20,"water|soda|coke|beer|juice|drink"],["The other side of the pillow",12,"pillow|pillow side"],["Leftover pizza",12,"pizza|cold pizza"],["Watermelon",10,"fruit"],["Sleeping",6,"sleep|bedroom|the weather"]]),
+    P("Would you rather", "Would you rather…", [["🐾 Talk to animals",52],["🌍 Speak every language",48]]),
+    N("Disaster", "Name the WORST moment for your phone to die.", [["Using maps",30,"directions|gps|maps|navigation|lost"],["An important call",18,"call|phone call"],["Taking a photo",12,"photo|pictures|video"],["Paying for something",10,"payment|paying|checkout|ticket|boarding pass"],["Booking a ride home",10,"uber|taxi|ride|cab"],["An emergency",8,"emergency"]]),
+    S("Overthinking", "What % of people rehearse conversations that never happen?", 88) ],
+
+  [ N("Sport", "Name a sport.", [["Football",44,"soccer"],["Basketball",20,""],["Tennis",10,""],["Cricket",8,""],["Baseball",6,""],["Swimming",5,""],["Boxing",4,""]]),
+    N("Spooky", "Name something you'll find under the bed.", [["A monster",24,"monster|monsters"],["Dust",20,"dust bunnies|dirt"],["Shoes",16,"shoe"],["Socks",14,"sock"],["Boxes",10,"box|storage|suitcase"],["Toys",8,"toy"]]),
+    P("Sacrifice", "Which would you give up for a whole year?", [["📵 Social media",48],["🍫 Sweets",22],["☕ Coffee",20],["🎧 Music",10]]),
+    N("Pain", "Name the worst thing to step on.", [["LEGO",64,"lego brick|legos|lego"],["A plug",10,"plug|uk plug|charger"],["Glass",8,"broken glass"],["Dog poo",8,"poop|poo|dog poop"],["A slug",4,"slug|snail"],["A pin",3,"pin|tack|thumbtack|drawing pin"]]),
+    S("Brain", "What % of people have walked into a room and forgotten why?", 93) ],
+
+  [ N("Hobbies", "Name something people collect.", [["Stamps",30,"stamp"],["Coins",22,"coin"],["Sneakers",12,"shoes|trainers|sneaker"],["Cards",10,"trading cards|pokemon cards|pokemon|football cards"],["Books",7,"book"],["Stickers",5,"sticker"],["Magnets",5,"fridge magnets|magnet"]]),
+    N("Movies", "Name a movie EVERYONE has seen.", [["Titanic",26,""],["Avatar",12,""],["Frozen",10,""],["The Lion King",10,"lion king"],["Harry Potter",9,""],["Home Alone",8,""],["Star Wars",7,""],["Shrek",6,""]]),
+    P("Etiquette", "How do you eat pizza?", [["🤲 Hands",76],["🌮 Folded",16],["🍴 Knife and fork",8]]),
+    N("Family", "Name something that happens at EVERY family party.", [["Way too much food",26,"food|eating|too much food"],["Arguments",18,"argument|fight|fighting|drama"],["Someone gets tipsy",16,"drunk|drinking|tipsy"],["Dancing",14,"dance"],["\"You've grown so much!\"",10,"youve grown|grown|when are you getting married|questions"],["The same old stories",8,"stories|uncle|old stories"]]),
+    S("Autopilot", "The waiter says \"enjoy your meal\". What % say \"you too\"?", 67) ],
+];
+
+/* ============================================================ */
+const EPOCH = Date.UTC(2026, 8, 24);           // Samesies #1
+const DAY = 864e5;
+const dayNum = (t = Date.now()) => Math.max(1, Math.floor((t - EPOCH) / DAY) + 1);
+const setFor = (d) => BANK[(d - 1) % BANK.length];
+const $app = document.getElementById("app");
+const KEY = "samesies.v1";
+
+/* ---------- storage (per-viewer, safe) ---------- */
+function load() {
+  try { const s = JSON.parse(localStorage.getItem(KEY)); if (s && s.v === 1) return s; } catch (e) {}
+  return { v: 1, days: {}, name: "", streak: 0, best: 0, lastDaily: 0, challenge: null };
+}
+const S_ = load();
+const liveStreak = () => (S_.lastDaily >= dayNum() - 1 ? S_.streak : 0);
+function save() { try { localStorage.setItem(KEY, JSON.stringify(S_)); } catch (e) {} }
+
+/* ---------- text matching ---------- */
+function norm(s) {
+  return String(s).toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "")
+    .replace(/[’'`]/g, "").replace(/&/g, " and ").replace(/[^a-z0-9 ]+/g, " ")
+    .replace(/\b(a|an|the|my|some|your)\b/g, " ").replace(/\s+/g, " ").trim();
+}
+const sing = (w) => (w.length > 3 && /s$/.test(w) && !/ss$/.test(w)) ? w.replace(/ies$/, "y").replace(/oes$/, "o").replace(/s$/, "") : w;
+const keyOf = (s) => norm(s).split(" ").map(sing).join(" ");
+function lev(a, b) {
+  const m = a.length, n = b.length; if (Math.abs(m - n) > 2) return 9;
+  let prev = Array.from({ length: n + 1 }, (_, j) => j);
+  for (let i = 1; i <= m; i++) {
+    const cur = [i];
+    for (let j = 1; j <= n; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    prev = cur;
+  }
+  return prev[n];
+}
+function matchAnswer(input, answers) {
+  const k = keyOf(input); if (!k) return -1;
+  const cands = answers.map((a) => [a.l, ...a.al].map(keyOf).filter(Boolean));
+  for (let i = 0; i < cands.length; i++) if (cands[i].includes(k)) return i;
+  for (let i = 0; i < cands.length; i++) if (cands[i].some((c) => c.length >= 4 && (" " + k + " ").includes(" " + c + " "))) return i;
+  for (let i = 0; i < cands.length; i++) if (cands[i].some((c) => c.length >= 5 && lev(k, c) <= (c.length > 8 ? 2 : 1))) return i;
+  return -1;
+}
+
+/* ---------- scoring ---------- */
+function scoreFor(q, ans) {
+  if (q.t === "pct") return Math.max(0, Math.round(100 - Math.abs(ans.g - q.v) * 2.5));
+  if (ans.i < 0) return 0;
+  const top = Math.max(...q.a.map((a) => a.p));
+  return Math.round((q.a[ans.i].p / top) * 100);
+}
+const emojiFor = (pts) => pts >= 100 ? "🎯" : pts >= 60 ? "🟢" : pts >= 25 ? "🟡" : pts > 0 ? "🟠" : "🦄";
+function reaction(pts, q) {
+  if (q.t === "pct") {
+    if (pts >= 95) return "Frighteningly accurate. Are you the crowd?";
+    if (pts >= 75) return "Close! You read the room.";
+    if (pts >= 40) return "In the neighbourhood. Wrong street.";
+    return "The world disagrees with you. Loudly.";
+  }
+  if (pts >= 100) return pick(["SAMESIES! 🧠🧠 You and the world share one brain cell.", "Top answer. You are painfully normal and we love that.", "Survey says… YOU. Absolute hive mind."]);
+  if (pts >= 60) return pick(["So close to the hive mind.", "Solid! The crowd nods politely.", "Big answer. Not THE answer."]);
+  if (pts >= 25) return pick(["On the board! Respectable.", "Some of the world agrees with you.", "A niche but valid take."]);
+  if (pts > 0) return pick(["Barely on the board 👀", "A tiny group of people back you up.", "You found the quiet corner of the crowd."]);
+  return pick(["🦄 Unique. Nobody else is thinking what you're thinking.", "🦄 Main character energy. The crowd has no idea.", "🦄 Bold. Iconic. Completely alone."]);
+}
+function titleFor(total) {
+  if (total >= 430) return "Human Wi-Fi 📶 — fully connected to everyone";
+  if (total >= 340) return "Certified Normie 🐑 — in the best way";
+  if (total >= 250) return "Crowd Whisperer 🌊";
+  if (total >= 150) return "Slightly Off-Script 🎭";
+  return "Main Character 🦄 — nobody thinks like you";
+}
+const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+/* ---------- helpers ---------- */
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+function toast(msg) {
+  const t = document.createElement("div"); t.className = "toast pop"; t.textContent = msg;
+  document.body.appendChild(t); setTimeout(() => t.remove(), 1800);
+}
+function confetti() {
+  const box = document.createElement("div"); box.className = "confetti";
+  const cols = ["#FF4F8B", "#16BFB3", "#FFD23F", "#7B61FF"];
+  for (let i = 0; i < 44; i++) {
+    const s = document.createElement("i");
+    s.style.left = Math.random() * 100 + "%"; s.style.background = cols[i % 4];
+    s.style.animationDelay = Math.random() * .3 + "s";
+    s.style.setProperty("--dx", (Math.random() * 140 - 70) + "px");
+    s.style.setProperty("--r", (Math.random() * 720) + "deg");
+    box.appendChild(s);
+  }
+  document.body.appendChild(box); setTimeout(() => box.remove(), 2200);
+}
+async function copyText(text, fallbackHost) {
+  try { await navigator.clipboard.writeText(text); toast("Copied! Paste it anywhere 📋"); return; } catch (e) {}
+  // fallback: show a selectable box
+  if (fallbackHost) {
+    fallbackHost.innerHTML = `<p class="small muted">Copy this and paste it into WhatsApp, TikTok or anywhere:</p><textarea class="copybox" readonly>${esc(text)}</textarea>`;
+    const ta = fallbackHost.querySelector("textarea"); ta.focus(); ta.select();
+  }
+}
+function countdown(el) {
+  const tick = () => {
+    const next = EPOCH + dayNum() * DAY; let s = Math.max(0, Math.floor((next - Date.now()) / 1000));
+    const h = Math.floor(s / 3600); s %= 3600; const m = Math.floor(s / 60); s %= 60;
+    if (el.isConnected) el.textContent = `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+  };
+  tick(); const id = setInterval(() => { if (!el.isConnected) return clearInterval(id); tick(); }, 1000);
+}
+const LOGO = `<svg viewBox="0 0 60 40" aria-hidden="true"><circle cx="20" cy="20" r="16" fill="#FF4F8B"/><circle cx="40" cy="20" r="16" fill="#16BFB3" style="mix-blend-mode:multiply"/></svg>`;
+const VENN = `<svg class="venn" viewBox="0 0 150 96" aria-hidden="true"><circle cx="52" cy="48" r="42" fill="#FF4F8B"/><circle cx="98" cy="48" r="42" fill="#16BFB3" style="mix-blend-mode:multiply"/><text x="75" y="56" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="22" fill="#fff">=</text></svg>`;
+function header() {
+  return `<header class="top"><button class="brand" data-go="home" aria-label="Samesies home">${LOGO}<b>Samesies</b></button>
+    <div class="chips"><span class="chip" title="Daily streak">🔥 ${liveStreak()}</span></div></header>`;
+}
+function bindNav() {
+  $app.querySelectorAll("[data-go]").forEach((b) => b.addEventListener("click", () => {
+    const g = b.dataset.go;
+    if (g === "home") home(); else if (g === "archive") archive(); else if (g === "how") how();
+  }));
+}
+
+/* ---------- challenge codes (no server needed) ---------- */
+function b64enc(obj) {
+  const bytes = new TextEncoder().encode(JSON.stringify(obj)); let bin = "";
+  bytes.forEach((b) => bin += String.fromCharCode(b));
+  return btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+function b64dec(str) {
+  const s = str.replace(/-/g, "+").replace(/_/g, "/"); const bin = atob(s + "===".slice((s.length + 3) % 4));
+  return JSON.parse(new TextDecoder().decode(Uint8Array.from(bin, (c) => c.charCodeAt(0))));
+}
+function makeCode(d) {
+  const rec = S_.days[d];
+  const a = rec.ans.map((x) => x.t === "pct" ? x.g : (x.i >= 0 ? x.i : "~" + (x.x || "").slice(0, 24)));
+  return "SAME-" + b64enc({ d, n: (S_.name || "A friend").slice(0, 16), a, p: rec.pts });
+}
+function readCode(raw) {
+  const m = String(raw).trim().match(/SAME-([A-Za-z0-9_-]+)/) || String(raw).trim().match(/^c-([A-Za-z0-9_-]+)$/);
+  if (!m) return null;
+  try { const o = b64dec(m[1]); if (o && typeof o.d === "number" && Array.isArray(o.a) && o.a.length === 5) return o; } catch (e) {}
+  return null;
+}
+
+/* ============================================================
+   SCREENS
+   ============================================================ */
+function home() {
+  const d = dayNum(); const rec = S_.days[d]; const done = rec && rec.done; const started = rec && rec.ans.length && !done;
+  const played = Object.values(S_.days).filter((x) => x.done);
+  const avg = played.length ? Math.round(played.reduce((s, x) => s + x.total, 0) / played.length) : 0;
+  $app.innerHTML = `${header()}
+  <section class="hero">
+    ${VENN}
+    <p class="eyebrow">Samesies #${d} · 5 questions · no right answers</p>
+    <h1>Think like the world.</h1>
+    <p class="muted">Every day, five quick questions. You score points for giving the <b>same answer as everyone else</b>. Being basic has never been this rewarding.</p>
+  </section>
+  <div class="row">
+    <button class="btn" id="play">${done ? "See today's results" : started ? "Continue today's game" : "Play today's Samesies"}</button>
+  </div>
+  <section class="card">
+    <div class="stats">
+      <div class="stat"><b>${played.length}</b><span>Played</span></div>
+      <div class="stat"><b>${liveStreak()}</b><span>Streak</span></div>
+      <div class="stat"><b>${S_.best}</b><span>Best</span></div>
+      <div class="stat"><b>${avg}</b><span>Average</span></div>
+    </div>
+    <p class="muted small">Next Samesies in <span class="count" id="cd"></span></p>
+  </section>
+  <section class="card">
+    <p class="eyebrow">Got a challenge code?</p>
+    <p class="muted small">A friend sent you a code? Paste it to play their questions and see how many times you <b>JINX!</b></p>
+    <form class="field" id="codeForm"><input id="code" placeholder="SAME-…" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Challenge code"><button class="btn aqua" type="submit">Go</button></form>
+  </section>
+  <div class="row">
+    <button class="btn alt" data-go="archive">Past days</button>
+    <button class="btn alt" data-go="how">How to play</button>
+  </div>`;
+  bindNav(); countdown(document.getElementById("cd"));
+  document.getElementById("play").onclick = () => done ? results(d) : play(d);
+  document.getElementById("codeForm").addEventListener("submit", (e) => {
+    e.preventDefault(); const c = readCode(document.getElementById("code").value);
+    if (!c) return toast("That code doesn't look right 🤔");
+    acceptChallenge(c);
+  });
+}
+
+function acceptChallenge(c) {
+  S_.challenge = c; save();
+  if (c.d > dayNum() || c.d < 1) return toast("That code is from the future 👽");
+  const rec = S_.days[c.d];
+  toast(`${c.n} challenged you! 🥊`);
+  if (rec && rec.done) duel(c.d); else play(c.d);
+}
+
+function how() {
+  $app.innerHTML = `${header()}
+  <h2>How to play</h2>
+  <section class="card">
+    <p><b>1. Answer 5 questions.</b> "Name a fruit." "Pick a number." There's no right answer…</p>
+    <p><b>2. …except what everyone else said.</b> Match the most popular answer for 100 points. Anything on the board scores something.</p>
+    <p><b>3. Say something nobody said?</b> That's a 🦄. Zero points, maximum personality.</p>
+    <p><b>4. Share your score</b> and send a <b>challenge code</b> to friends. When you both give the same answer, it's a <b>JINX!</b></p>
+    <p><b>5. New questions every day</b> at midnight (UTC). Keep your 🔥 streak alive.</p>
+  </section>
+  <p class="note">Early access: crowd numbers are the Samesies forecast. Live results from real players switch on at launch.</p>
+  <button class="btn" data-go="home">Got it</button>`;
+  bindNav();
+}
+
+function archive() {
+  const today = dayNum(); let cells = "";
+  for (let d = today; d >= 1; d--) {
+    const r = S_.days[d];
+    cells += `<button class="day ${r && r.done ? "played" : ""}" data-day="${d}">#${d}<small>${r && r.done ? r.total : "play"}</small></button>`;
+  }
+  $app.innerHTML = `${header()}
+  <h2>Past days</h2>
+  <p class="muted">Missed a day? Play it here. Only today's game counts for your streak.</p>
+  <div class="days">${cells}</div>
+  <button class="btn alt" data-go="home">Back</button>`;
+  bindNav();
+  $app.querySelectorAll("[data-day]").forEach((b) => b.onclick = () => {
+    const d = +b.dataset.day; const r = S_.days[d]; r && r.done ? results(d) : play(d);
+  });
+}
+
+/* ----- play loop ----- */
+function play(d) {
+  if (!S_.days[d]) S_.days[d] = { ans: [], pts: [], done: false, total: 0 };
+  const rec = S_.days[d];
+  if (rec.done) return results(d);
+  question(d, rec.ans.length);
+}
+
+function progressBar(i) {
+  return `<div class="progress" aria-label="Question ${i + 1} of 5">${[0, 1, 2, 3, 4].map((k) => `<i class="${k < i ? "done" : k === i ? "now" : ""}"></i>`).join("")}</div>`;
+}
+
+function question(d, i) {
+  const q = setFor(d)[i];
+  let body = "";
+  if (q.t === "name") {
+    body = `<form id="f" class="card" autocomplete="off">
+      <input class="answer" id="ans" maxlength="40" placeholder="Type your answer…" autocapitalize="sentences" spellcheck="false" enterkeyhint="done" aria-label="Your answer">
+      <button class="btn" type="submit" id="lock" disabled>Lock it in</button>
+      <p class="hint">Say what you think <i>most people</i> would say.</p></form>`;
+  } else if (q.t === "pick") {
+    const nums = q.a.every((a) => /^\d+$/.test(a.l));
+    const opts = nums ? q.a.slice().sort((x, y) => +x.l - +y.l) : q.a;
+    body = `<div class="options ${nums ? "nums" : ""}">${opts.map((a) => `<button class="opt" data-l="${esc(a.l)}">${esc(a.l)}</button>`).join("")}</div>
+      <p class="hint">Pick what you think <i>most people</i> pick.</p>`;
+  } else {
+    body = `<form id="f" class="card slider"><output id="out">50%</output>
+      <input type="range" id="rng" min="0" max="100" value="50" aria-label="Your percentage guess">
+      <button class="btn" type="submit" style="width:100%">Lock it in</button></form>`;
+  }
+  $app.innerHTML = `${header()}${progressBar(i)}
+    <span class="qtag">${esc(q.c)}</span>
+    <p class="prompt">${esc(q.q)}</p>${body}`;
+  bindNav();
+
+  if (q.t === "name") {
+    const inp = document.getElementById("ans"), lock = document.getElementById("lock");
+    inp.addEventListener("input", () => lock.disabled = !norm(inp.value));
+    document.getElementById("f").addEventListener("submit", (e) => {
+      e.preventDefault(); const x = inp.value.trim(); if (!norm(x)) return;
+      commit(d, i, { t: "name", x, i: matchAnswer(x, q.a) });
+    });
+    setTimeout(() => inp.focus(), 50);
+  } else if (q.t === "pick") {
+    $app.querySelectorAll(".opt").forEach((b) => b.onclick = () => {
+      commit(d, i, { t: "pick", i: q.a.findIndex((a) => a.l === b.dataset.l) });
+    });
+  } else {
+    const rng = document.getElementById("rng"), out = document.getElementById("out");
+    rng.addEventListener("input", () => out.textContent = rng.value + "%");
+    document.getElementById("f").addEventListener("submit", (e) => { e.preventDefault(); commit(d, i, { t: "pct", g: +rng.value }); });
+  }
+}
+
+function commit(d, i, ans) {
+  const rec = S_.days[d]; const q = setFor(d)[i];
+  if (rec.ans.length !== i) return reveal(d, rec.ans.length - 1); // double tap guard
+  rec.ans.push(ans); rec.pts.push(scoreFor(q, ans)); save();
+  reveal(d, i);
+}
+
+function reveal(d, i) {
+  const q = setFor(d)[i]; const rec = S_.days[d]; const ans = rec.ans[i]; const pts = rec.pts[i];
+  let board = "";
+  if (q.t === "pct") {
+    board = `<div class="scale" role="img" aria-label="Crowd ${q.v} percent, you guessed ${ans.g} percent">
+      <div class="pin" style="left:${q.v}%">Crowd ${q.v}%<i></i></div>
+      <div class="pin you" style="left:${ans.g}%;top:auto;bottom:-26px;flex-direction:column-reverse"><span>You ${ans.g}%</span><i></i></div></div><div style="height:22px"></div>`;
+  } else {
+    const order = q.a.map((a, k) => ({ ...a, k })).sort((x, y) => y.p - x.p);
+    const top = order[0].p; const other = Math.max(0, 100 - q.a.reduce((s, a) => s + a.p, 0));
+    board = `<div class="board">${order.map((a) => `<div class="bar ${a.p === top ? "top" : ""} ${ans.i === a.k ? "mine" : ""}">
+        <div class="fill" data-w="${a.p}"></div><span class="lbl">${esc(a.l)}</span><span class="pct">${a.p}%</span></div>`).join("")}
+      ${other ? `<div class="bar other"><div class="fill" data-w="${other}"></div><span class="lbl">Everything else</span><span class="pct">${other}%</span></div>` : ""}
+      ${ans.i < 0 ? `<div class="bar mine other"><span class="lbl">"${esc(ans.x)}" 🦄</span><span class="pct">—</span></div>` : ""}</div>`;
+  }
+  const last = i === 4;
+  $app.innerHTML = `${header()}${progressBar(i + 1)}
+    <span class="qtag">${esc(q.c)}</span>
+    <p class="react">${esc(q.q)}</p>
+    <section class="card pop">
+      <div class="points"><span class="react">${esc(reaction(pts, q))}</span><b>+${pts}</b></div>
+      ${board}
+      <p class="note">Crowd = Samesies forecast (early access)</p>
+    </section>
+    <button class="btn" id="next">${last ? "See my results" : "Next question"}</button>`;
+  bindNav();
+  requestAnimationFrame(() => requestAnimationFrame(() => $app.querySelectorAll(".fill[data-w]").forEach((f) => f.style.width = f.dataset.w + "%")));
+  if (pts >= 100) confetti();
+  document.getElementById("next").onclick = () => last ? finish(d) : question(d, i + 1);
+}
+
+function finish(d) {
+  const rec = S_.days[d];
+  rec.done = true; rec.total = rec.pts.reduce((s, p) => s + p, 0);
+  S_.best = Math.max(S_.best, rec.total);
+  const today = dayNum();
+  if (d === today && S_.lastDaily !== today) {
+    S_.streak = S_.lastDaily === today - 1 ? S_.streak + 1 : 1;
+    S_.lastDaily = today;
+  }
+  save();
+  if (S_.challenge && S_.challenge.d === d) return duel(d);
+  results(d);
+}
+
+function shareText(d) {
+  const rec = S_.days[d];
+  return `Samesies #${d} 🧠 ${rec.total}/500\n${rec.pts.map(emojiFor).join("")}\n${titleFor(rec.total)}\nCan you think like the world?`;
+}
+
+function results(d) {
+  const rec = S_.days[d]; const qs = setFor(d);
+  $app.innerHTML = `${header()}
+  <section class="card pop">
+    <p class="eyebrow">Samesies #${d}</p>
+    <div class="score">${rec.total}<small> / 500</small></div>
+    <p class="title">${esc(titleFor(rec.total))}</p>
+    <div class="grid" aria-label="Your five results">${rec.pts.map(emojiFor).join("")}</div>
+    <div class="row"><button class="btn" id="share">Share my score</button></div>
+    <div id="shareHost"></div>
+  </section>
+  <section class="card">
+    <p class="eyebrow">Challenge a friend 🥊</p>
+    <p class="muted small">Send your code. They play the same 5 questions, then you both see where you <b>JINX!</b>ed.</p>
+    <form class="field" id="nameForm"><input id="nm" maxlength="16" placeholder="Your name" value="${esc(S_.name)}" aria-label="Your name for challenges"><button class="btn aqua" type="submit">Get code</button></form>
+    <div id="codeHost"></div>
+  </section>
+  <section class="card">
+    <p class="eyebrow">Your answers</p>
+    <div class="recap">${qs.map((q, k) => {
+      const a = rec.ans[k]; const shown = a.t === "pct" ? a.g + "%" : a.i >= 0 ? q.a[a.i].l : `"${a.x}"`;
+      return `<div><span>${emojiFor(rec.pts[k])}</span><span>${esc(shown)}</span><b>+${rec.pts[k]}</b></div>`;
+    }).join("")}</div>
+  </section>
+  <p class="muted small">Next Samesies in <span class="count" id="cd"></span></p>
+  <div class="row"><button class="btn alt" data-go="archive">Play past days</button><button class="btn alt" data-go="home">Home</button></div>`;
+  bindNav(); countdown(document.getElementById("cd"));
+  document.getElementById("share").onclick = () => copyText(shareText(d), document.getElementById("shareHost"));
+  document.getElementById("nameForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    S_.name = document.getElementById("nm").value.trim().slice(0, 16) || "A friend"; save();
+    const code = makeCode(d);
+    const text = `${S_.name} challenged you on Samesies #${d} 🥊\nMy score: ${rec.total}/500 ${rec.pts.map(emojiFor).join("")}\nPaste this code in the game to play the same questions:\n${code}`;
+    const host = document.getElementById("codeHost");
+    host.innerHTML = `<textarea class="copybox" readonly aria-label="Your challenge message">${esc(text)}</textarea><button class="btn" id="copyCode" style="width:100%">Copy challenge</button>`;
+    document.getElementById("copyCode").onclick = () => copyText(text, host);
+  });
+}
+
+function duel(d) {
+  const c = S_.challenge; const rec = S_.days[d]; const qs = setFor(d);
+  const theirs = (q, v) => q.t === "pct" ? v + "%" : typeof v === "number" ? (q.a[v] ? q.a[v].l : "?") : `"${String(v).slice(1)}"`;
+  const mine = (q, a) => a.t === "pct" ? a.g + "%" : a.i >= 0 ? q.a[a.i].l : `"${a.x}"`;
+  let jinx = 0;
+  const rows = qs.map((q, k) => {
+    const v = c.a[k], a = rec.ans[k];
+    const same = q.t === "pct" ? Math.abs(v - a.g) <= 3
+      : typeof v === "number" ? v === a.i : (a.i < 0 && keyOf(String(v).slice(1)) === keyOf(a.x || ""));
+    if (same) jinx++;
+    return `<div><p class="q">${esc(q.q)}</p><div class="pair ${same ? "jinx" : ""}"><span>${esc(mine(q, a))}</span><span>${esc(theirs(q, v))}</span></div>${same ? `<p class="jinx-tag">JINX! 🤞</p>` : ""}</div>`;
+  }).join("");
+  const theirTotal = (c.p || []).reduce((s, p) => s + p, 0);
+  const verdict = jinx >= 4 ? "You two share ONE brain cell. Scientists are concerned. 🧠" : jinx >= 2 ? "Solid overlap. You'd survive a road trip together. 🚗" : jinx === 1 ? "One jinx. A fragile but real connection. 🤝" : "Zero jinxes. Are you even from the same planet? 👽";
+  $app.innerHTML = `${header()}
+  <p class="eyebrow">Samesies #${d} · Challenge</p>
+  <section class="card pop">
+    <div class="vs"><div><b>${rec.total}</b><span class="small muted">You</span></div><h2>vs</h2><div><b>${theirTotal}</b><span class="small muted">${esc(c.n)}</span></div></div>
+    <p class="title" style="text-align:center">${jinx} JINX${jinx === 1 ? "" : "ES"}!</p>
+    <p class="muted" style="text-align:center">${verdict}</p>
+  </section>
+  <section class="card duel">
+    <div class="pair"><span class="small" style="border:0;background:none;padding:0">You</span><span class="small" style="border:0;background:none;padding:0">${esc(c.n)}</span></div>
+    ${rows}
+  </section>
+  <div class="row"><button class="btn" id="res">My results</button><button class="btn alt" data-go="home">Home</button></div>`;
+  bindNav();
+  if (jinx >= 3) confetti();
+  document.getElementById("res").onclick = () => { S_.challenge = null; save(); results(d); };
+}
+
+/* ---------- boot ---------- */
+const hash = (location.hash || "").slice(1);
+const fromHash = hash ? readCode(hash) : null;
+if (fromHash) acceptChallenge(fromHash); else home();
+})();
+</script>
