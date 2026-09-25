@@ -114,7 +114,7 @@ seasonal days and birthday, Guess What Mummy Picked, report before trial ends, P
 Build: `flutter build apk --release` works in the container (Android SDK at /opt/android-sdk, Flutter at /opt/flutter,
 both installed per session). Maven Central sometimes rate-limits (429): retry. GitHub Actions workflow
 `.github/workflows/brainlings-apk.yml` also builds the APK as a downloadable artifact.
-Higgsfield credits: check `balance` (about 130 left after the v1.3 songs and 280 new voice lines).
+Higgsfield credits: about 103 left on 2026-09-25 after the v1.3 songs and 280 new voice lines. Check `balance`.
 
 ### Tech plan
 - Flutter (Android first). Firebase for accounts, storage, messages, push.
