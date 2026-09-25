@@ -40,7 +40,12 @@ class _PatternPartyState extends State<PatternParty> {
     [0, 1, 1],
   ];
 
+  static const maxLevel = 4;
   final _r = Random();
+  final _level = app.levelOf('patterns');
+  int _mode = 1; // 1 simple, 2 tricky, 3 what's missing, 4 counting patterns
+  int _gap = 5; // where the question mark sits
+  int _startCount = 1; // counting patterns
   int _round = 0;
   late List<(String, String)> _row;
   late (String, String) _answer;
@@ -58,23 +63,120 @@ class _PatternPartyState extends State<PatternParty> {
   }
 
   void _newRound() {
-    final pick = [...things]..shuffle(_r);
-    final unit = shapes[_round].map((i) => pick[i]).toList();
-    const shown = 5;
-    final full = List.generate(shown + 1, (i) => unit[i % unit.length]);
-    _row = full.sublist(0, shown);
-    _answer = full.last;
-    final wrong = pick.where((t) => t != _answer).take(2).toList();
-    _choices = [_answer, ...wrong]..shuffle(_r);
+    _mode = levelMode(_level, maxLevel, _r);
+    final intro = _round == 0 ? '${levelLine(_level)}|' : '';
     _solved = false;
     _mood = Mood.happy;
-    final said = _row.map((t) => '${t.$2}.').join('|');
-    _line = _round == 0
-        ? 'Party time!|$said|What comes next?'
-        : '$said|What comes next?';
+    if (_mode == 4) {
+      _startCount = 1 + _r.nextInt(app.age <= 4 ? 2 : 4);
+      _row = [];
+      _numChoices = {_startCount + 3, _startCount + 2, _startCount + 4}.toList()..shuffle(_r);
+      _line = '$intro${_round == 0 ? 'Counting patterns!|' : ''}Count the stars! What comes next?';
+      setState(() {});
+      Voice.say(_line);
+      return;
+    }
+    final pick = [...things]..shuffle(_r);
+    final unit = (_mode == 1 ? shapes[_r.nextInt(2)] : shapes[2 + _r.nextInt(3)]).map((i) => pick[i]).toList();
+    const shown = 6;
+    final full = List.generate(shown, (i) => unit[i % unit.length]);
+    _gap = _mode == 3 ? 1 + _r.nextInt(shown - 2) : shown - 1;
+    _row = full;
+    _answer = full[_gap];
+    final wrong = pick.where((t) => t != _answer).take(2).toList();
+    _choices = [_answer, ...wrong]..shuffle(_r);
+    final said = [for (var i = 0; i < shown; i++) i == _gap ? (_mode == 3 ? 'Hmm?' : '') : '${_row[i].$2}.'].where((x) => x.isNotEmpty && x != 'Hmm?').join('|');
+    _line = switch (_mode) {
+      3 => '$intro${_round == 0 ? 'Oh no! Something is missing!|' : ''}$said|What\'s missing?',
+      2 => '$intro${_round == 0 ? 'Trickier patterns!|' : ''}$said|What comes next?',
+      _ => '$intro${_round == 0 ? 'Party time!|' : ''}$said|What comes next?',
+    };
     setState(() {});
     Voice.say(_line);
   }
+
+  List<int> _numChoices = [];
+
+  Future<void> _pickNumber(int n) async {
+    if (_busy) return;
+    _busy = true;
+    final want = _startCount + 3;
+    if (n == want) {
+      app.learned(Skill.patterns);
+      app.learned(Skill.numbers);
+      final cheer = Juice.correct(context);
+      setState(() {
+        _solved = true;
+        _mood = Mood.dance;
+        _bounce++;
+        _round++;
+        _line = '$cheer|${numberWordsCap[want]}!|Let\'s party!';
+      });
+      celebrate(context, count: 40);
+      await Voice.say(_line);
+      if (!mounted) return;
+      await _after();
+    } else {
+      Juice.oops();
+      setState(() {
+        _mood = Mood.laugh;
+        _wobble++;
+        _line = 'Hmm, let\'s sing the pattern together!|${[for (var g = 0; g < 3; g++) '${numberWordsCap[_startCount + g]}!'].join('|')}|What comes next?';
+      });
+      await Voice.say(_line);
+      if (mounted) setState(() => _mood = Mood.happy);
+    }
+    _busy = false;
+  }
+
+  Future<void> _after() async {
+    if (_round >= rounds) {
+      finishGame(context, Skill.patterns, 'Pattern Party', game: 'patterns', maxLevel: maxLevel);
+    } else {
+      if (_round == 3) await danceBreak(context);
+      if (mounted) _newRound();
+    }
+  }
+
+  Widget _countingBody() => Column(
+        children: [
+          const Spacer(),
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
+            decoration: BoxDecoration(color: Colors.white.withValues(alpha: .8), borderRadius: BorderRadius.circular(28), boxShadow: const [BoxShadow(color: C.shadow, offset: Offset(0, 6))]),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                for (var g = 0; g < 4; g++)
+                  Container(
+                    width: 74,
+                    constraints: const BoxConstraints(minHeight: 90),
+                    padding: const EdgeInsets.all(4),
+                    decoration: BoxDecoration(
+                      color: g == 3 ? (_solved ? C.sun.withValues(alpha: .35) : C.lilac.withValues(alpha: .25)) : Colors.transparent,
+                      borderRadius: BorderRadius.circular(18),
+                      border: g == 3 ? Border.all(color: _solved ? C.sun : C.lilacDeep, width: 3) : null,
+                    ),
+                    child: g == 3 && !_solved
+                        ? Center(child: Text('?', style: T.d(44, color: C.lilacDeep)))
+                        : Wrap(alignment: WrapAlignment.center, children: [
+                            for (var k = 0; k < _startCount + g; k++) _Hop(delay: g * 200 + k * 60, key: ValueKey('s$_round$g$k'), child: const Art('star', size: 22)),
+                          ]),
+                  ),
+              ],
+            ),
+          ),
+          const Spacer(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              for (final n in _numChoices)
+                Chunky(color: C.paper, shadow: C.shadow, radius: 28, padding: const EdgeInsets.symmetric(horizontal: 26, vertical: 10), onTap: () => _pickNumber(n), child: Text('$n', style: T.l(52))),
+            ],
+          ),
+          const SizedBox(height: 20),
+        ],
+      );
 
   Future<void> _pick((String, String) t) async {
     if (_busy) return;
@@ -92,19 +194,14 @@ class _PatternPartyState extends State<PatternParty> {
       celebrate(context, count: 40);
       await Voice.say(_line);
       if (!mounted) return;
-      if (_round >= rounds) {
-        finishGame(context, Skill.patterns, 'Pattern Party');
-      } else {
-        if (_round == 3) await danceBreak(context);
-        if (mounted) _newRound();
-      }
+      await _after();
     } else {
       Juice.oops();
       setState(() {
         _mood = Mood.laugh;
         _wobble++;
         _line =
-            'Hmm, let\'s sing the pattern together!|${_row.map((e) => '${e.$2}.').join('|')}|What comes next?';
+            'Hmm, let\'s sing the pattern together!|${[for (var i = 0; i < _row.length; i++) if (i != _gap) '${_row[i].$2}.'].join('|')}|${_mode == 3 ? 'What\'s missing?' : 'What comes next?'}';
       });
       await Voice.say(_line);
       if (mounted) setState(() => _mood = Mood.happy);
@@ -117,13 +214,14 @@ class _PatternPartyState extends State<PatternParty> {
     return GameFrame(
       host: 'lulu',
       scene: 'party',
+      level: _level,
       round: _round,
       total: rounds,
       line: _line,
       mood: _mood,
       bounce: _bounce,
       wobble: _wobble,
-      body: Column(
+      body: _mode == 4 ? _countingBody() : Column(
         children: [
           const Spacer(),
           // Bunting across the top
@@ -157,11 +255,13 @@ class _PatternPartyState extends State<PatternParty> {
               runSpacing: 8,
               children: [
                 for (var i = 0; i < _row.length; i++)
-                  _Hop(
-                    delay: i * 120,
-                    key: ValueKey('$_round-$i'),
-                    child: Art(_row[i].$1, size: 52),
-                  ),
+                  if (i != _gap)
+                    _Hop(
+                      delay: i * 120,
+                      key: ValueKey('$_round-$i'),
+                      child: Art(_row[i].$1, size: 52),
+                    )
+                  else
                 AnimatedContainer(
                   duration: const Duration(milliseconds: 300),
                   width: 60,

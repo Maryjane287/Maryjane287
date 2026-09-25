@@ -2,14 +2,11 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-import '../services/music.dart';
 import '../friends.dart';
+import '../screens/songs.dart';
 import '../services/sfx.dart';
-import '../services/voice.dart';
 import '../theme.dart';
 import 'art.dart';
-import 'bibi.dart';
-import 'sky.dart';
 import 'ui.dart';
 
 /// Little bursts of joy that make every tap feel alive.
@@ -176,98 +173,9 @@ class _BigWordState extends State<_BigWord> with SingleTickerProviderStateMixin 
       );
 }
 
-/// Halfway through a game: a short burst of silliness. Every tap makes
-/// Bibi leap into a new pose, with stars and claps.
-Future<void> danceBreak(BuildContext context) =>
-    Navigator.of(context).push(PageRouteBuilder(
-      opaque: false,
-      transitionDuration: const Duration(milliseconds: 300),
-      pageBuilder: (_, _, _) => const _DanceBreak(),
-      transitionsBuilder: (_, a, _, c) => FadeTransition(opacity: a, child: c),
-    ));
-
-class _DanceBreak extends StatefulWidget {
-  const _DanceBreak();
-
-  @override
-  State<_DanceBreak> createState() => _DanceBreakState();
-}
-
-class _DanceBreakState extends State<_DanceBreak> {
-  static const _moves = [Mood.dance, Mood.cheer, Mood.laugh, Mood.wow, Mood.wave, Mood.dance];
-  int _taps = 0;
-  int _bounce = 0;
-  bool _done = false;
-  String _line = 'Dance break! Tap me to make me dance!';
-
-  @override
-  void initState() {
-    super.initState();
-    Sfx.tada();
-    Voice.say(_line);
-    Future.delayed(const Duration(seconds: 10), _finish);
-  }
-
-  void _tap(TapDownDetails d) {
-    if (_done) return;
-    setState(() {
-      _taps++;
-      _bounce++;
-    });
-    Sfx.play(_taps.isEven ? 'clap' : 'pop');
-    Juice.starBurst(context, d.globalPosition, count: 10);
-    if (_taps == 4) {
-      setState(() => _line = 'Faster! Faster!');
-      Voice.say(_line);
-    } else if (_taps == 9) {
-      setState(() => _line = 'Wheee!');
-      Voice.say(_line);
-    }
-    if (_taps >= 14) _finish();
-  }
-
-  Future<void> _finish() async {
-    if (_done || !mounted) return;
-    _done = true;
-    Sfx.applause();
-    celebrate(context, count: 60);
-    setState(() => _line = "Phew! That was fun! Let's keep going!");
-    await Voice.say(_line);
-    if (mounted) Navigator.of(context).pop();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    Music.duck(false);
-    return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: Meadow(
-        scene: 'party',
-        child: SafeArea(
-          child: GestureDetector(
-            behavior: HitTestBehavior.opaque,
-            onTapDown: _tap,
-            child: Column(
-              children: [
-                const SizedBox(height: 16),
-                Padding(padding: const EdgeInsets.symmetric(horizontal: 16), child: Bubble(_line)),
-                const Spacer(),
-                AnimatedRotation(
-                  turns: _taps.isEven ? 0 : (_taps % 4 == 1 ? .03 : -.03),
-                  duration: const Duration(milliseconds: 150),
-                  child: Bibi(mood: _moves[_taps % _moves.length], size: 300, bounce: _bounce),
-                ),
-                const Spacer(),
-                Text('Tap tap tap!', style: T.d(34, color: Colors.white).copyWith(shadows: const [Shadow(color: C.shadow, offset: Offset(0, 4), blurRadius: 6)])),
-                const SizedBox(height: 30),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
+/// Halfway through a game: a real song, and Bibi and the friends dance
+/// with the child.
+Future<void> danceBreak(BuildContext context) => songParty(context);
 
 /// A fruit flying in a happy arc from where it was to Bibi's mouth.
 class FlyingArt extends StatefulWidget {

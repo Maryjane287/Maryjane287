@@ -38,8 +38,17 @@ class _FeedingTimeState extends State<FeedingTime> {
   final _mouthKey = GlobalKey();
   late List<GlobalKey> _fruitKeys;
 
+  static const maxLevel = 4;
+  final _level = app.levelOf('feeding');
+  int _mode = 1; // 1 feed, 2 more or fewer, 3 adding, 4 taking away
   int _round = 0;
   late int _target;
+  // plates for modes 2 to 4
+  int _a = 0, _b = 0;
+  bool _askMore = true;
+  bool _plateEaten = false;
+  int _gone = 0; // fruit Bibi ate from the plate (mode 4)
+  int _eatenPlate = -1;
   late (String, String, String) _fruit;
   late List<bool> _eaten;
   int _count = 0;
@@ -62,10 +71,71 @@ class _FeedingTimeState extends State<FeedingTime> {
   }
 
   Future<void> _newRound() async {
+    _mode = levelMode(_level, maxLevel, _r);
+    _choices = null;
+    _reveal = false;
+    _busy = false;
+    _plateEaten = false;
+    _eatenPlate = -1;
+    _gone = 0;
+    _fruit = fruits[_r.nextInt(fruits.length)];
+    final intro = _round == 0 ? '${levelLine(_level)}|' : '';
+    final top = app.age <= 4 ? 5 : (app.age == 5 ? 7 : 9);
+    if (_mode == 2) {
+      _a = 1 + _r.nextInt(top);
+      do {
+        _b = 1 + _r.nextInt(top);
+      } while (_b == _a);
+      _askMore = _r.nextBool();
+      _mood = Mood.think;
+      _line = '$intro${_round == 0 ? "Let's look at my plates!|" : ''}${_askMore ? 'Which plate has more?' : 'Which plate has fewer?'}';
+      setState(() {});
+      Voice.say(_line);
+      return;
+    }
+    if (_mode == 3) {
+      _a = 1 + _r.nextInt(max(2, top ~/ 2));
+      _b = 1 + _r.nextInt(max(2, top ~/ 2));
+      _target = _a + _b;
+      _choices = _options(_target);
+      _mood = Mood.think;
+      _line = '$intro${_round == 0 ? 'Sum time!|' : ''}${numberWordsCap[_a]}!|Plus!|${numberWordsCap[_b]}!|How many altogether?';
+      setState(() {});
+      Voice.say(_line);
+      return;
+    }
+    if (_mode == 4) {
+      _a = 3 + _r.nextInt(max(2, top - 2));
+      _gone = 1 + _r.nextInt(_a - 1);
+      _target = _a - _gone;
+      _busy = true;
+      _mood = Mood.hungry;
+      _line = '$intro${_round == 0 ? 'Snack time! Watch my plate!|' : ''}Count the fruit on my plate!';
+      setState(() {});
+      await Voice.say(_line);
+      await Future.delayed(const Duration(milliseconds: 1600));
+      if (!mounted) return;
+      setState(() {
+        _line = 'Now I\'ll eat some! Munch munch!';
+        _plateEaten = true;
+        _mood = Mood.munch;
+        _bounce++;
+      });
+      Sfx.chomp();
+      await Voice.say(_line);
+      if (!mounted) return;
+      setState(() {
+        _choices = _options(_target);
+        _mood = Mood.think;
+        _line = '${numberWordsCap[_a]}!|Take away!|${numberWordsCap[_gone]}!|How many are left?';
+        _busy = false;
+      });
+      Voice.say(_line);
+      return;
+    }
     _watchRound = _round == 2 || _round == 4;
     _target = 1 + _r.nextInt(_watchRound ? min(_max, 6) : _max);
     if (_watchRound && _target < 2) _target = 2;
-    _fruit = fruits[_r.nextInt(fruits.length)];
     final shown = min(_target + (_watchRound ? 1 : 3), 10);
     _eaten = List.filled(shown, false);
     _fruitKeys = List.generate(shown, (_) => GlobalKey());
@@ -75,7 +145,7 @@ class _FeedingTimeState extends State<FeedingTime> {
     _busy = false;
     _mood = Mood.hungry;
     if (!_watchRound) {
-      _line = _round == 0 ? 'My tummy is rumbling!|$_ask' : _ask;
+      _line = _round == 0 ? '${intro}My tummy is rumbling!|$_ask' : _ask;
       setState(() {});
       Voice.say(_line);
       return;
@@ -91,15 +161,136 @@ class _FeedingTimeState extends State<FeedingTime> {
       await Future.delayed(const Duration(milliseconds: 650));
     }
     if (!mounted) return;
-    final opts = {_target, _target + 1, max(1, _target - 1)}.toList()..shuffle(_r);
-    if (opts.length < 3) opts.add(_target + 2);
     setState(() {
-      _choices = opts;
+      _choices = _options(_target);
       _mood = Mood.think;
       _line = 'How many did I eat?';
       _busy = false;
     });
     Voice.say(_line);
+  }
+
+  List<int> _options(int n) {
+    final o = <int>{n};
+    while (o.length < 3) {
+      final d = n + _r.nextInt(5) - 2;
+      if (d >= 0 && d <= 10) o.add(d);
+    }
+    return o.toList()..shuffle(_r);
+  }
+
+  final _plateKeys = [GlobalKey(), GlobalKey()];
+
+  /// Mode 2: the child taps the plate with more (or fewer).
+  Future<void> _pickPlate(int i, TapDownDetails d) async {
+    if (_busy) return;
+    final pickedA = i == 0;
+    final aMore = _a > _b;
+    final right = _askMore ? pickedA == aMore : pickedA != aMore;
+    if (right) {
+      _busy = true;
+      app.learned(Skill.numbers);
+      final cheer = Juice.correct(context, at: d.globalPosition);
+      final from = _rectOf(_plateKeys[i]);
+      final mouth = _rectOf(_mouthKey);
+      setState(() {
+        _mood = Mood.dance;
+        _bounce++;
+        _line = '$cheer|${_askMore ? 'Yes! That plate has more!' : 'Yes! That plate has fewer!'}|${numberWordsCap[pickedA ? _a : _b]}!';
+      });
+      final say = Voice.say(_line);
+      if (from != null && mouth != null) {
+        for (var k = 0; k < 3 && mounted; k++) {
+          Sfx.whoosh();
+          await FlyingArt.go(context, _fruit.$1, from, Offset(mouth.center.dx, mouth.top + mouth.height * .45));
+          Sfx.chomp();
+        }
+      }
+      setState(() => _eatenPlate = i);
+      await say;
+      await _next();
+    } else {
+      setState(() {
+        _wobble++;
+        _mood = Mood.laugh;
+        _line = '${Juice.oops()}|Hmm, count them both. Try again!';
+      });
+      Voice.say(_line);
+    }
+  }
+
+  Widget _numberBubbles() => Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          for (final n in _choices!)
+            GestureDetector(
+              onTapDown: (d) => _pick(n, d),
+              child: _Bob(
+                seed: n,
+                child: Container(
+                  width: 84,
+                  height: 84,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: const [C.berry, C.sun, C.aqua, C.lilac][n % 4],
+                    border: Border.all(color: Colors.white, width: 5),
+                    boxShadow: const [BoxShadow(color: C.shadow, offset: Offset(0, 6))],
+                  ),
+                  child: Text('$n', style: T.l(46, color: Colors.white)),
+                ),
+              ),
+            ),
+        ],
+      );
+
+  /// Levels 2 to 4: plates of fruit to compare, add up and take away from.
+  Widget _platesBody() {
+    final plates = <Widget>[];
+    if (_mode == 2) {
+      for (var i = 0; i < 2; i++) {
+        plates.add(GestureDetector(
+          onTapDown: (d) => _pickPlate(i, d),
+          child: _Bob(seed: i + 3, child: _Plate(key: _plateKeys[i], count: i == 0 ? _a : _b, art: _fruit.$1, empty: _eatenPlate == i)),
+        ));
+      }
+    } else if (_mode == 3) {
+      plates
+        ..add(_Plate(count: _a, art: _fruit.$1))
+        ..add(Text('+', style: T.l(64, color: Colors.white).copyWith(shadows: const [Shadow(color: C.shadow, blurRadius: 8)])))
+        ..add(_Plate(count: _b, art: _fruit.$1));
+    } else {
+      plates.add(_Plate(count: _a, art: _fruit.$1, gone: _plateEaten ? _gone : 0));
+    }
+    return Column(
+      children: [
+        const SizedBox(height: 8),
+        Expanded(
+          flex: 4,
+          child: Center(
+            child: Wrap(alignment: WrapAlignment.center, crossAxisAlignment: WrapCrossAlignment.center, spacing: 12, runSpacing: 12, children: plates),
+          ),
+        ),
+        if (_mode == 3 && _reveal)
+          Text('$_a + $_b = $_target', style: T.l(40, color: Colors.white).copyWith(shadows: const [Shadow(color: C.shadow, blurRadius: 8)])),
+        if (_mode == 4 && _reveal)
+          Text('$_a - $_gone = $_target', style: T.l(40, color: Colors.white).copyWith(shadows: const [Shadow(color: C.shadow, blurRadius: 8)])),
+        SizedBox(
+          height: 190,
+          child: Stack(
+            alignment: Alignment.bottomCenter,
+            children: [
+              Bibi(mood: _mood, size: 180, bounce: _bounce, wobble: _wobble, onTap: () {
+                Sfx.giggle();
+                Voice.say(_line);
+              }),
+              Positioned(bottom: 62, child: SizedBox(key: _mouthKey, width: 60, height: 40)),
+            ],
+          ),
+        ),
+        if (_choices != null) Padding(padding: const EdgeInsets.only(bottom: 12), child: _numberBubbles()) else const SizedBox(height: 12),
+      ],
+    );
   }
 
   /// Sends fruit [i] flying in an arc into Bibi's mouth.
@@ -169,7 +360,11 @@ class _FeedingTimeState extends State<FeedingTime> {
         _mood = Mood.dance;
         _bounce++;
         _reveal = true;
-        _line = '$cheer|${numberWordsCap[_target]}!|Yummy in my tummy!';
+        _line = switch (_mode) {
+          3 => '$cheer|${numberWordsCap[_a]}!|Plus!|${numberWordsCap[_b]}!|Makes!|${numberWordsCap[_target]}!',
+          4 => '$cheer|${numberWordsCap[_target]}!|Yummy in my tummy!',
+          _ => '$cheer|${numberWordsCap[_target]}!|Yummy in my tummy!',
+        };
       });
       await Voice.say(_line);
       await _next();
@@ -179,7 +374,11 @@ class _FeedingTimeState extends State<FeedingTime> {
         _reveal = true;
         _wobble++;
         _mood = Mood.laugh;
-        _line = '$oops|How many did I eat?';
+        _line = switch (_mode) {
+          3 => '$oops|Count them all together!',
+          4 => '$oops|How many are left?',
+          _ => '$oops|How many did I eat?',
+        };
       });
       Voice.say(_line);
     }
@@ -194,7 +393,7 @@ class _FeedingTimeState extends State<FeedingTime> {
         _line = 'Buuurp! Oops, excuse me!';
       });
       await Voice.say(_line);
-      if (mounted) finishGame(context, Skill.numbers, 'Feeding Time');
+      if (mounted) finishGame(context, Skill.numbers, 'Feeding Time', game: 'feeding', maxLevel: maxLevel);
       return;
     }
     if (_round == 3) await danceBreak(context);
@@ -205,13 +404,14 @@ class _FeedingTimeState extends State<FeedingTime> {
   Widget build(BuildContext context) {
     return GameFrame(
       host: 'pip',
+      level: _level,
       scene: 'orchard',
       round: _round,
       total: rounds,
       line: _line,
       mood: _mood,
       showBibi: false,
-      body: Column(
+      body: _mode != 1 ? _platesBody() : Column(
         children: [
           // The fruit, bobbing in the tree
           Expanded(
@@ -331,6 +531,52 @@ class _FeedingTimeState extends State<FeedingTime> {
           else
             const SizedBox(height: 12),
         ],
+      ),
+    );
+  }
+}
+
+/// A plate of fruit. Big, round and easy to count.
+class _Plate extends StatelessWidget {
+  const _Plate({super.key, required this.count, required this.art, this.gone = 0, this.empty = false});
+  final int count;
+  final String art;
+  final int gone;
+  final bool empty;
+
+  @override
+  Widget build(BuildContext context) {
+    final size = count > 6 ? 34.0 : 44.0;
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 300),
+      width: 150,
+      height: 150,
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        gradient: const RadialGradient(colors: [Colors.white, Color(0xFFF3ECFF)]),
+        border: Border.all(color: Colors.white, width: 6),
+        boxShadow: const [BoxShadow(color: C.shadow, offset: Offset(0, 6), blurRadius: 4)],
+      ),
+      child: Center(
+        child: Wrap(
+          alignment: WrapAlignment.center,
+          runAlignment: WrapAlignment.center,
+          spacing: 2,
+          runSpacing: 2,
+          children: [
+            for (var i = 0; i < count; i++)
+              AnimatedOpacity(
+                duration: Duration(milliseconds: 250 + i * 120),
+                opacity: empty || i >= count - gone ? 0 : 1,
+                child: AnimatedScale(
+                  duration: Duration(milliseconds: 250 + i * 120),
+                  scale: empty || i >= count - gone ? 0 : 1,
+                  child: Art(art, size: size),
+                ),
+              ),
+          ],
+        ),
       ),
     );
   }

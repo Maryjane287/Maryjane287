@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../services/music.dart';
+import '../songs.dart';
 import '../services/sfx.dart';
 import '../services/voice.dart';
 import '../state.dart';
@@ -49,6 +50,7 @@ class _BedtimeScreenState extends State<BedtimeScreen>
   @override
   void dispose() {
     _zz.dispose();
+    Music.stopSong();
     super.dispose();
   }
 
@@ -106,6 +108,20 @@ class _BedtimeScreenState extends State<BedtimeScreen>
     await _say(
       'Night night!|{name}!|Thank you for playing with me. See you tomorrow!',
     );
+    // A soft goodnight song, with the words on screen.
+    if (mounted) {
+      final song = songs.firstWhere((x) => x.id == 'goodnight');
+      final sub = Music.songPosition.listen((p) {
+        String? words;
+        for (final l in song.lines) {
+          if (p.inMilliseconds >= l.startMs - 150) words = l.text;
+        }
+        if (words != null && mounted && words != _line) setState(() => _line = words!);
+      });
+      await Music.song('goodnight');
+      await sub.cancel();
+      Music.play('lullaby');
+    }
     _sleep();
   }
 

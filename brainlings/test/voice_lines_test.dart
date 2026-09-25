@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:brainlings/friends.dart';
 import 'package:brainlings/games/letter_garden.dart';
+import 'package:brainlings/songs.dart';
 import 'package:brainlings/services/voice.dart';
 import 'package:brainlings/widgets/game_frame.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -108,6 +109,55 @@ void main() {
   });
 
   test('Friends and the living meadow are recorded', () => _friendsAndHome(expectRecorded));
+
+  test('Levels, songs and new games are recorded', () {
+    for (var l = 1; l <= 5; l++) {
+      expectRecorded(levelLine(l));
+    }
+    for (final song in songs) {
+      expectRecorded('${song.title}!');
+    }
+    for (final w in spellWords) {
+      expectRecorded("Let's spell ${w.$1}!");
+      for (final snd in w.$3) {
+        expectRecorded('$snd!');
+      }
+      expectRecorded('${w.$3[0]}, ${w.$3[1].toLowerCase()}, ${w.$3[2].toLowerCase()}. ${w.$1[0].toUpperCase()}${w.$1.substring(1)}!');
+    }
+    for (final p in phonics) {
+      expectRecorded('Pop the letter ${p.letter.toUpperCase()}!');
+    }
+    for (final c in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')) {
+      expectRecorded('$c!');
+    }
+    for (final s in ['square', 'triangle', 'rectangle', 'circle', 'star', 'heart', 'diamond', 'oval']) {
+      expectRecorded('I think this is ${s == 'oval' ? 'an' : 'a'} $s. Am I right?');
+    }
+    for (final l in [
+      'Hooray! You unlocked a new level!|Next time, something new is waiting!',
+      "Let's look at my plates!|Which plate has more?|Which plate has fewer?|Yes! That plate has more!|Yes! That plate has fewer!|Hmm, count them both. Try again!",
+      'Sum time!|Plus!|Makes!|How many altogether?|Count them all together!|Take away!|How many are left?',
+      "Snack time! Watch my plate!|Count the fruit on my plate!|Now I'll eat some! Munch munch!",
+      "Letter hunt!|Big letters and little letters!|Find the little letter that matches!|Let's spell words!|Tap the letters in order!|Which sound comes next?|You spelled it!",
+      "Let's build a rocket!|Let's build a boat!|Let's build a robot!|Look! We built a rocket! Three, two, one, blast off!|Look! We built a boat! Splish splash!|Look! We built a robot! Beep boop!",
+      "Find the rectangle for the rocket!|Now find the triangle for the nose!|Now find the circle for the window!|Now find the diamond for the fire!",
+      "Find the oval for the boat!|Now find the rectangle for the mast!|Now find the triangle for the sail!|Now find the heart for the flag!",
+      "Find the square for the robot's head!|Now find the rectangle for the body!|Now find the circle for the eyes!|Now find the heart for the robot's heart!|Now find the star for the antenna!",
+      "Trickier patterns!|Oh no! Something is missing!|What's missing?|Counting patterns!|Count the stars! What comes next?",
+      "I'm learning shapes! Let me try.|Big numbers are tricky! Let me try.|Which shape is it really?",
+      "Hi! What's your name?|I knew it! I remember you!|Nice to meet you!|What a lovely name!",
+      'Hmm, I heard something different.|Did you say that?|Oh, maybe I got you wrong. Can you say it again?|This is how you say it!|Now you say it!',
+      "Hee hee! Do I have to teach you everything?|Let's say it together!|Say it again, nice and loud!|Tap the microphone and say it!",
+      "Now make a sentence with it!|Like this:|Say a whole sentence with the word in it!|Say it with me!|Wow! What a great sentence!",
+      "Can you spell it?|Tap the letters to spell it!|You spelled it! Amazing!|Let's spell it together!|Listen carefully!",
+      "Hello? Are you there? Say something!|Take your time. I'm listening!|Say it slowly and loudly!|Psst! I'm waiting for your lovely voice!",
+      "I'm all ears! Say hello to me!|Talk to me! I love your voice!|Hee hee! You sound funny!|You sound amazing!|I heard you! Say something else!",
+      "Pick a song and let's dance!|Everybody dance with us!|You are a super dancer!|What a lovely dancer you are!|That was so much fun! Again?|Dance with me and my friends!|Come on, friends! Let's dance!|Songs!",
+      "Let's make sentences!|Animal sounds and colours!|Opposites! Big and small!",
+    ]) {
+      expectRecorded(l);
+    }
+  });
 }
 
 void _friendsAndHome(void Function(String) expectRecorded) {

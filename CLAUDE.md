@@ -51,7 +51,7 @@ Family members do NOT need the app: they get a link (WhatsApp/email) to a small 
   phone numbers still to verify. Apple enrollment submitted but $99 not paid (later).
 - Payouts need a proper company bank account (Wise was rejected by KDP; unresolved).
 
-### Build status (updated 2026-09-25, v1.2.0)
+### Build status (updated 2026-09-25, v1.3.0)
 Flutter app lives in `brainlings/` (Android + iOS). Everything runs offline on the device for now.
 Done and working:
 - First-run grown-up setup: name/nickname, age, family circle, optional name recording, bedtime minutes, privacy promise.
@@ -85,6 +85,24 @@ Done and working:
 - Talking Bibi (`lib/screens/talk.dart`, big Talk! mic on home): repeats the child in a squeaky voice (Talking Tom style),
   poke head/feet/tummy, hug, tickle, snack tray. Say It! game uses speech recognition. Nothing is saved.
 - Music: procedural loops in `assets/music/` (play, games, lullaby), toggle in the grown-up area.
+- LEVELS (v1.3, owner: "each block keeps repeating the same thing"): every game has 4 levels, then a "super level" mix.
+  `app.levels[gameId]`, `levelMode()`, `levelLine()`, star badge on tiles and in games, "You unlocked a new level!".
+  Feeding: feed / which plate has more or fewer / sums with plates (2 + 1 = ?) / take away.
+  Letters: sound bubbles / letter hunt / big and little letters / spell cat, dog, hat, pig, sun, ant, egg.
+  Shapes: build a house / rocket / boat / robot. Patterns: simple / tricky / what's missing / counting star patterns.
+  Teach: counting+letters / shapes / big numbers / mix. Say It: naming+spelling / sentences / animal sounds and colours / opposites.
+- SONGS (v1.3): 10 ORIGINAL sung songs (no copyright: a famous-song prompt was blocked as IP) made as Seedance 2.0 mini
+  15s 480p music videos with Bibi and friends dancing (7.5 credits each). `assets/songs/<id>.mp4`, lyrics + timings in
+  `lib/songs.dart` (timed with faster-whisper word timestamps). Songs screen (Sing! button on home), karaoke words,
+  the gang dances along. Game dance breaks, the home dance event and bedtime (Goodnight Song) all use the real songs.
+- Say It really listens (speech_to_text dictation with contextual phrases, stops as soon as it hears the answer):
+  asks the child's name first, "Did you say that? Maybe I got you wrong", teaches the word, "Do I have to teach you everything?",
+  asks for a sentence, spells words with tap tiles and letter names. Quiet child: hello prompts and jokes.
+- Talk screen: adaptive noise floor (soft voices count), autoGain + noise suppression, loudness booster on the copy voice,
+  hello/joke when the child is quiet, Bibi answers back.
+- Friends never talk over Bibi (`Voice.speaking`), 12 lines each, no repeats until all are used.
+- APK size: send limit is 30 MB. Keep assets small: fonts subset to Latin (pyftsubset), voices 24 kbps 22 kHz mono
+  with loudnorm, songs 320p crf 34, build with `--obfuscate --split-debug-info`. armeabi-v7a APK was 28.8 MB.
 - Art (all Higgsfield gpt_image_2_5, soft 3D clay style): 18 Bibi poses incl. grown-up looks
   (starry = numbers, bookish = letters, bloom = superstar) in `assets/bibi/`; 48 objects/animals/flowers in
   `assets/art/` (also used as album stickers); 9 painted scenes in `assets/bg/` (day, dusk, night meadow,
@@ -96,7 +114,7 @@ seasonal days and birthday, Guess What Mummy Picked, report before trial ends, P
 Build: `flutter build apk --release` works in the container (Android SDK at /opt/android-sdk, Flutter at /opt/flutter,
 both installed per session). Maven Central sometimes rate-limits (429): retry. GitHub Actions workflow
 `.github/workflows/brainlings-apk.yml` also builds the APK as a downloadable artifact.
-Higgsfield credits: about 225 left on 2026-09-25 (after friends art and the ElevenLabs re-record). Check `balance`.
+Higgsfield credits: check `balance` (about 130 left after the v1.3 songs and 280 new voice lines).
 
 ### Tech plan
 - Flutter (Android first). Firebase for accounts, storage, messages, push.

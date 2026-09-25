@@ -16,6 +16,7 @@ class Friend {
     required this.giggle,
     required this.fun,
     required this.oops,
+    required this.more,
   });
 
   final String id;
@@ -27,9 +28,21 @@ class Friend {
   final String fun;
   final String oops;
 
+  /// Extra chatter, so a friend never says the same thing again and again.
+  final List<String> more;
+
   String image(String pose) => 'assets/friends/${id}_$pose.webp';
 
-  String randomLine(Random r) => [...cheers, giggle, fun, hello][r.nextInt(cheers.length + 3)];
+  List<String> get _all => [giggle, fun, ...more, ...cheers];
+
+  /// The next thing to say. Goes through every line before any repeats.
+  String nextLine(Random r) {
+    final bag = _bags[id] ??= [];
+    if (bag.isEmpty) bag.addAll(_all..shuffle(r));
+    return bag.removeLast();
+  }
+
+  static final _bags = <String, List<String>>{};
 }
 
 const friends = [
@@ -42,6 +55,14 @@ const friends = [
     giggle: 'My ears are tickly!',
     fun: 'Count with me!',
     oops: 'Hop and try again!',
+    more: [
+      "Boing! I'm a bouncy bunny!",
+      "I counted all the carrots! Ten!",
+      "Let's hop together!",
+      "Wiggle your nose like me!",
+      "Carrots make me super fast!",
+      "Can you count to five? One, two, three, four, five!",
+    ],
   ),
   Friend(
     id: 'momo',
@@ -52,6 +73,14 @@ const friends = [
     giggle: 'Hee hee, my glasses are wobbly!',
     fun: "Let's read together!",
     oops: 'Hoo hoo, try again!',
+    more: [
+      "Books are my favourite thing!",
+      "A is for amazing!",
+      "Who who? You, you!",
+      "I read a story about a dragon!",
+      "Let's sing the alphabet!",
+      "My feathers are so fluffy!",
+    ],
   ),
   Friend(
     id: 'tiko',
@@ -62,6 +91,14 @@ const friends = [
     giggle: 'Oops! I dropped my hammer again!',
     fun: 'Stomp stomp! Hee hee!',
     oops: 'Uh oh, wobbly! Try again!',
+    more: [
+      "I built a tower taller than me!",
+      "Crash! Oops, my tower fell!",
+      "Big feet, big stomps!",
+      "Let's build a rocket!",
+      "I love squares and triangles!",
+      "Rawr! That's my happy roar!",
+    ],
   ),
   Friend(
     id: 'lulu',
@@ -72,6 +109,14 @@ const friends = [
     giggle: 'Hee hee, that tickles my fluff!',
     fun: 'Wheee! Rainbows!',
     oops: 'Oopsie daisy! Try again!',
+    more: [
+      "Twirl and spin with me!",
+      "I love glitter and sparkles!",
+      "Let's have a disco!",
+      "Clap your hands! Clap clap!",
+      "Rainbows are my favourite colour!",
+      "Party hats for everyone!",
+    ],
   ),
   Friend(
     id: 'gogo',
@@ -82,6 +127,14 @@ const friends = [
     giggle: 'Blub blub! Bubble burp!',
     fun: 'Boing boing boing!',
     oops: 'Ribbit? Try again!',
+    more: [
+      "Jump like a frog! Boing!",
+      "I can catch flies with my tongue!",
+      "Splish splash! I love puddles!",
+      "Say it loud! Ribbit!",
+      "Croak croak! That means hello!",
+      "Let's sing a silly song!",
+    ],
   ),
 ];
 
@@ -204,6 +257,6 @@ class GameHost {
   static String nudge() {
     final h = current!;
     _jump('cheer');
-    return h.fun;
+    return h.nextLine(_r);
   }
 }

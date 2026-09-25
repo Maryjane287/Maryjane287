@@ -61,8 +61,26 @@ class LetterGarden extends StatefulWidget {
   State<LetterGarden> createState() => _LetterGardenState();
 }
 
+/// Words to spell in level four, with the sound of each letter.
+const spellWords = [
+  ('cat', 'cat', ['Kuh', 'Ah', 'Tuh']),
+  ('dog', 'dog', ['Duh', 'Oh', 'Guh']),
+  ('hat', 'hat', ['Huh', 'Ah', 'Tuh']),
+  ('pig', 'pig', ['Puh', 'Ih', 'Guh']),
+  ('sun', 'sun', ['Ssss', 'Uh', 'Nnnn']),
+  ('ant', 'ant', ['Ah', 'Nnnn', 'Tuh']),
+  ('egg', 'egg', ['Eh', 'Guh', 'Guh']),
+];
+
 class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderStateMixin {
   static const rounds = 5;
+  static const maxLevel = 4;
+  final _level = app.levelOf('letters');
+  int _mode = 1; // 1 sounds, 2 letter hunt, 3 big and little, 4 spelling
+  // spelling
+  late (String, String, List<String>) _word;
+  int _spelled = 0;
+  List<String> _tiles = [];
   static const _flowers = ['tulip', 'sunflower', 'daisy', 'bluebell', 'rose'];
   final _r = Random();
   late final _float = AnimationController(vsync: this, duration: const Duration(seconds: 11))..repeat();
@@ -92,6 +110,24 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
   }
 
   void _newRound() {
+    _mode = levelMode(_level, maxLevel, _r);
+    final intro = _round == 0 ? '${levelLine(_level)}|' : '';
+    if (_mode == 4) {
+      final left = spellWords.where((w) => !_used.contains(w.$1)).toList()..shuffle(_r);
+      _word = left.first;
+      _used.add(_word.$1);
+      _spelled = 0;
+      final extra = 'bdfmrs'.split('')..shuffle(_r);
+      _tiles = [..._word.$1.split(''), extra.firstWhere((x) => !_word.$1.contains(x))]..shuffle(_r);
+      _busy = false;
+      _mood = Mood.read;
+      _letterPop++;
+      _line = "$intro${_round == 0 ? "Let's spell words!|" : ''}Let's spell ${_word.$1}!|Tap the letters in order!";
+      setState(() {});
+      Sfx.zip();
+      Voice.say(_line);
+      return;
+    }
     final pool = phonics.where((p) => !_used.contains(p.letter)).toList()..shuffle(_r);
     _target = pool.first;
     _used.add(_target.letter);
@@ -102,7 +138,11 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
     _busy = false;
     _mood = Mood.happy;
     _letterPop++;
-    _line = '${_target.intro}|${_target.question}';
+    _line = switch (_mode) {
+      2 => '$intro${_round == 0 ? 'Letter hunt!|' : ''}Pop the letter ${_target.letter.toUpperCase()}!',
+      3 => '$intro${_round == 0 ? 'Big letters and little letters!|' : ''}Find the little letter that matches!',
+      _ => '$intro${_target.intro}|${_target.question}',
+    };
     setState(() {});
     Sfx.zip();
     Voice.say(_line);
@@ -121,7 +161,7 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
         _mood = Mood.dance;
         _bounce++;
         _round++;
-        _line = '$cheer|${_target.chant}';
+        _line = _mode == 1 ? '$cheer|${_target.chant}' : '$cheer|${_target.intro}';
       });
       await Voice.say(_line);
       if (!mounted) return;
@@ -129,7 +169,7 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
         setState(() => _line = "Look! It's growing!|Ta-da!");
         Sfx.tada();
         await Voice.say(_line);
-        if (mounted) finishGame(context, Skill.letters, 'Letter Garden');
+        if (mounted) finishGame(context, Skill.letters, 'Letter Garden', game: 'letters', maxLevel: maxLevel);
         return;
       }
       if (_round == 3) await danceBreak(context);
@@ -140,17 +180,147 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
         _wobbles[p.letter] = (_wobbles[p.letter] ?? 0) + 1;
         _mood = Mood.laugh;
         _wobble++;
-        _line = '${thatsA(p.word)}|$oops';
+        _line = _mode == 1 ? '${thatsA(p.word)}|$oops' : '$oops|${_question()}';
       });
       await Voice.say(_line);
       if (mounted && !_busy) setState(() => _mood = Mood.happy);
     }
   }
 
+  String _question() => switch (_mode) {
+        2 => 'Pop the letter ${_target.letter.toUpperCase()}!',
+        3 => 'Find the little letter that matches!',
+        4 => 'Which sound comes next?|${_word.$3[_spelled]}!',
+        _ => _target.question,
+      };
+
+  /// Level four: tap the letters of the word in order.
+  Future<void> _tapTile(int i, Offset at) async {
+    if (_busy || _spelled >= _word.$1.length) return;
+    final want = _word.$1[_spelled];
+    if (_tiles[i] == want) {
+      Sfx.pop();
+      Juice.starBurst(context, at, count: 10);
+      setState(() {
+        _tiles[i] = '';
+        _spelled++;
+        _bounce++;
+      });
+      if (_spelled < _word.$1.length) {
+        Voice.say('${_word.$3[_spelled - 1]}!');
+        return;
+      }
+      _busy = true;
+      app.learned(Skill.letters, pts: 2);
+      final cheer = Juice.correct(context, at: at);
+      setState(() {
+        _mood = Mood.dance;
+        _round++;
+        _line = '$cheer|You spelled it!|${_word.$3[0]}, ${_word.$3[1].toLowerCase()}, ${_word.$3[2].toLowerCase()}. ${_word.$1[0].toUpperCase()}${_word.$1.substring(1)}!';
+      });
+      await Voice.say(_line);
+      if (!mounted) return;
+      if (_round >= rounds) {
+        setState(() => _line = "Look! It's growing!|Ta-da!");
+        Sfx.tada();
+        await Voice.say(_line);
+        if (mounted) finishGame(context, Skill.letters, 'Letter Garden', game: 'letters', maxLevel: maxLevel);
+        return;
+      }
+      if (_round == 3) await danceBreak(context);
+      if (mounted) _newRound();
+    } else {
+      final oops = Juice.oops();
+      setState(() {
+        _wobble++;
+        _mood = Mood.laugh;
+        _line = '$oops|Which sound comes next?|${_word.$3[_spelled]}!';
+      });
+      Voice.say(_line);
+    }
+  }
+
+  Widget _spellBody() => Column(
+        children: [
+          const SizedBox(height: 6),
+          TweenAnimationBuilder<double>(
+            key: ValueKey(_letterPop),
+            tween: Tween(begin: 0, end: 1),
+            duration: const Duration(milliseconds: 800),
+            curve: Curves.elasticOut,
+            builder: (_, v, c) => Transform.scale(scale: .4 + v * .6, child: c),
+            child: GestureDetector(
+              onTap: () => Voice.say("Let's spell ${_word.$1}!"),
+              child: Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(color: Colors.white.withValues(alpha: .85), borderRadius: BorderRadius.circular(30), border: Border.all(color: C.sun, width: 5)),
+                child: Art(_word.$2, size: 120),
+              ),
+            ),
+          ),
+          const SizedBox(height: 14),
+          // The word, filling in letter by letter
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              for (var k = 0; k < _word.$1.length; k++)
+                AnimatedContainer(
+                  duration: const Duration(milliseconds: 250),
+                  width: 70,
+                  height: 80,
+                  margin: const EdgeInsets.symmetric(horizontal: 5),
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: k < _spelled ? C.sun : Colors.white.withValues(alpha: .7),
+                    borderRadius: BorderRadius.circular(18),
+                    border: Border.all(color: Colors.white, width: 4),
+                  ),
+                  child: Text(k < _spelled ? _word.$1[k] : '', style: T.l(52, color: C.ink)),
+                ),
+            ],
+          ),
+          const Spacer(),
+          Wrap(
+            alignment: WrapAlignment.center,
+            spacing: 12,
+            runSpacing: 12,
+            children: [
+              for (var i = 0; i < _tiles.length; i++)
+                _tiles[i].isEmpty
+                    ? const SizedBox(width: 84, height: 84)
+                    : GestureDetector(
+                        onTapDown: (d) => _tapTile(i, d.globalPosition),
+                        child: TweenAnimationBuilder<double>(
+                          key: ValueKey('t$_round$i${_wobbles['t$i'] ?? 0}'),
+                          tween: Tween(begin: 0, end: 1),
+                          duration: Duration(milliseconds: 500 + i * 120),
+                          curve: Curves.elasticOut,
+                          builder: (_, v, c) => Transform.scale(scale: v, child: c),
+                          child: Container(
+                            width: 84,
+                            height: 84,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: const [C.berry, C.aqua, C.lilac, C.peach][i % 4],
+                              border: Border.all(color: Colors.white, width: 5),
+                              boxShadow: const [BoxShadow(color: C.shadow, offset: Offset(0, 6))],
+                            ),
+                            child: Text(_tiles[i], style: T.l(48, color: Colors.white)),
+                          ),
+                        ),
+                      ),
+            ],
+          ),
+          const SizedBox(height: 24),
+        ],
+      );
+
   @override
   Widget build(BuildContext context) {
     return GameFrame(
       host: 'momo',
+      level: _level,
       scene: 'garden',
       round: _round,
       total: rounds,
@@ -158,15 +328,15 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
       mood: _mood,
       bounce: _bounce,
       wobble: _wobble,
-      onIdle: () => Voice.say(_target.question),
-      body: Column(
+      onIdle: () => Voice.say(_question()),
+      body: _mode == 4 ? _spellBody() : Column(
         children: [
           // The big letter, like a sun. Tap to hear it again.
           GestureDetector(
             onTap: () {
               Sfx.sparkle();
               setState(() => _letterPop++);
-              Voice.say(_target.intro);
+              Voice.say(_mode == 1 ? _target.intro : _question());
             },
             child: TweenAnimationBuilder<double>(
               key: ValueKey(_letterPop),
@@ -184,7 +354,9 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
                   border: Border.all(color: Colors.white, width: 6),
                   boxShadow: [BoxShadow(color: C.sun.withValues(alpha: .6), blurRadius: 24, spreadRadius: 4)],
                 ),
-                child: Text('${_target.letter.toUpperCase()}${_target.letter}', style: T.l(52, color: C.ink)),
+                child: _mode == 2
+                    ? const Icon(Icons.volume_up_rounded, size: 56, color: C.ink)
+                    : Text(_mode == 3 ? _target.letter.toUpperCase() : '${_target.letter.toUpperCase()}${_target.letter}', style: T.l(_mode == 3 ? 70 : 52, color: C.ink)),
               ),
             ),
           ),
@@ -214,7 +386,11 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
                                 tween: Tween(begin: 1, end: 0),
                                 duration: const Duration(milliseconds: 500),
                                 builder: (_, v, c) => Transform.rotate(angle: sin(v * pi * 6) * .25 * v, child: c),
-                                child: _Bubble(art: p.art, size: size),
+                                child: _Bubble(art: p.art, size: size, letter: switch (_mode) {
+                                  2 => p.letter.toUpperCase(),
+                                  3 => p.letter,
+                                  _ => null,
+                                }),
                               ),
                             ),
                           );
@@ -257,9 +433,10 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
 }
 
 class _Bubble extends StatelessWidget {
-  const _Bubble({required this.art, required this.size});
+  const _Bubble({required this.art, required this.size, this.letter});
   final String art;
   final double size;
+  final String? letter;
 
   @override
   Widget build(BuildContext context) => Container(
@@ -276,7 +453,7 @@ class _Bubble extends StatelessWidget {
           boxShadow: [BoxShadow(color: const Color(0xFF7D5FD6).withValues(alpha: .25), blurRadius: 12, offset: const Offset(0, 6))],
         ),
         child: Stack(children: [
-          Center(child: Art(art, size: size * .68)),
+          Center(child: letter != null ? Text(letter!, style: T.l(size * .5, color: const Color(0xFF5B3FC4))) : Art(art, size: size * .68)),
           Positioned(left: size * .2, top: size * .14, child: Container(width: size * .2, height: size * .12, decoration: BoxDecoration(color: Colors.white.withValues(alpha: .8), borderRadius: BorderRadius.circular(20)))),
         ]),
       );

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../friends.dart';
 import '../games/feeding_time.dart';
+import '../songs.dart';
 import '../games/letter_garden.dart';
 import '../games/pattern_party.dart';
 import '../games/shape_builder.dart';
@@ -25,11 +26,13 @@ import 'gate.dart';
 import 'grownups.dart';
 import 'letter.dart';
 import 'grow.dart';
+import 'songs.dart';
 import 'stickers.dart';
 import 'talk.dart';
 
 class _Game {
-  const _Game(this.art, this.name, this.color, this.shadow, this.build);
+  const _Game(this.id, this.art, this.name, this.color, this.shadow, this.build);
+  final String id;
   final String art;
   final String name;
   final Color color;
@@ -39,6 +42,7 @@ class _Game {
 
 final _games = [
   _Game(
+    'feeding',
     'apple',
     'Feeding Time',
     const Color(0xFFFFE9EE),
@@ -46,6 +50,7 @@ final _games = [
     () => const FeedingTime(),
   ),
   _Game(
+    'letters',
     'tulip',
     'Letter Garden',
     const Color(0xFFEDE6FF),
@@ -53,6 +58,7 @@ final _games = [
     () => const LetterGarden(),
   ),
   _Game(
+    'shapes',
     'blocks',
     'Shape Builder',
     const Color(0xFFFFF1D6),
@@ -60,6 +66,7 @@ final _games = [
     () => const ShapeBuilder(),
   ),
   _Game(
+    'patterns',
     'balloon',
     'Pattern Party',
     const Color(0xFFDDF7F3),
@@ -67,6 +74,7 @@ final _games = [
     () => const PatternParty(),
   ),
   _Game(
+    'teach',
     'chalkboard',
     'Teach {creature}',
     const Color(0xFFE3F4DA),
@@ -74,6 +82,7 @@ final _games = [
     () => const TeachBibi(),
   ),
   _Game(
+    'sayit',
     'lion',
     'Say It!',
     const Color(0xFFFFE3D1),
@@ -234,6 +243,7 @@ class _HomeScreenState extends State<HomeScreen> {
   /// Opens a screen on top, then checks what should happen on return.
   Future<void> _open(Widget page, {bool isGame = false}) async {
     Voice.stop();
+    Music.stopSong();
     _away = true;
     await Navigator.of(context).push(softRoute(page));
     _away = false;
@@ -323,7 +333,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   bool get _free =>
-      mounted && !_away && !_speaking && !_showing && !_askFeeling && _hugAsk == null && _arriving == null && !_bedGoing;
+      mounted && !_away && !_speaking && !Voice.speaking && !_showing && !_askFeeling && _hugAsk == null && _arriving == null && !_bedGoing;
 
   /// Every second: if the meadow has been quiet for a little while,
   /// something fun happens all by itself.
@@ -344,6 +354,8 @@ class _HomeScreenState extends State<HomeScreen> {
       _peekaboo,
       _callChild,
       _critters,
+      _joke,
+      _dance,
       if (_onStage.isNotEmpty) ...[_friendChat, _friendChat, _friendChat],
     ];
     try {
@@ -431,9 +443,23 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<void> _dance() async {
     Sfx.tada();
-    await _say('Dance with me!', mood: Mood.dance);
+    await _say(_r.nextBool() ? 'Dance with me and my friends!' : 'Come on, friends! Let\'s dance!', mood: Mood.dance);
+    if (!mounted || _away) return;
+    // A real song: everybody dances and the words appear as they are sung.
+    final pool = songs.where((x) => x.id != 'goodnight').toList();
+    final song = pool[_r.nextInt(pool.length)];
+    var dancing = true;
+    final sub = Music.songPosition.listen((p) {
+      final ms = p.inMilliseconds;
+      String? words;
+      for (final l in song.lines) {
+        if (ms >= l.startMs - 150) words = l.text;
+      }
+      if (words != null && words != _line && mounted) setState(() => _line = words!);
+    });
+    final playing = Music.song(song.id).whenComplete(() => dancing = false);
     const moves = [Mood.dance, Mood.cheer, Mood.laugh, Mood.wave, Mood.dance, Mood.wow];
-    for (var i = 0; i < 10 && mounted && !_away; i++) {
+    for (var i = 0; dancing && mounted && !_away; i++) {
       setState(() {
         _mood = moves[i % moves.length];
         _bounce++;
@@ -442,9 +468,38 @@ class _HomeScreenState extends State<HomeScreen> {
           _react[f.id] = (_react[f.id] ?? 0) + 1;
         }
       });
-      if (i == 3) Sfx.clap();
+      if (i % 8 == 3) Sfx.clap();
       await _wait(480);
     }
+    await Music.stopSong();
+    await playing;
+    await sub.cancel();
+    if (!mounted) return;
+    setState(() => _pose.clear());
+    if (!_away) await _say('You are a super dancer!', mood: Mood.cheer);
+  }
+
+
+  static const _jokes = [
+    "Why did the banana go to the doctor? Because it wasn't peeling well! Hee hee!",
+    'What do you call a sleeping dinosaur? A dino-snore!',
+    'What do you call a bear with no teeth? A gummy bear! Hee hee!',
+    'Why are fish so clever? Because they live in schools!',
+    'What did one plate say to the other? Lunch is on me!',
+  ];
+
+  Future<void> _joke() async {
+    await _say(_jokes[_r.nextInt(_jokes.length)], mood: Mood.laugh);
+    if (!mounted) return;
+    Sfx.giggle();
+    setState(() {
+      _bounce++;
+      for (final f in _onStage) {
+        _pose[f.id] = 'laugh';
+        _react[f.id] = (_react[f.id] ?? 0) + 1;
+      }
+    });
+    await _wait(900);
     if (mounted) setState(() => _pose.clear());
   }
 
@@ -489,7 +544,7 @@ class _HomeScreenState extends State<HomeScreen> {
     }
     if (!mounted || _onStage.isEmpty) return;
     final f = _onStage[_r.nextInt(_onStage.length)];
-    await _friendSays(f, f.randomLine(_r), pose: _r.nextBool() ? 'cheer' : 'laugh');
+    await _friendSays(f, f.nextLine(_r), pose: _r.nextBool() ? 'cheer' : 'laugh');
     if (!mounted) return;
     Sfx.giggle();
     setState(() {
@@ -514,9 +569,9 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _tapFriend(Friend f) {
-    if (_speaking) return;
+    if (_speaking || Voice.speaking) return;
     _quietSince = DateTime.now();
-    _friendSays(f, _r.nextBool() ? f.giggle : f.fun, pose: 'laugh');
+    _friendSays(f, f.nextLine(_r), pose: 'laugh');
   }
 
   /// A brand new friend moves into the meadow, with a party.
@@ -606,6 +661,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [_stickerButton(), const SizedBox(height: 10), _letterbox()],
                               ),
+                            ),
+                            Positioned(
+                              right: 0,
+                              bottom: 128,
+                              child: _SingButton(onTap: () {
+                                Voice.say('Songs!');
+                                _open(const SongsScreen());
+                              }),
                             ),
                             Positioned(right: 0, bottom: 12, child: _TalkButton(onTap: () {
                               Voice.say("Talk to me! I'll copy you!");
@@ -754,6 +817,7 @@ class _HomeScreenState extends State<HomeScreen> {
           g.name.replaceAll('{creature}', _cname),
           g.color,
           g.shadow,
+          app.levelOf(g.id),
           () {
             Voice.say(g.name.startsWith('Teach') ? 'Teach me!' : (g.name.endsWith('!') ? g.name : '${g.name}!'));
             _open(g.build(), isGame: true);
@@ -786,8 +850,10 @@ class _HomeScreenState extends State<HomeScreen> {
     String name,
     Color color,
     Color shadow,
+    int level,
     VoidCallback onTap,
-  ) => Chunky(
+  ) => Stack(clipBehavior: Clip.none, children: [
+    Positioned.fill(child: Chunky(
     color: color,
     shadow: shadow,
     radius: 24,
@@ -805,7 +871,24 @@ class _HomeScreenState extends State<HomeScreen> {
         Text(name, textAlign: TextAlign.center, maxLines: 2, style: T.d(14)),
       ],
     ),
-  );
+  )),
+    Positioned(
+      right: -4,
+      top: -6,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
+        decoration: BoxDecoration(
+          color: C.sun,
+          borderRadius: BorderRadius.circular(99),
+          border: Border.all(color: Colors.white, width: 2),
+        ),
+        child: Row(mainAxisSize: MainAxisSize.min, children: [
+          const Icon(Icons.star_rounded, color: Colors.white, size: 14),
+          Text(level > 4 ? '★' : '$level', style: T.d(13, color: Colors.white)),
+        ]),
+      ),
+    ),
+  ]);
 
   Widget _arrival(Friend f) => Positioned.fill(
         child: Container(
@@ -1000,5 +1083,50 @@ class _EnterHop extends StatelessWidget {
           child: c,
         ),
         child: child,
+      );
+}
+
+/// A dancing music note: "Let's sing!"
+class _SingButton extends StatefulWidget {
+  const _SingButton({required this.onTap});
+  final VoidCallback onTap;
+
+  @override
+  State<_SingButton> createState() => _SingButtonState();
+}
+
+class _SingButtonState extends State<_SingButton> with SingleTickerProviderStateMixin {
+  late final _c = AnimationController(vsync: this, duration: const Duration(milliseconds: 700))..repeat(reverse: true);
+
+  @override
+  void dispose() {
+    _c.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => GestureDetector(
+        onTap: () {
+          Sfx.pop();
+          widget.onTap();
+        },
+        child: AnimatedBuilder(
+          animation: _c,
+          builder: (_, c) => Transform.rotate(angle: (_c.value - .5) * .3, child: c),
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            Container(
+              width: 70,
+              height: 70,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: const LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [C.lilac, C.aqua]),
+                border: Border.all(color: Colors.white, width: 5),
+                boxShadow: [BoxShadow(color: C.lilac.withValues(alpha: .5), blurRadius: 16, spreadRadius: 2)],
+              ),
+              child: const Icon(Icons.music_note_rounded, color: Colors.white, size: 40),
+            ),
+            Text('Sing!', style: T.d(18, color: Colors.white).copyWith(shadows: const [Shadow(color: C.shadow, blurRadius: 6)])),
+          ]),
+        ),
       );
 }

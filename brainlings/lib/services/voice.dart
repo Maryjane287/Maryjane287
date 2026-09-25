@@ -21,6 +21,10 @@ class Voice {
   static final _clip = AudioPlayer();
   static bool _ready = false;
   static int _generation = 0;
+  static int _active = 0;
+
+  /// True while a line is being spoken, so friends can wait their turn.
+  static bool get speaking => _active > 0;
 
   static Future<void> init() async {
     if (_ready) return;
@@ -79,6 +83,7 @@ class Voice {
     if (pieces.isEmpty) return;
 
     Music.duck(true);
+    _active++;
     try {
       final ready = <int, Future<void>>{};
       Future<void> prepare(int i) => ready[i] ??= _prepare(pieces[i], _players[i % _players.length]);
@@ -92,6 +97,7 @@ class Voice {
         await _playPiece(pieces[i], _players[i % _players.length]);
       }
     } finally {
+      _active--;
       if (gen == _generation) Music.duck(false);
     }
   }

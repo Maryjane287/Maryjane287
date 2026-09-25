@@ -33,6 +33,7 @@ class GameFrame extends StatefulWidget {
     this.showBibi = true,
     this.onIdle,
     this.host,
+    this.level,
   });
 
   final int round;
@@ -52,6 +53,9 @@ class GameFrame extends StatefulWidget {
   /// The friend who hosts this game and cheers along.
   final String? host;
 
+  /// Which level of this game is being played (shown as a star badge).
+  final int? level;
+
   @override
   State<GameFrame> createState() => _GameFrameState();
 }
@@ -70,6 +74,11 @@ class _GameFrameState extends State<GameFrame> {
     Juice.resetStreak();
     GameHost.current = widget.host == null ? null : friendById(widget.host!);
     _idle = Timer.periodic(const Duration(seconds: 2), (_) {
+      // Never talk over anyone: wait until the voice has finished.
+      if (Voice.speaking) {
+        _lastTouch = DateTime.now();
+        return;
+      }
       if (DateTime.now().difference(_lastTouch).inSeconds < 9) return;
       _lastTouch = DateTime.now();
       if (GameHost.current != null && _nudge.isOdd) {
@@ -116,6 +125,10 @@ class _GameFrameState extends State<GameFrame> {
                           Navigator.of(context).pop();
                         },
                       ),
+                      if (widget.level != null) ...[
+                        const SizedBox(width: 8),
+                        _LevelBadge(level: widget.level!),
+                      ],
                       const Spacer(),
                       if (GameHost.current != null)
                         ValueListenableBuilder<(int, String)>(
@@ -126,8 +139,9 @@ class _GameFrameState extends State<GameFrame> {
                             pose: r.$2,
                             react: r.$1,
                             onTap: () {
+                              if (Voice.speaking) return;
                               final h = GameHost.current!;
-                              Voice.say(_nudge == 0 ? h.hello : h.giggle);
+                              Voice.say(_nudge == 0 ? h.hello : h.nextLine(Random()));
                               _nudge++;
                             },
                           ),
@@ -196,11 +210,13 @@ class RewardScreen extends StatefulWidget {
     required this.skill,
     required this.gameName,
     this.stars = 2,
+    this.newLevel = false,
   });
 
   final Skill skill;
   final String gameName;
   final int stars;
+  final bool newLevel;
 
   @override
   State<RewardScreen> createState() => _RewardScreenState();
@@ -238,9 +254,10 @@ class _RewardScreenState extends State<RewardScreen> {
       'Amazing! I\'m growing because of you!',
     ];
     final c = cheers[_cheer];
+    final level = widget.newLevel ? '|Hooray! You unlocked a new level!|Next time, something new is waiting!' : '';
     return _sticker == null
-        ? '{name}!|$c'
-        : '{name}!|$c|And look, a new sticker for your album!';
+        ? '{name}!|$c$level'
+        : '{name}!|$c|And look, a new sticker for your album!$level';
   }
 
   @override
@@ -342,10 +359,42 @@ class _RewardScreenState extends State<RewardScreen> {
   }
 }
 
-/// Replace the current game with its reward screen.
-void finishGame(BuildContext context, Skill skill, String name) {
+/// Replace the current game with its reward screen. With a [game] id the
+/// game moves on to its next level, so next time something new is waiting.
+void finishGame(BuildContext context, Skill skill, String name, {String? game, int maxLevel = 4}) {
+  final unlocked = game != null && app.levelUp(game, maxLevel);
   Navigator.of(context)
-      .pushReplacement(softRoute(RewardScreen(skill: skill, gameName: name)));
+      .pushReplacement(softRoute(RewardScreen(skill: skill, gameName: name, newLevel: unlocked)));
+}
+
+/// "Level two!" and friends, spoken at the start of a game.
+String levelLine(int level) => level > 4 ? 'Super level!' : const ['', 'Level one!', 'Level two!', 'Level three!', 'Level four!'][level];
+
+/// Which kind of round to play: the level itself, or a surprise mix once
+/// every level has been finished.
+int levelMode(int level, int maxLevel, Random r) => level <= maxLevel ? level : 1 + r.nextInt(maxLevel);
+
+class _LevelBadge extends StatelessWidget {
+  const _LevelBadge({required this.level});
+  final int level;
+
+  @override
+  Widget build(BuildContext context) => GestureDetector(
+        onTap: () => Voice.say(levelLine(level)),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(colors: [C.sun, Color(0xFFFFB84D)]),
+            borderRadius: BorderRadius.circular(99),
+            border: Border.all(color: Colors.white, width: 3),
+            boxShadow: const [BoxShadow(color: C.shadow, offset: Offset(0, 3))],
+          ),
+          child: Row(mainAxisSize: MainAxisSize.min, children: [
+            const Icon(Icons.star_rounded, color: Colors.white, size: 22),
+            Text(level > 4 ? '★' : '$level', style: T.d(20, color: Colors.white)),
+          ]),
+        ),
+      );
 }
 
 /// Friendly words for small numbers, so Bibi counts out loud nicely.

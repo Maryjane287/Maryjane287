@@ -95,6 +95,9 @@ class AppState extends ChangeNotifier {
   List<String> friendsMet = [];
   String lastFriendDay = '';
 
+  // Each game has levels. A finished level unlocks the next one.
+  Map<String, int> levels = {};
+
   // Family
   List<Letter> letters = [];
 
@@ -194,6 +197,7 @@ class AppState extends ChangeNotifier {
         feelings = List<String>.from(j['feelings'] ?? []);
         friendsMet = List<String>.from(j['friendsMet'] ?? []);
         lastFriendDay = j['lastFriendDay'] ?? '';
+        levels = Map<String, int>.from(j['levels'] ?? {});
         letters = ((j['letters'] as List?) ?? [])
             .map((e) => Letter.fromJson(Map<String, dynamic>.from(e)))
             .toList();
@@ -229,6 +233,7 @@ class AppState extends ChangeNotifier {
         'feelings': feelings,
         'friendsMet': friendsMet,
         'lastFriendDay': lastFriendDay,
+        'levels': levels,
         'letters': letters.map((l) => l.toJson()).toList(),
         'playDay': playDay,
         'playedSecondsToday': playedSecondsToday,
@@ -250,6 +255,17 @@ class AppState extends ChangeNotifier {
   void learned(Skill s, {int pts = 1}) {
     points[s] = points[s]! + pts;
     save();
+  }
+
+  /// The level (1 up) this game will play next.
+  int levelOf(String game) => levels[game] ?? 1;
+
+  /// Moves the game on to its next level. Returns true if something new unlocked.
+  bool levelUp(String game, int maxLevel) {
+    final now = levelOf(game);
+    levels[game] = now + 1;
+    save();
+    return now < maxLevel;
   }
 
   void addStars(int n) {
@@ -302,6 +318,9 @@ class AppState extends ChangeNotifier {
     stars = 0;
     points = {for (final s in Skill.values) s: 0};
     stickers = [];
+    friendsMet = [];
+    lastFriendDay = '';
+    levels = {};
     feelings = [];
     letters = [];
     playedSecondsToday = 0;

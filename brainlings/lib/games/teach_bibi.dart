@@ -12,6 +12,7 @@ import '../widgets/game_frame.dart';
 import '../widgets/juice.dart';
 import '../widgets/ui.dart';
 import 'letter_garden.dart';
+import 'shape_builder.dart';
 
 enum _Step { judge, teach }
 
@@ -40,10 +41,15 @@ class _TeachBibiState extends State<TeachBibi> {
     'Silly me! My leaf was in my eyes.',
     'Oh no, I was thinking about cake again.',
   ];
+  static const maxLevel = 4;
   final _r = Random();
+  final _level = app.levelOf('teach');
   int _round = 0;
   _Step _step = _Step.judge;
   bool _isCount = true;
+  bool _isShape = false;
+  late Shape _shape, _claimShape;
+  List<Shape> _shapeOptions = [];
   bool _bibiRight = false;
   // counting
   int _real = 0, _claim = 0;
@@ -66,19 +72,35 @@ class _TeachBibiState extends State<TeachBibi> {
   }
 
   void _newRound() {
-    _isCount = _round.isEven;
+    final mode = levelMode(_level, maxLevel, _r);
+    _isShape = mode == 2 || (mode == 4 && _r.nextInt(3) == 0);
+    _isCount = !_isShape && _round.isEven;
+    final intro = _round == 0 ? '${levelLine(_level)}|' : '';
+    if (_isShape) {
+      _bibiRight = _r.nextDouble() < .3;
+      _step = _Step.judge;
+      _mood = Mood.think;
+      _shape = Shape.values[_r.nextInt(Shape.values.length)];
+      final others = Shape.values.where((x) => x != _shape).toList()..shuffle(_r);
+      _claimShape = _bibiRight ? _shape : others.first;
+      _shapeOptions = [_shape, others[0], others[1]]..shuffle(_r);
+      _line = '$intro${_round == 0 ? "I'm learning shapes! Let me try.|" : ''}I think this is ${_claimShape == Shape.oval ? 'an' : 'a'} ${_claimShape.name}. Am I right?';
+      setState(() {});
+      Voice.say(_line);
+      return;
+    }
     _bibiRight = _r.nextDouble() < .3;
     _step = _Step.judge;
     _mood = _isCount ? Mood.think : Mood.read;
     if (_isCount) {
-      final top = app.age <= 4 ? 5 : 8;
+      final top = mode >= 3 ? 9 : (app.age <= 4 ? 5 : 8);
       _real = 2 + _r.nextInt(top - 1);
       _thing = things[_r.nextInt(things.length)];
       _claim = _bibiRight ? _real : (_r.nextBool() ? _real + 1 : _real - 1);
       final opts = {_real, _real + 1, _real - 1}.toList()..shuffle(_r);
       _options = opts.map((e) => '$e').toList();
       _line =
-          '${_round == 0 ? 'I\'m learning to count! Let me try.' : 'Let me count these.'}|I think there ${_claim == 1 ? 'is' : 'are'} ${numberWords[_claim]}! Am I right?';
+          '$intro${_round == 0 ? (mode >= 3 ? 'Big numbers are tricky! Let me try.' : 'I\'m learning to count! Let me try.') : 'Let me count these.'}|I think there ${_claim == 1 ? 'is' : 'are'} ${numberWords[_claim]}! Am I right?';
     } else {
       _pic = phonics[_r.nextInt(phonics.length)];
       final others = phonics.where((p) => p.letter != _pic.letter).toList()
@@ -86,7 +108,7 @@ class _TeachBibiState extends State<TeachBibi> {
       _claimLetter = _bibiRight ? _pic.letter : others.first.letter;
       _options = [_pic.letter, others[0].letter, others[1].letter]..shuffle(_r);
       _line =
-          '${thatsA(_pic.word)}|I think it starts with ${_claimLetter.toUpperCase()}. Am I right?';
+          '$intro${thatsA(_pic.word)}|I think it starts with ${_claimLetter.toUpperCase()}. Am I right?';
     }
     setState(() {});
     Voice.say(_line);
@@ -98,7 +120,7 @@ class _TeachBibiState extends State<TeachBibi> {
     if (childSaysRight == _bibiRight) {
       if (_bibiRight) {
         Juice.correct(context);
-        app.learned(_isCount ? Skill.numbers : Skill.letters);
+        app.learned(_isShape ? Skill.shapes : (_isCount ? Skill.numbers : Skill.letters));
         setState(() {
           _mood = Mood.cheer;
           _bounce++;
@@ -113,7 +135,7 @@ class _TeachBibiState extends State<TeachBibi> {
           _step = _Step.teach;
           _wobble++;
           _line =
-              '${sillies[_r.nextInt(sillies.length)]}|Can you teach me? ${_isCount ? 'How many are there really?' : 'Which letter does it start with?'}';
+              '${sillies[_r.nextInt(sillies.length)]}|${_isShape ? 'Which shape is it really?' : 'Can you teach me? ${_isCount ? 'How many are there really?' : 'Which letter does it start with?'}'}';
         });
         await Voice.say(_line);
       }
@@ -121,7 +143,9 @@ class _TeachBibiState extends State<TeachBibi> {
       Juice.oops();
       setState(() {
         _wobble++;
-        _line = _isCount
+        _line = _isShape
+            ? '${_shapeName(_shape)}|Ohhh! Now I know!'
+            : _isCount
             ? 'Hmm, let\'s count together.|${List.generate(_real, (i) => '${numberWordsCap[i + 1]}!').join('|')}|There are ${numberWords[_real]}!'
             : '${_pic.chant}|It starts with ${_pic.letter.toUpperCase()}!';
       });
@@ -131,17 +155,21 @@ class _TeachBibiState extends State<TeachBibi> {
     _busy = false;
   }
 
+  String _shapeName(Shape x) => '${x == Shape.oval ? 'An' : 'A'} ${x.name}!';
+
   Future<void> _teach(String answer) async {
     if (_busy) return;
     _busy = true;
-    final right = _isCount ? answer == '$_real' : answer == _pic.letter;
+    final right = _isShape ? answer == _shape.name : (_isCount ? answer == '$_real' : answer == _pic.letter);
     if (right) {
       final cheer = Juice.correct(context);
       app.learned(Skill.teaching, pts: 2);
       setState(() {
         _mood = Mood.dance;
         _bounce++;
-        _line = _isCount
+        _line = _isShape
+            ? '$cheer|${_shapeName(_shape)}|Ohhh! Now I know! You are the best teacher!'
+            : _isCount
             ? '$cheer|${numberWordsCap[_real]}!|Ohhh! Now I know! You are the best teacher!'
             : '$cheer|${_pic.chant}|Ohhh! Now I know! You are the best teacher!';
       });
@@ -151,7 +179,9 @@ class _TeachBibiState extends State<TeachBibi> {
       Juice.oops();
       setState(() {
         _wobble++;
-        _line = _isCount
+        _line = _isShape
+            ? 'Listen carefully and try again!|Which shape is it really?'
+            : _isCount
             ? 'Hmm, shall we count them together? Tap each one.'
             : 'Listen carefully and try again!|${_pic.chant}';
       });
@@ -164,7 +194,7 @@ class _TeachBibiState extends State<TeachBibi> {
     _round++;
     if (!mounted) return;
     if (_round >= rounds) {
-      finishGame(context, Skill.teaching, 'Teach $_name');
+      finishGame(context, Skill.teaching, 'Teach $_name', game: 'teach', maxLevel: maxLevel);
     } else {
       if (_round == 3) await danceBreak(context);
       if (mounted) _newRound();
@@ -176,6 +206,7 @@ class _TeachBibiState extends State<TeachBibi> {
     return GameFrame(
       host: 'pip',
       scene: 'classroom',
+      level: _level,
       round: _round,
       total: rounds,
       line: _line,
@@ -197,7 +228,9 @@ class _TeachBibiState extends State<TeachBibi> {
                 BoxShadow(color: C.shadow, offset: Offset(0, 6)),
               ],
             ),
-            child: _isCount
+            child: _isShape
+                ? SizedBox(height: 150, child: Center(child: SizedBox(width: 130, height: 130, child: CustomPaint(painter: ShapePainter(_shape, C.berry)))))
+                : _isCount
                 ? _CountBoard(
                     key: ValueKey(_round),
                     count: _real,
@@ -241,6 +274,21 @@ class _TeachBibiState extends State<TeachBibi> {
                     ],
                   ),
                 ),
+              ],
+            )
+          else if (_step == _Step.teach && _isShape)
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                for (final o in _shapeOptions)
+                  Chunky(
+                    color: C.paper,
+                    shadow: C.shadow,
+                    radius: 28,
+                    padding: const EdgeInsets.all(16),
+                    onTap: () => _teach(o.name),
+                    child: SizedBox(width: 60, height: 60, child: CustomPaint(painter: ShapePainter(o, C.aqua))),
+                  ),
               ],
             )
           else if (_step == _Step.teach)

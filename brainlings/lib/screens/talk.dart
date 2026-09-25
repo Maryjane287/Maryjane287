@@ -32,7 +32,24 @@ enum _Ear { off, listening, hearing, talking }
 class _TalkScreenState extends State<TalkScreen> {
   static const _snacks = ['cupcake', 'strawberry', 'cookie', 'lolly', 'donut', 'banana'];
   final _rec = AudioRecorder();
-  final _player = AudioPlayer();
+  // A loudness booster so Bibi's copy-cat voice is nice and loud.
+  final _boost = AndroidLoudnessEnhancer();
+  late final _player = AudioPlayer(audioPipeline: AudioPipeline(androidAudioEffects: [_boost]));
+  int _talks = 0;
+  int _quietCount = 0;
+  static const _quietLines = [
+    'Hello? Are you there? Say something!',
+    "I'm all ears! Say hello to me!",
+    "Psst! I'm waiting for your lovely voice!",
+    'Talk to me! I love your voice!',
+  ];
+  static const _jokes = [
+    "Why did the banana go to the doctor? Because it wasn't peeling well! Hee hee!",
+    'What do you call a sleeping dinosaur? A dino-snore!',
+    'What do you call a bear with no teeth? A gummy bear! Hee hee!',
+    'Why are fish so clever? Because they live in schools!',
+    'What did one plate say to the other? Lunch is on me!',
+  ];
   final _r = Random();
   final _mouthKey = GlobalKey();
   final _snackKeys = List.generate(6, (_) => GlobalKey());
@@ -57,6 +74,10 @@ class _TalkScreenState extends State<TalkScreen> {
   void initState() {
     super.initState();
     Music.pause();
+    try {
+      _boost.setEnabled(true);
+      _boost.setTargetGain(9);
+    } catch (_) {}
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       Sfx.tada();
       setState(() => _bounce++);
@@ -94,7 +115,10 @@ class _TalkScreenState extends State<TalkScreen> {
     try {
       final dir = await getTemporaryDirectory();
       final path = '${dir.path}/bibi-ears.m4a';
-      await _rec.start(const RecordConfig(encoder: AudioEncoder.aacLc, numChannels: 1), path: path);
+      await _rec.start(
+        const RecordConfig(encoder: AudioEncoder.aacLc, numChannels: 1, autoGain: true, noiseSuppress: true, sampleRate: 44100),
+        path: path,
+      );
       _recStart = DateTime.now();
       _speechStart = null;
       _lastLoud = null;
@@ -115,11 +139,13 @@ class _TalkScreenState extends State<TalkScreen> {
     if (_recStart == null || _ear == _Ear.off || _ear == _Ear.talking) return;
     final t = DateTime.now().difference(_recStart!).inMilliseconds;
     final db = a.current.isFinite ? a.current : -60.0;
-    if (t < 400) {
+    if (t < 300) {
       _noise = max(_noise, db); // learn how loud the room is
       return;
     }
-    final threshold = max(_noise + 12, -42);
+    // Keep learning the room while nobody talks, so even soft voices count.
+    if (_speechStart == null && db < _noise + 4) _noise += (db - _noise) * .08;
+    final threshold = min(max(_noise + 7, -50), -28);
     final loud = db > threshold;
     if (mounted) setState(() => _level = ((db + 60) / 60).clamp(0.0, 1.0));
     if (loud) {
@@ -132,19 +158,31 @@ class _TalkScreenState extends State<TalkScreen> {
         });
       }
     }
-    final heardSomething = _speechStart != null && _lastLoud != null && _lastLoud! - _speechStart! > 250;
-    final quietAfter = _lastLoud != null && t - _lastLoud! > 700;
+    final heardSomething = _speechStart != null && _lastLoud != null && _lastLoud! - _speechStart! > 180;
+    final quietAfter = _lastLoud != null && t - _lastLoud! > 600;
     if (heardSomething && (quietAfter || t - _speechStart! > 6000)) {
       _repeat(_speechStart!, _lastLoud! + 150);
-    } else if (_speechStart == null && t > 9000) {
-      // Nobody spoke for a while: start a fresh recording so it stays small.
-      _restart();
+    } else if (_speechStart == null && t > 7000) {
+      // Nobody spoke for a while: Bibi says hello, or tells a joke.
+      _nudgeQuiet();
     }
   }
 
-  Future<void> _restart() async {
+  bool _nudging = false;
+  Future<void> _nudgeQuiet() async {
+    if (_nudging || _busy) return;
+    _nudging = true;
     await _stopRec();
-    _listen();
+    if (!mounted) return;
+    setState(() => _ear = _Ear.off);
+    _quietCount++;
+    final joke = _quietCount % 3 == 0;
+    final line = joke ? _jokes[_r.nextInt(_jokes.length)] : _quietLines[_r.nextInt(_quietLines.length)];
+    Sfx.boing();
+    setState(() => _wobble++);
+    await _say(line, joke ? Mood.laugh : Mood.wave);
+    _nudging = false;
+    if (mounted) _listen();
   }
 
   Future<String?> _stopRec() async {
@@ -166,8 +204,8 @@ class _TalkScreenState extends State<TalkScreen> {
     try {
       await _player.setFilePath(path);
       await _player.setClip(start: Duration(milliseconds: max(0, startMs - 120)), end: Duration(milliseconds: endMs));
-      await _player.setPitch(1.6);
-      await _player.setSpeed(1.2);
+      await _player.setPitch(1.5);
+      await _player.setSpeed(1.15);
       await _player.setVolume(1);
       _startTalkAnim();
       await _player.play();
@@ -176,12 +214,20 @@ class _TalkScreenState extends State<TalkScreen> {
     } catch (_) {}
     _stopTalkAnim();
     if (_disposed) return;
+    _talks++;
+    _quietCount = 0;
     Sfx.giggle();
     setState(() {
       _mood = Mood.laugh;
       _bounce++;
     });
-    await Future.delayed(const Duration(milliseconds: 500));
+    // Now and then Bibi says something back, so it feels like a chat.
+    if (_talks % 2 == 0) {
+      const replies = ['Hee hee! You sound funny!', 'You sound amazing!', 'I heard you! Say something else!'];
+      await _say(replies[_r.nextInt(replies.length)], Mood.cheer);
+    } else {
+      await Future.delayed(const Duration(milliseconds: 400));
+    }
     _listen();
   }
 

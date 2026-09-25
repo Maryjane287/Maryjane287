@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:audioplayers/audioplayers.dart';
+import 'package:video_player/video_player.dart';
 
 import '../state.dart';
 
@@ -45,6 +48,50 @@ class Music {
     try {
       await _p.resume();
     } catch (_) {}
+  }
+
+  static VideoPlayerController? _song;
+  static final _songPos = StreamController<Duration>.broadcast();
+  static Completer<void> _songStop = Completer();
+
+  /// Plays one of Bibi's songs out loud (the background music waits).
+  /// The sound comes straight from the song's video. Completes when the
+  /// song ends or is stopped.
+  static Future<void> song(String id) async {
+    await stopSong();
+    await pause();
+    _songStop = Completer();
+    final v = VideoPlayerController.asset('assets/songs/$id.mp4');
+    _song = v;
+    void tick() {
+      _songPos.add(v.value.position);
+      final d = v.value.duration;
+      if (d > Duration.zero && v.value.position >= d - const Duration(milliseconds: 150) && !_songStop.isCompleted) {
+        _songStop.complete();
+      }
+    }
+
+    try {
+      await v.initialize();
+      await v.setVolume(1);
+      v.addListener(tick);
+      await v.play();
+      await _songStop.future.timeout(const Duration(seconds: 40));
+    } catch (_) {}
+    v.removeListener(tick);
+    if (_song == v) _song = null;
+    await v.dispose();
+    await resume();
+  }
+
+  /// Where the song has got to, for the words on screen.
+  static Stream<Duration> get songPosition => _songPos.stream;
+
+  static Future<void> stopSong() async {
+    try {
+      await _song?.pause();
+    } catch (_) {}
+    if (!_songStop.isCompleted) _songStop.complete();
   }
 
   static Future<void> stop() async {

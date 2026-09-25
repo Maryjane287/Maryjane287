@@ -16,11 +16,14 @@ enum Shape { square, triangle, rectangle, circle, star, heart, diamond, oval }
 
 /// One piece of the house, and where it goes.
 class _Piece {
-  const _Piece(this.shape, this.color, this.rect, this.job);
+  const _Piece(this.shape, this.color, this.rect, this.job, {this.twin});
   final Shape shape;
   final Color color;
   final Rect rect; // in a 100 x 100 picture
   final String job;
+  final Rect? twin; // a second copy, like the robot's other eye
+
+  List<Rect> get rects => [rect, ?twin];
 }
 
 const _house = [
@@ -56,6 +59,38 @@ const _house = [
   ),
 ];
 
+const _rocket = [
+  _Piece(Shape.rectangle, Color(0xFF9B7BFF), Rect.fromLTWH(38, 32, 24, 44), 'Find the rectangle for the rocket!'),
+  _Piece(Shape.triangle, Color(0xFFFF5C8A), Rect.fromLTWH(36, 10, 28, 23), 'Now find the triangle for the nose!'),
+  _Piece(Shape.circle, Color(0xFF6FD6F5), Rect.fromLTWH(43, 40, 14, 14), 'Now find the circle for the window!'),
+  _Piece(Shape.diamond, Color(0xFFFF9E3D), Rect.fromLTWH(41, 75, 18, 18), 'Now find the diamond for the fire!'),
+  _Piece(Shape.star, Color(0xFFFFD233), Rect.fromLTWH(8, 6, 16, 16), 'Now find the star for the sky!'),
+];
+
+const _boat = [
+  _Piece(Shape.oval, Color(0xFFFF9E5A), Rect.fromLTWH(14, 64, 72, 22), 'Find the oval for the boat!'),
+  _Piece(Shape.rectangle, Color(0xFF8A5A3C), Rect.fromLTWH(47, 22, 5, 44), 'Now find the rectangle for the mast!'),
+  _Piece(Shape.triangle, Color(0xFFFFF3F7), Rect.fromLTWH(53, 26, 30, 36), 'Now find the triangle for the sail!'),
+  _Piece(Shape.heart, Color(0xFFFF4F7B), Rect.fromLTWH(44, 8, 13, 13), 'Now find the heart for the flag!'),
+  _Piece(Shape.circle, Color(0xFFFFD233), Rect.fromLTWH(78, 4, 18, 18), 'Now find the circle for the sun!'),
+];
+
+const _robot = [
+  _Piece(Shape.square, Color(0xFF8FB8DE), Rect.fromLTWH(33, 10, 34, 30), "Find the square for the robot's head!"),
+  _Piece(Shape.rectangle, Color(0xFF5FCFB8), Rect.fromLTWH(26, 42, 48, 40), 'Now find the rectangle for the body!'),
+  _Piece(Shape.circle, Color(0xFFFFFFFF), Rect.fromLTWH(38, 18, 9, 9), 'Now find the circle for the eyes!', twin: Rect.fromLTWH(53, 18, 9, 9)),
+  _Piece(Shape.heart, Color(0xFFFF4F7B), Rect.fromLTWH(43, 54, 14, 14), "Now find the heart for the robot's heart!"),
+  _Piece(Shape.star, Color(0xFFFFD233), Rect.fromLTWH(43, 0, 13, 11), 'Now find the star for the antenna!'),
+];
+
+/// One picture per level: house, rocket, boat, robot. Then a surprise mix.
+const _pictures = [
+  (_house, "Let's build a house!", 'Look! We built a whole house together!'),
+  (_rocket, "Let's build a rocket!", 'Look! We built a rocket! Three, two, one, blast off!'),
+  (_boat, "Let's build a boat!", 'Look! We built a boat! Splish splash!'),
+  (_robot, "Let's build a robot!", 'Look! We built a robot! Beep boop!'),
+];
+
 /// Shape Builder: find the right shape and it flies into a picture.
 /// Five shapes build a whole house.
 class ShapeBuilder extends StatefulWidget {
@@ -66,7 +101,11 @@ class ShapeBuilder extends StatefulWidget {
 }
 
 class _ShapeBuilderState extends State<ShapeBuilder> {
+  static const maxLevel = 4;
   final _r = Random();
+  final _level = app.levelOf('shapes');
+  late final _pic = _pictures[levelMode(_level, maxLevel, Random()) - 1];
+  List<_Piece> get _house => _pic.$1;
   int _round = 0;
   late List<Shape> _choices;
   String _line = '';
@@ -86,10 +125,10 @@ class _ShapeBuilderState extends State<ShapeBuilder> {
   void _newRound() {
     final others = Shape.values.where((s) => s != _piece.shape).toList()
       ..shuffle(_r);
-    _choices = [_piece.shape, others[0], others[1]]..shuffle(_r);
+    _choices = [_piece.shape, others[0], others[1], if (_level >= 3) others[2]]..shuffle(_r);
     _wrong = null;
     _mood = Mood.happy;
-    _line = _round == 0 ? 'Let\'s build a house!|${_piece.job}' : _piece.job;
+    _line = _round == 0 ? '${levelLine(_level)}|${_pic.$2}|${_piece.job}' : _piece.job;
     setState(() {});
     Voice.say(_line);
   }
@@ -112,9 +151,9 @@ class _ShapeBuilderState extends State<ShapeBuilder> {
       if (_round >= _house.length) {
         Sfx.tada();
         celebrate(context, count: 100);
-        setState(() => _line = 'Look! We built a whole house together!');
+        setState(() => _line = _pic.$3);
         await Voice.say(_line);
-        if (mounted) finishGame(context, Skill.shapes, 'Shape Builder');
+        if (mounted) finishGame(context, Skill.shapes, 'Shape Builder', game: 'shapes', maxLevel: maxLevel);
       } else {
         if (_round == 3) await danceBreak(context);
         if (mounted) _newRound();
@@ -137,6 +176,7 @@ class _ShapeBuilderState extends State<ShapeBuilder> {
   Widget build(BuildContext context) {
     return GameFrame(
       host: 'tiko',
+      level: _level,
       scene: 'playroom',
       round: _round,
       total: _house.length,
@@ -164,47 +204,7 @@ class _ShapeBuilderState extends State<ShapeBuilder> {
                       height: side,
                       child: Stack(
                         children: [
-                          for (var i = 0; i < _house.length; i++)
-                            if (i < _round)
-                              Positioned.fromRect(
-                                rect: Rect.fromLTWH(
-                                  _house[i].rect.left * k,
-                                  _house[i].rect.top * k,
-                                  _house[i].rect.width * k,
-                                  _house[i].rect.height * k,
-                                ),
-                                child: TweenAnimationBuilder<double>(
-                                  tween: Tween(begin: 0, end: 1),
-                                  duration: const Duration(milliseconds: 800),
-                                  curve: Curves.elasticOut,
-                                  builder: (_, v, c) =>
-                                      Transform.scale(scale: v, child: c),
-                                  child: CustomPaint(
-                                    painter: ShapePainter(
-                                      _house[i].shape,
-                                      _house[i].color,
-                                    ),
-                                  ),
-                                ),
-                              )
-                            else if (i == _round)
-                              Positioned.fromRect(
-                                rect: Rect.fromLTWH(
-                                  _house[i].rect.left * k,
-                                  _house[i].rect.top * k,
-                                  _house[i].rect.width * k,
-                                  _house[i].rect.height * k,
-                                ),
-                                child: _Pulse(
-                                  child: CustomPaint(
-                                    painter: ShapePainter(
-                                      _house[i].shape,
-                                      C.ink.withValues(alpha: .12),
-                                      outline: true,
-                                    ),
-                                  ),
-                                ),
-                              ),
+                          ..._pieceWidgets(k),
                           // grass line
                           Positioned(
                             left: 0,
@@ -260,6 +260,24 @@ class _ShapeBuilderState extends State<ShapeBuilder> {
       ),
     );
   }
+
+  List<Widget> _pieceWidgets(double k) => [
+        for (var i = 0; i < _house.length; i++)
+          for (final r in _house[i].rects)
+            if (i <= _round)
+              Positioned.fromRect(
+                rect: Rect.fromLTWH(r.left * k, r.top * k, r.width * k, r.height * k),
+                child: i < _round
+                    ? TweenAnimationBuilder<double>(
+                        tween: Tween(begin: 0, end: 1),
+                        duration: const Duration(milliseconds: 800),
+                        curve: Curves.elasticOut,
+                        builder: (_, v, c) => Transform.scale(scale: v, child: c),
+                        child: CustomPaint(painter: ShapePainter(_house[i].shape, _house[i].color)),
+                      )
+                    : _Pulse(child: CustomPaint(painter: ShapePainter(_house[i].shape, C.ink.withValues(alpha: .12), outline: true))),
+              ),
+      ];
 
   // Decoys are colourful too, so colour never gives the answer away.
   Color _decoy(Shape s) => const [
