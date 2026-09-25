@@ -2,7 +2,7 @@
 
 Owner: Chioma (Director of GRACE AND LOANNES LTD, UK company SC899696, lives in Nigeria).
 She trusts Claude to make design and build decisions without asking for approval.
-Work on branch `claude/uk-bank-company-account-fw7kdp`.
+Work on whatever branch the session names (latest: `claude/keen-ritchie-was4uj`; earlier: `claude/uk-bank-company-account-fw7kdp`).
 
 ## How to write (important to the owner)
 - Warm, human, emotional. Never robotic.
@@ -50,6 +50,30 @@ Family members do NOT need the app: they get a link (WhatsApp/email) to a small 
 - Google Play developer account (organisation, Grace and Loannes Ltd) is paid and identity verified;
   phone numbers still to verify. Apple enrollment submitted but $99 not paid (later).
 - Payouts need a proper company bank account (Wise was rejected by KDP; unresolved).
+
+### Build status (updated 2026-09-25)
+Flutter app lives in `brainlings/` (Android + iOS). Everything runs offline on the device for now.
+Done and working:
+- First-run grown-up setup: name/nickname, age, family circle, optional name recording, bedtime minutes, privacy promise.
+- Hatch: tap the egg 5 times, cracks, flash, confetti, child picks a name (Bibi, Pip, Mochi, Sunny, Bean, Coco).
+- Home: living meadow sky that follows the real clock (sun, clouds, flowers / dusk / moon, stars, fireflies),
+  Bibi bobs and bounces, tap for jokes and rare surprise stars, morning dream postcards, daily feelings check-in,
+  growth bar, stars, letterbox with glowing dot, sticker album, grown-ups lock.
+- Games (5 rounds each, then stars + a sticker): Feeding Time, Letter Garden, Shape Builder (builds a house),
+  Pattern Party, Teach Bibi (Bibi makes silly mistakes, child corrects).
+- Growth direction: numbers = orbiting stars, letters = storybook hat, both = balanced.
+- Letters from home: envelope arrives, "Yes please!" / "Save it for later", plays voice or reads text, hug back,
+  ONE gentle hug reminder (after a game or at bedtime). Grown-up sees "Chris listened (played it 3 times)" and hugs.
+  For now letters are recorded in the grown-up area on the same phone (stand-in for the family web link).
+- Bedtime: after the daily limit Bibi yawns, plays any bedtime message, "See you tomorrow!", locked until a grown-up wakes it.
+- Voice: flutter_tts speaks everything; `{name}` in a line uses the parent's recorded clip of the child's name.
+- Art: 6 Bibi poses + egg in `brainlings/assets/bibi/` (webp). Sounds are generated chimes in `assets/sfx/`.
+Next up: Firebase (family web link page, real letters, push), trial and billing, storybooks, decorating Bibi's home,
+seasonal days and birthday, Guess What Mummy Picked, report before trial ends, Play Store listing.
+Build: `flutter build apk --release` works in the container (Android SDK at /opt/android-sdk, Flutter at /opt/flutter,
+both installed per session). Maven Central sometimes rate-limits (429): retry. GitHub Actions workflow
+`.github/workflows/brainlings-apk.yml` also builds the APK as a downloadable artifact.
+Higgsfield credits used so far: about 3.5 (poses at medium quality, 0.5 each). Balance ~497.
 
 ### Tech plan
 - Flutter (Android first). Firebase for accounts, storage, messages, push.
