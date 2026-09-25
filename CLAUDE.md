@@ -86,7 +86,10 @@ Done and working:
   poke head/feet/tummy, hug, tickle, snack tray. Say It! game uses speech recognition. Nothing is saved.
 - Music: procedural loops in `assets/music/` (play, games, lullaby), toggle in the grown-up area.
 - v1.6 (owner: songs stopped, then waited silently for the progress bar; old songs dull, short and laggy):
-  ONE video per song. Old songs re-encoded 1.2x faster (atempo, pitch kept) at 24 fps, 12.5 s; Goodnight unchanged pace.
+  ONE video per song. Old songs re-encoded 1.2x faster (atempo, pitch kept) at 24 fps, 12.5 s + 0.7 s quiet pause
+  at the end (owner wanted a little breath before a song repeats; `Song.pauseMs`, also after Z in the Letter Song). In the pause Bibi shouts
+  "Again!" / "One more time!" / "Let's go again!" (SongLoop breathAtMs/onBreath, not on the last round).
+  Goodnight Song: owner loves it as it is. Never change it (no pause, no shout, same pace).
   New songs are one 60 s file (verse A, chorus, verse B, chorus). `Song.timeline` has all words timed in the file,
   `Song.plan(target)` picks passes + stop point at a verse end. `lib/services/song_loop.dart` SongLoop: setLooping(true),
   counts passes by position wrap, stops with a quick fade at the verse end, watchdog restarts a stalled player (only when

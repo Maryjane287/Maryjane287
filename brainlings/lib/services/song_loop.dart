@@ -8,7 +8,7 @@ import 'package:video_player/video_player.dart';
 /// has lasted [endMs], then fades it out and calls [onEnd]. It never waits
 /// in silence: if the player stops on its own, it is started again.
 class SongLoop {
-  SongLoop(this.v, {required this.plan, required this.onEnd, this.onPosition});
+  SongLoop(this.v, {required this.plan, required this.onEnd, this.onPosition, this.breathAtMs, this.onBreath});
 
   final VideoPlayerController v;
 
@@ -18,6 +18,13 @@ class SongLoop {
 
   /// Called with the position in the video, for the words on screen.
   final void Function(Duration)? onPosition;
+
+  /// Where the singing ends in the video (a little pause follows), and what
+  /// to do right then, every time round except the last.
+  final int? breathAtMs;
+  final VoidCallback? onBreath;
+  Timer? _breath;
+  int _breathPass = -1;
 
   int _loops = 0;
   int _last = 0;
@@ -42,6 +49,8 @@ class SongLoop {
     _done = false;
     _stopper?.cancel();
     _stopper = null;
+    _breath?.cancel();
+    _breathPass = -1;
     await v.setVolume(1);
     await v.setLooping(true);
     await v.seekTo(Duration.zero);
@@ -63,6 +72,16 @@ class SongLoop {
     _last = p;
     onPosition?.call(v.value.position);
     final left = endMs - (_loops * _length + p);
+    final at = breathAtMs;
+    if (onBreath != null && at != null && _breathPass != _loops && left > _length - p) {
+      final d = at - p;
+      if (d >= 0 && d < 1500) {
+        _breathPass = _loops;
+        _breath = Timer(Duration(milliseconds: d), () {
+          if (!_done) onBreath!();
+        });
+      }
+    }
     if (_stopper == null && left < 1600) {
       _stopper = Timer(Duration(milliseconds: max(0, left - 120)), finish);
     }
@@ -85,6 +104,7 @@ class SongLoop {
     if (_done) return;
     _done = true;
     _stopper?.cancel();
+    _breath?.cancel();
     _watchdog?.cancel();
     v.removeListener(_tick);
     try {
@@ -102,6 +122,7 @@ class SongLoop {
   void cancel() {
     _done = true;
     _stopper?.cancel();
+    _breath?.cancel();
     _watchdog?.cancel();
     v.removeListener(_tick);
   }

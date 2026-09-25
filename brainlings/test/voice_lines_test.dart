@@ -51,7 +51,7 @@ void main() {
     expectRecorded('Five!|Minus!|Two!|Take away means some go away.|This sign means take away. We can also call it minus!|How many are left?');
     expectRecorded('Five!|Take away!|Two!|How many are left?');
     expectRecorded('Bonus time! Catch the falling stars!|Wow! You caught so many stars!|Woohoo! Well done!');
-    expectRecorded("What a lovely dancer you are!|Shall we sing it again?|Let's sing it again!|You are a super dancer!");
+    expectRecorded("What a lovely dancer you are!|Shall we sing it again?|Let's sing it again!|You are a super dancer!|Again!|One more time!|Let's go again!");
     for (var i = 0; i < 20; i++) {
       expectRecorded(yayLine(_FixedRandom(i)));
     }

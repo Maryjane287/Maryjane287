@@ -39,7 +39,10 @@ class Song {
   /// song are one video, one after the other.
   List<int> get verseLengths => [for (var i = 0; i < verses.length; i++) i == 0 && fast ? 12500 : 15000];
 
-  int get lengthMs => verseLengths.fold(0, (a, b) => a + b);
+  /// A little breath at the end of the older songs before they start again.
+  int get pauseMs => fast ? 700 : 0;
+
+  int get lengthMs => verseLengths.fold(0, (a, b) => a + b) + pauseMs;
 
   /// All the words of the whole video, timed from its start.
   List<SongLine> get timeline {

@@ -283,7 +283,16 @@ class _SongPlayerState extends State<SongPlayer> {
       _v = c;
     }
     _loop?.cancel();
-    final loop = SongLoop(c, plan: _plan, onEnd: _finish, onPosition: _onPosition);
+    final loop = SongLoop(
+      c,
+      plan: _plan,
+      onEnd: _finish,
+      onPosition: _onPosition,
+      // In the little pause before the song goes round again, Bibi cheers.
+      // Not in the Goodnight Song, which stays calm.
+      breathAtMs: widget.song.pauseMs > 0 ? widget.song.lengthMs - widget.song.pauseMs : null,
+      onBreath: () => Voice.say(const ['Again!', 'One more time!', "Let's go again!"][_pass % 3]),
+    );
     _loop = loop;
     _progress.value = 0;
     setState(() {
