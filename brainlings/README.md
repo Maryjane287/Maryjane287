@@ -1,17 +1,23 @@
-# brainlings
+# Brainlings
 
 Learn, grow, and hear from the people who love you.
 
-## Getting Started
+A learning app for children aged 4 to 7, made by Grace and Loannes Ltd. Each child hatches their own
+creature (Bibi by default). It grows only when they learn, and it brings them voice letters from family.
 
-This project is a starting point for a Flutter application.
+## Run it
 
-A few resources to get you started if this is your first Flutter project:
+```
+flutter pub get
+flutter run            # on a phone or emulator
+flutter build apk      # Android install file, in build/app/outputs/flutter-apk/
+flutter test
+```
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Where things live
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- `lib/screens/`: setup, hatch, home, letters, bedtime, stickers, grown-ups area
+- `lib/games/`: Feeding Time, Letter Garden, Shape Builder, Pattern Party, Teach Bibi
+- `lib/widgets/`: the meadow sky, Bibi, chunky buttons, confetti
+- `lib/state.dart`: everything the app remembers (stored only on the device)
+- `assets/bibi/`: Bibi's poses and the egg; `assets/sfx/`: sound effects
