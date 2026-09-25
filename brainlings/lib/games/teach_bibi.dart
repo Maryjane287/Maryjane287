@@ -41,13 +41,15 @@ class _TeachBibiState extends State<TeachBibi> {
     'Silly me! My leaf was in my eyes.',
     'Oh no, I was thinking about cake again.',
   ];
-  static const maxLevel = 4;
+  static const maxLevel = 7;
   final _r = Random();
   final _level = app.levelOf('teach');
   int _round = 0;
   _Step _step = _Step.judge;
   bool _isCount = true;
   bool _isShape = false;
+  bool _isSum = false;
+  int _sa = 1, _sb = 1; // the sum Bibi tries
   late Shape _shape, _claimShape;
   List<Shape> _shapeOptions = [];
   bool _bibiRight = false;
@@ -72,10 +74,27 @@ class _TeachBibiState extends State<TeachBibi> {
   }
 
   void _newRound() {
-    final mode = levelMode(_level, maxLevel, _r);
-    _isShape = mode == 2 || (mode == 4 && _r.nextInt(3) == 0);
-    _isCount = !_isShape && _round.isEven;
+    // 5: Bibi tries sums, 6: sums, shapes and big numbers, 7: everything.
+    final mode = _level > 7 ? 7 : _level;
+    _isSum = mode == 5 || (mode >= 6 && _r.nextInt(3) == 0);
+    _isShape = !_isSum && (mode == 2 || ((mode == 4 || mode >= 6) && _r.nextInt(2) == 0));
+    _isCount = !_isShape && !_isSum && (mode == 6 || _round.isEven);
     final intro = _round == 0 ? '${levelLine(_level)}|' : '';
+    if (_isSum) {
+      _bibiRight = _r.nextDouble() < .3;
+      _step = _Step.judge;
+      _mood = Mood.think;
+      _thing = things[_r.nextInt(things.length)];
+      _sa = 1 + _r.nextInt(5);
+      _sb = 1 + _r.nextInt(4);
+      _real = _sa + _sb;
+      _claim = _bibiRight ? _real : (_r.nextBool() ? _real + 1 : _real - 1);
+      _options = ({_real, _real + 1, _real - 1}.toList()..shuffle(_r)).map((e) => '$e').toList();
+      _line = "$intro${_round == 0 ? "I'm learning sums! Let me try.|" : ''}I think|${numberWordsCap[_sa]}!|Plus!|${numberWordsCap[_sb]}!|Makes!|${numberWordsCap[_claim]}!|Am I right?";
+      setState(() {});
+      Voice.say(_line);
+      return;
+    }
     if (_isShape) {
       _bibiRight = _r.nextDouble() < .3;
       _step = _Step.judge;
@@ -120,14 +139,14 @@ class _TeachBibiState extends State<TeachBibi> {
     if (childSaysRight == _bibiRight) {
       if (_bibiRight) {
         Juice.correct(context);
-        app.learned(_isShape ? Skill.shapes : (_isCount ? Skill.numbers : Skill.letters));
+        app.learned(_isShape ? Skill.shapes : (_isCount || _isSum ? Skill.numbers : Skill.letters));
         setState(() {
           _mood = Mood.cheer;
           _bounce++;
           _line = 'Yippee! I got one right! Thank you for checking, teacher!';
         });
         await Voice.say(_line);
-        _next();
+        await _next();
       } else {
         Sfx.boing();
         setState(() {
@@ -135,7 +154,7 @@ class _TeachBibiState extends State<TeachBibi> {
           _step = _Step.teach;
           _wobble++;
           _line =
-              '${sillies[_r.nextInt(sillies.length)]}|${_isShape ? 'Which shape is it really?' : 'Can you teach me? ${_isCount ? 'How many are there really?' : 'Which letter does it start with?'}'}';
+              '${sillies[_r.nextInt(sillies.length)]}|${_isSum ? 'How many does it really make?' : _isShape ? 'Which shape is it really?' : 'Can you teach me? ${_isCount ? 'How many are there really?' : 'Which letter does it start with?'}'}';
         });
         await Voice.say(_line);
       }
@@ -143,43 +162,51 @@ class _TeachBibiState extends State<TeachBibi> {
       Juice.oops();
       setState(() {
         _wobble++;
-        _line = _isShape
+        _line = _isSum
+            ? "Let's add them up!|${_sumWords()}"
+            : _isShape
             ? '${_shapeName(_shape)}|Ohhh! Now I know!'
             : _isCount
             ? 'Hmm, let\'s count together.|${List.generate(_real, (i) => '${numberWordsCap[i + 1]}!').join('|')}|There are ${numberWords[_real]}!'
             : '${_pic.chant}|It starts with ${_pic.letter.toUpperCase()}!';
       });
       await Voice.say(_line);
-      _next();
+      await _next();
     }
     _busy = false;
   }
+
+  String _sumWords() => '${numberWordsCap[_sa]}!|Plus!|${numberWordsCap[_sb]}!|Makes!|${numberWordsCap[_real]}!';
 
   String _shapeName(Shape x) => '${x == Shape.oval ? 'An' : 'A'} ${x.name}!';
 
   Future<void> _teach(String answer) async {
     if (_busy) return;
     _busy = true;
-    final right = _isShape ? answer == _shape.name : (_isCount ? answer == '$_real' : answer == _pic.letter);
+    final right = _isShape ? answer == _shape.name : (_isCount || _isSum ? answer == '$_real' : answer == _pic.letter);
     if (right) {
       final cheer = Juice.correct(context);
       app.learned(Skill.teaching, pts: 2);
       setState(() {
         _mood = Mood.dance;
         _bounce++;
-        _line = _isShape
+        _line = _isSum
+            ? '$cheer|${_sumWords()}|Ohhh! Now I know! You are the best teacher!'
+            : _isShape
             ? '$cheer|${_shapeName(_shape)}|Ohhh! Now I know! You are the best teacher!'
             : _isCount
             ? '$cheer|${numberWordsCap[_real]}!|Ohhh! Now I know! You are the best teacher!'
             : '$cheer|${_pic.chant}|Ohhh! Now I know! You are the best teacher!';
       });
       await Voice.say(_line);
-      _next();
+      await _next();
     } else {
       Juice.oops();
       setState(() {
         _wobble++;
-        _line = _isShape
+        _line = _isSum
+            ? 'Count them all together!'
+            : _isShape
             ? 'Listen carefully and try again!|Which shape is it really?'
             : _isCount
             ? 'Hmm, shall we count them together? Tap each one.'
@@ -228,7 +255,13 @@ class _TeachBibiState extends State<TeachBibi> {
                 BoxShadow(color: C.shadow, offset: Offset(0, 6)),
               ],
             ),
-            child: _isShape
+            child: _isSum
+                ? Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                    Flexible(child: _CountBoard(key: ValueKey('a$_round'), count: _sa, emoji: _thing)),
+                    Text(' + ', style: T.l(44, color: C.ink)),
+                    Flexible(child: _CountBoard(key: ValueKey('b$_round'), count: _sb, emoji: _thing)),
+                  ])
+                : _isShape
                 ? SizedBox(height: 150, child: Center(child: SizedBox(width: 130, height: 130, child: CustomPaint(painter: ShapePainter(_shape, C.berry)))))
                 : _isCount
                 ? _CountBoard(
@@ -306,7 +339,7 @@ class _TeachBibiState extends State<TeachBibi> {
                     ),
                     onTap: () => _teach(o),
                     child: Text(
-                      _isCount ? o : '${o.toUpperCase()}$o',
+                      _isCount || _isSum ? o : '${o.toUpperCase()}$o',
                       style: T.l(48),
                     ),
                   ),

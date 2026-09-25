@@ -111,8 +111,22 @@ void main() {
   test('Friends and the living meadow are recorded', () => _friendsAndHome(expectRecorded));
 
   test('Levels, songs and new games are recorded', () {
-    for (var l = 1; l <= 5; l++) {
+    for (var l = 1; l <= 8; l++) {
       expectRecorded(levelLine(l));
+    }
+    for (final l in [
+      "Shall we sing it again?|Let's sing it again!|Okay! Let's pick another song!",
+      'Faster! Faster!|Jump up high!|Spin around!|Wave your arms!|Clap along with me!|Everybody dance!',
+      "Let's build a castle!|Find the square for the castle wall!|Now find the rectangle for the tower!|Now find the triangle for the tower roof!|Now find the rectangle for the door!|Now find the heart for the flag!|Look! We built a castle! Fit for a king and queen!",
+      "Let's build a train!|Find the rectangle for the train!|Now find the square for the cabin!|Now find the circle for the wheels!|Now find the diamond for the lamp!|Now find the star for the sky!|Look! We built a train! Choo choo!",
+      "Let's build a flower!|Find the circle for the middle of the flower!|Now find the heart for the petals!|Now find the rectangle for the stem!|Now find the oval for the leaf!|Now find the circle for the sun!|Look! We built a beautiful flower!",
+      'Counting in twos!|Count in twos! What comes next?',
+      "I'm learning sums! Let me try.|I think|Am I right?|How many does it really make?",
+      'Rhyme time!|Yes! They rhyme!|How many can you see? Say it out loud!',
+      for (final w in ['cat', 'dog', 'sun', 'pig', 'hat', 'star', 'bear', 'fish']) 'What rhymes with $w?',
+      'Cat and hat! They rhyme!|Dog and log! They rhyme!|Sun and fun! They rhyme!|Pig and wig! They rhyme!|Hat and cat! They rhyme!|Star and car! They rhyme!|Bear and chair! They rhyme!|Fish and dish! They rhyme!',
+    ]) {
+      expectRecorded(l);
     }
     for (final song in songs) {
       expectRecorded('${song.title}!');

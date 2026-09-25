@@ -74,7 +74,8 @@ const spellWords = [
 
 class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderStateMixin {
   static const rounds = 5;
-  static const maxLevel = 4;
+  static const maxLevel = 7;
+  bool get _hard => _level >= 5;
   final _level = app.levelOf('letters');
   int _mode = 1; // 1 sounds, 2 letter hunt, 3 big and little, 4 spelling
   // spelling
@@ -83,7 +84,7 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
   List<String> _tiles = [];
   static const _flowers = ['tulip', 'sunflower', 'daisy', 'bluebell', 'rose'];
   final _r = Random();
-  late final _float = AnimationController(vsync: this, duration: const Duration(seconds: 11))..repeat();
+  late final _float = AnimationController(vsync: this, duration: Duration(seconds: app.levelOf('letters') >= 5 ? 8 : 11))..repeat();
   int _round = 0;
   late Phonic _target;
   late List<Phonic> _choices;
@@ -110,7 +111,13 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
   }
 
   void _newRound() {
-    _mode = levelMode(_level, maxLevel, _r);
+    // 5: letter hunt with small letters, 6: harder spelling, 7: a mix.
+    _mode = switch (_level) {
+      <= 4 => _level,
+      5 => 2,
+      6 => 4,
+      _ => 1 + _r.nextInt(4),
+    };
     final intro = _round == 0 ? '${levelLine(_level)}|' : '';
     if (_mode == 4) {
       final left = spellWords.where((w) => !_used.contains(w.$1)).toList()..shuffle(_r);
@@ -118,7 +125,8 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
       _used.add(_word.$1);
       _spelled = 0;
       final extra = 'bdfmrs'.split('')..shuffle(_r);
-      _tiles = [..._word.$1.split(''), extra.firstWhere((x) => !_word.$1.contains(x))]..shuffle(_r);
+      final decoys = extra.where((x) => !_word.$1.contains(x)).take(_hard ? 2 : 1);
+      _tiles = [..._word.$1.split(''), ...decoys]..shuffle(_r);
       _busy = false;
       _mood = Mood.read;
       _letterPop++;
@@ -132,8 +140,8 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
     _target = pool.first;
     _used.add(_target.letter);
     final others = phonics.where((p) => p.letter != _target.letter).toList()..shuffle(_r);
-    _choices = [_target, others[0], others[1], others[2]]..shuffle(_r);
-    _phase = [0.0, .25, .5, .75]..shuffle(_r);
+    _choices = [_target, others[0], others[1], others[2], if (_hard) others[3]]..shuffle(_r);
+    _phase = [for (var i = 0; i < _choices.length; i++) i / _choices.length]..shuffle(_r);
     _popped.clear();
     _busy = false;
     _mood = Mood.happy;
@@ -363,7 +371,7 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
           // Floating bubbles
           Expanded(
             child: LayoutBuilder(builder: (context, box) {
-              const size = 108.0;
+              final size = _choices.length > 4 ? 88.0 : 108.0;
               return AnimatedBuilder(
                 animation: _float,
                 builder: (_, _) => Stack(
@@ -387,7 +395,7 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
                                 duration: const Duration(milliseconds: 500),
                                 builder: (_, v, c) => Transform.rotate(angle: sin(v * pi * 6) * .25 * v, child: c),
                                 child: _Bubble(art: p.art, size: size, letter: switch (_mode) {
-                                  2 => p.letter.toUpperCase(),
+                                  2 => _hard ? p.letter : p.letter.toUpperCase(),
                                   3 => p.letter,
                                   _ => null,
                                 }),

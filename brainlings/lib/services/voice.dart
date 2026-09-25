@@ -137,7 +137,8 @@ class Voice {
 
   static Future<void> _speak(String s) async {
     try {
-      await _tts.speak(s);
+      // Never wait forever if the phone's own voice gets stuck.
+      await _tts.speak(s).timeout(Duration(milliseconds: 2500 + s.length * 110));
     } catch (_) {}
   }
 

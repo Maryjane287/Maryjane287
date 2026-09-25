@@ -457,7 +457,7 @@ class _HomeScreenState extends State<HomeScreen> {
       }
       if (words != null && words != _line && mounted) setState(() => _line = words!);
     });
-    final playing = Music.song(song.id).whenComplete(() => dancing = false);
+    final playing = Music.song(song.id, repeats: 2).whenComplete(() => dancing = false);
     const moves = [Mood.dance, Mood.cheer, Mood.laugh, Mood.wave, Mood.dance, Mood.wow];
     for (var i = 0; dancing && mounted && !_away; i++) {
       setState(() {
@@ -884,7 +884,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         child: Row(mainAxisSize: MainAxisSize.min, children: [
           const Icon(Icons.star_rounded, color: Colors.white, size: 14),
-          Text(level > 4 ? '★' : '$level', style: T.d(13, color: Colors.white)),
+          Text(level > 7 ? '★' : '$level', style: T.d(13, color: Colors.white)),
         ]),
       ),
     ),

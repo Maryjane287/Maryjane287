@@ -18,8 +18,9 @@ import '../widgets/ui.dart';
 /// One thing to talk about: a picture, what Bibi asks, and the answers
 /// Bibi is happy to hear.
 class _Talk {
-  const _Talk(this.art, this.ask, this.answers, this.say, {this.sentence});
+  const _Talk(this.art, this.ask, this.answers, this.say, {this.sentence, this.count = 1});
   final String art;
+  final int count; // how many pictures to show (counting out loud)
   final String ask;
   final List<String> answers;
   final String say; // Bibi's answer, out loud
@@ -88,6 +89,26 @@ const _opposites = [
   _Talk('lion', 'What is the opposite of loud?', ['quiet', 'soft', 'silent'], 'Quiet!'),
 ];
 
+const _rhymes = [
+  _Talk('cat', 'What rhymes with cat?', ['hat', 'bat', 'mat', 'rat', 'sat', 'pat', 'fat', 'that'], 'Cat and hat! They rhyme!'),
+  _Talk('dog', 'What rhymes with dog?', ['log', 'frog', 'fog', 'jog', 'hog'], 'Dog and log! They rhyme!'),
+  _Talk('sun', 'What rhymes with sun?', ['fun', 'run', 'bun', 'one', 'won', 'done'], 'Sun and fun! They rhyme!'),
+  _Talk('pig', 'What rhymes with pig?', ['wig', 'big', 'dig', 'fig', 'jig'], 'Pig and wig! They rhyme!'),
+  _Talk('hat', 'What rhymes with hat?', ['cat', 'bat', 'mat', 'rat', 'sat', 'pat', 'that'], 'Hat and cat! They rhyme!'),
+  _Talk('star', 'What rhymes with star?', ['car', 'far', 'jar', 'bar', 'are'], 'Star and car! They rhyme!'),
+  _Talk('bear', 'What rhymes with bear?', ['chair', 'hair', 'pear', 'air', 'care', 'where', 'there', 'wear'], 'Bear and chair! They rhyme!'),
+  _Talk('fish', 'What rhymes with fish?', ['dish', 'wish', 'swish'], 'Fish and dish! They rhyme!'),
+];
+
+const _countWords = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+const _countCaps = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
+
+_Talk _counting(Random r) {
+  final n = 2 + r.nextInt(7);
+  const things = ['apple', 'star', 'fish', 'ladybird', 'balloon', 'cupcake', 'strawberry'];
+  return _Talk(things[r.nextInt(things.length)], 'How many can you see? Say it out loud!', [_countWords[n], '$n', if (n == 2) 'too', if (n == 4) 'for', if (n == 8) 'ate'], '${_countCaps[n]}!', count: n);
+}
+
 const _silence = [
   'Hello? Are you there? Say something!',
   "Take your time. I'm listening!",
@@ -124,7 +145,7 @@ class SayIt extends StatefulWidget {
 
 class _SayItState extends State<SayIt> {
   static const rounds = 5;
-  static const maxLevel = 4;
+  static const maxLevel = 7;
 
   final _stt = SpeechToText();
   final _r = Random();
@@ -239,9 +260,11 @@ class _SayItState extends State<SayIt> {
   }
 
   bool _matches(String said, List<String> targets) {
-    final s = said.toLowerCase();
+    // In rhyme time, saying the word itself back does not count.
+    final skip = _mode == 5 && _cardPop > 0 ? _talk.art : null;
+    final words = said.toLowerCase().split(RegExp(r'[^a-z0-9]+')).where((w) => w.isNotEmpty && w != skip).toList();
+    final s = words.join(' ');
     if (s.isEmpty) return false;
-    final words = s.split(RegExp(r'[^a-z]+')).where((w) => w.isNotEmpty).toList();
     for (final t in targets) {
       if (s.contains(t)) return true;
       for (final h in words) {
@@ -314,7 +337,13 @@ class _SayItState extends State<SayIt> {
   }
 
   Future<void> _newRound() async {
-    _mode = levelMode(_level, maxLevel, _r);
+    // 5: rhyme time, 6: counting out loud, 7: a mix of everything.
+    _mode = switch (_level) {
+      <= 4 => _level,
+      5 => 5,
+      6 => 6,
+      _ => 1 + _r.nextInt(6),
+    };
     _cardPop++;
     _heard = '';
     _waitingTap = false;
@@ -322,6 +351,8 @@ class _SayItState extends State<SayIt> {
       2 => _names.where((t) => t.sentence != null).toList(),
       3 => _questions,
       4 => _opposites,
+      5 => _rhymes,
+      6 => [for (var i = 0; i < 3; i++) _counting(_r)],
       _ => _names,
     };
     final left = pool.where((t) => !_used.contains(t.ask + t.art)).toList()..shuffle(_r);
@@ -335,6 +366,8 @@ class _SayItState extends State<SayIt> {
         2 => "Let's make sentences!",
         3 => 'Animal sounds and colours!',
         4 => 'Opposites! Big and small!',
+        5 => 'Rhyme time!',
+        6 => 'Count out loud with me!',
         _ => '',
       };
       if (intro.isNotEmpty) await _say(intro, mood: Mood.cheer);
@@ -347,7 +380,7 @@ class _SayItState extends State<SayIt> {
       final heard = await _ask(attempt == 0 ? _talk.ask : 'Say it again, nice and loud!', _talk.answers);
       if (!mounted || _waitingTap) return;
       if (_matches(heard, _talk.answers)) {
-        await _win('I heard you! Brilliant!|${_talk.say}');
+        await _win(_mode == 5 ? 'Yes! They rhyme!|${_talk.say}' : 'I heard you! Brilliant!|${_talk.say}');
         return;
       }
       if (heard.isEmpty) break;
@@ -473,11 +506,11 @@ class _SayItState extends State<SayIt> {
   }
 
   void _micTap() {
+    // Only used when the phone cannot listen: a tap after speaking counts.
+    // Otherwise Bibi is already listening or talking, so a tap does nothing.
     if (_waitingTap) {
       _waitingTap = false;
       _win('You sound amazing!|${_talk.say}');
-    } else if (!_listening && _stage == _Stage.answer) {
-      _answerStep();
     }
   }
 
@@ -494,7 +527,7 @@ class _SayItState extends State<SayIt> {
       mood: _mood,
       bounce: _bounce,
       wobble: _wobble,
-      onIdle: () {},
+      quiet: true,
       body: Column(
         children: [
           const Spacer(),
@@ -514,7 +547,11 @@ class _SayItState extends State<SayIt> {
                   border: Border.all(color: C.sun, width: 6),
                   boxShadow: const [BoxShadow(color: C.shadow, offset: Offset(0, 8))],
                 ),
-                child: _cardPop == 0 ? const SizedBox(width: 150, height: 150) : Art(_talk.art, size: _stage == _Stage.spell ? 110 : 150),
+                child: _cardPop == 0
+                    ? const SizedBox(width: 150, height: 150)
+                    : _talk.count > 1
+                    ? SizedBox(width: 240, child: Wrap(alignment: WrapAlignment.center, spacing: 4, runSpacing: 4, children: [for (var i = 0; i < _talk.count; i++) Art(_talk.art, size: 56)]))
+                    : Art(_talk.art, size: _stage == _Stage.spell ? 110 : 150),
               ),
             ),
           ),

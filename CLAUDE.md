@@ -51,7 +51,7 @@ Family members do NOT need the app: they get a link (WhatsApp/email) to a small 
   phone numbers still to verify. Apple enrollment submitted but $99 not paid (later).
 - Payouts need a proper company bank account (Wise was rejected by KDP; unresolved).
 
-### Build status (updated 2026-09-25, v1.3.0)
+### Build status (updated 2026-09-25, v1.4.0)
 Flutter app lives in `brainlings/` (Android + iOS). Everything runs offline on the device for now.
 Done and working:
 - First-run grown-up setup: name/nickname, age, family circle, optional name recording, bedtime minutes, privacy promise.
@@ -85,6 +85,19 @@ Done and working:
 - Talking Bibi (`lib/screens/talk.dart`, big Talk! mic on home): repeats the child in a squeaky voice (Talking Tom style),
   poke head/feet/tummy, hug, tickle, snack tray. Say It! game uses speech recognition. Nothing is saved.
 - Music: procedural loops in `assets/music/` (play, games, lullaby), toggle in the grown-up area.
+- v1.4 (owner found bugs, wanted 7 levels and longer, livelier songs):
+  Fixed: song "Again" replayed the ending line (end detected before the seek finished); game dance parties could hang
+  forever (video never reports its exact end on some phones) so now isCompleted OR paused-near-end OR a safety timer,
+  plus an X button; Teach double tap skipped rounds (now awaits _next); Say It mic tap started a second conversation;
+  friends nudged during dance parties and while Say It listened (GameFrame `quiet` + only when its route is on top);
+  Feeding first frame used late fields; TTS and video loading now always time out.
+  Songs: 4 rounds (about a minute), each round faster (playback speed 1.08 to 1.29, pitch kept), Bibi shouts the
+  child's name between rounds ("{name}! Faster! Faster!"), disco lights, pictures for every lyric line (`SongLine.pics`),
+  Yes / New song at the end. Game dance parties 2 rounds, home dance parties 2 rounds.
+  LEVELS now 1 to 7, then a Super level. 5 to 7 per game: Feeding big sums / big take away / mix; Letters small-letter
+  hunt (5 faster bubbles) / spelling with 2 decoys / mix; Shapes castle / train / flower; Patterns harder missing /
+  counting in twos / mix; Teach Bibi's wrong sums / mix / everything; Say It rhyme time / counting out loud / mix.
+  Idea for later (costs credits, ask first): second verses for favourite songs (7.5 credits per 15 s).
 - LEVELS (v1.3, owner: "each block keeps repeating the same thing"): every game has 4 levels, then a "super level" mix.
   `app.levels[gameId]`, `levelMode()`, `levelLine()`, star badge on tiles and in games, "You unlocked a new level!".
   Feeding: feed / which plate has more or fewer / sums with plates (2 + 1 = ?) / take away.
@@ -114,7 +127,7 @@ seasonal days and birthday, Guess What Mummy Picked, report before trial ends, P
 Build: `flutter build apk --release` works in the container (Android SDK at /opt/android-sdk, Flutter at /opt/flutter,
 both installed per session). Maven Central sometimes rate-limits (429): retry. GitHub Actions workflow
 `.github/workflows/brainlings-apk.yml` also builds the APK as a downloadable artifact.
-Higgsfield credits: about 103 left on 2026-09-25 after the v1.3 songs and 280 new voice lines. Check `balance`.
+Higgsfield credits: about 95 left on 2026-09-25 (v1.4 used about 7 for 48 voice lines). Check `balance`.
 
 ### Tech plan
 - Flutter (Android first). Firebase for accounts, storage, messages, push.

@@ -83,12 +83,40 @@ const _robot = [
   _Piece(Shape.star, Color(0xFFFFD233), Rect.fromLTWH(43, 0, 13, 11), 'Now find the star for the antenna!'),
 ];
 
-/// One picture per level: house, rocket, boat, robot. Then a surprise mix.
+const _castle = [
+  _Piece(Shape.square, Color(0xFFB9A7E8), Rect.fromLTWH(20, 50, 60, 42), 'Find the square for the castle wall!'),
+  _Piece(Shape.rectangle, Color(0xFF9B87D8), Rect.fromLTWH(8, 32, 18, 60), 'Now find the rectangle for the tower!', twin: Rect.fromLTWH(74, 32, 18, 60)),
+  _Piece(Shape.triangle, Color(0xFFFF5C8A), Rect.fromLTWH(5, 14, 24, 19), 'Now find the triangle for the tower roof!', twin: Rect.fromLTWH(71, 14, 24, 19)),
+  _Piece(Shape.rectangle, Color(0xFF8A5A3C), Rect.fromLTWH(42, 66, 16, 26), 'Now find the rectangle for the door!'),
+  _Piece(Shape.heart, Color(0xFFFF4F7B), Rect.fromLTWH(44, 32, 12, 12), 'Now find the heart for the flag!'),
+];
+
+const _train = [
+  _Piece(Shape.rectangle, Color(0xFFFF6B6B), Rect.fromLTWH(10, 52, 54, 26), 'Find the rectangle for the train!'),
+  _Piece(Shape.square, Color(0xFF4DA3FF), Rect.fromLTWH(60, 34, 30, 44), 'Now find the square for the cabin!'),
+  _Piece(Shape.circle, Color(0xFF444466), Rect.fromLTWH(16, 74, 18, 18), 'Now find the circle for the wheels!', twin: Rect.fromLTWH(58, 74, 18, 18)),
+  _Piece(Shape.diamond, Color(0xFFFFD233), Rect.fromLTWH(1, 56, 11, 13), 'Now find the diamond for the lamp!'),
+  _Piece(Shape.star, Color(0xFFFFD233), Rect.fromLTWH(80, 6, 14, 14), 'Now find the star for the sky!'),
+];
+
+const _flower = [
+  _Piece(Shape.circle, Color(0xFFFFD233), Rect.fromLTWH(40, 23, 20, 20), 'Find the circle for the middle of the flower!'),
+  _Piece(Shape.heart, Color(0xFFFF7BB0), Rect.fromLTWH(41, 5, 18, 17), 'Now find the heart for the petals!', twin: Rect.fromLTWH(41, 42, 18, 17)),
+  _Piece(Shape.rectangle, Color(0xFF5BC25B), Rect.fromLTWH(48, 58, 4, 34), 'Now find the rectangle for the stem!'),
+  _Piece(Shape.oval, Color(0xFF5BC25B), Rect.fromLTWH(52, 66, 20, 10), 'Now find the oval for the leaf!'),
+  _Piece(Shape.circle, Color(0xFFFFB84D), Rect.fromLTWH(80, 4, 16, 16), 'Now find the circle for the sun!'),
+];
+
+/// One picture per level: house, rocket, boat, robot, castle, train,
+/// flower. Then a surprise mix.
 const _pictures = [
   (_house, "Let's build a house!", 'Look! We built a whole house together!'),
   (_rocket, "Let's build a rocket!", 'Look! We built a rocket! Three, two, one, blast off!'),
   (_boat, "Let's build a boat!", 'Look! We built a boat! Splish splash!'),
   (_robot, "Let's build a robot!", 'Look! We built a robot! Beep boop!'),
+  (_castle, "Let's build a castle!", 'Look! We built a castle! Fit for a king and queen!'),
+  (_train, "Let's build a train!", 'Look! We built a train! Choo choo!'),
+  (_flower, "Let's build a flower!", 'Look! We built a beautiful flower!'),
 ];
 
 /// Shape Builder: find the right shape and it flies into a picture.
@@ -101,7 +129,7 @@ class ShapeBuilder extends StatefulWidget {
 }
 
 class _ShapeBuilderState extends State<ShapeBuilder> {
-  static const maxLevel = 4;
+  static const maxLevel = 7;
   final _r = Random();
   final _level = app.levelOf('shapes');
   late final _pic = _pictures[levelMode(_level, maxLevel, Random()) - 1];

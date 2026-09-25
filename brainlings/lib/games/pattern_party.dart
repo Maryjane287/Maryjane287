@@ -40,12 +40,13 @@ class _PatternPartyState extends State<PatternParty> {
     [0, 1, 1],
   ];
 
-  static const maxLevel = 4;
+  static const maxLevel = 7;
   final _r = Random();
   final _level = app.levelOf('patterns');
   int _mode = 1; // 1 simple, 2 tricky, 3 what's missing, 4 counting patterns
   int _gap = 5; // where the question mark sits
   int _startCount = 1; // counting patterns
+  int _step = 1; // counting in ones or twos
   int _round = 0;
   late List<(String, String)> _row;
   late (String, String) _answer;
@@ -63,27 +64,37 @@ class _PatternPartyState extends State<PatternParty> {
   }
 
   void _newRound() {
-    _mode = levelMode(_level, maxLevel, _r);
+    // 5: harder "what's missing", 6: counting in twos, 7: a mix.
+    _mode = switch (_level) {
+      <= 4 => _level,
+      5 => 3,
+      6 => 5,
+      _ => 1 + _r.nextInt(5),
+    };
     final intro = _round == 0 ? '${levelLine(_level)}|' : '';
     _solved = false;
     _mood = Mood.happy;
-    if (_mode == 4) {
-      _startCount = 1 + _r.nextInt(app.age <= 4 ? 2 : 4);
+    if (_mode >= 4) {
+      _step = _mode == 5 ? 2 : 1;
+      _startCount = _step == 2 ? 2 : 1 + _r.nextInt(app.age <= 4 ? 2 : 4);
       _row = [];
-      _numChoices = {_startCount + 3, _startCount + 2, _startCount + 4}.toList()..shuffle(_r);
-      _line = '$intro${_round == 0 ? 'Counting patterns!|' : ''}Count the stars! What comes next?';
+      final want = _startCount + 3 * _step;
+      _numChoices = {want, want - 1, want + 1}.toList()..shuffle(_r);
+      _line = _step == 2
+          ? '$intro${_round == 0 ? 'Counting in twos!|' : ''}Count in twos! What comes next?'
+          : '$intro${_round == 0 ? 'Counting patterns!|' : ''}Count the stars! What comes next?';
       setState(() {});
       Voice.say(_line);
       return;
     }
     final pick = [...things]..shuffle(_r);
-    final unit = (_mode == 1 ? shapes[_r.nextInt(2)] : shapes[2 + _r.nextInt(3)]).map((i) => pick[i]).toList();
+    final unit = (_mode == 1 ? shapes[_r.nextInt(2)] : (_level >= 5 ? shapes[3] : shapes[2 + _r.nextInt(3)])).map((i) => pick[i]).toList();
     const shown = 6;
     final full = List.generate(shown, (i) => unit[i % unit.length]);
     _gap = _mode == 3 ? 1 + _r.nextInt(shown - 2) : shown - 1;
     _row = full;
     _answer = full[_gap];
-    final wrong = pick.where((t) => t != _answer).take(2).toList();
+    final wrong = pick.where((t) => t != _answer).take(_level >= 5 ? 3 : 2).toList();
     _choices = [_answer, ...wrong]..shuffle(_r);
     final said = [for (var i = 0; i < shown; i++) i == _gap ? (_mode == 3 ? 'Hmm?' : '') : '${_row[i].$2}.'].where((x) => x.isNotEmpty && x != 'Hmm?').join('|');
     _line = switch (_mode) {
@@ -100,7 +111,7 @@ class _PatternPartyState extends State<PatternParty> {
   Future<void> _pickNumber(int n) async {
     if (_busy) return;
     _busy = true;
-    final want = _startCount + 3;
+    final want = _startCount + 3 * _step;
     if (n == want) {
       app.learned(Skill.patterns);
       app.learned(Skill.numbers);
@@ -121,7 +132,7 @@ class _PatternPartyState extends State<PatternParty> {
       setState(() {
         _mood = Mood.laugh;
         _wobble++;
-        _line = 'Hmm, let\'s sing the pattern together!|${[for (var g = 0; g < 3; g++) '${numberWordsCap[_startCount + g]}!'].join('|')}|What comes next?';
+        _line = 'Hmm, let\'s sing the pattern together!|${[for (var g = 0; g < 3; g++) '${numberWordsCap[_startCount + g * _step]}!'].join('|')}|What comes next?';
       });
       await Voice.say(_line);
       if (mounted) setState(() => _mood = Mood.happy);
@@ -160,7 +171,7 @@ class _PatternPartyState extends State<PatternParty> {
                     child: g == 3 && !_solved
                         ? Center(child: Text('?', style: T.d(44, color: C.lilacDeep)))
                         : Wrap(alignment: WrapAlignment.center, children: [
-                            for (var k = 0; k < _startCount + g; k++) _Hop(delay: g * 200 + k * 60, key: ValueKey('s$_round$g$k'), child: const Art('star', size: 22)),
+                            for (var k = 0; k < _startCount + g * _step; k++) _Hop(delay: g * 200 + k * 60, key: ValueKey('s$_round$g$k'), child: const Art('star', size: 22)),
                           ]),
                   ),
               ],
@@ -221,7 +232,7 @@ class _PatternPartyState extends State<PatternParty> {
       mood: _mood,
       bounce: _bounce,
       wobble: _wobble,
-      body: _mode == 4 ? _countingBody() : Column(
+      body: _mode >= 4 ? _countingBody() : Column(
         children: [
           const Spacer(),
           // Bunting across the top
@@ -295,7 +306,7 @@ class _PatternPartyState extends State<PatternParty> {
                   radius: 28,
                   padding: const EdgeInsets.all(16),
                   onTap: () => _pick(t),
-                  child: Art(t.$1, size: 64),
+                  child: Art(t.$1, size: _choices.length > 3 ? 50 : 64),
                 ),
             ],
           ),

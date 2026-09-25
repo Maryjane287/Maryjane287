@@ -36,21 +36,21 @@ class _FeedingTimeState extends State<FeedingTime> {
 
   final _r = Random();
   final _mouthKey = GlobalKey();
-  late List<GlobalKey> _fruitKeys;
+  List<GlobalKey> _fruitKeys = [];
 
-  static const maxLevel = 4;
+  static const maxLevel = 7;
   final _level = app.levelOf('feeding');
   int _mode = 1; // 1 feed, 2 more or fewer, 3 adding, 4 taking away
   int _round = 0;
-  late int _target;
+  int _target = 1;
   // plates for modes 2 to 4
   int _a = 0, _b = 0;
   bool _askMore = true;
   bool _plateEaten = false;
   int _gone = 0; // fruit Bibi ate from the plate (mode 4)
   int _eatenPlate = -1;
-  late (String, String, String) _fruit;
-  late List<bool> _eaten;
+  (String, String, String) _fruit = fruits.first;
+  List<bool> _eaten = [];
   int _count = 0;
   bool _watchRound = false;
   List<int>? _choices; // numbers to pick from in a watch round
@@ -61,7 +61,8 @@ class _FeedingTimeState extends State<FeedingTime> {
   bool _busy = false;
   int _pop = 0; // makes the big number pop each time
 
-  int get _max => app.age <= 4 ? 5 : (app.age == 5 ? 7 : 10);
+  bool get _big => _level >= 5;
+  int get _max => _big ? 10 : (app.age <= 4 ? 5 : (app.age == 5 ? 7 : 10));
   String get _ask => 'Can you give me ${numberWords[_target]} ${_target == 1 ? _fruit.$2 : _fruit.$3}, please?';
 
   @override
@@ -71,7 +72,14 @@ class _FeedingTimeState extends State<FeedingTime> {
   }
 
   Future<void> _newRound() async {
-    _mode = levelMode(_level, maxLevel, _r);
+    // Levels 5 to 7 use bigger numbers: sums, take away, then a mix.
+    _mode = switch (_level) {
+      <= 4 => _level,
+      5 => 3,
+      6 => 4,
+      7 => 2 + _r.nextInt(3),
+      _ => 1 + _r.nextInt(4),
+    };
     _choices = null;
     _reveal = false;
     _busy = false;
@@ -80,7 +88,7 @@ class _FeedingTimeState extends State<FeedingTime> {
     _gone = 0;
     _fruit = fruits[_r.nextInt(fruits.length)];
     final intro = _round == 0 ? '${levelLine(_level)}|' : '';
-    final top = app.age <= 4 ? 5 : (app.age == 5 ? 7 : 9);
+    final top = _big ? 10 : (app.age <= 4 ? 5 : (app.age == 5 ? 7 : 9));
     if (_mode == 2) {
       _a = 1 + _r.nextInt(top);
       do {
@@ -94,8 +102,9 @@ class _FeedingTimeState extends State<FeedingTime> {
       return;
     }
     if (_mode == 3) {
-      _a = 1 + _r.nextInt(max(2, top ~/ 2));
+      _a = (_big ? 2 : 1) + _r.nextInt(max(2, top ~/ 2));
       _b = 1 + _r.nextInt(max(2, top ~/ 2));
+      if (_a + _b > 10) _b = 10 - _a;
       _target = _a + _b;
       _choices = _options(_target);
       _mood = Mood.think;
@@ -105,7 +114,7 @@ class _FeedingTimeState extends State<FeedingTime> {
       return;
     }
     if (_mode == 4) {
-      _a = 3 + _r.nextInt(max(2, top - 2));
+      _a = (_big ? 5 : 3) + _r.nextInt(max(2, top - (_big ? 4 : 2)));
       _gone = 1 + _r.nextInt(_a - 1);
       _target = _a - _gone;
       _busy = true;

@@ -34,6 +34,7 @@ class GameFrame extends StatefulWidget {
     this.onIdle,
     this.host,
     this.level,
+    this.quiet = false,
   });
 
   final int round;
@@ -56,6 +57,9 @@ class GameFrame extends StatefulWidget {
   /// Which level of this game is being played (shown as a star badge).
   final int? level;
 
+  /// No nudges at all (Say It: Bibi is listening, nobody may talk).
+  final bool quiet;
+
   @override
   State<GameFrame> createState() => _GameFrameState();
 }
@@ -74,8 +78,10 @@ class _GameFrameState extends State<GameFrame> {
     Juice.resetStreak();
     GameHost.current = widget.host == null ? null : friendById(widget.host!);
     _idle = Timer.periodic(const Duration(seconds: 2), (_) {
-      // Never talk over anyone: wait until the voice has finished.
-      if (Voice.speaking) {
+      // Never talk over anyone: not while a voice is speaking, not during a
+      // dance party on top of the game, and never while Bibi is listening.
+      final onTop = mounted && (ModalRoute.of(context)?.isCurrent ?? true);
+      if (widget.quiet || !onTop || Voice.speaking) {
         _lastTouch = DateTime.now();
         return;
       }
@@ -361,14 +367,14 @@ class _RewardScreenState extends State<RewardScreen> {
 
 /// Replace the current game with its reward screen. With a [game] id the
 /// game moves on to its next level, so next time something new is waiting.
-void finishGame(BuildContext context, Skill skill, String name, {String? game, int maxLevel = 4}) {
+void finishGame(BuildContext context, Skill skill, String name, {String? game, int maxLevel = 7}) {
   final unlocked = game != null && app.levelUp(game, maxLevel);
   Navigator.of(context)
       .pushReplacement(softRoute(RewardScreen(skill: skill, gameName: name, newLevel: unlocked)));
 }
 
 /// "Level two!" and friends, spoken at the start of a game.
-String levelLine(int level) => level > 4 ? 'Super level!' : const ['', 'Level one!', 'Level two!', 'Level three!', 'Level four!'][level];
+String levelLine(int level) => level > 7 ? 'Super level!' : const ['', 'Level one!', 'Level two!', 'Level three!', 'Level four!', 'Level five!', 'Level six!', 'Level seven!'][level];
 
 /// Which kind of round to play: the level itself, or a surprise mix once
 /// every level has been finished.
@@ -391,7 +397,7 @@ class _LevelBadge extends StatelessWidget {
           ),
           child: Row(mainAxisSize: MainAxisSize.min, children: [
             const Icon(Icons.star_rounded, color: Colors.white, size: 22),
-            Text(level > 4 ? '★' : '$level', style: T.d(20, color: Colors.white)),
+            Text(level > 7 ? '★' : '$level', style: T.d(20, color: Colors.white)),
           ]),
         ),
       );
