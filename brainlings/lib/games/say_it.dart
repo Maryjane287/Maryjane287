@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 
+import '../services/lines.dart';
 import '../services/music.dart';
 import '../services/sfx.dart';
 import '../services/voice.dart';
@@ -320,7 +321,7 @@ class _SayItState extends State<SayIt> {
       _silent++;
       if (tries == 1) break; // still quiet: Bibi helps instead of asking again
       // Quiet: say hello or tell a joke, then ask once more.
-      final nudge = _silent % 3 == 2 ? '${_jokes[_r.nextInt(_jokes.length)]}|$question' : '${_silence[_r.nextInt(_silence.length)]}|$question';
+      final nudge = _silent % 3 == 2 ? '${Lines.pick('sayit-joke', _jokes)}|$question' : '${Lines.pick('sayit-quiet', _silence)}|$question';
       Sfx.boing();
       setState(() => _wobble++);
       await _say(nudge, mood: _silent % 3 == 2 ? Mood.laugh : Mood.wave);
@@ -388,7 +389,7 @@ class _SayItState extends State<SayIt> {
     final heard = await _ask(_talk.ask, _talk.answers);
     if (!mounted || _waitingTap) return;
     if (_matches(heard, _talk.answers)) {
-      await _win(_mode == 5 ? 'Yes! They rhyme!|${_talk.say}' : 'I heard you! Brilliant!|${_talk.say}');
+      await _win('${_mode == 5 ? 'Yes! They rhyme!' : Lines.yay()}|${_talk.say}');
       return;
     }
     // Not right (or no answer): no asking again and again. Bibi kindly
@@ -398,7 +399,7 @@ class _SayItState extends State<SayIt> {
     final spell = _spellWord;
     await _say(
       [
-        heard.isEmpty ? 'Hee hee! Do I have to teach you everything?' : 'Nearly! Let me help you.',
+        heard.isEmpty ? "Let's learn it together." : Lines.help(),
         'The answer is:',
         _talk.say,
         if (spell != null) ...["Let's spell it!", for (final c in spell.split('')) _letterNames[c]!, _talk.say],
@@ -410,9 +411,9 @@ class _SayItState extends State<SayIt> {
     final again = _sttOk ? await _hear(_talk.answers, seconds: 7) : '';
     if (!mounted) return;
     if (_matches(again, _talk.answers)) {
-      await _win('I heard you! Brilliant!');
+      await _win(Lines.pick('heard', ['I heard you! Brilliant!', 'You got it!', 'Yes! Brilliant!']));
     } else {
-      await _say("Good try! Let's keep going!", mood: Mood.cheer);
+      await _say(Lines.tried(), mood: Mood.cheer);
       if (!mounted) return;
       await _next();
     }
@@ -473,7 +474,7 @@ class _SayItState extends State<SayIt> {
       final cheer = Juice.correct(context);
       await _say('$cheer|Wow! What a great sentence!', mood: Mood.dance);
     } else {
-      await _say("Good try! Let's keep going!", mood: Mood.cheer);
+      await _say(Lines.tried(), mood: Mood.cheer);
     }
     await _next();
   }

@@ -51,7 +51,7 @@ Family members do NOT need the app: they get a link (WhatsApp/email) to a small 
   phone numbers still to verify. Apple enrollment submitted but $99 not paid (later).
 - Payouts need a proper company bank account (Wise was rejected by KDP; unresolved).
 
-### Build status (updated 2026-09-25, v1.6.0)
+### Build status (updated 2026-09-25, v1.6.3)
 Flutter app lives in `brainlings/` (Android + iOS). Everything runs offline on the device for now.
 Done and working:
 - First-run grown-up setup: name/nickname, age, family circle, optional name recording, bedtime minutes, privacy promise.
@@ -85,6 +85,19 @@ Done and working:
 - Talking Bibi (`lib/screens/talk.dart`, big Talk! mic on home): repeats the child in a squeaky voice (Talking Tom style),
   poke head/feet/tummy, hug, tickle, snack tray. Say It! game uses speech recognition. Nothing is saved.
 - Music: procedural loops in `assets/music/` (play, games, lullaby), toggle in the grown-up area.
+- v1.6.3 (owner: "Do I have to teach you everything?" is wrong, teach with love; never repeat the same words; friends'
+  little voices interrupt; get it ready to upload tonight):
+  REMOVED that line. `lib/services/lines.dart` Lines.pick(key, list) = no-repeat bag (never same line twice in a row);
+  Lines.praise/oops/help/tried/yay used by Juice, yayLine, Say It, jokes, dreams, replies. 14 new loving lines (b806-819).
+  Friends speak up only now and then (GameHost.cheer at most every 3rd right answer, 1 in 3; oops 1 in 5), idle nudge
+  after 14 s and the friend nudges only every 4th; home director: one dance and one friend chat in the act list.
+  Bug fixed: Start again now deletes all voice recordings; unused old recordings are tidied on start (matched by file name);
+  Talk's temp sound deleted on exit. SIGNING: upload key `brainlings-upload.jks` (alias upload) is NOT in the repo
+  (repo is PUBLIC). The owner has the .jks and its password. Put it at a path and write android/key.properties
+  (storePassword, keyPassword, keyAlias=upload, storeFile=<abs path>) to sign; without it builds use the debug key.
+  Release bundle committed at brainlings/store/release/Brainlings-1.6.3.aab (too big to send, 65.7 MB).
+  Privacy policy: brainlings/store/privacy_policy.md (SUPPORT_EMAIL placeholder for the owner to fill).
+  First release is free; subscription + 7-day trial is the next update (create it in Play Console, then add a paywall).
 - v1.6.2 Say It (owner: Bibi made the child repeat up to 10 times): wrong or no answer is now corrected at once:
   "Nearly! Let me help you. The answer is: X", spells it (names, colours, opposites), "Your turn! Say it once!",
   ONE listen, then "I heard you! Brilliant!" or "Good try! Let's keep going!" and move on. Sentences the same way.

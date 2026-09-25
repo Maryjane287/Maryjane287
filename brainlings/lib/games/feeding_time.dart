@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../services/lines.dart';
 import '../services/sfx.dart';
 import '../services/voice.dart';
 import '../state.dart';
@@ -345,7 +346,7 @@ class _FeedingTimeState extends State<FeedingTime> {
         });
       }
     } else {
-      Voice.say(_munch[_r.nextInt(_munch.length)]);
+      Voice.say(Lines.pick('munch', _munch));
     }
   }
 

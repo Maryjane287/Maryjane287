@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:brainlings/friends.dart';
 import 'package:brainlings/games/letter_garden.dart';
+import 'package:brainlings/services/lines.dart';
 import 'package:brainlings/songs.dart';
 import 'package:brainlings/services/voice.dart';
 import 'package:brainlings/widgets/game_frame.dart';
@@ -28,6 +29,13 @@ void main() {
       expect((party.$1 - 1) * length + party.$2, inInclusiveRange(20000, 40000), reason: s.id);
       expect((list.$1 - 1) * length + list.$2, inInclusiveRange(100000, 140000), reason: s.id);
     }
+  });
+
+  test('Every praise and help line is recorded', () {
+    for (var i = 0; i < 30; i++) {
+      expectRecorded([Lines.praise(), Lines.oops(), Lines.help(), Lines.tried(), Lines.yay()].join('|'));
+    }
+    expectRecorded("Let's learn it together.");
   });
 
   test('Feeding Time lines are recorded', () {

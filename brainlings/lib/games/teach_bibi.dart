@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../services/lines.dart';
 import '../services/sfx.dart';
 import '../services/voice.dart';
 import '../state.dart';
@@ -155,7 +156,7 @@ class _TeachBibiState extends State<TeachBibi> {
           _step = _Step.teach;
           _wobble++;
           _line =
-              '${sillies[_r.nextInt(sillies.length)]}|${_isSum ? 'How many does it really make?' : _isShape ? 'Which shape is it really?' : 'Can you teach me? ${_isCount ? 'How many are there really?' : 'Which letter does it start with?'}'}';
+              '${Lines.pick('teach-silly', sillies)}|${_isSum ? 'How many does it really make?' : _isShape ? 'Which shape is it really?' : 'Can you teach me? ${_isCount ? 'How many are there really?' : 'Which letter does it start with?'}'}';
         });
         await Voice.say(_line);
       }

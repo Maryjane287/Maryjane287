@@ -240,18 +240,25 @@ class GameHost {
   static void _jump(String pose) => react.value = (react.value.$1 + 1, pose);
 
   /// Sometimes the host adds its own cheer after Bibi's.
+  static int _since = 0;
+
+  /// The host jumps for joy every time, but only speaks up now and then,
+  /// so Bibi is never drowned out.
   static String cheer(String line) {
     final h = current;
     if (h == null) return line;
     _jump('cheer');
-    return _r.nextBool() ? '$line|${h.cheers[_r.nextInt(h.cheers.length)]}' : line;
+    _since++;
+    if (_since < 3 || _r.nextInt(3) != 0) return line;
+    _since = 0;
+    return '$line|${h.cheers[_r.nextInt(h.cheers.length)]}';
   }
 
   static String oops(String line) {
     final h = current;
     if (h == null) return line;
     _jump('laugh');
-    return _r.nextInt(3) == 0 ? h.oops : line;
+    return _r.nextInt(5) == 0 ? h.oops : line;
   }
 
   static String nudge() {

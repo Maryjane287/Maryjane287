@@ -11,6 +11,7 @@ import '../games/pattern_party.dart';
 import '../games/shape_builder.dart';
 import '../games/say_it.dart';
 import '../games/teach_bibi.dart';
+import '../services/lines.dart';
 import '../services/music.dart';
 import '../services/sfx.dart';
 import '../services/voice.dart';
@@ -185,7 +186,7 @@ class _HomeScreenState extends State<HomeScreen> {
       await _say('{name}!|$hello!|I missed you!', mood: Mood.wave);
       if (h < 12 && app.totalPoints > 0 && mounted) {
         await _say(
-          'I had a dream about you!|${_dreams[_r.nextInt(_dreams.length)]}',
+          'I had a dream about you!|${Lines.pick('dream', _dreams)}',
           mood: Mood.laugh,
         );
       }
@@ -319,7 +320,8 @@ class _HomeScreenState extends State<HomeScreen> {
       else if (app.look == GrowthLook.bookish)
         ('I love my book hat! Letters make me so clever!', Mood.happy),
     ];
-    final pick = lines[_r.nextInt(lines.length)];
+    final pickText = Lines.pick('bibi-tap', [for (final l in lines) l.$1]);
+    final pick = lines.firstWhere((l) => l.$1 == pickText, orElse: () => lines.first);
     _say(pick.$1, mood: pick.$2).then((_) {
       if (mounted && _line == pick.$1) setState(() => _mood = Mood.happy);
     });
@@ -355,8 +357,7 @@ class _HomeScreenState extends State<HomeScreen> {
       _callChild,
       _critters,
       _joke,
-      _dance,
-      if (_onStage.isNotEmpty) ...[_friendChat, _friendChat, _friendChat],
+      if (_onStage.isNotEmpty) _friendChat,
     ];
     try {
       await acts[_r.nextInt(acts.length)]();
@@ -489,7 +490,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   Future<void> _joke() async {
-    await _say(_jokes[_r.nextInt(_jokes.length)], mood: Mood.laugh);
+    await _say(Lines.pick('home-joke', _jokes), mood: Mood.laugh);
     if (!mounted) return;
     Sfx.giggle();
     setState(() {
@@ -526,7 +527,7 @@ class _HomeScreenState extends State<HomeScreen> {
       "Knock knock! It's me!",
       'Shake shake shake!',
     ];
-    final l = lines[_r.nextInt(lines.length)];
+    final l = Lines.pick('call-child', lines);
     setState(() => _bounce++);
     await _say(l, mood: l.startsWith('Shake') ? Mood.dance : Mood.wave);
   }

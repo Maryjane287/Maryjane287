@@ -53,7 +53,7 @@ You choose how long your child can play each day, from 30 minutes up to 5 hours,
 • Grown-up area protected by a parent lock
 • We keep only a first name and an age. Voice recordings stay on your phone.
 
-Try Brainlings free for 7 days. Cancel any time.
+No ads. No chat. Just learning, songs and lots of love.
 
 ## Promo video
 
@@ -68,6 +68,12 @@ set "Made for kids: Yes"), then paste the YouTube link into the "Video" box of t
 | Feature graphic (1024 × 500) | `feature_graphic_1024x500.png` |
 | Phone screenshots (upload in this order) | `screenshot_1_home.png` to `screenshot_8_letter.png` |
 
+## Privacy policy (required)
+
+Paste this link in App content → Privacy policy:
+https://github.com/Maryjane287/Maryjane287/blob/claude/keen-ritchie-was4uj/brainlings/store/privacy_policy.md
+(First replace SUPPORT_EMAIL in `privacy_policy.md` with the support email you want parents to use.)
+
 ## Settings to choose in Play Console
 
 - **Category:** Education (also tick "Tags": Educational, Kids, Learning).
@@ -75,10 +81,16 @@ set "Made for kids: Yes"), then paste the YouTube link into the "Video" box of t
 - **Ads:** No, my app does not contain ads.
 - **Content rating questionnaire:** answer No to violence, fear, gambling, user interaction and sharing location.
   Expect a rating of "Everyone" / PEGI 3.
-- **Data safety:** the app stores the child's first name, age and voice recordings on the phone only.
-  Nothing is collected or shared yet. (This changes when family messages go online with Firebase; we will update it then.)
+- **Data safety:** "Does your app collect or share user data?" answer **No**: everything stays on the phone
+  (Google only counts data that leaves the device). Mention in the privacy policy (done) that Say It! uses the phone's
+  own speech recognition. "Is all data encrypted in transit?" not applicable. "Can users request deletion?" Yes, Start again.
+  (This changes when family messages go online with Firebase; we will update it then.)
+- **Upload:** Production (or Internal testing first) → Create new release → upload `Brainlings-1.6.3.aab`.
+  Choose "Use Google-generated app signing key" (Play App Signing). Keep `brainlings-upload.jks` and its password safe:
+  every future update must be signed with it.
 - **Teacher Approved:** once live, you can apply. The app already follows the rules (no ads, age appropriate, grown-up gate).
-- **Free trial:** set up the subscription in Monetise → Subscriptions with a base plan and a 7-day free trial offer.
+- **Price (first release):** Free, no in-app purchases yet. The 7-day free trial subscription comes in the next update:
+  Google only lets you create a subscription after an app has been uploaded, then we add the paywall to the app.
 
 ## Social posts (to drive traffic)
 
@@ -88,5 +100,5 @@ Caption idea:
 
 > Meet Bibi! 🌱 A learning buddy who sings, dances and listens to your little one.
 > Counting, phonics, songs and giggles, made for ages 4 to 7. No ads, ever.
-> Try Brainlings free for 7 days on Google Play. 💛
+> Get Brainlings on Google Play. 💛
 > #Brainlings #KidsLearning #Phonics #EarlyMaths #LearningThroughPlay #KidsSongs #Parenting

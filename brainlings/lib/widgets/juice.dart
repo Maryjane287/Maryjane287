@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../friends.dart';
 import '../screens/songs.dart';
+import '../services/lines.dart';
 import '../services/sfx.dart';
 import '../theme.dart';
 import 'art.dart';
@@ -15,8 +16,6 @@ class Juice {
   static int _streak = 0;
 
   static const _words = ['YES!', 'WOW!', 'SUPER!', 'YAY!', 'COOL!', 'BRAVO!'];
-  static const _cheers = ['Woohoo!', 'Yay!', 'Hooray!', 'You rock!', 'High five!', 'Awesome!', 'Yippee!', 'So clever!'];
-  static const _oops = ['Oopsie! Try another one!', 'Hee hee, not that one!', 'Nearly! Try again!'];
 
   static void resetStreak() => _streak = 0;
 
@@ -35,14 +34,14 @@ class Juice {
       celebrate(context, count: 50);
       return GameHost.cheer("Three in a row! You're on fire!");
     }
-    return GameHost.cheer(_cheers[_r.nextInt(_cheers.length)]);
+    return GameHost.cheer(Lines.praise());
   }
 
   /// A wrong answer: a silly boing and a giggly nudge. Never "wrong".
   static String oops() {
     _streak = 0;
     Sfx.boing();
-    return GameHost.oops(_oops[_r.nextInt(_oops.length)]);
+    return GameHost.oops(Lines.oops());
   }
 
   /// Stars and sparkles flying out from a point.

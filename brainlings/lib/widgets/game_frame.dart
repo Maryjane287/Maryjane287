@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../friends.dart';
+import '../services/lines.dart';
 import '../services/music.dart';
 import '../services/sfx.dart';
 import '../services/voice.dart';
@@ -85,9 +86,9 @@ class _GameFrameState extends State<GameFrame> {
         _lastTouch = DateTime.now();
         return;
       }
-      if (DateTime.now().difference(_lastTouch).inSeconds < 9) return;
+      if (DateTime.now().difference(_lastTouch).inSeconds < 14) return;
       _lastTouch = DateTime.now();
-      if (GameHost.current != null && _nudge.isOdd) {
+      if (GameHost.current != null && _nudge % 4 == 3) {
         _nudge++;
         Voice.say(GameHost.nudge());
       } else if (widget.onIdle != null) {
@@ -433,10 +434,4 @@ const numberWordsCap = [
   'Ten',
 ];
 
-String yayLine(Random r) => const [
-  'Yes! Brilliant!',
-  'You got it!',
-  'Woohoo! Well done!',
-  'Super clever!',
-  'Yay! That\'s right!',
-][r.nextInt(5)];
+String yayLine(Random r) => Lines.yay();

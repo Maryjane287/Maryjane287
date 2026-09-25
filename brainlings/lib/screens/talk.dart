@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:async';
 import 'dart:math';
 
@@ -6,6 +7,7 @@ import 'package:just_audio/just_audio.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:record/record.dart';
 
+import '../services/lines.dart';
 import '../services/music.dart';
 import '../services/sfx.dart';
 import '../services/voice.dart';
@@ -104,6 +106,11 @@ class _TalkScreenState extends State<TalkScreen> {
     _amp?.cancel();
     _rec.dispose();
     _player.dispose();
+    // What the child said is never kept.
+    getTemporaryDirectory().then((d) {
+      final f = File('${d.path}/bibi-ears.m4a');
+      if (f.existsSync()) f.deleteSync();
+    }).catchError((_) {});
     Music.resume();
     super.dispose();
   }
@@ -177,7 +184,7 @@ class _TalkScreenState extends State<TalkScreen> {
     setState(() => _ear = _Ear.off);
     _quietCount++;
     final joke = _quietCount % 3 == 0;
-    final line = joke ? _jokes[_r.nextInt(_jokes.length)] : _quietLines[_r.nextInt(_quietLines.length)];
+    final line = joke ? Lines.pick('talk-joke', _jokes) : Lines.pick('talk-quiet', _quietLines);
     Sfx.boing();
     setState(() => _wobble++);
     await _say(line, joke ? Mood.laugh : Mood.wave);
@@ -224,7 +231,7 @@ class _TalkScreenState extends State<TalkScreen> {
     // Now and then Bibi says something back, so it feels like a chat.
     if (_talks % 2 == 0) {
       const replies = ['Hee hee! You sound funny!', 'You sound amazing!', 'I heard you! Say something else!'];
-      await _say(replies[_r.nextInt(replies.length)], Mood.cheer);
+      await _say(Lines.pick('talk-reply', replies), Mood.cheer);
     } else {
       await Future.delayed(const Duration(milliseconds: 400));
     }

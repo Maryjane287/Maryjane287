@@ -1,6 +1,8 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/foundation.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// A voice (or written) letter from someone in the family circle.
@@ -209,6 +211,26 @@ class AppState extends ChangeNotifier {
       }
     }
     _rollDay();
+    _tidyRecordings();
+  }
+
+  /// Deletes voice recordings nothing uses any more (an old name recording
+  /// after re-recording, a deleted letter), or all of them with [all].
+  Future<void> _tidyRecordings({bool all = false}) async {
+    try {
+      // Compare file names only: on iPhone the folder can move after an update.
+      String name(String p) => p.split(Platform.pathSeparator).last;
+      final keep = <String>{
+        if (!all && nameClipPath != null) name(nameClipPath!),
+        if (!all)
+          for (final l in letters)
+            if (l.audioPath != null) name(l.audioPath!),
+      };
+      final dir = await getApplicationDocumentsDirectory();
+      for (final f in dir.listSync().whereType<File>()) {
+        if (f.path.endsWith('.m4a') && !keep.contains(name(f.path))) f.deleteSync();
+      }
+    } catch (_) {}
   }
 
   Future<void> save() async {
@@ -326,6 +348,8 @@ class AppState extends ChangeNotifier {
     playedSecondsToday = 0;
     bedtimeDay = '';
     save();
+    // Start again erases every recording on the phone too.
+    _tidyRecordings(all: true);
   }
 }
 
