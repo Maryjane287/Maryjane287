@@ -6,6 +6,7 @@ import '../services/sfx.dart';
 import '../services/voice.dart';
 import '../state.dart';
 import '../theme.dart';
+import '../widgets/art.dart';
 import '../widgets/bibi.dart';
 import '../widgets/game_frame.dart';
 import '../widgets/ui.dart';
@@ -21,12 +22,12 @@ class FeedingTime extends StatefulWidget {
 class _FeedingTimeState extends State<FeedingTime> {
   static const rounds = 5;
   static const fruits = [
-    ('🍎', 'apple', 'apples'),
-    ('🍓', 'strawberry', 'strawberries'),
-    ('🍌', 'banana', 'bananas'),
-    ('🫐', 'blueberry', 'blueberries'),
-    ('🍪', 'cookie', 'cookies'),
-    ('🍊', 'orange', 'oranges'),
+    ('apple', 'apple', 'apples'),
+    ('strawberry', 'strawberry', 'strawberries'),
+    ('banana', 'banana', 'bananas'),
+    ('blueberry', 'blueberry', 'blueberries'),
+    ('cookie', 'cookie', 'cookies'),
+    ('orange', 'orange', 'oranges'),
   ];
   final _r = Random();
   int _round = 0;
@@ -40,6 +41,8 @@ class _FeedingTimeState extends State<FeedingTime> {
 
   int get _max => app.age <= 4 ? 5 : (app.age == 5 ? 7 : 10);
   int get _count => _inBowl.where((b) => b).length;
+  String get _ask =>
+      'Can you give me ${numberWords[_target]} ${_target == 1 ? _fruit.$2 : _fruit.$3}, please?';
 
   @override
   void initState() {
@@ -52,10 +55,7 @@ class _FeedingTimeState extends State<FeedingTime> {
     _fruit = fruits[_r.nextInt(fruits.length)];
     _inBowl = List.filled(min(_target + 3, 10), false);
     _mood = Mood.hungry;
-    final word = _target == 1 ? _fruit.$2 : _fruit.$3;
-    _line = _round == 0
-        ? 'My tummy is rumbling! Can you give me ${numberWords[_target]} $word, please?'
-        : 'Yum! Now can I have ${numberWords[_target]} $word?';
+    _line = _round == 0 ? 'My tummy is rumbling!|$_ask' : _ask;
     setState(() {});
     Voice.say(_line);
   }
@@ -64,7 +64,7 @@ class _FeedingTimeState extends State<FeedingTime> {
     if (_busy) return;
     setState(() => _inBowl[i] = !_inBowl[i]);
     Sfx.pop();
-    Voice.say(_count == 0 ? 'zero' : numberWords[_count]);
+    Voice.say('${numberWordsCap[_count]}!');
   }
 
   Future<void> _feed() async {
@@ -73,9 +73,9 @@ class _FeedingTimeState extends State<FeedingTime> {
     if (_count == _target) {
       Sfx.chomp();
       setState(() {
-        _mood = Mood.cheer;
+        _mood = Mood.munch;
         _bounce++;
-        _line = '${yayLine(_r)} ${_cap(numberWords[_target])}! Nom nom nom!';
+        _line = '${yayLine(_r)}|${numberWordsCap[_target]}!|Nom nom nom!';
         for (var i = 0; i < _inBowl.length; i++) {
           _inBowl[i] = false;
         }
@@ -84,6 +84,9 @@ class _FeedingTimeState extends State<FeedingTime> {
       await Future.delayed(const Duration(milliseconds: 400));
       Sfx.correct();
       await Voice.say(_line);
+      if (!mounted) return;
+      setState(() => _mood = Mood.cheer);
+      await Future.delayed(const Duration(milliseconds: 500));
       _round++;
       if (!mounted) return;
       if (_round >= rounds) {
@@ -93,15 +96,15 @@ class _FeedingTimeState extends State<FeedingTime> {
       }
     } else {
       Sfx.tryAgain();
-      final tooMany = _count > _target;
+      final oops = _count > _target
+          ? 'Whoa! That\'s too many for my little tummy!'
+          : _count == 0
+          ? 'My bowl is empty! Tap the fruit to fill it up.'
+          : 'Hmm, I\'m still hungry. I need a few more!';
       setState(() {
-        _mood = Mood.puzzled;
+        _mood = _count > _target ? Mood.wow : Mood.think;
         _wobble++;
-        _line = tooMany
-            ? 'Whoa, that\'s ${numberWords[_count]}! My tummy only wants ${numberWords[_target]}.'
-            : _count == 0
-                ? 'My bowl is empty! Can you find ${numberWords[_target]}?'
-                : 'Hmm, I see ${numberWords[_count]}. I need ${numberWords[_target]}. Let\'s count again!';
+        _line = '$oops|$_ask';
       });
       await Voice.say(_line);
       if (mounted) setState(() => _mood = Mood.hungry);
@@ -109,11 +112,10 @@ class _FeedingTimeState extends State<FeedingTime> {
     _busy = false;
   }
 
-  String _cap(String s) => s[0].toUpperCase() + s.substring(1);
-
   @override
   Widget build(BuildContext context) {
     return GameFrame(
+      scene: 'orchard',
       round: _round,
       total: rounds,
       line: _line,
@@ -123,16 +125,16 @@ class _FeedingTimeState extends State<FeedingTime> {
       body: Column(
         children: [
           const SizedBox(height: 4),
-          // The fruit tree
+          // The fruit to pick from
           Expanded(
             flex: 5,
             child: Container(
               width: double.infinity,
-              padding: const EdgeInsets.all(14),
+              padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                gradient: const RadialGradient(center: Alignment(-.4, -.6), radius: 1.2, colors: [Color(0xFF9BE36A), C.leaf]),
-                borderRadius: const BorderRadius.vertical(top: Radius.elliptical(200, 90), bottom: Radius.circular(28)),
-                boxShadow: const [BoxShadow(color: C.leafDeep, offset: Offset(0, 6))],
+                color: Colors.white.withValues(alpha: .55),
+                borderRadius: BorderRadius.circular(32),
+                border: Border.all(color: Colors.white, width: 4),
               ),
               child: Center(
                 child: Wrap(
@@ -142,70 +144,103 @@ class _FeedingTimeState extends State<FeedingTime> {
                   children: [
                     for (var i = 0; i < _inBowl.length; i++)
                       AnimatedScale(
-                        duration: const Duration(milliseconds: 200),
+                        duration: const Duration(milliseconds: 220),
+                        curve: Curves.easeOutBack,
                         scale: _inBowl[i] ? 0 : 1,
-                        child: _FruitButton(emoji: _fruit.$1, onTap: _inBowl[i] ? null : () => _toggle(i)),
+                        child: GestureDetector(
+                          onTap: _inBowl[i] ? null : () => _toggle(i),
+                          child: _Bobbing(
+                            seed: i,
+                            child: Art(_fruit.$1, size: 58),
+                          ),
+                        ),
                       ),
                   ],
                 ),
               ),
             ),
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 10),
           // The bowl and the counter
-          Row(
-            children: [
-              Expanded(
-                child: Container(
-                  constraints: const BoxConstraints(minHeight: 84),
-                  padding: const EdgeInsets.fromLTRB(12, 10, 12, 22),
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [Color(0xFFD99A5B), Color(0xFFB8773D)]),
-                    borderRadius: BorderRadius.vertical(top: Radius.circular(14), bottom: Radius.circular(70)),
-                    boxShadow: [BoxShadow(color: Color(0xFF8E5A2B), offset: Offset(0, 6))],
-                  ),
-                  child: Wrap(
-                    alignment: WrapAlignment.center,
+          SizedBox(
+            height: 130,
+            child: Row(
+              children: [
+                Expanded(
+                  child: Stack(
+                    alignment: Alignment.bottomCenter,
                     children: [
-                      for (var i = 0; i < _inBowl.length; i++)
-                        if (_inBowl[i])
-                          TweenAnimationBuilder<double>(
-                            key: ValueKey('b$i'),
-                            tween: Tween(begin: 0, end: 1),
-                            duration: const Duration(milliseconds: 350),
-                            curve: Curves.elasticOut,
-                            builder: (_, v, c) => Transform.scale(scale: v, child: c),
-                            child: _FruitButton(emoji: _fruit.$1, size: 40, onTap: () => _toggle(i)),
-                          ),
+                      const Positioned.fill(child: Art('bowl', size: 200)),
+                      Positioned(
+                        left: 30,
+                        right: 30,
+                        bottom: 52,
+                        child: Wrap(
+                          alignment: WrapAlignment.center,
+                          spacing: -10,
+                          runSpacing: -18,
+                          children: [
+                            for (var i = 0; i < _inBowl.length; i++)
+                              if (_inBowl[i])
+                                TweenAnimationBuilder<double>(
+                                  key: ValueKey('b$i'),
+                                  tween: Tween(begin: 0, end: 1),
+                                  duration: const Duration(milliseconds: 420),
+                                  curve: Curves.elasticOut,
+                                  builder: (_, v, c) => Transform.translate(
+                                    offset: Offset(0, (1 - v) * -80),
+                                    child: Transform.scale(
+                                      scale: .5 + v * .5,
+                                      child: c,
+                                    ),
+                                  ),
+                                  child: GestureDetector(
+                                    onTap: () => _toggle(i),
+                                    child: Art(_fruit.$1, size: 40),
+                                  ),
+                                ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
-              ),
-              const SizedBox(width: 12),
-              AnimatedSwitcher(
-                duration: const Duration(milliseconds: 250),
-                transitionBuilder: (c, a) => ScaleTransition(scale: a, child: c),
-                child: Container(
-                  key: ValueKey(_count),
-                  width: 78,
-                  height: 78,
-                  alignment: Alignment.center,
-                  decoration: const BoxDecoration(color: C.paper, shape: BoxShape.circle, boxShadow: [BoxShadow(color: C.shadow, offset: Offset(0, 5))]),
-                  child: Text('$_count', style: T.l(44)),
+                const SizedBox(width: 12),
+                AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 250),
+                  transitionBuilder: (c, a) =>
+                      ScaleTransition(scale: a, child: c),
+                  child: Container(
+                    key: ValueKey(_count),
+                    width: 78,
+                    height: 78,
+                    alignment: Alignment.center,
+                    decoration: const BoxDecoration(
+                      color: C.paper,
+                      shape: BoxShape.circle,
+                      boxShadow: [
+                        BoxShadow(color: C.shadow, offset: Offset(0, 5)),
+                      ],
+                    ),
+                    child: Text('$_count', style: T.l(44)),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 10),
           Chunky(
             color: C.berry,
             shadow: C.berryDeep,
             onTap: _feed,
-            child: const Row(mainAxisSize: MainAxisSize.min, children: [
-              Text('😋', style: TextStyle(fontSize: 28)),
-              SizedBox(width: 10),
-              Text('Feed me!'),
-            ]),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Art(_fruit.$1, size: 34),
+                const SizedBox(width: 10),
+                const Text('Feed me!'),
+              ],
+            ),
           ),
           const SizedBox(height: 16),
         ],
@@ -214,19 +249,33 @@ class _FeedingTimeState extends State<FeedingTime> {
   }
 }
 
-class _FruitButton extends StatelessWidget {
-  const _FruitButton({required this.emoji, required this.onTap, this.size = 50});
-
-  final String emoji;
-  final VoidCallback? onTap;
-  final double size;
+/// Fruit gently bobbing, as if hanging from a branch in the breeze.
+class _Bobbing extends StatefulWidget {
+  const _Bobbing({required this.seed, required this.child});
+  final int seed;
+  final Widget child;
 
   @override
-  Widget build(BuildContext context) => GestureDetector(
-        onTap: onTap,
-        child: Padding(
-          padding: const EdgeInsets.all(2),
-          child: Text(emoji, style: TextStyle(fontSize: size, height: 1.1)),
-        ),
-      );
+  State<_Bobbing> createState() => _BobbingState();
+}
+
+class _BobbingState extends State<_Bobbing>
+    with SingleTickerProviderStateMixin {
+  late final _c = AnimationController(
+    vsync: this,
+    duration: Duration(milliseconds: 1600 + widget.seed * 130),
+  )..repeat(reverse: true);
+
+  @override
+  void dispose() {
+    _c.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => AnimatedBuilder(
+    animation: _c,
+    builder: (_, c) => Transform.rotate(angle: (_c.value - .5) * .16, child: c),
+    child: widget.child,
+  );
 }

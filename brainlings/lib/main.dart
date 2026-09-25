@@ -13,7 +13,9 @@ import 'theme.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
+  );
   await app.load();
   unawaited(Voice.init());
   runApp(const BrainlingsApp());
@@ -26,7 +28,8 @@ class BrainlingsApp extends StatefulWidget {
   State<BrainlingsApp> createState() => _BrainlingsAppState();
 }
 
-class _BrainlingsAppState extends State<BrainlingsApp> with WidgetsBindingObserver {
+class _BrainlingsAppState extends State<BrainlingsApp>
+    with WidgetsBindingObserver {
   static const _tick = 15;
   Timer? _clock;
 
@@ -67,8 +70,8 @@ class _BrainlingsAppState extends State<BrainlingsApp> with WidgetsBindingObserv
     final Widget start = !app.setupDone
         ? const SetupScreen()
         : !app.hatched
-            ? const HatchScreen()
-            : const HomeScreen();
+        ? const HatchScreen()
+        : const HomeScreen();
     return MaterialApp(
       title: 'Brainlings',
       debugShowCheckedModeBanner: false,

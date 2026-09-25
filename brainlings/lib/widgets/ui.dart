@@ -63,12 +63,26 @@ class _ChunkyState extends State<Chunky> {
             decoration: BoxDecoration(
               color: widget.color,
               borderRadius: BorderRadius.circular(widget.radius),
-              boxShadow: [BoxShadow(color: widget.shadow, offset: Offset(0, widget.depth - off))],
+              boxShadow: [
+                BoxShadow(
+                  color: widget.shadow,
+                  offset: Offset(0, widget.depth - off),
+                ),
+              ],
             ),
             child: DefaultTextStyle(
-              style: T.d(22, color: widget.color.computeLuminance() > .5 ? C.ink : Colors.white),
+              style: T.d(
+                22,
+                color: widget.color.computeLuminance() > .5
+                    ? C.ink
+                    : Colors.white,
+              ),
               textAlign: TextAlign.center,
-              child: Center(widthFactor: 1, heightFactor: 1, child: widget.child),
+              child: Center(
+                widthFactor: 1,
+                heightFactor: 1,
+                child: widget.child,
+              ),
             ),
           ),
         ),
@@ -92,7 +106,10 @@ class Bubble extends StatelessWidget {
       onTap: speakable ? () => Voice.say(text) : null,
       child: AnimatedSwitcher(
         duration: const Duration(milliseconds: 250),
-        transitionBuilder: (c, a) => ScaleTransition(scale: CurvedAnimation(parent: a, curve: Curves.easeOutBack), child: c),
+        transitionBuilder: (c, a) => ScaleTransition(
+          scale: CurvedAnimation(parent: a, curve: Curves.easeOutBack),
+          child: c,
+        ),
         child: Container(
           key: ValueKey(text),
           padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
@@ -104,10 +121,20 @@ class Bubble extends StatelessWidget {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Flexible(child: Text(Voice.show(text), textAlign: TextAlign.center, style: T.d(size))),
+              Flexible(
+                child: Text(
+                  Voice.show(text),
+                  textAlign: TextAlign.center,
+                  style: T.d(size),
+                ),
+              ),
               if (speakable) ...[
                 const SizedBox(width: 8),
-                const Icon(Icons.volume_up_rounded, color: C.lilacDeep, size: 22),
+                const Icon(
+                  Icons.volume_up_rounded,
+                  color: C.lilacDeep,
+                  size: 22,
+                ),
               ],
             ],
           ),
@@ -119,7 +146,12 @@ class Bubble extends StatelessWidget {
 
 /// Round white icon button (back, settings).
 class RoundIcon extends StatelessWidget {
-  const RoundIcon({super.key, required this.icon, required this.onTap, this.label});
+  const RoundIcon({
+    super.key,
+    required this.icon,
+    required this.onTap,
+    this.label,
+  });
 
   final IconData icon;
   final VoidCallback onTap;
@@ -127,28 +159,35 @@ class RoundIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Semantics(
-        label: label,
-        child: Chunky(
-          onTap: onTap,
-          color: C.paper,
-          shadow: C.shadow,
-          padding: const EdgeInsets.all(10),
-          depth: 4,
-          child: Icon(icon, color: C.ink, size: 28),
-        ),
-      );
+    label: label,
+    child: Chunky(
+      onTap: onTap,
+      color: C.paper,
+      shadow: C.shadow,
+      padding: const EdgeInsets.all(10),
+      depth: 4,
+      child: Icon(icon, color: C.ink, size: 28),
+    ),
+  );
 }
 
 /// Rainbow confetti that rains down over the whole screen.
 void celebrate(BuildContext context, {int count = 70, bool hearts = false}) {
   final overlay = Overlay.of(context);
   late OverlayEntry entry;
-  entry = OverlayEntry(builder: (_) => _Confetti(count: count, hearts: hearts, onDone: () => entry.remove()));
+  entry = OverlayEntry(
+    builder: (_) =>
+        _Confetti(count: count, hearts: hearts, onDone: () => entry.remove()),
+  );
   overlay.insert(entry);
 }
 
 class _Confetti extends StatefulWidget {
-  const _Confetti({required this.count, required this.hearts, required this.onDone});
+  const _Confetti({
+    required this.count,
+    required this.hearts,
+    required this.onDone,
+  });
 
   final int count;
   final bool hearts;
@@ -158,9 +197,12 @@ class _Confetti extends StatefulWidget {
   State<_Confetti> createState() => _ConfettiState();
 }
 
-class _ConfettiState extends State<_Confetti> with SingleTickerProviderStateMixin {
-  late final AnimationController _c = AnimationController(vsync: this, duration: const Duration(milliseconds: 2400))
-    ..forward().whenComplete(widget.onDone);
+class _ConfettiState extends State<_Confetti>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _c = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 2400),
+  )..forward().whenComplete(widget.onDone);
   final _r = Random();
   late final _bits = List.generate(
     widget.count,
@@ -169,7 +211,15 @@ class _ConfettiState extends State<_Confetti> with SingleTickerProviderStateMixi
       delay: _r.nextDouble() * .35,
       spin: (_r.nextDouble() - .5) * 12,
       drift: (_r.nextDouble() - .5) * .25,
-      color: [C.berry, C.sun, C.leaf, C.sky, C.lilac, C.peach, C.aqua][_r.nextInt(7)],
+      color: [
+        C.berry,
+        C.sun,
+        C.leaf,
+        C.sky,
+        C.lilac,
+        C.peach,
+        C.aqua,
+      ][_r.nextInt(7)],
       size: 8 + _r.nextDouble() * 10,
     ),
   );
@@ -190,28 +240,44 @@ class _ConfettiState extends State<_Confetti> with SingleTickerProviderStateMixi
           children: [
             for (final b in _bits)
               if (_c.value > b.delay)
-                Builder(builder: (_) {
-                  final t = ((_c.value - b.delay) / (1 - b.delay)).clamp(0.0, 1.0);
-                  final y = widget.hearts ? s.height * (1 - t) : -30 + t * (s.height + 60);
-                  final x = (b.x + sin(t * 6 + b.spin) * .03 + b.drift * t) * s.width;
-                  return Positioned(
-                    left: x,
-                    top: y,
-                    child: Opacity(
-                      opacity: widget.hearts ? (1 - t) : 1,
-                      child: widget.hearts
-                          ? Icon(Icons.favorite_rounded, color: b.color, size: b.size * 2.4)
-                          : Transform.rotate(
-                              angle: t * b.spin,
-                              child: Container(
-                                width: b.size,
-                                height: b.size * 1.4,
-                                decoration: BoxDecoration(color: b.color, borderRadius: BorderRadius.circular(3)),
+                Builder(
+                  builder: (_) {
+                    final t = ((_c.value - b.delay) / (1 - b.delay)).clamp(
+                      0.0,
+                      1.0,
+                    );
+                    final y = widget.hearts
+                        ? s.height * (1 - t)
+                        : -30 + t * (s.height + 60);
+                    final x =
+                        (b.x + sin(t * 6 + b.spin) * .03 + b.drift * t) *
+                        s.width;
+                    return Positioned(
+                      left: x,
+                      top: y,
+                      child: Opacity(
+                        opacity: widget.hearts ? (1 - t) : 1,
+                        child: widget.hearts
+                            ? Icon(
+                                Icons.favorite_rounded,
+                                color: b.color,
+                                size: b.size * 2.4,
+                              )
+                            : Transform.rotate(
+                                angle: t * b.spin,
+                                child: Container(
+                                  width: b.size,
+                                  height: b.size * 1.4,
+                                  decoration: BoxDecoration(
+                                    color: b.color,
+                                    borderRadius: BorderRadius.circular(3),
+                                  ),
+                                ),
                               ),
-                            ),
-                    ),
-                  );
-                }),
+                      ),
+                    );
+                  },
+                ),
           ],
         ),
       ),
@@ -228,37 +294,44 @@ class RoundDots extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          for (var i = 0; i < total; i++)
-            AnimatedContainer(
-              duration: const Duration(milliseconds: 300),
-              margin: const EdgeInsets.symmetric(horizontal: 3),
-              width: i == done ? 18 : 13,
-              height: i == done ? 18 : 13,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: i < done ? C.leaf : (i == done ? C.sun : Colors.white.withValues(alpha: .7)),
-                border: i == done ? Border.all(color: Colors.white, width: 3) : null,
-              ),
-            ),
-        ],
-      );
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      for (var i = 0; i < total; i++)
+        AnimatedContainer(
+          duration: const Duration(milliseconds: 300),
+          margin: const EdgeInsets.symmetric(horizontal: 3),
+          width: i == done ? 18 : 13,
+          height: i == done ? 18 : 13,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: i < done
+                ? C.leaf
+                : (i == done ? C.sun : Colors.white.withValues(alpha: .7)),
+            border: i == done
+                ? Border.all(color: Colors.white, width: 3)
+                : null,
+          ),
+        ),
+    ],
+  );
 }
 
 /// Gentle fade + rise page transition.
 Route<R> softRoute<R>(Widget page) => PageRouteBuilder<R>(
-      transitionDuration: const Duration(milliseconds: 420),
-      reverseTransitionDuration: const Duration(milliseconds: 300),
-      pageBuilder: (_, _, _) => page,
-      transitionsBuilder: (_, a, _, child) => FadeTransition(
-        opacity: a,
-        child: SlideTransition(
-          position: Tween(begin: const Offset(0, .04), end: Offset.zero).animate(CurvedAnimation(parent: a, curve: Curves.easeOut)),
-          child: child,
-        ),
-      ),
-    );
+  transitionDuration: const Duration(milliseconds: 420),
+  reverseTransitionDuration: const Duration(milliseconds: 300),
+  pageBuilder: (_, _, _) => page,
+  transitionsBuilder: (_, a, _, child) => FadeTransition(
+    opacity: a,
+    child: SlideTransition(
+      position: Tween(
+        begin: const Offset(0, .04),
+        end: Offset.zero,
+      ).animate(CurvedAnimation(parent: a, curve: Curves.easeOut)),
+      child: child,
+    ),
+  ),
+);
 
 /// A white card for grown-up screens.
 class GrownCard extends StatelessWidget {
@@ -268,16 +341,19 @@ class GrownCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Container(
-        width: double.infinity,
-        padding: const EdgeInsets.all(22),
-        margin: const EdgeInsets.only(bottom: 16),
-        decoration: BoxDecoration(
-          color: C.paper,
-          borderRadius: BorderRadius.circular(28),
-          boxShadow: const [BoxShadow(color: C.shadow, offset: Offset(0, 8))],
-        ),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: children),
-      );
+    width: double.infinity,
+    padding: const EdgeInsets.all(22),
+    margin: const EdgeInsets.only(bottom: 16),
+    decoration: BoxDecoration(
+      color: C.paper,
+      borderRadius: BorderRadius.circular(28),
+      boxShadow: const [BoxShadow(color: C.shadow, offset: Offset(0, 8))],
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: children,
+    ),
+  );
 }
 
 class Eyebrow extends StatelessWidget {
@@ -286,7 +362,12 @@ class Eyebrow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Padding(
-        padding: const EdgeInsets.only(bottom: 6),
-        child: Text(text.toUpperCase(), style: T.b(12, color: C.berryDeep, w: FontWeight.w800).copyWith(letterSpacing: 1.4)),
-      );
+    padding: const EdgeInsets.only(bottom: 6),
+    child: Text(
+      text.toUpperCase(),
+      style: T
+          .b(12, color: C.berryDeep, w: FontWeight.w800)
+          .copyWith(letterSpacing: 1.4),
+    ),
+  );
 }

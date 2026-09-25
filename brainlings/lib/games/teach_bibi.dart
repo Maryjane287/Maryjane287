@@ -6,6 +6,7 @@ import '../services/sfx.dart';
 import '../services/voice.dart';
 import '../state.dart';
 import '../theme.dart';
+import '../widgets/art.dart';
 import '../widgets/bibi.dart';
 import '../widgets/game_frame.dart';
 import '../widgets/ui.dart';
@@ -24,7 +25,14 @@ class TeachBibi extends StatefulWidget {
 
 class _TeachBibiState extends State<TeachBibi> {
   static const rounds = 5;
-  static const things = ['🐞', '🍩', '🐥', '🌟', '🍄', '🐠'];
+  static const things = [
+    'ladybird',
+    'donut',
+    'chick',
+    'star',
+    'mushroom',
+    'fish',
+  ];
   static const sillies = [
     'Hmm, I think I was counting my toes.',
     'Oopsie! My brain did a wobble.',
@@ -38,7 +46,7 @@ class _TeachBibiState extends State<TeachBibi> {
   bool _bibiRight = false;
   // counting
   int _real = 0, _claim = 0;
-  String _thing = '🐞';
+  String _thing = 'ladybird';
   // letters
   late Phonic _pic;
   late String _claimLetter;
@@ -60,7 +68,7 @@ class _TeachBibiState extends State<TeachBibi> {
     _isCount = _round.isEven;
     _bibiRight = _r.nextDouble() < .3;
     _step = _Step.judge;
-    _mood = Mood.puzzled;
+    _mood = _isCount ? Mood.think : Mood.read;
     if (_isCount) {
       final top = app.age <= 4 ? 5 : 8;
       _real = 2 + _r.nextInt(top - 1);
@@ -68,15 +76,16 @@ class _TeachBibiState extends State<TeachBibi> {
       _claim = _bibiRight ? _real : (_r.nextBool() ? _real + 1 : _real - 1);
       final opts = {_real, _real + 1, _real - 1}.toList()..shuffle(_r);
       _options = opts.map((e) => '$e').toList();
-      _line = _round == 0
-          ? 'I\'m learning to count! Let me try. One, two... there are ${numberWords[_claim]}! Am I right?'
-          : 'Let me count these. I think there are ${numberWords[_claim]}! Am I right?';
+      _line =
+          '${_round == 0 ? 'I\'m learning to count! Let me try.' : 'Let me count these.'}|I think there ${_claim == 1 ? 'is' : 'are'} ${numberWords[_claim]}! Am I right?';
     } else {
       _pic = phonics[_r.nextInt(phonics.length)];
-      final others = phonics.where((p) => p.letter != _pic.letter).toList()..shuffle(_r);
+      final others = phonics.where((p) => p.letter != _pic.letter).toList()
+        ..shuffle(_r);
       _claimLetter = _bibiRight ? _pic.letter : others.first.letter;
       _options = [_pic.letter, others[0].letter, others[1].letter]..shuffle(_r);
-      _line = 'That\'s a ${_pic.word}! I think ${_pic.word} starts with ${_claimLetter.toUpperCase()}. Am I right?';
+      _line =
+          '${thatsA(_pic.word)}|I think it starts with ${_claimLetter.toUpperCase()}. Am I right?';
     }
     setState(() {});
     Voice.say(_line);
@@ -101,7 +110,8 @@ class _TeachBibiState extends State<TeachBibi> {
         setState(() {
           _step = _Step.teach;
           _wobble++;
-          _line = '${sillies[_r.nextInt(sillies.length)]} Can you teach me? ${_isCount ? 'How many are there really?' : 'Which letter does ${_pic.word} start with?'}';
+          _line =
+              '${sillies[_r.nextInt(sillies.length)]}|Can you teach me? ${_isCount ? 'How many are there really?' : 'Which letter does it start with?'}';
         });
         await Voice.say(_line);
       }
@@ -110,8 +120,8 @@ class _TeachBibiState extends State<TeachBibi> {
       setState(() {
         _wobble++;
         _line = _isCount
-            ? 'Hmm, let\'s count together. ${List.generate(_real, (i) => numberWords[i + 1]).join(', ')}. There are ${numberWords[_real]}!'
-            : '${_pic.word}. ${_pic.sound}, ${_pic.sound}. It starts with ${_pic.letter.toUpperCase()}!';
+            ? 'Hmm, let\'s count together.|${List.generate(_real, (i) => '${numberWordsCap[i + 1]}!').join('|')}|There are ${numberWords[_real]}!'
+            : '${_pic.chant}|It starts with ${_pic.letter.toUpperCase()}!';
       });
       await Voice.say(_line);
       _next();
@@ -130,8 +140,8 @@ class _TeachBibiState extends State<TeachBibi> {
         _mood = Mood.cheer;
         _bounce++;
         _line = _isCount
-            ? 'Ohhh! ${numberWords[_real]}! Now I know. You are the best teacher, {name}!'
-            : 'Ohhh! ${_pic.word} starts with ${_pic.letter.toUpperCase()}! ${_pic.sound}! Thank you, teacher!';
+            ? '${numberWordsCap[_real]}!|Ohhh! Now I know! You are the best teacher!'
+            : '${_pic.chant}|Ohhh! Now I know! You are the best teacher!';
       });
       await Voice.say(_line);
       _next();
@@ -139,7 +149,9 @@ class _TeachBibiState extends State<TeachBibi> {
       Sfx.tryAgain();
       setState(() {
         _wobble++;
-        _line = _isCount ? 'Hmm, shall we count them together? Tap each one.' : 'Listen: ${_pic.word}. ${_pic.sound}. Which letter says ${_pic.sound}?';
+        _line = _isCount
+            ? 'Hmm, shall we count them together? Tap each one.'
+            : 'Listen carefully and try again!|${_pic.chant}';
       });
       await Voice.say(_line);
     }
@@ -159,6 +171,7 @@ class _TeachBibiState extends State<TeachBibi> {
   @override
   Widget build(BuildContext context) {
     return GameFrame(
+      scene: 'classroom',
       round: _round,
       total: rounds,
       line: _line,
@@ -176,14 +189,22 @@ class _TeachBibiState extends State<TeachBibi> {
               color: const Color(0xFFFFF6D6),
               borderRadius: BorderRadius.circular(28),
               border: Border.all(color: Colors.white, width: 5),
-              boxShadow: const [BoxShadow(color: C.shadow, offset: Offset(0, 6))],
+              boxShadow: const [
+                BoxShadow(color: C.shadow, offset: Offset(0, 6)),
+              ],
             ),
             child: _isCount
-                ? _CountBoard(key: ValueKey(_round), count: _real, emoji: _thing)
-                : Column(children: [
-                    Text(_pic.emoji, style: const TextStyle(fontSize: 90)),
-                    Text(_pic.word, style: T.l(34, color: C.ink)),
-                  ]),
+                ? _CountBoard(
+                    key: ValueKey(_round),
+                    count: _real,
+                    emoji: _thing,
+                  )
+                : Column(
+                    children: [
+                      Art(_pic.art, size: 120),
+                      Text(_pic.word, style: T.l(34, color: C.ink)),
+                    ],
+                  ),
           ),
           const Spacer(),
           if (_step == _Step.judge)
@@ -194,13 +215,27 @@ class _TeachBibiState extends State<TeachBibi> {
                   color: C.leaf,
                   shadow: C.leafDeep,
                   onTap: () => _judge(true),
-                  child: const Row(mainAxisSize: MainAxisSize.min, children: [Text('👍', style: TextStyle(fontSize: 34)), SizedBox(width: 8), Text('Yes!')]),
+                  child: const Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text('👍', style: TextStyle(fontSize: 34)),
+                      SizedBox(width: 8),
+                      Text('Yes!'),
+                    ],
+                  ),
                 ),
                 Chunky(
                   color: C.berry,
                   shadow: C.berryDeep,
                   onTap: () => _judge(false),
-                  child: const Row(mainAxisSize: MainAxisSize.min, children: [Text('🙈', style: TextStyle(fontSize: 34)), SizedBox(width: 8), Text('Oops, no!')]),
+                  child: const Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text('🙈', style: TextStyle(fontSize: 34)),
+                      SizedBox(width: 8),
+                      Text('Oops, no!'),
+                    ],
+                  ),
                 ),
               ],
             )
@@ -213,9 +248,15 @@ class _TeachBibiState extends State<TeachBibi> {
                     color: C.paper,
                     shadow: C.shadow,
                     radius: 28,
-                    padding: const EdgeInsets.symmetric(horizontal: 26, vertical: 12),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 26,
+                      vertical: 12,
+                    ),
                     onTap: () => _teach(o),
-                    child: Text(_isCount ? o : '${o.toUpperCase()}$o', style: T.l(48)),
+                    child: Text(
+                      _isCount ? o : '${o.toUpperCase()}$o',
+                      style: T.l(48),
+                    ),
                   ),
               ],
             ),
@@ -242,43 +283,54 @@ class _CountBoardState extends State<_CountBoard> {
 
   @override
   Widget build(BuildContext context) => Wrap(
-        alignment: WrapAlignment.center,
-        spacing: 8,
-        runSpacing: 8,
-        children: [
-          for (var i = 0; i < widget.count; i++)
-            GestureDetector(
-              onTap: () {
-                if (_lit.contains(i)) return;
-                setState(() => _lit.add(i));
-                Sfx.pop();
-                Voice.say(numberWords[_lit.length.clamp(0, 10)]);
-              },
-              child: AnimatedContainer(
-                duration: const Duration(milliseconds: 200),
-                padding: const EdgeInsets.all(4),
-                decoration: BoxDecoration(
-                  color: _lit.contains(i) ? C.sun.withValues(alpha: .5) : Colors.transparent,
-                  shape: BoxShape.circle,
-                ),
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Text(widget.emoji, style: const TextStyle(fontSize: 48)),
-                    if (_lit.contains(i))
-                      Positioned(
-                        right: 0,
-                        top: 0,
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
-                          decoration: const BoxDecoration(color: C.berry, shape: BoxShape.circle),
-                          child: Text('${_lit.indexOf(i) + 1}', style: T.d(16, color: Colors.white)),
-                        ),
-                      ),
-                  ],
-                ),
-              ),
+    alignment: WrapAlignment.center,
+    spacing: 8,
+    runSpacing: 8,
+    children: [
+      for (var i = 0; i < widget.count; i++)
+        GestureDetector(
+          onTap: () {
+            if (_lit.contains(i)) return;
+            setState(() => _lit.add(i));
+            Sfx.pop();
+            Voice.say('${numberWordsCap[_lit.length.clamp(0, 10)]}!');
+          },
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 200),
+            padding: const EdgeInsets.all(4),
+            decoration: BoxDecoration(
+              color: _lit.contains(i)
+                  ? C.sun.withValues(alpha: .5)
+                  : Colors.transparent,
+              shape: BoxShape.circle,
             ),
-        ],
-      );
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                Art(widget.emoji, size: 54),
+                if (_lit.contains(i))
+                  Positioned(
+                    right: 0,
+                    top: 0,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 7,
+                        vertical: 2,
+                      ),
+                      decoration: const BoxDecoration(
+                        color: C.berry,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Text(
+                        '${_lit.indexOf(i) + 1}',
+                        style: T.d(16, color: Colors.white),
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+        ),
+    ],
+  );
 }

@@ -25,7 +25,12 @@ void main() {
 
   test('a letter is offered for one hug reminder only', () {
     final s = AppState();
-    final l = Letter(id: '1', from: 'Mummy', sentAt: DateTime(2026), opened: true);
+    final l = Letter(
+      id: '1',
+      from: 'Mummy',
+      sentAt: DateTime(2026),
+      opened: true,
+    );
     s.letters.add(l);
     expect(s.hugReminder, l);
     l.reminded = true;
@@ -41,7 +46,14 @@ void main() {
   });
 
   test('letters survive a save and load round trip', () {
-    final l = Letter(id: 'a', from: 'Grandma', sentAt: DateTime(2026, 9, 25), text: 'Hello!', plays: 3, hugSent: true);
+    final l = Letter(
+      id: 'a',
+      from: 'Grandma',
+      sentAt: DateTime(2026, 9, 25),
+      text: 'Hello!',
+      plays: 3,
+      hugSent: true,
+    );
     final back = Letter.fromJson(l.toJson());
     expect(back.from, 'Grandma');
     expect(back.plays, 3);

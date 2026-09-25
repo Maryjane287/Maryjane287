@@ -66,14 +66,23 @@ Done and working:
   ONE gentle hug reminder (after a game or at bedtime). Grown-up sees "Chris listened (played it 3 times)" and hugs.
   For now letters are recorded in the grown-up area on the same phone (stand-in for the family web link).
 - Bedtime: after the daily limit Bibi yawns, plays any bedtime message, "See you tomorrow!", locked until a grown-up wakes it.
-- Voice: flutter_tts speaks everything; `{name}` in a line uses the parent's recorded clip of the child's name.
-- Art: 6 Bibi poses + egg in `brainlings/assets/bibi/` (webp). Sounds are generated chimes in `assets/sfx/`.
+- Voice: Bibi has a REAL recorded voice (Higgsfield seed_audio, preset voice "Zoe"
+  d0374db1-44b9-4f05-939e-0a9ae9dbbe6a, speech_rate -8) for ~375 lines in `assets/voice/vNNN.mp3`.
+  `lib/services/voice_clips.dart` maps normalised line text to clip. Code joins recorded pieces with `|`
+  and `{name}` (parent's recording of the child's name, else phone TTS). Unknown text falls back to TTS.
+  To add a line: record it with the same voice, save as the next vNNN.mp3, regenerate voice_clips.dart.
+- Art (all Higgsfield gpt_image_2_5, soft 3D clay style): 18 Bibi poses incl. grown-up looks
+  (starry = numbers, bookish = letters, bloom = superstar) in `assets/bibi/`; 48 objects/animals/flowers in
+  `assets/art/` (also used as album stickers); 9 painted scenes in `assets/bg/` (day, dusk, night meadow,
+  orchard, garden, playroom, party, classroom, bedroom) with animated sun/clouds/butterflies/stars/fireflies on top.
+- Videos (Kling 3.0 std, 5s, 9:16, compressed to 540p ~0.4MB each) in `assets/video/`: hatch (cut scene),
+  dance (reward), letter (envelope arrives), bed (bedtime), grow (new stage celebration), wave (welcome).
 Next up: Firebase (family web link page, real letters, push), trial and billing, storybooks, decorating Bibi's home,
 seasonal days and birthday, Guess What Mummy Picked, report before trial ends, Play Store listing.
 Build: `flutter build apk --release` works in the container (Android SDK at /opt/android-sdk, Flutter at /opt/flutter,
 both installed per session). Maven Central sometimes rate-limits (429): retry. GitHub Actions workflow
 `.github/workflows/brainlings-apk.yml` also builds the APK as a downloadable artifact.
-Higgsfield credits used so far: about 3.5 (poses at medium quality, 0.5 each). Balance ~497.
+Higgsfield credits used so far: about 215 (art ~50, videos ~45, voice ~115). Check `balance` for the exact figure.
 
 ### Tech plan
 - Flutter (Android first). Firebase for accounts, storage, messages, push.

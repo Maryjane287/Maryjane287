@@ -2,7 +2,10 @@ import 'package:audioplayers/audioplayers.dart';
 
 /// Little sound effects. Several players so sounds can overlap.
 class Sfx {
-  static final _pool = List.generate(4, (_) => AudioPlayer()..setReleaseMode(ReleaseMode.stop));
+  static final _pool = List.generate(
+    4,
+    (_) => AudioPlayer()..setReleaseMode(ReleaseMode.stop),
+  );
   static int _next = 0;
 
   static Future<void> play(String name, {double volume = .8}) async {

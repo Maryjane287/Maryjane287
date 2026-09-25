@@ -32,30 +32,30 @@ class Letter {
   bool reminded;
 
   Map<String, dynamic> toJson() => {
-        'id': id,
-        'from': from,
-        'sentAt': sentAt.toIso8601String(),
-        'text': text,
-        'audioPath': audioPath,
-        'bedtime': bedtime,
-        'opened': opened,
-        'plays': plays,
-        'hugSent': hugSent,
-        'reminded': reminded,
-      };
+    'id': id,
+    'from': from,
+    'sentAt': sentAt.toIso8601String(),
+    'text': text,
+    'audioPath': audioPath,
+    'bedtime': bedtime,
+    'opened': opened,
+    'plays': plays,
+    'hugSent': hugSent,
+    'reminded': reminded,
+  };
 
   factory Letter.fromJson(Map<String, dynamic> j) => Letter(
-        id: j['id'],
-        from: j['from'],
-        sentAt: DateTime.parse(j['sentAt']),
-        text: j['text'] ?? '',
-        audioPath: j['audioPath'],
-        bedtime: j['bedtime'] ?? false,
-        opened: j['opened'] ?? false,
-        plays: j['plays'] ?? 0,
-        hugSent: j['hugSent'] ?? false,
-        reminded: j['reminded'] ?? false,
-      );
+    id: j['id'],
+    from: j['from'],
+    sentAt: DateTime.parse(j['sentAt']),
+    text: j['text'] ?? '',
+    audioPath: j['audioPath'],
+    bedtime: j['bedtime'] ?? false,
+    opened: j['opened'] ?? false,
+    plays: j['plays'] ?? 0,
+    hugSent: j['hugSent'] ?? false,
+    reminded: j['reminded'] ?? false,
+  );
 }
 
 enum Skill { numbers, letters, shapes, patterns, teaching }
@@ -93,7 +93,8 @@ class AppState extends ChangeNotifier {
   int playedSecondsToday = 0;
   String bedtimeDay = '';
 
-  String get displayName => childName.trim().isEmpty ? 'little friend' : childName.trim();
+  String get displayName =>
+      childName.trim().isEmpty ? 'little friend' : childName.trim();
 
   int get totalPoints => points.values.fold(0, (a, b) => a + b);
 
@@ -131,13 +132,16 @@ class AppState extends ChangeNotifier {
     return '${t.year}-${t.month.toString().padLeft(2, '0')}-${t.day.toString().padLeft(2, '0')}';
   }
 
-  bool get feelingDoneToday => feelings.any((f) => f.startsWith('${dayKey()}|'));
+  bool get feelingDoneToday =>
+      feelings.any((f) => f.startsWith('${dayKey()}|'));
 
   bool get asleepToday => bedtimeDay == dayKey();
 
-  bool get bedtimeDue => bedtimeMinutes > 0 && playedSecondsToday >= bedtimeMinutes * 60;
+  bool get bedtimeDue =>
+      bedtimeMinutes > 0 && playedSecondsToday >= bedtimeMinutes * 60;
 
-  List<Letter> get unopened => letters.where((l) => !l.opened && !l.bedtime).toList();
+  List<Letter> get unopened =>
+      letters.where((l) => !l.opened && !l.bedtime).toList();
 
   Letter? get bedtimeLetter {
     final l = letters.where((l) => l.bedtime && !l.opened).toList();
@@ -175,7 +179,9 @@ class AppState extends ChangeNotifier {
         }
         stickers = List<String>.from(j['stickers'] ?? []);
         feelings = List<String>.from(j['feelings'] ?? []);
-        letters = ((j['letters'] as List?) ?? []).map((e) => Letter.fromJson(Map<String, dynamic>.from(e))).toList();
+        letters = ((j['letters'] as List?) ?? [])
+            .map((e) => Letter.fromJson(Map<String, dynamic>.from(e)))
+            .toList();
         playDay = j['playDay'] ?? '';
         playedSecondsToday = j['playedSecondsToday'] ?? 0;
         bedtimeDay = j['bedtimeDay'] ?? '';

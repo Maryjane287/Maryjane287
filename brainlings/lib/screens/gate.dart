@@ -72,42 +72,68 @@ class _GateState extends State<_Gate> {
               padding: const EdgeInsets.all(16),
               child: ConstrainedBox(
                 constraints: const BoxConstraints(maxWidth: 420),
-                child: GrownCard(children: [
-                  Row(children: [
-                    const Expanded(child: Eyebrow('Grown-ups only')),
-                    IconButton(onPressed: () => Navigator.of(context).pop(false), icon: const Icon(Icons.close_rounded)),
-                  ]),
-                  Text('Quick sum to open the grown-up area', style: T.d(24)),
-                  const SizedBox(height: 16),
-                  AnimatedSlide(
-                    duration: const Duration(milliseconds: 80),
-                    offset: _shake ? const Offset(.03, 0) : Offset.zero,
-                    child: Text('$_a × $_b = ${_typed.isEmpty ? '?' : _typed}', textAlign: TextAlign.center, style: T.d(40, color: _shake ? C.berryDeep : C.ink)),
-                  ),
-                  const SizedBox(height: 16),
-                  GridView.count(
-                    crossAxisCount: 3,
-                    shrinkWrap: true,
-                    mainAxisSpacing: 10,
-                    crossAxisSpacing: 10,
-                    childAspectRatio: 1.6,
-                    physics: const NeverScrollableScrollPhysics(),
-                    children: [
-                      for (final k in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '', '0', '⌫'])
-                        k.isEmpty
-                            ? const SizedBox()
-                            : Material(
-                                color: const Color(0xFFF6F4FE),
-                                borderRadius: BorderRadius.circular(16),
-                                child: InkWell(
+                child: GrownCard(
+                  children: [
+                    Row(
+                      children: [
+                        const Expanded(child: Eyebrow('Grown-ups only')),
+                        IconButton(
+                          onPressed: () => Navigator.of(context).pop(false),
+                          icon: const Icon(Icons.close_rounded),
+                        ),
+                      ],
+                    ),
+                    Text('Quick sum to open the grown-up area', style: T.d(24)),
+                    const SizedBox(height: 16),
+                    AnimatedSlide(
+                      duration: const Duration(milliseconds: 80),
+                      offset: _shake ? const Offset(.03, 0) : Offset.zero,
+                      child: Text(
+                        '$_a × $_b = ${_typed.isEmpty ? '?' : _typed}',
+                        textAlign: TextAlign.center,
+                        style: T.d(40, color: _shake ? C.berryDeep : C.ink),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    GridView.count(
+                      crossAxisCount: 3,
+                      shrinkWrap: true,
+                      mainAxisSpacing: 10,
+                      crossAxisSpacing: 10,
+                      childAspectRatio: 1.6,
+                      physics: const NeverScrollableScrollPhysics(),
+                      children: [
+                        for (final k in [
+                          '1',
+                          '2',
+                          '3',
+                          '4',
+                          '5',
+                          '6',
+                          '7',
+                          '8',
+                          '9',
+                          '',
+                          '0',
+                          '⌫',
+                        ])
+                          k.isEmpty
+                              ? const SizedBox()
+                              : Material(
+                                  color: const Color(0xFFF6F4FE),
                                   borderRadius: BorderRadius.circular(16),
-                                  onTap: () => _key(k),
-                                  child: Center(child: Text(k, style: T.d(26))),
+                                  child: InkWell(
+                                    borderRadius: BorderRadius.circular(16),
+                                    onTap: () => _key(k),
+                                    child: Center(
+                                      child: Text(k, style: T.d(26)),
+                                    ),
+                                  ),
                                 ),
-                              ),
-                    ],
-                  ),
-                ]),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

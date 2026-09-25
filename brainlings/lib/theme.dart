@@ -26,36 +26,63 @@ class T {
   static const letters = 'Andika';
   static const body = 'Nunito';
 
-  static TextStyle d(double size, {Color color = C.ink, FontWeight w = FontWeight.w800}) =>
-      TextStyle(fontFamily: display, fontSize: size, fontWeight: w, color: color, height: 1.15);
+  static TextStyle d(
+    double size, {
+    Color color = C.ink,
+    FontWeight w = FontWeight.w800,
+  }) => TextStyle(
+    fontFamily: display,
+    fontSize: size,
+    fontWeight: w,
+    color: color,
+    height: 1.15,
+  );
 
-  static TextStyle b(double size, {Color color = C.ink, FontWeight w = FontWeight.w600}) =>
-      TextStyle(fontFamily: body, fontSize: size, fontWeight: w, color: color, height: 1.35);
+  static TextStyle b(
+    double size, {
+    Color color = C.ink,
+    FontWeight w = FontWeight.w600,
+  }) => TextStyle(
+    fontFamily: body,
+    fontSize: size,
+    fontWeight: w,
+    color: color,
+    height: 1.35,
+  );
 
-  static TextStyle l(double size, {Color color = C.berryDeep}) =>
-      TextStyle(fontFamily: letters, fontSize: size, fontWeight: FontWeight.w700, color: color, height: 1);
+  static TextStyle l(double size, {Color color = C.berryDeep}) => TextStyle(
+    fontFamily: letters,
+    fontSize: size,
+    fontWeight: FontWeight.w700,
+    color: color,
+    height: 1,
+  );
 }
 
 ThemeData buildTheme() => ThemeData(
-      useMaterial3: true,
-      fontFamily: T.body,
-      colorScheme: ColorScheme.fromSeed(seedColor: C.berry, primary: C.berryDeep, surface: C.paper),
-      scaffoldBackgroundColor: C.sky,
-      inputDecorationTheme: InputDecorationTheme(
-        filled: true,
-        fillColor: const Color(0xFFFBFAFF),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(16),
-          borderSide: const BorderSide(color: Color(0xFFE3DEF5), width: 2),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(16),
-          borderSide: const BorderSide(color: Color(0xFFE3DEF5), width: 2),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(16),
-          borderSide: const BorderSide(color: C.berry, width: 3),
-        ),
-      ),
-    );
+  useMaterial3: true,
+  fontFamily: T.body,
+  colorScheme: ColorScheme.fromSeed(
+    seedColor: C.berry,
+    primary: C.berryDeep,
+    surface: C.paper,
+  ),
+  scaffoldBackgroundColor: C.sky,
+  inputDecorationTheme: InputDecorationTheme(
+    filled: true,
+    fillColor: const Color(0xFFFBFAFF),
+    contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+    border: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(16),
+      borderSide: const BorderSide(color: Color(0xFFE3DEF5), width: 2),
+    ),
+    enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(16),
+      borderSide: const BorderSide(color: Color(0xFFE3DEF5), width: 2),
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(16),
+      borderSide: const BorderSide(color: C.berry, width: 3),
+    ),
+  ),
+);

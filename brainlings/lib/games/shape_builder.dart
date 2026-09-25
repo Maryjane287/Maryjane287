@@ -9,6 +9,7 @@ import '../theme.dart';
 import '../widgets/bibi.dart';
 import '../widgets/game_frame.dart';
 import '../widgets/ui.dart';
+import 'letter_garden.dart';
 
 enum Shape { square, triangle, rectangle, circle, star, heart, diamond, oval }
 
@@ -22,11 +23,36 @@ class _Piece {
 }
 
 const _house = [
-  _Piece(Shape.square, Color(0xFFFFB26B), Rect.fromLTWH(22, 46, 50, 46), 'the walls'),
-  _Piece(Shape.triangle, Color(0xFFFF5C8A), Rect.fromLTWH(16, 18, 62, 30), 'the roof'),
-  _Piece(Shape.rectangle, Color(0xFF7D5FD6), Rect.fromLTWH(40, 66, 15, 26), 'the door'),
-  _Piece(Shape.circle, Color(0xFFFFD233), Rect.fromLTWH(78, 4, 18, 18), 'the sun'),
-  _Piece(Shape.star, Color(0xFFFFD233), Rect.fromLTWH(4, 2, 14, 14), 'a twinkly star'),
+  _Piece(
+    Shape.square,
+    Color(0xFFFFB26B),
+    Rect.fromLTWH(22, 46, 50, 46),
+    'Find the square for the walls!',
+  ),
+  _Piece(
+    Shape.triangle,
+    Color(0xFFFF5C8A),
+    Rect.fromLTWH(16, 18, 62, 30),
+    'Now find the triangle for the roof!',
+  ),
+  _Piece(
+    Shape.rectangle,
+    Color(0xFF7D5FD6),
+    Rect.fromLTWH(40, 66, 15, 26),
+    'Now find the rectangle for the door!',
+  ),
+  _Piece(
+    Shape.circle,
+    Color(0xFFFFD233),
+    Rect.fromLTWH(78, 4, 18, 18),
+    'Now find the circle for the sun!',
+  ),
+  _Piece(
+    Shape.star,
+    Color(0xFFFFD233),
+    Rect.fromLTWH(4, 2, 14, 14),
+    'Now find the star for the sky!',
+  ),
 ];
 
 /// Shape Builder: find the right shape and it flies into a picture.
@@ -57,13 +83,12 @@ class _ShapeBuilderState extends State<ShapeBuilder> {
   }
 
   void _newRound() {
-    final others = Shape.values.where((s) => s != _piece.shape).toList()..shuffle(_r);
+    final others = Shape.values.where((s) => s != _piece.shape).toList()
+      ..shuffle(_r);
     _choices = [_piece.shape, others[0], others[1]]..shuffle(_r);
     _wrong = null;
     _mood = Mood.happy;
-    _line = _round == 0
-        ? 'Let\'s build a house! First, find the ${_piece.shape.name} for ${_piece.job}.'
-        : 'Now find the ${_piece.shape.name} for ${_piece.job}!';
+    _line = _round == 0 ? 'Let\'s build a house!|${_piece.job}' : _piece.job;
     setState(() {});
     Voice.say(_line);
   }
@@ -77,7 +102,7 @@ class _ShapeBuilderState extends State<ShapeBuilder> {
       setState(() {
         _mood = Mood.cheer;
         _bounce++;
-        _line = '${yayLine(_r)} A ${s.name}!';
+        _line = '${yayLine(_r)}|${s == Shape.oval ? 'An' : 'A'} ${s.name}!';
         _round++;
       });
       await Voice.say(_line);
@@ -93,9 +118,9 @@ class _ShapeBuilderState extends State<ShapeBuilder> {
       Sfx.tryAgain();
       setState(() {
         _wrong = s;
-        _mood = Mood.puzzled;
+        _mood = Mood.think;
         _wobble++;
-        _line = 'That\'s a ${s.name}! Can you find the ${_piece.shape.name}?';
+        _line = '${thatsA(s.name)}|Can you find the ${_piece.shape.name}?';
       });
       await Voice.say(_line);
       if (mounted) setState(() => _mood = Mood.happy);
@@ -106,6 +131,7 @@ class _ShapeBuilderState extends State<ShapeBuilder> {
   @override
   Widget build(BuildContext context) {
     return GameFrame(
+      scene: 'playroom',
       round: _round,
       total: _house.length,
       line: _line,
@@ -122,44 +148,76 @@ class _ShapeBuilderState extends State<ShapeBuilder> {
                 borderRadius: BorderRadius.circular(28),
                 border: Border.all(color: Colors.white, width: 4),
               ),
-              child: LayoutBuilder(builder: (context, box) {
-                final side = min(box.maxWidth, box.maxHeight) * .92;
-                final k = side / 100;
-                return Center(
-                  child: SizedBox(
-                    width: side,
-                    height: side,
-                    child: Stack(
-                      children: [
-                        for (var i = 0; i < _house.length; i++)
-                          if (i < _round)
-                            Positioned.fromRect(
-                              rect: Rect.fromLTWH(_house[i].rect.left * k, _house[i].rect.top * k, _house[i].rect.width * k, _house[i].rect.height * k),
-                              child: TweenAnimationBuilder<double>(
-                                tween: Tween(begin: 0, end: 1),
-                                duration: const Duration(milliseconds: 800),
-                                curve: Curves.elasticOut,
-                                builder: (_, v, c) => Transform.scale(scale: v, child: c),
-                                child: CustomPaint(painter: ShapePainter(_house[i].shape, _house[i].color)),
+              child: LayoutBuilder(
+                builder: (context, box) {
+                  final side = min(box.maxWidth, box.maxHeight) * .92;
+                  final k = side / 100;
+                  return Center(
+                    child: SizedBox(
+                      width: side,
+                      height: side,
+                      child: Stack(
+                        children: [
+                          for (var i = 0; i < _house.length; i++)
+                            if (i < _round)
+                              Positioned.fromRect(
+                                rect: Rect.fromLTWH(
+                                  _house[i].rect.left * k,
+                                  _house[i].rect.top * k,
+                                  _house[i].rect.width * k,
+                                  _house[i].rect.height * k,
+                                ),
+                                child: TweenAnimationBuilder<double>(
+                                  tween: Tween(begin: 0, end: 1),
+                                  duration: const Duration(milliseconds: 800),
+                                  curve: Curves.elasticOut,
+                                  builder: (_, v, c) =>
+                                      Transform.scale(scale: v, child: c),
+                                  child: CustomPaint(
+                                    painter: ShapePainter(
+                                      _house[i].shape,
+                                      _house[i].color,
+                                    ),
+                                  ),
+                                ),
+                              )
+                            else if (i == _round)
+                              Positioned.fromRect(
+                                rect: Rect.fromLTWH(
+                                  _house[i].rect.left * k,
+                                  _house[i].rect.top * k,
+                                  _house[i].rect.width * k,
+                                  _house[i].rect.height * k,
+                                ),
+                                child: _Pulse(
+                                  child: CustomPaint(
+                                    painter: ShapePainter(
+                                      _house[i].shape,
+                                      C.ink.withValues(alpha: .12),
+                                      outline: true,
+                                    ),
+                                  ),
+                                ),
                               ),
-                            )
-                          else if (i == _round)
-                            Positioned.fromRect(
-                              rect: Rect.fromLTWH(_house[i].rect.left * k, _house[i].rect.top * k, _house[i].rect.width * k, _house[i].rect.height * k),
-                              child: _Pulse(child: CustomPaint(painter: ShapePainter(_house[i].shape, C.ink.withValues(alpha: .12), outline: true))),
+                          // grass line
+                          Positioned(
+                            left: 0,
+                            right: 0,
+                            top: 92 * k,
+                            child: Container(
+                              height: 6 * k,
+                              decoration: BoxDecoration(
+                                color: C.leaf,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
                             ),
-                        // grass line
-                        Positioned(
-                          left: 0,
-                          right: 0,
-                          top: 92 * k,
-                          child: Container(height: 6 * k, decoration: BoxDecoration(color: C.leaf, borderRadius: BorderRadius.circular(10))),
-                        ),
-                      ],
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                );
-              }),
+                  );
+                },
+              ),
             ),
           ),
           const SizedBox(height: 16),
@@ -180,7 +238,12 @@ class _ShapeBuilderState extends State<ShapeBuilder> {
                       child: SizedBox(
                         width: 64,
                         height: 64,
-                        child: CustomPaint(painter: ShapePainter(s, s == _piece.shape ? _piece.color : _decoy(s))),
+                        child: CustomPaint(
+                          painter: ShapePainter(
+                            s,
+                            s == _piece.shape ? _piece.color : _decoy(s),
+                          ),
+                        ),
                       ),
                     ),
                   ),
@@ -193,7 +256,16 @@ class _ShapeBuilderState extends State<ShapeBuilder> {
   }
 
   // Decoys are colourful too, so colour never gives the answer away.
-  Color _decoy(Shape s) => const [C.aqua, C.lilac, C.peach, C.berry, C.sun, C.leaf, C.sky, C.lilacDeep][s.index];
+  Color _decoy(Shape s) => const [
+    C.aqua,
+    C.lilac,
+    C.peach,
+    C.berry,
+    C.sun,
+    C.leaf,
+    C.sky,
+    C.lilacDeep,
+  ][s.index];
 }
 
 class _Pulse extends StatefulWidget {
@@ -205,7 +277,10 @@ class _Pulse extends StatefulWidget {
 }
 
 class _PulseState extends State<_Pulse> with SingleTickerProviderStateMixin {
-  late final _c = AnimationController(vsync: this, duration: const Duration(milliseconds: 1100))..repeat(reverse: true);
+  late final _c = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 1100),
+  )..repeat(reverse: true);
 
   @override
   void dispose() {
@@ -214,7 +289,10 @@ class _PulseState extends State<_Pulse> with SingleTickerProviderStateMixin {
   }
 
   @override
-  Widget build(BuildContext context) => FadeTransition(opacity: Tween(begin: .4, end: 1.0).animate(_c), child: widget.child);
+  Widget build(BuildContext context) => FadeTransition(
+    opacity: Tween(begin: .4, end: 1.0).animate(_c),
+    child: widget.child,
+  );
 }
 
 class ShapePainter extends CustomPainter {
@@ -231,10 +309,24 @@ class ShapePainter extends CustomPainter {
     switch (shape) {
       case Shape.square:
         final side = min(w, h);
-        p.addRRect(RRect.fromRectAndRadius(Rect.fromCenter(center: Offset(w / 2, h / 2), width: side, height: side), Radius.circular(side * .08)));
+        p.addRRect(
+          RRect.fromRectAndRadius(
+            Rect.fromCenter(
+              center: Offset(w / 2, h / 2),
+              width: side,
+              height: side,
+            ),
+            Radius.circular(side * .08),
+          ),
+        );
       case Shape.rectangle:
         final rw = w == h ? w * .56 : w;
-        p.addRRect(RRect.fromRectAndRadius(Rect.fromCenter(center: Offset(w / 2, h / 2), width: rw, height: h), Radius.circular(rw * .12)));
+        p.addRRect(
+          RRect.fromRectAndRadius(
+            Rect.fromCenter(center: Offset(w / 2, h / 2), width: rw, height: h),
+            Radius.circular(rw * .12),
+          ),
+        );
       case Shape.triangle:
         p
           ..moveTo(w / 2, 0)
@@ -242,9 +334,17 @@ class ShapePainter extends CustomPainter {
           ..lineTo(0, h)
           ..close();
       case Shape.circle:
-        p.addOval(Rect.fromCircle(center: Offset(w / 2, h / 2), radius: min(w, h) / 2));
+        p.addOval(
+          Rect.fromCircle(center: Offset(w / 2, h / 2), radius: min(w, h) / 2),
+        );
       case Shape.oval:
-        p.addOval(Rect.fromCenter(center: Offset(w / 2, h / 2), width: w, height: h * .62));
+        p.addOval(
+          Rect.fromCenter(
+            center: Offset(w / 2, h / 2),
+            width: w,
+            height: h * .62,
+          ),
+        );
       case Shape.diamond:
         p
           ..moveTo(w / 2, 0)
@@ -257,7 +357,9 @@ class ShapePainter extends CustomPainter {
         for (var i = 0; i < 10; i++) {
           final a = -pi / 2 + i * pi / 5;
           final rr = i.isEven ? r : ri;
-          i == 0 ? p.moveTo(cx + cos(a) * rr, cy + sin(a) * rr) : p.lineTo(cx + cos(a) * rr, cy + sin(a) * rr);
+          i == 0
+              ? p.moveTo(cx + cos(a) * rr, cy + sin(a) * rr)
+              : p.lineTo(cx + cos(a) * rr, cy + sin(a) * rr);
         }
         p.close();
       case Shape.heart:
@@ -269,20 +371,30 @@ class ShapePainter extends CustomPainter {
     }
     if (outline) {
       c.drawPath(p, Paint()..color = color);
-      c.drawPath(p, Paint()
-        ..color = C.ink.withValues(alpha: .35)
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 3);
+      c.drawPath(
+        p,
+        Paint()
+          ..color = C.ink.withValues(alpha: .35)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 3,
+      );
     } else {
-      c.drawPath(p.shift(const Offset(0, 4)), Paint()..color = Colors.black.withValues(alpha: .12));
+      c.drawPath(
+        p.shift(const Offset(0, 4)),
+        Paint()..color = Colors.black.withValues(alpha: .12),
+      );
       c.drawPath(p, Paint()..color = color);
-      c.drawPath(p, Paint()
-        ..color = Colors.white.withValues(alpha: .35)
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 3);
+      c.drawPath(
+        p,
+        Paint()
+          ..color = Colors.white.withValues(alpha: .35)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 3,
+      );
     }
   }
 
   @override
-  bool shouldRepaint(ShapePainter old) => old.shape != shape || old.color != color || old.outline != outline;
+  bool shouldRepaint(ShapePainter old) =>
+      old.shape != shape || old.color != color || old.outline != outline;
 }

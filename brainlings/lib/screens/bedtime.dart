@@ -7,6 +7,7 @@ import '../services/sfx.dart';
 import '../services/voice.dart';
 import '../state.dart';
 import '../theme.dart';
+import '../widgets/art.dart';
 import '../widgets/bibi.dart';
 import '../widgets/sky.dart';
 import '../widgets/ui.dart';
@@ -22,8 +23,12 @@ class BedtimeScreen extends StatefulWidget {
   State<BedtimeScreen> createState() => _BedtimeScreenState();
 }
 
-class _BedtimeScreenState extends State<BedtimeScreen> with SingleTickerProviderStateMixin {
-  late final _zz = AnimationController(vsync: this, duration: const Duration(seconds: 3))..repeat();
+class _BedtimeScreenState extends State<BedtimeScreen>
+    with SingleTickerProviderStateMixin {
+  late final _zz = AnimationController(
+    vsync: this,
+    duration: const Duration(seconds: 3),
+  )..repeat();
   String _line = '';
   Letter? _hugAsk;
   bool _asleep = false;
@@ -34,7 +39,9 @@ class _BedtimeScreenState extends State<BedtimeScreen> with SingleTickerProvider
     super.initState();
     final alreadyAsleep = app.asleepToday;
     app.goToSleep();
-    WidgetsBinding.instance.addPostFrameCallback((_) => alreadyAsleep ? _sleep(quiet: true) : _run());
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) => alreadyAsleep ? _sleep(quiet: true) : _run(),
+    );
   }
 
   @override
@@ -51,14 +58,16 @@ class _BedtimeScreenState extends State<BedtimeScreen> with SingleTickerProvider
 
   Future<void> _run() async {
     Sfx.yawn();
-    await _say('Yaaawn... I\'m getting sooo sleepy, {name}.');
+    await _say('Yaaawn... I\'m getting sooo sleepy.');
     // One gentle reminder, only once per letter.
     final remind = app.hugReminder;
     if (remind != null && mounted) {
       remind.reminded = true;
       app.save();
       setState(() => _hugAsk = remind);
-      await _say('Before I sleep... ${remind.from} would love a hug back. Shall we send one?');
+      await _say(
+        'Before I sleep...|${remind.from} would love a hug back. Shall we send one?',
+      );
       return; // continues from the buttons
     }
     await _afterHug();
@@ -73,7 +82,7 @@ class _BedtimeScreenState extends State<BedtimeScreen> with SingleTickerProvider
       Sfx.hug();
       celebrate(context, count: 22, hearts: true);
       setState(() => _bounce++);
-      await _say('Whoosh! Your hug is on its way to ${l.from}.');
+      await _say(Voice.pick('Whoosh! Your hug is flying to ${l.from}!', 'Whoosh! Your hug is on its way!'));
     }
     await _afterHug();
   }
@@ -81,7 +90,7 @@ class _BedtimeScreenState extends State<BedtimeScreen> with SingleTickerProvider
   Future<void> _afterHug() async {
     final bed = app.bedtimeLetter;
     if (bed != null && mounted) {
-      await _say('Ooh! ${bed.from} left you a special bedtime message.');
+      await _say('${bed.from} left you a special bedtime message.');
       bed.opened = true;
       bed.plays++;
       app.save();
@@ -92,7 +101,9 @@ class _BedtimeScreenState extends State<BedtimeScreen> with SingleTickerProvider
         await Voice.say(bed.text);
       }
     }
-    await _say('Night night, {name}. Thank you for playing with me. See you tomorrow!');
+    await _say(
+      'Night night!|{name}!|Thank you for playing with me. See you tomorrow!',
+    );
     _sleep();
   }
 
@@ -100,14 +111,16 @@ class _BedtimeScreenState extends State<BedtimeScreen> with SingleTickerProvider
     if (!mounted) return;
     setState(() {
       _asleep = true;
-      if (quiet) _line = 'Shhh... I\'m sleeping. See you tomorrow, {name}!';
+      if (quiet) _line = 'Shhh... I\'m sleeping. See you tomorrow!';
     });
   }
 
   Future<void> _wake() async {
     if (!await grownUpGate(context)) return;
     app.wakeUp();
-    if (mounted) Navigator.of(context).pushReplacement(softRoute(const HomeScreen()));
+    if (mounted) {
+      Navigator.of(context).pushReplacement(softRoute(const HomeScreen()));
+    }
   }
 
   @override
@@ -115,6 +128,7 @@ class _BedtimeScreenState extends State<BedtimeScreen> with SingleTickerProvider
     return Scaffold(
       body: Meadow(
         forceTime: SkyTime.night,
+        scene: 'bedroom',
         child: SafeArea(
           child: Stack(
             children: [
@@ -123,7 +137,11 @@ class _BedtimeScreenState extends State<BedtimeScreen> with SingleTickerProvider
                 right: 16,
                 child: Opacity(
                   opacity: .7,
-                  child: RoundIcon(icon: Icons.lock_rounded, label: 'Grown-ups', onTap: _wake),
+                  child: RoundIcon(
+                    icon: Icons.lock_rounded,
+                    label: 'Grown-ups',
+                    onTap: _wake,
+                  ),
                 ),
               ),
               Center(
@@ -137,11 +155,28 @@ class _BedtimeScreenState extends State<BedtimeScreen> with SingleTickerProvider
                       Stack(
                         clipBehavior: Clip.none,
                         children: [
-                          Bibi(
-                            mood: _hugAsk != null ? Mood.happy : Mood.sleepy,
-                            size: 250,
-                            bounce: _bounce,
-                            onTap: () => _asleep ? Voice.say('Shhh... I\'m dreaming about you, {name}.') : null,
+                          GestureDetector(
+                            onTap: () => _asleep
+                                ? Voice.say('Shhh... I\'m dreaming about you.')
+                                : null,
+                            child: _hugAsk != null
+                                ? Bibi(
+                                    mood: Mood.letter,
+                                    size: 230,
+                                    bounce: _bounce,
+                                  )
+                                : SizedBox(
+                                    height: 380,
+                                    child: Scene(
+                                      'bed',
+                                      radius: 32,
+                                      placeholder: Bibi(
+                                        mood: Mood.sleepy,
+                                        size: 230,
+                                        bounce: _bounce,
+                                      ),
+                                    ),
+                                  ),
                           ),
                           if (_asleep)
                             for (var i = 0; i < 3; i++)
@@ -154,7 +189,13 @@ class _BedtimeScreenState extends State<BedtimeScreen> with SingleTickerProvider
                                     top: 40 - t * 90,
                                     child: Opacity(
                                       opacity: sin(t * pi),
-                                      child: Text('z', style: T.d(26 + i * 8.0, color: Colors.white)),
+                                      child: Text(
+                                        'z',
+                                        style: T.d(
+                                          26 + i * 8.0,
+                                          color: Colors.white,
+                                        ),
+                                      ),
                                     ),
                                   );
                                 },
@@ -172,13 +213,21 @@ class _BedtimeScreenState extends State<BedtimeScreen> with SingleTickerProvider
                               color: C.berry,
                               shadow: C.berryDeep,
                               onTap: () => _answerHug(true),
-                              child: const Row(mainAxisSize: MainAxisSize.min, children: [
-                                Text('🤗', style: TextStyle(fontSize: 30)),
-                                SizedBox(width: 8),
-                                Text('Send a hug'),
-                              ]),
+                              child: const Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Art('heart', size: 34),
+                                  SizedBox(width: 8),
+                                  Text('Send a hug'),
+                                ],
+                              ),
                             ),
-                            Chunky(color: C.paper, shadow: C.shadow, onTap: () => _answerHug(false), child: const Text('Not tonight')),
+                            Chunky(
+                              color: C.paper,
+                              shadow: C.shadow,
+                              onTap: () => _answerHug(false),
+                              child: const Text('Not tonight'),
+                            ),
                           ],
                         ),
                     ],
