@@ -2,13 +2,13 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-import '../services/sfx.dart';
 import '../services/voice.dart';
 import '../state.dart';
 import '../theme.dart';
 import '../widgets/art.dart';
 import '../widgets/bibi.dart';
 import '../widgets/game_frame.dart';
+import '../widgets/juice.dart';
 import '../widgets/ui.dart';
 
 /// Pattern Party: what comes next in the party line?
@@ -80,27 +80,28 @@ class _PatternPartyState extends State<PatternParty> {
     if (_busy) return;
     _busy = true;
     if (t == _answer) {
-      Sfx.correct();
       app.learned(Skill.patterns);
+      final cheer = Juice.correct(context);
       setState(() {
         _solved = true;
         _mood = Mood.dance;
         _bounce++;
         _round++;
-        _line = '${yayLine(_r)}|Let\'s party!';
+        _line = '$cheer|Let\'s party!';
       });
-      celebrate(context, count: 25);
+      celebrate(context, count: 40);
       await Voice.say(_line);
       if (!mounted) return;
       if (_round >= rounds) {
         finishGame(context, Skill.patterns, 'Pattern Party');
       } else {
-        _newRound();
+        if (_round == 3) await danceBreak(context);
+        if (mounted) _newRound();
       }
     } else {
-      Sfx.tryAgain();
+      Juice.oops();
       setState(() {
-        _mood = Mood.think;
+        _mood = Mood.laugh;
         _wobble++;
         _line =
             'Hmm, let\'s sing the pattern together!|${_row.map((e) => '${e.$2}.').join('|')}|What comes next?';
@@ -114,6 +115,7 @@ class _PatternPartyState extends State<PatternParty> {
   @override
   Widget build(BuildContext context) {
     return GameFrame(
+      host: 'lulu',
       scene: 'party',
       round: _round,
       total: rounds,

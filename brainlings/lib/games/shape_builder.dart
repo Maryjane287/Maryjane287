@@ -8,6 +8,7 @@ import '../state.dart';
 import '../theme.dart';
 import '../widgets/bibi.dart';
 import '../widgets/game_frame.dart';
+import '../widgets/juice.dart';
 import '../widgets/ui.dart';
 import 'letter_garden.dart';
 
@@ -97,30 +98,34 @@ class _ShapeBuilderState extends State<ShapeBuilder> {
     if (_busy) return;
     _busy = true;
     if (s == _piece.shape) {
-      Sfx.correct();
       app.learned(Skill.shapes);
+      final cheer = Juice.correct(context);
+      Sfx.whoosh();
       setState(() {
-        _mood = Mood.cheer;
+        _mood = Mood.dance;
         _bounce++;
-        _line = '${yayLine(_r)}|${s == Shape.oval ? 'An' : 'A'} ${s.name}!';
+        _line = '$cheer|${s == Shape.oval ? 'An' : 'A'} ${s.name}!';
         _round++;
       });
       await Voice.say(_line);
       if (!mounted) return;
       if (_round >= _house.length) {
+        Sfx.tada();
+        celebrate(context, count: 100);
         setState(() => _line = 'Look! We built a whole house together!');
         await Voice.say(_line);
         if (mounted) finishGame(context, Skill.shapes, 'Shape Builder');
       } else {
-        _newRound();
+        if (_round == 3) await danceBreak(context);
+        if (mounted) _newRound();
       }
     } else {
-      Sfx.tryAgain();
+      final oops = Juice.oops();
       setState(() {
         _wrong = s;
-        _mood = Mood.think;
+        _mood = Mood.laugh;
         _wobble++;
-        _line = '${thatsA(s.name)}|Can you find the ${_piece.shape.name}?';
+        _line = '${thatsA(s.name)}|$oops';
       });
       await Voice.say(_line);
       if (mounted) setState(() => _mood = Mood.happy);
@@ -131,6 +136,7 @@ class _ShapeBuilderState extends State<ShapeBuilder> {
   @override
   Widget build(BuildContext context) {
     return GameFrame(
+      host: 'tiko',
       scene: 'playroom',
       round: _round,
       total: _house.length,

@@ -3,6 +3,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../services/music.dart';
 import '../services/sfx.dart';
 import '../services/voice.dart';
 import '../state.dart';
@@ -39,6 +40,7 @@ class _BedtimeScreenState extends State<BedtimeScreen>
     super.initState();
     final alreadyAsleep = app.asleepToday;
     app.goToSleep();
+    Music.play('lullaby');
     WidgetsBinding.instance.addPostFrameCallback(
       (_) => alreadyAsleep ? _sleep(quiet: true) : _run(),
     );

@@ -74,6 +74,12 @@ class AppState extends ChangeNotifier {
   String? nameClipPath; // the grown-up saying the child's name
   List<String> circle = ['Mummy'];
   int bedtimeMinutes = 20;
+  bool musicOn = true;
+
+  /// Where the grown-up's voice starts and stops inside the name recording,
+  /// so the name plays straight away with no silence around it.
+  int? nameClipStartMs;
+  int? nameClipEndMs;
 
   // Creature
   bool hatched = false;
@@ -84,6 +90,10 @@ class AppState extends ChangeNotifier {
   Map<Skill, int> points = {for (final s in Skill.values) s: 0};
   List<String> stickers = [];
   List<String> feelings = []; // "2026-09-25|happy"
+
+  // Bibi's friends who have moved into the meadow
+  List<String> friendsMet = [];
+  String lastFriendDay = '';
 
   // Family
   List<Letter> letters = [];
@@ -170,6 +180,9 @@ class AppState extends ChangeNotifier {
         nameClipPath = j['nameClipPath'];
         circle = List<String>.from(j['circle'] ?? ['Mummy']);
         bedtimeMinutes = j['bedtimeMinutes'] ?? 20;
+        musicOn = j['musicOn'] ?? true;
+        nameClipStartMs = j['nameClipStartMs'];
+        nameClipEndMs = j['nameClipEndMs'];
         hatched = j['hatched'] ?? false;
         creatureName = j['creatureName'] ?? 'Bibi';
         stars = j['stars'] ?? 0;
@@ -179,6 +192,8 @@ class AppState extends ChangeNotifier {
         }
         stickers = List<String>.from(j['stickers'] ?? []);
         feelings = List<String>.from(j['feelings'] ?? []);
+        friendsMet = List<String>.from(j['friendsMet'] ?? []);
+        lastFriendDay = j['lastFriendDay'] ?? '';
         letters = ((j['letters'] as List?) ?? [])
             .map((e) => Letter.fromJson(Map<String, dynamic>.from(e)))
             .toList();
@@ -203,12 +218,17 @@ class AppState extends ChangeNotifier {
         'nameClipPath': nameClipPath,
         'circle': circle,
         'bedtimeMinutes': bedtimeMinutes,
+        'musicOn': musicOn,
+        'nameClipStartMs': nameClipStartMs,
+        'nameClipEndMs': nameClipEndMs,
         'hatched': hatched,
         'creatureName': creatureName,
         'stars': stars,
         'points': {for (final e in points.entries) e.key.name: e.value},
         'stickers': stickers,
         'feelings': feelings,
+        'friendsMet': friendsMet,
+        'lastFriendDay': lastFriendDay,
         'letters': letters.map((l) => l.toJson()).toList(),
         'playDay': playDay,
         'playedSecondsToday': playedSecondsToday,

@@ -12,7 +12,7 @@ import '../widgets/sky.dart';
 import '../widgets/ui.dart';
 import 'home.dart';
 
-const creatureNames = ['Bibi', 'Pip', 'Mochi', 'Sunny', 'Bean', 'Coco'];
+const creatureNames = ['Bibi', 'Mochi', 'Sunny', 'Bean', 'Coco'];
 
 /// Tap the egg to wake it up. Five taps, and out pops the creature.
 class HatchScreen extends StatefulWidget {

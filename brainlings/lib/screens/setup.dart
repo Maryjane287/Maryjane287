@@ -209,6 +209,11 @@ class _SetupScreenState extends State<SetupScreen> {
                       const SizedBox(height: 14),
                       VoiceRecorder(
                         fileName: 'child-name',
+                        onTrimmed: (a, b) {
+                          app.nameClipStartMs = a;
+                          app.nameClipEndMs = b;
+                          app.save();
+                        },
                         existing: app.nameClipPath,
                         maxSeconds: 5,
                         onSaved: (p) => setState(() => app.nameClipPath = p),

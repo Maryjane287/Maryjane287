@@ -9,9 +9,12 @@ import '../theme.dart';
 import '../widgets/art.dart';
 import '../widgets/bibi.dart';
 import '../widgets/game_frame.dart';
-import '../widgets/ui.dart';
+import '../widgets/juice.dart';
 
-/// Feeding Time: pick exactly the right number of fruits for a hungry creature.
+/// Feeding Time.
+/// Feed rounds: tap fruit and it flies into Bibi's mouth, counted out loud,
+/// until Bibi has exactly the number asked for.
+/// Watch rounds: Bibi gobbles some fruit and the child says how many.
 class FeedingTime extends StatefulWidget {
   const FeedingTime({super.key});
 
@@ -29,242 +32,322 @@ class _FeedingTimeState extends State<FeedingTime> {
     ('cookie', 'cookie', 'cookies'),
     ('orange', 'orange', 'oranges'),
   ];
+  static const _munch = ['Mmm!', 'Yum!', 'Crunchy!', 'Delicious!'];
+
   final _r = Random();
+  final _mouthKey = GlobalKey();
+  late List<GlobalKey> _fruitKeys;
+
   int _round = 0;
   late int _target;
   late (String, String, String) _fruit;
-  late List<bool> _inBowl;
+  late List<bool> _eaten;
+  int _count = 0;
+  bool _watchRound = false;
+  List<int>? _choices; // numbers to pick from in a watch round
+  bool _reveal = false; // show what was eaten after a wrong guess
   String _line = '';
   Mood _mood = Mood.hungry;
   int _bounce = 0, _wobble = 0;
   bool _busy = false;
+  int _pop = 0; // makes the big number pop each time
 
   int get _max => app.age <= 4 ? 5 : (app.age == 5 ? 7 : 10);
-  int get _count => _inBowl.where((b) => b).length;
-  String get _ask =>
-      'Can you give me ${numberWords[_target]} ${_target == 1 ? _fruit.$2 : _fruit.$3}, please?';
+  String get _ask => 'Can you give me ${numberWords[_target]} ${_target == 1 ? _fruit.$2 : _fruit.$3}, please?';
 
   @override
   void initState() {
     super.initState();
-    _newRound();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _newRound());
   }
 
-  void _newRound() {
-    _target = 1 + _r.nextInt(_max);
+  Future<void> _newRound() async {
+    _watchRound = _round == 2 || _round == 4;
+    _target = 1 + _r.nextInt(_watchRound ? min(_max, 6) : _max);
+    if (_watchRound && _target < 2) _target = 2;
     _fruit = fruits[_r.nextInt(fruits.length)];
-    _inBowl = List.filled(min(_target + 3, 10), false);
+    final shown = min(_target + (_watchRound ? 1 : 3), 10);
+    _eaten = List.filled(shown, false);
+    _fruitKeys = List.generate(shown, (_) => GlobalKey());
+    _count = 0;
+    _choices = null;
+    _reveal = false;
+    _busy = false;
     _mood = Mood.hungry;
-    _line = _round == 0 ? 'My tummy is rumbling!|$_ask' : _ask;
+    if (!_watchRound) {
+      _line = _round == 0 ? 'My tummy is rumbling!|$_ask' : _ask;
+      setState(() {});
+      Voice.say(_line);
+      return;
+    }
+    // Watch round: Bibi eats, the child counts.
+    _busy = true;
+    _line = 'Watch me eat! Count with me!';
     setState(() {});
+    await Voice.say(_line);
+    await Future.delayed(const Duration(milliseconds: 300));
+    for (var i = 0; i < _target && mounted; i++) {
+      await _fly(i, auto: true);
+      await Future.delayed(const Duration(milliseconds: 650));
+    }
+    if (!mounted) return;
+    final opts = {_target, _target + 1, max(1, _target - 1)}.toList()..shuffle(_r);
+    if (opts.length < 3) opts.add(_target + 2);
+    setState(() {
+      _choices = opts;
+      _mood = Mood.think;
+      _line = 'How many did I eat?';
+      _busy = false;
+    });
     Voice.say(_line);
   }
 
-  void _toggle(int i) {
-    if (_busy) return;
-    setState(() => _inBowl[i] = !_inBowl[i]);
-    Sfx.pop();
-    Voice.say('${numberWordsCap[_count]}!');
-  }
-
-  Future<void> _feed() async {
-    if (_busy) return;
-    _busy = true;
-    if (_count == _target) {
-      Sfx.chomp();
-      setState(() {
-        _mood = Mood.munch;
-        _bounce++;
-        _line = '${yayLine(_r)}|${numberWordsCap[_target]}!|Nom nom nom!';
-        for (var i = 0; i < _inBowl.length; i++) {
-          _inBowl[i] = false;
-        }
-      });
-      app.learned(Skill.numbers);
-      await Future.delayed(const Duration(milliseconds: 400));
-      Sfx.correct();
-      await Voice.say(_line);
-      if (!mounted) return;
-      setState(() => _mood = Mood.cheer);
-      await Future.delayed(const Duration(milliseconds: 500));
-      _round++;
-      if (!mounted) return;
-      if (_round >= rounds) {
-        finishGame(context, Skill.numbers, 'Feeding Time');
+  /// Sends fruit [i] flying in an arc into Bibi's mouth.
+  Future<void> _fly(int i, {bool auto = false}) async {
+    if (_eaten[i]) return;
+    final from = _rectOf(_fruitKeys[i]);
+    final mouth = _rectOf(_mouthKey);
+    setState(() => _eaten[i] = true);
+    Sfx.whoosh();
+    if (from != null && mouth != null) {
+      final target = Offset(mouth.center.dx, mouth.top + mouth.height * .45);
+      await FlyingArt.go(context, _fruit.$1, from, target);
+    }
+    if (!mounted) return;
+    Sfx.chomp();
+    final mouthRect = _rectOf(_mouthKey);
+    if (mouthRect != null) {
+      Juice.starBurst(context, Offset(mouthRect.center.dx, mouthRect.top + mouthRect.height * .4), count: 8, colors: const [Color(0xFFFFD27A), Color(0xFFE8A55B), Colors.white]);
+    }
+    setState(() {
+      _mood = Mood.munch;
+      _bounce++;
+    });
+    if (!auto) {
+      _count++;
+      _pop++;
+      Voice.say('${numberWordsCap[_count]}!');
+      if (_count == _target) {
+        _busy = true;
+        await Future.delayed(const Duration(milliseconds: 500));
+        await _win();
       } else {
-        _newRound();
+        Future.delayed(const Duration(milliseconds: 500), () {
+          if (mounted && !_busy) setState(() => _mood = Mood.hungry);
+        });
       }
     } else {
-      Sfx.tryAgain();
-      final oops = _count > _target
-          ? 'Whoa! That\'s too many for my little tummy!'
-          : _count == 0
-          ? 'My bowl is empty! Tap the fruit to fill it up.'
-          : 'Hmm, I\'m still hungry. I need a few more!';
+      Voice.say(_munch[_r.nextInt(_munch.length)]);
+    }
+  }
+
+  Rect? _rectOf(GlobalKey k) {
+    final box = k.currentContext?.findRenderObject() as RenderBox?;
+    if (box == null || !box.hasSize) return null;
+    return box.localToGlobal(Offset.zero) & box.size;
+  }
+
+  Future<void> _win() async {
+    app.learned(Skill.numbers);
+    final cheer = Juice.correct(context, at: _rectOf(_mouthKey)?.center);
+    setState(() {
+      _mood = Mood.dance;
+      _bounce++;
+      _line = '$cheer|${numberWordsCap[_target]}!|Yummy in my tummy!';
+    });
+    await Voice.say(_line);
+    await _next();
+  }
+
+  Future<void> _pick(int n, TapDownDetails d) async {
+    if (_busy) return;
+    if (n == _target) {
+      _busy = true;
+      app.learned(Skill.numbers);
+      final cheer = Juice.correct(context, at: d.globalPosition);
       setState(() {
-        _mood = _count > _target ? Mood.wow : Mood.think;
-        _wobble++;
-        _line = '$oops|$_ask';
+        _mood = Mood.dance;
+        _bounce++;
+        _reveal = true;
+        _line = '$cheer|${numberWordsCap[_target]}!|Yummy in my tummy!';
       });
       await Voice.say(_line);
-      if (mounted) setState(() => _mood = Mood.hungry);
+      await _next();
+    } else {
+      final oops = Juice.oops();
+      setState(() {
+        _reveal = true;
+        _wobble++;
+        _mood = Mood.laugh;
+        _line = '$oops|How many did I eat?';
+      });
+      Voice.say(_line);
     }
-    _busy = false;
+  }
+
+  Future<void> _next() async {
+    _round++;
+    if (!mounted) return;
+    if (_round >= rounds) {
+      setState(() {
+        _mood = Mood.laugh;
+        _line = 'Buuurp! Oops, excuse me!';
+      });
+      await Voice.say(_line);
+      if (mounted) finishGame(context, Skill.numbers, 'Feeding Time');
+      return;
+    }
+    if (_round == 3) await danceBreak(context);
+    if (mounted) _newRound();
   }
 
   @override
   Widget build(BuildContext context) {
     return GameFrame(
+      host: 'pip',
       scene: 'orchard',
       round: _round,
       total: rounds,
       line: _line,
       mood: _mood,
-      bounce: _bounce,
-      wobble: _wobble,
+      showBibi: false,
       body: Column(
         children: [
-          const SizedBox(height: 4),
-          // The fruit to pick from
+          // The fruit, bobbing in the tree
           Expanded(
-            flex: 5,
-            child: Container(
-              width: double.infinity,
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: .55),
-                borderRadius: BorderRadius.circular(32),
-                border: Border.all(color: Colors.white, width: 4),
-              ),
-              child: Center(
-                child: Wrap(
-                  alignment: WrapAlignment.center,
-                  spacing: 6,
-                  runSpacing: 6,
-                  children: [
-                    for (var i = 0; i < _inBowl.length; i++)
-                      AnimatedScale(
-                        duration: const Duration(milliseconds: 220),
-                        curve: Curves.easeOutBack,
-                        scale: _inBowl[i] ? 0 : 1,
-                        child: GestureDetector(
-                          onTap: _inBowl[i] ? null : () => _toggle(i),
-                          child: _Bobbing(
-                            seed: i,
-                            child: Art(_fruit.$1, size: 58),
-                          ),
-                        ),
+            flex: 4,
+            child: Center(
+              child: Wrap(
+                alignment: WrapAlignment.center,
+                spacing: 10,
+                runSpacing: 10,
+                children: [
+                  for (var i = 0; i < _eaten.length; i++)
+                    AnimatedOpacity(
+                      duration: const Duration(milliseconds: 120),
+                      opacity: _eaten[i] ? 0 : 1,
+                      child: GestureDetector(
+                        key: _fruitKeys[i],
+                        onTap: (_eaten[i] || _busy || _watchRound) ? null : () => _fly(i),
+                        child: _Bob(seed: i, child: Art(_fruit.$1, size: 70)),
                       ),
-                  ],
-                ),
+                    ),
+                ],
               ),
             ),
           ),
-          const SizedBox(height: 10),
-          // The bowl and the counter
-          SizedBox(
-            height: 130,
-            child: Row(
-              children: [
-                Expanded(
-                  child: Stack(
-                    alignment: Alignment.bottomCenter,
-                    children: [
-                      const Positioned.fill(child: Art('bowl', size: 200)),
-                      Positioned(
-                        left: 30,
-                        right: 30,
-                        bottom: 52,
-                        child: Wrap(
-                          alignment: WrapAlignment.center,
-                          spacing: -10,
-                          runSpacing: -18,
-                          children: [
-                            for (var i = 0; i < _inBowl.length; i++)
-                              if (_inBowl[i])
-                                TweenAnimationBuilder<double>(
-                                  key: ValueKey('b$i'),
-                                  tween: Tween(begin: 0, end: 1),
-                                  duration: const Duration(milliseconds: 420),
-                                  curve: Curves.elasticOut,
-                                  builder: (_, v, c) => Transform.translate(
-                                    offset: Offset(0, (1 - v) * -80),
-                                    child: Transform.scale(
-                                      scale: .5 + v * .5,
-                                      child: c,
-                                    ),
-                                  ),
-                                  child: GestureDetector(
-                                    onTap: () => _toggle(i),
-                                    child: Art(_fruit.$1, size: 40),
-                                  ),
-                                ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(width: 12),
-                AnimatedSwitcher(
-                  duration: const Duration(milliseconds: 250),
-                  transitionBuilder: (c, a) =>
-                      ScaleTransition(scale: a, child: c),
-                  child: Container(
-                    key: ValueKey(_count),
-                    width: 78,
-                    height: 78,
-                    alignment: Alignment.center,
-                    decoration: const BoxDecoration(
-                      color: C.paper,
-                      shape: BoxShape.circle,
-                      boxShadow: [
-                        BoxShadow(color: C.shadow, offset: Offset(0, 5)),
+          // Progress: little plates that fill up, and a big popping number
+          if (!_watchRound)
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 6),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Flexible(
+                    child: Wrap(
+                      alignment: WrapAlignment.center,
+                      spacing: 4,
+                      runSpacing: 4,
+                      children: [
+                        for (var i = 0; i < _target; i++)
+                          AnimatedContainer(
+                            duration: const Duration(milliseconds: 250),
+                            width: 34,
+                            height: 34,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: i < _count ? C.sun : Colors.white.withValues(alpha: .7),
+                              border: Border.all(color: Colors.white, width: 3),
+                            ),
+                            child: i < _count ? const Icon(Icons.check_rounded, color: Colors.white, size: 22) : null,
+                          ),
                       ],
                     ),
-                    child: Text('$_count', style: T.l(44)),
                   ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 10),
-          Chunky(
-            color: C.berry,
-            shadow: C.berryDeep,
-            onTap: _feed,
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
+                  const SizedBox(width: 10),
+                  TweenAnimationBuilder<double>(
+                    key: ValueKey(_pop),
+                    tween: Tween(begin: 1.8, end: 1),
+                    duration: const Duration(milliseconds: 450),
+                    curve: Curves.elasticOut,
+                    builder: (_, v, c) => Transform.scale(scale: v, child: c),
+                    child: Container(
+                      width: 70,
+                      height: 70,
+                      alignment: Alignment.center,
+                      decoration: const BoxDecoration(color: C.paper, shape: BoxShape.circle, boxShadow: [BoxShadow(color: C.shadow, offset: Offset(0, 5))]),
+                      child: Text('$_count', style: T.l(42)),
+                    ),
+                  ),
+                ],
+              ),
+            )
+          else if (_reveal)
+            Wrap(children: [for (var i = 0; i < _target; i++) Art(_fruit.$1, size: 34)]),
+          // Big hungry Bibi, mouth wide open
+          SizedBox(
+            height: 220,
+            child: Stack(
+              alignment: Alignment.bottomCenter,
               children: [
-                Art(_fruit.$1, size: 34),
-                const SizedBox(width: 10),
-                const Text('Feed me!'),
+                Bibi(mood: _mood, size: 210, bounce: _bounce, wobble: _wobble, onTap: () {
+                  Sfx.giggle();
+                  Voice.say(_line);
+                }),
+                // Where the fruit lands: Bibi's mouth
+                Positioned(bottom: 72, child: SizedBox(key: _mouthKey, width: 60, height: 40)),
               ],
             ),
           ),
-          const SizedBox(height: 16),
+          // Watch round: pick how many
+          if (_choices != null)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 12),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  for (final n in _choices!)
+                    GestureDetector(
+                      onTapDown: (d) => _pick(n, d),
+                      child: _Bob(
+                        seed: n,
+                        child: Container(
+                          width: 84,
+                          height: 84,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: const [C.berry, C.sun, C.aqua, C.lilac][n % 4],
+                            border: Border.all(color: Colors.white, width: 5),
+                            boxShadow: const [BoxShadow(color: C.shadow, offset: Offset(0, 6))],
+                          ),
+                          child: Text('$n', style: T.l(46, color: Colors.white)),
+                        ),
+                      ),
+                    ),
+                ],
+              ),
+            )
+          else
+            const SizedBox(height: 12),
         ],
       ),
     );
   }
 }
 
-/// Fruit gently bobbing, as if hanging from a branch in the breeze.
-class _Bobbing extends StatefulWidget {
-  const _Bobbing({required this.seed, required this.child});
+/// Gentle bobbing, like fruit hanging in a breeze.
+class _Bob extends StatefulWidget {
+  const _Bob({required this.seed, required this.child});
   final int seed;
   final Widget child;
 
   @override
-  State<_Bobbing> createState() => _BobbingState();
+  State<_Bob> createState() => _BobState();
 }
 
-class _BobbingState extends State<_Bobbing>
-    with SingleTickerProviderStateMixin {
-  late final _c = AnimationController(
-    vsync: this,
-    duration: Duration(milliseconds: 1600 + widget.seed * 130),
-  )..repeat(reverse: true);
+class _BobState extends State<_Bob> with SingleTickerProviderStateMixin {
+  late final _c = AnimationController(vsync: this, duration: Duration(milliseconds: 1300 + widget.seed * 170))..repeat(reverse: true);
 
   @override
   void dispose() {
@@ -274,8 +357,12 @@ class _BobbingState extends State<_Bobbing>
 
   @override
   Widget build(BuildContext context) => AnimatedBuilder(
-    animation: _c,
-    builder: (_, c) => Transform.rotate(angle: (_c.value - .5) * .16, child: c),
-    child: widget.child,
-  );
+        animation: _c,
+        builder: (_, c) => Transform.translate(
+          offset: Offset(0, (_c.value - .5) * 10),
+          child: Transform.rotate(angle: (_c.value - .5) * .2, child: c),
+        ),
+        child: widget.child,
+      );
 }
+

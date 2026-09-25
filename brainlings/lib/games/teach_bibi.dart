@@ -9,6 +9,7 @@ import '../theme.dart';
 import '../widgets/art.dart';
 import '../widgets/bibi.dart';
 import '../widgets/game_frame.dart';
+import '../widgets/juice.dart';
 import '../widgets/ui.dart';
 import 'letter_garden.dart';
 
@@ -96,7 +97,7 @@ class _TeachBibiState extends State<TeachBibi> {
     _busy = true;
     if (childSaysRight == _bibiRight) {
       if (_bibiRight) {
-        Sfx.correct();
+        Juice.correct(context);
         app.learned(_isCount ? Skill.numbers : Skill.letters);
         setState(() {
           _mood = Mood.cheer;
@@ -106,8 +107,9 @@ class _TeachBibiState extends State<TeachBibi> {
         await Voice.say(_line);
         _next();
       } else {
-        Sfx.pop();
+        Sfx.boing();
         setState(() {
+          _mood = Mood.laugh;
           _step = _Step.teach;
           _wobble++;
           _line =
@@ -116,7 +118,7 @@ class _TeachBibiState extends State<TeachBibi> {
         await Voice.say(_line);
       }
     } else {
-      Sfx.tryAgain();
+      Juice.oops();
       setState(() {
         _wobble++;
         _line = _isCount
@@ -134,19 +136,19 @@ class _TeachBibiState extends State<TeachBibi> {
     _busy = true;
     final right = _isCount ? answer == '$_real' : answer == _pic.letter;
     if (right) {
-      Sfx.correct();
+      final cheer = Juice.correct(context);
       app.learned(Skill.teaching, pts: 2);
       setState(() {
-        _mood = Mood.cheer;
+        _mood = Mood.dance;
         _bounce++;
         _line = _isCount
-            ? '${numberWordsCap[_real]}!|Ohhh! Now I know! You are the best teacher!'
-            : '${_pic.chant}|Ohhh! Now I know! You are the best teacher!';
+            ? '$cheer|${numberWordsCap[_real]}!|Ohhh! Now I know! You are the best teacher!'
+            : '$cheer|${_pic.chant}|Ohhh! Now I know! You are the best teacher!';
       });
       await Voice.say(_line);
       _next();
     } else {
-      Sfx.tryAgain();
+      Juice.oops();
       setState(() {
         _wobble++;
         _line = _isCount
@@ -158,19 +160,21 @@ class _TeachBibiState extends State<TeachBibi> {
     _busy = false;
   }
 
-  void _next() {
+  Future<void> _next() async {
     _round++;
     if (!mounted) return;
     if (_round >= rounds) {
       finishGame(context, Skill.teaching, 'Teach $_name');
     } else {
-      _newRound();
+      if (_round == 3) await danceBreak(context);
+      if (mounted) _newRound();
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return GameFrame(
+      host: 'pip',
       scene: 'classroom',
       round: _round,
       total: rounds,

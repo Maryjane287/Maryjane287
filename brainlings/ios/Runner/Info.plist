@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Bibi listens so your child can talk to it and practise words. Nothing is stored or sent anywhere.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Bibi listens for the words your child says out loud while learning.</string>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>

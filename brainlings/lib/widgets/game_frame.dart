@@ -1,19 +1,24 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../friends.dart';
+import '../services/music.dart';
 import '../services/sfx.dart';
 import '../services/voice.dart';
 import '../state.dart';
 import '../theme.dart';
 import 'art.dart';
 import 'bibi.dart';
+import 'juice.dart';
 import 'sky.dart';
 import 'ui.dart';
 
 /// The shared layout for every game: back button, round dots,
-/// Bibi with a speech bubble, then the game itself.
-class GameFrame extends StatelessWidget {
+/// Bibi with a speech bubble, then the game itself. Plays the game music,
+/// and if the child goes quiet for a while Bibi gives a friendly nudge.
+class GameFrame extends StatefulWidget {
   const GameFrame({
     super.key,
     required this.round,
@@ -25,6 +30,9 @@ class GameFrame extends StatelessWidget {
     this.wobble = 0,
     this.bibiSize = 150,
     this.scene,
+    this.showBibi = true,
+    this.onIdle,
+    this.host,
   });
 
   final int round;
@@ -36,47 +44,115 @@ class GameFrame extends StatelessWidget {
   final int wobble;
   final double bibiSize;
   final String? scene;
+  final bool showBibi;
+
+  /// Called after a quiet spell. Defaults to a gentle "Your turn!".
+  final VoidCallback? onIdle;
+
+  /// The friend who hosts this game and cheers along.
+  final String? host;
+
+  @override
+  State<GameFrame> createState() => _GameFrameState();
+}
+
+class _GameFrameState extends State<GameFrame> {
+  static const _nudges = ['Psst! Over here!', 'Your turn! Tap one!', 'Come on, you can do it!'];
+  DateTime _lastTouch = DateTime.now();
+  Timer? _idle;
+  int _nudge = 0;
+  int _wiggle = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    Music.play('games');
+    Juice.resetStreak();
+    GameHost.current = widget.host == null ? null : friendById(widget.host!);
+    _idle = Timer.periodic(const Duration(seconds: 2), (_) {
+      if (DateTime.now().difference(_lastTouch).inSeconds < 9) return;
+      _lastTouch = DateTime.now();
+      if (GameHost.current != null && _nudge.isOdd) {
+        _nudge++;
+        Voice.say(GameHost.nudge());
+      } else if (widget.onIdle != null) {
+        _nudge++;
+        widget.onIdle!();
+      } else {
+        setState(() => _wiggle++);
+        Sfx.boing();
+        Voice.say(_nudges[_nudge++ % _nudges.length]);
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _idle?.cancel();
+    GameHost.current = null;
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Meadow(
-        scene: scene,
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: Column(
-              children: [
-                const SizedBox(height: 8),
-                Row(
-                  children: [
-                    RoundIcon(
-                      icon: Icons.arrow_back_rounded,
-                      label: 'Back home',
-                      onTap: () {
-                        Voice.stop();
-                        Navigator.of(context).pop();
-                      },
-                    ),
-                    const Spacer(),
-                    RoundDots(total: total, done: round),
-                  ],
-                ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Bibi(
-                      mood: mood,
-                      size: bibiSize,
-                      bounce: bounce,
-                      wobble: wobble,
-                      onTap: () => Voice.say(line),
-                    ),
-                    Expanded(child: Bubble(line, size: 20)),
-                  ],
-                ),
-                Expanded(child: body),
-              ],
+    return Listener(
+      onPointerDown: (_) => _lastTouch = DateTime.now(),
+      child: Scaffold(
+        body: Meadow(
+          scene: widget.scene,
+          child: SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Column(
+                children: [
+                  const SizedBox(height: 8),
+                  Row(
+                    children: [
+                      RoundIcon(
+                        icon: Icons.arrow_back_rounded,
+                        label: 'Back home',
+                        onTap: () {
+                          Voice.stop();
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                      const Spacer(),
+                      if (GameHost.current != null)
+                        ValueListenableBuilder<(int, String)>(
+                          valueListenable: GameHost.react,
+                          builder: (_, r, _) => FriendSprite(
+                            friend: GameHost.current!,
+                            size: 66,
+                            pose: r.$2,
+                            react: r.$1,
+                            onTap: () {
+                              final h = GameHost.current!;
+                              Voice.say(_nudge == 0 ? h.hello : h.giggle);
+                              _nudge++;
+                            },
+                          ),
+                        ),
+                      const SizedBox(width: 6),
+                      RoundDots(total: widget.total, done: widget.round),
+                    ],
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      if (widget.showBibi)
+                        Bibi(
+                          mood: widget.mood,
+                          size: widget.bibiSize,
+                          bounce: widget.bounce,
+                          wobble: widget.wobble + _wiggle,
+                          onTap: () => Voice.say(widget.line),
+                        ),
+                      Expanded(child: Padding(padding: EdgeInsets.only(top: widget.showBibi ? 0 : 8), child: Bubble(widget.line, size: 20))),
+                    ],
+                  ),
+                  Expanded(child: widget.body),
+                ],
+              ),
             ),
           ),
         ),
@@ -147,6 +223,8 @@ class _RewardScreenState extends State<RewardScreen> {
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       celebrate(context, count: 90);
       Sfx.star();
+      Sfx.applause();
+      Juice.bigWord(context, 'AMAZING!');
       setState(() => _bounce++);
       await Voice.say(_line);
     });

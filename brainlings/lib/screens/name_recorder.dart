@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -16,12 +17,16 @@ class VoiceRecorder extends StatefulWidget {
     required this.onSaved,
     this.existing,
     this.maxSeconds = 120,
+    this.onTrimmed,
   });
 
   final String fileName;
   final String? existing;
   final int maxSeconds;
   final ValueChanged<String?> onSaved;
+
+  /// Called with where the voice starts and ends inside the recording (ms).
+  final void Function(int startMs, int endMs)? onTrimmed;
 
   @override
   State<VoiceRecorder> createState() => _VoiceRecorderState();
@@ -33,6 +38,8 @@ class _VoiceRecorderState extends State<VoiceRecorder> {
   String? _path;
   String? _error;
   DateTime? _started;
+  final _levels = <(int, double)>[];
+  StreamSubscription<Amplitude>? _amp;
 
   @override
   void initState() {
@@ -63,9 +70,13 @@ class _VoiceRecorderState extends State<VoiceRecorder> {
         const RecordConfig(encoder: AudioEncoder.aacLc, numChannels: 1),
         path: path,
       );
+      _levels.clear();
       setState(() {
         _recording = true;
         _started = DateTime.now();
+      });
+      _amp = _rec.onAmplitudeChanged(const Duration(milliseconds: 40)).listen((a) {
+        _levels.add((DateTime.now().difference(_started!).inMilliseconds, a.current));
       });
       Future.delayed(Duration(seconds: widget.maxSeconds), () {
         if (mounted && _recording) _stop();
@@ -77,11 +88,27 @@ class _VoiceRecorderState extends State<VoiceRecorder> {
 
   Future<void> _stop() async {
     final p = await _rec.stop();
+    await _amp?.cancel();
+    _amp = null;
+    _trim();
     setState(() {
       _recording = false;
       if (p != null && File(p).existsSync()) _path = p;
     });
     widget.onSaved(_path);
+  }
+
+  /// Finds where the voice actually starts and stops, so the name plays
+  /// straight away with no silence around it.
+  void _trim() {
+    if (widget.onTrimmed == null || _levels.isEmpty) return;
+    final peak = _levels.map((e) => e.$2).reduce((a, b) => a > b ? a : b);
+    final threshold = peak - 22; // anything within 22 dB of the loudest moment is voice
+    final loud = _levels.where((e) => e.$2 >= threshold).toList();
+    if (loud.isEmpty) return;
+    final start = (loud.first.$1 - 90).clamp(0, 1 << 30);
+    final end = loud.last.$1 + 160;
+    widget.onTrimmed!(start, end);
   }
 
   @override

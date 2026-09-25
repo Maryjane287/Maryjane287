@@ -1,11 +1,13 @@
 import 'dart:async';
 
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'screens/hatch.dart';
 import 'screens/home.dart';
 import 'screens/setup.dart';
+import 'services/music.dart';
 import 'services/voice.dart';
 import 'state.dart';
 import 'theme.dart';
@@ -17,6 +19,12 @@ Future<void> main() async {
     const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
   );
   await app.load();
+  // Music, Bibi's voice and sound effects all play together.
+  try {
+    await AudioPlayer.global.setAudioContext(
+      AudioContextConfig(focus: AudioContextConfigFocus.mixWithOthers).build(),
+    );
+  } catch (_) {}
   unawaited(Voice.init());
   runApp(const BrainlingsApp());
 }
@@ -59,7 +67,9 @@ class _BrainlingsAppState extends State<BrainlingsApp>
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
       _startClock();
+      Music.resume();
     } else {
+      Music.pause();
       _clock?.cancel();
       Voice.stop();
     }

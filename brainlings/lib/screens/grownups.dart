@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../services/music.dart';
 import '../services/voice.dart';
 import '../state.dart';
 import '../theme.dart';
@@ -281,6 +282,11 @@ class _GrownUpsScreenState extends State<GrownUpsScreen> {
         const SizedBox(height: 6),
         VoiceRecorder(
           fileName: 'child-name',
+                        onTrimmed: (a, b) {
+                          app.nameClipStartMs = a;
+                          app.nameClipEndMs = b;
+                          app.save();
+                        },
           existing: app.nameClipPath,
           maxSeconds: 5,
           onSaved: (p) {
@@ -321,6 +327,18 @@ class _GrownUpsScreenState extends State<GrownUpsScreen> {
           onChanged: (v) {
             app.bedtimeMinutes = v.round();
             app.save();
+          },
+        ),
+        SwitchListTile(
+          contentPadding: EdgeInsets.zero,
+          title: Text('Background music', style: T.d(18)),
+          subtitle: Text('Gentle tunes while your child plays', style: T.b(14, color: C.inkSoft)),
+          value: app.musicOn,
+          activeThumbColor: C.lilacDeep,
+          onChanged: (on) {
+            app.musicOn = on;
+            app.save();
+            if (!on) Music.stop();
           },
         ),
         if (app.asleepToday || app.bedtimeDue)

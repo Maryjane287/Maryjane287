@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:brainlings/friends.dart';
 import 'package:brainlings/games/letter_garden.dart';
 import 'package:brainlings/services/voice.dart';
 import 'package:brainlings/widgets/game_frame.dart';
@@ -105,6 +106,36 @@ void main() {
       'You got a message!',
     );
   });
+
+  test('Friends and the living meadow are recorded', () => _friendsAndHome(expectRecorded));
+}
+
+void _friendsAndHome(void Function(String) expectRecorded) {
+  for (final f in friends) {
+    for (final l in [f.hello, ...f.cheers, f.giggle, f.fun, f.oops]) {
+      expectRecorded(l);
+    }
+  }
+  for (final l in [
+    'Hey! Come and play with me!',
+    'Look! A balloon! Pop it!',
+    "Ooh, a present! What's inside?",
+    'Dance with me!',
+    'Guess what? A new friend is coming to visit!',
+    'Say hello to my new friend!',
+    "Tap a game and let's play!",
+    'Wheee! Bubbles! Pop pop pop!',
+    'Can you find me?',
+    'Peekaboo!',
+    'Shake shake shake!',
+    "Knock knock! It's me!",
+    "I'm so happy you're here!",
+    'Ooh, shiny!',
+    'So cool!',
+    'Wow wow wow!',
+  ]) {
+    expectRecorded(l);
+  }
 }
 
 class _FixedRandom implements Random {

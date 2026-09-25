@@ -3,7 +3,7 @@ import 'package:audioplayers/audioplayers.dart';
 /// Little sound effects. Several players so sounds can overlap.
 class Sfx {
   static final _pool = List.generate(
-    4,
+    6,
     (_) => AudioPlayer()..setReleaseMode(ReleaseMode.stop),
   );
   static int _next = 0;
@@ -29,4 +29,11 @@ class Sfx {
   static void hug() => play('hug');
   static void giggle() => play('giggle');
   static void yawn() => play('yawn');
+  static void clap() => play('clap');
+  static void applause() => play('applause', volume: .7);
+  static void boing() => play('boing', volume: .7);
+  static void whoosh() => play('whoosh', volume: .6);
+  static void tada() => play('tada');
+  static void sparkle() => play('sparkle', volume: .6);
+  static void zip() => play('zip', volume: .6);
 }
