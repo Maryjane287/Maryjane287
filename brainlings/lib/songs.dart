@@ -187,6 +187,23 @@ const songs = <Song>[
     SongLine(3200, "A for apple, B for ball,", ["@A", "apple", "@B", "balloon"]),
     SongLine(7860, "C for cat and D for dog,", ["@C", "cat", "@D", "dog"]),
     SongLine(11340, "E for egg and F for frog!", ["@E", "egg", "@F", "&gogo"]),
+  ], [
+    Verse('letters_b', [
+      SongLine(0, "Goat goes G! Hat goes H!", ["@G", "@H", "hat"]),
+      SongLine(2760, "Insect I, jelly J!", ["@I", "ladybird", "@J"]),
+      SongLine(5560, "Kite goes K, lion L!", ["@K", "@L", "lion"]),
+      SongLine(8080, "Monkey M, nest N!", ["@M", "monkey", "@N", "nest"]),
+      SongLine(10360, "Owl goes O, pig goes P!", ["@O", "&momo", "@P", "pig"]),
+      SongLine(12920, "Letters, letters, sing with me!", ["#dance", "#clap"]),
+    ]),
+    Verse('letters_c', [
+      SongLine(0, "Q for queen and R for rain,", ["@Q", "@R", "rainbow"]),
+      SongLine(2920, "S for sun and T for train,", ["@S", "sun", "@T"]),
+      SongLine(5060, "U for umbrella, V for van! Whoo!", ["@U", "@V", "#hooray"]),
+      SongLine(7860, "W, whale and X in fox,", ["@W", "fish", "@X"]),
+      SongLine(10080, "Y for yo-yo, Z for zebra!", ["@Y", "@Z", "zebra"]),
+      SongLine(12540, "Now we know from A to Z!", ["@A", "@Z", "#hooray"]),
+    ]),
   ]),
   Song('shapes', "Shape Dance", 'blocks', [
     SongLine(0, "Circle, circle, round like the sun,", ["%circle", "sun"]),

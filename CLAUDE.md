@@ -92,7 +92,8 @@ Done and working:
   counts passes by position wrap, stops with a quick fade at the verse end, watchdog restarts a stalled player (only when
   the app is open), clock backstop. Used by SongPlayer (list ~2 min, game party ~30 s) and Music.song (home dance ~25 s,
   bedtime 1 pass). No silent waiting anywhere. Song screen only rebuilds dancers/lights on the beat (ValueNotifier).
-  Letter Song now goes A to Z (2 new verses G to P and Q to Z, 15 credits).
+  Letter Song now goes A to Z: one 42.5 s file (A to F sped up, then "Goat goes G" chant G to P, then Q to Z).
+  G to P was blocked twice as IP ("G for goat..." style), the chant version passed. Songs now crf 39, aac 48k (APK 29.7 MB).
   Feeding take away: sum card "5 − 2 = ?" on a chalkboard, first time Bibi explains "Take away means some go away.
   This sign means take away. We can also call it minus!", then says Take away or Minus. New bonus round in every game
   (`lib/widgets/star_catch.dart`, after round 6; Shape Builder before the reward): catch falling stars, Bibi counts.
@@ -148,7 +149,7 @@ seasonal days and birthday, Guess What Mummy Picked, report before trial ends, P
 Build: `flutter build apk --release` works in the container (Android SDK at /opt/android-sdk, Flutter at /opt/flutter,
 both installed per session). Maven Central sometimes rate-limits (429): retry. GitHub Actions workflow
 `.github/workflows/brainlings-apk.yml` also builds the APK as a downloadable artifact.
-Higgsfield credits: about 4 left on 2026-09-25 after the Letter Song verses. Check `balance`.
+Higgsfield credits: about 4.4 left on 2026-09-25 after the Letter Song verses (ip_detected jobs are refunded). Check `balance`.
 
 ### Tech plan
 - Flutter (Android first). Firebase for accounts, storage, messages, push.
