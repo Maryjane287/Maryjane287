@@ -118,7 +118,7 @@ class _BedtimeScreenState extends State<BedtimeScreen>
         }
         if (words != null && mounted && words != _line) setState(() => _line = words!);
       });
-      await Music.song('goodnight');
+      await Music.song('goodnight', length: const Duration(seconds: 15));
       await sub.cancel();
       Music.play('lullaby');
     }

@@ -12,6 +12,7 @@ import '../theme.dart';
 import '../widgets/art.dart';
 import '../widgets/bibi.dart';
 import '../widgets/game_frame.dart';
+import '../widgets/star_catch.dart';
 import '../widgets/juice.dart';
 import '../widgets/ui.dart';
 
@@ -509,6 +510,7 @@ class _SayItState extends State<SayIt> {
       return;
     }
     if (_round == 4) await danceBreak(context);
+      if (_round == 6 && mounted) await starCatch(context);
     if (mounted) _newRound();
   }
 

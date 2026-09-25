@@ -8,6 +8,7 @@ import '../state.dart';
 import '../theme.dart';
 import '../widgets/bibi.dart';
 import '../widgets/game_frame.dart';
+import '../widgets/star_catch.dart';
 import '../widgets/juice.dart';
 import '../widgets/ui.dart';
 import 'letter_garden.dart';
@@ -201,6 +202,8 @@ class _ShapeBuilderState extends State<ShapeBuilder> {
           });
           _newRound();
         } else {
+          await starCatch(context);
+          if (!mounted) return;
           finishGame(context, Skill.shapes, 'Shape Builder', game: 'shapes', maxLevel: maxLevel);
         }
       } else {

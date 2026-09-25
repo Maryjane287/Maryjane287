@@ -15,6 +15,21 @@ void main() {
     }
   }
 
+  test('Song words are timed in order and fit the video', () {
+    for (final s in songs) {
+      final t = s.timeline;
+      final length = s.lengthMs;
+      for (var i = 1; i < t.length; i++) {
+        expect(t[i].startMs > t[i - 1].startMs, isTrue, reason: '${s.id} line $i');
+      }
+      expect(t.last.startMs < length, isTrue, reason: s.id);
+      final party = s.plan(const Duration(seconds: 30));
+      final list = s.plan(const Duration(minutes: 2));
+      expect((party.$1 - 1) * length + party.$2, inInclusiveRange(20000, 40000), reason: s.id);
+      expect((list.$1 - 1) * length + list.$2, inInclusiveRange(100000, 140000), reason: s.id);
+    }
+  });
+
   test('Feeding Time lines are recorded', () {
     const fruits = [
       ('apple', 'apples'),
@@ -33,6 +48,10 @@ void main() {
       expectRecorded('${numberWordsCap[n]}!');
     }
     expectRecorded('My tummy is rumbling!|Nom nom nom!');
+    expectRecorded('Five!|Minus!|Two!|Take away means some go away.|This sign means take away. We can also call it minus!|How many are left?');
+    expectRecorded('Five!|Take away!|Two!|How many are left?');
+    expectRecorded('Bonus time! Catch the falling stars!|Wow! You caught so many stars!|Woohoo! Well done!');
+    expectRecorded("What a lovely dancer you are!|Shall we sing it again?|Let's sing it again!|You are a super dancer!");
     for (var i = 0; i < 20; i++) {
       expectRecorded(yayLine(_FixedRandom(i)));
     }

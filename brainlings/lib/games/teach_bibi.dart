@@ -9,6 +9,7 @@ import '../theme.dart';
 import '../widgets/art.dart';
 import '../widgets/bibi.dart';
 import '../widgets/game_frame.dart';
+import '../widgets/star_catch.dart';
 import '../widgets/juice.dart';
 import '../widgets/ui.dart';
 import 'letter_garden.dart';
@@ -224,6 +225,7 @@ class _TeachBibiState extends State<TeachBibi> {
       finishGame(context, Skill.teaching, 'Teach $_name', game: 'teach', maxLevel: maxLevel);
     } else {
       if (_round == 4) await danceBreak(context);
+      if (_round == 6 && mounted) await starCatch(context);
       if (mounted) _newRound();
     }
   }

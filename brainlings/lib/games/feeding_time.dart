@@ -9,6 +9,7 @@ import '../theme.dart';
 import '../widgets/art.dart';
 import '../widgets/bibi.dart';
 import '../widgets/game_frame.dart';
+import '../widgets/star_catch.dart';
 import '../widgets/juice.dart';
 
 /// Feeding Time.
@@ -48,6 +49,8 @@ class _FeedingTimeState extends State<FeedingTime> {
   bool _askMore = true;
   bool _plateEaten = false;
   int _gone = 0; // fruit Bibi ate from the plate (mode 4)
+  bool _solved = false; // the sum card shows the answer
+  bool _explained = false; // Bibi has explained take away and minus
   int _eatenPlate = -1;
   (String, String, String) _fruit = fruits.first;
   List<bool> _eaten = [];
@@ -82,6 +85,7 @@ class _FeedingTimeState extends State<FeedingTime> {
     };
     _choices = null;
     _reveal = false;
+    _solved = false;
     _busy = false;
     _plateEaten = false;
     _eatenPlate = -1;
@@ -136,7 +140,12 @@ class _FeedingTimeState extends State<FeedingTime> {
       setState(() {
         _choices = _options(_target);
         _mood = Mood.think;
-        _line = '${numberWordsCap[_a]}!|Take away!|${numberWordsCap[_gone]}!|How many are left?';
+        // "Take away" and "minus" mean the same thing. The first time in a
+        // game Bibi explains the sign; after that both words are used.
+        final word = !_explained || _r.nextBool() ? 'Take away!' : 'Minus!';
+        _line = '${numberWordsCap[_a]}!|$word|${numberWordsCap[_gone]}!|'
+            '${_explained ? '' : 'Take away means some go away.|This sign means take away. We can also call it minus!|'}How many are left?';
+        _explained = true;
         _busy = false;
       });
       Voice.say(_line);
@@ -280,10 +289,9 @@ class _FeedingTimeState extends State<FeedingTime> {
             child: Wrap(alignment: WrapAlignment.center, crossAxisAlignment: WrapCrossAlignment.center, spacing: 12, runSpacing: 12, children: plates),
           ),
         ),
-        if (_mode == 3 && _reveal)
-          Text('$_a + $_b = $_target', style: T.l(40, color: Colors.white).copyWith(shadows: const [Shadow(color: C.shadow, blurRadius: 8)])),
-        if (_mode == 4 && _reveal)
-          Text('$_a - $_gone = $_target', style: T.l(40, color: Colors.white).copyWith(shadows: const [Shadow(color: C.shadow, blurRadius: 8)])),
+        // The sum on a big card: 2 + 1 = ? and 5 - 2 = ?, the answer pops in.
+        if (_mode == 3 && _choices != null) _SumCard(a: _a, sign: '+', b: _b, answer: _solved ? _target : null),
+        if (_mode == 4 && _plateEaten && _choices != null) _SumCard(a: _a, sign: '-', b: _gone, answer: _solved ? _target : null),
         SizedBox(
           height: 190,
           child: Stack(
@@ -369,6 +377,7 @@ class _FeedingTimeState extends State<FeedingTime> {
         _mood = Mood.dance;
         _bounce++;
         _reveal = true;
+        _solved = true;
         _line = switch (_mode) {
           3 => '$cheer|${numberWordsCap[_a]}!|Plus!|${numberWordsCap[_b]}!|Makes!|${numberWordsCap[_target]}!',
           4 => '$cheer|${numberWordsCap[_target]}!|Yummy in my tummy!',
@@ -406,6 +415,7 @@ class _FeedingTimeState extends State<FeedingTime> {
       return;
     }
     if (_round == 4) await danceBreak(context);
+      if (_round == 6 && mounted) await starCatch(context);
     if (mounted) _newRound();
   }
 
@@ -621,3 +631,40 @@ class _BobState extends State<_Bob> with SingleTickerProviderStateMixin {
       );
 }
 
+
+/// A sum written big, like on the classroom board: 5 - 2 = ?
+class _SumCard extends StatelessWidget {
+  const _SumCard({required this.a, required this.sign, required this.b, this.answer});
+  final int a;
+  final String sign;
+  final int b;
+  final int? answer;
+
+  @override
+  Widget build(BuildContext context) {
+    Widget part(String t, Color c) => Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 6),
+          child: Text(t, style: T.l(44, color: c)),
+        );
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 4),
+      decoration: BoxDecoration(
+        color: const Color(0xFF2F6B4F),
+        borderRadius: BorderRadius.circular(22),
+        border: Border.all(color: const Color(0xFFB98A5A), width: 5),
+      ),
+      child: Row(mainAxisSize: MainAxisSize.min, children: [
+        part('$a', Colors.white),
+        part(sign == '+' ? '+' : '\u2212', C.sun),
+        part('$b', Colors.white),
+        part('=', C.sun),
+        AnimatedSwitcher(
+          duration: const Duration(milliseconds: 350),
+          transitionBuilder: (c, a) => ScaleTransition(scale: CurvedAnimation(parent: a, curve: Curves.elasticOut), child: c),
+          child: KeyedSubtree(key: ValueKey(answer), child: part(answer == null ? '?' : '$answer', answer == null ? const Color(0xFFFFB3D1) : C.sun)),
+        ),
+      ]),
+    );
+  }
+}

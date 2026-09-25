@@ -9,6 +9,7 @@ import '../theme.dart';
 import '../widgets/art.dart';
 import '../widgets/bibi.dart';
 import '../widgets/game_frame.dart';
+import '../widgets/star_catch.dart';
 import '../widgets/juice.dart';
 
 /// One letter, the sound it makes, and a picture that starts with it.
@@ -185,6 +186,7 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
         return;
       }
       if (_round == 4) await danceBreak(context);
+      if (_round == 6 && mounted) await starCatch(context);
       if (mounted) _newRound();
     } else {
       final oops = Juice.oops();
@@ -240,6 +242,7 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
         return;
       }
       if (_round == 4) await danceBreak(context);
+      if (_round == 6 && mounted) await starCatch(context);
       if (mounted) _newRound();
     } else {
       final oops = Juice.oops();

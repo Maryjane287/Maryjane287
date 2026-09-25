@@ -7,6 +7,7 @@ import 'package:video_player/video_player.dart';
 import '../friends.dart';
 import '../games/shape_builder.dart';
 import '../services/music.dart';
+import '../services/song_loop.dart';
 import '../services/sfx.dart';
 import '../services/voice.dart';
 import '../songs.dart';
@@ -213,136 +214,107 @@ class SongPlayer extends StatefulWidget {
 }
 
 class _SongPlayerState extends State<SongPlayer> {
-  late final List<Verse> _verses = widget.song.verses;
-  VideoPlayerController? _v; // the verse playing now
-  VideoPlayerController? _nextV; // the next verse, loaded ahead
-  int _step = 0; // how many verses have been sung
+  late final List<SongLine> _lines = widget.song.timeline;
+  VideoPlayerController? _v;
+  SongLoop? _loop;
   bool _ready = false;
   bool _ended = false;
-  bool _switching = false;
+  bool _busy = false;
   int _line = -1;
-  int _beat = 0;
+  int _pass = 0; // bumps each time round, so the pictures pop in again
+
+  /// The beat: only the dancers and the lights listen, so the video and
+  /// the rest of the screen are not rebuilt on every beat (no lag).
+  final _beat = ValueNotifier<int>(0);
+  final _progress = ValueNotifier<double>(0);
   Timer? _dance;
-  Timer? _safety;
-  final _clock = Stopwatch();
 
   /// Dance parties in a game last about 30 seconds. On the song list a
-  /// song keeps going, verse after verse, for about a minute and a half
-  /// (the child can stop any time), then Bibi asks if they want more.
-  Duration get _target => widget.party
-      ? const Duration(seconds: 28)
-      : Duration(seconds: _verses.length > 1 ? 85 : 55);
+  /// song keeps going round for about two minutes (the child can stop any
+  /// time), then Bibi asks if they want more. The music never stops early.
+  (int, int) get _plan => widget.song.plan(widget.party
+      ? const Duration(seconds: 30)
+      : widget.song.id == 'goodnight'
+          ? const Duration(seconds: 60)
+          : const Duration(minutes: 2));
 
-  Verse get _verse => _verses[_step % _verses.length];
+  bool get _calm => widget.song.id == 'goodnight';
 
   @override
   void initState() {
     super.initState();
     Music.pause();
     Voice.stop();
-    _dance = Timer.periodic(const Duration(milliseconds: 480), (_) {
-      if (mounted && !_ended) setState(() => _beat++);
+    _dance = Timer.periodic(Duration(milliseconds: _calm ? 900 : 400), (_) {
+      if (mounted && !_ended) _beat.value++;
+      final l = _loop;
+      if (l != null) _progress.value = l.progress;
     });
-    _clock.start();
-    _play();
+    _start();
   }
 
   @override
   void dispose() {
     _dance?.cancel();
-    _safety?.cancel();
-    _v?.removeListener(_tick);
+    _loop?.cancel();
     _v?.dispose();
-    _nextV?.dispose();
+    _beat.dispose();
+    _progress.dispose();
     Voice.stop();
     Music.resume();
     super.dispose();
   }
 
-  Future<VideoPlayerController?> _load(Verse v) async {
-    final c = VideoPlayerController.asset('assets/songs/${v.video}.mp4');
-    try {
-      await c.initialize().timeout(const Duration(seconds: 8));
-      await c.setVolume(1);
-      return c;
-    } catch (_) {
-      await c.dispose();
-      return null;
+  Future<void> _start() async {
+    var c = _v;
+    if (c == null) {
+      c = VideoPlayerController.asset('assets/songs/${widget.song.id}.mp4');
+      try {
+        await c.initialize().timeout(const Duration(seconds: 8));
+      } catch (_) {
+        await c.dispose();
+        c = null;
+      }
+      if (!mounted) {
+        await c?.dispose();
+        return;
+      }
+      if (c == null) return _finish();
+      _v = c;
     }
-  }
-
-  /// Plays the current verse from the start, and loads the next one ahead
-  /// so there is no gap. A safety timer makes sure a verse always ends.
-  Future<void> _play() async {
-    _switching = true;
-    _safety?.cancel();
-    // A one-verse song simply starts its own video again: no reloading.
-    final reuse = _verses.length == 1 && _v != null ? _v : null;
-    final c = reuse ?? _nextV ?? await _load(_verse);
-    _nextV = null;
-    if (!mounted) {
-      await c?.dispose();
-      return;
-    }
-    if (c == null) return _finish();
-    final old = identical(_v, c) ? null : _v;
-    old?.removeListener(_tick);
-    c.removeListener(_tick);
-    _v = c;
-    await c.seekTo(Duration.zero);
-    await c.play();
-    c.addListener(_tick);
+    _loop?.cancel();
+    final loop = SongLoop(c, plan: _plan, onEnd: _finish, onPosition: _onPosition);
+    _loop = loop;
+    _progress.value = 0;
     setState(() {
       _ready = true;
+      _ended = false;
       _line = -1;
     });
-    await old?.dispose();
-    Future.delayed(const Duration(milliseconds: 700), () => _switching = false);
-    _safety = Timer(c.value.duration + const Duration(seconds: 3), _verseDone);
-    // Load the next verse while this one plays.
-    final next = _verses[(_step + 1) % _verses.length];
-    if (_verses.length > 1) _load(next).then((n) => mounted ? _nextV = n : n?.dispose());
+    await loop.start();
   }
 
-  void _tick() {
-    final c = _v;
-    if (c == null || _ended || _switching) return;
-    final v = c.value;
-    final ms = v.position.inMilliseconds;
-    var line = -1;
-    for (var i = 0; i < _verse.lines.length; i++) {
-      if (ms >= _verse.lines[i].startMs - 150) line = i;
+  void _onPosition(Duration p) {
+    final line = widget.song.lineAt(p, _lines);
+    if (line == _line || !mounted) return;
+    // The words went back: the song is going round again.
+    if (line < _line) {
+      _pass++;
+      if (!_calm) {
+        Sfx.sparkle();
+        celebrate(context, count: 16);
+      }
     }
-    if (line != _line && mounted) setState(() => _line = line);
-    final d = v.duration;
-    final atEnd = d > Duration.zero && v.position >= d - const Duration(milliseconds: 600);
-    if (v.isCompleted || (atEnd && !v.isPlaying)) _verseDone();
-  }
-
-  void _verseDone() {
-    if (_ended || _switching || !mounted) return;
-    _step++;
-    // Keep singing until the dance has lasted long enough, and always
-    // finish on a whole round of verses.
-    final more = _clock.elapsed < _target || _step % _verses.length != 0;
-    if (more) {
-      Sfx.sparkle();
-      celebrate(context, count: 30);
-      _play();
-    } else {
-      _finish();
-    }
+    setState(() => _line = line);
   }
 
   Future<void> _finish() async {
-    if (_ended) return;
+    if (_ended || !mounted) return;
     _ended = true;
-    _safety?.cancel();
-    _clock.stop();
-    if (!mounted) return;
+    _progress.value = 1;
     setState(() {});
     Sfx.applause();
-    celebrate(context, count: 80);
+    celebrate(context, count: 60);
     app.addStars(1);
     if (widget.party) {
       await Voice.say('You are a super dancer!');
@@ -353,21 +325,18 @@ class _SongPlayerState extends State<SongPlayer> {
   }
 
   Future<void> _again() async {
+    if (_busy) return;
+    _busy = true;
     Sfx.pop();
     await Voice.stop();
     await Voice.say("Let's sing it again!");
-    if (!mounted) return;
-    setState(() {
-      _ended = false;
-      _step = 0;
-    });
-    _clock
-      ..reset()
-      ..start();
-    _play();
+    _busy = false;
+    if (mounted && _ended) _start();
   }
 
   Future<void> _another() async {
+    if (_busy) return;
+    _busy = true;
     Sfx.pop();
     await Voice.stop();
     await Voice.say("Okay! Let's pick another song!");
@@ -382,129 +351,143 @@ class _SongPlayerState extends State<SongPlayer> {
   @override
   Widget build(BuildContext context) {
     final met = app.metFriends.isEmpty ? friends.take(3).toList() : app.metFriends;
-    final lines = _verse.lines;
-    final pics = _line < 0 || _line >= lines.length ? const <String>[] : lines[_line].pics;
+    final pics = _line < 0 || _line >= _lines.length ? const <String>[] : _lines[_line].pics;
     final c = _v;
-    // Disco lights: the room glows a new colour on every beat.
+    // Disco lights: a soft glow that changes colour on the beat.
     const disco = [Color(0xFF3B1F7A), Color(0xFF7A1F5C), Color(0xFF1F4F7A), Color(0xFF1F7A5A), Color(0xFF7A4A1F)];
-    final calm = widget.song.id == 'goodnight';
     return Scaffold(
-      backgroundColor: const Color(0xFF2A2152),
+      backgroundColor: const Color(0xFF1A1236),
       body: GestureDetector(
         behavior: HitTestBehavior.opaque,
         onTapDown: _sparkle,
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 420),
-          decoration: BoxDecoration(
-            gradient: RadialGradient(
-              center: Alignment(_beat.isEven ? -.6 : .6, -.4),
-              radius: 1.3,
-              colors: _ended || calm ? const [Color(0xFF2A2152), Color(0xFF1A1236)] : [disco[_beat % disco.length], const Color(0xFF1A1236)],
+        child: Stack(
+          children: [
+            Positioned.fill(
+              child: RepaintBoundary(
+                child: ValueListenableBuilder<int>(
+                  valueListenable: _beat,
+                  builder: (_, beat, _) => DecoratedBox(
+                    decoration: BoxDecoration(
+                      gradient: RadialGradient(
+                        center: Alignment(beat.isEven ? -.6 : .6, -.4),
+                        radius: 1.3,
+                        colors: _ended || _calm ? const [Color(0xFF2A2152), Color(0xFF1A1236)] : [disco[beat % disco.length], const Color(0xFF1A1236)],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ),
-          ),
-          child: SafeArea(
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
-                  child: Row(children: [
-                    RoundIcon(icon: widget.party ? Icons.close_rounded : Icons.stop_rounded, label: 'Stop', onTap: () => Navigator.of(context).pop()),
-                    const SizedBox(width: 12),
-                    Expanded(child: Text(widget.song.title, style: T.d(24, color: Colors.white))),
-                    // How far through the dance we are
-                    SizedBox(
-                      width: 70,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(99),
-                        child: LinearProgressIndicator(
-                          minHeight: 10,
-                          value: _ended ? 1 : (_clock.elapsed.inMilliseconds / _target.inMilliseconds).clamp(0.0, 1.0),
-                          backgroundColor: Colors.white24,
-                          color: C.sun,
+            SafeArea(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+                    child: Row(children: [
+                      RoundIcon(icon: widget.party ? Icons.close_rounded : Icons.stop_rounded, label: 'Stop', onTap: () => Navigator.of(context).pop()),
+                      const SizedBox(width: 12),
+                      Expanded(child: Text(widget.song.title, style: T.d(24, color: Colors.white))),
+                      // How far through the dance we are
+                      SizedBox(
+                        width: 70,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(99),
+                          child: ValueListenableBuilder<double>(
+                            valueListenable: _progress,
+                            builder: (_, p, _) => LinearProgressIndicator(minHeight: 10, value: p.clamp(0.0, 1.0), backgroundColor: Colors.white24, color: C.sun),
+                          ),
+                        ),
+                      ),
+                    ]),
+                  ),
+                  const SizedBox(height: 8),
+                  // The music video
+                  Expanded(
+                    flex: 5,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: RepaintBoundary(
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(28),
+                          child: _ready && c != null && c.value.isInitialized
+                              ? FittedBox(fit: BoxFit.cover, clipBehavior: Clip.hardEdge, child: SizedBox(width: c.value.size.width, height: c.value.size.height, child: VideoPlayer(c)))
+                              : Container(color: Colors.white12, alignment: Alignment.center, child: const Bibi(mood: Mood.dance, size: 180)),
                         ),
                       ),
                     ),
-                  ]),
-                ),
-                const SizedBox(height: 8),
-                // The music video
-                Expanded(
-                  flex: 5,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(28),
-                      child: _ready && c != null && c.value.isInitialized
-                          ? FittedBox(fit: BoxFit.cover, clipBehavior: Clip.hardEdge, child: SizedBox(width: c.value.size.width, height: c.value.size.height, child: VideoPlayer(c)))
-                          : Container(color: Colors.white12, alignment: Alignment.center, child: Bibi(mood: Mood.dance, size: 180, bounce: _beat)),
-                    ),
                   ),
-                ),
-                // Pictures that show what the words mean
-                SizedBox(
-                  height: 84,
-                  child: AnimatedSwitcher(
-                    duration: const Duration(milliseconds: 300),
-                    transitionBuilder: (c, a) => ScaleTransition(scale: CurvedAnimation(parent: a, curve: Curves.elasticOut), child: c),
-                    child: Row(
-                      key: ValueKey('p$_line$_step'),
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [for (var i = 0; i < pics.length; i++) _Dancer(beat: _beat + i, child: Padding(padding: const EdgeInsets.symmetric(horizontal: 6), child: SongPic(pics[i])))],
-                    ),
-                  ),
-                ),
-                // Karaoke words
-                SizedBox(
-                  height: 70,
-                  child: Center(
+                  // Pictures that show what the words mean
+                  SizedBox(
+                    height: 84,
                     child: AnimatedSwitcher(
-                      duration: const Duration(milliseconds: 250),
-                      transitionBuilder: (c, a) => ScaleTransition(scale: a, child: c),
-                      child: Padding(
-                        key: ValueKey('w$_line$_step'),
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: _line < 0 || _line >= lines.length
-                            ? const Row(mainAxisSize: MainAxisSize.min, children: [
-                                Icon(Icons.music_note_rounded, color: C.sun, size: 40),
-                                Icon(Icons.music_note_rounded, color: Colors.white, size: 52),
-                                Icon(Icons.music_note_rounded, color: C.sun, size: 40),
-                              ])
-                            : Text(
-                                lines[_line].text,
-                                textAlign: TextAlign.center,
-                                style: T.d(24, color: const [C.sun, Colors.white, Color(0xFFFFB3D1), Color(0xFFA8F0E6)][max(0, _line) % 4])
-                                    .copyWith(shadows: const [Shadow(color: Colors.black45, blurRadius: 8)]),
-                              ),
+                      duration: const Duration(milliseconds: 300),
+                      transitionBuilder: (c, a) => ScaleTransition(scale: CurvedAnimation(parent: a, curve: Curves.elasticOut), child: c),
+                      child: ValueListenableBuilder<int>(
+                        key: ValueKey('p$_line.$_pass'),
+                        valueListenable: _beat,
+                        builder: (_, beat, _) => Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [for (var i = 0; i < pics.length; i++) _Dancer(beat: beat + i, child: Padding(padding: const EdgeInsets.symmetric(horizontal: 6), child: SongPic(pics[i])))],
+                        ),
                       ),
                     ),
                   ),
-                ),
-                // The gang dancing along
-                SizedBox(
-                  height: 110,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      for (var i = 0; i < met.length && i < 2; i++) _Dancer(beat: _beat + i, child: FriendSprite(friend: met[i], size: 66, pose: (_beat + i).isEven ? 'cheer' : 'laugh')),
-                      _Dancer(beat: _beat + 1, big: true, child: Bibi(mood: const [Mood.dance, Mood.cheer, Mood.laugh, Mood.wave][_beat % 4], size: 92, bounce: _beat ~/ 2)),
-                      for (var i = 2; i < met.length && i < 4; i++) _Dancer(beat: _beat + i, child: FriendSprite(friend: met[i], size: 66, pose: (_beat + i).isEven ? 'laugh' : 'cheer')),
-                    ],
+                  // Karaoke words
+                  SizedBox(
+                    height: 70,
+                    child: Center(
+                      child: AnimatedSwitcher(
+                        duration: const Duration(milliseconds: 250),
+                        transitionBuilder: (c, a) => ScaleTransition(scale: a, child: c),
+                        child: Padding(
+                          key: ValueKey('w$_line.$_pass'),
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          child: _line < 0 || _line >= _lines.length
+                              ? const Row(mainAxisSize: MainAxisSize.min, children: [
+                                  Icon(Icons.music_note_rounded, color: C.sun, size: 40),
+                                  Icon(Icons.music_note_rounded, color: Colors.white, size: 52),
+                                  Icon(Icons.music_note_rounded, color: C.sun, size: 40),
+                                ])
+                              : Text(
+                                  _lines[_line].text,
+                                  textAlign: TextAlign.center,
+                                  style: T.d(24, color: const [C.sun, Colors.white, Color(0xFFFFB3D1), Color(0xFFA8F0E6)][max(0, _line) % 4])
+                                      .copyWith(shadows: const [Shadow(color: Colors.black45, blurRadius: 8)]),
+                                ),
+                        ),
+                      ),
+                    ),
                   ),
-                ),
-                if (_ended && !widget.party)
-                  Padding(
-                    padding: const EdgeInsets.all(12),
-                    child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-                      Chunky(color: C.leaf, shadow: C.leafDeep, onTap: _again, child: const Row(mainAxisSize: MainAxisSize.min, children: [Icon(Icons.thumb_up_rounded, color: Colors.white, size: 30), SizedBox(width: 6), Text('Yes!')])),
-                      Chunky(color: C.berry, shadow: C.berryDeep, onTap: _another, child: const Row(mainAxisSize: MainAxisSize.min, children: [Icon(Icons.library_music_rounded, color: Colors.white, size: 30), SizedBox(width: 6), Text('New song')])),
-                    ]),
-                  )
-                else
-                  const SizedBox(height: 12),
-              ],
+                  // The gang dancing along
+                  SizedBox(
+                    height: 110,
+                    child: ValueListenableBuilder<int>(
+                      valueListenable: _beat,
+                      builder: (_, beat, _) => Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          for (var i = 0; i < met.length && i < 2; i++) _Dancer(beat: beat + i, child: FriendSprite(friend: met[i], size: 66, pose: (beat + i).isEven ? 'cheer' : 'laugh')),
+                          _Dancer(beat: beat + 1, big: true, child: Bibi(mood: const [Mood.dance, Mood.cheer, Mood.laugh, Mood.wave][beat % 4], size: 92, bounce: beat ~/ 2)),
+                          for (var i = 2; i < met.length && i < 4; i++) _Dancer(beat: beat + i, child: FriendSprite(friend: met[i], size: 66, pose: (beat + i).isEven ? 'laugh' : 'cheer')),
+                        ],
+                      ),
+                    ),
+                  ),
+                  if (_ended && !widget.party)
+                    Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+                        Chunky(color: C.leaf, shadow: C.leafDeep, onTap: _again, child: const Row(mainAxisSize: MainAxisSize.min, children: [Icon(Icons.thumb_up_rounded, color: Colors.white, size: 30), SizedBox(width: 6), Text('Yes!')])),
+                        Chunky(color: C.berry, shadow: C.berryDeep, onTap: _another, child: const Row(mainAxisSize: MainAxisSize.min, children: [Icon(Icons.library_music_rounded, color: Colors.white, size: 30), SizedBox(width: 6), Text('New song')])),
+                      ]),
+                    )
+                  else
+                    const SizedBox(height: 12),
+                ],
+              ),
             ),
-          ),
+          ],
         ),
       ),
     );

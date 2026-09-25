@@ -452,12 +452,12 @@ class _HomeScreenState extends State<HomeScreen> {
     final sub = Music.songPosition.listen((p) {
       final ms = p.inMilliseconds;
       String? words;
-      for (final l in song.lines) {
+      for (final l in song.timeline) {
         if (ms >= l.startMs - 150) words = l.text;
       }
       if (words != null && words != _line && mounted) setState(() => _line = words!);
     });
-    final playing = Music.song(song.id, repeats: 2).whenComplete(() => dancing = false);
+    final playing = Music.song(song.id, length: const Duration(seconds: 25)).whenComplete(() => dancing = false);
     const moves = [Mood.dance, Mood.cheer, Mood.laugh, Mood.wave, Mood.dance, Mood.wow];
     for (var i = 0; dancing && mounted && !_away; i++) {
       setState(() {
@@ -469,7 +469,7 @@ class _HomeScreenState extends State<HomeScreen> {
         }
       });
       if (i % 8 == 3) Sfx.clap();
-      await _wait(480);
+      await _wait(400);
     }
     await Music.stopSong();
     await playing;

@@ -51,7 +51,7 @@ Family members do NOT need the app: they get a link (WhatsApp/email) to a small 
   phone numbers still to verify. Apple enrollment submitted but $99 not paid (later).
 - Payouts need a proper company bank account (Wise was rejected by KDP; unresolved).
 
-### Build status (updated 2026-09-25, v1.5.0)
+### Build status (updated 2026-09-25, v1.6.0)
 Flutter app lives in `brainlings/` (Android + iOS). Everything runs offline on the device for now.
 Done and working:
 - First-run grown-up setup: name/nickname, age, family circle, optional name recording, bedtime minutes, privacy promise.
@@ -85,6 +85,17 @@ Done and working:
 - Talking Bibi (`lib/screens/talk.dart`, big Talk! mic on home): repeats the child in a squeaky voice (Talking Tom style),
   poke head/feet/tummy, hug, tickle, snack tray. Say It! game uses speech recognition. Nothing is saved.
 - Music: procedural loops in `assets/music/` (play, games, lullaby), toggle in the grown-up area.
+- v1.6 (owner: songs stopped, then waited silently for the progress bar; old songs dull, short and laggy):
+  ONE video per song. Old songs re-encoded 1.2x faster (atempo, pitch kept) at 24 fps, 12.5 s; Goodnight unchanged pace.
+  New songs are one 60 s file (verse A, chorus, verse B, chorus). `Song.timeline` has all words timed in the file,
+  `Song.plan(target)` picks passes + stop point at a verse end. `lib/services/song_loop.dart` SongLoop: setLooping(true),
+  counts passes by position wrap, stops with a quick fade at the verse end, watchdog restarts a stalled player (only when
+  the app is open), clock backstop. Used by SongPlayer (list ~2 min, game party ~30 s) and Music.song (home dance ~25 s,
+  bedtime 1 pass). No silent waiting anywhere. Song screen only rebuilds dancers/lights on the beat (ValueNotifier).
+  Letter Song now goes A to Z (2 new verses G to P and Q to Z, 15 credits).
+  Feeding take away: sum card "5 − 2 = ?" on a chalkboard, first time Bibi explains "Take away means some go away.
+  This sign means take away. We can also call it minus!", then says Take away or Minus. New bonus round in every game
+  (`lib/widgets/star_catch.dart`, after round 6; Shape Builder before the reward): catch falling stars, Bibi counts.
 - v1.5 (owner: name said too often and sounds lower with a pause, songs too slow/short/dull, lessons too short):
   Name only at big moments (welcome, level-up reward, letters, hatch, bedtime, Say It hello); never between song rounds.
   Name clip plays via just_audio: clipped tight (-80 ms), pitch 1.15, loudness boost; recorder uses autoGain.
@@ -137,7 +148,7 @@ seasonal days and birthday, Guess What Mummy Picked, report before trial ends, P
 Build: `flutter build apk --release` works in the container (Android SDK at /opt/android-sdk, Flutter at /opt/flutter,
 both installed per session). Maven Central sometimes rate-limits (429): retry. GitHub Actions workflow
 `.github/workflows/brainlings-apk.yml` also builds the APK as a downloadable artifact.
-Higgsfield credits: about 20 left on 2026-09-25 (owner said use them for songs). Check `balance`.
+Higgsfield credits: about 4 left on 2026-09-25 after the Letter Song verses. Check `balance`.
 
 ### Tech plan
 - Flutter (Android first). Firebase for accounts, storage, messages, push.

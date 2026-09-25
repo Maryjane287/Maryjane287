@@ -29,6 +29,61 @@ class Song {
   final List<Verse> more;
 
   List<Verse> get verses => [Verse(id, lines), ...more];
+
+  /// The older songs are played faster and livelier (the first verse of
+  /// their video is already sped up). The Goodnight Song keeps its gentle pace.
+  static const _sped = {'hello', 'apple', 'counting', 'letters', 'shapes', 'colours', 'animals', 'wiggle', 'happy'};
+  bool get fast => _sped.contains(id);
+
+  /// How long each sung part lasts in the video file. All the parts of a
+  /// song are one video, one after the other.
+  List<int> get verseLengths => [for (var i = 0; i < verses.length; i++) i == 0 && fast ? 12500 : 15000];
+
+  int get lengthMs => verseLengths.fold(0, (a, b) => a + b);
+
+  /// All the words of the whole video, timed from its start.
+  List<SongLine> get timeline {
+    final out = <SongLine>[];
+    var at = 0;
+    for (var i = 0; i < verses.length; i++) {
+      final speed = i == 0 && fast ? 1.2 : 1.0;
+      for (final l in verses[i].lines) {
+        out.add(SongLine(at + (l.startMs / speed).round(), l.text, l.pics));
+      }
+      at += verseLengths[i];
+    }
+    return out;
+  }
+
+  /// How to dance for about [target]: how many times round the video, and
+  /// where to stop in the last time round (always at the end of a part).
+  (int passes, int lastMs) plan(Duration target) {
+    var best = (1, verseLengths.first);
+    var bestGap = 1 << 30;
+    for (var pass = 1; pass <= 20; pass++) {
+      var end = 0;
+      for (final l in verseLengths) {
+        end += l;
+        final gap = ((pass - 1) * lengthMs + end - target.inMilliseconds).abs();
+        if (gap < bestGap) {
+          bestGap = gap;
+          best = (pass, end);
+        }
+      }
+    }
+    return best;
+  }
+
+  /// The line being sung at [position] of the video, or -1 between lines.
+  int lineAt(Duration position, [List<SongLine>? lines]) {
+    final all = lines ?? timeline;
+    final ms = position.inMilliseconds;
+    var line = -1;
+    for (var i = 0; i < all.length; i++) {
+      if (ms >= all[i].startMs - 150) line = i;
+    }
+    return line;
+  }
 }
 
 const songs = <Song>[

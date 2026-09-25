@@ -3,7 +3,9 @@ import 'dart:async';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:video_player/video_player.dart';
 
+import '../songs.dart';
 import '../state.dart';
+import 'song_loop.dart';
 
 /// Cheerful background music. It softens whenever Bibi talks.
 class Music {
@@ -51,42 +53,36 @@ class Music {
   }
 
   static VideoPlayerController? _song;
+  static SongLoop? _loop;
   static final _songPos = StreamController<Duration>.broadcast();
   static Completer<void> _songStop = Completer();
-  static bool _stopped = false;
 
-  /// Plays one of Bibi's songs out loud [repeats] times in a row (the
-  /// background music waits). The sound comes straight from the song's
-  /// video. Completes when the song ends or is stopped.
-  static Future<void> song(String id, {int repeats = 1}) async {
+  /// Plays one of Bibi's songs out loud (the background music waits),
+  /// going round with no gaps for about [length], always ending at the end
+  /// of a sung part. The sound comes straight from the song's video.
+  /// Completes when the song ends or is stopped.
+  static Future<void> song(String id, {Duration length = const Duration(seconds: 25)}) async {
     await stopSong();
     await pause();
-    _stopped = false;
-    final v = VideoPlayerController.asset('assets/songs/$id.mp4');
+    final s = songs.firstWhere((s) => s.id == id, orElse: () => songs.first);
+    final v = VideoPlayerController.asset('assets/songs/${s.id}.mp4');
+    final done = Completer<void>();
+    _songStop = done;
     _song = v;
-    var ignoreUntil = DateTime.now();
-    void tick() {
-      _songPos.add(v.value.position);
-      if (DateTime.now().isBefore(ignoreUntil)) return;
-      final d = v.value.duration;
-      final atEnd = d > Duration.zero && v.value.position >= d - const Duration(milliseconds: 600) && !v.value.isPlaying;
-      if ((v.value.isCompleted || atEnd) && !_songStop.isCompleted) _songStop.complete();
-    }
-
     try {
       await v.initialize().timeout(const Duration(seconds: 8));
-      await v.setVolume(1);
-      v.addListener(tick);
-      for (var round = 0; round < repeats && !_stopped; round++) {
-        _songStop = Completer();
-        ignoreUntil = DateTime.now().add(const Duration(milliseconds: 700));
-        if (round > 0) await v.seekTo(Duration.zero);
-        await v.play();
-        await _songStop.future.timeout(v.value.duration + const Duration(seconds: 3), onTimeout: () {});
+      if (!done.isCompleted) {
+        final loop = SongLoop(v, plan: s.plan(length), onEnd: () => done.isCompleted ? null : done.complete(), onPosition: _songPos.add);
+        _loop = loop;
+        await loop.start();
+        await done.future;
+        loop.cancel();
       }
     } catch (_) {}
-    v.removeListener(tick);
-    if (_song == v) _song = null;
+    if (_song == v) {
+      _song = null;
+      _loop = null;
+    }
     await v.dispose();
     await resume();
   }
@@ -95,7 +91,7 @@ class Music {
   static Stream<Duration> get songPosition => _songPos.stream;
 
   static Future<void> stopSong() async {
-    _stopped = true;
+    _loop?.cancel();
     try {
       await _song?.pause();
     } catch (_) {}
