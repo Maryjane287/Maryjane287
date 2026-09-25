@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'paywall.dart';
+import '../services/premium.dart';
 import '../services/music.dart';
 import '../services/voice.dart';
 import '../state.dart';
@@ -45,6 +47,7 @@ class _GrownUpsScreenState extends State<GrownUpsScreen> {
                   ],
                 ),
                 const SizedBox(height: 16),
+                _plan(),
                 _progress(),
                 _letters(),
                 _settings(),
@@ -55,6 +58,38 @@ class _GrownUpsScreenState extends State<GrownUpsScreen> {
       ),
     );
   }
+
+  /// The free week and the subscription, told plainly.
+  Widget _plan() => ListenableBuilder(
+        listenable: Premium.instance,
+        builder: (context, _) {
+          final p = Premium.instance;
+          final (title, text) = p.subscribed
+              ? ('Subscribed', 'Thank you! Everything in Brainlings is open for $kid.')
+              : p.inTrial
+                  ? (
+                      'Free week: ${p.daysLeft} ${p.daysLeft == 1 ? 'day' : 'days'} left',
+                      'Everything is free for the first ${Premium.trialDays} days, no card needed. After that, games and songs need a subscription. Talking and family letters stay free.',
+                    )
+                  : p.locked
+                      ? ('The free week has ended', 'Subscribe to keep every game and song open for $kid.')
+                      : ('Free to play', 'Subscriptions are not available right now, so everything stays open.');
+          return GrownCard(children: [
+            const Eyebrow('Your plan'),
+            Text(title, style: T.d(24)),
+            const SizedBox(height: 6),
+            Text(text, style: T.b(15, color: C.inkSoft)),
+            if (!p.subscribed && p.storeReady) ...[
+              const SizedBox(height: 12),
+              FilledButton.icon(
+                onPressed: () => Navigator.of(context).push(softRoute(const PaywallScreen())),
+                icon: const Icon(Icons.star_rounded),
+                label: const Text('See plans'),
+              ),
+            ],
+          ]);
+        },
+      );
 
   Widget _stat(String big, String small) => Container(
     padding: const EdgeInsets.all(12),

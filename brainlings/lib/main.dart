@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'services/premium.dart';
 import 'package:flutter/services.dart';
 
 import 'screens/hatch.dart';
@@ -26,6 +27,7 @@ Future<void> main() async {
     );
   } catch (_) {}
   unawaited(Voice.init());
+  unawaited(Premium.instance.init());
   runApp(const BrainlingsApp());
 }
 

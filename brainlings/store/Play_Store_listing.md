@@ -55,6 +55,9 @@ You choose how long your child can play each day, from 30 minutes up to 5 hours,
 
 No ads. No chat. Just learning, songs and lots of love.
 
+🎁 FREE FOR 7 DAYS
+Everything is free for the first 7 days, no card needed. After that, a simple subscription keeps every game and song open. Talking to Bibi and letters from family always stay free. Cancel any time in Google Play.
+
 ## Promo video
 
 Upload `Brainlings_trailer_youtube_1920x1080.mp4` to YouTube (Public or Unlisted, turn OFF ads on the video,
@@ -85,12 +88,17 @@ https://github.com/Maryjane287/Maryjane287/blob/claude/keen-ritchie-was4uj/brain
   (Google only counts data that leaves the device). Mention in the privacy policy (done) that Say It! uses the phone's
   own speech recognition. "Is all data encrypted in transit?" not applicable. "Can users request deletion?" Yes, Start again.
   (This changes when family messages go online with Firebase; we will update it then.)
-- **Upload:** Production (or Internal testing first) → Create new release → upload `Brainlings-1.6.3.aab`.
+- **Upload:** Production (or Internal testing first) → Create new release → upload `Brainlings-1.7.0.aab`.
   Choose "Use Google-generated app signing key" (Play App Signing). Keep `brainlings-upload.jks` and its password safe:
   every future update must be signed with it.
 - **Teacher Approved:** once live, you can apply. The app already follows the rules (no ads, age appropriate, grown-up gate).
-- **Price (first release):** Free, no in-app purchases yet. The 7-day free trial subscription comes in the next update:
-  Google only lets you create a subscription after an app has been uploaded, then we add the paywall to the app.
+- **Subscription (do this after the first upload is accepted):** Monetise with Play → Products → Subscriptions →
+  Create subscription. Product ID must be exactly **brainlings_premium** (name: Brainlings). Add a base plan
+  **monthly** (auto-renewing, 1 month, your price e.g. £4.99) and, if you like, a base plan **yearly** (1 year,
+  e.g. £39.99). Activate both. Do NOT add a free trial offer: the 7 free days are built into the app.
+  Until the subscription is active, the app simply stays free for everyone.
+- **Payments profile:** Setup → Payments profile must have the company bank account, or Google cannot pay you.
+- **In-app purchases:** in the store listing questions, answer Yes, the app has in-app purchases (subscription).
 
 ## Social posts (to drive traffic)
 
@@ -100,5 +108,5 @@ Caption idea:
 
 > Meet Bibi! 🌱 A learning buddy who sings, dances and listens to your little one.
 > Counting, phonics, songs and giggles, made for ages 4 to 7. No ads, ever.
-> Get Brainlings on Google Play. 💛
+> Free for 7 days on Google Play, no card needed. 💛
 > #Brainlings #KidsLearning #Phonics #EarlyMaths #LearningThroughPlay #KidsSongs #Parenting

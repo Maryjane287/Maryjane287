@@ -36,6 +36,7 @@ void main() {
       expectRecorded([Lines.praise(), Lines.oops(), Lines.help(), Lines.tried(), Lines.yay()].join('|'));
     }
     expectRecorded("Let's learn it together.");
+    expectRecorded('Our free week is over! Ask a grown-up to help us keep playing.');
   });
 
   test('Feeding Time lines are recorded', () {

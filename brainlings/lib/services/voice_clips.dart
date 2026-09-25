@@ -822,6 +822,7 @@ const voiceClips = <String, String>{
   "not that one let's look again together": 'b817',
   "ooh nearly have another look": 'b818',
   "let's learn it together": 'b819',
+  "our free week is over ask a grown up to help us keep playing": 'b820',
   "hoo hoo i'm momo i love letters": 'f_momo_0',
   "hoo ray wonderful": 'f_momo_1',
   "twit twoo you're so clever": 'f_momo_2',

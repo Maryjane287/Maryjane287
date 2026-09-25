@@ -3,6 +3,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import 'paywall.dart';
+import '../services/premium.dart';
 import '../friends.dart';
 import '../games/feeding_time.dart';
 import '../songs.dart';
@@ -242,7 +244,15 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   /// Opens a screen on top, then checks what should happen on return.
-  Future<void> _open(Widget page, {bool isGame = false}) async {
+  Future<void> _open(Widget page, {bool isGame = false, bool paid = false}) async {
+    // After the free week, games and songs need a grown-up's help.
+    if (paid && Premium.instance.locked) {
+      Voice.stop();
+      _away = true;
+      final ok = await mayPlay(context);
+      _away = false;
+      if (!ok || !mounted) return;
+    }
     Voice.stop();
     Music.stopSong();
     _away = true;
@@ -668,7 +678,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               bottom: 128,
                               child: _SingButton(onTap: () {
                                 Voice.say('Songs!');
-                                _open(const SongsScreen());
+                                _open(const SongsScreen(), paid: true);
                               }),
                             ),
                             Positioned(right: 0, bottom: 12, child: _TalkButton(onTap: () {
@@ -769,6 +779,16 @@ class _HomeScreenState extends State<HomeScreen> {
             child: const Icon(Icons.lock_rounded, size: 20, color: C.inkSoft),
           ),
         ),
+        // A little dot for the grown-up when the free week is nearly over.
+        ListenableBuilder(
+          listenable: Premium.instance,
+          builder: (_, _) => Premium.instance.endingSoon
+              ? Transform.translate(
+                  offset: const Offset(-12, -14),
+                  child: Container(width: 12, height: 12, decoration: const BoxDecoration(color: C.berry, shape: BoxShape.circle)),
+                )
+              : const SizedBox.shrink(),
+        ),
       ],
     );
   }
@@ -821,7 +841,7 @@ class _HomeScreenState extends State<HomeScreen> {
           app.levelOf(g.id),
           () {
             Voice.say(g.name.startsWith('Teach') ? 'Teach me!' : (g.name.endsWith('!') ? g.name : '${g.name}!'));
-            _open(g.build(), isGame: true);
+            _open(g.build(), isGame: true, paid: true);
           },
         ),
     ];
