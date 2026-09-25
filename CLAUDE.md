@@ -85,6 +85,10 @@ Done and working:
 - Talking Bibi (`lib/screens/talk.dart`, big Talk! mic on home): repeats the child in a squeaky voice (Talking Tom style),
   poke head/feet/tummy, hug, tickle, snack tray. Say It! game uses speech recognition. Nothing is saved.
 - Music: procedural loops in `assets/music/` (play, games, lullaby), toggle in the grown-up area.
+- v1.6.2 Say It (owner: Bibi made the child repeat up to 10 times): wrong or no answer is now corrected at once:
+  "Nearly! Let me help you. The answer is: X", spells it (names, colours, opposites), "Your turn! Say it once!",
+  ONE listen, then "I heard you! Brilliant!" or "Good try! Let's keep going!" and move on. Sentences the same way.
+  A quiet child gets one nudge, not three. Never add repeat-again loops.
 - v1.6 (owner: songs stopped, then waited silently for the progress bar; old songs dull, short and laggy):
   ONE video per song. Old songs re-encoded 1.2x faster (atempo, pitch kept) at 24 fps, 12.5 s + 0.7 s quiet pause
   at the end (owner wanted a little breath before a song repeats; `Song.pauseMs`, also after Z in the Letter Song). In the pause Bibi shouts

@@ -311,14 +311,15 @@ class _SayItState extends State<SayIt> {
       await Voice.say('Tap the microphone and say it!');
       return '';
     }
-    for (var tries = 0; tries < 3 && mounted; tries++) {
+    for (var tries = 0; tries < 2 && mounted; tries++) {
       final heard = await _hear(expect);
       if (heard.isNotEmpty) {
         _silent = 0;
         return heard;
       }
       _silent++;
-      // Quiet: say hello, tell a joke, then ask again.
+      if (tries == 1) break; // still quiet: Bibi helps instead of asking again
+      // Quiet: say hello or tell a joke, then ask once more.
       final nudge = _silent % 3 == 2 ? '${_jokes[_r.nextInt(_jokes.length)]}|$question' : '${_silence[_r.nextInt(_silence.length)]}|$question';
       Sfx.boing();
       setState(() => _wobble++);
@@ -384,29 +385,50 @@ class _SayItState extends State<SayIt> {
   }
 
   Future<void> _answerStep() async {
-    for (var attempt = 0; attempt < 3 && mounted; attempt++) {
-      final heard = await _ask(attempt == 0 ? _talk.ask : 'Say it again, nice and loud!', _talk.answers);
-      if (!mounted || _waitingTap) return;
-      if (_matches(heard, _talk.answers)) {
-        await _win(_mode == 5 ? 'Yes! They rhyme!|${_talk.say}' : 'I heard you! Brilliant!|${_talk.say}');
-        return;
-      }
-      if (heard.isEmpty) break;
-      // Heard something else: check, help, then teach.
-      Juice.oops();
-      setState(() => _wobble++);
-      if (attempt == 0) {
-        await _say('Hmm, I heard something different.|Did you say that?|Oh, maybe I got you wrong. Can you say it again?', mood: Mood.think);
-      } else {
-        await _say('This is how you say it!|${_talk.say}|Now you say it!', mood: Mood.read);
-      }
+    final heard = await _ask(_talk.ask, _talk.answers);
+    if (!mounted || _waitingTap) return;
+    if (_matches(heard, _talk.answers)) {
+      await _win(_mode == 5 ? 'Yes! They rhyme!|${_talk.say}' : 'I heard you! Brilliant!|${_talk.say}');
+      return;
     }
+    // Not right (or no answer): no asking again and again. Bibi kindly
+    // gives the answer, spells it, and invites the child to say it once.
+    Juice.oops();
+    setState(() => _wobble++);
+    final spell = _spellWord;
+    await _say(
+      [
+        heard.isEmpty ? 'Hee hee! Do I have to teach you everything?' : 'Nearly! Let me help you.',
+        'The answer is:',
+        _talk.say,
+        if (spell != null) ...["Let's spell it!", for (final c in spell.split('')) _letterNames[c]!, _talk.say],
+        'Your turn! Say it once!',
+      ].join('|'),
+      mood: Mood.read,
+    );
     if (!mounted) return;
-    // Never leave a child stuck: say it together, then celebrate the try.
-    await _say('Hee hee! Do I have to teach you everything?|Let\'s say it together!|${_talk.say}', mood: Mood.laugh);
+    final again = _sttOk ? await _hear(_talk.answers, seconds: 7) : '';
     if (!mounted) return;
-    Juice.correct(context);
-    await _afterAnswer();
+    if (_matches(again, _talk.answers)) {
+      await _win('I heard you! Brilliant!');
+    } else {
+      await _say("Good try! Let's keep going!", mood: Mood.cheer);
+      if (!mounted) return;
+      await _next();
+    }
+  }
+
+  /// The word to spell after a mistake: the picture's name, or a colour or
+  /// opposite. Animal sounds, rhymes and counting are not spelled.
+  String? get _spellWord {
+    final w = switch (_mode) {
+      1 || 2 => _talk.art,
+      4 => _talk.answers.first,
+      3 when _talk.ask.contains('colour') => _talk.answers.first,
+      _ => null,
+    };
+    if (w == null || w.length > 7 || !w.split('').every(_letterNames.containsKey)) return null;
+    return w;
   }
 
   Future<void> _win(String line) async {
@@ -431,23 +453,28 @@ class _SayItState extends State<SayIt> {
   Future<void> _sentenceStep() async {
     _stage = _Stage.sentence;
     setState(() {});
-    final word = _talk.art;
     bool good(String h) => _matches(h, _talk.answers) && h.split(' ').length >= 3;
-    var heard = await _ask('Now make a sentence with it!|Like this:|${_talk.sentence}', _talk.answers);
+    final heard = await _ask('Now make a sentence with it!|Like this:|${_talk.sentence}', _talk.answers);
     if (!mounted) return;
-    if (!good(heard) && heard.isNotEmpty) {
-      await _say('Say a whole sentence with the word in it!', mood: Mood.think);
-      heard = await _hear(_talk.answers);
+    if (good(heard)) {
+      app.learned(Skill.letters, pts: 2);
+      final cheer = Juice.correct(context);
+      await _say('$cheer|Wow! What a great sentence!', mood: Mood.dance);
+      await _next();
+      return;
     }
+    // Show a good sentence and let the child say it once. No more asking.
+    await _say('Nearly! Here is a sentence:|${_talk.sentence}|Your turn! Say it once!', mood: Mood.read);
     if (!mounted) return;
-    if (!good(heard)) {
-      await _say('Say it with me!|${_talk.sentence}|Now you say it!', mood: Mood.read);
-      heard = await _hear([word]);
+    final again = _sttOk ? await _hear(_talk.answers, seconds: 8) : '';
+    if (!mounted) return;
+    app.learned(Skill.letters);
+    if (good(again)) {
+      final cheer = Juice.correct(context);
+      await _say('$cheer|Wow! What a great sentence!', mood: Mood.dance);
+    } else {
+      await _say("Good try! Let's keep going!", mood: Mood.cheer);
     }
-    if (!mounted) return;
-    app.learned(Skill.letters, pts: 2);
-    final cheer = Juice.correct(context);
-    await _say('$cheer|Wow! What a great sentence!', mood: Mood.dance);
     await _next();
   }
 

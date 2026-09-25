@@ -52,6 +52,7 @@ void main() {
     expectRecorded('Five!|Take away!|Two!|How many are left?');
     expectRecorded('Bonus time! Catch the falling stars!|Wow! You caught so many stars!|Woohoo! Well done!');
     expectRecorded("What a lovely dancer you are!|Shall we sing it again?|Let's sing it again!|You are a super dancer!|Again!|One more time!|Let's go again!");
+    expectRecorded("Nearly! Let me help you.|The answer is:|Let's spell it!|Your turn! Say it once!|Good try! Let's keep going!|Nearly! Here is a sentence:|Hee hee! Do I have to teach you everything?|I heard you! Brilliant!");
     for (var i = 0; i < 20; i++) {
       expectRecorded(yayLine(_FixedRandom(i)));
     }
