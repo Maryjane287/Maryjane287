@@ -23,7 +23,7 @@ class FeedingTime extends StatefulWidget {
 }
 
 class _FeedingTimeState extends State<FeedingTime> {
-  static const rounds = 5;
+  static const rounds = 8;
   static const fruits = [
     ('apple', 'apple', 'apples'),
     ('strawberry', 'strawberry', 'strawberries'),
@@ -142,7 +142,7 @@ class _FeedingTimeState extends State<FeedingTime> {
       Voice.say(_line);
       return;
     }
-    _watchRound = _round == 2 || _round == 4;
+    _watchRound = _round == 2 || _round == 5 || _round == 7;
     _target = 1 + _r.nextInt(_watchRound ? min(_max, 6) : _max);
     if (_watchRound && _target < 2) _target = 2;
     final shown = min(_target + (_watchRound ? 1 : 3), 10);
@@ -405,7 +405,7 @@ class _FeedingTimeState extends State<FeedingTime> {
       if (mounted) finishGame(context, Skill.numbers, 'Feeding Time', game: 'feeding', maxLevel: maxLevel);
       return;
     }
-    if (_round == 3) await danceBreak(context);
+    if (_round == 4) await danceBreak(context);
     if (mounted) _newRound();
   }
 

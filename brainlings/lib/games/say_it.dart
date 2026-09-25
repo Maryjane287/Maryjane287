@@ -144,7 +144,7 @@ class SayIt extends StatefulWidget {
 }
 
 class _SayItState extends State<SayIt> {
-  static const rounds = 5;
+  static const rounds = 8;
   static const maxLevel = 7;
 
   final _stt = SpeechToText();
@@ -225,6 +225,16 @@ class _SayItState extends State<SayIt> {
     }
 
     guard = Timer(Duration(seconds: seconds + 3), finish);
+    // A leftover "done" from the last question must not end this one early.
+    final started = DateTime.now();
+    _stt.statusListener = (s) {
+      final fresh = DateTime.now().difference(started) > const Duration(milliseconds: 1500);
+      if ((s == 'done' || s == 'notListening') && (fresh || best.isNotEmpty)) {
+        Future.delayed(const Duration(milliseconds: 350), finish);
+      }
+    };
+    // The phone's listener needs a moment after Bibi stops talking.
+    await Future.delayed(const Duration(milliseconds: 250));
     try {
       await _stt.listen(
         onResult: (r) {
@@ -245,9 +255,6 @@ class _SayItState extends State<SayIt> {
           contextualPhrases: [...expect, if (app.childName.isNotEmpty) app.childName],
         ),
       );
-      _stt.statusListener = (s) {
-        if (s == 'done' || s == 'notListening') Future.delayed(const Duration(milliseconds: 350), finish);
-      };
     } catch (_) {
       finish();
     }
@@ -501,7 +508,7 @@ class _SayItState extends State<SayIt> {
       finishGame(context, Skill.letters, 'Say It', game: 'sayit', maxLevel: maxLevel);
       return;
     }
-    if (_round == 3) await danceBreak(context);
+    if (_round == 4) await danceBreak(context);
     if (mounted) _newRound();
   }
 

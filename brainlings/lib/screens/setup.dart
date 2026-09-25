@@ -232,7 +232,7 @@ class _SetupScreenState extends State<SetupScreen> {
                     _card([
                       const Eyebrow('Healthy play'),
                       Text(
-                        'When should the creature get sleepy?',
+                        'How long can they play each day?',
                         style: T.d(28),
                       ),
                       const SizedBox(height: 6),
@@ -242,18 +242,9 @@ class _SetupScreenState extends State<SetupScreen> {
                         style: T.b(15, color: C.inkSoft),
                       ),
                       const SizedBox(height: 14),
-                      Text(
-                        '${app.bedtimeMinutes} minutes a day',
-                        style: T.d(26, color: C.lilacDeep),
-                      ),
-                      Slider(
-                        value: app.bedtimeMinutes.toDouble(),
-                        min: 10,
-                        max: 60,
-                        divisions: 10,
-                        activeColor: C.lilacDeep,
-                        onChanged: (v) =>
-                            setState(() => app.bedtimeMinutes = v.round()),
+                      PlayTimePicker(
+                        value: app.bedtimeMinutes,
+                        onChanged: (m) => setState(() => app.bedtimeMinutes = m),
                       ),
                       const SizedBox(height: 10),
                       Container(

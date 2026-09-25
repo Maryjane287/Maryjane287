@@ -261,9 +261,11 @@ class _RewardScreenState extends State<RewardScreen> {
     ];
     final c = cheers[_cheer];
     final level = widget.newLevel ? '|Hooray! You unlocked a new level!|Next time, something new is waiting!' : '';
+    // The child's name only for the big moments, not after every game.
+    final name = widget.newLevel ? '{name}!|' : '';
     return _sticker == null
-        ? '{name}!|$c$level'
-        : '{name}!|$c|And look, a new sticker for your album!$level';
+        ? '$name$c$level'
+        : '$name$c|And look, a new sticker for your album!$level';
   }
 
   @override

@@ -73,7 +73,7 @@ class AppState extends ChangeNotifier {
   int age = 5;
   String? nameClipPath; // the grown-up saying the child's name
   List<String> circle = ['Mummy'];
-  int bedtimeMinutes = 20;
+  int bedtimeMinutes = 60;
   bool musicOn = true;
 
   /// Where the grown-up's voice starts and stops inside the name recording,
@@ -182,7 +182,7 @@ class AppState extends ChangeNotifier {
         age = j['age'] ?? 5;
         nameClipPath = j['nameClipPath'];
         circle = List<String>.from(j['circle'] ?? ['Mummy']);
-        bedtimeMinutes = j['bedtimeMinutes'] ?? 20;
+        bedtimeMinutes = j['bedtimeMinutes'] ?? 60;
         musicOn = j['musicOn'] ?? true;
         nameClipStartMs = j['nameClipStartMs'];
         nameClipEndMs = j['nameClipEndMs'];
@@ -312,7 +312,7 @@ class AppState extends ChangeNotifier {
     age = 5;
     nameClipPath = null;
     circle = ['Mummy'];
-    bedtimeMinutes = 20;
+    bedtimeMinutes = 60;
     hatched = false;
     creatureName = 'Bibi';
     stars = 0;

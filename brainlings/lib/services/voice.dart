@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:just_audio/just_audio.dart' as ja;
 
 import '../state.dart';
 import 'music.dart';
@@ -104,8 +105,43 @@ class Voice {
 
   static final _players = List.generate(3, (_) => AudioPlayer()..setReleaseMode(ReleaseMode.stop));
 
+  // The grown-up's recording of the child's name plays through its own
+  // player: a touch higher so it blends with Bibi's voice, and louder.
+  static final _nameBoost = ja.AndroidLoudnessEnhancer();
+  static final _namePlayer = ja.AudioPlayer(audioPipeline: ja.AudioPipeline(androidAudioEffects: [_nameBoost]));
+
+  static Future<void> _prepareName(_Piece p) async {
+    try {
+      await _nameBoost.setEnabled(true);
+      await _nameBoost.setTargetGain(8);
+    } catch (_) {}
+    try {
+      await _namePlayer.setFilePath(p.file!);
+      final s = p.startMs ?? 0;
+      final e = p.endMs;
+      // Cut the tail tightly so the next words follow straight away.
+      await _namePlayer.setClip(
+        start: Duration(milliseconds: s),
+        end: e != null && e - 80 > s + 200 ? Duration(milliseconds: e - 80) : null,
+      );
+      await _namePlayer.setPitch(1.15);
+      await _namePlayer.setSpeed(1.05);
+      await _namePlayer.setVolume(1);
+    } catch (_) {}
+  }
+
+  static Future<void> _playName() async {
+    try {
+      await _namePlayer.seek(Duration.zero);
+      await _namePlayer.play();
+      await _namePlayer.processingStateStream.firstWhere((s) => s == ja.ProcessingState.completed).timeout(const Duration(seconds: 6));
+      await _namePlayer.pause();
+    } catch (_) {}
+  }
+
   static Future<void> _prepare(_Piece p, AudioPlayer player) async {
     if (p.speech != null) return;
+    if (p.file != null) return _prepareName(p);
     try {
       await player.setSource(p.asset != null ? AssetSource(p.asset!) : DeviceFileSource(p.file!));
       if (p.startMs != null && p.startMs! > 0) await player.seek(Duration(milliseconds: p.startMs!));
@@ -114,6 +150,7 @@ class Voice {
 
   static Future<void> _playPiece(_Piece p, AudioPlayer player) async {
     if (p.speech != null) return _speak(p.speech!);
+    if (p.file != null) return _playName();
     try {
       final done = player.onPlayerComplete.first;
       await player.resume();
@@ -162,6 +199,7 @@ class Voice {
       for (final p in _players) {
         await p.stop();
       }
+      await _namePlayer.pause();
     } catch (_) {}
   }
 

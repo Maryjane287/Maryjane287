@@ -6,7 +6,7 @@ import '../theme.dart';
 import '../widgets/sky.dart';
 import '../widgets/ui.dart';
 
-/// Grown-ups only. A sum that little ones cannot easily solve.
+/// Grown-ups only. An easy sum for a grown-up, too hard for little ones.
 /// Returns true when passed.
 Future<bool> grownUpGate(BuildContext context) async {
   final ok = await Navigator.of(context).push<bool>(softRoute(const _Gate()));
@@ -33,7 +33,7 @@ class _GateState extends State<_Gate> {
   }
 
   void _newSum() {
-    _a = 3 + _r.nextInt(7);
+    _a = 11 + _r.nextInt(9);
     _b = 3 + _r.nextInt(7);
     _typed = '';
   }
@@ -46,8 +46,8 @@ class _GateState extends State<_Gate> {
         _typed += k;
       }
     });
-    if (_typed.length >= '${_a * _b}'.length) {
-      if (_typed == '${_a * _b}') {
+    if (_typed.length >= '${_a + _b}'.length) {
+      if (_typed == '${_a + _b}') {
         Navigator.of(context).pop(true);
       } else {
         setState(() => _shake = true);
@@ -89,7 +89,7 @@ class _GateState extends State<_Gate> {
                       duration: const Duration(milliseconds: 80),
                       offset: _shake ? const Offset(.03, 0) : Offset.zero,
                       child: Text(
-                        '$_a × $_b = ${_typed.isEmpty ? '?' : _typed}',
+                        '$_a + $_b = ${_typed.isEmpty ? '?' : _typed}',
                         textAlign: TextAlign.center,
                         style: T.d(40, color: _shake ? C.berryDeep : C.ink),
                       ),
@@ -126,7 +126,9 @@ class _GateState extends State<_Gate> {
                                     borderRadius: BorderRadius.circular(16),
                                     onTap: () => _key(k),
                                     child: Center(
-                                      child: Text(k, style: T.d(26)),
+                                      child: k == '⌫'
+                                          ? const Icon(Icons.backspace_rounded, size: 28, color: C.ink)
+                                          : Text(k, style: T.d(26)),
                                     ),
                                   ),
                                 ),

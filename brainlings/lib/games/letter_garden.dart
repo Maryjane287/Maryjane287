@@ -73,7 +73,7 @@ const spellWords = [
 ];
 
 class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderStateMixin {
-  static const rounds = 5;
+  static const rounds = 8;
   static const maxLevel = 7;
   bool get _hard => _level >= 5;
   final _level = app.levelOf('letters');
@@ -120,7 +120,9 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
     };
     final intro = _round == 0 ? '${levelLine(_level)}|' : '';
     if (_mode == 4) {
-      final left = spellWords.where((w) => !_used.contains(w.$1)).toList()..shuffle(_r);
+      var left = spellWords.where((w) => !_used.contains(w.$1)).toList();
+      if (left.isEmpty) left = [...spellWords];
+      left.shuffle(_r);
       _word = left.first;
       _used.add(_word.$1);
       _spelled = 0;
@@ -136,7 +138,9 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
       Voice.say(_line);
       return;
     }
-    final pool = phonics.where((p) => !_used.contains(p.letter)).toList()..shuffle(_r);
+    var pool = phonics.where((p) => !_used.contains(p.letter)).toList();
+    if (pool.isEmpty) pool = [...phonics];
+    pool.shuffle(_r);
     _target = pool.first;
     _used.add(_target.letter);
     final others = phonics.where((p) => p.letter != _target.letter).toList()..shuffle(_r);
@@ -180,7 +184,7 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
         if (mounted) finishGame(context, Skill.letters, 'Letter Garden', game: 'letters', maxLevel: maxLevel);
         return;
       }
-      if (_round == 3) await danceBreak(context);
+      if (_round == 4) await danceBreak(context);
       if (mounted) _newRound();
     } else {
       final oops = Juice.oops();
@@ -235,7 +239,7 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
         if (mounted) finishGame(context, Skill.letters, 'Letter Garden', game: 'letters', maxLevel: maxLevel);
         return;
       }
-      if (_round == 3) await danceBreak(context);
+      if (_round == 4) await danceBreak(context);
       if (mounted) _newRound();
     } else {
       final oops = Juice.oops();
@@ -422,7 +426,7 @@ class _LetterGardenState extends State<LetterGarden> with SingleTickerProviderSt
                           duration: const Duration(milliseconds: 1000),
                           curve: Curves.elasticOut,
                           builder: (_, v, c) => Transform.scale(scale: v, alignment: Alignment.bottomCenter, child: c),
-                          child: _Sway(seed: i, child: Art(_flowers[i], size: 78)),
+                          child: _Sway(seed: i, child: Art(_flowers[i % _flowers.length], size: 46)),
                         )
                       : Container(
                           width: 26,

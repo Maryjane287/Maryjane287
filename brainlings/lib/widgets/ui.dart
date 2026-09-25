@@ -299,9 +299,9 @@ class RoundDots extends StatelessWidget {
       for (var i = 0; i < total; i++)
         AnimatedContainer(
           duration: const Duration(milliseconds: 300),
-          margin: const EdgeInsets.symmetric(horizontal: 3),
-          width: i == done ? 18 : 13,
-          height: i == done ? 18 : 13,
+          margin: EdgeInsets.symmetric(horizontal: total > 8 ? 2 : 3),
+          width: i == done ? 18 : (total > 8 ? 9 : 13),
+          height: i == done ? 18 : (total > 8 ? 9 : 13),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: i < done
@@ -370,4 +370,37 @@ class Eyebrow extends StatelessWidget {
           .copyWith(letterSpacing: 1.4),
     ),
   );
+}
+
+
+/// How long a child may play each day. 0 means no limit.
+const playTimes = [30, 60, 120, 180, 300, 0];
+
+String playTimeLabel(int minutes) => switch (minutes) {
+      0 => 'No limit',
+      < 60 => '$minutes minutes',
+      60 => '1 hour',
+      _ => '${minutes ~/ 60} hours',
+    };
+
+/// Big friendly choices for the daily play time.
+class PlayTimePicker extends StatelessWidget {
+  const PlayTimePicker({super.key, required this.value, required this.onChanged});
+  final int value;
+  final ValueChanged<int> onChanged;
+
+  @override
+  Widget build(BuildContext context) => Wrap(
+        spacing: 8,
+        runSpacing: 8,
+        children: [
+          for (final m in playTimes)
+            ChoiceChip(
+              label: Text(playTimeLabel(m), style: T.b(15, w: FontWeight.w800)),
+              selected: value == m,
+              selectedColor: C.sun,
+              onSelected: (_) => onChanged(m),
+            ),
+        ],
+      );
 }

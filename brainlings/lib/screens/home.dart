@@ -446,7 +446,7 @@ class _HomeScreenState extends State<HomeScreen> {
     await _say(_r.nextBool() ? 'Dance with me and my friends!' : 'Come on, friends! Let\'s dance!', mood: Mood.dance);
     if (!mounted || _away) return;
     // A real song: everybody dances and the words appear as they are sung.
-    final pool = songs.where((x) => x.id != 'goodnight').toList();
+    final pool = songs.where((x) => x.id != 'goodnight' && (x.more.isNotEmpty || Random().nextInt(3) == 0)).toList();
     final song = pool[_r.nextInt(pool.length)];
     var dancing = true;
     final sub = Music.songPosition.listen((p) {

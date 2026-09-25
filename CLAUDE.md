@@ -44,14 +44,14 @@ Family members do NOT need the app: they get a link (WhatsApp/email) to a small 
   fallback "little friend"). Collect as little data as possible (Families policy, COPPA, UK Children's Code).
 
 ### Business
-- One-month free trial, clear price up front, reminder 3 days before the trial ends, easy cancel.
-- Special moments spread across the month; big "look how much Chris learned" report before trial ends.
+- 7-DAY free trial (owner changed this from one month on 2026-09-25), clear price up front, reminder before the trial ends, easy cancel.
+- Special moments spread across the 7 trial days; big "look how much Chris learned" report before the trial ends.
 - No ads.
 - Google Play developer account (organisation, Grace and Loannes Ltd) is paid and identity verified;
   phone numbers still to verify. Apple enrollment submitted but $99 not paid (later).
 - Payouts need a proper company bank account (Wise was rejected by KDP; unresolved).
 
-### Build status (updated 2026-09-25, v1.4.0)
+### Build status (updated 2026-09-25, v1.5.0)
 Flutter app lives in `brainlings/` (Android + iOS). Everything runs offline on the device for now.
 Done and working:
 - First-run grown-up setup: name/nickname, age, family circle, optional name recording, bedtime minutes, privacy promise.
@@ -85,6 +85,16 @@ Done and working:
 - Talking Bibi (`lib/screens/talk.dart`, big Talk! mic on home): repeats the child in a squeaky voice (Talking Tom style),
   poke head/feet/tummy, hug, tickle, snack tray. Say It! game uses speech recognition. Nothing is saved.
 - Music: procedural loops in `assets/music/` (play, games, lullaby), toggle in the grown-up area.
+- v1.5 (owner: name said too often and sounds lower with a pause, songs too slow/short/dull, lessons too short):
+  Name only at big moments (welcome, level-up reward, letters, hatch, bedtime, Say It hello); never between song rounds.
+  Name clip plays via just_audio: clipped tight (-80 ms), pitch 1.15, loudness boost; recorder uses autoGain.
+  No more speed-up or "Faster! Faster!". 3 NEW long lively songs at 123 BPM (party, rocket, abc), each verse A + chorus
+  + verse B + chorus (Seedance mini, 9 clips, ~68 credits); song list plays verse after verse ~1.5 to 2 min (one-verse
+  songs ~1 min), Stop button, progress bar, Yes / New song at the end. `Song.more` = extra `Verse`s.
+  Game dance parties ~30 s and prefer the lively songs. Lessons 8 rounds (dance party after round 4); Shape Builder
+  builds two pictures. Play time choices 30 min / 1 h / 2 h / 3 h / 5 h / no limit (default 1 h). Grown-ups gate is
+  now an easy addition. Say It: stale "done" status no longer ends listening early.
+  Song videos 272p 20fps crf 37, webp images re-saved at quality 74 to keep the APK under 30 MB (29.3 MB).
 - v1.4 (owner found bugs, wanted 7 levels and longer, livelier songs):
   Fixed: song "Again" replayed the ending line (end detected before the seek finished); game dance parties could hang
   forever (video never reports its exact end on some phones) so now isCompleted OR paused-near-end OR a safety timer,
@@ -127,7 +137,7 @@ seasonal days and birthday, Guess What Mummy Picked, report before trial ends, P
 Build: `flutter build apk --release` works in the container (Android SDK at /opt/android-sdk, Flutter at /opt/flutter,
 both installed per session). Maven Central sometimes rate-limits (429): retry. GitHub Actions workflow
 `.github/workflows/brainlings-apk.yml` also builds the APK as a downloadable artifact.
-Higgsfield credits: about 95 left on 2026-09-25 (v1.4 used about 7 for 48 voice lines). Check `balance`.
+Higgsfield credits: about 20 left on 2026-09-25 (owner said use them for songs). Check `balance`.
 
 ### Tech plan
 - Flutter (Android first). Firebase for accounts, storage, messages, push.

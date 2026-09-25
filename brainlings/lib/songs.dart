@@ -11,15 +11,102 @@ class SongLine {
   final List<String> pics;
 }
 
+/// One sung part of a song: its music video and its words.
+class Verse {
+  const Verse(this.video, this.lines);
+  final String video; // assets/songs/<video>.mp4
+  final List<SongLine> lines;
+}
+
 class Song {
-  const Song(this.id, this.title, this.art, this.lines);
+  const Song(this.id, this.title, this.art, this.lines, [this.more = const []]);
   final String id;
   final String title;
   final String art;
   final List<SongLine> lines;
+
+  /// Extra verses, sung after the first one.
+  final List<Verse> more;
+
+  List<Verse> get verses => [Verse(id, lines), ...more];
 }
 
 const songs = <Song>[
+  Song('party', "Brainlings Dance Party", 'popper', [
+    SongLine(0, "Put your hands up high,", ["#jump"]),
+    SongLine(1920, "Wave them to the sky!", ["#wave", "sun"]),
+    SongLine(3580, "Bibi and the gang are here,", ["&pip", "&gogo", "&lulu"]),
+    SongLine(5500, "Jump and say hi! Hi!", ["#jump", "#wave"]),
+  ], [
+    Verse('party_c', [
+      SongLine(739, "Dance, dance, Brainlings dance!", ["#dance"]),
+      SongLine(4100, "Shake it, shake it, take a chance!", ["#shake"]),
+      SongLine(7960, "Clap your hands and stamp your feet,", ["#clap", "#stomp"]),
+      SongLine(11500, "Everybody feel the beat!", ["#hooray"]),
+    ]),
+    Verse('party_b', [
+      SongLine(0, "Spin around like a star,", ["#spin", "star"]),
+      SongLine(2520, "Wiggle, wiggle, here we are!", ["#wiggle"]),
+      SongLine(8119, "Touch your toes and touch your nose,", ["#knees", "#nose"]),
+      SongLine(10180, "Round and round the party goes!", ["#spin", "#dance"]),
+    ]),
+    Verse('party_c', [
+      SongLine(739, "Dance, dance, Brainlings dance!", ["#dance"]),
+      SongLine(4100, "Shake it, shake it, take a chance!", ["#shake"]),
+      SongLine(7960, "Clap your hands and stamp your feet,", ["#clap", "#stomp"]),
+      SongLine(11500, "Everybody feel the beat!", ["#hooray"]),
+    ]),
+  ]),
+  Song('rocket', "Counting Rocket", 'star', [
+    SongLine(0, "One, two, three, four, five,", ["@1 2 3 4 5"]),
+    SongLine(2900, "The rocket's coming alive!", ["#rocket"]),
+    SongLine(5460, "Six, seven, eight, nine, ten,", ["@6 7 8 9 10"]),
+    SongLine(10140, "Let's count it up again!", ["#clap"]),
+  ], [
+    Verse('rocket_c', [
+      SongLine(0, "Blast off, zoom, zoom, zoom,", ["#rocket"]),
+      SongLine(2220, "To the stars and to the moon!", ["star", "#moon"]),
+      SongLine(5780, "Counting is so much fun,", ["#hooray"]),
+      SongLine(12240, "Count with me, everyone!", ["&tiko", "#clap"]),
+    ]),
+    Verse('rocket_b', [
+      SongLine(0, "Ten, nine, eight, seven, six,", ["@10 9 8 7 6"]),
+      SongLine(3300, "Count back down, that's the trick!", ["#down"]),
+      SongLine(6760, "Five, four, three, two, one,", ["@5 4 3 2 1"]),
+      SongLine(10620, "Blast off, here we come!", ["#rocket"]),
+    ]),
+    Verse('rocket_c', [
+      SongLine(0, "Blast off, zoom, zoom, zoom,", ["#rocket"]),
+      SongLine(2220, "To the stars and to the moon!", ["star", "#moon"]),
+      SongLine(5780, "Counting is so much fun,", ["#hooray"]),
+      SongLine(12240, "Count with me, everyone!", ["&tiko", "#clap"]),
+    ]),
+  ]),
+  Song('abc', "ABC Animal Jam", 'zebra', [
+    SongLine(0, "A is for alligator, snap, snap, snap!", ["@A", "@Snap!"]),
+    SongLine(4360, "B is for bunny, hop, hop, hop!", ["@B", "&pip"]),
+    SongLine(6940, "C is for cat, meow, meow, meow!", ["@C", "cat"]),
+    SongLine(10340, "D is for dog, woof, woof, wow!", ["@D", "dog"]),
+  ], [
+    Verse('abc_c', [
+      SongLine(0, "Letters and animals, sing along!", ["@A", "@B", "@C"]),
+      SongLine(3340, "Every letter has a song!", ["#dance"]),
+      SongLine(7280, "Say the sound and dance with me,", ["#dance", "&momo"]),
+      SongLine(12280, "Learning is as fun as can be!", ["#hooray", "star"]),
+    ]),
+    Verse('abc_b', [
+      SongLine(799, "E is for elephant, stomp, stomp, stomp!", ["@E", "#stomp"]),
+      SongLine(4140, "F is for frog, jump, jump, jump!", ["@F", "&gogo"]),
+      SongLine(8480, "G is for goat, maa, maa, maa!", ["@G", "@Maa!"]),
+      SongLine(11000, "H is for horse, neigh, ha, ha, ha!", ["@H", "@Neigh!"]),
+    ]),
+    Verse('abc_c', [
+      SongLine(0, "Letters and animals, sing along!", ["@A", "@B", "@C"]),
+      SongLine(3340, "Every letter has a song!", ["#dance"]),
+      SongLine(7280, "Say the sound and dance with me,", ["#dance", "&momo"]),
+      SongLine(12280, "Learning is as fun as can be!", ["#hooray", "star"]),
+    ]),
+  ]),
   Song('hello', "Hello Friends", 'heart', [
     SongLine(0, "Hello, hello, how are you?", ["#wave", "heart"]),
     SongLine(3740, "I'm so happy, I love you too!", ["heart", "star"]),

@@ -26,7 +26,7 @@ class TeachBibi extends StatefulWidget {
 }
 
 class _TeachBibiState extends State<TeachBibi> {
-  static const rounds = 5;
+  static const rounds = 8;
   static const things = [
     'ladybird',
     'donut',
@@ -223,7 +223,7 @@ class _TeachBibiState extends State<TeachBibi> {
     if (_round >= rounds) {
       finishGame(context, Skill.teaching, 'Teach $_name', game: 'teach', maxLevel: maxLevel);
     } else {
-      if (_round == 3) await danceBreak(context);
+      if (_round == 4) await danceBreak(context);
       if (mounted) _newRound();
     }
   }

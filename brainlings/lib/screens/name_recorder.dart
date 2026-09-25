@@ -67,7 +67,7 @@ class _VoiceRecorderState extends State<VoiceRecorder> {
           '${dir.path}/${widget.fileName}-${DateTime.now().millisecondsSinceEpoch}.m4a';
       await Voice.stop();
       await _rec.start(
-        const RecordConfig(encoder: AudioEncoder.aacLc, numChannels: 1),
+        const RecordConfig(encoder: AudioEncoder.aacLc, numChannels: 1, autoGain: true, noiseSuppress: true, sampleRate: 44100),
         path: path,
       );
       _levels.clear();
@@ -107,7 +107,7 @@ class _VoiceRecorderState extends State<VoiceRecorder> {
     final loud = _levels.where((e) => e.$2 >= threshold).toList();
     if (loud.isEmpty) return;
     final start = (loud.first.$1 - 90).clamp(0, 1 << 30);
-    final end = loud.last.$1 + 160;
+    final end = loud.last.$1 + 90;
     widget.onTrimmed!(start, end);
   }
 

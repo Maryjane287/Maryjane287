@@ -106,7 +106,7 @@ class _GrownUpsScreenState extends State<GrownUpsScreen> {
               '${p[Skill.teaching]! ~/ 2}',
               'times they taught ${app.creatureName}',
             ),
-            _stat('$mins min', 'played today (of ${app.bedtimeMinutes})'),
+            _stat('$mins min', 'played today (${app.bedtimeMinutes == 0 ? 'no limit' : 'of ${playTimeLabel(app.bedtimeMinutes)}'})'),
           ],
         ),
         const SizedBox(height: 12),
@@ -314,21 +314,17 @@ class _GrownUpsScreenState extends State<GrownUpsScreen> {
           ],
         ),
         const SizedBox(height: 16),
-        Text(
-          'Sleepy time after ${app.bedtimeMinutes} minutes a day',
-          style: T.d(18),
-        ),
-        Slider(
-          value: app.bedtimeMinutes.toDouble(),
-          min: 10,
-          max: 60,
-          divisions: 10,
-          activeColor: C.lilacDeep,
-          onChanged: (v) {
-            app.bedtimeMinutes = v.round();
+        Text('Play time each day', style: T.d(18)),
+        const SizedBox(height: 8),
+        PlayTimePicker(
+          value: app.bedtimeMinutes,
+          onChanged: (m) {
+            app.bedtimeMinutes = m;
             app.save();
+            setState(() {});
           },
         ),
+        const SizedBox(height: 8),
         SwitchListTile(
           contentPadding: EdgeInsets.zero,
           title: Text('Background music', style: T.d(18)),

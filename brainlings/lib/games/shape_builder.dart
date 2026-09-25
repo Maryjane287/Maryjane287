@@ -132,8 +132,17 @@ class _ShapeBuilderState extends State<ShapeBuilder> {
   static const maxLevel = 7;
   final _r = Random();
   final _level = app.levelOf('shapes');
-  late final _pic = _pictures[levelMode(_level, maxLevel, Random()) - 1];
+  // Two pictures per game: this level's picture, then a bonus one.
+  late final List<(List<_Piece>, String, String)> _pics = () {
+    final first = _pictures[levelMode(_level, maxLevel, Random()) - 1];
+    final others = _pictures.take(min(_level + 1, _pictures.length)).where((p) => p != first).toList()..shuffle(_r);
+    return [first, others.first];
+  }();
+  int _picIndex = 0;
+  (List<_Piece>, String, String) get _pic => _pics[_picIndex];
   List<_Piece> get _house => _pic.$1;
+  int get _done => _picIndex == 0 ? _round : _pics[0].$1.length + _round;
+  int get _total => _pics[0].$1.length + _pics[1].$1.length;
   int _round = 0;
   late List<Shape> _choices;
   String _line = '';
@@ -156,7 +165,7 @@ class _ShapeBuilderState extends State<ShapeBuilder> {
     _choices = [_piece.shape, others[0], others[1], if (_level >= 3) others[2]]..shuffle(_r);
     _wrong = null;
     _mood = Mood.happy;
-    _line = _round == 0 ? '${levelLine(_level)}|${_pic.$2}|${_piece.job}' : _piece.job;
+    _line = _round == 0 ? '${_picIndex == 0 ? '${levelLine(_level)}|' : ''}${_pic.$2}|${_piece.job}' : _piece.job;
     setState(() {});
     Voice.say(_line);
   }
@@ -181,9 +190,20 @@ class _ShapeBuilderState extends State<ShapeBuilder> {
         celebrate(context, count: 100);
         setState(() => _line = _pic.$3);
         await Voice.say(_line);
-        if (mounted) finishGame(context, Skill.shapes, 'Shape Builder', game: 'shapes', maxLevel: maxLevel);
+        if (!mounted) return;
+        if (_picIndex == 0) {
+          // Picture one is done: a dance party, then a bonus picture.
+          await danceBreak(context);
+          if (!mounted) return;
+          setState(() {
+            _picIndex = 1;
+            _round = 0;
+          });
+          _newRound();
+        } else {
+          finishGame(context, Skill.shapes, 'Shape Builder', game: 'shapes', maxLevel: maxLevel);
+        }
       } else {
-        if (_round == 3) await danceBreak(context);
         if (mounted) _newRound();
       }
     } else {
@@ -206,8 +226,8 @@ class _ShapeBuilderState extends State<ShapeBuilder> {
       host: 'tiko',
       level: _level,
       scene: 'playroom',
-      round: _round,
-      total: _house.length,
+      round: _done,
+      total: _total,
       line: _line,
       mood: _mood,
       bounce: _bounce,
