@@ -111,6 +111,50 @@
 .kd-lines b { display: block; font-family: 'Fredoka', sans-serif; font-size: 2.4cqw; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); -webkit-text-stroke: .15cqw var(--ink); margin-bottom: .8cqw; }
 .kd-free { position: absolute; z-index: 3; left: 0; right: 0; bottom: 0; background: var(--ink); color: var(--pop); text-align: center; font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 4cqw; padding: 2.4cqw; letter-spacing: .04em; }
 
+/* Year in review: glossy double issue */
+.cv-review .cv-photo { position: absolute; inset: 30cqw 0 0 0; z-index: 0; }
+.cv-review::after { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, var(--bg) 0%, var(--bg) 28%, transparent 48%, transparent 58%, color-mix(in srgb, var(--bg) 70%, #000 30%) 100%); pointer-events: none; }
+.rv-mast { position: absolute; top: 7cqw; left: 4cqw; right: 4cqw; z-index: 2; text-align: center; color: var(--ink); }
+.rv-mast span { display: block; font-size: 4.2cqw; font-weight: 800; letter-spacing: .5em; text-transform: uppercase; padding-left: .5em; }
+.rv-mast b { display: block; font-size: 30cqw; line-height: .82; color: var(--pop); letter-spacing: -.01em; text-shadow: .8cqw 1cqw 0 color-mix(in srgb, #000 35%, transparent); }
+.rv-mast em { display: block; font-family: 'Caveat', cursive; font-style: normal; font-size: 10cqw; line-height: .8; margin-top: -3.5cqw; transform: rotate(-4deg); color: var(--ink); }
+.rv-lines { position: absolute; left: 4cqw; top: 70cqw; width: 42cqw; z-index: 3; display: grid; gap: 3cqw; }
+.rv-lines p { color: #fff; }
+.rv-star { position: absolute; right: 4cqw; top: 66cqw; z-index: 3; width: 26cqw; height: 26cqw; display: grid; place-content: center; text-align: center; background: var(--accent); color: #fff; font-weight: 800; font-size: 3.6cqw; line-height: 1.05; text-transform: uppercase; letter-spacing: .04em; clip-path: polygon(50% 0, 61% 15%, 79% 7%, 80% 26%, 98% 30%, 88% 47%, 100% 62%, 82% 70%, 83% 90%, 64% 86%, 50% 100%, 38% 86%, 18% 92%, 18% 72%, 0 64%, 12% 48%, 2% 30%, 20% 26%, 22% 7%, 39% 15%); transform: rotate(12deg); }
+.rv-family { margin: 0; font-family: 'DM Serif Display', serif; font-size: 9cqw; line-height: .95; color: #fff; }
+.rv-family span { display: block; font-family: 'Outfit', sans-serif; font-size: 2.5cqw; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--pop); margin-top: 1.4cqw; }
+
+/* Pet: most wanted celebrity pet magazine */
+.cv-pet .cv-photo { position: absolute; inset: 16cqw 0 0 0; z-index: 0; }
+.cv-pet::after { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, transparent 60%, color-mix(in srgb, var(--bg) 70%, #000 30%) 100%); pointer-events: none; }
+.pt-mast { position: absolute; top: 8.5cqw; left: 0; right: 0; z-index: 2; margin: 0; text-align: center; line-height: .86; color: var(--ink); text-shadow: .6cqw .8cqw 0 var(--accent); }
+.pt-paws i { position: absolute; z-index: 2; width: 5cqw; height: 4.4cqw; border-radius: 50% 50% 45% 45%; background: var(--ink); opacity: .85; }
+.pt-paws i::before { content: ''; position: absolute; left: -1.2cqw; top: -3.4cqw; width: 2cqw; height: 2.4cqw; border-radius: 50%; background: inherit; box-shadow: 2.2cqw -1cqw 0 var(--ink), 4.4cqw -1cqw 0 var(--ink), 6.2cqw 0 0 var(--ink); }
+.pt-paws i:nth-child(1) { left: 8cqw; top: 116cqw; transform: rotate(-20deg); }
+.pt-paws i:nth-child(2) { left: 17cqw; top: 110cqw; transform: rotate(-10deg) scale(.8); }
+.pt-paws i:nth-child(3) { left: 10cqw; top: 104cqw; transform: rotate(-24deg) scale(.6); }
+.pt-lines { position: absolute; left: 4cqw; top: 50cqw; width: 40cqw; z-index: 3; display: grid; gap: 3cqw; }
+.pt-lines p { color: #1d1a2f; text-shadow: none; background: rgba(255,255,255,.92); padding: 1.6cqw 2cqw; border-radius: 1.6cqw; font-size: 3.2cqw; box-shadow: .6cqw .8cqw 0 color-mix(in srgb, var(--ink) 25%, transparent); }
+.pt-lines b { color: color-mix(in srgb, var(--accent) 65%, #1d1a2f); }
+.pt-award { position: absolute; right: 4cqw; top: 48cqw; z-index: 3; width: 28cqw; height: 28cqw; border-radius: 50%; display: grid; place-content: center; text-align: center; padding: 3cqw; background: var(--accent); color: var(--ink); font-family: 'DM Serif Display', serif; font-size: 3.8cqw; line-height: 1.02; border: 1cqw dashed color-mix(in srgb, var(--ink) 45%, transparent); outline: 1.2cqw solid var(--accent); transform: rotate(8deg); box-shadow: 0 1.4cqw 0 rgba(0,0,0,.18); }
+.pt-award small { font-family: 'Outfit', sans-serif; font-size: 2.2cqw; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; margin-bottom: .6cqw; }
+.pt-award::after { content: ''; position: absolute; left: 50%; bottom: -9cqw; width: 12cqw; height: 11cqw; margin-left: -6cqw; z-index: -1; background: linear-gradient(90deg, var(--accent) 0 45%, transparent 45% 55%, var(--accent) 55%); clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 80%, 50% 100%, 25% 80%, 0 100%); }
+.pt-age { margin: 0; font-family: 'Anton', Impact, sans-serif; font-size: 8cqw; line-height: 1; color: #fff; }
+.pt-age span { display: block; font-family: 'Outfit', sans-serif; font-size: 2.5cqw; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #fff; opacity: .85; margin-top: 1cqw; }
+
+/* Stars: cosmic birthday issue */
+.cv-stars { background: radial-gradient(circle at 70% 20%, color-mix(in srgb, var(--pop) 30%, var(--bg)) 0, var(--bg) 60%); }
+.st-sky { position: absolute; inset: 0; z-index: 0; background-image: radial-gradient(var(--pop) .25cqw, transparent .35cqw), radial-gradient(#fff .18cqw, transparent .3cqw); background-size: 11cqw 13cqw, 7cqw 9cqw; background-position: 0 0, 3cqw 5cqw; opacity: .7; }
+.st-moon { position: absolute; z-index: 1; right: 10cqw; top: 29cqw; width: 10cqw; height: 10cqw; border-radius: 50%; box-shadow: -2.4cqw 1.6cqw 0 0 var(--accent); transform: rotate(-20deg); }
+.st-mast { position: absolute; top: 9cqw; left: 4cqw; right: 4cqw; z-index: 2; margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 900; line-height: .9; color: var(--accent); letter-spacing: .04em; }
+.st-mast em { display: block; font-family: 'Caveat', cursive; font-weight: 600; font-style: normal; font-size: 9cqw; color: var(--pop); letter-spacing: 0; margin-top: -1cqw; transform: rotate(-3deg); transform-origin: left; }
+.st-photo { position: absolute; z-index: 1; right: 5cqw; top: 44cqw; width: 58cqw; height: 58cqw; border-radius: 50%; overflow: hidden; background: var(--pop); border: 1.2cqw solid var(--accent); box-shadow: 0 0 0 2.4cqw color-mix(in srgb, var(--accent) 30%, transparent), 0 0 10cqw color-mix(in srgb, var(--accent) 45%, transparent); }
+.st-lines { position: absolute; z-index: 3; left: 4cqw; top: 44cqw; width: 34cqw; display: grid; gap: 3cqw; }
+.st-lines p { margin: 0; font-size: 3.4cqw; font-weight: 700; line-height: 1.12; color: var(--ink); }
+.st-lines b { display: block; font-size: 2.3cqw; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: .6cqw; }
+.st-name { position: absolute; z-index: 3; left: 4cqw; right: 4cqw; bottom: 6cqw; font-family: 'DM Serif Display', serif; font-size: 13cqw; line-height: .9; color: var(--ink); border-top: .4cqw solid color-mix(in srgb, var(--accent) 60%, transparent); padding-top: 3cqw; }
+.st-name span { display: block; font-family: 'Outfit', sans-serif; font-size: 2.8cqw; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--pop); margin-top: 1.4cqw; }
+
 /* Inside pages */
 .pg-in { padding: 9cqw 8cqw; }
 .pg { background: #fffaf2; color: #1d1a2f; }

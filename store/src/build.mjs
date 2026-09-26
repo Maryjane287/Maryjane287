@@ -39,7 +39,7 @@ function layout({ title, description, path, body, og = {}, jsonld, bodyClass = '
     'og:type': og.type || 'website',
     ...og.extra,
   };
-  const nav = mags.map(m => `<a href="/${m.slug}/">${esc(m.occasion.split(' ')[0])}</a>`).join('');
+  const nav = mags.slice(0, 4).map(m => `<a href="/${m.slug}/">${esc(m.occasion.split(' ')[0])}</a>`).join('') + '<a href="/#magazines">More</a>';
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -185,7 +185,6 @@ ${tickerHtml}
 <section class="section" id="magazines">
   <div class="section-head"><p class="kicker">Pick a magazine</p><h2>Which story are you telling?</h2></div>
   <div class="mag-grid">${cards}</div>
-  <div class="soon"><span class="soon-badge">Coming for Christmas</span><p><b>Our Year in Review:</b> the whole family's year as a glossy magazine. Perfect for stockings and far away relatives.</p></div>
 </section>
 <section class="section section-tint">
   <div class="section-head"><p class="kicker">How it works</p><h2>A gift that feels handmade, without the hours</h2></div>

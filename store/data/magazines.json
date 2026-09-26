@@ -609,5 +609,507 @@
         }
       }
     ]
+  },
+  {
+    "slug": "year-in-review-magazine",
+    "layout": "review",
+    "title": "Our Year in Review",
+    "searchTitle": "Personalised Year in Review Magazine",
+    "pinTitle": "Our Year in Review Magazine",
+    "occasion": "Christmas and New Year",
+    "short": "Your family's whole year as a glossy double issue, full of awards and best bits.",
+    "description": "Turn your family's year into a glossy magazine everyone will fight over at Christmas. Biggest adventures, proudest moments, the funniest disasters and a family awards ceremony, all written up like front page news. Perfect for stockings, grandparents far away and New Year's Eve.",
+    "keywords": [
+      "year in review ideas",
+      "family christmas gift",
+      "christmas gift for grandparents",
+      "personalised christmas gift",
+      "new year memory book",
+      "family yearbook"
+    ],
+    "inside": [
+      "A double issue cover with your year and your family",
+      "Editor's note: your message about the year",
+      "The year by numbers, in funny facts",
+      "The family awards ceremony",
+      "A photo spread of the best bits",
+      "The moment you will laugh about forever"
+    ],
+    "fields": [
+      {
+        "id": "family",
+        "label": "Who is this year about?",
+        "example": "The Taylors",
+        "max": 22
+      },
+      {
+        "id": "year",
+        "label": "Which year?",
+        "example": "2026",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mum and Dad",
+        "max": 30
+      },
+      {
+        "id": "adventure",
+        "label": "The biggest adventure",
+        "example": "Our first camping trip, in the rain, and we loved it",
+        "max": 70
+      },
+      {
+        "id": "proud",
+        "label": "The proudest moment",
+        "example": "Leo rode his bike with no stabilisers",
+        "max": 60
+      },
+      {
+        "id": "word",
+        "label": "Your word of the year",
+        "example": "Together",
+        "max": 24
+      },
+      {
+        "id": "moment",
+        "label": "The moment you will laugh about forever",
+        "example": "Dad setting off the smoke alarm making pancakes on Christmas morning, again",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message about the year",
+        "example": "What a year. Thank you for every muddy walk, every late night chat and every silly dance in the kitchen. Here is to the next one.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "Best photo of the year",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "taylors",
+        "palette": "festive",
+        "portrait": {
+          "skin": 1,
+          "hair": "curly",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "family": "The Taylors",
+          "year": "2026",
+          "adventure": "Our first camping trip, in the rain, and we loved it",
+          "proud": "Leo rode his bike with no stabilisers",
+          "word": "Together"
+        }
+      },
+      {
+        "id": "chris-emma",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 2,
+          "hair": "long",
+          "hairColor": "#1c1410"
+        },
+        "values": {
+          "family": "Chris & Emma",
+          "year": "2026",
+          "adventure": "Six countries, one very small car",
+          "proud": "Finally finishing the garden",
+          "word": "Brave"
+        }
+      },
+      {
+        "id": "browns",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "bun",
+          "hairColor": "#1c1410"
+        },
+        "values": {
+          "family": "The Browns",
+          "year": "2026",
+          "adventure": "Moving to a house by the sea",
+          "proud": "Sam's first ever school play",
+          "word": "Home"
+        }
+      },
+      {
+        "id": "mia-sam",
+        "palette": "cosmos",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#b5652b"
+        },
+        "values": {
+          "family": "Mia & Sam",
+          "year": "2026",
+          "adventure": "Learning to surf, badly",
+          "proud": "Running our first 10k",
+          "word": "Joy"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "pet-magazine",
+    "layout": "pet",
+    "title": "The Pet Issue",
+    "searchTitle": "Personalised Pet Magazine",
+    "pinTitle": "Personalised Pet Magazine",
+    "occasion": "Pet lovers",
+    "short": "A celebrity magazine starring the most famous member of the family: the pet.",
+    "description": "Every pet deserves to be a cover star. A glossy, very silly celebrity magazine all about their secret talents, their crimes against socks and their favourite snacks, with their photo on the front. A brilliant gift for pet parents, pet birthdays and new puppies or kittens.",
+    "keywords": [
+      "gift for dog lovers",
+      "gift for cat lovers",
+      "pet birthday ideas",
+      "personalised dog gift",
+      "dog mom gift",
+      "new puppy gift"
+    ],
+    "inside": [
+      "A cover starring their photo and their official title",
+      "A letter to a very good pet",
+      "Their life by the numbers",
+      "The most wanted page: crimes and misdemeanours",
+      "A photo spread of their best angles",
+      "Their most legendary moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Your pet's name",
+        "example": "Biscuit",
+        "max": 12
+      },
+      {
+        "id": "award",
+        "label": "Their official title",
+        "example": "Good Boy of the Year",
+        "max": 26
+      },
+      {
+        "id": "age",
+        "label": "How old are they?",
+        "example": "3",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mia",
+        "max": 30
+      },
+      {
+        "id": "talent",
+        "label": "Their secret talent",
+        "example": "Hears a cheese wrapper from three rooms away",
+        "max": 60
+      },
+      {
+        "id": "crime",
+        "label": "Most wanted for",
+        "example": "Stealing socks, then looking innocent",
+        "max": 50
+      },
+      {
+        "id": "snack",
+        "label": "Favourite snack",
+        "example": "Anything you are eating",
+        "max": 40
+      },
+      {
+        "id": "moment",
+        "label": "Their most legendary moment",
+        "example": "Walking into the kitchen wearing the Christmas tinsel like a crown and refusing to take it off",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "You are the best thing that ever happened to our sofa. Thank you for every wag, every cuddle and every stolen sock.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of your pet",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "Their best angle",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "biscuit",
+        "palette": "butter",
+        "portrait": {
+          "pet": "dog",
+          "fur": "#d9a066",
+          "ear": "#8a5a33",
+          "patch": "#fff4e2"
+        },
+        "values": {
+          "name": "Biscuit",
+          "award": "Good Boy of the Year",
+          "age": "3",
+          "talent": "Hears a cheese wrapper from three rooms away",
+          "crime": "Stealing socks, then looking innocent",
+          "snack": "Anything you are eating"
+        }
+      },
+      {
+        "id": "luna",
+        "palette": "midnight",
+        "portrait": {
+          "pet": "cat",
+          "fur": "#8c8c96",
+          "patch": "#e9e6ee"
+        },
+        "values": {
+          "name": "Luna",
+          "award": "Queen of the Sofa",
+          "age": "5",
+          "talent": "Knocking things off tables at 3am",
+          "crime": "Sitting on laptops during meetings",
+          "snack": "Tuna, served promptly"
+        }
+      },
+      {
+        "id": "pepper",
+        "palette": "mint",
+        "portrait": {
+          "pet": "dog",
+          "fur": "#3b2a24",
+          "ear": "#241814",
+          "patch": "#f3e6d6"
+        },
+        "values": {
+          "name": "Pepper",
+          "award": "Zoomies Champion",
+          "age": "2",
+          "talent": "Opens doors that should stay closed",
+          "crime": "Digging to the centre of the earth",
+          "snack": "Peanut butter, from a spoon"
+        }
+      },
+      {
+        "id": "mochi",
+        "palette": "rose",
+        "portrait": {
+          "pet": "cat",
+          "fur": "#f0a860",
+          "patch": "#fff1dc"
+        },
+        "values": {
+          "name": "Mochi",
+          "award": "Chief Nap Officer",
+          "age": "4",
+          "talent": "Fits in any box, however small",
+          "crime": "Stealing the warm spot in bed",
+          "snack": "Chicken, never the cheap one"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "star-sign-birthday-magazine",
+    "layout": "stars",
+    "title": "The Birthday Stars Issue",
+    "searchTitle": "Personalised Zodiac Birthday Magazine",
+    "pinTitle": "Zodiac Birthday Magazine",
+    "occasion": "Star sign birthdays",
+    "short": "A cosmic birthday magazine with their star sign, lucky crystal and a very flattering horoscope.",
+    "description": "A birthday magazine written in the stars. Their zodiac sign on the cover, their lucky crystal, their cosmic superpower and a playful horoscope for the year ahead, plus your message and photos inside. Made for astrology lovers, crystal collectors and anyone who reads their horoscope first.",
+    "keywords": [
+      "zodiac birthday gift",
+      "astrology gift",
+      "star sign gift",
+      "birthday gift for her",
+      "crystal lover gift",
+      "horoscope gift"
+    ],
+    "inside": [
+      "A cosmic cover with their star sign and photo",
+      "Your birthday reading: your message to them",
+      "Their stars by the numbers",
+      "Their lucky crystal and what it means",
+      "A photo spread under the stars",
+      "What the stars say about the year ahead"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their first name or nickname",
+        "example": "Emma",
+        "max": 12
+      },
+      {
+        "id": "sign",
+        "label": "Their star sign",
+        "example": "Leo",
+        "max": 11
+      },
+      {
+        "id": "age",
+        "label": "The age they are turning",
+        "example": "35",
+        "max": 3
+      },
+      {
+        "id": "born",
+        "label": "Their birthday",
+        "example": "12 August",
+        "max": 18
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Sam",
+        "max": 30
+      },
+      {
+        "id": "crystal",
+        "label": "Their lucky crystal",
+        "example": "Citrine",
+        "max": 24
+      },
+      {
+        "id": "power",
+        "label": "Their cosmic superpower",
+        "example": "Lighting up every room they walk into",
+        "max": 60
+      },
+      {
+        "id": "prediction",
+        "label": "This year the stars predict",
+        "example": "A spontaneous trip and a very good haircut",
+        "max": 80
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "Happy birthday to the brightest star I know. The universe got it very right when it made you.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "Photo for inside",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma",
+        "palette": "cosmos",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#b5652b"
+        },
+        "values": {
+          "name": "Emma",
+          "sign": "Leo",
+          "age": "35",
+          "born": "12 August",
+          "crystal": "Citrine",
+          "power": "Lighting up every room they walk into",
+          "prediction": "A spontaneous trip and a very good haircut"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#1c1410"
+        },
+        "values": {
+          "name": "Sam",
+          "sign": "Scorpio",
+          "age": "40",
+          "born": "3 November",
+          "crystal": "Obsidian",
+          "power": "Knowing exactly what you are thinking",
+          "prediction": "Big news at work and an even bigger celebration"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "bun",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Mia",
+          "sign": "Pisces",
+          "age": "28",
+          "born": "9 March",
+          "crystal": "Amethyst",
+          "power": "Making everyone feel understood",
+          "prediction": "A creative dream finally comes true"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "mint",
+        "portrait": {
+          "skin": 2,
+          "hair": "curly",
+          "hairColor": "#1c1410"
+        },
+        "values": {
+          "name": "Leo",
+          "sign": "Gemini",
+          "age": "30",
+          "born": "2 June",
+          "crystal": "Clear quartz",
+          "power": "Talking to anyone about anything",
+          "prediction": "A new city, a new hobby and a lot of laughing"
+        }
+      }
+    ]
   }
 ]
