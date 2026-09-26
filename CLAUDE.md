@@ -76,7 +76,12 @@ use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in 
 for painted pictures on every sheet.
 Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
 (colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
-fractions, colour by number, spot the difference. BLUE OCEAN update live (88 tools, VERSION 26, see printpals/BLUE_OCEAN.md): owner asked to solve problems competitors ignore.
+fractions, colour by number, spot the difference. PAYMENT PLAN + batch 11 live (92 tools, VERSION 27): free forever core; PrintPals Plus $4.99/month or $39/year with 7 day
+trial (monthly learning plan, personalised activity book up to 40 pages); Teacher $59/year (class packs). All Plus features are
+'free while we launch' (tools have 'plus': True, /plus pricing page) until the owner sets up a payment provider (recommended a
+merchant of record such as Lemon Squeezy or Paddle: handles global VAT; licence keys can unlock Plus without a server). Also new:
+learning passport (free), easy-read letters toggle (Andika) on every sheet. Activity book = also a product to sell on KDP/Etsy
+(untick 'Show printpals.web.app'). BLUE OCEAN update live (88 tools, VERSION 26, see printpals/BLUE_OCEAN.md): owner asked to solve problems competitors ignore.
 New 'Packs' section first: weekly learning pack (pack.js makePack: CURRICULUM by age group 3/4/5/6 reusing other makers,
 cover, star chart, day badges, certificate, grown-up guide, answers; siblings textarea "Leo 6"), quick packs (restaurant, rainy,
 sick, bedtime, outdoors), family far away (postcards, video call bingo, interview, news, countdown). app.js: Ink saver (white

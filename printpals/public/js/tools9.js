@@ -264,7 +264,7 @@ function makeBookmarks(o, paper) {
     const bw = pg.width / 4, bh = pg.bottom - pg.m;
     for (let k = 0; k < 4; k++) {
       const i = p * 4 + k, x = pg.left + k * bw + 3, w = bw - 6, y = pg.m, c = i % PALETTE.length;
-      const name = names.length ? names[i % names.length] : '';
+      const name = i < names.length ? names[i] : '';
       pg.add(`<rect x="${x}" y="${y}" width="${w}" height="${bh}" rx="6" fill="${bright ? TINTS[c] : '#fff'}" stroke="${bright ? PALETTE[c] : INK}" stroke-width="0.9"/>`);
       pg.add(`<circle cx="${x + w / 2}" cy="${y + 7}" r="2.4" fill="#fff" stroke="${INK}" stroke-width="0.6"/>`);
       const size = w - 6;

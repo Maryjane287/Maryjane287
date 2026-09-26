@@ -1720,7 +1720,10 @@ const STORIES = {
 
 function makeStory(o, paper) {
   const rand = rng(+o.seed || 1);
-  const name = nameOf(o.name, 'Mia'), friend = nameOf(o.friend, 'Leo');
+  const name = nameOf(o.name, 'Mia');
+  // The friend is never the same person as the hero ("Leo and Leo" reads oddly).
+  let friend = nameOf(o.friend, 'Leo');
+  if (friend.toLowerCase() === name.toLowerCase()) friend = ['Sam', 'Emma', 'Chris', 'Mia'].find((f) => f.toLowerCase() !== name.toLowerCase());
   const fill = (s) => s.replace(/\{name\}/g, name).replace(/\{friend\}/g, friend);
   const keys = o.story === 'all' ? Object.keys(STORIES) : [STORIES[o.story] ? o.story : 'balloon'];
   const big = o.text !== 'small';
@@ -5864,7 +5867,7 @@ function makeBookmarks(o, paper) {
     const bw = pg.width / 4, bh = pg.bottom - pg.m;
     for (let k = 0; k < 4; k++) {
       const i = p * 4 + k, x = pg.left + k * bw + 3, w = bw - 6, y = pg.m, c = i % PALETTE.length;
-      const name = names.length ? names[i % names.length] : '';
+      const name = i < names.length ? names[i] : '';
       pg.add(`<rect x="${x}" y="${y}" width="${w}" height="${bh}" rx="6" fill="${bright ? TINTS[c] : '#fff'}" stroke="${bright ? PALETTE[c] : INK}" stroke-width="0.9"/>`);
       pg.add(`<circle cx="${x + w / 2}" cy="${y + 7}" r="2.4" fill="#fff" stroke="${INK}" stroke-width="0.6"/>`);
       const size = w - 6;
@@ -6730,9 +6733,11 @@ function makeGridCopy(o, paper) {
     grid(x, y, cell, (r, c, ch) => (c < m / 2 ? colourOf(ch) : '#fff'), labels);
     pg.add(`<line x1="${x + cell * m / 2}" x2="${x + cell * m / 2}" y1="${y - 3}" y2="${y + cell * n + 3}" stroke="${PINK}" stroke-width="0.9" stroke-dasharray="2.4 1.6"/>`);
     const ky = y + cell * n + 8;
-    Object.entries(art.colours).filter(([ch]) => ch !== '.').forEach(([, [nm, hex]], i) => {
-      const kx = pg.left + 4 + i * 36;
-      pg.add(`<rect x="${kx}" y="${ky}" width="7" height="7" rx="1.5" fill="${hex}" stroke="${INK}" stroke-width="0.4"/>` + txt(kx + 9, ky + 5.4, nm, 4, { anchor: 'start', font: FONT }));
+    const keyList = Object.entries(art.colours).filter(([ch]) => ch !== '.');
+    const step = Math.min(36, (pg.width - 8) / Math.max(1, keyList.length));
+    keyList.forEach(([, [nm, hex]], i) => {
+      const kx = pg.left + 4 + i * step;
+      pg.add(`<rect x="${kx}" y="${ky}" width="7" height="7" rx="1.5" fill="${hex}" stroke="${INK}" stroke-width="0.4"/>` + txt(kx + 9, ky + 5.4, nm, fitFont(nm, 4, step - 11, 0.52), { anchor: 'start', font: FONT }));
     });
     return [pg.svg()];
   }
@@ -7297,7 +7302,7 @@ function packBadge(svg, label, colour) {
   return svg.replace(/<\/svg>$/, `${g}</svg>`);
 }
 
-function packCover(paper, title, sub, lineArt, extra, tint) {
+function packCover(paper, title, sub, lineArt, extra, tint, owner = 'pack') {
   const pg = new Page(paper, '', { bare: true, tint: tint || '#fffdf8' });
   const cx = pg.w / 2;
   pg.add(`<rect x="${pg.left - 3}" y="${pg.m - 3}" width="${pg.width + 6}" height="${pg.bottom - pg.m + 3}" rx="10" fill="#fff" stroke="#ffb938" stroke-width="1.2"/>`);
@@ -7311,7 +7316,7 @@ function packCover(paper, title, sub, lineArt, extra, tint) {
   pg.add(`<g transform="translate(${cx - size / 2} ${y + 10}) scale(${(size / 200).toFixed(4)})">${colouringArt(lineArt)}</g>`);
   const ly = pg.bottom - 38;
   (extra || []).forEach((l, i) => pg.add(txt(cx, ly + i * 7, l, 4.6, { font: FONT, colour: SOFT })));
-  pg.add(txt(pg.left + 12, pg.bottom - 16, 'This pack belongs to', 4.6, { anchor: 'start', font: FONT }) + `<line x1="${pg.left + 56}" x2="${pg.right - 12}" y1="${pg.bottom - 15.4}" y2="${pg.bottom - 15.4}" stroke="#b9b3d6" stroke-width="0.4"/>`);
+  pg.add(txt(pg.left + 12, pg.bottom - 16, `This ${owner} belongs to`, 4.6, { anchor: 'start', font: FONT }) + `<line x1="${pg.left + 56}" x2="${pg.right - 12}" y1="${pg.bottom - 15.4}" y2="${pg.bottom - 15.4}" stroke="#b9b3d6" stroke-width="0.4"/>`);
   pg.footer = () => {};
   return pg.svg();
 }
@@ -7402,45 +7407,233 @@ function packCtx(child, theme, day, rand) {
   };
 }
 
-function makePack(o, paper) {
-  const rand = rng(+o.seed || 1);
-  const theme = PACK_THEMES[o.theme] || PACK_THEMES.animals;
+function ageLabel(group) {
+  return group === 3 ? 'ages 3 to 4' : group === 6 ? 'ages 6 to 8' : `ages ${group} to ${group + 1}`;
+}
+
+/** One week of pages for one child. levels says which age group each area uses (a stretch week can go one up). */
+function packWeek(child, ci, theme, o, paper, week, levels) {
   const days = Math.max(1, Math.min(5, +o.days || 5));
   const per = Math.max(1, Math.min(3, +o.per || 2));
+  const rand = rng((+o.seed || 1) + week * 7919 + ci * 31);
+  const areas = ['words', 'numbers', 'fun'];
+  const titles = [], plan = [], keys = [], sheets = [], dayNames = [];
+  const offset = Math.floor(rand() * 6) + week * 2;
+  for (let d = 0; d < days; d++) {
+    const ctx = packCtx(child, theme, d + offset, rand);
+    const dayLabel = week ? `Week ${week}, Day ${d + 1}` : `Day ${d + 1}`;
+    dayNames.push(week ? `Day ${d + 1}` : dayLabel);
+    const today = [], tips = [];
+    // One page from each area, rotating which areas come first so every day feels different.
+    const order = per === 3 ? areas : per === 2 ? (d % 3 === 0 ? ['words', 'numbers'] : d % 3 === 1 ? ['numbers', 'fun'] : ['words', 'fun']) : [areas[d % 3]];
+    order.forEach((area, k) => {
+      const list = CURRICULUM[levels[area]][area];
+      const [id, opts, title, tip] = list[(d + offset + k * 2) % list.length](ctx);
+      const res = packRun(id, { key: true, ...opts }, paper, (+o.seed || 1) + d * 97 + k * 13 + ci * 1009 + week * 4099);
+      if (!res.sheets.length) return;
+      const label = child.name ? `${child.name}, ${dayLabel}` : dayLabel;
+      sheets.push(packBadge(res.sheets[0], label, PALETTE[(d + week) % PALETTE.length]));
+      if (res.key) keys.push(packBadge(res.key, `Answers: ${dayLabel}`, SOFT));
+      today.push(title); tips.push({ title, tip });
+    });
+    titles.push(today); plan.push({ day: dayLabel, items: tips });
+  }
+  return { sheets, keys, titles, plan, dayNames, offset };
+}
+
+function makePack(o, paper) {
+  const theme = PACK_THEMES[o.theme] || PACK_THEMES.animals;
   const pages = [];
   packChildren(o).forEach((child, ci) => {
-    const group = ageGroup(child.age), cur = CURRICULUM[group];
-    const areas = ['words', 'numbers', 'fun'].slice(0, per === 1 ? 3 : 3);
-    const titles = [], plan = [], keys = [], sheets = [];
-    const dayNames = [];
-    const offset = Math.floor(rand() * 6);
-    for (let d = 0; d < days; d++) {
-      const ctx = packCtx(child, theme, d + offset, rand);
-      const dayLabel = `Day ${d + 1}`;
-      dayNames.push(dayLabel);
-      const today = [], tips = [];
-      // One page from each area, rotating which areas come first so every day feels different.
-      const order = per === 3 ? areas : per === 2 ? (d % 3 === 0 ? ['words', 'numbers'] : d % 3 === 1 ? ['numbers', 'fun'] : ['words', 'fun']) : [areas[d % 3]];
-      order.forEach((area, k) => {
-        const list = cur[area];
-        const [id, opts, title, tip] = list[(d + offset + k * 2) % list.length](ctx);
-        const res = packRun(id, { key: true, ...opts }, paper, (+o.seed || 1) + d * 97 + k * 13 + ci * 1009);
-        if (!res.sheets.length) return;
-        sheets.push(packBadge(res.sheets[0], child.name ? `${child.name}, ${dayLabel}` : dayLabel, PALETTE[d % PALETTE.length]));
-        if (res.key) keys.push(packBadge(res.key, `Answers: ${dayLabel}`, SOFT));
-        today.push(title); tips.push({ title, tip });
-      });
-      titles.push(today); plan.push({ day: dayLabel, items: tips });
-    }
-    const ageText = group === 3 ? 'ages 3 to 4' : group === 6 ? 'ages 6 to 8' : `ages ${group} to ${group + 1}`;
+    const g = ageGroup(child.age);
+    const w = packWeek(child, ci, theme, o, paper, 0, { words: g, numbers: g, fun: g });
     const who = child.name ? `${possessive(child.name)}` : 'My';
-    if (o.cover !== false) pages.push(packCover(paper, `${who} learning week`, `${theme.label}, ${ageText}`, theme.line[(offset + ci) % theme.line.length], ['One day at a time. Colour a star for every page you finish!', 'Made free at printpals.web.app'], TINTS[ci % TINTS.length]));
-    if (o.stars !== false) pages.push(packTracker(paper, child.name, dayNames, titles));
-    pages.push(...sheets);
+    if (o.cover !== false) pages.push(packCover(paper, `${who} learning week`, `${theme.label}, ${ageLabel(g)}`, theme.line[(w.offset + ci) % theme.line.length], ['One day at a time. Colour a star for every page you finish!', 'Made at printpals.web.app'], TINTS[ci % TINTS.length]));
+    if (o.stars !== false) pages.push(packTracker(paper, child.name, w.dayNames, w.titles));
+    pages.push(...w.sheets);
     if (o.certificate !== false) pages.push(packCertificate(paper, child.name, `You finished your whole learning week! We are so proud of you.`));
-    if (o.guide !== false) pages.push(packGuide(paper, child.name, ageText, plan));
-    if (o.key !== false) pages.push(...keys);
+    if (o.guide !== false) pages.push(packGuide(paper, child.name, ageLabel(g), w.plan));
+    if (o.key !== false) pages.push(...w.keys);
   });
+  return pages;
+}
+
+// ================================================================ monthly learning plan (Plus)
+function monthOverview(paper, name, theme, g, weeks) {
+  const pg = new Page(paper, name ? `${possessive(name)} learning month` : 'My learning month', { subtitle: `${theme.label}, ${ageLabel(g)}. Four weeks that get a little harder each week. Colour a star for each day you finish!` });
+  const rh = (pg.room - 26) / weeks.length;
+  const focus = ['Getting started', 'Growing strong', 'A little stretch', 'Super stretch'];
+  weeks.forEach((w, i) => {
+    const y = pg.y + i * rh, c = PALETTE[i % PALETTE.length];
+    pg.add(panel(pg.left, y + 1.5, pg.width, rh - 3, TINTS[i % TINTS.length], c, 7));
+    pg.add(txt(pg.left + 6, y + 10, `Week ${i + 1}`, 7, { anchor: 'start', colour: c }) + txt(pg.left + 6, y + 16.5, focus[i], 4, { anchor: 'start', font: FONT, colour: SOFT }));
+    const cw = (pg.width - 44) / w.titles.length;
+    w.titles.forEach((ts, d) => {
+      const cx = pg.left + 42 + cw * (d + 0.5);
+      pg.add(`<path d="${starPath(cx, y + 11, 6, 0.46)}" fill="#fff" stroke="${c}" stroke-width="0.8" stroke-linejoin="round"/>` + txt(cx, y + 22, `Day ${d + 1}`, 3.8, { colour: INK }));
+      ts.forEach((t, k) => pg.add(txt(cx, y + 27.5 + k * 4.2, t, fitFont(t, 3.2, cw - 3, 0.5), { font: FONT, weight: 700, colour: '#5d5680' })));
+    });
+  });
+  const by = pg.bottom - 20;
+  pg.add(panel(pg.left, by, pg.width, 18, '#fff6e0', '#ffb938', 6) + pic(ART('medal'), pg.left + 11, by + 9, 13));
+  pg.add(txt(pg.left + 22, by + 11, 'When I finish my month, we will celebrate by', 4.6, { anchor: 'start', font: FONT }) + `<line x1="${pg.left + 112}" x2="${pg.right - 8}" y1="${by + 11.6}" y2="${by + 11.6}" stroke="#b9b3d6" stroke-width="0.4"/>`);
+  return pg.svg();
+}
+
+function makeMonthPlan(o, paper) {
+  const theme = PACK_THEMES[o.theme] || PACK_THEMES.animals;
+  const child = packChildren(o)[0];
+  const g = ageGroup(child.age), up = Math.min(6, g + 1);
+  // Weeks 1 and 2 at their level, then a gentle stretch: words go up in week 3, words and numbers in week 4.
+  const levels = [{ words: g, numbers: g, fun: g }, { words: g, numbers: g, fun: g }, { words: up, numbers: g, fun: g }, { words: up, numbers: up, fun: g }];
+  const weeks = levels.map((lv, i) => packWeek(child, 0, theme, o, paper, i + 1, lv));
+  const who = child.name ? possessive(child.name) : 'My';
+  const pages = [];
+  pages.push(packCover(paper, `${who} learning month`, `${theme.label}, ${ageLabel(g)}`, theme.line[0], ['Four weeks of learning, a little harder each week.', 'Made at printpals.web.app'], '#fff6e0'));
+  pages.push(monthOverview(paper, child.name, theme, g, weeks));
+  weeks.forEach((w, i) => {
+    if (o.guide !== false) pages.push(packGuide(paper, child.name, `${ageLabel(g)}, week ${i + 1}`, w.plan));
+    pages.push(...w.sheets);
+    if (o.certificate !== false && i === weeks.length - 1) pages.push(packCertificate(paper, child.name, 'You finished a whole month of learning! You worked so hard and we are so proud of you.'));
+  });
+  if (o.key !== false) weeks.forEach((w) => pages.push(...w.keys));
+  return pages;
+}
+
+// ================================================================ personalised activity book (Plus)
+const BOOK_ACTS = {
+  3: [['mazes', { level: 'easy', per: '1', theme: 'mix' }], ['dots', { dots: '10', count: '1', puzzles: '1', layout: 'one' }], ['matching', { kind: 'shadow', pairs: '4' }], ['oddone', { level: 'easy' }], ['prewriting', { guide: 'thick', type: 'mixed' }], ['patterns', { kind: 'pictures', level: 'easy', key: false }], ['spotdiff', { level: 'easy' }], ['shapes', { kind: 'trace' }]],
+  4: [['mazes', { level: 'easy', per: '1', theme: 'mix' }], ['dots', { dots: '20', count: '1', puzzles: '1', layout: 'one' }], ['spotdiff', { level: 'easy' }], ['oddone', { level: 'medium' }], ['howtodraw', {}], ['colournum', { mode: 'numbers' }], ['patterns', { kind: 'pictures', level: 'medium' }], ['rolldraw', { theme: 'monster' }], ['gridcopy', { kind: 'half' }], ['matching', { kind: 'count', pairs: '5' }]],
+  5: [['mazes', { level: 'medium', per: '1', theme: 'mix' }], ['dots', { dots: '30', count: '1', puzzles: '1', layout: 'one' }], ['spotdiff', { level: 'medium' }], ['oddone', { level: 'medium' }], ['secretcode', { code: 'pictures' }], ['wordsearch', { size: '8', level: 'easy' }], ['sudoku', { size: '4', symbols: 'pictures', level: 'easy', pages: '1' }], ['colournum', { mode: 'add' }], ['gridcopy', { kind: 'half' }], ['howtodraw', {}], ['rolldraw', { theme: 'monster' }]],
+  6: [['mazes', { level: 'hard', per: '1', theme: 'mix' }], ['dots', { dots: '50', count: '1', puzzles: '1', layout: 'one' }], ['spotdiff', { level: 'hard' }], ['oddone', { level: 'hard' }], ['secretcode', { code: 'numbers' }], ['wordsearch', { size: '10', level: 'medium' }], ['sudoku', { size: '4', symbols: 'numbers', level: 'medium', pages: '1' }], ['colournum', { mode: 'sub' }], ['gridcopy', { kind: 'copy' }], ['howtodraw', {}], ['rolldraw', { theme: 'robot' }], ['crossword', { bank: true }]],
+};
+const FOOTER_RE = /<text[^>]*>Free printable worksheets at printpals\.web\.app<\/text>/;
+
+/** Puts a page number at the bottom of a finished page (and keeps or drops our web address). */
+function pageNumber(svg, n, credit) {
+  const w = +(/data-w="([\d.]+)"/.exec(svg) || [0, 210])[1], h = +(/data-h="([\d.]+)"/.exec(svg) || [0, 297])[1];
+  const num = `<text x="${w / 2}" y="${h - 6.5}" text-anchor="middle" font-family="${TITLE_FONT}" font-weight="800" font-size="4.2" fill="#b8b3cc">${n}</text>`;
+  return svg.replace(FOOTER_RE, '').replace(/<\/svg>$/, `${num}</svg>`).replace(credit ? /$^/ : /Made at printpals\.web\.app/g, '');
+}
+
+function bookMe(paper, name) {
+  const pg = new Page(paper, 'This book belongs to', { noName: true });
+  const cx = pg.w / 2;
+  pg.add(`<rect x="${cx - 55}" y="${pg.y + 4}" width="110" height="110" rx="12" fill="#fff" stroke="#ffb938" stroke-width="1" stroke-dasharray="3 2"/>` + txt(cx, pg.y + 64, 'Draw yourself here!', 5, { font: FONT, colour: SOFT }));
+  let y = pg.y + 132;
+  const row = (label, val) => { pg.add(txt(pg.left + 10, y, label, 5.4, { anchor: 'start', font: FONT }) + `<line x1="${pg.left + 70}" x2="${pg.right - 10}" y1="${y + 0.8}" y2="${y + 0.8}" stroke="#b9b3d6" stroke-width="0.45"/>`); if (val) pg.add(txt(pg.left + 72, y - 1, val, 7, { anchor: 'start', colour: INK })); y += 15; };
+  row('My name', name); row('I am this old', ''); row('My favourite colour', ''); row('My favourite animal', ''); row('I love to', '');
+  return pg.svg();
+}
+
+function makeActivityBook(o, paper) {
+  const theme = PACK_THEMES[o.theme] || PACK_THEMES.animals;
+  const name = nameOf(o.name, '');
+  const g = ageGroup(o.age);
+  const total = Math.max(10, Math.min(40, +o.pages || 24));
+  const credit = o.credit !== false;
+  const acts = BOOK_ACTS[g];
+  const inner = [], keys = [];
+  let i = 0, guard = 0;
+  while (inner.length < total && guard++ < total * 3) {
+    const seed = (+o.seed || 1) + i * 211;
+    // Every third page is colouring from the theme; the rest cycle through the puzzles.
+    let res;
+    if (i % 3 === 2) res = packRun('colouring', { book: 'one', picture: theme.line[Math.floor(i / 3) % theme.line.length], name }, paper, seed);
+    else {
+      const [id, opts] = acts[(i - Math.floor(i / 3)) % acts.length];
+      const extra = id === 'howtodraw' ? { picture: theme.draw[i % theme.draw.length] } : id === 'wordsearch' ? { words: theme.words.join('\n'), title: `${theme.label} word search` } : {};
+      res = packRun(id, { key: true, name, ...opts, ...extra }, paper, seed);
+      if (res.key) keys.push(res.key);
+    }
+    if (res.sheets.length) inner.push(res.sheets[0]);
+    i++;
+  }
+  const who = name ? possessive(name) : 'My';
+  const pages = [packCover(paper, `${who} big activity book`, `${theme.label}, ${ageLabel(g)}`, theme.line[(+o.seed || 1) % theme.line.length], ['Puzzles, mazes, colouring and more!', credit ? 'Made at printpals.web.app' : ''], '#fff6e0', 'book')];
+  pages.push(bookMe(paper, name), ...inner);
+  if (o.certificate !== false) pages.push(packCertificate(paper, name, 'You finished your whole activity book! Brilliant work!'));
+  if (o.key !== false) pages.push(...keys);
+  return pages.map((svg, k) => (k === 0 ? svg.replace(credit ? /$^/ : /Made at printpals\.web\.app/g, '') : pageNumber(svg, k, credit)));
+}
+
+// ================================================================ learning passport
+const SKILLS = {
+  3: ['Hold a pencil or crayon', 'Draw a line and a circle', 'Say my whole name', 'Count to 5', 'Name 4 colours', 'Find the first letter of my name', 'Name a circle, square and triangle', 'Say a nursery rhyme', 'Tidy my toys away', 'Wash my hands by myself'],
+  4: ['Write my name', 'Count to 10', 'Know 10 letter sounds', 'Name 8 colours', 'Spot two words that rhyme', 'Clap the beats in my name', 'Make a pattern', 'Count 10 things carefully', 'Draw a person', 'Put my coat on by myself'],
+  5: ['Read 20 sight words', 'Sound out cat, dog and sun', 'Write a sentence', 'Count to 100', 'Add numbers to 10', 'Know my pairs that make 10', 'Tell the time to the hour', 'Count in 2s', 'Say the days of the week', 'Write numbers to 20'],
+  6: ['Read a short book by myself', 'Write 3 sentences', 'Spell 20 words', 'Add and take away to 20', 'Count in 2s, 5s and 10s', 'Tell the time to half past', 'Know my 2, 5 and 10 times tables', 'Find a half and a quarter', 'Say the months of the year', 'Tie my shoelaces'],
+};
+
+function makePassport(o, paper) {
+  const name = nameOf(o.name, '');
+  const g = ageGroup(o.age);
+  const pages = [];
+  // Cover
+  const c = new Page(paper, '', { bare: true, tint: '#2d2350' });
+  const cx = c.w / 2;
+  c.add(`<rect x="${c.left}" y="${c.m}" width="${c.width}" height="${c.bottom - c.m}" rx="12" fill="none" stroke="#ffc93c" stroke-width="1.2"/><rect x="${c.left + 4}" y="${c.m + 4}" width="${c.width - 8}" height="${c.bottom - c.m - 8}" rx="9" fill="none" stroke="#ffc93c" stroke-width="0.4" stroke-dasharray="2 1.5"/>`);
+  c.add(txt(cx, c.m + 40, 'LEARNING', 16, { colour: '#ffc93c' }) + txt(cx, c.m + 58, 'PASSPORT', 16, { colour: '#ffc93c' }));
+  for (let k = 0; k < 12; k++) { const a = (k / 12) * Math.PI * 2; c.add(`<path d="${starPath(cx + Math.cos(a) * 52, c.m + 125 + Math.sin(a) * 52, 4, 0.45)}" fill="#ffc93c"/>`); }
+  c.add(`<circle cx="${cx}" cy="${c.m + 125}" r="36" fill="none" stroke="#ffc93c" stroke-width="1.2"/>` + pic(ART('medal'), cx, c.m + 125, 50));
+  if (name) c.add(txt(cx, c.m + 205, name, fitFont(name, 16, c.width - 40), { colour: '#fff' }));
+  c.add(txt(cx, c.bottom - 30, 'Stamp it. Grow it. Be proud of it.', 5.4, { font: FONT, colour: '#d8d3ee' }));
+  c.footer = () => {};
+  pages.push(c.svg());
+  // Identity page
+  const p1 = new Page(paper, 'This passport belongs to', { noName: true });
+  p1.add(`<rect x="${p1.left}" y="${p1.y}" width="70" height="86" rx="6" fill="#fff" stroke="${INK}" stroke-width="0.6" stroke-dasharray="3 2"/>` + txt(p1.left + 35, p1.y + 46, 'Photo or drawing', 4.2, { font: FONT, colour: SOFT }));
+  let y = p1.y + 8;
+  [['Name', name], ['Age', ''], ['Birthday', ''], ['I live in', ''], ['Favourite food', ''], ['Favourite animal', ''], ['When I grow up I want to be', '']].forEach(([l, v], k) => {
+    const x = k < 5 ? p1.left + 78 : p1.left, x2 = p1.right;
+    if (k === 5) y = p1.y + 102;
+    p1.add(txt(x, y, l, 4.6, { anchor: 'start', font: FONT, colour: SOFT }) + `<line x1="${x}" x2="${x2}" y1="${y + 9}" y2="${y + 9}" stroke="#b9b3d6" stroke-width="0.45"/>`);
+    if (v) p1.add(txt(x + 2, y + 7.5, v, 7, { anchor: 'start', colour: INK }));
+    y += 17;
+  });
+  const fy = y + 6;
+  p1.add(`<rect x="${p1.left}" y="${fy}" width="60" height="60" rx="8" fill="#fff" stroke="${INK}" stroke-width="0.6"/>` + txt(p1.left + 30, fy + 66, 'My thumbprint', 4.2, { font: FONT, colour: SOFT }));
+  p1.add(`<rect x="${p1.left + 70}" y="${fy}" width="${p1.width - 70}" height="60" rx="8" fill="#fff" stroke="${INK}" stroke-width="0.6"/>` + txt(p1.left + 70 + (p1.width - 70) / 2, fy + 66, 'My signature', 4.2, { font: FONT, colour: SOFT }));
+  pages.push(p1.svg());
+  // Stamp pages
+  const stamps = +o.stamps === 24 ? 24 : 12;
+  for (let s0 = 0; s0 < stamps; s0 += 12) {
+    const p2 = new Page(paper, 'My learning stamps', { subtitle: 'Finished a pack or a week of learning? Colour a stamp or add a sticker, and write the date.', noName: true });
+    const cw = p2.width / 3, ch = (p2.room - 2) / 4;
+    for (let k = 0; k < 12; k++) {
+      const x = p2.left + (k % 3) * cw + cw / 2, yy = p2.y + Math.floor(k / 3) * ch + ch / 2 - 4, r = Math.min(cw, ch) * 0.36, col = PALETTE[(s0 + k) % PALETTE.length];
+      p2.add(`<circle cx="${x}" cy="${yy}" r="${r}" fill="#fff" stroke="${col}" stroke-width="1.2" stroke-dasharray="3 2"/><circle cx="${x}" cy="${yy}" r="${r - 4}" fill="none" stroke="${col}" stroke-width="0.4"/>`);
+      p2.add(txt(x, yy - r * 0.2, `Stamp ${s0 + k + 1}`, 4.6, { colour: col }) + `<path d="${starPath(x, yy + r * 0.3, r * 0.28, 0.46)}" fill="none" stroke="${col}" stroke-width="0.6"/>`);
+      p2.add(`<line x1="${x - r}" x2="${x + r}" y1="${yy + r + 7}" y2="${yy + r + 7}" stroke="#c9c3e3" stroke-width="0.4"/>` + txt(x, yy + r + 11.5, 'date', 3.2, { font: FONT, colour: SOFT }));
+    }
+    pages.push(p2.svg());
+  }
+  // Skills
+  const p3 = new Page(paper, 'I can do it!', { subtitle: `Colour a star when you can do each one. (${ageLabel(g)})`, noName: true });
+  const list = SKILLS[g], rh = (p3.room - 2) / list.length;
+  list.forEach((t, k) => {
+    const yy = p3.y + k * rh, col = PALETTE[k % PALETTE.length];
+    p3.add(panel(p3.left, yy + 1, p3.width, rh - 2, TINTS[k % TINTS.length], col, 6) + txt(p3.left + 7, yy + rh / 2 + 2, t, 5.6, { anchor: 'start', font: FONT, colour: INK }));
+    p3.add(`<path d="${starPath(p3.right - 12, yy + rh / 2, Math.min(8, rh * 0.32), 0.46)}" fill="#fff" stroke="${col}" stroke-width="0.9" stroke-linejoin="round"/>`);
+  });
+  pages.push(p3.svg());
+  return pages;
+}
+
+// ================================================================ class packs for teachers (Plus)
+function makeClassPack(o, paper) {
+  const names = listOf(o.names, 40).map((n) => nameOf(n, '')).filter(Boolean);
+  const list = names.length ? names : ['Mia', 'Leo', 'Emma', 'Sam'];
+  const all = list.join('\n');
+  const pages = [];
+  const seed = +o.seed || 1;
+  const add = (res) => pages.push(...res.sheets);
+  if (o.trace !== false) add(packRun('names', { names: all, case: 'title', size: 'medium' }, paper, seed, true));
+  if (o.labels !== false) add(packRun('labels', { kind: 'desk', names: all }, paper, seed, true));
+  if (o.bookmarks !== false) add(packRun('bookmarks', { style: 'colour', names: all }, paper, seed, true));
+  if (o.reward !== false) list.forEach((n, i) => add(packRun('reward', { name: n, goal: String(o.goal || '').trim() || 'I can do it!', theme: ['stars', 'hearts', 'rockets', 'flowers', 'dinos'][i % 5], spaces: '15' }, paper, seed + i)));
+  if (o.story !== false) list.forEach((n, i) => add(packRun('story', { name: n, text: 'big', answers: 'tick', story: ['balloon', 'kitten', 'picnic', 'rocket', 'rain', 'turtle', 'beach', 'teddy'][i % 8] }, paper, seed + i)));
+  if (o.certificates !== false) list.forEach((n) => pages.push(packCertificate(paper, n, String(o.reason || '').trim() || 'for being a superstar in our class!')));
   return pages;
 }
 
@@ -7463,7 +7656,7 @@ function makeQuickPack(o, paper) {
   const name = nameOf(o.name, '');
   const g = ageGroup(o.age);
   const pages = [];
-  if (o.cover !== false) pages.push(packCover(paper, name ? `${possessive(name)} ${q.title.toLowerCase()}` : q.title, q.sub, q.art, ['Pick any page you like. There is no wrong order!', 'Made free at printpals.web.app']));
+  if (o.cover !== false) pages.push(packCover(paper, name ? `${possessive(name)} ${q.title.toLowerCase()}` : q.title, q.sub, q.art, ['Pick any page you like. There is no wrong order!', 'Made at printpals.web.app']));
   const keys = [];
   q.list(g).forEach(([id, opts, all], i) => {
     const res = packRun(id, { key: true, name, ...opts }, paper, (+o.seed || 1) + i * 131, all);
@@ -7584,7 +7777,7 @@ function makeFarAway(o, paper) {
   return pages;
 }
 
-Object.assign(MAKERS, { pack: makePack, quickpack: makeQuickPack, faraway: makeFarAway });
+Object.assign(MAKERS, { pack: makePack, quickpack: makeQuickPack, faraway: makeFarAway, monthplan: makeMonthPlan, activitybook: makeActivityBook, passport: makePassport, classpack: makeClassPack });
 
 ;
 // PrintPals: connects a tool page's form to its worksheet maker.
@@ -7641,6 +7834,18 @@ Object.assign(MAKERS, { pack: makePack, quickpack: makeQuickPack, faraway: makeF
     svg.querySelectorAll('text').forEach((t) => { if (/Emoji/.test(t.getAttribute('font-family') || '')) t.setAttribute('filter', 'url(#pp-ink)'); });
   }
 
+  // Easy-read letters: the single-storey a and g that children learn to write (Andika).
+  const easyBox = form.querySelector('[name=easyread]');
+  if (easyBox) { easyBox.checked = store.get('pp-easy') === '1'; easyBox.addEventListener('change', () => store.set('pp-easy', easyBox.checked ? '1' : '0')); }
+  function easyRead(svg) {
+    svg.querySelectorAll('text').forEach((t) => {
+      if (/Emoji/.test(t.getAttribute('font-family') || '')) return;
+      t.setAttribute('font-family', "Andika, 'Andika', sans-serif");
+      const fs = parseFloat(t.getAttribute('font-size'));
+      if (fs) t.setAttribute('font-size', (fs * 0.92).toFixed(2)); // Andika runs a little wider
+    });
+  }
+
   // Remember my child: the name is kept on this device only, so every sheet is ready personalised.
   const nameBox = form.querySelector('input[name=name]');
   const namesBox = form.querySelector('textarea[name=names]');
@@ -7682,6 +7887,7 @@ Object.assign(MAKERS, { pack: makePack, quickpack: makeQuickPack, faraway: makeF
     const saving = inkBox && inkBox.checked;
     for (const s of preview.querySelectorAll('svg.sheet')) {
       if (saving) inkSave(s);
+      if (easyBox && easyBox.checked) easyRead(s);
       // A hair smaller than the paper, so a page never spills onto an extra blank one.
       s.setAttribute('width', `${(s.dataset.w - 1).toFixed(1)}mm`);
       s.setAttribute('height', `${(s.dataset.h - 1.4).toFixed(1)}mm`);

@@ -11,7 +11,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '26'
+VERSION = '27'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -1640,12 +1640,81 @@ TOOLS += [
         'article': """<h2>Love travels well</h2><p>Children feel close to people they do things with. A postcard they drew, a game played during a call, questions that start real conversations: small rituals like these build a bond across any distance. Take a photo of the finished pages and send them on WhatsApp or email in seconds.</p>""",
         'faq': [('Do I need to post anything?', 'No. Most families take a photo and send it by message. Posting the postcards is a lovely extra.')],
     },
+    {
+        'id': 'monthplan', 'cat': 'packs', 'slug': 'monthly-learning-plan', 'tint': '#eef2ff', 'icon': '🗓️', 'new': True, 'plus': True,
+        'nav': 'Monthly learning plan',
+        'title': 'Personalised Monthly Learning Plan for Kids | 4 Weeks That Grow With Your Child | PrintPals',
+        'desc': 'A personalised four week learning plan for your child: reading, maths and fun pages with their name, getting a little harder each week, with a month chart, a weekly grown-up guide and a certificate.',
+        'h1': 'Monthly learning plan',
+        'lead': 'Four whole weeks planned in one click. Weeks 1 and 2 build confidence, weeks 3 and 4 gently stretch your child to the next level. Every week comes with a guide for you.',
+        'card': 'Four weeks planned in one click, getting a little harder each week.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="24" placeholder="Mia" autocomplete="off">')
+        + field('Age', seg('age', [('3', '3'), ('4', '4'), ('5', '5'), ('6', '6'), ('7', '7+')], '5'))
+        + field('Theme', '<select name="theme">' + ''.join(f'<option value="{k}">{v}</option>' for k, v in [('animals', 'Animals'), ('space', 'Space'), ('sea', 'Under the sea'), ('go', 'Things that go'), ('magic', 'Magic and unicorns'), ('garden', 'Bugs and gardens')]) + '</select>')
+        + field('Days a week', seg('days', [('3', '3 days'), ('5', '5 days')], '5'))
+        + field('Pages a day', seg('per', [('1', '1'), ('2', '2'), ('3', '3')], '2'))
+        + check('guide', 'Grown-up guide for each week') + check('certificate', 'Certificate at the end') + check('key', 'Answer pages')
+        + SHUFFLE + PAPER,
+        'article': """<h2>Progress you can see</h2><p>Children grow in confidence when they finish things. The month chart lets them colour a star for every day, and the stretch weeks move them on just when they are ready. Print one week at a time if you prefer: the pages are grouped by week.</p>""",
+        'faq': [('How does it get harder?', 'Weeks 1 and 2 are at your child\'s level. In week 3 the reading pages move up a level, and in week 4 the maths moves up too.'),
+                ('Is this part of PrintPals Plus?', 'Yes. Plus is free while we launch, so you can use it now.')],
+    },
+    {
+        'id': 'activitybook', 'cat': 'packs', 'slug': 'personalised-activity-book', 'tint': '#fff0f5', 'icon': '📚', 'new': True, 'plus': True,
+        'nav': 'Activity book',
+        'title': 'Personalised Activity Book for Kids | Printable, With Their Name | PrintPals',
+        'desc': 'Make a personalised activity book for your child in one click: 10 to 40 pages of mazes, dot to dot, colouring, puzzles and drawing on their favourite theme, with their name, page numbers and a certificate.',
+        'h1': 'Personalised activity book',
+        'lead': 'A whole activity book with your child\'s name on the cover: mazes, dot to dot, puzzles, drawing and colouring on their favourite theme. Perfect for holidays, journeys and birthday gifts.',
+        'card': 'A whole activity book with their name on the cover, up to 40 pages.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="24" placeholder="Leo" autocomplete="off">')
+        + field('Age', seg('age', [('3', '3'), ('4', '4'), ('5', '5'), ('6', '6'), ('7', '7+')], '5'))
+        + field('Theme', '<select name="theme">' + ''.join(f'<option value="{k}">{v}</option>' for k, v in [('animals', 'Animals'), ('space', 'Space'), ('sea', 'Under the sea'), ('go', 'Things that go'), ('magic', 'Magic and unicorns'), ('garden', 'Bugs and gardens')]) + '</select>')
+        + field('Pages', seg('pages', [('12', '12'), ('24', '24'), ('40', '40')], '24'))
+        + check('certificate', 'Certificate at the end') + check('key', 'Answer pages at the back') + check('credit', 'Show printpals.web.app on the cover')
+        + SHUFFLE + PAPER,
+        'article': """<h2>A gift they will actually use</h2><p>Print it double sided, fold or staple it, and you have a real book with their name on it. Use the Pages option for a quick 12 page booklet for a restaurant, or a big 40 page book for a long journey or the school holidays.</p>""",
+        'faq': [('Can I print it as a book?', 'Yes. Print double sided and staple along the left edge, or take the PDF to a print shop and ask for it to be bound.'),
+                ('Is this part of PrintPals Plus?', 'Yes. Plus is free while we launch, so you can use it now.')],
+    },
+    {
+        'id': 'passport', 'cat': 'packs', 'slug': 'learning-passport', 'tint': '#fff6e0', 'icon': '🛂', 'new': True,
+        'nav': 'Learning passport',
+        'title': 'Free Printable Learning Passport for Kids | Stamps, Skills and Goals | PrintPals',
+        'desc': 'A free printable learning passport for children: a cover with their name, an all about me page, learning stamps to colour after every pack, and an "I can do it" skills page for their age.',
+        'h1': 'Learning passport',
+        'lead': 'A passport that grows with your child. Stamp it after every pack or week of learning, and colour a star for each new skill they master.',
+        'card': 'Stamp it after every pack, and colour a star for each new skill.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="24" placeholder="Emma" autocomplete="off">')
+        + field('Age', seg('age', [('3', '3'), ('4', '4'), ('5', '5'), ('6', '6'), ('7', '7+')], '5'), 'Chooses the skills on the "I can do it" page.')
+        + field('Stamps', seg('stamps', [('12', '12 stamps'), ('24', '24 stamps')], '12'))
+        + PAPER,
+        'article': """<h2>A reason to come back</h2><p>Keep the passport somewhere special. Each time your child finishes a weekly pack or a busy week, add a stamp or a sticker together and write the date. Watching the stamps fill up is a wonderful motivator.</p>""",
+        'faq': [('Can I print more stamp pages?', 'Yes. Choose 24 stamps, or print the stamp page again whenever the first one is full.')],
+    },
+    {
+        'id': 'classpack', 'cat': 'packs', 'slug': 'class-pack-for-teachers', 'tint': '#e8f8f4', 'icon': '🏫', 'new': True, 'plus': True,
+        'nav': 'Class packs',
+        'title': 'Class Packs for Teachers | Name Tracing, Labels, Certificates for Every Child | PrintPals',
+        'desc': 'Paste your class list and get a personalised set for every child in one click: name tracing, desk labels, bookmarks, reward charts, a story starring each child and certificates.',
+        'h1': 'Class packs for teachers',
+        'lead': 'Paste your class list once. Get name tracing, desk labels, bookmarks, reward charts, a story starring each child and a certificate for everyone, all in one print.',
+        'card': 'Paste the class list once and get a personalised set for every child.',
+        'form': field('Class list', '<textarea name="names" rows="6" spellcheck="false" placeholder="Mia&#10;Leo&#10;Emma&#10;Sam&#10;Chris"></textarea>', 'One name per line, up to 40 children.')
+        + check('trace', 'Name tracing sheets') + check('labels', 'Desk name labels') + check('bookmarks', 'Bookmarks') + check('reward', 'Reward charts') + check('story', 'A story starring each child') + check('certificates', 'Certificates')
+        + field('Reward chart goal (optional)', '<input type="text" name="goal" maxlength="40" placeholder="I read every day" autocomplete="off">')
+        + field('Certificate reads (optional)', '<input type="text" name="reason" maxlength="60" placeholder="for a brilliant first term!" autocomplete="off">')
+        + SHUFFLE + PAPER,
+        'article': """<h2>Your first week, done in a minute</h2><p>New class? Print the desk labels, name tracing and bookmarks for day one. End of term? Print a certificate and a story starring every child. Names are never sent anywhere: the whole pack is made inside your browser.</p>""",
+        'faq': [('Is my class list private?', 'Yes. Everything is made on your own device. The names never leave your computer.'),
+                ('Is this part of PrintPals Plus?', 'Yes, it is part of the teacher plan. Plus is free while we launch, so you can use it now.')],
+    },
 ]
 
 # The homepage sections, in learning order (easiest first). Every tool appears in exactly one section.
 ARRANGE = [
-    ('packs', 'Ready-made packs', 'Packs', 'Stop searching. A whole week planned for your child, quick packs for busy moments, and a pack for family far away.',
-     ['pack', 'quickpack', 'faraway']),
+    ('packs', 'Ready-made packs', 'Packs', 'Stop searching. A week or a whole month planned for your child, activity books, quick packs for busy moments, family far away, a learning passport and class packs.',
+     ['pack', 'monthplan', 'activitybook', 'quickpack', 'faraway', 'passport', 'classpack']),
     ('handwriting', 'Handwriting', 'Handwriting', 'From first pencil lines to joined writing, with real letter shapes and stroke order.',
      ['prewriting', 'names', 'letters', 'mixups', 'joined', 'writingpaper', 'alphabets']),
     ('reading', 'Reading & phonics', 'Reading', 'Letter sounds, CVC words, syllables, sight words, sentences, spelling and stories where your child is the hero.',
@@ -1663,7 +1732,7 @@ ARRANGE = [
 ]
 # Ages each tool suits (first year, last year).
 AGES = {
-    'pack': (3, 8), 'quickpack': (3, 8), 'faraway': (3, 10),
+    'pack': (3, 8), 'quickpack': (3, 8), 'faraway': (3, 10), 'monthplan': (3, 8), 'activitybook': (3, 9), 'passport': (3, 8), 'classpack': (3, 8),
     'prewriting': (2, 4), 'names': (3, 6), 'letters': (3, 6), 'mixups': (5, 7), 'joined': (6, 9), 'writingpaper': (4, 9), 'alphabets': (4, 9),
     'abcorder': (4, 6), 'cvc': (4, 6), 'sounds': (5, 7), 'families': (5, 7), 'rhyming': (4, 6), 'syllables': (4, 7), 'sight': (4, 7), 'colourwords': (3, 5),
     'spelling': (5, 9), 'flashcards': (2, 7), 'opposites': (3, 6), 'position': (3, 6), 'sentences': (5, 8), 'story': (4, 8), 'storywriting': (5, 9),
@@ -1683,7 +1752,7 @@ LEVELS = {
     'patterns': 'level', 'hundred': 'level', 'bonds': 'to', 'maths': 'within', 'numberlines': 'range', 'wordproblems': 'within', 'placevalue': 'range',
     'money': 'level', 'clocks': 'level', 'fractions': 'level', 'mazes': 'level', 'dots': 'dots', 'matching': 'pairs', 'oddone': 'level', 'spotdiff': 'level',
     'wordsearch': 'level', 'sudoku': 'level', 'doubles': 'max', 'colournum': 'mode', 'compare': 'kind', 'secretcode': 'code', 'sentences': 'kind',
-    'abcorder': 'kind', 'pack': 'age', 'quickpack': 'age',
+    'abcorder': 'kind', 'pack': 'age', 'quickpack': 'age', 'monthplan': 'age', 'activitybook': 'age',
 }
 
 
@@ -1748,7 +1817,7 @@ def top(active=''):
 
 FOOT = '''<footer><div class="wrap"><div class="foot-brand"><div class="brand" style="font-size:24px;color:#fff">Print<b style="color:#ff8a8a">Pals</b></div>
 <p style="max-width:420px;margin-top:8px">Free printable worksheets and ready-made packs for children, made in seconds. Everything is made inside your own browser: nothing you type is sent to us or stored.</p>
-<p class="foot-links"><a href="/about">About us</a><a href="/privacy">Privacy</a><a href="mailto:''' + CONTACT + '''">Contact</a></p>
+<p class="foot-links"><a href="/plus">PrintPals Plus</a><a href="/about">About us</a><a href="/privacy">Privacy</a><a href="mailto:''' + CONTACT + '''">Contact</a></p>
 <p style="margin-top:14px">© PrintPals. Free for home and classroom use.</p></div>
 <div class="foot-cols">''' + ''.join(f'<div><h4>{v}</h4>' + ''.join(f'<a href="/{t["slug"]}">{t["nav"]}</a>' for t in TOOLS if t['cat'] == k) + '</div>' for k, v in CATS) + '''</div></div></footer>'''
 
@@ -1787,12 +1856,13 @@ def tool_page(t):
 <main id="main">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><a href="/">PrintPals</a> › <a href="/#{t['cat']}">{html.escape(cat_name)}</a> › {html.escape(t['h1'])}</nav>
-<div class="tool-head"><h1>{html.escape(t['h1'])}</h1><p>{html.escape(t['lead'])}</p><div class="tags"><span class="tag">👧 {ages_text(t['id'])}</span><span class="tag">✓ Free, no sign up</span><span class="tag">✓ A4 and US Letter</span></div><a class="jump" href="#preview">See your worksheet ↓</a></div>
+<div class="tool-head"><h1>{html.escape(t['h1'])}</h1><p>{html.escape(t['lead'])}</p><div class="tags">{'<a class="tag plus" href="/plus">✨ PrintPals Plus, free while we launch</a>' if t.get('plus') else ''}<span class="tag">👧 {ages_text(t['id'])}</span><span class="tag">✓ Free, no sign up</span><span class="tag">✓ A4 and US Letter</span></div><a class="jump" href="#preview">See your worksheet ↓</a></div>
 <div class="maker">
 <form class="panel" id="maker" data-tool="{t['id']}"{level_attr} autocomplete="off">
 {level_btns}
 {t['form']}
 {check('inksaver', '🖨️ Ink saver: less colour, great for black and white printers', False)}
+{check('easyread', '🔤 Easy-read letters: the a and g children learn to write', False)}
 <button type="button" class="btn" data-action="print">{PRINT_ICON} Print or save as PDF</button>
 <p class="hint">Free. No sign up. Nothing you type leaves your device.</p>
 <p class="hint" id="remember" hidden>💛 We remember your child's name on this device only. <button type="button" class="linkish" data-action="forget">Forget it</button></p>
@@ -1833,7 +1903,7 @@ def home():
         a, b = AGES[t['id']]
         keys = html.escape(re.sub(r'<[^>]+>|&[a-z#0-9]+;', ' ', t['title'] + ' ' + t['desc'] + ' ' + t['form']).lower())
         return f'''<a class="tool" href="/{t['slug']}" style="--tint:{t['tint']}" data-min="{a}" data-max="{b}" data-keys="{keys}"><div class="thumb"><img src="/img/thumb-{t['id']}.webp" alt="{html.escape(t['h1'])} example" loading="lazy" width="400" height="566"></div>
-<h3>{t['icon']} {html.escape(t['h1'])}{'<span class="new">New</span>' if t.get('new') else ''}</h3><p>{html.escape(t['card'])}</p><span class="age-mini">{ages_text(t['id'])}</span><span class="go">Make one free →</span></a>'''
+<h3>{t['icon']} {html.escape(t['h1'])}{'<span class="new plus">Plus</span>' if t.get('plus') else '<span class="new">New</span>' if t.get('new') else ''}</h3><p>{html.escape(t['card'])}</p><span class="age-mini">{ages_text(t['id'])}</span><span class="go">Make one free →</span></a>'''
     sections = ''.join(f'''<section class="cat{' cat-packs' if k == 'packs' else ''}" id="{k}"><h2>{v}</h2><p class="cat-lead">{CAT_TEXT[k]}</p><div class="tools">{''.join(card(t) for t in TOOLS if t['cat'] == k)}</div></section>''' for k, v in CATS)
     ld = {'@context': 'https://schema.org', '@type': 'WebSite', 'name': 'PrintPals', 'url': SITE + '/',
           'description': 'Free printable worksheets and ready-made learning packs for children aged 2 to 10: a personalised week in one click, tracing, reading, maths, puzzles, crafts and charts.'}
@@ -1851,7 +1921,7 @@ def home():
 <main id="main">
 <section class="hero"><div class="shapes" aria-hidden="true">{shapes}</div><div class="wrap" style="position:relative">
 <h1>Stop searching.<br><span class="hl">Start learning.</span></h1>
-<p class="lead">A whole week of learning planned for your child in one click, with their name on every page. Plus {len(TOOLS) - 3} free worksheet makers for ages 2 to 10. No sign up, ever.</p>
+<p class="lead">A whole week of learning planned for your child in one click, with their name on every page. Plus {sum(1 for t in TOOLS if t['cat'] != 'packs')} free worksheet makers for ages 2 to 10. No sign up, ever.</p>
 <div class="cta"><a class="btn big" href="/weekly-learning-pack">🎒 Plan my child's week, free</a><a class="btn alt big" href="#packs">Browse everything</a></div>
 <div class="chips"><span class="chip">✓ 100% free</span><span class="chip">✓ No sign up</span><span class="chip">✓ Private on your device</span><span class="chip">✓ A4 and US Letter</span><span class="chip">✓ Ink saver</span></div>
 </div></section>
@@ -1889,6 +1959,7 @@ def home():
   }});
 }})();
 </script>
+<section class="plus-band"><div class="wrap"><div><span class="new plus">Plus</span><h2>Want a whole month planned?</h2><p>Monthly learning plans, personalised activity books and class packs for teachers. Free while we launch.</p></div><a class="btn big" href="/plus">See PrintPals Plus</a></div></section>
 <section class="band"><div class="wrap">
 <h2>Made for busy parents and teachers</h2>
 <div class="why">
@@ -1929,7 +2000,7 @@ ABOUT = f'''<h1>About PrintPals</h1>
 <p>So we built PrintPals around those problems. Plan a whole week in one click. Get a simple guide that tells you what to say. Make packs for brothers and sisters of different ages. Save ink. Send a postcard to someone far away.</p>
 <h2>Our promises</h2>
 <ul>
-<li><b>Free.</b> Every maker, every pack, every page. No sign up and no email needed.</li>
+<li><b>Free forever.</b> Every worksheet maker, the weekly pack, quick packs, the family pack and the passport. No sign up and no email needed. PrintPals Plus adds bigger extras for families who want more, and helps keep everything else free.</li>
 <li><b>Private.</b> Worksheets are made inside your own browser. Names you type stay on your device.</li>
 <li><b>For every family.</b> A4 and US Letter paper, money in many currencies, alphabets in 15 languages, and an ink saver for black and white printers.</li>
 <li><b>Made with care.</b> Real letter shapes with stroke order, answer keys, and pictures children love.</li>
@@ -1952,6 +2023,26 @@ PRIVACY = f'''<h1>Privacy</h1>
 <h2>Questions</h2>
 <p>PrintPals is made by Grace and Loannes Ltd. Email us any time at <a href="mailto:{CONTACT}">{CONTACT}</a>.</p>'''
 
+PLUS = f'''<h1>PrintPals Plus</h1>
+<p class="lead-p">Everything you love on PrintPals stays free, forever. Plus is for families and teachers who want even more, and it helps us keep PrintPals free for everyone.</p>
+<div class="launch">✨ <b>Plus is free while we launch.</b> Enjoy every Plus feature now. No card, no sign up.</div>
+<div class="plans">
+<div class="plan"><h3>Free</h3><div class="price">$0<span> forever</span></div><ul>
+<li>{sum(1 for t in TOOLS if t['cat'] != 'packs')} worksheet makers</li><li>Weekly learning pack</li><li>Siblings packs</li><li>Quick packs and family far away pack</li><li>Learning passport</li><li>Ink saver, easy-read letters, Easier and Harder</li><li>No sign up, ever</li></ul>
+<a class="btn alt" href="/">Start printing</a></div>
+<div class="plan best"><span class="ribbon">Most loved</span><h3>Plus for families</h3><div class="price">$4.99<span> a month</span></div><p class="or">or $39 a year (save 35%)</p><ul>
+<li>Everything in Free</li><li><b>Monthly learning plans</b> that grow with your child</li><li><b>Personalised activity books</b> up to 40 pages</li><li>New Plus packs every month</li><li>7 day free trial, cancel any time</li></ul>
+<a class="btn" href="/monthly-learning-plan">Try Plus free now</a></div>
+<div class="plan"><h3>Teachers</h3><div class="price">$59<span> a year</span></div><ul>
+<li>Everything in Plus</li><li><b>Class packs</b> for up to 40 children</li><li>Name tracing, labels, bookmarks, reward charts, stories and certificates for every child</li><li>Use it in every class you teach</li></ul>
+<a class="btn alt" href="/class-pack-for-teachers">Try class packs free</a></div>
+</div>
+<h2>Questions</h2>
+<details><summary>Will the free worksheets stay free?</summary><p>Yes, always. Every worksheet maker, the weekly pack, quick packs, the family pack and the passport are free forever.</p></details>
+<details><summary>What happens when the launch offer ends?</summary><p>We will tell you clearly on this page first. Everything you have already printed is yours to keep.</p></details>
+<details><summary>How will payment work?</summary><p>Prices are in US dollars. Payments will be handled by a trusted payment partner, so we never see your card details, and you can cancel any time.</p></details>
+<details><summary>Do you show adverts?</summary><p>No. PrintPals has no adverts, for free or Plus families.</p></details>'''
+
 NOT_FOUND = '''<h1>Oops, this page got lost!</h1>
 <p class="lead-p">It may have wandered off to play. Let us help you find something lovely instead.</p>
 <p><a class="btn big" href="/weekly-learning-pack" style="max-width:420px">🎒 Plan my child's week</a></p>
@@ -1965,7 +2056,8 @@ def main():
         with open(os.path.join(OUT, t['slug'] + '.html'), 'w', encoding='utf-8') as f:
             f.write(tool_page(t))
     pages = [('about', 'About PrintPals | Free Worksheets Made for Real Families', 'Why we made PrintPals: free, private worksheets and ready-made learning packs built around the real problems parents face.', ABOUT),
-             ('privacy', 'Privacy | PrintPals', 'PrintPals does not collect what you type. Worksheets are made inside your own browser.', PRIVACY)]
+             ('privacy', 'Privacy | PrintPals', 'PrintPals does not collect what you type. Worksheets are made inside your own browser.', PRIVACY),
+             ('plus', 'PrintPals Plus | Monthly Learning Plans, Activity Books and Class Packs', 'Everything on PrintPals stays free. Plus adds monthly learning plans, personalised activity books and class packs for teachers. Free while we launch.', PLUS)]
     for slug, title, desc, body in pages:
         with open(os.path.join(OUT, slug + '.html'), 'w', encoding='utf-8') as f:
             f.write(simple_page(title, desc, '/' + slug, body))
@@ -1975,7 +2067,7 @@ def main():
     with open(os.path.join(OUT, 'js', 'pp.js'), 'w', encoding='utf-8') as f:
         f.write('\n;\n'.join(open(os.path.join(OUT, 'js', n + '.js'), encoding='utf-8').read() for n in JS_FILES))
     today = datetime.date.today().isoformat()
-    urls = ['/'] + ['/' + t['slug'] for t in TOOLS] + ['/about', '/privacy']
+    urls = ['/'] + ['/' + t['slug'] for t in TOOLS] + ['/plus', '/about', '/privacy']
     with open(os.path.join(OUT, 'sitemap.xml'), 'w', encoding='utf-8') as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                 + ''.join(f'  <url><loc>{SITE}{u}</loc><lastmod>{today}</lastmod></url>\n' for u in urls) + '</urlset>\n')

@@ -104,9 +104,11 @@ function makeGridCopy(o, paper) {
     grid(x, y, cell, (r, c, ch) => (c < m / 2 ? colourOf(ch) : '#fff'), labels);
     pg.add(`<line x1="${x + cell * m / 2}" x2="${x + cell * m / 2}" y1="${y - 3}" y2="${y + cell * n + 3}" stroke="${PINK}" stroke-width="0.9" stroke-dasharray="2.4 1.6"/>`);
     const ky = y + cell * n + 8;
-    Object.entries(art.colours).filter(([ch]) => ch !== '.').forEach(([, [nm, hex]], i) => {
-      const kx = pg.left + 4 + i * 36;
-      pg.add(`<rect x="${kx}" y="${ky}" width="7" height="7" rx="1.5" fill="${hex}" stroke="${INK}" stroke-width="0.4"/>` + txt(kx + 9, ky + 5.4, nm, 4, { anchor: 'start', font: FONT }));
+    const keyList = Object.entries(art.colours).filter(([ch]) => ch !== '.');
+    const step = Math.min(36, (pg.width - 8) / Math.max(1, keyList.length));
+    keyList.forEach(([, [nm, hex]], i) => {
+      const kx = pg.left + 4 + i * step;
+      pg.add(`<rect x="${kx}" y="${ky}" width="7" height="7" rx="1.5" fill="${hex}" stroke="${INK}" stroke-width="0.4"/>` + txt(kx + 9, ky + 5.4, nm, fitFont(nm, 4, step - 11, 0.52), { anchor: 'start', font: FONT }));
     });
     return [pg.svg()];
   }

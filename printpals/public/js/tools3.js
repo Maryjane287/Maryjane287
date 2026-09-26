@@ -284,7 +284,10 @@ const STORIES = {
 
 function makeStory(o, paper) {
   const rand = rng(+o.seed || 1);
-  const name = nameOf(o.name, 'Mia'), friend = nameOf(o.friend, 'Leo');
+  const name = nameOf(o.name, 'Mia');
+  // The friend is never the same person as the hero ("Leo and Leo" reads oddly).
+  let friend = nameOf(o.friend, 'Leo');
+  if (friend.toLowerCase() === name.toLowerCase()) friend = ['Sam', 'Emma', 'Chris', 'Mia'].find((f) => f.toLowerCase() !== name.toLowerCase());
   const fill = (s) => s.replace(/\{name\}/g, name).replace(/\{friend\}/g, friend);
   const keys = o.story === 'all' ? Object.keys(STORIES) : [STORIES[o.story] ? o.story : 'balloon'];
   const big = o.text !== 'small';

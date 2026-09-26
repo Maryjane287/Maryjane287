@@ -52,6 +52,9 @@ browser, so nothing typed is ever sent or stored.
   `app.js` adds Ink saver, remember my child (local storage only) and Easier/Harder (`LEVELS` in build.py).
   `AGES` in build.py drives age chips and the homepage age filter. Pages load one bundle `js/pp.js` built from `JS_FILES`
   (add new js files there). Share images: `pp2/og.js` writes `img/og/<id>.jpg`. Fonts are self-hosted in `public/fonts`.
+- Plus (batch 11, `pack.js`): monthly plan (`packWeek` + stretch levels), activity book (`BOOK_ACTS`, page numbers via
+  `pageNumber`), learning passport, class packs. Tools with `'plus': True` show the Plus badge; `/plus` is the pricing page.
+  `app.js` easy-read letters swap sheet text to Andika (fonts/andika*.woff2).
 - Arrangement: `ARRANGE` in build.py sets the 7 homepage sections and their learning order (every tool in exactly
   one; the build fails otherwise). Tool pages show 'More in <section>'; the footer is grouped by section.
 - Checks: `pp2/fuzz.js` (every option), `pp2/func.js` (new set, paper sizes, print button), a link checker.

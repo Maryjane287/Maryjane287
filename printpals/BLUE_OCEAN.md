@@ -25,6 +25,13 @@ We compete on the problems parents actually have. Each problem below has a featu
 4. **Calm and dyslexia friendly mode**: bigger spacing, simpler pages, a dyslexia friendly font.
 5. **Brainlings bridge**: packs end with a "tell Bibi what you learned" page and a link to the app.
 
+## Payment plan (live as 'free while we launch')
+- **Free forever:** all worksheet makers, weekly pack, quick packs, family pack, passport, ink saver, easy-read, Easier/Harder.
+- **Plus for families:** $4.99 a month or $39 a year, 7 day free trial: monthly learning plans, personalised activity books, new Plus packs monthly.
+- **Teachers:** $59 a year: class packs for up to 40 children.
+- **Switching it on:** open a merchant of record account (for example Lemon Squeezy or Paddle), create the three products,
+  and send Claude the checkout links. Plus pages then show "Start 7 day free trial" and unlock with the licence key.
+
 ## How it can earn money without losing trust
 - Keep the website free and advert free: that is the promise that makes parents share it.
 - Sell **printed activity books** made by the same engine (Amazon KDP, Etsy digital downloads): themed, beautifully laid out, and personalised books are a natural gift.

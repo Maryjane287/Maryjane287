@@ -52,6 +52,18 @@
     svg.querySelectorAll('text').forEach((t) => { if (/Emoji/.test(t.getAttribute('font-family') || '')) t.setAttribute('filter', 'url(#pp-ink)'); });
   }
 
+  // Easy-read letters: the single-storey a and g that children learn to write (Andika).
+  const easyBox = form.querySelector('[name=easyread]');
+  if (easyBox) { easyBox.checked = store.get('pp-easy') === '1'; easyBox.addEventListener('change', () => store.set('pp-easy', easyBox.checked ? '1' : '0')); }
+  function easyRead(svg) {
+    svg.querySelectorAll('text').forEach((t) => {
+      if (/Emoji/.test(t.getAttribute('font-family') || '')) return;
+      t.setAttribute('font-family', "Andika, 'Andika', sans-serif");
+      const fs = parseFloat(t.getAttribute('font-size'));
+      if (fs) t.setAttribute('font-size', (fs * 0.92).toFixed(2)); // Andika runs a little wider
+    });
+  }
+
   // Remember my child: the name is kept on this device only, so every sheet is ready personalised.
   const nameBox = form.querySelector('input[name=name]');
   const namesBox = form.querySelector('textarea[name=names]');
@@ -93,6 +105,7 @@
     const saving = inkBox && inkBox.checked;
     for (const s of preview.querySelectorAll('svg.sheet')) {
       if (saving) inkSave(s);
+      if (easyBox && easyBox.checked) easyRead(s);
       // A hair smaller than the paper, so a page never spills onto an extra blank one.
       s.setAttribute('width', `${(s.dataset.w - 1).toFixed(1)}mm`);
       s.setAttribute('height', `${(s.dataset.h - 1.4).toFixed(1)}mm`);
