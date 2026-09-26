@@ -45,6 +45,15 @@
   }
   const soon = () => { clearTimeout(timer); timer = setTimeout(render, 180); };
 
+  // Routine charts: choosing a routine fills in its steps (still editable).
+  const routine = form.querySelector('[name=routine]');
+  const steps = form.querySelector('[name=steps]');
+  if (routine && steps && typeof ROUTINES !== 'undefined') {
+    const fill = () => { if (ROUTINES[routine.value]) steps.value = ROUTINES[routine.value].join('\n'); else if (routine.value === 'custom') steps.value = ''; };
+    routine.addEventListener('change', fill);
+    if (!steps.value.trim()) fill();
+  }
+
   form.addEventListener('input', soon);
   form.addEventListener('change', soon);
   form.addEventListener('submit', (e) => e.preventDefault());

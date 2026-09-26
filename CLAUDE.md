@@ -69,6 +69,8 @@ Family members do NOT need the app: they get a link (WhatsApp/email) to a small 
 Free printable worksheet website, live at https://printpals.web.app. Kept separate from Brainlings on its own
 branch (owner asked). See printpals/README.md. Owner wants quality: test every change by printing to PDF
 (Playwright page.pdf) and looking at the pages before publishing.
+Batch 1 of the owner's 50 ideas is live (14 tools, 2026-09-26). Money worksheets let parents pick the currency
+children count in; it has nothing to do with how the owner is paid (she wants payment in dollars).
 
 ## Other projects (paused)
 - `samesies/`: daily crowd-guessing web game prototype (owner found it boring; paused).

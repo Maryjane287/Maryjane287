@@ -33,7 +33,10 @@ class Page {
   header(title, opts) {
     const { subtitle, noName } = opts;
     let y = this.m + 8;
-    this.add(`<text x="${this.left}" y="${y}" font-family="${TITLE_FONT}" font-weight="800" font-size="8.5" fill="${INK}">${esc(title)}</text>`);
+    // Long titles get smaller so they never run into the name line.
+    const room = (noName ? this.width : this.width - 96) / (String(title).length * 0.6);
+    const tfs = Math.max(5.5, Math.min(8.5, room));
+    this.add(`<text x="${this.left}" y="${y}" font-family="${TITLE_FONT}" font-weight="800" font-size="${tfs.toFixed(2)}" fill="${INK}">${esc(title)}</text>`);
     if (!noName) {
       // Name and date lines on the right
       const x = this.right;

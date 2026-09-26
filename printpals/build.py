@@ -9,7 +9,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '1'
+VERSION = '2'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -44,7 +44,7 @@ SHUFFLE = '<button type="button" class="btn alt" data-action="shuffle">🔀 Make
 
 TOOLS = [
     {
-        'id': 'names', 'slug': 'name-tracing-worksheets', 'tint': '#fff1f1', 'icon': '✏️',
+        'id': 'names', 'cat': 'writing', 'slug': 'name-tracing-worksheets', 'tint': '#fff1f1', 'icon': '✏️',
         'nav': 'Name tracing',
         'title': 'Free Name Tracing Worksheets | Printable & Personalised | PrintPals',
         'desc': 'Make free personalised name tracing worksheets in seconds. Type any name, choose the size and print or save as PDF. Great for preschool and kindergarten.',
@@ -74,7 +74,7 @@ TOOLS = [
         ],
     },
     {
-        'id': 'letters', 'slug': 'alphabet-tracing-worksheets', 'tint': '#fff8e6', 'icon': '🔤',
+        'id': 'letters', 'cat': 'writing', 'slug': 'alphabet-tracing-worksheets', 'tint': '#fff8e6', 'icon': '🔤',
         'nav': 'Alphabet',
         'title': 'Free Alphabet Tracing Worksheets A to Z | Printable PDF | PrintPals',
         'desc': 'Free printable alphabet tracing worksheets for every letter A to Z, with capital and small letters, stroke order and a picture word. Print one letter or the whole alphabet.',
@@ -100,7 +100,7 @@ TOOLS = [
         ],
     },
     {
-        'id': 'numbers', 'slug': 'number-tracing-worksheets', 'tint': '#eef9ff', 'icon': '🔢',
+        'id': 'numbers', 'cat': 'maths', 'slug': 'number-tracing-worksheets', 'tint': '#eef9ff', 'icon': '🔢',
         'nav': 'Numbers',
         'title': 'Free Number Tracing Worksheets 0 to 20 | Printable | PrintPals',
         'desc': 'Free printable number tracing worksheets from 0 to 20 with ten frames, number words and counting. Great for preschool and kindergarten maths.',
@@ -124,7 +124,7 @@ TOOLS = [
         ],
     },
     {
-        'id': 'maths', 'slug': 'addition-subtraction-worksheets', 'tint': '#effaf6', 'icon': '➕',
+        'id': 'maths', 'cat': 'maths', 'slug': 'addition-subtraction-worksheets', 'tint': '#effaf6', 'icon': '➕',
         'nav': 'Maths',
         'title': 'Free Addition and Subtraction Worksheets with Answers | PrintPals',
         'desc': 'Make free printable addition and subtraction worksheets with answer keys. Numbers within 5, 10, 20 or 100, with or without pictures. A new set every click.',
@@ -152,7 +152,7 @@ TOOLS = [
         ],
     },
     {
-        'id': 'wordsearch', 'slug': 'word-search-maker', 'tint': '#f4f0ff', 'icon': '🔍',
+        'id': 'wordsearch', 'cat': 'puzzles', 'slug': 'word-search-maker', 'tint': '#f4f0ff', 'icon': '🔍',
         'nav': 'Word search',
         'title': 'Free Word Search Maker | Make Printable Word Searches with Answers | PrintPals',
         'desc': 'Make your own word search puzzle for free. Type your words, choose the size and difficulty, and print with an answer key. Perfect for spelling lists, classrooms and parties.',
@@ -179,7 +179,7 @@ TOOLS = [
         ],
     },
     {
-        'id': 'spelling', 'slug': 'spelling-practice-worksheets', 'tint': '#fff0f7', 'icon': '📝',
+        'id': 'spelling', 'cat': 'writing', 'slug': 'spelling-practice-worksheets', 'tint': '#fff0f7', 'icon': '📝',
         'nav': 'Spelling',
         'title': 'Free Spelling Practice Worksheets | Trace and Write Your Word List | PrintPals',
         'desc': 'Turn any spelling list into a free printable handwriting worksheet. Each word is shown, traced and written alone. Great for weekly spelling tests and sight words.',
@@ -201,6 +201,195 @@ TOOLS = [
         'faq': [
             ('How many words can I add?', 'Up to 40 words. Pages are added automatically as needed.'),
             ('Can I use sentences?', 'Short phrases work well. Long sentences are made smaller to fit the line.'),
+        ],
+    },
+]
+
+TOOLS += [
+    {
+        'id': 'routine', 'cat': 'charts', 'slug': 'visual-routine-chart', 'tint': '#eef2ff', 'icon': '🌅',
+        'nav': 'Routine charts',
+        'title': 'Free Visual Routine Chart Maker for Kids | Morning & Bedtime | PrintPals',
+        'desc': 'Make a free printable visual routine chart for your child: morning, bedtime or after school, with pictures for every step. Weekly tick chart or cut-out picture cards. Great for autism and ADHD.',
+        'h1': 'Visual routine charts',
+        'lead': 'Pictures make routines easy, even for children who cannot read yet. Choose a morning, bedtime or after school routine, change any step, and print a weekly tick chart or big picture cards to cut out.',
+        'card': 'Morning, bedtime and after school routines with pictures. Perfect for little ones, autism and ADHD.',
+        'form': field("Child's name", '<input type="text" name="name" value="Mia" maxlength="30">')
+        + field('Routine', '<select name="routine"><option value="morning">Morning</option><option value="bedtime">Bedtime</option><option value="school">After school</option><option value="weekend">Weekend</option><option value="custom">My own routine</option></select>')
+        + field('Steps', '<textarea name="steps" rows="8" spellcheck="false"></textarea>', 'One step per line. Pictures are added for you, or start a line with your own emoji.')
+        + field('Style', seg('layout', [('week', 'Weekly tick chart'), ('cards', 'Picture cards to cut out')], 'week'))
+        + field('Days', seg('week', [('all', 'Every day'), ('school', 'School days')], 'all'))
+        + PAPER,
+        'article': """
+<h2>Why visual routines work</h2>
+<p>Young children cannot hold a list of steps in their heads, and many cannot read yet. A picture for each step lets them see what comes next and do it themselves, which means fewer reminders, fewer battles and a proud child. Visual schedules are used every day in nurseries and by occupational therapists, and they are especially helpful for autistic children and children with ADHD, who find changes and transitions hard.</p>
+<h2>Two ways to use it</h2>
+<ul><li><b>Weekly tick chart:</b> stick it on the fridge. Your child ticks or adds a sticker for each step, every day.</li>
+<li><b>Picture cards:</b> cut them out, laminate them, and stick them in order with sticky tack or Velcro. Your child can move each card to a "done" pocket.</li></ul>
+<h2>Tips</h2>
+<ul><li>Keep it short: 5 to 8 steps is plenty.</li><li>Walk through it together the first few days and praise every step.</li><li>Use the same words every day ("teeth, pyjamas, story").</li></ul>""",
+        'faq': [
+            ('Can I change the steps?', 'Yes. Edit the list any way you like. A picture is chosen for each step automatically, or you can start a line with your own emoji.'),
+            ('Is this suitable for autistic children?', 'Visual routines are one of the most recommended supports for autistic children and children with ADHD. Always follow any advice from your child\'s own therapist or teacher.'),
+            ('Can I make routines for school days only?', 'Yes. Choose "School days" to show Monday to Friday only.'),
+        ],
+    },
+    {
+        'id': 'money', 'cat': 'maths', 'slug': 'money-worksheets', 'tint': '#fff6e0', 'icon': '🪙',
+        'nav': 'Money',
+        'title': 'Free Money Worksheets in Your Currency | Pounds, Dollars, Euros, Naira & More | PrintPals',
+        'desc': 'Free printable counting money worksheets in your own currency: pounds, US dollars, euros, naira, cedis, shillings, rand, rupees and more. Count coins, make amounts, can I buy it. With answers.',
+        'h1': 'Money worksheets in your currency',
+        'lead': 'Most money worksheets only use US dollars. Here your child learns with the money they really see: pounds, dollars, euros, naira, cedis, shillings, rand, rupees and more. Count it, make amounts and go shopping.',
+        'card': 'Count coins and notes in pounds, dollars, euros, naira, cedis, rand and more.',
+        'form': field('Currency', '<select name="currency"><option value="GBP">Pounds £ (UK)</option><option value="USD">US dollars $</option><option value="EUR">Euros €</option><option value="NGN">Naira ₦ (Nigeria)</option><option value="GHS">Cedis GH₵ (Ghana)</option><option value="KES">Shillings KSh (Kenya)</option><option value="ZAR">Rand R (South Africa)</option><option value="CAD">Canadian dollars $</option><option value="AUD">Australian dollars $</option><option value="INR">Rupees ₹ (India)</option></select>')
+        + field('Activity', seg('kind', [('count', 'Count it'), ('buy', 'Can I buy it?'), ('make', 'Make the amount'), ('mix', 'Mix')], 'count'))
+        + field('Level', seg('level', [('easy', 'Easy'), ('medium', 'Medium'), ('hard', 'Harder')], 'easy'), 'Easy uses small coins. Harder adds notes and bigger amounts.')
+        + check('key', 'Include the answer page') + SHUFFLE + '<div style="height:14px"></div>' + PAPER,
+        'article': """
+<h2>Learning money with the money they know</h2>
+<p>Children learn money best with the coins and notes they see in shops at home. That is why you can choose your own currency here. The coins and notes are friendly drawings with the value written on them, so children focus on adding up.</p>
+<h2>Three activities</h2>
+<ul><li><b>Count it:</b> add up the coins and notes and write the total.</li>
+<li><b>Can I buy it?</b> Compare the money with a price tag and circle yes or no.</li>
+<li><b>Make the amount:</b> circle the coins that make a given amount.</li></ul>
+<p>Play shop at home with real coins after the worksheet. It makes the learning stick.</p>""",
+        'faq': [
+            ('Which currencies can I use?', 'British pounds, US dollars, euros, Nigerian naira, Ghana cedis, Kenyan shillings, South African rand, Canadian dollars, Australian dollars and Indian rupees.'),
+            ('Are these pictures of real money?', 'No. They are simple, friendly drawings with the value on them, designed to be clear for children.'),
+        ],
+    },
+    {
+        'id': 'wordproblems', 'cat': 'maths', 'slug': 'maths-word-problems', 'tint': '#fff0f7', 'icon': '📖',
+        'nav': 'Story sums',
+        'title': 'Free Personalised Maths Word Problems for Kids | Story Sums | PrintPals',
+        'desc': 'Make free printable maths word problems starring your child and their friends. Adding, taking away and groups, with pictures and answer keys. Great for ages 5 to 8.',
+        'h1': 'Personalised maths word problems',
+        'lead': 'Children love maths stories about themselves. Type your child\'s name and their friends, and every sum becomes a little story starring them, with pictures to count for younger children.',
+        'card': 'Story sums starring your child and their friends, with pictures and answers.',
+        'form': field('Names in the stories', '<textarea name="names" rows="2" spellcheck="false">Mia, Leo, Grandma, Sam</textarea>', 'Your child, friends, family or pets. Separate with commas.')
+        + field('Type', seg('op', [('add', 'Adding'), ('sub', 'Taking away'), ('mix', 'Both'), ('mult', 'Groups (×)')], 'add'))
+        + field('Numbers up to', seg('within', [('5', '5'), ('10', '10'), ('20', '20'), ('50', '50')], '10'))
+        + field('Theme', seg('theme', [('mix', 'Mix'), ('fruit', 'Fruit'), ('toys', 'Toys'), ('treats', 'Treats'), ('nature', 'Nature'), ('school', 'School')], 'mix'))
+        + field('How many', seg('count', [('6', '6'), ('12', '12')], '6'))
+        + check('pictures', 'Add pictures to count') + check('key', 'Include the answer page') + SHUFFLE + '<div style="height:14px"></div>' + PAPER,
+        'article': """
+<h2>Why story sums matter</h2>
+<p>Word problems teach children when to add and when to take away, not just how. They are also where many children get stuck, because the maths is hidden inside words. Putting your child and the people they love into the story makes them want to read it, and pictures help younger ones count it out.</p>
+<h2>Tips</h2>
+<ul><li>Read the story aloud together, then ask "Will there be more or fewer at the end?"</li><li>Act it out with real toys or snacks.</li><li>Encourage a quick drawing before the answer.</li></ul>""",
+        'faq': [
+            ('Can I use my child\'s name?', 'Yes, that is the idea. Add your child, their friends, family members or even pets, and they will star in the stories.'),
+            ('Do you store the names?', 'No. Everything is made inside your browser and nothing is sent to us.'),
+        ],
+    },
+    {
+        'id': 'times', 'cat': 'maths', 'slug': 'times-tables-worksheets', 'tint': '#e8f8f4', 'icon': '✖️',
+        'nav': 'Times tables',
+        'title': 'Free Times Tables Worksheets, Tests & Certificates | PrintPals',
+        'desc': 'Free printable times tables worksheets from 1 to 12: practice sheets, mixed tests, missing number questions, answer keys and a personalised certificate.',
+        'h1': 'Times tables worksheets',
+        'lead': 'Choose the times tables your child is learning, practise them in order, then try a mixed test. Finish with a personalised certificate to celebrate.',
+        'card': 'Practice sheets and mixed tests for 1 to 12, with answers and a certificate.',
+        'form': field('Times tables', '<div class="seg">' + ''.join(f'<label><input type="checkbox" name="t{t}"{" checked" if t in (2, 5, 10) else ""}><span>{t}</span></label>' for t in range(1, 13)) + '</div>')
+        + field('Sheet', seg('mode', [('practice', 'Practice in order'), ('test', 'Mixed test')], 'test'))
+        + field('Questions in the test', seg('count', [('20', '20'), ('30', '30'), ('40', '40')], '30'))
+        + check('missing', 'Include missing number questions (__ × 3 = 12)', False)
+        + check('key', 'Include the answer page')
+        + check('certificate', 'Add a certificate', True)
+        + field('Name for the certificate', '<input type="text" name="name" value="" maxlength="30" placeholder="e.g. Leo">')
+        + SHUFFLE + '<div style="height:14px"></div>' + PAPER,
+        'article': """
+<h2>From practice to confidence</h2>
+<p>Start with <b>Practice in order</b> so your child sees the pattern (2, 4, 6, 8...). When they are ready, switch to a <b>Mixed test</b> and time it. Doing the same test again next week and beating the time is a great motivator. Add missing number questions to build understanding of division.</p>
+<h2>The certificate</h2>
+<p>Type your child's name to add a colourful certificate at the end. Celebrating each table they master keeps them going.</p>""",
+        'faq': [
+            ('Which times tables are included?', 'Every table from 1 to 12. Choose one or mix several.'),
+            ('Can I print a new test every day?', 'Yes. Tap "Make a new set" for new questions each time.'),
+        ],
+    },
+    {
+        'id': 'clocks', 'cat': 'maths', 'slug': 'telling-time-worksheets', 'tint': '#e6f6fc', 'icon': '🕒',
+        'nav': 'Telling time',
+        'title': 'Free Telling the Time Worksheets | Clock Faces, O\'clock to 5 Minutes | PrintPals',
+        'desc': 'Free printable telling the time worksheets with clock faces. O\'clock, half past, quarter past and to, 5 minutes and 1 minute. Read the clock or draw the hands. Answer keys included.',
+        'h1': 'Telling the time worksheets',
+        'lead': 'Twelve clear clock faces per page. Children read the time, or draw the hands to show it. Start with o\'clock and work up to five minutes, in words ("half past 3") or digital (3:30).',
+        'card': 'Clock faces from o\'clock to 5 minutes. Read it or draw the hands.',
+        'form': field('Level', seg('level', [('oclock', "O'clock"), ('half', 'Half past'), ('quarter', 'Quarters'), ('five', '5 minutes'), ('minute', '1 minute')], 'half'))
+        + field('Activity', seg('mode', [('read', 'Read the clock'), ('draw', 'Draw the hands'), ('mix', 'Both')], 'read'))
+        + field('Show times as', seg('style', [('words', 'Half past 3'), ('digital', '3:30')], 'words'))
+        + check('key', 'Include the answer page') + SHUFFLE + '<div style="height:14px"></div>' + PAPER,
+        'article': """
+<h2>Step by step to telling the time</h2>
+<ul><li><b>O'clock:</b> the long hand points to 12.</li><li><b>Half past:</b> the long hand points to 6.</li><li><b>Quarter past and quarter to:</b> the long hand points to 3 or 9.</li><li><b>5 minutes:</b> count in fives around the clock.</li></ul>
+<p>On every clock the short hand moves along between the numbers, just like a real clock, so children learn to read it properly.</p>""",
+        'faq': [
+            ('Can children draw the hands?', 'Yes. Choose "Draw the hands" for empty clocks with a time written underneath, or "Both" for a mix.'),
+            ('Is the time written in words or numbers?', 'Your choice: words like "quarter past 4" or digital like 4:15.'),
+        ],
+    },
+    {
+        'id': 'mazes', 'cat': 'puzzles', 'slug': 'maze-maker', 'tint': '#f1f8e6', 'icon': '🌀',
+        'nav': 'Mazes',
+        'title': 'Free Printable Mazes for Kids | Maze Maker, Easy to Hard | PrintPals',
+        'desc': 'Make free printable mazes for kids in one click. Easy, medium and hard, 1, 2 or 4 mazes per page, fun characters and a solution page. A new maze every time.',
+        'h1': 'Maze maker',
+        'lead': 'A brand new maze every click, from easy for little hands to tricky for big kids. Help the mouse find the cheese, the bunny find the carrot, or the rocket reach the moon.',
+        'card': 'A new maze every click, easy to hard, with solutions.',
+        'form': field('Difficulty', seg('level', [('easy', 'Easy'), ('medium', 'Medium'), ('hard', 'Hard')], 'easy'))
+        + field('Mazes per page', seg('per', [('1', '1'), ('2', '2'), ('4', '4')], '1'))
+        + field('Characters', '<select name="theme"><option value="mix">Surprise me</option><option value="0">Mouse and cheese</option><option value="1">Bunny and carrot</option><option value="2">Bee and flower</option><option value="3">Rocket and moon</option><option value="4">Puppy and bone</option><option value="5">Monkey and banana</option><option value="6">Turtle and island</option><option value="7">Fairy and castle</option></select>')
+        + check('key', 'Include the solution page') + SHUFFLE + '<div style="height:14px"></div>' + PAPER,
+        'article': """
+<h2>More than just fun</h2>
+<p>Mazes build pencil control, planning and patience. Children learn to look ahead, spot dead ends and try again, all while having fun. Easy mazes have wide paths for young children; hard mazes keep older children busy on a rainy day or a long journey.</p>""",
+        'faq': [
+            ('Will I get a different maze each time?', 'Yes. Every maze is created fresh. Tap "Make a new set" for new ones.'),
+            ('Is there an answer?', 'Yes, a solution page shows the way through each maze.'),
+        ],
+    },
+    {
+        'id': 'crossword', 'cat': 'puzzles', 'slug': 'crossword-maker', 'tint': '#f5edff', 'icon': '🧩',
+        'nav': 'Crosswords',
+        'title': 'Free Crossword Maker for Teachers and Kids | Printable with Answers | PrintPals',
+        'desc': 'Make your own printable crossword puzzle for free. Type words and clues, and get a numbered crossword with an answer key and optional word bank. Perfect for spelling and topic words.',
+        'h1': 'Crossword maker',
+        'lead': 'Type your words and clues, and the crossword builds itself, with numbered clues across and down and an answer page. Add a word bank to make it easier for younger children.',
+        'card': 'Type words and clues and get a numbered crossword with answers.',
+        'form': field('Title', '<input type="text" name="title" value="Animal Crossword" maxlength="40">')
+        + field('Words and clues', '<textarea name="words" rows="8" spellcheck="false">lion: The king of the jungle\nzebra: A horse with black and white stripes\nmonkey: It swings from trees and loves bananas\nelephant: It has a long trunk\nturtle: It carries its house on its back\nrabbit: It hops and has long ears\ntiger: A big orange cat with stripes</textarea>', 'One per line: word, then a colon, then the clue.')
+        + check('bank', 'Show a word bank (easier)', False) + check('key', 'Include the answer page') + SHUFFLE + '<div style="height:14px"></div>' + PAPER,
+        'article': """
+<h2>How to make a great crossword</h2>
+<ul><li>Use 6 to 12 words that share common letters, so they can cross each other.</li><li>Write clues children can understand: "It has a long trunk" beats "Large grey mammal".</li><li>Add the word bank for younger children or spelling practice.</li></ul>
+<p>Crosswords are perfect for spelling lists, topic vocabulary (space, the body, animals) and new words in another language.</p>""",
+        'faq': [
+            ('How do I type the clues?', 'Put one word per line, then a colon, then the clue. For example: lion: The king of the jungle.'),
+            ('Why was a word left out?', 'Every word must cross another. If a word shares no letters with the rest, try adding more words or a different one.'),
+        ],
+    },
+    {
+        'id': 'reward', 'cat': 'charts', 'slug': 'reward-chart-maker', 'tint': '#fff6e0', 'icon': '🏆',
+        'nav': 'Reward charts',
+        'title': 'Free Reward Chart Maker for Kids | Printable Sticker Charts | PrintPals',
+        'desc': 'Make a free printable reward chart for your child: potty training, reading, brushing teeth, good behaviour. Choose the goal, number of spaces, theme and reward.',
+        'h1': 'Reward and sticker charts',
+        'lead': 'A colourful path to a prize. Write the goal, pick how many spaces and a theme, and add the reward your child is working towards. Great for potty training, reading, sleeping in their own bed and more.',
+        'card': 'A colourful path to a prize for potty training, reading and good habits.',
+        'form': field("Child's name", '<input type="text" name="name" value="Leo" maxlength="30">')
+        + field('Goal', '<input type="text" name="goal" value="I use the potty!" maxlength="60">', 'For example: I read every day, I brush my teeth, I sleep in my own bed.')
+        + field('Spaces', seg('spaces', [('10', '10'), ('15', '15'), ('20', '20'), ('30', '30')], '15'))
+        + field('Theme', seg('theme', [('stars', '⭐ Stars'), ('hearts', '💖 Hearts'), ('rockets', '🚀 Rockets'), ('flowers', '🌸 Flowers'), ('dinos', '🦕 Dinos'), ('balls', '⚽ Football')], 'stars'))
+        + field('Reward (optional)', '<input type="text" name="reward" value="A trip to the park" maxlength="50">')
+        + PAPER,
+        'article': """
+<h2>Making reward charts work</h2>
+<ul><li>Pick one clear goal at a time.</li><li>Start with fewer spaces (10 or 15) so the first reward comes quickly.</li><li>Praise the effort every time a space is coloured.</li><li>Choose rewards that are about time together, like a park trip or baking, not only toys.</li></ul>""",
+        'faq': [
+            ('What can I use a reward chart for?', 'Potty training, reading every day, brushing teeth, staying in bed, tidying up, trying new foods and much more.'),
+            ('How many spaces should I choose?', 'For little ones, 10 or 15 so the reward comes soon. Older children can aim for 20 or 30.'),
         ],
     },
 ]
@@ -232,16 +421,25 @@ def head(title, desc, path, extra=''):
 </head>'''
 
 
+CATS = [('writing', 'Writing & reading'), ('maths', 'Maths'), ('puzzles', 'Puzzles'), ('charts', 'Charts')]
+CAT_TEXT = {
+    'writing': 'Tracing, handwriting and spelling, with real letter shapes and stroke order.',
+    'maths': 'Counting, sums, money, times tables and telling the time, with answer keys.',
+    'puzzles': 'Word searches, mazes and crosswords you can make yourself.',
+    'charts': 'Routines and reward charts that make everyday life easier.',
+}
+
+
 def top(active=''):
+    act = next((t['cat'] for t in TOOLS if t['id'] == active), '')
     cur = ' aria-current="page"'
-    nav = ''.join(
-        f'<a href="/{t["slug"]}"{cur if t["id"] == active else ""}>{t["nav"]}</a>' for t in TOOLS)
+    nav = ''.join(f'<a href="/#{k}"{cur if k == act else ""}>{v}</a>' for k, v in CATS)
     return f'''<header class="top"><div class="wrap"><a class="brand" href="/">{LOGO}<span>Print<b>Pals</b></span></a><nav class="nav">{nav}</nav></div></header>'''
 
 
 FOOT = '''<footer><div class="wrap"><div><div class="brand" style="font-size:24px;color:#fff">Print<b style="color:#ff8a8a">Pals</b></div>
 <p style="max-width:420px;margin-top:8px">Free printable worksheets for children, made in seconds. Everything is made inside your own browser: nothing you type is sent to us or stored.</p></div>
-<div><p><b style="color:#fff">Worksheets</b></p><p>''' + ''.join(f'<a href="/{t["slug"]}">{t["nav"]}</a>' for t in TOOLS) + '''</p>
+<div style="max-width:560px"><p><b style="color:#fff">Worksheets</b></p><p style="line-height:2">''' + ''.join(f'<a href="/{t["slug"]}">{t["nav"]}</a>' for t in TOOLS) + '''</p>
 <p style="margin-top:14px">© PrintPals. Free for home and classroom use.</p></div></div></footer>'''
 
 
@@ -285,6 +483,7 @@ def tool_page(t):
 <script src="/js/glyphs.js?v={VERSION}"></script>
 <script src="/js/sheet.js?v={VERSION}"></script>
 <script src="/js/tools.js?v={VERSION}"></script>
+<script src="/js/tools2.js?v={VERSION}"></script>
 <script src="/js/app.js?v={VERSION}"></script>
 </body>
 </html>
@@ -292,24 +491,26 @@ def tool_page(t):
 
 
 def home():
-    cards = ''.join(f'''<a class="tool" href="/{t['slug']}" style="--tint:{t['tint']}"><div class="thumb"><img src="/img/thumb-{t['id']}.webp" alt="{html.escape(t['h1'])} example" loading="lazy" width="400" height="566"></div>
-<h3>{t['icon']} {html.escape(t['h1'])}</h3><p>{html.escape(t['card'])}</p><span class="go">Make one free →</span></a>''' for t in TOOLS)
+    def card(t):
+        return f'''<a class="tool" href="/{t['slug']}" style="--tint:{t['tint']}"><div class="thumb"><img src="/img/thumb-{t['id']}.webp" alt="{html.escape(t['h1'])} example" loading="lazy" width="400" height="566"></div>
+<h3>{t['icon']} {html.escape(t['h1'])}</h3><p>{html.escape(t['card'])}</p><span class="go">Make one free →</span></a>'''
+    sections = ''.join(f'''<section class="cat" id="{k}"><h2>{v}</h2><p class="cat-lead">{CAT_TEXT[k]}</p><div class="tools">{''.join(card(t) for t in TOOLS if t['cat'] == k)}</div></section>''' for k, v in CATS)
     ld = {'@context': 'https://schema.org', '@type': 'WebSite', 'name': 'PrintPals', 'url': SITE + '/',
           'description': 'Free printable worksheets for children: name tracing, alphabet, numbers, maths, word searches and spelling.'}
     shapes = ''.join(f'<span style="width:{s}px;height:{s}px;left:{x}%;top:{y}%;background:{c};animation-delay:{d}s"></span>'
                      for s, x, y, c, d in [(90, 6, 18, '#ffe08a', 0), (60, 88, 12, '#bfe8ff', 1.5), (46, 80, 70, '#ffc6d9', 3), (70, 12, 72, '#c9f2e6', 4.5)])
     return head('PrintPals | Free Printable Worksheets for Kids, Made in Seconds',
-                'Free printable worksheets for kids: name tracing, alphabet and number tracing, addition and subtraction, word searches and spelling practice. Personalise, print or save as PDF.',
+                'Free printable worksheets for kids: name and alphabet tracing, maths, money in your currency, times tables, telling the time, word searches, mazes, crosswords, routine and reward charts. Personalise and print.',
                 '/', f'<script type="application/ld+json">{json.dumps(ld)}</script>') + f'''
 <body>
 {top()}
 <main>
 <section class="hero"><div class="shapes" aria-hidden="true">{shapes}</div><div class="wrap" style="position:relative">
 <h1>Free printable worksheets,<br><span class="hl">made in seconds</span></h1>
-<p class="lead">Personalised tracing, maths, word searches and spelling sheets for children aged 3 to 8. Type, tap print, done.</p>
+<p class="lead">Personalised tracing, maths, money, puzzles, routines and reward charts for children aged 3 to 8. Type, tap print, done.</p>
 <div class="chips"><span class="chip">✓ 100% free</span><span class="chip">✓ No sign up</span><span class="chip">✓ A4 and US Letter</span><span class="chip">✓ Save as PDF</span></div>
 </div></section>
-<div class="wrap"><div class="tools">{cards}</div></div>
+<div class="wrap">{sections}</div>
 <section class="band"><div class="wrap">
 <h2>Made for busy parents and teachers</h2>
 <div class="why">
