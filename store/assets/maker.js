@@ -176,7 +176,8 @@ form.addEventListener('submit', async e => {
     const pay = checkout[tier];
     if (pay) {
       const url = new URL(pay);
-      url.searchParams.set('prefilled_email', form.email.value);
+      // Lemon Squeezy and Stripe name the email prefill differently.
+      url.searchParams.set(url.hostname.endsWith('lemonsqueezy.com') ? 'checkout[email]' : 'prefilled_email', form.email.value);
       location.href = url.href;
     } else {
       location.href = new URL(form.getAttribute('action'), location.href).href;
