@@ -156,7 +156,33 @@
           "words": "Wise, warm, wildly funny"
         }
       }
-    ]
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The birthday issue",
+      "edition": "Special collector's edition",
+      "lines": [
+        [
+          "Exclusive",
+          "{name} on turning {age}"
+        ],
+        [
+          "Secret talent",
+          "{talent}"
+        ],
+        [
+          "Obsessed",
+          "{obsession}"
+        ]
+      ],
+      "badge": [
+        "Now",
+        "{age}",
+        "and iconic"
+      ],
+      "quote": "{words}",
+      "credit": "Friends tell all, page 6"
+    }
   },
   {
     "slug": "anniversary-magazine",
@@ -304,7 +330,33 @@
           "joke": "Left at the big tree"
         }
       }
-    ]
+    ],
+    "cover": {
+      "mast": "{names}",
+      "issue": "The anniversary issue",
+      "edition": "{years} years of love",
+      "lines": [
+        [
+          "How it all began",
+          "{met}"
+        ],
+        [
+          "Finally explained",
+          "{joke}"
+        ],
+        [
+          "Best adventure",
+          "{trip}"
+        ]
+      ],
+      "badge": [
+        "Year",
+        "{years}",
+        "of us"
+      ],
+      "quote": "A love story",
+      "credit": "The exclusive interview"
+    }
   },
   {
     "slug": "grandparents-newspaper",
@@ -456,7 +508,33 @@
           "weather": "Bright and breezy with big hugs"
         }
       }
-    ]
+    ],
+    "cover": {
+      "mast": "{forWho}",
+      "issue": "The family edition",
+      "edition": "News from {fromWho}",
+      "lines": [
+        [
+          "Breaking news",
+          "{headline}"
+        ],
+        [
+          "We miss",
+          "{miss}"
+        ],
+        [
+          "The kids say",
+          "{quote}"
+        ]
+      ],
+      "badge": [
+        "Price",
+        "1",
+        "hug"
+      ],
+      "quote": "{weather}",
+      "credit": "Today's forecast"
+    }
   },
   {
     "slug": "kids-magazine",
@@ -608,6 +686,3305 @@
           "fact": "Says goodnight to the moon every single night"
         }
       }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "{name} weekly",
+      "edition": "Superstar issue",
+      "lines": [
+        [
+          "Top expert in",
+          "{expert}"
+        ],
+        [
+          "When I grow up",
+          "{dream}"
+        ],
+        [
+          "Fun fact",
+          "{fact}"
+        ]
+      ],
+      "badge": [
+        "Age",
+        "{age}",
+        "and awesome"
+      ],
+      "quote": "{food}",
+      "credit": "Favourite food"
+    }
+  },
+  {
+    "slug": "year-in-review-magazine",
+    "layout": "review",
+    "title": "Our Year in Review",
+    "searchTitle": "Personalised Year in Review Magazine",
+    "pinTitle": "Our Year in Review Magazine",
+    "occasion": "Christmas and New Year",
+    "short": "Your family's whole year as a glossy double issue, full of awards and best bits.",
+    "description": "Turn your family's year into a glossy magazine everyone will fight over at Christmas. Biggest adventures, proudest moments, the funniest disasters and a family awards ceremony, all written up like front page news. Perfect for stockings, grandparents far away and New Year's Eve.",
+    "keywords": [
+      "year in review ideas",
+      "family christmas gift",
+      "christmas gift for grandparents",
+      "personalised christmas gift",
+      "new year memory book",
+      "family yearbook"
+    ],
+    "inside": [
+      "A double issue cover with your year and your family",
+      "Editor's note: your message about the year",
+      "The year by numbers, in funny facts",
+      "The family awards ceremony",
+      "A photo spread of the best bits",
+      "The moment you will laugh about forever"
+    ],
+    "fields": [
+      {
+        "id": "family",
+        "label": "Who is this year about?",
+        "example": "The Taylors",
+        "max": 22
+      },
+      {
+        "id": "year",
+        "label": "Which year?",
+        "example": "2026",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mum and Dad",
+        "max": 30
+      },
+      {
+        "id": "adventure",
+        "label": "The biggest adventure",
+        "example": "Our first camping trip, in the rain, and we loved it",
+        "max": 70
+      },
+      {
+        "id": "proud",
+        "label": "The proudest moment",
+        "example": "Leo rode his bike with no stabilisers",
+        "max": 60
+      },
+      {
+        "id": "word",
+        "label": "Your word of the year",
+        "example": "Together",
+        "max": 24
+      },
+      {
+        "id": "moment",
+        "label": "The moment you will laugh about forever",
+        "example": "Dad setting off the smoke alarm making pancakes on Christmas morning, again",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message about the year",
+        "example": "What a year. Thank you for every muddy walk, every late night chat and every silly dance in the kitchen. Here is to the next one.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "Best photo of the year",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "taylors",
+        "palette": "festive",
+        "portrait": {
+          "skin": 1,
+          "hair": "curly",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "family": "The Taylors",
+          "year": "2026",
+          "adventure": "Our first camping trip, in the rain, and we loved it",
+          "proud": "Leo rode his bike with no stabilisers",
+          "word": "Together"
+        }
+      },
+      {
+        "id": "chris-emma",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 2,
+          "hair": "long",
+          "hairColor": "#1c1410"
+        },
+        "values": {
+          "family": "Chris & Emma",
+          "year": "2026",
+          "adventure": "Six countries, one very small car",
+          "proud": "Finally finishing the garden",
+          "word": "Brave"
+        }
+      },
+      {
+        "id": "browns",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "bun",
+          "hairColor": "#1c1410"
+        },
+        "values": {
+          "family": "The Browns",
+          "year": "2026",
+          "adventure": "Moving to a house by the sea",
+          "proud": "Sam's first ever school play",
+          "word": "Home"
+        }
+      },
+      {
+        "id": "mia-sam",
+        "palette": "cosmos",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#b5652b"
+        },
+        "values": {
+          "family": "Mia & Sam",
+          "year": "2026",
+          "adventure": "Learning to surf, badly",
+          "proud": "Running our first 10k",
+          "word": "Joy"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{family}",
+      "issue": "The year in review",
+      "edition": "Special double issue",
+      "lines": [
+        [
+          "Biggest adventure",
+          "{adventure}"
+        ],
+        [
+          "Proudest moment",
+          "{proud}"
+        ],
+        [
+          "Word of the year",
+          "{word}"
+        ]
+      ],
+      "badge": [
+        "The",
+        "{year}",
+        "awards"
+      ],
+      "quote": "Our year, all the best bits",
+      "credit": "Awards inside"
+    }
+  },
+  {
+    "slug": "pet-magazine",
+    "layout": "pet",
+    "title": "The Pet Issue",
+    "searchTitle": "Personalised Pet Magazine",
+    "pinTitle": "Personalised Pet Magazine",
+    "occasion": "Pet lovers",
+    "short": "A celebrity magazine starring the most famous member of the family: the pet.",
+    "description": "Every pet deserves to be a cover star. A glossy, very silly celebrity magazine all about their secret talents, their crimes against socks and their favourite snacks, with their photo on the front. A brilliant gift for pet parents, pet birthdays and new puppies or kittens.",
+    "keywords": [
+      "gift for dog lovers",
+      "gift for cat lovers",
+      "pet birthday ideas",
+      "personalised dog gift",
+      "dog mom gift",
+      "new puppy gift"
+    ],
+    "inside": [
+      "A cover starring their photo and their official title",
+      "A letter to a very good pet",
+      "Their life by the numbers",
+      "The most wanted page: crimes and misdemeanours",
+      "A photo spread of their best angles",
+      "Their most legendary moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Your pet's name",
+        "example": "Biscuit",
+        "max": 12
+      },
+      {
+        "id": "award",
+        "label": "Their official title",
+        "example": "Good Boy of the Year",
+        "max": 26
+      },
+      {
+        "id": "age",
+        "label": "How old are they?",
+        "example": "3",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mia",
+        "max": 30
+      },
+      {
+        "id": "talent",
+        "label": "Their secret talent",
+        "example": "Hears a cheese wrapper from three rooms away",
+        "max": 60
+      },
+      {
+        "id": "crime",
+        "label": "Most wanted for",
+        "example": "Stealing socks, then looking innocent",
+        "max": 50
+      },
+      {
+        "id": "snack",
+        "label": "Favourite snack",
+        "example": "Anything you are eating",
+        "max": 40
+      },
+      {
+        "id": "moment",
+        "label": "Their most legendary moment",
+        "example": "Walking into the kitchen wearing the Christmas tinsel like a crown and refusing to take it off",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "You are the best thing that ever happened to our sofa. Thank you for every wag, every cuddle and every stolen sock.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of your pet",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "Their best angle",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "biscuit",
+        "palette": "butter",
+        "portrait": {
+          "pet": "dog",
+          "fur": "#d9a066",
+          "ear": "#8a5a33",
+          "patch": "#fff4e2"
+        },
+        "values": {
+          "name": "Biscuit",
+          "award": "Good Boy of the Year",
+          "age": "3",
+          "talent": "Hears a cheese wrapper from three rooms away",
+          "crime": "Stealing socks, then looking innocent",
+          "snack": "Anything you are eating"
+        }
+      },
+      {
+        "id": "luna",
+        "palette": "midnight",
+        "portrait": {
+          "pet": "cat",
+          "fur": "#8c8c96",
+          "patch": "#e9e6ee"
+        },
+        "values": {
+          "name": "Luna",
+          "award": "Queen of the Sofa",
+          "age": "5",
+          "talent": "Knocking things off tables at 3am",
+          "crime": "Sitting on laptops during meetings",
+          "snack": "Tuna, served promptly"
+        }
+      },
+      {
+        "id": "pepper",
+        "palette": "mint",
+        "portrait": {
+          "pet": "dog",
+          "fur": "#3b2a24",
+          "ear": "#241814",
+          "patch": "#f3e6d6"
+        },
+        "values": {
+          "name": "Pepper",
+          "award": "Zoomies Champion",
+          "age": "2",
+          "talent": "Opens doors that should stay closed",
+          "crime": "Digging to the centre of the earth",
+          "snack": "Peanut butter, from a spoon"
+        }
+      },
+      {
+        "id": "mochi",
+        "palette": "rose",
+        "portrait": {
+          "pet": "cat",
+          "fur": "#f0a860",
+          "patch": "#fff1dc"
+        },
+        "values": {
+          "name": "Mochi",
+          "award": "Chief Nap Officer",
+          "age": "4",
+          "talent": "Fits in any box, however small",
+          "crime": "Stealing the warm spot in bed",
+          "snack": "Chicken, never the cheap one"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The pet issue",
+      "edition": "Most wanted edition",
+      "lines": [
+        [
+          "Secret talent",
+          "{talent}"
+        ],
+        [
+          "Most wanted for",
+          "{crime}"
+        ],
+        [
+          "Favourite snack",
+          "{snack}"
+        ]
+      ],
+      "badge": [
+        "Age",
+        "{age}",
+        "and iconic"
+      ],
+      "quote": "{award}",
+      "credit": "Official title"
+    }
+  },
+  {
+    "slug": "star-sign-birthday-magazine",
+    "layout": "stars",
+    "title": "The Birthday Stars Issue",
+    "searchTitle": "Personalised Zodiac Birthday Magazine",
+    "pinTitle": "Zodiac Birthday Magazine",
+    "occasion": "Star sign birthdays",
+    "short": "A cosmic birthday magazine with their star sign, lucky crystal and a very flattering horoscope.",
+    "description": "A birthday magazine written in the stars. Their zodiac sign on the cover, their lucky crystal, their cosmic superpower and a playful horoscope for the year ahead, plus your message and photos inside. Made for astrology lovers, crystal collectors and anyone who reads their horoscope first.",
+    "keywords": [
+      "zodiac birthday gift",
+      "astrology gift",
+      "star sign gift",
+      "birthday gift for her",
+      "crystal lover gift",
+      "horoscope gift"
+    ],
+    "inside": [
+      "A cosmic cover with their star sign and photo",
+      "Your birthday reading: your message to them",
+      "Their stars by the numbers",
+      "Their lucky crystal and what it means",
+      "A photo spread under the stars",
+      "What the stars say about the year ahead"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their first name or nickname",
+        "example": "Emma",
+        "max": 12
+      },
+      {
+        "id": "sign",
+        "label": "Their star sign",
+        "example": "Leo",
+        "max": 11
+      },
+      {
+        "id": "age",
+        "label": "The age they are turning",
+        "example": "35",
+        "max": 3
+      },
+      {
+        "id": "born",
+        "label": "Their birthday",
+        "example": "12 August",
+        "max": 18
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Sam",
+        "max": 30
+      },
+      {
+        "id": "crystal",
+        "label": "Their lucky crystal",
+        "example": "Citrine",
+        "max": 24
+      },
+      {
+        "id": "power",
+        "label": "Their cosmic superpower",
+        "example": "Lighting up every room they walk into",
+        "max": 60
+      },
+      {
+        "id": "prediction",
+        "label": "This year the stars predict",
+        "example": "A spontaneous trip and a very good haircut",
+        "max": 80
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "Happy birthday to the brightest star I know. The universe got it very right when it made you.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "Photo for inside",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma",
+        "palette": "cosmos",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#b5652b"
+        },
+        "values": {
+          "name": "Emma",
+          "sign": "Leo",
+          "age": "35",
+          "born": "12 August",
+          "crystal": "Citrine",
+          "power": "Lighting up every room they walk into",
+          "prediction": "A spontaneous trip and a very good haircut"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#1c1410"
+        },
+        "values": {
+          "name": "Sam",
+          "sign": "Scorpio",
+          "age": "40",
+          "born": "3 November",
+          "crystal": "Obsidian",
+          "power": "Knowing exactly what you are thinking",
+          "prediction": "Big news at work and an even bigger celebration"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "bun",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Mia",
+          "sign": "Pisces",
+          "age": "28",
+          "born": "9 March",
+          "crystal": "Amethyst",
+          "power": "Making everyone feel understood",
+          "prediction": "A creative dream finally comes true"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "mint",
+        "portrait": {
+          "skin": 2,
+          "hair": "curly",
+          "hairColor": "#1c1410"
+        },
+        "values": {
+          "name": "Leo",
+          "sign": "Gemini",
+          "age": "30",
+          "born": "2 June",
+          "crystal": "Clear quartz",
+          "power": "Talking to anyone about anything",
+          "prediction": "A new city, a new hobby and a lot of laughing"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The {sign} birthday issue",
+      "edition": "Cosmic edition",
+      "lines": [
+        [
+          "Lucky crystal",
+          "{crystal}"
+        ],
+        [
+          "Cosmic superpower",
+          "{power}"
+        ],
+        [
+          "The stars predict",
+          "{prediction}"
+        ]
+      ],
+      "badge": [
+        "Turns",
+        "{age}",
+        "today"
+      ],
+      "quote": "{sign} season",
+      "credit": "Born {born}"
+    }
+  },
+  {
+    "slug": "wedding-magazine",
+    "title": "The Big Day",
+    "searchTitle": "Personalised Wedding Magazine",
+    "pinTitle": "Personalised Wedding Magazine",
+    "occasion": "Weddings",
+    "short": "A glossy magazine all about the happy couple, their story and their big day.",
+    "description": "Turn their love story into a real magazine. How they met, the first dance and the moment everyone cried, all written up like a celebrity wedding exclusive with their photo on the cover. A wedding gift they will actually keep, perfect for the couple, the table or a first anniversary surprise.",
+    "keywords": [
+      "wedding gift ideas",
+      "personalised wedding gift",
+      "gift for bride and groom",
+      "wedding keepsake",
+      "unique wedding present",
+      "gift for newlyweds"
+    ],
+    "inside": [
+      "A cover starring the happy couple",
+      "A letter to the newlyweds",
+      "Their love story by the numbers",
+      "A photo spread of the best moments",
+      "The moment everyone cried"
+    ],
+    "letterTitle": "A letter to the newlyweds",
+    "feature": [
+      "The moment everyone cried",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "names",
+        "label": "The couple's names",
+        "example": "Emma & Leo",
+        "max": 16
+      },
+      {
+        "id": "year",
+        "label": "Wedding year",
+        "example": "2026",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "All your friends",
+        "max": 30
+      },
+      {
+        "id": "met",
+        "label": "How they met",
+        "example": "Spilled coffee on each other on a train",
+        "max": 45
+      },
+      {
+        "id": "song",
+        "label": "Their first dance song",
+        "example": "A slow one they both pretended to know",
+        "max": 45
+      },
+      {
+        "id": "secret",
+        "label": "The secret to their love",
+        "example": "Terrible jokes and endless snacks",
+        "max": 40
+      },
+      {
+        "id": "words",
+        "label": "Three words for them",
+        "example": "Soppy, silly, soulmates",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment everyone cried",
+        "example": "When Leo tried to read his vows and had to start again three times, and the whole room cheered him on",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "Watching you two find each other has been one of the best stories we know. Here is to a lifetime of adventures, lie ins and dancing in the kitchen.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the couple",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite moment",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma-leo",
+        "palette": "rose",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#6b3a1f"
+        },
+        "values": {
+          "names": "Emma & Leo",
+          "year": "2026",
+          "met": "Spilled coffee on each other on a train",
+          "song": "A slow one they both pretended to know",
+          "secret": "Terrible jokes and endless snacks",
+          "words": "Soppy, silly, soulmates"
+        }
+      },
+      {
+        "id": "sam-chris",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#141010"
+        },
+        "values": {
+          "names": "Sam & Chris",
+          "year": "2027",
+          "met": "Both reached for the last slice of pizza",
+          "song": "The song from their first road trip",
+          "secret": "Never going to bed hungry",
+          "words": "Loud, loyal, lovely"
+        }
+      },
+      {
+        "id": "ava-noah",
+        "palette": "butter",
+        "portrait": {
+          "skin": 2,
+          "hair": "curly",
+          "hairColor": "#2b1a12"
+        },
+        "values": {
+          "names": "Ava & Noah",
+          "year": "2026",
+          "met": "Lost on the same hiking trail",
+          "song": "A cheesy classic, played twice",
+          "secret": "Laughing at the same bad films",
+          "words": "Brave, bright, besotted"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{names}",
+      "issue": "The wedding issue",
+      "edition": "Exclusive photos inside",
+      "lines": [
+        [
+          "Exclusive",
+          "How they met: {met}"
+        ],
+        [
+          "First dance",
+          "{song}"
+        ],
+        [
+          "The secret",
+          "{secret}"
+        ]
+      ],
+      "badge": [
+        "Just married",
+        "{year}",
+        "forever"
+      ],
+      "quote": "{words}",
+      "credit": "The guests tell all, page 4"
+    }
+  },
+  {
+    "slug": "new-baby-magazine",
+    "title": "The Arrival",
+    "searchTitle": "Personalised New Baby Magazine",
+    "pinTitle": "Personalised New Baby Magazine",
+    "occasion": "New baby",
+    "short": "A magazine announcing the newest, smallest and most famous member of the family.",
+    "description": "The very first magazine about the newest little star. Their weight, who they look like, what they already love and the moment everyone met them, all in a glossy cover story. A beautiful gift for new parents and a keepsake to give back when that baby is all grown up.",
+    "keywords": [
+      "new baby gift",
+      "baby shower gift ideas",
+      "gift for new parents",
+      "baby keepsake",
+      "personalised baby gift",
+      "newborn gift"
+    ],
+    "inside": [
+      "A cover starring the new arrival",
+      "A welcome letter to the world",
+      "Their first days by the numbers",
+      "A photo spread of tiny fingers and toes",
+      "The moment we first met"
+    ],
+    "letterTitle": "Welcome to the world",
+    "feature": [
+      "The moment we first met",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Baby's name",
+        "example": "Olivia",
+        "max": 12
+      },
+      {
+        "id": "weight",
+        "label": "Birth weight",
+        "example": "7lb 4oz",
+        "max": 8
+      },
+      {
+        "id": "born",
+        "label": "Date of birth",
+        "example": "14 March 2026",
+        "max": 18
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mummy and Daddy",
+        "max": 30
+      },
+      {
+        "id": "looks",
+        "label": "Looks just like",
+        "example": "Grandad, when he's grumpy",
+        "max": 40
+      },
+      {
+        "id": "skill",
+        "label": "First talent",
+        "example": "Sleeping through anything but the night",
+        "max": 45
+      },
+      {
+        "id": "loves",
+        "label": "Already loves",
+        "example": "Milk, cuddles and the hoover noise",
+        "max": 40
+      },
+      {
+        "id": "moment",
+        "label": "The moment we first met",
+        "example": "You opened one eye, gave us a very serious look, then held on to a finger and never let go",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "We waited so long to meet you and you are even better than we dreamed. Welcome to the world, little one. You are so loved.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of baby",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "Tiny fingers and toes",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "A family favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "olivia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#8a5a2b"
+        },
+        "values": {
+          "name": "Olivia",
+          "weight": "7lb 4oz",
+          "born": "14 March 2026",
+          "looks": "Grandad, when he's grumpy",
+          "skill": "Sleeping through anything but the night",
+          "loves": "Milk, cuddles and the hoover noise"
+        }
+      },
+      {
+        "id": "jack",
+        "palette": "sky",
+        "portrait": {
+          "skin": 2,
+          "hair": "short",
+          "hairColor": "#1c1410"
+        },
+        "values": {
+          "name": "Jack",
+          "weight": "8lb 1oz",
+          "born": "2 June 2026",
+          "looks": "Mummy, especially the frown",
+          "skill": "Loudest sneeze on the ward",
+          "loves": "Being rocked, never stopped"
+        }
+      },
+      {
+        "id": "isla",
+        "palette": "mint",
+        "portrait": {
+          "skin": 1,
+          "hair": "bun",
+          "hairColor": "#c4803f"
+        },
+        "values": {
+          "name": "Isla",
+          "weight": "6lb 9oz",
+          "born": "30 October 2026",
+          "looks": "A tiny, wise old professor",
+          "skill": "Smiling only at the dog",
+          "loves": "Warm towels and her own feet"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The arrival issue",
+      "edition": "Born {born}",
+      "lines": [
+        [
+          "Exclusive",
+          "First photos of {name}"
+        ],
+        [
+          "Looks just like",
+          "{looks}"
+        ],
+        [
+          "Already loves",
+          "{loves}"
+        ]
+      ],
+      "badge": [
+        "Weighing in",
+        "{weight}",
+        "of pure joy"
+      ],
+      "quote": "{skill}",
+      "credit": "First talent"
+    }
+  },
+  {
+    "slug": "first-birthday-magazine",
+    "title": "The Big One",
+    "searchTitle": "Personalised First Birthday Magazine",
+    "pinTitle": "Personalised First Birthday Magazine",
+    "occasion": "First birthday",
+    "short": "A magazine celebrating the first amazing year of their life.",
+    "description": "One whole year of firsts, in one glossy magazine. Their first words, first food faces, favourite things and the moment that made everyone melt, written up like a star turning one. A lovely gift for the first birthday party and a keepsake parents will read for years.",
+    "keywords": [
+      "first birthday gift",
+      "1st birthday ideas",
+      "first birthday keepsake",
+      "gift for one year old",
+      "baby first birthday",
+      "personalised first birthday"
+    ],
+    "inside": [
+      "A cover starring the birthday baby",
+      "A letter for their first birthday",
+      "Year one by the numbers",
+      "A photo spread of the best firsts",
+      "The moment that made us melt"
+    ],
+    "letterTitle": "A letter for your first birthday",
+    "feature": [
+      "The moment that made us melt",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Leo",
+        "max": 12
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mummy, Daddy and Biscuit the dog",
+        "max": 34
+      },
+      {
+        "id": "word",
+        "label": "First word",
+        "example": "Dog, then Mama, then more dog",
+        "max": 34
+      },
+      {
+        "id": "food",
+        "label": "Best food face",
+        "example": "Lemon, never again",
+        "max": 34
+      },
+      {
+        "id": "toy",
+        "label": "Favourite thing",
+        "example": "The box the present came in",
+        "max": 34
+      },
+      {
+        "id": "nick",
+        "label": "Nickname",
+        "example": "Little Chunk",
+        "max": 18
+      },
+      {
+        "id": "moment",
+        "label": "The moment that made us melt",
+        "example": "The first time you clapped for yourself after standing up, then sat straight back down with the biggest grin",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "One year ago you changed everything. Thank you for every giggle, every sleepy cuddle and every tiny first. Happy first birthday, our darling.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite first",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "leo",
+        "palette": "sky",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#6b3a1f"
+        },
+        "values": {
+          "name": "Leo",
+          "word": "Dog, then Mama, then more dog",
+          "food": "Lemon, never again",
+          "toy": "The box the present came in",
+          "nick": "Little Chunk"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "rose",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "word": "Uh oh, said with feeling",
+          "food": "Broccoli, total betrayal",
+          "toy": "Anything with a button",
+          "nick": "Sunshine"
+        }
+      },
+      {
+        "id": "noah",
+        "palette": "butter",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#c4803f"
+        },
+        "values": {
+          "name": "Noah",
+          "word": "Dada, to everything",
+          "food": "Yoghurt, mostly on his face",
+          "toy": "The TV remote",
+          "nick": "Captain Wiggles"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The first birthday issue",
+      "edition": "Year one special",
+      "lines": [
+        [
+          "Exclusive",
+          "{name} turns one"
+        ],
+        [
+          "First word",
+          "{word}"
+        ],
+        [
+          "Best food face",
+          "{food}"
+        ]
+      ],
+      "badge": [
+        "Now",
+        "ONE",
+        "and fabulous"
+      ],
+      "quote": "{nick}",
+      "credit": "Also known as"
+    }
+  },
+  {
+    "slug": "retirement-magazine",
+    "title": "Legend Retires",
+    "searchTitle": "Personalised Retirement Magazine",
+    "pinTitle": "Personalised Retirement Magazine",
+    "occasion": "Retirement",
+    "short": "A magazine celebrating a career, a legend and everything that comes next.",
+    "description": "Send them off like the star they are. Years of work, famous habits, office legends and big plans for retirement, written up as a glossy magazine exclusive with their photo on the cover. A thoughtful leaving gift from colleagues or family, far more memorable than a card.",
+    "keywords": [
+      "retirement gift ideas",
+      "personalised retirement gift",
+      "leaving gift for colleague",
+      "gift for retiring teacher",
+      "funny retirement gift",
+      "retirement keepsake"
+    ],
+    "inside": [
+      "A cover starring the new retiree",
+      "A letter from everyone",
+      "Their career by the numbers",
+      "A photo spread of the good old days",
+      "The moment everyone still talks about"
+    ],
+    "letterTitle": "A letter from all of us",
+    "feature": [
+      "The story everyone still tells",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Chris",
+        "max": 12
+      },
+      {
+        "id": "years",
+        "label": "Years at work",
+        "example": "35",
+        "max": 3
+      },
+      {
+        "id": "job",
+        "label": "Their job",
+        "example": "Head of maths",
+        "max": 30
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Everyone in the staff room",
+        "max": 34
+      },
+      {
+        "id": "known",
+        "label": "Famous for",
+        "example": "The biscuit tin nobody else could open",
+        "max": 42
+      },
+      {
+        "id": "plans",
+        "label": "Big plans now",
+        "example": "Golf, gardening and very long lunches",
+        "max": 42
+      },
+      {
+        "id": "miss",
+        "label": "We will miss",
+        "example": "Your laugh down the corridor",
+        "max": 36
+      },
+      {
+        "id": "moment",
+        "label": "The story everyone still tells",
+        "example": "The Christmas party when the photocopier jammed and you fixed it in a paper crown while leading the singing",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "Work will not be the same without you. Thank you for the wisdom, the patience and the terrible puns. Enjoy every single lie in, you have earned it.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "The good old days",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "chris",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#b0b0b0"
+        },
+        "values": {
+          "name": "Chris",
+          "years": "35",
+          "job": "Head of maths",
+          "known": "The biscuit tin nobody else could open",
+          "plans": "Golf, gardening and very long lunches",
+          "miss": "Your laugh down the corridor"
+        }
+      },
+      {
+        "id": "emma",
+        "palette": "mint",
+        "portrait": {
+          "skin": 2,
+          "hair": "bun",
+          "hairColor": "#8a8a8a"
+        },
+        "values": {
+          "name": "Emma",
+          "years": "28",
+          "job": "Nurse, and everyone's hero",
+          "known": "Remembering every patient's name",
+          "plans": "Travelling to every country she can",
+          "miss": "Your calm on the busy nights"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "butter",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#d9d9d9"
+        },
+        "values": {
+          "name": "Sam",
+          "years": "41",
+          "job": "Bus driver, route 12",
+          "known": "Knowing every passenger by name",
+          "plans": "Fishing, finally",
+          "miss": "Your cheery hello every morning"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The retirement issue",
+      "edition": "Farewell tour edition",
+      "lines": [
+        [
+          "Exclusive",
+          "After {years} years, {name} signs off"
+        ],
+        [
+          "Famous for",
+          "{known}"
+        ],
+        [
+          "Big plans",
+          "{plans}"
+        ]
+      ],
+      "badge": [
+        "After",
+        "{years}",
+        "years"
+      ],
+      "quote": "{job}",
+      "credit": "A true legend"
+    }
+  },
+  {
+    "slug": "graduation-magazine",
+    "title": "Class Of",
+    "searchTitle": "Personalised Graduation Magazine",
+    "pinTitle": "Personalised Graduation Magazine",
+    "occasion": "Graduation",
+    "short": "A magazine celebrating the graduate, the hard work and the big future ahead.",
+    "description": "All those late nights deserve a front page. Their subject, their study survival kit, their proudest moment and big dreams, written up like a celebrity cover story. A proud, personal graduation gift from family or friends, and a keepsake for the next big chapter.",
+    "keywords": [
+      "graduation gift ideas",
+      "personalised graduation gift",
+      "gift for graduate",
+      "class of 2026 gift",
+      "university graduation gift",
+      "high school graduation gift"
+    ],
+    "inside": [
+      "A cover starring the graduate",
+      "A proud letter from home",
+      "Their studies by the numbers",
+      "A photo spread of the journey",
+      "Their proudest moment"
+    ],
+    "letterTitle": "We are so proud of you",
+    "feature": [
+      "Their proudest moment",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Mia",
+        "max": 12
+      },
+      {
+        "id": "year",
+        "label": "Graduation year",
+        "example": "2026",
+        "max": 4
+      },
+      {
+        "id": "subject",
+        "label": "What they studied",
+        "example": "Marine biology",
+        "max": 30
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mum, Dad and Grandma",
+        "max": 34
+      },
+      {
+        "id": "fuel",
+        "label": "Powered by",
+        "example": "Instant noodles and three alarms",
+        "max": 38
+      },
+      {
+        "id": "next",
+        "label": "Next big move",
+        "example": "Saving the ocean, one fish at a time",
+        "max": 40
+      },
+      {
+        "id": "words",
+        "label": "Three words for them",
+        "example": "Clever, stubborn, unstoppable",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "Their proudest moment",
+        "example": "Handing in the final essay four minutes before the deadline, then sleeping for fourteen hours straight",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "We have watched you work so hard for this. Whatever comes next, you have already made us the proudest family in the world. Congratulations, graduate.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the graduate",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A study days favourite",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "mia",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Mia",
+          "year": "2026",
+          "subject": "Marine biology",
+          "fuel": "Instant noodles and three alarms",
+          "next": "Saving the ocean, one fish at a time",
+          "words": "Clever, stubborn, unstoppable"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "sky",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#1c1410"
+        },
+        "values": {
+          "name": "Leo",
+          "year": "2027",
+          "subject": "Engineering",
+          "fuel": "Energy drinks and pure panic",
+          "next": "Building bridges, literally",
+          "words": "Calm, curious, brilliant"
+        }
+      },
+      {
+        "id": "grace",
+        "palette": "coral",
+        "portrait": {
+          "skin": 2,
+          "hair": "curly",
+          "hairColor": "#1c120c"
+        },
+        "values": {
+          "name": "Grace",
+          "year": "2026",
+          "subject": "Law",
+          "fuel": "Highlighters and hope",
+          "next": "Winning every argument, legally",
+          "words": "Sharp, kind, fearless"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The graduation issue",
+      "edition": "Class of {year}",
+      "lines": [
+        [
+          "Exclusive",
+          "{name} graduates in {subject}"
+        ],
+        [
+          "Powered by",
+          "{fuel}"
+        ],
+        [
+          "Next big move",
+          "{next}"
+        ]
+      ],
+      "badge": [
+        "Class of",
+        "{year}",
+        "top marks"
+      ],
+      "quote": "{words}",
+      "credit": "Their tutors agree"
+    }
+  },
+  {
+    "slug": "mothers-day-magazine",
+    "title": "Best Mum Ever",
+    "searchTitle": "Personalised Mother's Day Magazine",
+    "pinTitle": "Personalised Mother's Day Magazine",
+    "occasion": "Mother's Day",
+    "short": "A magazine all about the woman who does everything, starring Mum.",
+    "description": "Finally, the cover story she deserves. Her superpowers, the things she always says, her famous dishes and the moments you will never forget, in a glossy magazine made by you. A Mother's Day, birthday or just because gift that will make her cry the good tears.",
+    "keywords": [
+      "mothers day gift ideas",
+      "personalised gift for mum",
+      "gift for mom",
+      "mothers day keepsake",
+      "best mum gift",
+      "gift from kids to mum"
+    ],
+    "inside": [
+      "A cover starring Mum",
+      "A thank you letter",
+      "Mum by the numbers",
+      "A photo spread of favourite memories",
+      "The moment we will never forget"
+    ],
+    "letterTitle": "A letter for you, Mum",
+    "feature": [
+      "The moment we will never forget",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "What you call her",
+        "example": "Mum",
+        "max": 12
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Your favourite children",
+        "max": 34
+      },
+      {
+        "id": "power",
+        "label": "Her superpower",
+        "example": "Finding things before we even lose them",
+        "max": 42
+      },
+      {
+        "id": "says",
+        "label": "She always says",
+        "example": "Have you eaten?",
+        "max": 36
+      },
+      {
+        "id": "dish",
+        "label": "Her famous dish",
+        "example": "Sunday roast, nobody does it better",
+        "max": 40
+      },
+      {
+        "id": "words",
+        "label": "Three words for her",
+        "example": "Warm, wise, wonderful",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment we will never forget",
+        "example": "The rainy day you turned the living room into a campsite, complete with torches, songs and far too many marshmallows",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to her",
+        "example": "Thank you for every packed lunch, every late night chat and every time you believed in us before we did. You are the heart of everything.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of Mum",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite memory",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "mum",
+        "palette": "rose",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#6b3a1f"
+        },
+        "values": {
+          "name": "Mum",
+          "power": "Finding things before we even lose them",
+          "says": "Have you eaten?",
+          "dish": "Sunday roast, nobody does it better",
+          "words": "Warm, wise, wonderful"
+        }
+      },
+      {
+        "id": "mama",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "bun",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Mama",
+          "power": "Knowing when something is wrong",
+          "says": "Did you take a coat?",
+          "dish": "Her legendary pancakes",
+          "words": "Strong, funny, fabulous"
+        }
+      },
+      {
+        "id": "mummy",
+        "palette": "mint",
+        "portrait": {
+          "skin": 0,
+          "hair": "curly",
+          "hairColor": "#b5652b"
+        },
+        "values": {
+          "name": "Mummy",
+          "power": "Kissing it better, instantly",
+          "says": "Five more minutes",
+          "dish": "Chocolate cake, extra thick",
+          "words": "Kind, brave, beautiful"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The Mother's Day issue",
+      "edition": "Best mum ever edition",
+      "lines": [
+        [
+          "Exclusive",
+          "The real superhero of the house"
+        ],
+        [
+          "Superpower",
+          "{power}"
+        ],
+        [
+          "She always says",
+          "{says}"
+        ]
+      ],
+      "badge": [
+        "Rated",
+        "10/10",
+        "by us"
+      ],
+      "quote": "{words}",
+      "credit": "Her biggest fans"
+    }
+  },
+  {
+    "slug": "fathers-day-magazine",
+    "title": "Dad Weekly",
+    "searchTitle": "Personalised Father's Day Magazine",
+    "pinTitle": "Personalised Father's Day Magazine",
+    "occasion": "Father's Day",
+    "short": "A magazine all about Dad: his jokes, his skills and his legendary moments.",
+    "description": "Every dad joke finally in print. His famous sayings, his hidden skills, his questionable dance moves and the moments you treasure, all in a glossy magazine starring Dad. A Father's Day or birthday gift that beats socks every single time.",
+    "keywords": [
+      "fathers day gift ideas",
+      "personalised gift for dad",
+      "dad birthday gift",
+      "funny gift for dad",
+      "gift from kids to dad",
+      "best dad gift"
+    ],
+    "inside": [
+      "A cover starring Dad",
+      "A thank you letter",
+      "Dad by the numbers",
+      "A photo spread of the best days",
+      "His most legendary moment"
+    ],
+    "letterTitle": "A letter for you, Dad",
+    "feature": [
+      "His most legendary moment",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "What you call him",
+        "example": "Dad",
+        "max": 12
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Your biggest fans",
+        "max": 34
+      },
+      {
+        "id": "joke",
+        "label": "His worst joke",
+        "example": "Hi hungry, I am Dad",
+        "max": 36
+      },
+      {
+        "id": "skill",
+        "label": "Hidden skill",
+        "example": "Fixing anything with tape",
+        "max": 36
+      },
+      {
+        "id": "says",
+        "label": "He always says",
+        "example": "Ask your mother",
+        "max": 32
+      },
+      {
+        "id": "words",
+        "label": "Three words for him",
+        "example": "Funny, patient, legendary",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "His most legendary moment",
+        "example": "Building the flat pack wardrobe without the instructions, having three screws left over, and declaring it stronger than ever",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to him",
+        "example": "Thank you for the lifts, the lessons, the bad jokes and the good advice. We are who we are because of you. Love you, Dad.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of Dad",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite day out",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "dad",
+        "palette": "sky",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Dad",
+          "joke": "Hi hungry, I am Dad",
+          "skill": "Fixing anything with tape",
+          "says": "Ask your mother",
+          "words": "Funny, patient, legendary"
+        }
+      },
+      {
+        "id": "papa",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#141010"
+        },
+        "values": {
+          "name": "Papa",
+          "joke": "Is this seat taken? No? Good",
+          "skill": "Perfect barbecue, every time",
+          "says": "Turn that light off",
+          "words": "Strong, silly, the best"
+        }
+      },
+      {
+        "id": "daddy",
+        "palette": "butter",
+        "portrait": {
+          "skin": 2,
+          "hair": "curly",
+          "hairColor": "#1c1410"
+        },
+        "values": {
+          "name": "Daddy",
+          "joke": "I am not old, I am vintage",
+          "skill": "Piggy backs for miles",
+          "says": "We will see",
+          "words": "Kind, cool, our hero"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The Father's Day issue",
+      "edition": "Dad joke edition",
+      "lines": [
+        [
+          "Exclusive",
+          "World's best dad speaks out"
+        ],
+        [
+          "Worst joke",
+          "{joke}"
+        ],
+        [
+          "Hidden skill",
+          "{skill}"
+        ]
+      ],
+      "badge": [
+        "Voted",
+        "NO.1",
+        "dad"
+      ],
+      "quote": "{words}",
+      "credit": "His biggest fans"
+    }
+  },
+  {
+    "slug": "best-friend-magazine",
+    "title": "Bestie Weekly",
+    "searchTitle": "Personalised Best Friend Magazine",
+    "pinTitle": "Personalised Best Friend Magazine",
+    "occasion": "Best friends",
+    "short": "A magazine all about your best friend, your inside jokes and your best adventures.",
+    "description": "For the friend who knows everything. How you met, your inside jokes, their best qualities and your wildest adventure, written up as a glossy celebrity magazine starring them. A birthday, Galentine's or just because gift that says what a card never could.",
+    "keywords": [
+      "best friend gift",
+      "gift for best friend birthday",
+      "bestie gift ideas",
+      "galentines gift",
+      "friendship gift",
+      "long distance friend gift"
+    ],
+    "inside": [
+      "A cover starring your best friend",
+      "A letter from you",
+      "Your friendship by the numbers",
+      "A photo spread of your adventures",
+      "Your wildest adventure"
+    ],
+    "letterTitle": "A letter to my best friend",
+    "feature": [
+      "Our wildest adventure",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Your friend's name",
+        "example": "Emma",
+        "max": 12
+      },
+      {
+        "id": "since",
+        "label": "Friends since",
+        "example": "2012",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mia",
+        "max": 30
+      },
+      {
+        "id": "met",
+        "label": "How you met",
+        "example": "Stuck in the same broken lift",
+        "max": 40
+      },
+      {
+        "id": "joke",
+        "label": "Inside joke",
+        "example": "The goose incident",
+        "max": 34
+      },
+      {
+        "id": "best",
+        "label": "Their best quality",
+        "example": "Always answers the phone at 2am",
+        "max": 40
+      },
+      {
+        "id": "words",
+        "label": "Three words for them",
+        "example": "Loyal, hilarious, iconic",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "Our wildest adventure",
+        "example": "The road trip where the car broke down, we sang in a field for three hours and still call it the best day ever",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "Thank you for every laugh, every late night and every time you made a bad day brilliant. I would pick you every single time.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of your friend",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "An adventure together",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma",
+        "palette": "coral",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#b5652b"
+        },
+        "values": {
+          "name": "Emma",
+          "since": "2012",
+          "met": "Stuck in the same broken lift",
+          "joke": "The goose incident",
+          "best": "Always answers the phone at 2am",
+          "words": "Loyal, hilarious, iconic"
+        }
+      },
+      {
+        "id": "chris",
+        "palette": "sky",
+        "portrait": {
+          "skin": 2,
+          "hair": "short",
+          "hairColor": "#1c1410"
+        },
+        "values": {
+          "name": "Chris",
+          "since": "2008",
+          "met": "Fought over a football at school",
+          "joke": "Never trust a pigeon",
+          "best": "Turns up with snacks, always",
+          "words": "Honest, daft, dependable"
+        }
+      },
+      {
+        "id": "olivia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Olivia",
+          "since": "2019",
+          "met": "Same wrong answer in a quiz",
+          "joke": "Just one more shop",
+          "best": "Hypes you up like a stadium",
+          "words": "Bold, bright, brilliant"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The best friend issue",
+      "edition": "Friends forever edition",
+      "lines": [
+        [
+          "Exclusive",
+          "How we met: {met}"
+        ],
+        [
+          "Inside joke",
+          "{joke}"
+        ],
+        [
+          "Best quality",
+          "{best}"
+        ]
+      ],
+      "badge": [
+        "Besties since",
+        "{since}",
+        "and counting"
+      ],
+      "quote": "{words}",
+      "credit": "Their best friend tells all"
+    }
+  },
+  {
+    "slug": "teacher-magazine",
+    "title": "Teacher of the Year",
+    "searchTitle": "Personalised Teacher Thank You Magazine",
+    "pinTitle": "Personalised Teacher Thank You Magazine",
+    "occasion": "Teacher thank you",
+    "short": "A magazine thanking a wonderful teacher, made by their class.",
+    "description": "A thank you they will keep forever. Their famous sayings, their best lessons and what the class will remember, written up as a glossy magazine exclusive starring the teacher of the year. A perfect end of year gift from one child or the whole class.",
+    "keywords": [
+      "teacher gift ideas",
+      "end of year teacher gift",
+      "personalised teacher gift",
+      "teacher thank you",
+      "teaching assistant gift",
+      "class gift for teacher"
+    ],
+    "inside": [
+      "A cover starring the teacher",
+      "A thank you letter from the class",
+      "The school year by the numbers",
+      "A photo spread of the class",
+      "The lesson we will never forget"
+    ],
+    "letterTitle": "A thank you from your class",
+    "feature": [
+      "The lesson we will never forget",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Teacher's name",
+        "example": "Mrs Taylor",
+        "max": 14
+      },
+      {
+        "id": "year",
+        "label": "School year",
+        "example": "2026",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Class 3B",
+        "max": 30
+      },
+      {
+        "id": "says",
+        "label": "They always say",
+        "example": "Eyes on me, superstars",
+        "max": 34
+      },
+      {
+        "id": "lesson",
+        "label": "Best lesson",
+        "example": "Volcanoes, with real explosions",
+        "max": 38
+      },
+      {
+        "id": "power",
+        "label": "Their superpower",
+        "example": "Knowing who talked, without looking",
+        "max": 40
+      },
+      {
+        "id": "words",
+        "label": "Three words for them",
+        "example": "Patient, funny, amazing",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The lesson we will never forget",
+        "example": "The day the class hamster escaped and you turned the search into a maths lesson about hiding places",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "Thank you for making every day feel like an adventure. You made us feel clever, brave and listened to. We will never forget you.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the teacher",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A class favourite",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "mrs-taylor",
+        "palette": "butter",
+        "portrait": {
+          "skin": 1,
+          "hair": "bun",
+          "hairColor": "#6b3a1f"
+        },
+        "values": {
+          "name": "Mrs Taylor",
+          "year": "2026",
+          "says": "Eyes on me, superstars",
+          "lesson": "Volcanoes, with real explosions",
+          "power": "Knowing who talked, without looking",
+          "words": "Patient, funny, amazing"
+        }
+      },
+      {
+        "id": "mr-brooks",
+        "palette": "mint",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#141010"
+        },
+        "values": {
+          "name": "Mr Brooks",
+          "year": "2026",
+          "says": "Mistakes help us grow",
+          "lesson": "Building a castle out of boxes",
+          "power": "Making maths actually fun",
+          "words": "Kind, calm, the best"
+        }
+      },
+      {
+        "id": "miss-green",
+        "palette": "coral",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#c4803f"
+        },
+        "values": {
+          "name": "Miss Green",
+          "year": "2027",
+          "says": "Magic fingers, magic ears",
+          "lesson": "Reading under the tables",
+          "power": "Remembering every birthday",
+          "words": "Sunny, smart, special"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The thank you issue",
+      "edition": "Class of {year}",
+      "lines": [
+        [
+          "Exclusive",
+          "Voted teacher of the year"
+        ],
+        [
+          "Always says",
+          "{says}"
+        ],
+        [
+          "Best lesson",
+          "{lesson}"
+        ]
+      ],
+      "badge": [
+        "Teacher of",
+        "{year}",
+        "gold star"
+      ],
+      "quote": "{words}",
+      "credit": "Their class agrees"
+    }
+  },
+  {
+    "slug": "milestone-birthday-magazine",
+    "title": "Vintage Edition",
+    "searchTitle": "Personalised Milestone Birthday Magazine",
+    "pinTitle": "Personalised Milestone Birthday Magazine",
+    "occasion": "Milestone birthdays",
+    "short": "A retro style magazine for the big ones: 18, 21, 30, 40, 50, 60 and beyond.",
+    "description": "For the birthdays that deserve a headline. The year they were born, what they are famous for, their greatest decade and the stories everyone still tells, in a glossy vintage edition starring them. A showstopper for 18th, 21st, 30th, 40th, 50th, 60th, 70th and 80th birthdays.",
+    "keywords": [
+      "40th birthday gift",
+      "50th birthday ideas",
+      "60th birthday gift",
+      "30th birthday gift",
+      "21st birthday gift",
+      "milestone birthday keepsake"
+    ],
+    "inside": [
+      "A vintage cover starring them",
+      "A birthday letter",
+      "Their life by the numbers",
+      "A photo spread through the years",
+      "The story everyone still tells"
+    ],
+    "letterTitle": "A letter for your big birthday",
+    "feature": [
+      "The story everyone still tells",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Sam",
+        "max": 12
+      },
+      {
+        "id": "age",
+        "label": "Age they are turning",
+        "example": "50",
+        "max": 3
+      },
+      {
+        "id": "born",
+        "label": "Year they were born",
+        "example": "1976",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "The whole family",
+        "max": 34
+      },
+      {
+        "id": "famous",
+        "label": "Famous for",
+        "example": "Dancing at every wedding, invited or not",
+        "max": 42
+      },
+      {
+        "id": "decade",
+        "label": "Best decade so far",
+        "example": "This one, obviously",
+        "max": 32
+      },
+      {
+        "id": "still",
+        "label": "Still can't",
+        "example": "Whistle, or fold a fitted sheet",
+        "max": 36
+      },
+      {
+        "id": "moment",
+        "label": "The story everyone still tells",
+        "example": "The holiday where you got us completely lost, found the best restaurant in town and pretended it was the plan all along",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "Happy birthday to someone who gets better every year. Thank you for the laughs, the love and the terrible dancing. Here is to the next chapter.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A photo from years ago",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "A photo from now",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "sam",
+        "palette": "butter",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#8a8a8a"
+        },
+        "values": {
+          "name": "Sam",
+          "age": "50",
+          "born": "1976",
+          "famous": "Dancing at every wedding, invited or not",
+          "decade": "This one, obviously",
+          "still": "Whistle, or fold a fitted sheet"
+        }
+      },
+      {
+        "id": "emma",
+        "palette": "rose",
+        "portrait": {
+          "skin": 3,
+          "hair": "long",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Emma",
+          "age": "40",
+          "born": "1986",
+          "famous": "Organising everyone, lovingly",
+          "decade": "Her twenties, no regrets",
+          "still": "Parallel park on the first go"
+        }
+      },
+      {
+        "id": "chris",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#d9d9d9"
+        },
+        "values": {
+          "name": "Chris",
+          "age": "60",
+          "born": "1966",
+          "famous": "The world's longest stories",
+          "decade": "The eighties, and the hair",
+          "still": "Resist a second pudding"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The vintage issue",
+      "edition": "Born in {born}",
+      "lines": [
+        [
+          "Exclusive",
+          "{name} turns {age}"
+        ],
+        [
+          "Famous for",
+          "{famous}"
+        ],
+        [
+          "Still can't",
+          "{still}"
+        ]
+      ],
+      "badge": [
+        "Vintage",
+        "{age}",
+        "aged to perfection"
+      ],
+      "quote": "{decade}",
+      "credit": "Best decade so far"
+    }
+  },
+  {
+    "slug": "engagement-magazine",
+    "title": "We Said Yes",
+    "searchTitle": "Personalised Engagement Magazine",
+    "pinTitle": "Personalised Engagement Magazine",
+    "occasion": "Engagements",
+    "short": "A magazine celebrating the proposal, the ring and the happy couple.",
+    "description": "The proposal story, told properly. Where it happened, how nervous everyone was, the ring and what comes next, all written up as a glossy magazine exclusive starring the newly engaged couple. A joyful engagement gift from friends or family, or a surprise for your partner.",
+    "keywords": [
+      "engagement gift ideas",
+      "personalised engagement gift",
+      "gift for engaged couple",
+      "engagement keepsake",
+      "just engaged gift",
+      "proposal keepsake"
+    ],
+    "inside": [
+      "A cover starring the couple",
+      "A letter to the happy couple",
+      "Their love story by the numbers",
+      "A photo spread of the proposal",
+      "The proposal, as it happened"
+    ],
+    "letterTitle": "A letter to the happy couple",
+    "feature": [
+      "The proposal, as it happened",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "names",
+        "label": "The couple's names",
+        "example": "Mia & Sam",
+        "max": 16
+      },
+      {
+        "id": "year",
+        "label": "Year of the proposal",
+        "example": "2026",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Your very excited friends",
+        "max": 34
+      },
+      {
+        "id": "where",
+        "label": "Where it happened",
+        "example": "On top of a very windy hill",
+        "max": 38
+      },
+      {
+        "id": "nerves",
+        "label": "Nerves rating",
+        "example": "Forgot own name, twice",
+        "max": 34
+      },
+      {
+        "id": "next",
+        "label": "What comes next",
+        "example": "A wedding, then a nap",
+        "max": 32
+      },
+      {
+        "id": "words",
+        "label": "Three words for them",
+        "example": "Giddy, gorgeous, glowing",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The proposal, as it happened",
+        "example": "Sam dropped the ring in the grass, spent five minutes searching on hands and knees, then proposed while still covered in mud",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "We have been waiting for this news for ages. Congratulations to two people who make each other shine. We cannot wait to celebrate you.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the couple",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "The proposal",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "mia-sam",
+        "palette": "rose",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "names": "Mia & Sam",
+          "year": "2026",
+          "where": "On top of a very windy hill",
+          "nerves": "Forgot own name, twice",
+          "next": "A wedding, then a nap",
+          "words": "Giddy, gorgeous, glowing"
+        }
+      },
+      {
+        "id": "leo-ava",
+        "palette": "cosmos",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#141010"
+        },
+        "values": {
+          "names": "Leo & Ava",
+          "year": "2027",
+          "where": "Under the stars on a beach",
+          "nerves": "Rehearsed it forty times",
+          "next": "Planning, panicking, partying",
+          "words": "Starry eyed and silly"
+        }
+      },
+      {
+        "id": "jack-grace",
+        "palette": "mint",
+        "portrait": {
+          "skin": 0,
+          "hair": "curly",
+          "hairColor": "#c4803f"
+        },
+        "values": {
+          "names": "Jack & Grace",
+          "year": "2026",
+          "where": "Their favourite little cafe",
+          "nerves": "Hid the ring in a croissant",
+          "next": "Finding a date both mums like",
+          "words": "Sweet, sunny, sure"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{names}",
+      "issue": "The engagement issue",
+      "edition": "They said yes",
+      "lines": [
+        [
+          "Exclusive",
+          "The proposal: {where}"
+        ],
+        [
+          "Nerves rating",
+          "{nerves}"
+        ],
+        [
+          "What comes next",
+          "{next}"
+        ]
+      ],
+      "badge": [
+        "Engaged",
+        "{year}",
+        "at last"
+      ],
+      "quote": "{words}",
+      "credit": "Their friends agree"
+    }
+  },
+  {
+    "slug": "new-home-magazine",
+    "title": "Home Sweet Home",
+    "searchTitle": "Personalised New Home Magazine",
+    "pinTitle": "Personalised New Home Magazine",
+    "occasion": "New home",
+    "short": "A magazine celebrating new keys, a new front door and a brand new chapter.",
+    "description": "Their very own place deserves a feature. The first night, the favourite room, the moving day disasters and the dreams for the future, written up like a glossy home magazine starring them. A warm housewarming gift for first time buyers and new homeowners.",
+    "keywords": [
+      "housewarming gift ideas",
+      "new home gift",
+      "first home gift",
+      "personalised housewarming gift",
+      "gift for new homeowners",
+      "moving house gift"
+    ],
+    "inside": [
+      "A cover starring the new homeowners",
+      "A housewarming letter",
+      "Moving day by the numbers",
+      "A photo spread of the new place",
+      "The moving day story"
+    ],
+    "letterTitle": "A letter for your new home",
+    "feature": [
+      "The moving day story",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "names",
+        "label": "Their names",
+        "example": "Emma & Chris",
+        "max": 16
+      },
+      {
+        "id": "year",
+        "label": "Year they moved in",
+        "example": "2026",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Your new neighbours, the Browns",
+        "max": 34
+      },
+      {
+        "id": "room",
+        "label": "Favourite room",
+        "example": "The kitchen, where the snacks live",
+        "max": 38
+      },
+      {
+        "id": "first",
+        "label": "First night dinner",
+        "example": "Pizza on the floor, no chairs",
+        "max": 36
+      },
+      {
+        "id": "dream",
+        "label": "Big dream for it",
+        "example": "A garden full of tomatoes",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Three words for it",
+        "example": "Cosy, chaotic, ours",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moving day story",
+        "example": "The sofa got stuck in the doorway for two hours, so everyone ate lunch sitting on it in the front garden",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "Congratulations on your new home. May it be full of laughter, good food, lazy Sundays and friends who never want to leave.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of them",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "The new front door",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma-chris",
+        "palette": "mint",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#6b3a1f"
+        },
+        "values": {
+          "names": "Emma & Chris",
+          "year": "2026",
+          "room": "The kitchen, where the snacks live",
+          "first": "Pizza on the floor, no chairs",
+          "dream": "A garden full of tomatoes",
+          "words": "Cosy, chaotic, ours"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "sky",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#141010"
+        },
+        "values": {
+          "names": "Leo",
+          "year": "2026",
+          "room": "The sunny window seat",
+          "first": "Noodles from the box",
+          "dream": "A home cinema, one day",
+          "words": "Small, bright, mine"
+        }
+      },
+      {
+        "id": "sam-noah",
+        "palette": "butter",
+        "portrait": {
+          "skin": 2,
+          "hair": "curly",
+          "hairColor": "#1c1410"
+        },
+        "values": {
+          "names": "Sam & Noah",
+          "year": "2027",
+          "room": "The garden, all four metres",
+          "first": "Beans on toast by candlelight",
+          "dream": "Chickens, eventually",
+          "words": "Crooked, lovely, home"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{names}",
+      "issue": "The new home issue",
+      "edition": "Keys in hand edition",
+      "lines": [
+        [
+          "Exclusive",
+          "Inside their first home"
+        ],
+        [
+          "Favourite room",
+          "{room}"
+        ],
+        [
+          "First night dinner",
+          "{first}"
+        ]
+      ],
+      "badge": [
+        "Moved in",
+        "{year}",
+        "home sweet home"
+      ],
+      "quote": "{words}",
+      "credit": "The new owners say"
+    }
+  },
+  {
+    "slug": "travel-magazine",
+    "title": "Our Trip",
+    "searchTitle": "Personalised Travel Magazine",
+    "pinTitle": "Personalised Travel Magazine",
+    "occasion": "Travel memories",
+    "short": "A glossy travel magazine starring your holiday, honeymoon or big adventure.",
+    "description": "Turn the holiday photos into a real travel magazine. Where you went, the best meal, the funniest moment and the view you will never forget, written up as a glossy cover story. A lovely keepsake for honeymoons, family holidays, gap years and girls' trips.",
+    "keywords": [
+      "travel keepsake",
+      "honeymoon gift",
+      "holiday memory book",
+      "personalised travel gift",
+      "gift for travel lovers",
+      "trip scrapbook ideas"
+    ],
+    "inside": [
+      "A cover starring your trip",
+      "A postcard letter",
+      "The trip by the numbers",
+      "A photo spread of the best views",
+      "The moment we will laugh about forever"
+    ],
+    "letterTitle": "A postcard for you",
+    "feature": [
+      "The moment we will laugh about forever",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "place",
+        "label": "Where you went",
+        "example": "Lisbon",
+        "max": 14
+      },
+      {
+        "id": "days",
+        "label": "How many days?",
+        "example": "7",
+        "max": 3
+      },
+      {
+        "id": "who",
+        "label": "Who went",
+        "example": "Mia and Leo",
+        "max": 30
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mia",
+        "max": 30
+      },
+      {
+        "id": "meal",
+        "label": "Best meal",
+        "example": "Custard tarts for breakfast, every day",
+        "max": 40
+      },
+      {
+        "id": "view",
+        "label": "Best view",
+        "example": "Sunset from the castle walls",
+        "max": 36
+      },
+      {
+        "id": "lost",
+        "label": "Got lost finding",
+        "example": "Our own hotel, twice",
+        "max": 32
+      },
+      {
+        "id": "moment",
+        "label": "The moment we will laugh about forever",
+        "example": "Missing the last tram, walking up the steepest hill in the city at midnight and finding the best ice cream of our lives",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message",
+        "example": "Thank you for the best trip of my life. Every wrong turn was worth it because I was with you. Where shall we go next?",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo from the trip",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "The best view",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "lisbon",
+        "palette": "coral",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "place": "Lisbon",
+          "days": "7",
+          "who": "Mia and Leo",
+          "meal": "Custard tarts for breakfast, every day",
+          "view": "Sunset from the castle walls",
+          "lost": "Our own hotel, twice"
+        }
+      },
+      {
+        "id": "tokyo",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#141010"
+        },
+        "values": {
+          "place": "Tokyo",
+          "days": "12",
+          "who": "The whole family",
+          "meal": "Ramen at a tiny counter at 1am",
+          "view": "The city from the tallest tower",
+          "lost": "The right train, every time"
+        }
+      },
+      {
+        "id": "iceland",
+        "palette": "sky",
+        "portrait": {
+          "skin": 0,
+          "hair": "curly",
+          "hairColor": "#c4803f"
+        },
+        "values": {
+          "place": "Iceland",
+          "days": "5",
+          "who": "Emma and Sam",
+          "meal": "Hot dogs by the harbour",
+          "view": "The northern lights, finally",
+          "lost": "A waterfall with no signal"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{place}",
+      "issue": "The travel issue",
+      "edition": "{who}",
+      "lines": [
+        [
+          "Exclusive",
+          "{days} days in {place}"
+        ],
+        [
+          "Best meal",
+          "{meal}"
+        ],
+        [
+          "Got lost finding",
+          "{lost}"
+        ]
+      ],
+      "badge": [
+        "Days of",
+        "{days}",
+        "adventure"
+      ],
+      "quote": "{view}",
+      "credit": "Best view"
+    }
+  },
+  {
+    "slug": "pet-memorial-magazine",
+    "title": "Forever Loved",
+    "searchTitle": "Personalised Pet Memorial Magazine",
+    "pinTitle": "Personalised Pet Memorial Magazine",
+    "occasion": "Pet memorial",
+    "short": "A gentle keepsake magazine remembering a much loved pet.",
+    "description": "A beautiful way to remember them. Their gentlest habits, favourite spots, silliest moments and the love they gave, gathered into a keepsake magazine with their photo on the cover. A comforting sympathy gift for anyone who has lost a pet, and a place to smile at the memories.",
+    "keywords": [
+      "pet memorial gift",
+      "pet loss gift",
+      "dog memorial keepsake",
+      "cat memorial gift",
+      "pet sympathy gift",
+      "remembering a pet"
+    ],
+    "inside": [
+      "A cover starring their photo",
+      "A letter to a very good pet",
+      "Their life by the numbers",
+      "A photo spread of happy days",
+      "Our favourite memory"
+    ],
+    "letterTitle": "A letter to a very good pet",
+    "feature": [
+      "Our favourite memory",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Your pet's name",
+        "example": "Bailey",
+        "max": 12
+      },
+      {
+        "id": "years",
+        "label": "Years together",
+        "example": "14",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Your family, forever",
+        "max": 34
+      },
+      {
+        "id": "spot",
+        "label": "Favourite spot",
+        "example": "The sunny patch by the back door",
+        "max": 38
+      },
+      {
+        "id": "habit",
+        "label": "Sweetest habit",
+        "example": "Waiting at the window every evening",
+        "max": 40
+      },
+      {
+        "id": "silly",
+        "label": "Silliest moment",
+        "example": "Chasing their own tail at the vet",
+        "max": 38
+      },
+      {
+        "id": "words",
+        "label": "Three words for them",
+        "example": "Gentle, loyal, ours",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "Our favourite memory",
+        "example": "Every Sunday morning when you climbed onto the bed, sighed the biggest sigh and fell asleep across all of our feet",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "Thank you for every walk, every wag and every quiet cuddle when we needed it most. You were the best friend we could ever have asked for. Forever loved.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of your pet",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A happy day",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "bailey",
+        "palette": "sky",
+        "portrait": {
+          "pet": "dog",
+          "fur": "#d9a066",
+          "patch": "#fff4e2",
+          "ear": "#8a5a33"
+        },
+        "values": {
+          "name": "Bailey",
+          "years": "14",
+          "spot": "The sunny patch by the back door",
+          "habit": "Waiting at the window every evening",
+          "silly": "Chasing their own tail at the vet",
+          "words": "Gentle, loyal, ours"
+        }
+      },
+      {
+        "id": "smudge",
+        "palette": "rose",
+        "portrait": {
+          "pet": "cat",
+          "fur": "#3b3b44",
+          "patch": "#f0ecf2"
+        },
+        "values": {
+          "name": "Smudge",
+          "years": "17",
+          "spot": "The top of the warm radiator",
+          "habit": "Head bumps every morning",
+          "silly": "Stuck in a paper bag, very proud",
+          "words": "Soft, wise, beloved"
+        }
+      },
+      {
+        "id": "max",
+        "palette": "mint",
+        "portrait": {
+          "pet": "dog",
+          "fur": "#1c1410",
+          "patch": "#f3e6d6",
+          "ear": "#0e0a08"
+        },
+        "values": {
+          "name": "Max",
+          "years": "11",
+          "spot": "Right under the kitchen table",
+          "habit": "Bringing us one shoe as a gift",
+          "silly": "Barking at his own reflection",
+          "words": "Brave, daft, devoted"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The forever issue",
+      "edition": "Always in our hearts",
+      "lines": [
+        [
+          "Forever",
+          "{years} wonderful years"
+        ],
+        [
+          "Favourite spot",
+          "{spot}"
+        ],
+        [
+          "Sweetest habit",
+          "{habit}"
+        ]
+      ],
+      "badge": [
+        "Loved for",
+        "{years}",
+        "years"
+      ],
+      "quote": "{words}",
+      "credit": "Always remembered"
+    },
+    "skipDesigns": [
+      "comic"
     ]
+  },
+  {
+    "slug": "valentines-magazine",
+    "title": "Love Weekly",
+    "searchTitle": "Personalised Valentine's Magazine",
+    "pinTitle": "Personalised Valentine's Magazine",
+    "occasion": "Valentine's Day",
+    "short": "A romantic, funny magazine all about the love of your life.",
+    "description": "Tell them exactly why they are the one, in print. Your first date, the little things you love, their cutest habit and your song, written up as a glossy celebrity love story starring them. A Valentine's, anniversary or just because gift that beats flowers and lasts much longer.",
+    "keywords": [
+      "valentines gift for him",
+      "valentines gift for her",
+      "romantic gift ideas",
+      "personalised valentines gift",
+      "boyfriend gift",
+      "girlfriend gift"
+    ],
+    "inside": [
+      "A cover starring the love of your life",
+      "A love letter",
+      "Your love story by the numbers",
+      "A photo spread of your favourite days",
+      "The moment I knew"
+    ],
+    "letterTitle": "A love letter",
+    "feature": [
+      "The moment I knew",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Leo",
+        "max": 12
+      },
+      {
+        "id": "years",
+        "label": "Years together",
+        "example": "4",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mia",
+        "max": 30
+      },
+      {
+        "id": "date",
+        "label": "First date",
+        "example": "Mini golf, I lost on purpose",
+        "max": 34
+      },
+      {
+        "id": "cute",
+        "label": "Cutest habit",
+        "example": "Humming while cooking",
+        "max": 34
+      },
+      {
+        "id": "song",
+        "label": "Our song",
+        "example": "The one from the kitchen disco",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Three words for them",
+        "example": "Mine, all mine",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment I knew",
+        "example": "When you drove an hour in the rain to bring me soup and then fell asleep on the sofa before I could say thank you",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "You make ordinary days feel like the best ones. Thank you for the laughs, the patience and the last biscuit. I love you more every year.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of them",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite day together",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "leo",
+        "palette": "rose",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Leo",
+          "years": "4",
+          "date": "Mini golf, I lost on purpose",
+          "cute": "Humming while cooking",
+          "song": "The one from the kitchen disco",
+          "words": "Mine, all mine"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "long",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "years": "9",
+          "date": "A picnic in the rain",
+          "cute": "Stealing the duvet, gracefully",
+          "song": "Our wedding song, obviously",
+          "words": "Sweet, sassy, stunning"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 0,
+          "hair": "curly",
+          "hairColor": "#c4803f"
+        },
+        "values": {
+          "name": "Sam",
+          "years": "2",
+          "date": "Tacos, then karaoke",
+          "cute": "Talking to every dog",
+          "song": "The first one we danced to",
+          "words": "Funny, tender, perfect"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The love issue",
+      "edition": "Valentine's special",
+      "lines": [
+        [
+          "Exclusive",
+          "Why {name} is the one"
+        ],
+        [
+          "First date",
+          "{date}"
+        ],
+        [
+          "Cutest habit",
+          "{cute}"
+        ]
+      ],
+      "badge": [
+        "Together",
+        "{years}",
+        "years"
+      ],
+      "quote": "{words}",
+      "credit": "Their biggest fan"
+    }
   }
 ]

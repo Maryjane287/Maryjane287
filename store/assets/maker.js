@@ -1,6 +1,6 @@
 // The magazine maker: pick a magazine, answer questions, add photos, and watch
 // the cover update live. Photos stay in the browser until the order is placed.
-import { renderCover, renderPages, PALETTES, esc } from './covers.js';
+import { renderCover, renderPages, PALETTES, DESIGNS, designsFor, baseDesign, esc } from './covers.js';
 
 const mags = JSON.parse(document.getElementById('mags').textContent);
 const checkout = JSON.parse(document.getElementById('site-checkout').textContent);
@@ -16,6 +16,7 @@ const store = {
 const state = {
   slug: params.get('m') || store.get('maker:slug') || mags[0].slug,
   palette: null,
+  design: DESIGNS[params.get('d')] ? params.get('d') : (DESIGNS[store.get('maker:design')] ? store.get('maker:design') : 'signature'),
   values: {},
   photos: {},
   tab: 0,
@@ -37,15 +38,31 @@ function choose(slug) {
   state.photos = {};
   state.tab = 0;
   document.querySelectorAll('.pick-btn').forEach(b => b.setAttribute('aria-checked', String(b.dataset.m === slug)));
+  const on = document.querySelector('.pick-btn[aria-checked="true"]');
+  if (on) on.parentElement.scrollLeft = on.offsetLeft - on.parentElement.offsetLeft - (on.parentElement.clientWidth - on.offsetWidth) / 2;
+  if (!designsFor(m).includes(state.design)) state.design = baseDesign(m);
+  if (state.design !== 'signature' && state.palette === 'paper') state.palette = DESIGNS[state.design].palettes[0];
   renderPalette();
+  renderDesigns();
   renderFields();
   renderTabs();
   update();
 }
 
+const coverOpts = (design = state.design) => {
+  const m = mag();
+  return { palette: state.palette, design, portraitOpts: m.examples.find(e => e.palette === state.palette)?.portrait || m.examples[0].portrait, photos: state.photos };
+};
+
+function renderDesigns() {
+  const m = mag();
+  $('.designs').innerHTML = designsFor(m).map(k => [k, DESIGNS[k]]).map(([k, d]) =>
+    `<button type="button" class="design-btn" role="radio" aria-checked="${k === state.design}" data-d="${k}">${renderCover(m, state.values, coverOpts(k))}<span>${esc(d.label)}</span></button>`).join('');
+}
+
 function renderPalette() {
   const box = $('.palette');
-  if (mag().layout === 'newspaper') { box.hidden = true; return; }
+  if (mag().layout === 'newspaper' && state.design === 'signature') { box.hidden = true; return; }
   box.hidden = false;
   box.innerHTML = Object.entries(PALETTES).filter(([k]) => k !== 'paper').map(([k, p]) =>
     `<button type="button" class="swatch" role="radio" aria-label="${k}" aria-checked="${k === state.palette}" data-p="${k}" style="background:linear-gradient(135deg, ${p.bg} 55%, ${p.accent} 55%)"></button>`).join('');
@@ -75,9 +92,10 @@ function update() {
   cancelAnimationFrame(raf);
   raf = requestAnimationFrame(() => {
     const m = mag();
-    const opts = { palette: state.palette, portraitOpts: m.examples.find(e => e.palette === state.palette)?.portrait || m.examples[0].portrait, photos: state.photos };
+    const opts = coverOpts();
     const pages = [renderCover(m, state.values, opts), ...renderPages(m, state.values, opts)];
     $('#preview').innerHTML = pages[state.tab] || pages[0];
+    document.querySelectorAll('.design-btn').forEach(b => { b.firstElementChild.outerHTML = renderCover(m, state.values, coverOpts(b.dataset.d)); });
     const first = m.fields[0];
     $('#who').textContent = (state.values[first.id] || '').trim() ? `${state.values[first.id].trim()}'s` : 'their';
   });
@@ -109,12 +127,26 @@ document.querySelector('.pick').addEventListener('click', e => {
   if (b && b.dataset.m !== state.slug) choose(b.dataset.m);
 });
 
+$('.designs').addEventListener('click', e => {
+  const b = e.target.closest('.design-btn');
+  if (!b || b.dataset.d === state.design) return;
+  state.design = b.dataset.d;
+  store.set('maker:design', state.design);
+  if (state.design !== 'signature' && state.palette === 'paper') state.palette = DESIGNS[state.design].palettes[0];
+  document.querySelectorAll('.design-btn').forEach(x => x.setAttribute('aria-checked', String(x === b)));
+  renderPalette();
+  state.tab = 0; renderTabs();
+  const stage = $('.preview-stage'); stage.classList.remove('pop'); void stage.offsetWidth; stage.classList.add('pop');
+  update();
+});
+
 $('.palette').addEventListener('click', e => {
   const s = e.target.closest('.swatch');
   if (!s) return;
   state.palette = s.dataset.p;
   store.set(`maker:${state.slug}:palette`, state.palette);
   document.querySelectorAll('.swatch').forEach(x => x.setAttribute('aria-checked', String(x === s)));
+  renderDesigns();
   const stage = $('.preview-stage'); stage.classList.remove('pop'); void stage.offsetWidth; stage.classList.add('pop');
   update();
 });
@@ -166,6 +198,7 @@ form.addEventListener('submit', async e => {
   const m = mag();
   form.magazine.value = m.slug;
   form.palette.value = state.palette;
+  form.design.value = state.design;
   form.answers.value = JSON.stringify(state.values);
   const btn = form.querySelector('[type="submit"]');
   btn.disabled = true; btn.textContent = 'Sending your story...';
