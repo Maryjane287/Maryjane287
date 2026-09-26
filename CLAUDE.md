@@ -70,3 +70,10 @@ Family members do NOT need the app: they get a link (WhatsApp/email) to a small 
 - "Nearly" (working name): app for long-distance couples/families (photo drops on home screen,
   thinking-of-you tap, same sky, open-when letters, memory book, printed books). Second app, later.
 - Domain playsamesies.com was left in the Namecheap cart, not bought.
+
+## Cover Story shop (store/)
+Personalised keepsake magazines (birthday, anniversary, grandparents newspaper, kids), chosen from the
+Pinterest keyword research. Sells worldwide, payouts in GBP to the company's Wise account (confirmed in the name
+of Grace and Loannes Ltd, UK sort code and account number). Static site built with `npm run build` in `store/`, deploys on Netlify,
+orders via Netlify Forms until Lemon Squeezy (PDF) and Stripe plus Prodigi (print) links are added.
+See `store/README.md`.

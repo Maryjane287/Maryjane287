@@ -1,0 +1,129 @@
+/* Magazine covers and inside pages. Everything is sized in cqw so a cover looks
+   identical as a tiny thumbnail, in the maker preview and as a Pinterest image. */
+
+.cv *, .pg * { box-sizing: border-box; }
+.cv, .pg {
+  box-sizing: border-box;
+  position: relative;
+  aspect-ratio: 210 / 297;
+  width: 100%;
+  container-type: inline-size;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Outfit', system-ui, sans-serif;
+  line-height: 1.1;
+  isolation: isolate;
+}
+.cv img, .pg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cv-portrait { width: 100%; height: 100%; display: block; }
+.cv-anton { font-family: 'Anton', Impact, sans-serif; font-weight: 400; }
+.cv-serif { font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; }
+.cv-tag {
+  display: inline-block; background: var(--accent); color: var(--ink);
+  padding: .5cqw 1.6cqw; margin-right: 1.4cqw; border-radius: .6cqw;
+  font-size: 2.6cqw; letter-spacing: .08em; text-transform: uppercase; font-weight: 800;
+}
+.cv-top {
+  position: absolute; top: 2.6cqw; left: 4cqw; right: 4cqw; z-index: 3;
+  display: flex; justify-content: space-between;
+  font-size: 2.5cqw; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+}
+.cv-bottom {
+  position: absolute; left: 4cqw; right: 4cqw; bottom: 3.5cqw; z-index: 3;
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 3cqw;
+}
+.cv-barcode { display: grid; gap: .6cqw; justify-items: center; background: #fff; color: #111; padding: 1.2cqw 1.4cqw 1cqw; border-radius: .6cqw; flex: none; }
+.cv-barcode i { display: block; width: 14cqw; height: 5.5cqw; background: repeating-linear-gradient(90deg, #111 0 .5cqw, transparent .5cqw .8cqw, #111 .8cqw 1.5cqw, transparent 1.5cqw 1.9cqw, #111 1.9cqw 2.1cqw, transparent 2.1cqw 2.7cqw); }
+.cv-barcode span { font-size: 1.7cqw; font-weight: 800; letter-spacing: .2em; }
+
+/* Birthday: glossy celebrity magazine */
+.cv-birthday .cv-photo { position: absolute; inset: 14cqw 0 0 0; z-index: 0; }
+.cv-birthday::after { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, transparent 55%, color-mix(in srgb, var(--bg) 85%, #000 15%) 100%); pointer-events: none; }
+.cv-birthday .cv-mast {
+  position: absolute; top: 5cqw; left: 0; right: 0; z-index: 2; margin: 0;
+  text-align: center; line-height: .86; color: var(--pop);
+  text-shadow: .5cqw .7cqw 0 color-mix(in srgb, var(--ink) 55%, transparent);
+}
+.cv-birthday .cv-lines { position: absolute; left: 4cqw; top: 52cqw; width: 42cqw; z-index: 3; display: grid; gap: 3.2cqw; }
+.cv-lines p { margin: 0; font-size: 3.6cqw; font-weight: 700; color: var(--pop); text-shadow: 0 .3cqw 1.2cqw rgba(0,0,0,.35); }
+.cv-lines b { display: block; font-size: 2.6cqw; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: .6cqw; text-shadow: none; }
+.cv-lines b.cv-tag { display: table; margin-bottom: 1.2cqw; color: var(--ink); font-size: 2.4cqw; }
+.cv-birthday .cv-sticker {
+  position: absolute; right: 4cqw; top: 86cqw; z-index: 3;
+  width: 24cqw; height: 24cqw; border-radius: 50%;
+  background: var(--accent); color: var(--ink);
+  display: grid; place-content: center; text-align: center;
+  font-family: 'Anton', Impact, sans-serif; font-size: 10cqw; line-height: .9;
+  transform: rotate(10deg); box-shadow: 0 1cqw 0 rgba(0,0,0,.2);
+}
+.cv-sticker small { font-family: 'Outfit', sans-serif; font-size: 2.4cqw; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.cv-birthday .cv-bottom p { margin: 0; font-family: 'DM Serif Display', serif; font-size: 5.4cqw; color: var(--pop); line-height: 1; }
+.cv-birthday .cv-bottom p span { display: block; font-family: 'Outfit', sans-serif; font-size: 2.5cqw; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-top: 1cqw; }
+
+/* Anniversary: romantic fashion magazine */
+.cv-anniversary .cv-photo { position: absolute; inset: 0; z-index: 0; }
+.cv-anniversary::after { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, color-mix(in srgb, var(--bg) 70%, transparent) 0%, transparent 30%, transparent 50%, rgba(10,6,12,.72) 100%); }
+.cv-anniversary .cv-mast { position: absolute; top: 4cqw; left: 0; right: 0; z-index: 2; margin: 0; text-align: center; font-size: 42cqw; line-height: .8; color: var(--accent); font-style: italic; }
+.cv-anniversary .cv-mast em { display: block; font-family: 'Caveat', cursive; font-size: 8cqw; color: var(--ink); font-style: normal; transform: rotate(-4deg); margin-top: -2cqw; }
+.cv-lines-right { position: absolute; right: 4cqw; top: 70cqw; width: 36cqw; z-index: 3; display: grid; gap: 3.6cqw; text-align: right; }
+.cv-anniversary .cv-names { position: absolute; left: 4cqw; right: 4cqw; bottom: 16cqw; z-index: 3; font-family: 'DM Serif Display', serif; font-size: 9.5cqw; line-height: .95; color: #fff; }
+.cv-anniversary .cv-names .cv-tag { display: table; margin-bottom: 2cqw; font-family: 'Outfit', sans-serif; }
+.cv-anniversary .cv-bottom { justify-content: flex-end; }
+.cv-hearts i { position: absolute; z-index: 2; width: 6cqw; height: 6cqw; background: var(--accent); transform: rotate(45deg); }
+.cv-hearts i::before, .cv-hearts i::after { content: ''; position: absolute; width: 6cqw; height: 6cqw; border-radius: 50%; background: inherit; }
+.cv-hearts i::before { left: -3cqw; } .cv-hearts i::after { top: -3cqw; }
+.cv-hearts i:nth-child(1) { left: 10cqw; top: 58cqw; }
+.cv-hearts i:nth-child(2) { left: 22cqw; top: 66cqw; transform: rotate(45deg) scale(.6); }
+.cv-hearts i:nth-child(3) { left: 8cqw; top: 72cqw; transform: rotate(45deg) scale(.4); }
+
+/* Newspaper: old style family broadsheet */
+.np-in { padding: 5cqw 5cqw 0; }
+.cv-newspaper { background: radial-gradient(circle at 20% 10%, #fffaf0 0, transparent 50%), radial-gradient(circle at 90% 90%, #e6d9bf 0, transparent 60%), var(--bg); font-family: 'Playfair Display', Georgia, serif; }
+.np-mast { display: flex; align-items: center; justify-content: space-between; gap: 2cqw; border-bottom: .4cqw solid var(--ink); padding-bottom: 2cqw; }
+.np-mast h2 { margin: 0; font-size: 9.6cqw; font-weight: 900; text-align: center; line-height: .95; flex: 1; letter-spacing: -.01em; }
+.np-ear { font-family: 'Outfit', sans-serif; font-size: 2cqw; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; border: .3cqw solid var(--ink); padding: 1cqw; text-align: center; line-height: 1.2; flex: none; }
+.np-date { font-family: 'Outfit', sans-serif; border-bottom: 1.2cqw double var(--ink); padding: 1.2cqw 0; font-size: 2.2cqw; text-transform: uppercase; letter-spacing: .1em; text-align: center; }
+.np-head { margin: 3cqw 0 2.5cqw; font-size: 7.2cqw; font-weight: 900; line-height: 1; text-transform: uppercase; }
+.np-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3cqw; }
+.np-photo { aspect-ratio: 4 / 5; overflow: hidden; background: var(--accent); filter: saturate(.85); border: .4cqw solid var(--ink); }
+.np-photo .cv-portrait { filter: sepia(.25); }
+.np-side { border-left: .3cqw solid var(--ink); padding-left: 3cqw; }
+.np-kicker { margin: 0 0 1cqw; font-family: 'Outfit', sans-serif; font-size: 2.2cqw; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.np-quote { margin: 0 0 4cqw; font-size: 4.6cqw; font-style: italic; line-height: 1.1; }
+.np-weather { margin: 0; font-size: 3.6cqw; line-height: 1.15; }
+.np-weather span { display: block; font-size: 9cqw; color: #e0a100; line-height: 1; }
+.np-cols { columns: 2; column-gap: 4cqw; column-rule: .3cqw solid var(--ink); margin-top: 3cqw; border-top: .3cqw solid var(--ink); padding-top: 2cqw; font-size: 2.8cqw; line-height: 1.35; }
+.np-cols p { margin: 0 0 2cqw; }
+
+/* Kids: bright comic magazine */
+.cv-kids { background: var(--bg); }
+.kd-dots { position: absolute; inset: 0; z-index: 0; background-image: radial-gradient(color-mix(in srgb, var(--pop) 45%, transparent) 22%, transparent 24%); background-size: 5cqw 5cqw; opacity: .6; }
+.kd-mast { white-space: nowrap; position: absolute; top: 3cqw; left: 4cqw; right: 4cqw; z-index: 2; margin: 0; font-family: 'Fredoka', 'Outfit', sans-serif; font-weight: 700; line-height: .9; color: var(--accent); -webkit-text-stroke: .8cqw var(--ink); paint-order: stroke fill; text-shadow: 1cqw 1.2cqw 0 var(--ink); }
+.kd-mast span { display: inline-block; margin-left: 2cqw; font-size: 6.5cqw; color: var(--pop); -webkit-text-stroke: .5cqw var(--ink); text-shadow: .6cqw .8cqw 0 var(--ink); transform: rotate(-6deg) translateY(-2cqw); }
+.kd-photo { position: absolute; z-index: 1; left: 18cqw; top: 36cqw; width: 64cqw; height: 64cqw; border-radius: 50%; overflow: hidden; border: 2cqw solid var(--pop); background: var(--pop); box-shadow: 1.5cqw 2cqw 0 var(--ink); }
+.kd-burst { position: absolute; z-index: 3; right: 3cqw; top: 30cqw; width: 26cqw; height: 26cqw; display: grid; place-content: center; text-align: center; background: var(--accent); color: var(--ink); font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 11cqw; line-height: .85; clip-path: polygon(50% 0, 61% 15%, 79% 7%, 80% 26%, 98% 30%, 88% 47%, 100% 62%, 82% 70%, 83% 90%, 64% 86%, 50% 100%, 38% 86%, 18% 92%, 18% 72%, 0 64%, 12% 48%, 2% 30%, 20% 26%, 22% 7%, 39% 15%); transform: rotate(-8deg); }
+.kd-burst small { font-size: 3.6cqw; }
+.kd-lines { position: absolute; z-index: 3; left: 4cqw; right: 4cqw; bottom: 13cqw; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2.4cqw; }
+.kd-lines p { margin: 0; background: var(--pop); color: var(--ink); border: .6cqw solid var(--ink); border-radius: 2.4cqw; padding: 2cqw; font-size: 3cqw; font-weight: 700; line-height: 1.12; box-shadow: .8cqw 1cqw 0 var(--ink); }
+.kd-lines p:nth-child(2) { transform: rotate(-2deg); }
+.kd-lines p:nth-child(3) { transform: rotate(2deg); }
+.kd-lines b { display: block; font-family: 'Fredoka', sans-serif; font-size: 2.4cqw; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); -webkit-text-stroke: .15cqw var(--ink); margin-bottom: .8cqw; }
+.kd-free { position: absolute; z-index: 3; left: 0; right: 0; bottom: 0; background: var(--ink); color: var(--pop); text-align: center; font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 4cqw; padding: 2.4cqw; letter-spacing: .04em; }
+
+/* Inside pages */
+.pg-in { padding: 9cqw 8cqw; }
+.pg { background: #fffaf2; color: #1d1a2f; }
+.pg::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 3cqw; background: var(--bg); }
+.pg-kicker { margin: 0 0 3cqw; font-size: 2.8cqw; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--bg); filter: brightness(.8); }
+.pg h3 { margin: 0 0 5cqw; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 9cqw; line-height: 1; }
+.pg-body { font-family: 'DM Serif Display', serif; font-size: 5.4cqw; line-height: 1.35; margin: 0 0 6cqw; }
+.pg-body::first-letter { float: left; font-size: 15cqw; line-height: .8; margin: 1cqw 2cqw 0 0; color: var(--bg); filter: brightness(.85); }
+.pg-sign { font-family: 'Caveat', cursive; font-size: 7cqw; margin: 0; }
+.pg dl { margin: 0; display: grid; gap: 3.2cqw; }
+.pg dt { font-size: 2.6cqw; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; opacity: .6; }
+.pg dd { margin: .6cqw 0 0; font-family: 'DM Serif Display', serif; font-size: 5.2cqw; line-height: 1.12; border-bottom: .3cqw dashed color-mix(in srgb, currentColor 25%, transparent); padding-bottom: 2.4cqw; }
+.pg-ph { position: absolute; overflow: hidden; background: var(--bg); border: 1.6cqw solid #fff; box-shadow: 0 1.5cqw 4cqw rgba(0,0,0,.18); }
+.pg-ph1 { left: 7cqw; top: 22cqw; width: 54cqw; height: 66cqw; transform: rotate(-4deg); }
+.pg-ph2 { right: 7cqw; top: 70cqw; width: 46cqw; height: 54cqw; transform: rotate(5deg); }
+.pg-cap { position: absolute; left: 8cqw; right: 8cqw; bottom: 8cqw; margin: 0; font-family: 'Caveat', cursive; font-size: 6cqw; line-height: 1.05; }
