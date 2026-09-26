@@ -65,6 +65,11 @@ Family members do NOT need the app: they get a link (WhatsApp/email) to a small 
 - Images are hosted on d8j0ntlcm91z4.cloudfront.net. The network allowlist was being updated
   so a new session can download them.
 
+## PrintPals (branch claude/printpals, folder printpals/)
+Free printable worksheet website, live at https://printpals.web.app. Kept separate from Brainlings on its own
+branch (owner asked). See printpals/README.md. Owner wants quality: test every change by printing to PDF
+(Playwright page.pdf) and looking at the pages before publishing.
+
 ## Other projects (paused)
 - `samesies/`: daily crowd-guessing web game prototype (owner found it boring; paused).
 - "Nearly" (working name): app for long-distance couples/families (photo drops on home screen,
