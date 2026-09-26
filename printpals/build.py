@@ -10,7 +10,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '17'
+VERSION = '19'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -1052,7 +1052,7 @@ TOOLS += [
 
 TOOLS += [
     {
-        'id': 'prewriting', 'cat': 'writing', 'slug': 'pre-writing-tracing-lines', 'tint': '#f1f8e6', 'icon': '〰️', 'new': True,
+        'id': 'prewriting', 'cat': 'writing', 'slug': 'pre-writing-tracing-lines', 'tint': '#f1f8e6', 'icon': '〰️', 'new': False,
         'nav': 'Pre-writing lines',
         'title': 'Free Pre-Writing Tracing Lines for Toddlers and Preschool | PrintPals',
         'desc': 'Free printable pre-writing worksheets for ages 2 to 4: trace straight lines, bumps, waves, zigzags, castle lines and loops to help the bee reach the flower and the dog reach its bone.',
@@ -1066,7 +1066,7 @@ TOOLS += [
         'faq': [('What age is this for?', 'Ages 2 to 4, and older children who need extra pencil practice.')],
     },
     {
-        'id': 'cutpaste', 'cat': 'fun', 'slug': 'cut-and-paste-worksheets', 'tint': '#fff6e0', 'icon': '✂️', 'new': True,
+        'id': 'cutpaste', 'cat': 'fun', 'slug': 'cut-and-paste-worksheets', 'tint': '#fff6e0', 'icon': '✂️', 'new': False,
         'nav': 'Cut and paste',
         'title': 'Free Cut and Paste Worksheets for Preschool | Sort, Count, Match | PrintPals',
         'desc': 'Free printable cut and paste worksheets: sort land and water animals, fruit and vegetables, hot and cold; count and stick; match pictures to their first letter. Answer on the page.',
@@ -1080,7 +1080,7 @@ TOOLS += [
         'faq': [('Where are the answers?', 'In very small grey writing at the bottom right of the page, for grown-ups.')],
     },
     {
-        'id': 'homework', 'cat': 'charts', 'slug': 'homework-planner', 'tint': '#eef2ff', 'icon': '🗓️', 'new': True,
+        'id': 'homework', 'cat': 'charts', 'slug': 'homework-planner', 'tint': '#eef2ff', 'icon': '🗓️', 'new': False,
         'nav': 'Homework planner',
         'title': 'Free Printable Homework Planner for Kids | Weekly with Spellings and Reading | PrintPals',
         'desc': 'Free printable weekly homework planner for kids: homework for each day with a star to colour, spellings this week, a reading tracker, things to bring and notes.',
@@ -1092,7 +1092,7 @@ TOOLS += [
         'faq': [('Can I print one for each week?', 'Yes. Print a fresh one every Sunday evening.')],
     },
     {
-        'id': 'crafts', 'cat': 'fun', 'slug': 'paper-crowns-and-masks', 'tint': '#fff0f7', 'icon': '👑', 'new': True,
+        'id': 'crafts', 'cat': 'fun', 'slug': 'paper-crowns-and-masks', 'tint': '#fff0f7', 'icon': '👑', 'new': False,
         'nav': 'Crowns and masks',
         'title': 'Free Printable Paper Crowns and Animal Masks for Kids | Birthday Crown with Name | PrintPals',
         'desc': 'Free printable birthday crowns with your child\'s name and age, Star of the Day crowns, and animal masks to colour and cut out: cat, bear, lion, bunny and frog.',
@@ -1109,7 +1109,7 @@ TOOLS += [
         'faq': [('Do the crowns fit children and adults?', 'The two strips together fit most children. Add a strip of paper for bigger heads.')],
     },
     {
-        'id': 'weather', 'cat': 'charts', 'slug': 'weather-chart-for-kids', 'tint': '#e6f6fc', 'icon': '🌦️', 'new': True,
+        'id': 'weather', 'cat': 'charts', 'slug': 'weather-chart-for-kids', 'tint': '#e6f6fc', 'icon': '🌦️', 'new': False,
         'nav': 'Weather chart',
         'title': 'Free Printable Weather Chart for Kids | Weekly and Monthly | PrintPals',
         'desc': 'Free printable weather chart for kids: circle the weather each day of the week, then draw the weather for a whole month and count sunny, cloudy, rainy, windy, snowy and stormy days.',
@@ -1123,7 +1123,7 @@ TOOLS += [
         'faq': [('Is it good for the classroom?', 'Yes. Many classes fill in the weather together each morning.')],
     },
     {
-        'id': 'cards', 'cat': 'fun', 'slug': 'cards-to-colour', 'tint': '#fff0f0', 'icon': '💌', 'new': True,
+        'id': 'cards', 'cat': 'fun', 'slug': 'cards-to-colour', 'tint': '#fff0f0', 'icon': '💌', 'new': False,
         'nav': 'Cards to colour',
         'title': "Free Printable Cards to Colour | Mother's Day, Father's Day, Birthday, Eid, Diwali, Christmas | PrintPals",
         'desc': "Free printable cards for kids to colour and fold: Mother's Day, Father's Day, birthday, thank you, thank you teacher, get well soon, Christmas, Eid, Diwali and You Are Amazing.",
@@ -1136,6 +1136,121 @@ TOOLS += [
         + PAPER,
         'article': """<h2>How to fold it</h2><p>Print the page, colour the front picture, and write your message inside. Then fold along the dashed line so the picture is on the front. The inside is printed upside down on purpose, so it reads the right way once folded.</p>""",
         'faq': [('Why is the inside upside down?', 'So that when you fold the page in half, the message reads the right way up inside the card.')],
+    },
+]
+
+
+TOOLS += [
+    {
+        'id': 'calendar', 'cat': 'charts', 'slug': 'calendar-maker', 'tint': '#fff6e0', 'icon': '📅', 'new': True,
+        'nav': 'Calendar maker',
+        'title': 'Free Printable Calendar for Kids | Any Month, Birthdays Marked, Pictures to Colour | PrintPals',
+        'desc': 'Make a free printable calendar for kids: any month or the whole year, a picture to colour for every month, and your family birthdays and special days marked on the right dates.',
+        'h1': 'Calendar maker',
+        'lead': 'A calendar children love to look at: a picture to colour for every month, big dates, and family birthdays and special days marked with a star.',
+        'card': 'Any month or a whole year, with birthdays and special days marked.',
+        'form': field('Month', '<select name="month"><option value="">This month</option><option value="0">January</option><option value="1">February</option><option value="2">March</option><option value="3">April</option><option value="4">May</option><option value="5">June</option><option value="6">July</option><option value="7">August</option><option value="8">September</option><option value="9">October</option><option value="10">November</option><option value="11">December</option><option value="all">The whole year (12 pages)</option></select>')
+        + field('Year', '<input type="text" name="year" value="" maxlength="4" placeholder="This year" inputmode="numeric">')
+        + field('Week starts on', seg('start', [('mon', 'Monday'), ('sun', 'Sunday')], 'mon'))
+        + field('Special days', '<textarea name="specials" rows="4" spellcheck="false" placeholder="12 March Mum\'s birthday&#10;25/12 Christmas&#10;3 June School trip"></textarea>', 'One per line: the day, the month, then what it is.')
+        + field("Child's name (optional)", '<input type="text" name="name" value="" maxlength="24" placeholder="Mia">')
+        + PAPER,
+        'article': """<h2>Helping children understand time</h2><p>Days, weeks and months are hard to picture. A calendar on the wall, with birthdays and exciting days marked, helps children count down, plan and understand how time passes.</p>""",
+        'faq': [('How do I add birthdays?', 'Type one per line, like "12 March Mum\'s birthday" or "12/3 Mum\'s birthday". They appear on the right date with a star.'), ('Can I print the whole year?', 'Yes. Choose "The whole year" to print twelve pages.')],
+    },
+    {
+        'id': 'numberday', 'cat': 'maths', 'slug': 'number-of-the-day', 'tint': '#eef2ff', 'icon': '🔟', 'new': True,
+        'nav': 'Number of the day',
+        'title': 'Free Number of the Day Worksheets | Printable for Kindergarten and Year 1 | PrintPals',
+        'desc': 'Free printable number of the day worksheets: trace it, write it in words, ten frames, tally marks, one more and one less, odd or even, number line and draw it. Up to 20 or 100.',
+        'h1': 'Number of the day',
+        'lead': 'One number, eight ways to show it: trace it, write it in words, ten frames, tally marks, one more and one less, odd or even, on a number line, and draw it.',
+        'card': 'One number shown eight ways: words, ten frames, tally, number line and more.',
+        'form': field('Number', '<input type="text" name="number" value="" maxlength="3" placeholder="Surprise me" inputmode="numeric">', 'Type a number from 0 to 100, or leave it empty for a surprise.')
+        + field('Surprise numbers up to', seg('range', [('20', '20'), ('100', '100')], '20'))
+        + check('week', 'Five pages for the whole week', False) + SHUFFLE + PAPER,
+        'article': """<h2>A little maths every morning</h2><p>Number of the day is a favourite in classrooms. Looking at one number in many ways builds real number sense, not just counting.</p>""",
+        'faq': [('Can I choose the number?', 'Yes. Type any number from 0 to 100.')],
+    },
+    {
+        'id': 'compare', 'cat': 'maths', 'slug': 'greater-than-less-than-worksheets', 'tint': '#effaf6', 'icon': '🐊', 'new': True,
+        'nav': 'Greater and less than',
+        'title': 'Free Greater Than Less Than Worksheets | Hungry Crocodile | PrintPals',
+        'desc': 'Free printable greater than, less than and equal to worksheets with the hungry crocodile: compare groups of pictures, numbers to 20 or numbers to 100. Answer key included.',
+        'h1': 'Greater than, less than',
+        'lead': 'The hungry crocodile always eats the bigger number! Compare groups of pictures or numbers and write &gt;, &lt; or =.',
+        'card': 'The hungry crocodile eats the bigger number: pictures, to 20 or to 100.',
+        'form': field('Compare', seg('kind', [('pictures', 'Pictures'), ('to20', 'Numbers to 20'), ('to100', 'Numbers to 100')], 'pictures'))
+        + check('key', 'Answer page') + SHUFFLE + PAPER,
+        'article': """<h2>The crocodile trick</h2><p>The crocodile is hungry, so its mouth always opens towards the bigger number. That turns the tricky &gt; and &lt; signs into a picture children remember.</p>""",
+        'faq': [('What does = mean?', 'Both sides are the same, so the crocodile cannot choose and closes its mouth.')],
+    },
+    {
+        'id': 'sounds', 'cat': 'writing', 'slug': 'phonics-digraphs-and-blends', 'tint': '#fff0f7', 'icon': '🔤', 'new': True,
+        'nav': 'Phonics sounds',
+        'title': 'Free Phonics Digraphs and Blends Worksheets | sh ch th ck ng | PrintPals',
+        'desc': 'Free printable phonics worksheets for digraphs (sh, ch, th, wh, ck, ng) and blends (cr, st, sn, tr, fr, bl) with pictures: say the word, ring the sound and write it in.',
+        'h1': 'Phonics sounds',
+        'lead': 'Two letters, one sound. Say the word, ring the sound you hear and write it in the gap: sh, ch, th, wh, ck, ng and blends like cr and st.',
+        'card': 'sh, ch, th, ck, ng and blends like cr and st, with pictures.',
+        'form': field('Sounds', seg('set', [('starts', 'sh ch th wh'), ('ends', 'ck ng sh'), ('blends', 'Blends: cr st sn tr fr bl')], 'starts'))
+        + check('key', 'Answer page') + SHUFFLE + PAPER,
+        'article': """<h2>What are digraphs?</h2><p>A digraph is two letters that make one sound, like sh in ship. Blends are two sounds said quickly together, like c-r in crab. Both come after children know their single letter sounds.</p>""",
+        'faq': [('What age is this for?', 'Usually ages 5 to 7, once children can blend simple words like cat and dog.')],
+    },
+    {
+        'id': 'opposites', 'cat': 'writing', 'slug': 'opposites-worksheets', 'tint': '#fff6e0', 'icon': '↔️', 'new': True,
+        'nav': 'Opposites',
+        'title': 'Free Opposites Worksheets for Preschool | Match and Draw | PrintPals',
+        'desc': 'Free printable opposites worksheets with pictures: big and small, hot and cold, fast and slow, day and night. Match the opposites or draw the opposite.',
+        'h1': 'Opposites',
+        'lead': 'Big and small, hot and cold, fast and slow. Match each word to its opposite, or draw the opposite in the empty box.',
+        'card': 'Big and small, hot and cold: match them or draw the opposite.',
+        'form': field('Activity', seg('kind', [('match', 'Match the opposites'), ('draw', 'Draw the opposite')], 'match'))
+        + check('key', 'Answer page') + SHUFFLE + PAPER,
+        'article': """<h2>Words in pairs</h2><p>Learning opposites grows vocabulary fast, because every new word brings its partner with it. Act them out too: be big, be small, be fast, be slow!</p>""",
+        'faq': [('How many opposites are there?', 'Twelve pairs. Each sheet shows six, and "Make a new set" picks new ones.')],
+    },
+    {
+        'id': 'lifecycle', 'cat': 'fun', 'slug': 'life-cycle-worksheets', 'tint': '#f1f8e6', 'icon': '🦋', 'new': True,
+        'nav': 'Life cycles',
+        'title': 'Free Life Cycle Worksheets | Butterfly, Frog, Plant, Chicken | PrintPals',
+        'desc': 'Free printable life cycle worksheets for kids: butterfly, frog, plant and chicken. Learn the stages, label them with a word bank, or cut and stick them in order.',
+        'h1': 'Life cycles',
+        'lead': 'From egg to butterfly, frogspawn to frog, seed to sunflower. Learn each stage, label them, or cut and stick them in the right order.',
+        'card': 'Butterfly, frog, plant and chicken: learn, label, or cut and stick.',
+        'form': field('Life cycle', seg('cycle', [('butterfly', '🦋 Butterfly'), ('frog', '🐸 Frog'), ('plant', '🌻 Plant'), ('chicken', '🐔 Chicken')], 'butterfly'))
+        + field('Activity', seg('kind', [('learn', 'Learn it'), ('label', 'Label it'), ('cut', 'Cut and stick')], 'learn'))
+        + SHUFFLE + PAPER,
+        'article': """<h2>Science they can watch</h2><p>Life cycles are one of the first science topics in school. Pair the sheet with real life: plant a seed, visit a pond in spring, or watch caterpillars grow.</p>""",
+        'faq': [('What is a chrysalis?', 'The hard case a caterpillar makes around itself while it turns into a butterfly.')],
+    },
+    {
+        'id': 'family', 'cat': 'charts', 'slug': 'family-tree-for-kids', 'tint': '#fff0f0', 'icon': '🌳', 'new': True,
+        'nav': 'Family tree',
+        'title': 'Free Printable Family Tree for Kids | All About My Family | PrintPals',
+        'desc': 'Free printable family tree for kids with frames to draw or stick photos of grandparents, parents, brothers and sisters, plus an All About My Family page: where we come from and languages we speak.',
+        'h1': 'My family tree',
+        'lead': 'Frames for grandparents, parents, brothers and sisters to draw or stick photos in, and a page to talk about where your family comes from, the languages you speak and the people who live far away.',
+        'card': 'Frames for the whole family, plus where we come from and languages we speak.',
+        'form': field("Child's name", '<input type="text" name="name" value="Sam" maxlength="24">')
+        + field('Brothers and sisters', seg('siblings', [('0', 'None'), ('1', '1'), ('2', '2'), ('3', '3')], '1'))
+        + check('about', 'All about my family page') + PAPER,
+        'article': """<h2>Every family is special</h2><p>A family tree helps children understand who is who, and it starts wonderful conversations: where grandparents grew up, the languages the family speaks, and the family who live far away.</p>""",
+        'faq': [('Our family is not a mum and a dad. Can I change it?', 'The labels are small, so you can simply write the right name in each frame, and leave any frame empty.')],
+    },
+    {
+        'id': 'travel', 'cat': 'puzzles', 'slug': 'road-trip-activity-pack', 'tint': '#e6f6fc', 'icon': '🚗', 'new': True,
+        'nav': 'Road trip pack',
+        'title': 'Free Printable Road Trip Activities for Kids | Car Bingo, Noughts and Crosses | PrintPals',
+        'desc': 'Free printable road trip pack for kids: car journey bingo with pictures for two players, noughts and crosses grids and dots and boxes. Perfect for long car journeys.',
+        'h1': 'Road trip pack',
+        'lead': 'Screen-free fun for long journeys: car bingo for two players, noughts and crosses and dots and boxes. Print, grab a clipboard and go.',
+        'card': 'Car bingo, noughts and crosses and dots and boxes for long journeys.',
+        'form': '<div class="field"><span class="label">Pages</span>' + check('bingo', 'Road trip bingo') + check('xo', 'Noughts and crosses') + check('boxes', 'Dots and boxes') + '</div>'
+        + SHUFFLE + PAPER,
+        'article': """<h2>Are we nearly there yet?</h2><p>Bingo keeps eyes out of the window, and pencil games are perfect for waiting at airports and restaurants too. A clipboard makes them easy in the car.</p>""",
+        'faq': [('Is every bingo card different?', 'Yes. Both players get different cards, and "Make a new set" makes new ones.')],
     },
 ]
 
@@ -1237,6 +1352,7 @@ def tool_page(t):
 <script src="/js/colouring.js?v={VERSION}"></script>
 <script src="/js/tools6.js?v={VERSION}"></script>
 <script src="/js/tools7.js?v={VERSION}"></script>
+<script src="/js/tools8.js?v={VERSION}"></script>
 <script src="/js/app.js?v={VERSION}"></script>
 </body>
 </html>

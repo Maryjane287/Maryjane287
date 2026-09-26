@@ -36,6 +36,8 @@ browser, so nothing typed is ever sent or stored.
   (starters and comic strips), name labels (desk strips with alphabet and 0 to 20, book and peg labels).
 - Batch 6 (`public/js/tools7.js`): pre-writing lines, cut and paste, homework planner, crowns and masks, weather
   chart, cards to colour (inside printed upside down for folding). Alphabets now 15 languages; colouring 31 pictures.
+- Batch 7 (`public/js/tools8.js`): calendar maker (special days parsed from 'day month text' lines), number of the day,
+  greater than and less than (crocodile), phonics digraphs and blends, opposites, life cycles, family tree, road trip pack.
 - Testing: `pp2/fuzz.js` in the scratchpad tries every option on every tool and flags errors, NaN and anything
   off the page. Run it before every publish.
 

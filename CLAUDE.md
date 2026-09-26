@@ -76,7 +76,8 @@ use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in 
 for painted pictures on every sheet.
 Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
 (colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
-fractions, colour by number, spot the difference. Batch 6 live (53 tools): pre-writing lines, cut and paste, homework planner, crowns and masks, weather chart, cards to
+fractions, colour by number, spot the difference. Batch 7 live (61 tools): calendar, number of the day, greater/less than, phonics sounds, opposites, life cycles,
+family tree, road trip pack. Batch 6 live (53 tools): pre-writing lines, cut and paste, homework planner, crowns and masks, weather chart, cards to
 colour; 15 alphabet languages; 31 colouring pictures. The owner's list of 50 is done. Batch 5 live (47 tools): place value, shapes, measuring, graphs, reading log, handwriting paper, story writing,
 name labels. Still to do: cut and paste, homework planner, more languages and more colouring pictures.
 Higgsfield credits are nearly gone (0.66), so new art needs the owner's say.
