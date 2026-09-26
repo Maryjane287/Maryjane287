@@ -9,7 +9,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '6'
+VERSION = '8'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -397,7 +397,7 @@ TOOLS += [
 
 TOOLS += [
     {
-        'id': 'photo', 'cat': 'fun', 'slug': 'photo-to-colouring-page', 'tint': '#fff0f7', 'icon': '📸', 'new': True,
+        'id': 'photo', 'cat': 'fun', 'slug': 'photo-to-colouring-page', 'tint': '#fff0f7', 'icon': '📸', 'new': False,
         'nav': 'Photo to colouring page',
         'title': 'Turn a Photo into a Colouring Page Free | Private, No Upload | PrintPals',
         'desc': 'Turn any photo into a printable colouring page for free: your child, your pet, a family day out. Made inside your browser, so your photo never leaves your device.',
@@ -424,7 +424,7 @@ TOOLS += [
         ],
     },
     {
-        'id': 'story', 'cat': 'writing', 'slug': 'personalised-story-worksheets', 'tint': '#eef2ff', 'icon': '📖', 'new': True,
+        'id': 'story', 'cat': 'writing', 'slug': 'personalised-story-worksheets', 'tint': '#eef2ff', 'icon': '📖', 'new': False,
         'nav': 'Story sheets',
         'title': 'Free Personalised Reading Comprehension Worksheets | Your Child in the Story | PrintPals',
         'desc': 'Free printable reading comprehension for early readers where your child is the hero of the story. Short stories, words to know, questions with pictures and a drawing box.',
@@ -448,7 +448,7 @@ TOOLS += [
         ],
     },
     {
-        'id': 'bingo', 'cat': 'puzzles', 'slug': 'picture-bingo-maker', 'tint': '#fff6e0', 'icon': '🎱', 'new': True,
+        'id': 'bingo', 'cat': 'puzzles', 'slug': 'picture-bingo-maker', 'tint': '#fff6e0', 'icon': '🎱', 'new': False,
         'nav': 'Bingo maker',
         'title': 'Free Picture Bingo Card Maker for Kids | Class Sets, Sight Words | PrintPals',
         'desc': 'Make free printable bingo cards for kids: animals, food, party pictures or your own sight words. Every card is different, with a name on each and calling cards to cut out.',
@@ -476,7 +476,7 @@ TOOLS += [
         ],
     },
     {
-        'id': 'party', 'cat': 'fun', 'slug': 'birthday-party-printables', 'tint': '#fff0f0', 'icon': '🎂', 'new': True,
+        'id': 'party', 'cat': 'fun', 'slug': 'birthday-party-printables', 'tint': '#fff0f0', 'icon': '🎂', 'new': False,
         'nav': 'Birthday party pack',
         'title': 'Free Personalised Birthday Party Printables for Kids | PrintPals',
         'desc': "Free personalised birthday printables: a Happy Birthday poster with your child's name and age, All About Me page, party word search with the guests' names, party bingo and thank-you cards.",
@@ -499,7 +499,7 @@ TOOLS += [
         ],
     },
     {
-        'id': 'certificate', 'cat': 'charts', 'slug': 'certificate-maker', 'tint': '#fff6e0', 'icon': '🏅', 'new': True,
+        'id': 'certificate', 'cat': 'charts', 'slug': 'certificate-maker', 'tint': '#fff6e0', 'icon': '🏅', 'new': False,
         'nav': 'Certificates',
         'title': 'Free Certificate Maker for Kids | Awards for Home and School | PrintPals',
         'desc': 'Make beautiful free printable certificates for children: Star of the Week, Super Reader, Kindness Award, Potty Champion and more. Print one for every child in the class at once.',
@@ -526,7 +526,7 @@ TOOLS += [
         ],
     },
     {
-        'id': 'dots', 'cat': 'puzzles', 'slug': 'dot-to-dot-maker', 'tint': '#e6f6fc', 'icon': '✨', 'new': True,
+        'id': 'dots', 'cat': 'puzzles', 'slug': 'dot-to-dot-maker', 'tint': '#e6f6fc', 'icon': '✨', 'new': False,
         'nav': 'Dot to dot',
         'title': 'Free Dot to Dot Printables for Kids | Count by 1s, 2s, 5s, 10s or ABC | PrintPals',
         'desc': 'Free printable dot to dot puzzles for kids: stars, animals, rockets and more. Choose 10 to 50 dots and count in ones, twos, fives, tens or join the alphabet. Answer key included.',
@@ -551,7 +551,7 @@ TOOLS += [
         ],
     },
     {
-        'id': 'sudoku', 'cat': 'puzzles', 'slug': 'sudoku-for-kids', 'tint': '#effaf6', 'icon': '🔢', 'new': True,
+        'id': 'sudoku', 'cat': 'puzzles', 'slug': 'sudoku-for-kids', 'tint': '#effaf6', 'icon': '🔢', 'new': False,
         'nav': 'Sudoku for kids',
         'title': 'Free Picture Sudoku for Kids | 4x4 and 6x6 Printable Puzzles | PrintPals',
         'desc': 'Free printable sudoku for kids with pictures or numbers: 4x4 for beginners and 6x6 for older children, easy to hard, every puzzle checked to have one answer. Answer key included.',
@@ -575,7 +575,7 @@ TOOLS += [
         ],
     },
     {
-        'id': 'mixups', 'cat': 'writing', 'slug': 'b-d-reversal-worksheets', 'tint': '#fdf6e3', 'icon': '🔁', 'new': True,
+        'id': 'mixups', 'cat': 'writing', 'slug': 'b-d-reversal-worksheets', 'tint': '#fdf6e3', 'icon': '🔁', 'new': False,
         'nav': 'b and d mix-ups',
         'title': 'Free b and d Reversal Worksheets | Dyslexia Friendly b d p q Practice | PrintPals',
         'desc': 'Free printable worksheets to stop b and d (and p and q) mix-ups: the bed trick, tracing with stroke order, find and colour, and missing letter words. Choose cream, blue or green tinted paper.',
@@ -594,6 +594,166 @@ TOOLS += [
             ('Why tinted paper?', 'Some children, especially those with dyslexia or visual stress, find black text on bright white paper harder to read. A soft cream, blue or green page can help. Try each one and see which your child prefers.'),
             ('Does mixing up b and d mean my child has dyslexia?', 'Not on its own. Letter reversals are a normal part of learning to write. If you are worried, speak to your child\'s teacher.'),
         ],
+    },
+]
+
+TOOLS += [
+    {
+        'id': 'sight', 'cat': 'writing', 'slug': 'sight-words-worksheets', 'tint': '#eef2ff', 'icon': '👀', 'new': True,
+        'nav': 'Sight words',
+        'title': 'Free Sight Words Worksheets | Dolch, Fry and Year 1 Common Exception Words | PrintPals',
+        'desc': 'Free printable sight word worksheets: read it, trace it, write it and find it. Dolch pre-primer, primer and first grade, Fry first 100, UK Year 1 common exception words, or your own list.',
+        'h1': 'Sight words worksheets',
+        'lead': 'Read it, trace it, write it, find it. Choose a Dolch or Fry list, the UK Year 1 common exception words, or type the words your child is learning this week.',
+        'card': 'Read, trace, write and find. Dolch, Fry, UK Year 1 lists or your own words.',
+        'form': field('Word list', '<select name="list"><option value="dolch-pre">Dolch pre-primer (40 words)</option><option value="dolch-primer">Dolch primer (52 words)</option><option value="dolch-first">Dolch first grade (41 words)</option><option value="fry-1">Fry words 1 to 50</option><option value="fry-2">Fry words 51 to 100</option><option value="uk-y1">UK Year 1 common exception words</option><option value="own">My own words</option></select>')
+        + field('Words', '<textarea name="words" rows="4" spellcheck="false"></textarea>', 'Change or type any words, separated by commas.')
+        + field('How many words', seg('count', [('4', '4'), ('8', '8'), ('12', '12'), ('20', '20'), ('all', 'All')], '8'))
+        + field('Order', seg('order', [('list', 'In order'), ('mix', 'Mixed up')], 'list'))
+        + field('Size', seg('size', [('big', 'Big, 4 a page'), ('medium', 'Medium, 5 a page')], 'big'))
+        + DOTS + PAPER,
+        'article': """
+<h2>Why sight words matter</h2>
+<p>Sight words are the little words that appear again and again in every book: the, said, was, you. Many cannot be sounded out, so children learn to recognise them at a glance. Knowing the first hundred makes reading much smoother and more enjoyable.</p>
+<h2>Four steps for every word</h2>
+<ul><li><b>Read it:</b> say the word together.</li><li><b>Trace it:</b> follow the dots, starting at the green dot.</li><li><b>Write it:</b> write it on your own.</li><li><b>Find it:</b> draw a ring around the word each time it appears.</li></ul>""",
+        'faq': [
+            ('What is the difference between Dolch and Fry?', 'Both are lists of the most common words in children\'s books. Dolch is grouped by grade and Fry is ordered by how often words appear. Use whichever your school uses.'),
+            ('Do you have the UK common exception words?', 'Yes. Choose "UK Year 1 common exception words" for the list used in English schools.'),
+        ],
+    },
+    {
+        'id': 'cvc', 'cat': 'writing', 'slug': 'cvc-words-worksheets', 'tint': '#e8f8f4', 'icon': '🐱', 'new': True,
+        'nav': 'CVC words',
+        'title': 'Free CVC Words Worksheets with Pictures | Short Vowel Phonics | PrintPals',
+        'desc': 'Free printable CVC word worksheets with pictures: sound it out, missing vowel, first sound and cut and stick word building. Short a, e, i, o and u.',
+        'h1': 'CVC words with pictures',
+        'lead': 'Three-letter words like cat, dog and sun are the first words children learn to blend. Sound them out, find the missing vowel, or cut and stick the letters to build each word.',
+        'card': 'Cat, dog, sun: sound it out, missing vowel, first sound, or cut and build.',
+        'form': field('Vowel', seg('vowel', [('mix', 'Mixed'), ('a', 'a'), ('e', 'e'), ('i', 'i'), ('o', 'o'), ('u', 'u')], 'mix'))
+        + field('Activity', seg('activity', [('sound', 'Sound it out'), ('middle', 'Missing vowel'), ('first', 'First sound'), ('build', 'Cut and build')], 'sound'))
+        + check('key', 'Answer page') + SHUFFLE + PAPER,
+        'article': """
+<h2>What are CVC words?</h2>
+<p>CVC stands for consonant, vowel, consonant: three sounds, like c-a-t. They are the first words children learn to read by blending sounds together, usually in the first year of school.</p>
+<h2>Four ways to practise</h2>
+<ul><li><b>Sound it out:</b> trace each letter while saying its sound, then blend.</li><li><b>Missing vowel:</b> listen for the middle sound.</li><li><b>First sound:</b> listen for the beginning.</li><li><b>Cut and build:</b> cut out letter tiles and build each word.</li></ul>""",
+        'faq': [
+            ('What age are CVC words for?', 'Usually ages 4 to 6, once children know most letter sounds.'),
+            ('Can I practise one vowel at a time?', 'Yes. Choose a, e, i, o or u, or mix them for a challenge.'),
+        ],
+    },
+    {
+        'id': 'bonds', 'cat': 'maths', 'slug': 'number-bonds-worksheets', 'tint': '#fff6e0', 'icon': '🔗', 'new': True,
+        'nav': 'Number bonds',
+        'title': 'Free Number Bonds Worksheets to 5, 10 and 20 | Part Whole Models | PrintPals',
+        'desc': 'Free printable number bonds worksheets with part-whole circles and pictures to count. Number bonds to 5, 10, 20 or mixed, with an answer key.',
+        'h1': 'Number bonds',
+        'lead': 'Two parts make a whole. Part-whole circles with pictures to count help children see how numbers split and join, the key to quick mental maths.',
+        'card': 'Part-whole circles to 5, 10 and 20, with pictures to count.',
+        'form': field('Number bonds', seg('to', [('5', 'To 5'), ('10', 'To 10'), ('upto10', 'Mixed up to 10'), ('20', 'To 20')], '10'))
+        + field('Missing', seg('missing', [('part', 'A part'), ('whole', 'The whole'), ('mix', 'Mixed')], 'part'))
+        + check('pictures', 'Pictures to count (up to 10)') + check('key', 'Answer page') + SHUFFLE + PAPER,
+        'article': """
+<h2>Why number bonds?</h2>
+<p>Knowing that 7 and 3 make 10 without counting is one of the most useful things a young child can learn. Number bonds make adding and taking away much faster later on.</p>
+<h2>How to use the part-whole circles</h2>
+<p>The big circle is the whole. The two small circles are the parts. Count the pictures in the parts, then find the missing number.</p>""",
+        'faq': [('What are number bonds to 10?', 'Pairs of numbers that add up to 10: 0 and 10, 1 and 9, 2 and 8, and so on.'), ('Is there an answer key?', 'Yes, on the second page.')],
+    },
+    {
+        'id': 'flashcards', 'cat': 'writing', 'slug': 'flashcard-maker', 'tint': '#fff0f7', 'icon': '🃏', 'new': True,
+        'nav': 'Flashcards',
+        'title': 'Free Printable Flashcards for Kids | Pictures, Alphabet, Numbers, Sight Words | PrintPals',
+        'desc': 'Make free printable flashcards: animals, food, alphabet, numbers 0 to 20, sight words or your own words. Picture and word together, or double-sided with the word on the back.',
+        'h1': 'Flashcard maker',
+        'lead': 'Beautiful picture flashcards to cut out. Choose picture and word together, or print double-sided with the picture on the front and the word on the back.',
+        'card': 'Picture, alphabet, number and word cards. Double-sided if you like.',
+        'form': field('Cards', '<select name="set"><option value="animals">Animals</option><option value="food">Food</option><option value="things">Toys and things</option><option value="abc">Alphabet</option><option value="numbers">Numbers 0 to 20</option><option value="sight">Sight words</option><option value="words">My own words</option></select>')
+        + field('My own words', '<textarea name="words" rows="3" spellcheck="false" placeholder="cat, sun, apple, rainbow"></textarea>', 'Pictures are added when we have one.')
+        + field('Sides', seg('sides', [('both', 'Picture and word together'), ('double', 'Double-sided')], 'both'), 'Double-sided: print on both sides, flipping on the long edge.')
+        + field('Card size', seg('cardsize', [('small', '8 a page'), ('big', '4 big a page')], 'small'))
+        + PAPER,
+        'article': """
+<h2>Playing with flashcards</h2>
+<ul><li><b>Snap and pairs:</b> print two sets and play memory.</li><li><b>Guess the word:</b> show the picture, then turn it over.</li><li><b>Treasure hunt:</b> hide cards around the room and say each word when found.</li></ul>
+<h2>Printing double-sided</h2>
+<p>Choose "Double-sided" and print on both sides of the paper, flipping on the long edge. The backs are mirrored so each word lands behind its picture.</p>""",
+        'faq': [('Can I make flashcards with my own words?', 'Yes. Choose "My own words". If we have a picture for a word, it is added automatically.'), ('How do I print double-sided?', 'Choose Double-sided, then in the print window turn on "Print on both sides" and flip on the long edge.')],
+    },
+    {
+        'id': 'chores', 'cat': 'charts', 'slug': 'chore-chart-maker', 'tint': '#e6f6fc', 'icon': '🧹', 'new': True,
+        'nav': 'Chore charts',
+        'title': 'Free Chore Chart Maker for Kids | By Age, With Pocket Money | PrintPals',
+        'desc': 'Make a free printable chore chart for kids with pictures: jobs by age, stars to colour every day, an optional pocket money column, and one chart for each child.',
+        'h1': 'Chore charts',
+        'lead': 'Age-right jobs with pictures and a star for every day. Add each child\'s name to print a chart for everyone, and turn on the pocket money column if you pay for jobs.',
+        'card': 'Jobs by age with pictures, stars to colour and an optional pocket money column.',
+        'form': field("Children's names", '<textarea name="names" rows="3" spellcheck="false">Chris</textarea>', 'One name per line. Each child gets their own chart.')
+        + field('Age', '<select name="age"><option value="little">3 to 4 years</option><option value="middle" selected>5 to 7 years</option><option value="big">8 years and up</option></select>')
+        + field('Jobs', '<textarea name="chores" rows="7" spellcheck="false"></textarea>', 'One job per line. Pictures are added for you.')
+        + field('Days', seg('week', [('all', 'Every day'), ('school', 'School days')], 'all'))
+        + check('money', 'Pocket money column', False) + PAPER,
+        'article': """
+<h2>Why children should help at home</h2>
+<p>Little jobs teach children that they are an important part of the family. They build confidence, independence and a sense of responsibility, even when the job is only putting toys away.</p>
+<h2>Ideas by age</h2>
+<ul><li><b>Ages 3 to 4:</b> toys away, clothes in the basket, water plants.</li><li><b>Ages 5 to 7:</b> make the bed, set the table, feed the pet.</li><li><b>Ages 8 and up:</b> hoover, fold clothes, take out the bins.</li></ul>""",
+        'faq': [('Can I make charts for several children?', 'Yes. Type each name on its own line and everyone gets their own chart.'), ('Should I pay pocket money for chores?', 'That is up to you. Turn on the pocket money column if you do.')],
+    },
+    {
+        'id': 'feelings', 'cat': 'charts', 'slug': 'feelings-chart-for-kids', 'tint': '#fff0f0', 'icon': '😊', 'new': True,
+        'nav': 'Feelings chart',
+        'title': 'Free Feelings Chart for Kids | Emotions Check-In and Calm Down Ideas | PrintPals',
+        'desc': 'Free printable feelings chart for kids with 12 friendly faces, a weekly feelings check-in and calm down ideas. Colour or colour-in versions.',
+        'h1': 'Feelings chart',
+        'lead': 'Twelve friendly faces help children put a name to how they feel. Add a weekly check-in and a page of calm down ideas for big feelings.',
+        'card': 'Twelve friendly faces, a weekly check-in and calm down ideas.',
+        'form': field("Child's name (optional)", '<input type="text" name="name" value="" maxlength="24" placeholder="Leo">')
+        + field('Faces', seg('faces', [('colour', 'In colour'), ('colour-in', 'To colour in')], 'colour'))
+        + '<div class="field"><span class="label">Pages</span>' + check('chart', 'How do I feel today?') + check('week', 'My feelings week') + check('calm', 'Calm down ideas') + '</div>'
+        + PAPER,
+        'article': """
+<h2>Naming feelings helps</h2>
+<p>When children can say "I feel worried" instead of shouting or crying, they are already starting to calm down. A feelings chart gives them the words and the faces to point to.</p>
+<h2>Using the check-in</h2>
+<p>Once a day, ask your child to circle the face that feels like them and tell you why. There are no wrong answers: every feeling is OK, it is what we do with it that matters.</p>""",
+        'faq': [('What age is this for?', 'Ages 3 to 8. Younger children can point to the faces; older children can write why they feel that way.'), ('Is it useful for anxious children?', 'Many families find a daily feelings check-in helpful. Always follow advice from your child\'s own doctor, teacher or therapist.')],
+    },
+    {
+        'id': 'hunt', 'cat': 'fun', 'slug': 'scavenger-hunt-for-kids', 'tint': '#f1f8e6', 'icon': '🔎', 'new': True,
+        'nav': 'Scavenger hunts',
+        'title': 'Free Printable Scavenger Hunts for Kids | Indoor, Garden, Park, Colours, Shapes | PrintPals',
+        'desc': 'Free printable scavenger hunts for kids with pictures: indoor treasure hunt, garden, park and nature walks, colour hunt and shape hunt.',
+        'h1': 'Scavenger hunts',
+        'lead': 'Pictures for children who cannot read yet, a tick box for every find and a medal at the end. Perfect for rainy days, garden time and walks in the park.',
+        'card': 'Indoor, garden, park, colour and shape hunts with pictures to tick.',
+        'form': field('Hunt', seg('theme', [('home', '🏠 Indoor'), ('garden', '🌼 Garden'), ('park', '🌳 Park'), ('colours', '🎨 Colours'), ('shapes', '🔷 Shapes')], 'garden'))
+        + PAPER,
+        'article': """
+<h2>Screen-free fun</h2>
+<p>A scavenger hunt turns an ordinary walk or a rainy afternoon into an adventure. Children practise looking closely, naming things and counting what they found.</p>
+<h2>Make it a game</h2>
+<ul><li>Give each child a clipboard and a pencil.</li><li>Set a timer for 15 minutes.</li><li>Take a photo of each find instead of picking it up.</li></ul>""",
+        'faq': [('Do children need to read?', 'No. Every item has a picture, so even little ones can join in.'), ('Which hunt is best indoors?', 'Try the indoor treasure hunt, the colour hunt or the shape hunt.')],
+    },
+    {
+        'id': 'matching', 'cat': 'puzzles', 'slug': 'matching-worksheets', 'tint': '#f5edff', 'icon': '🔀', 'new': True,
+        'nav': 'Matching',
+        'title': 'Free Matching Worksheets for Preschool | Pictures, Letters, Numbers, Shadows | PrintPals',
+        'desc': 'Free printable matching worksheets: match pictures to words, big and little letters, count and match numbers, or match the shadow. New sheet every click, answer key included.',
+        'h1': 'Matching worksheets',
+        'lead': 'Draw a line to match. Pictures to words, big letters to little ones, counting to numbers, or the favourite: match each picture to its shadow.',
+        'card': 'Pictures to words, big to little letters, counting, or match the shadow.',
+        'form': field('Match', seg('kind', [('word', 'Picture to word'), ('case', 'Big and little letters'), ('count', 'Count and match'), ('shadow', 'Match the shadow')], 'shadow'))
+        + field('Pairs', seg('pairs', [('4', '4'), ('5', '5'), ('6', '6')], '5'))
+        + check('key', 'Answer page') + SHUFFLE + PAPER,
+        'article': """
+<h2>Small puzzle, big skills</h2>
+<p>Matching builds visual discrimination, the ability to notice what is the same and what is different. It is an important step towards reading, where children must tell b from d and cat from cot.</p>
+<h2>Match the shadow</h2>
+<p>Shadow matching asks children to recognise a picture from its outline alone. It is a favourite with preschoolers and brilliant for careful looking.</p>""",
+        'faq': [('What age are matching worksheets for?', 'Ages 2 to 6. Start with 4 pairs and move up to 6.'), ('Is every sheet different?', 'Yes. Press "Make a new set" for new pictures and a new order.')],
     },
 ]
 
@@ -626,11 +786,11 @@ def head(title, desc, path, extra=''):
 
 CATS = [('writing', 'Writing & reading'), ('maths', 'Maths'), ('puzzles', 'Puzzles & games'), ('fun', 'Colouring & parties'), ('charts', 'Charts & awards')]
 CAT_TEXT = {
-    'writing': 'Tracing, handwriting and spelling, with real letter shapes and stroke order.',
-    'maths': 'Counting, sums, money, times tables and telling the time, with answer keys.',
-    'puzzles': 'Word searches, mazes, crosswords, dot to dot, sudoku and bingo you can make yourself.',
-    'fun': 'Turn your own photos into colouring pages and throw a birthday party in minutes.',
-    'charts': 'Routines, reward charts and certificates that make everyday life easier.',
+    'writing': 'Tracing, phonics, sight words, spelling and reading, with real letter shapes and stroke order.',
+    'maths': 'Counting, number bonds, sums, money, times tables and telling the time, with answer keys.',
+    'puzzles': 'Word searches, mazes, crosswords, dot to dot, sudoku, matching and bingo you can make yourself.',
+    'fun': 'Photo colouring pages, scavenger hunts and a birthday party in minutes.',
+    'charts': 'Routines, chores, feelings, reward charts and certificates that make everyday life easier.',
 }
 
 
@@ -689,6 +849,7 @@ def tool_page(t):
 <script src="/js/tools.js?v={VERSION}"></script>
 <script src="/js/tools2.js?v={VERSION}"></script>
 <script src="/js/tools3.js?v={VERSION}"></script>
+<script src="/js/tools4.js?v={VERSION}"></script>
 <script src="/js/app.js?v={VERSION}"></script>
 </body>
 </html>

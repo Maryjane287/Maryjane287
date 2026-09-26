@@ -46,7 +46,7 @@ function textLines(pg, lines, x, y, fs, opts = {}) {
 function possessive(name) {
   const n = (name || '').trim();
   if (!n) return 'My';
-  return /s$/i.test(n) ? `${n}'` : `${n}'s`;
+  return `${n}'s`;
 }
 
 // ================================================================ routines

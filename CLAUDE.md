@@ -74,6 +74,8 @@ children count in; it has nothing to do with how the owner is paid (she wants pa
 Batch 2 is live (22 tools). Owner asked for it to feel more premium. On 2026-09-26 the owner said PrintPals SHOULD
 use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in tools2.js swaps matching emoji
 for painted pictures on every sheet.
+Batch 3 is live (30 tools, 2026-09-26). Next ideas from the list of 50: joined (cursive) handwriting, alphabets in
+other languages, word families, rhyming, number lines, place value, fractions, colour by number, spot the difference.
 Higgsfield credits are nearly gone (0.66), so new art needs the owner's say.
 
 ## Other projects (paused)

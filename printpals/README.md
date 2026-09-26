@@ -20,6 +20,11 @@ browser, so nothing typed is ever sent or stored.
   certificates (landscape, 4 designs), dot to dot (count in 1s, 2s, 5s, 10s or A to Z), picture sudoku
   (4x4 and 6x6, one answer checked), b/d and p/q mix-ups on tinted paper. Pages can be landscape
   (`landscape`), header-free (`bare`) or tinted (`tint`); Print waits for pictures to load.
+- Batch 3 (2026-09-26, `public/js/tools4.js`): sight words (Dolch, Fry, UK Year 1), CVC words with pictures,
+  number bonds (part-whole), flashcards (double-sided option, backs mirrored), chore charts per child,
+  feelings chart (12 drawn faces, weekly check-in, calm down ideas), scavenger hunts, matching (incl. shadows).
+- Testing: `pp2/fuzz.js` in the scratchpad tries every option on every tool and flags errors, NaN and anything
+  off the page. Run it before every publish.
 
 ## How it works
 - `public/js/glyphs.js`: hand-drawn single-stroke handwriting letters (A-Z, a-z, 0-9) with
