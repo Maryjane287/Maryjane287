@@ -60,16 +60,25 @@ const ALPHABETS = {
   igbo: { name: 'Igbo', native: 'Igbo', letters: 'A B CH D E F G GB GH GW H I Ị J K KP KW L M N Ṅ NW NY O Ọ P R S SH T U Ụ V W Y Z', special: 'CH GB GH GW Ị KP KW Ṅ NW NY Ọ SH Ụ' },
   hausa: { name: 'Hausa', native: 'Hausa', letters: 'A B Ɓ C D Ɗ E F G H I J K Ƙ L M N O R S SH T TS U W Y Ƴ Z', special: 'Ɓ Ɗ Ƙ SH TS Ƴ' },
   twi: { name: 'Twi', native: 'Twi (Akan)', letters: 'A B D E Ɛ F G H I K L M N O Ɔ P R S T U W Y', special: 'Ɛ Ɔ' },
+  polish: { name: 'Polish', native: 'Polski', letters: 'A Ą B C Ć D E Ę F G H I J K L Ł M N Ń O Ó P R S Ś T U W Y Z Ź Ż', special: 'Ą Ć Ę Ł Ń Ó Ś Ź Ż' },
+  turkish: { name: 'Turkish', native: 'Türkçe', letters: 'A B C Ç D E F G Ğ H I İ J K L M N O Ö P R S Ş T U Ü V Y Z', special: 'Ç Ğ I İ Ö Ş Ü' },
+  vietnamese: { name: 'Vietnamese', native: 'Tiếng Việt', letters: 'A Ă Â B C D Đ E Ê G H I K L M N O Ô Ơ P Q R S T U Ư V X Y', extra: 'à á ả ã ạ', extraLabel: 'The five tone marks, shown on a', special: 'Ă Â Đ Ê Ô Ơ Ư' },
+  filipino: { name: 'Filipino', native: 'Filipino', letters: 'A B C D E F G H I J K L M N Ñ NG O P Q R S T U V W X Y Z', special: 'Ñ NG' },
+  welsh: { name: 'Welsh', native: 'Cymraeg', letters: 'A B C CH D DD E F FF G NG H I J L LL M N O P PH R RH S T TH U W Y', special: 'CH DD FF NG LL PH RH TH' },
 };
+let LANG_NOW = '';
 const LETTER_FONT = "'Baloo 2', Nunito, 'Noto Sans', 'Segoe UI', Arial, sans-serif";
 
 function lowerOf(L) {
   if (L === 'ẞ') return 'ß';
+  if (L === 'I' && LANG_NOW === 'turkish') return 'ı';
+  if (L === 'İ') return 'i';
   return L.toLowerCase();
 }
 
 function makeAlphabets(o, paper) {
   const lang = ALPHABETS[o.language] || ALPHABETS.spanish;
+  LANG_NOW = ALPHABETS[o.language] ? o.language : 'spanish';
   const letters = lang.letters.split(' ');
   const special = new Set(lang.special.split(' ').filter(Boolean));
   const pages = [];
@@ -91,7 +100,7 @@ function makeAlphabets(o, paper) {
     if (lang.extra) {
       const y = pg.y + rows * ch + 4;
       pg.add(`<rect x="${pg.left}" y="${y}" width="${pg.width}" height="${extraH - 4}" rx="6" fill="#fff" stroke="#d9d4ec" stroke-width="0.5"/>`);
-      pg.add(`<text x="${pg.left + 5}" y="${y + 7}" font-family="${FONT}" font-weight="800" font-size="3.8" fill="${SOFT}">${lang.name === 'Swahili' ? 'Letter pairs that make one sound' : 'Letters with accents'}</text>`);
+      pg.add(`<text x="${pg.left + 5}" y="${y + 7}" font-family="${FONT}" font-weight="800" font-size="3.8" fill="${SOFT}">${lang.extraLabel || (lang.name === 'Swahili' ? 'Letter pairs that make one sound' : 'Letters with accents')}</text>`);
       pg.add(`<text x="${pg.left + 5}" y="${y + 16}" font-family="${LETTER_FONT}" font-weight="800" font-size="7" letter-spacing="1.5" fill="${INK}">${esc(lang.extra.split(' ').join('   '))}</text>`);
     }
     pages.push(pg.svg());

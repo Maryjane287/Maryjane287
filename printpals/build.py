@@ -10,7 +10,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '15'
+VERSION = '17'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -785,12 +785,12 @@ TOOLS += [
     {
         'id': 'alphabets', 'cat': 'writing', 'slug': 'alphabet-in-other-languages', 'tint': '#fff6e0', 'icon': '🌍', 'new': False,
         'nav': 'World alphabets',
-        'title': 'Free Printable Alphabets in Other Languages | Spanish, French, German, Swahili, Yoruba, Igbo, Hausa, Twi | PrintPals',
-        'desc': 'Free printable alphabet charts and tracing sheets in Spanish, French, German, Italian, Portuguese, Swahili, Yoruba, Igbo, Hausa and Twi, with the special letters highlighted.',
+        'title': 'Free Printable Alphabets in 15 Languages | Spanish, French, Swahili, Yoruba, Polish, Welsh and More | PrintPals',
+        'desc': 'Free printable alphabet charts and tracing sheets in 15 languages: Spanish, French, German, Italian, Portuguese, Polish, Turkish, Vietnamese, Filipino, Welsh, Swahili, Yoruba, Igbo, Hausa and Twi, with the special letters highlighted.',
         'h1': 'Alphabets from around the world',
         'lead': 'Help your child learn the alphabet of another language, or of your family\'s home language. A colourful chart with the special letters starred, plus tracing sheets for every letter.',
-        'card': 'Spanish, French, German, Swahili, Yoruba, Igbo, Hausa, Twi and more.',
-        'form': field('Language', '<select name="language"><option value="spanish">Spanish</option><option value="french">French</option><option value="german">German</option><option value="italian">Italian</option><option value="portuguese">Portuguese</option><option value="swahili">Swahili</option><option value="yoruba">Yoruba</option><option value="igbo">Igbo</option><option value="hausa">Hausa</option><option value="twi">Twi (Akan)</option></select>')
+        'card': '15 languages: Spanish, French, Polish, Welsh, Swahili, Yoruba, Igbo, Twi and more.',
+        'form': field('Language', '<select name="language"><option value="spanish">Spanish</option><option value="french">French</option><option value="german">German</option><option value="italian">Italian</option><option value="portuguese">Portuguese</option><option value="swahili">Swahili</option><option value="yoruba">Yoruba</option><option value="igbo">Igbo</option><option value="hausa">Hausa</option><option value="twi">Twi (Akan)</option><option value="polish">Polish</option><option value="turkish">Turkish</option><option value="vietnamese">Vietnamese</option><option value="filipino">Filipino</option><option value="welsh">Welsh</option></select>')
         + '<div class="field"><span class="label">Pages</span>' + check('chart', 'Alphabet chart') + check('trace', 'Tracing sheets') + '</div>'
         + PAPER,
         'article': """
@@ -799,7 +799,7 @@ TOOLS += [
 <h2>What is included</h2>
 <ul><li><b>Alphabet chart:</b> every letter, big and small, with the letters English does not have marked with a star.</li><li><b>Tracing sheets:</b> each letter to trace and then write alone.</li></ul>""",
         'faq': [
-            ('Which languages are there?', 'Spanish, French, German, Italian, Portuguese, Swahili, Yoruba, Igbo, Hausa and Twi (Akan). More are coming.'),
+            ('Which languages are there?', 'Spanish, French, German, Italian, Portuguese, Polish, Turkish, Vietnamese, Filipino, Welsh, Swahili, Yoruba, Igbo, Hausa and Twi (Akan).'),
             ('Why are some letters starred?', 'Starred letters, like ñ in Spanish or ẹ in Yoruba, are not in the English alphabet, so they need a little extra practice.'),
         ],
     },
@@ -904,21 +904,21 @@ TOOLS += [
         'id': 'colouring', 'cat': 'fun', 'slug': 'colouring-pages', 'tint': '#fff6e0', 'icon': '🎨', 'new': False,
         'nav': 'Colouring pages',
         'title': 'Free Printable Colouring Pages for Kids | Personalised Colouring Book | PrintPals',
-        'desc': 'Free printable colouring pages for kids: 23 friendly pictures with bold, clean lines. Add your child\'s name in bubble letters, or print a whole personalised colouring book with a cover.',
+        'desc': 'Free printable colouring pages for kids: 31 friendly pictures with bold, clean lines. Add your child\'s name in bubble letters, or print a whole personalised colouring book with a cover.',
         'h1': 'Colouring pages',
         'lead': 'Friendly pictures with bold, clean lines that are easy for little hands: animals, a rocket, a castle, a birthday cake and more. Add your child\'s name in bubble letters, or print the whole personalised colouring book.',
-        'card': '23 friendly pictures with bold lines, or a whole colouring book with your child\'s name.',
+        'card': '31 friendly pictures with bold lines, or a whole colouring book with your child\'s name.',
         'form': field("Child's name (optional)", '<input type="text" name="name" value="" maxlength="20" placeholder="Mia">', 'Shown in bubble letters to colour in.')
         + field('Print', seg('book', [('one', 'One picture'), ('book', 'The whole colouring book')], 'one'))
-        + field('Picture', '<select name="picture"><option value="">Surprise me</option>' + ''.join(f'<option value="{k}">{v}</option>' for k, v in [('cat', 'Cat'), ('dog', 'Puppy'), ('bunny', 'Bunny'), ('teddy', 'Teddy bear'), ('owl', 'Owl'), ('elephant', 'Elephant'), ('dino', 'Dinosaur'), ('turtle', 'Turtle'), ('snail', 'Snail'), ('bee', 'Bee'), ('butterfly', 'Butterfly'), ('fish', 'Fish'), ('whale', 'Whale'), ('house', 'House'), ('castle', 'Castle'), ('rocket', 'Rocket'), ('car', 'Car'), ('train', 'Train'), ('boat', 'Sailing boat'), ('sunflower', 'Sunflower'), ('rainbow', 'Rainbow'), ('icecream', 'Ice cream'), ('cake', 'Birthday cake')]) + '</select>', 'Used when printing one picture.')
+        + field('Picture', '<select name="picture"><option value="">Surprise me</option>' + ''.join(f'<option value="{k}">{v}</option>' for k, v in [('cat', 'Cat'), ('dog', 'Puppy'), ('bunny', 'Bunny'), ('teddy', 'Teddy bear'), ('owl', 'Owl'), ('elephant', 'Elephant'), ('dino', 'Dinosaur'), ('turtle', 'Turtle'), ('snail', 'Snail'), ('bee', 'Bee'), ('butterfly', 'Butterfly'), ('fish', 'Fish'), ('whale', 'Whale'), ('house', 'House'), ('castle', 'Castle'), ('rocket', 'Rocket'), ('car', 'Car'), ('train', 'Train'), ('boat', 'Sailing boat'), ('sunflower', 'Sunflower'), ('rainbow', 'Rainbow'), ('icecream', 'Ice cream'), ('cake', 'Birthday cake'), ('penguin', 'Penguin'), ('giraffe', 'Giraffe'), ('robot', 'Robot'), ('plane', 'Aeroplane'), ('frog', 'Frog'), ('ladybird', 'Ladybird'), ('octopus', 'Octopus'), ('unicorn', 'Unicorn')]) + '</select>', 'Used when printing one picture.')
         + SHUFFLE + PAPER,
         'article': """
 <h2>Bold lines for little hands</h2>
 <p>Every picture is drawn with thick, clear lines and big spaces, so young children can colour without getting frustrated. There is no grey shading and nothing fades, so they print perfectly on any printer.</p>
 <h2>A colouring book with their name on it</h2>
-<p>Choose "The whole colouring book" to print a cover with your child's name in bubble letters, followed by all 23 pictures. Staple it together for a lovely rainy day gift.</p>""",
+<p>Choose "The whole colouring book" to print a cover with your child's name in bubble letters, followed by all 31 pictures. Staple it together for a lovely rainy day gift.</p>""",
         'faq': [
-            ('How many pictures are there?', '23: animals, vehicles, a house, a castle, flowers, a rainbow, ice cream and a birthday cake. More are added over time.'),
+            ('How many pictures are there?', '31: animals, vehicles, a house, a castle, flowers, a rainbow, ice cream and a birthday cake. More are added over time.'),
             ('Can I turn my own photo into a colouring page?', 'Yes. Try our photo to colouring page tool; your photo never leaves your device.'),
         ],
     },
@@ -927,7 +927,7 @@ TOOLS += [
 
 TOOLS += [
     {
-        'id': 'placevalue', 'cat': 'maths', 'slug': 'place-value-worksheets', 'tint': '#eef2ff', 'icon': '🧮', 'new': True,
+        'id': 'placevalue', 'cat': 'maths', 'slug': 'place-value-worksheets', 'tint': '#eef2ff', 'icon': '🧮', 'new': False,
         'nav': 'Place value',
         'title': 'Free Place Value Worksheets | Tens and Ones with Base Ten Blocks | PrintPals',
         'desc': 'Free printable place value worksheets with base ten blocks: count the tens and ones, draw them, or split numbers up to 50, 99 or 999. Answer key included.',
@@ -943,7 +943,7 @@ TOOLS += [
         'faq': [('What are base ten blocks?', 'Sticks of ten little cubes (tens) and single cubes (ones). Big squares of 100 are used for hundreds.')],
     },
     {
-        'id': 'shapes', 'cat': 'maths', 'slug': 'shapes-and-symmetry-worksheets', 'tint': '#fff0f0', 'icon': '🔷', 'new': True,
+        'id': 'shapes', 'cat': 'maths', 'slug': 'shapes-and-symmetry-worksheets', 'tint': '#fff0f0', 'icon': '🔷', 'new': False,
         'nav': 'Shapes and symmetry',
         'title': 'Free 2D Shapes and Symmetry Worksheets | Name, Trace, Mirror | PrintPals',
         'desc': 'Free printable 2D shapes worksheets: name the shapes and count sides and corners, trace shapes and their names, or finish a symmetry pattern on a mirror grid.',
@@ -958,7 +958,7 @@ TOOLS += [
         'faq': [('Do the symmetry patterns need a colour printer?', 'Yes, for the best result. The coloured squares show which colour to use on the other side.')],
     },
     {
-        'id': 'measuring', 'cat': 'maths', 'slug': 'measuring-worksheets', 'tint': '#fff6e0', 'icon': '📏', 'new': True,
+        'id': 'measuring', 'cat': 'maths', 'slug': 'measuring-worksheets', 'tint': '#fff6e0', 'icon': '📏', 'new': False,
         'nav': 'Measuring',
         'title': 'Free Measuring Worksheets | Centimetres, Inches and Cubes | PrintPals',
         'desc': 'Free printable measuring worksheets with real-size rulers in centimetres or inches, or count the cubes. Pencils, crayons, paintbrushes and caterpillars to measure.',
@@ -973,7 +973,7 @@ TOOLS += [
         'faq': [('Why do the measurements not match my ruler?', 'Your printer may be shrinking the page. Choose "Actual size" or "100%" in the print settings.')],
     },
     {
-        'id': 'graphs', 'cat': 'maths', 'slug': 'pictogram-and-bar-graph-worksheets', 'tint': '#e8f8f4', 'icon': '📊', 'new': True,
+        'id': 'graphs', 'cat': 'maths', 'slug': 'pictogram-and-bar-graph-worksheets', 'tint': '#e8f8f4', 'icon': '📊', 'new': False,
         'nav': 'Graphs and tallies',
         'title': 'Free Bar Graph and Tally Chart Worksheets for Kids | PrintPals',
         'desc': 'Free printable graph worksheets for kids: count the pictures, colour a bar graph or make a tally chart, then answer questions. Fruit, animals, toys and treats.',
@@ -987,7 +987,7 @@ TOOLS += [
         'faq': [('How do tally marks work?', 'Draw one line for each thing you count. The fifth line goes across the other four, making a group of five.')],
     },
     {
-        'id': 'readinglog', 'cat': 'charts', 'slug': 'reading-log-for-kids', 'tint': '#f5edff', 'icon': '📚', 'new': True,
+        'id': 'readinglog', 'cat': 'charts', 'slug': 'reading-log-for-kids', 'tint': '#f5edff', 'icon': '📚', 'new': False,
         'nav': 'Reading log',
         'title': 'Free Printable Reading Log for Kids | Bookshelf and Reading Challenge | PrintPals',
         'desc': 'Free printable reading log for kids with a bookshelf to colour for every book read and a 16-square reading challenge. Personalised with your child\'s name.',
@@ -1001,7 +1001,7 @@ TOOLS += [
         'faq': [('What age is the reading log for?', 'Ages 4 to 8. Younger children can colour and circle a face while a grown-up writes the title.')],
     },
     {
-        'id': 'writingpaper', 'cat': 'writing', 'slug': 'handwriting-paper', 'tint': '#e6f6fc', 'icon': '📄', 'new': True,
+        'id': 'writingpaper', 'cat': 'writing', 'slug': 'handwriting-paper', 'tint': '#e6f6fc', 'icon': '📄', 'new': False,
         'nav': 'Handwriting paper',
         'title': 'Free Printable Handwriting Paper for Kids | Big Lines, Picture Box | PrintPals',
         'desc': 'Free printable handwriting paper for kids: rainbow lines, four-line guides or plain lines in big, medium or small sizes, with an optional picture box and border.',
@@ -1017,7 +1017,7 @@ TOOLS += [
         'faq': [('Can I print several copies?', 'Yes. Print as many pages as you need from the print window.')],
     },
     {
-        'id': 'storywriting', 'cat': 'writing', 'slug': 'story-writing-worksheets', 'tint': '#fff0f7', 'icon': '🖋️', 'new': True,
+        'id': 'storywriting', 'cat': 'writing', 'slug': 'story-writing-worksheets', 'tint': '#fff0f7', 'icon': '🖋️', 'new': False,
         'nav': 'Story writing',
         'title': 'Free Story Writing Worksheets for Kids | Story Starters and Comic Strips | PrintPals',
         'desc': 'Free printable story writing worksheets: a picture box, words to help and a story starter to trace, or a comic strip with speech bubbles. Eight story ideas.',
@@ -1033,7 +1033,7 @@ TOOLS += [
         'faq': [('What age are these for?', 'Ages 5 to 8. Younger children can draw the story and tell it to a grown-up who writes it.')],
     },
     {
-        'id': 'labels', 'cat': 'charts', 'slug': 'name-labels-for-kids', 'tint': '#f1f8e6', 'icon': '🏷️', 'new': True,
+        'id': 'labels', 'cat': 'charts', 'slug': 'name-labels-for-kids', 'tint': '#f1f8e6', 'icon': '🏷️', 'new': False,
         'nav': 'Name labels',
         'title': 'Free Printable Name Labels and Desk Name Plates for Classrooms | PrintPals',
         'desc': 'Free printable desk name plates with an alphabet strip and number line 0 to 20, and name labels for books, pegs and drawers. Print the whole class at once.',
@@ -1046,6 +1046,96 @@ TOOLS += [
         + PAPER,
         'article': """<h2>Ready for the first day</h2><p>Desk name strips help children find their seat, and the alphabet and number line are there every time they need them. Labels make books, pegs and drawers easy to find.</p>""",
         'faq': [('Can I print a whole class at once?', 'Yes. Paste every name, one per line, and every child gets their own strip or labels.')],
+    },
+]
+
+
+TOOLS += [
+    {
+        'id': 'prewriting', 'cat': 'writing', 'slug': 'pre-writing-tracing-lines', 'tint': '#f1f8e6', 'icon': '〰️', 'new': True,
+        'nav': 'Pre-writing lines',
+        'title': 'Free Pre-Writing Tracing Lines for Toddlers and Preschool | PrintPals',
+        'desc': 'Free printable pre-writing worksheets for ages 2 to 4: trace straight lines, bumps, waves, zigzags, castle lines and loops to help the bee reach the flower and the dog reach its bone.',
+        'h1': 'Pre-writing tracing lines',
+        'lead': 'Before letters come lines. Help the bee reach the flower and the puppy find its bone, tracing straight lines, bumps, waves, zigzags and loops.',
+        'card': 'Help the bee reach the flower: lines, waves, zigzags and loops for ages 2 to 4.',
+        'form': field('Lines', '<select name="type"><option value="mixed">A mix of every kind</option><option value="straight">Straight lines</option><option value="bumps">Bumps</option><option value="wave">Waves</option><option value="zigzag">Zigzags</option><option value="castle">Castle lines</option><option value="loops">Loops</option></select>')
+        + field('Guide', seg('guide', [('thick', 'Thick guide path'), ('dots', 'Dots only')], 'thick'), 'The thick path helps the youngest children stay on track.')
+        + SHUFFLE + PAPER,
+        'article': """<h2>Why lines come first</h2><p>Every letter is made of lines and curves. Tracing waves, zigzags and loops builds the pencil control and hand strength children need before they start writing letters.</p>""",
+        'faq': [('What age is this for?', 'Ages 2 to 4, and older children who need extra pencil practice.')],
+    },
+    {
+        'id': 'cutpaste', 'cat': 'fun', 'slug': 'cut-and-paste-worksheets', 'tint': '#fff6e0', 'icon': '✂️', 'new': True,
+        'nav': 'Cut and paste',
+        'title': 'Free Cut and Paste Worksheets for Preschool | Sort, Count, Match | PrintPals',
+        'desc': 'Free printable cut and paste worksheets: sort land and water animals, fruit and vegetables, hot and cold; count and stick; match pictures to their first letter. Answer on the page.',
+        'h1': 'Cut and paste',
+        'lead': 'Snip, sort and stick. Cutting and gluing builds strong little hands, and every activity teaches something too: sorting, counting and first sounds.',
+        'card': 'Sort, count and match, then cut and stick.',
+        'form': field('Activity', seg('kind', [('sort', 'Sort into groups'), ('count', 'Count and stick'), ('letters', 'First letters')], 'sort'))
+        + field('Sort', seg('sort', [('land', 'Land or water'), ('food', 'Fruit or vegetable'), ('temp', 'Hot or cold')], 'land'), 'Used for the sorting activity.')
+        + SHUFFLE + PAPER,
+        'article': """<h2>Scissor skills</h2><p>Cutting along a line takes a lot of practice. Use child-safe scissors, and let younger children tear the pieces out if cutting is still tricky. Glue sticks are the least messy.</p>""",
+        'faq': [('Where are the answers?', 'In very small grey writing at the bottom right of the page, for grown-ups.')],
+    },
+    {
+        'id': 'homework', 'cat': 'charts', 'slug': 'homework-planner', 'tint': '#eef2ff', 'icon': '🗓️', 'new': True,
+        'nav': 'Homework planner',
+        'title': 'Free Printable Homework Planner for Kids | Weekly with Spellings and Reading | PrintPals',
+        'desc': 'Free printable weekly homework planner for kids: homework for each day with a star to colour, spellings this week, a reading tracker, things to bring and notes.',
+        'h1': 'Homework planner',
+        'lead': 'One page for the whole school week: homework for each day, this week\'s spellings, a reading tracker and a "remember to bring" list.',
+        'card': 'Homework, spellings, reading and things to bring, all on one page.',
+        'form': field("Child's name", '<input type="text" name="name" value="Chris" maxlength="24">') + PAPER,
+        'article': """<h2>Calmer school mornings</h2><p>Stick the planner on the fridge. Children colour a star when homework is done and tick off what to bring, which means fewer forgotten PE kits and calmer mornings.</p>""",
+        'faq': [('Can I print one for each week?', 'Yes. Print a fresh one every Sunday evening.')],
+    },
+    {
+        'id': 'crafts', 'cat': 'fun', 'slug': 'paper-crowns-and-masks', 'tint': '#fff0f7', 'icon': '👑', 'new': True,
+        'nav': 'Crowns and masks',
+        'title': 'Free Printable Paper Crowns and Animal Masks for Kids | Birthday Crown with Name | PrintPals',
+        'desc': 'Free printable birthday crowns with your child\'s name and age, Star of the Day crowns, and animal masks to colour and cut out: cat, bear, lion, bunny and frog.',
+        'h1': 'Paper crowns and masks',
+        'lead': 'A birthday crown with their name and age, a Star of the Day crown, or animal masks to colour, cut and wear. Perfect for parties and dressing up.',
+        'card': 'Birthday crowns with a name, and animal masks to colour and wear.',
+        'form': field('Make', seg('kind', [('crown', 'Crown'), ('mask', 'Animal mask')], 'crown'))
+        + field("Child's name", '<input type="text" name="name" value="Leo" maxlength="18">')
+        + field('Crown says', seg('crown', [('birthday', 'Happy Birthday'), ('star', 'Star of the Day'), ('name', 'Their name')], 'birthday'))
+        + field('Age', '<select name="age"><option value="0">No age</option>' + ''.join(f'<option{" selected" if a == 5 else ""}>{a}</option>' for a in range(1, 13)) + '</select>')
+        + field('Mask', '<select name="animal"><option value="all">All five animals</option><option value="cat">Cat</option><option value="bear">Bear</option><option value="lion">Lion</option><option value="bunny">Bunny</option><option value="frog">Frog</option></select>')
+        + PAPER,
+        'article': """<h2>How to make them</h2><ul><li><b>Crown:</b> colour both strips, cut them out, and glue the short strip to the end of the long one so it fits around your child's head.</li><li><b>Mask:</b> colour it, then a grown-up cuts it out with the eye holes. Tie elastic or string through the little holes.</li></ul>""",
+        'faq': [('Do the crowns fit children and adults?', 'The two strips together fit most children. Add a strip of paper for bigger heads.')],
+    },
+    {
+        'id': 'weather', 'cat': 'charts', 'slug': 'weather-chart-for-kids', 'tint': '#e6f6fc', 'icon': '🌦️', 'new': True,
+        'nav': 'Weather chart',
+        'title': 'Free Printable Weather Chart for Kids | Weekly and Monthly | PrintPals',
+        'desc': 'Free printable weather chart for kids: circle the weather each day of the week, then draw the weather for a whole month and count sunny, cloudy, rainy, windy, snowy and stormy days.',
+        'h1': 'Weather chart',
+        'lead': 'Look out of the window every morning. Circle the weather for the week, draw it for the whole month, then count up which weather you had most.',
+        'card': 'A weekly weather diary and a whole month to draw and count.',
+        'form': field("Child's name (optional)", '<input type="text" name="name" value="" maxlength="24" placeholder="Mia">')
+        + '<div class="field"><span class="label">Pages</span>' + check('week', 'My weather week') + check('month', 'Weather this month') + '</div>'
+        + PAPER,
+        'article': """<h2>A little science every day</h2><p>Watching the weather teaches children to observe, record and compare. At the end of the month, count the days and talk about the seasons.</p>""",
+        'faq': [('Is it good for the classroom?', 'Yes. Many classes fill in the weather together each morning.')],
+    },
+    {
+        'id': 'cards', 'cat': 'fun', 'slug': 'cards-to-colour', 'tint': '#fff0f0', 'icon': '💌', 'new': True,
+        'nav': 'Cards to colour',
+        'title': "Free Printable Cards to Colour | Mother's Day, Father's Day, Birthday, Eid, Diwali, Christmas | PrintPals",
+        'desc': "Free printable cards for kids to colour and fold: Mother's Day, Father's Day, birthday, thank you, thank you teacher, get well soon, Christmas, Eid, Diwali and You Are Amazing.",
+        'h1': 'Cards to colour',
+        'lead': "A card made by little hands means the world. Choose the occasion, add names, then colour the front, write inside and fold.",
+        'card': "Mother's Day, birthday, thank you, Eid, Diwali, Christmas and more.",
+        'form': field('Card', '<select name="card"><option value="birthday">Happy Birthday</option><option value="mum">Mother\'s Day</option><option value="dad">Father\'s Day</option><option value="thanks">Thank You</option><option value="teacher">Thank You, Teacher</option><option value="getwell">Get Well Soon</option><option value="christmas">Merry Christmas</option><option value="eid">Eid Mubarak</option><option value="diwali">Happy Diwali</option><option value="love">You Are Amazing</option></select>')
+        + field('To', '<input type="text" name="to" value="" maxlength="24" placeholder="Grandma">')
+        + field('From', '<input type="text" name="name" value="" maxlength="24" placeholder="Mia">')
+        + PAPER,
+        'article': """<h2>How to fold it</h2><p>Print the page, colour the front picture, and write your message inside. Then fold along the dashed line so the picture is on the front. The inside is printed upside down on purpose, so it reads the right way once folded.</p>""",
+        'faq': [('Why is the inside upside down?', 'So that when you fold the page in half, the message reads the right way up inside the card.')],
     },
 ]
 
@@ -1146,6 +1236,7 @@ def tool_page(t):
 <script src="/js/tools5.js?v={VERSION}"></script>
 <script src="/js/colouring.js?v={VERSION}"></script>
 <script src="/js/tools6.js?v={VERSION}"></script>
+<script src="/js/tools7.js?v={VERSION}"></script>
 <script src="/js/app.js?v={VERSION}"></script>
 </body>
 </html>

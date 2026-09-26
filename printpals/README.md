@@ -34,6 +34,8 @@ browser, so nothing typed is ever sent or stored.
 - Batch 5 (`public/js/tools6.js`): place value (base ten blocks), shapes and symmetry, measuring (real-size rulers,
   print at 100%), graphs and tallies, reading log (log, bookshelf, challenge), handwriting paper, story writing
   (starters and comic strips), name labels (desk strips with alphabet and 0 to 20, book and peg labels).
+- Batch 6 (`public/js/tools7.js`): pre-writing lines, cut and paste, homework planner, crowns and masks, weather
+  chart, cards to colour (inside printed upside down for folding). Alphabets now 15 languages; colouring 31 pictures.
 - Testing: `pp2/fuzz.js` in the scratchpad tries every option on every tool and flags errors, NaN and anything
   off the page. Run it before every publish.
 

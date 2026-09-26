@@ -294,6 +294,98 @@ const COLOURING = {
     `<circle cx="60" cy="106" r="20" ${LW}/>`, eye(54, 102, 3.5), eye(66, 102, 3.5), `<path d="M52 112 Q60 118 68 112" ${LN}/>`,
     `<path d="M54 88 Q48 70 40 66 M64 87 Q66 70 74 64" ${LN}/><circle cx="40" cy="66" r="3" ${INKF}/><circle cx="74" cy="64" r="3" ${INKF}/>`,
   ] },
+  penguin: { name: 'Penguin', draw: () => [
+    `<path d="M10 186 Q20 164 60 166 L150 164 Q186 166 192 186 Z" ${LW}/>`,
+    cStar(30, 30, 6), cStar(170, 40, 7), cStar(150, 20, 4),
+    `<path d="M56 110 Q34 130 44 156 Q56 144 62 124 Z" ${LW}/><path d="M144 110 Q166 130 156 156 Q144 144 138 124 Z" ${LW}/>`,
+    `<ellipse cx="100" cy="112" rx="46" ry="60" ${LW}/><ellipse cx="100" cy="126" rx="30" ry="44" ${LW}/>`,
+    `<path d="M76 70 Q100 56 124 70 Q116 90 100 86 Q84 90 76 70 Z" ${LW}/>`,
+    eye(88, 70, 5), eye(112, 70, 5), `<path d="M92 82 L108 82 L100 94 Z" ${LW}/>`,
+    `<circle cx="80" cy="88" r="4" ${LT}/><circle cx="120" cy="88" r="4" ${LT}/>`,
+    `<path d="M76 168 Q70 176 82 178 Q92 178 92 170 Z" ${LW}/><path d="M124 168 Q130 176 118 178 Q108 178 108 170 Z" ${LW}/>`,
+    `<path d="M70 50 Q100 30 130 50 L126 58 Q100 42 74 58 Z" ${LW}/><circle cx="100" cy="36" r="6" ${LW}/>`,
+  ] },
+  giraffe: { name: 'Giraffe', draw: () => [
+    `<path d="M0 186 Q100 178 200 186" ${LN}/>`, cSun(170, 30, 11), cCloud(40, 26, 0.6),
+    `<path d="M156 140 Q170 150 168 166" ${LN}/><path d="M165 164 l4 8 M168 163 l6 6" ${LT}/>`,
+    `<rect x="98" y="148" width="12" height="36" rx="4" ${LW}/><rect x="146" y="148" width="12" height="36" rx="4" ${LW}/>`,
+    `<ellipse cx="128" cy="138" rx="36" ry="22" ${LW}/>`,
+    `<rect x="108" y="150" width="12" height="36" rx="4" ${LW}/><rect x="134" y="150" width="12" height="36" rx="4" ${LW}/>`,
+    `<path d="M96 132 L70 62 L86 56 L114 124 Z" ${LW}/>`,
+    `<path d="M62 26 L60 12 M76 24 L78 10" ${LN}/><circle cx="60" cy="10" r="3.5" ${LW}/><circle cx="78" cy="8" r="3.5" ${LW}/>`,
+    `<path d="M54 30 Q44 26 44 34 Q48 38 56 36 Z" ${LW}/>`,
+    `<ellipse cx="70" cy="42" rx="18" ry="16" ${LW}/><ellipse cx="60" cy="54" rx="14" ry="9" ${LW}/>`,
+    eye(72, 38, 3.5), `<circle cx="54" cy="54" r="1.4" ${INKF}/><circle cx="62" cy="55" r="1.4" ${INKF}/><path d="M52 60 Q58 64 66 60" ${LT}/>`,
+    `<path d="M80 74 l6 -3 l3 5 l-6 3 Z M86 94 l7 -2 l2 6 l-7 2 Z M94 112 l6 -3 l3 6 l-6 2 Z" ${LW}/>`,
+    `<circle cx="118" cy="132" r="6" ${LW}/><circle cx="138" cy="144" r="5" ${LW}/><circle cx="148" cy="128" r="5" ${LW}/><circle cx="124" cy="148" r="4" ${LW}/>`,
+  ] },
+  robot: { name: 'Robot', draw: () => [
+    `<path d="M100 22 V34" ${LN}/><circle cx="100" cy="18" r="6" ${LW}/>`,
+    `<rect x="62" y="34" width="76" height="50" rx="10" ${LW}/><rect x="56" y="50" width="6" height="18" rx="2" ${LW}/><rect x="138" y="50" width="6" height="18" rx="2" ${LW}/>`,
+    `<circle cx="84" cy="56" r="10" ${LW}/><circle cx="84" cy="56" r="4" ${INKF}/><circle cx="116" cy="56" r="10" ${LW}/><circle cx="116" cy="56" r="4" ${INKF}/>`,
+    `<rect x="82" y="72" width="36" height="7" rx="2" ${LW}/><path d="M91 72 V79 M100 72 V79 M109 72 V79" ${LT}/>`,
+    `<rect x="90" y="84" width="20" height="8" ${LW}/>`,
+    `<rect x="36" y="96" width="18" height="44" rx="8" ${LW}/><rect x="146" y="96" width="18" height="44" rx="8" ${LW}/>`,
+    `<path d="M38 140 Q32 152 40 156 M52 140 Q58 152 50 156" ${LN}/><path d="M148 140 Q142 152 150 156 M162 140 Q168 152 160 156" ${LN}/>`,
+    `<rect x="54" y="92" width="92" height="66" rx="10" ${LW}/>`,
+    `<rect x="68" y="104" width="40" height="28" rx="4" ${LW}/><circle cx="124" cy="110" r="6" ${LW}/><circle cx="124" cy="128" r="6" ${LW}/><path d="M74 146 H126" ${LN}/>`,
+    `<path d="M76 118 L84 110 L92 124 L100 114 L104 118" ${LT}/>`,
+    `<rect x="68" y="158" width="20" height="22" rx="4" ${LW}/><rect x="112" y="158" width="20" height="22" rx="4" ${LW}/><rect x="60" y="178" width="32" height="10" rx="4" ${LW}/><rect x="108" y="178" width="32" height="10" rx="4" ${LW}/>`,
+  ] },
+  plane: { name: 'Aeroplane', draw: () => [
+    cCloud(40, 40, 0.8), cCloud(160, 150, 0.9), cCloud(40, 160, 0.6), cSun(170, 30, 12),
+    `<path d="M92 100 L60 148 L80 148 L124 100 Z" ${LW}/>`,
+    `<path d="M30 92 Q20 70 34 72 L52 92 Z" ${LW}/>`,
+    `<path d="M24 100 Q24 86 44 86 L150 86 Q180 88 184 100 Q180 112 150 114 L44 114 Q24 114 24 100 Z" ${LW}/>`,
+    `<path d="M92 100 L64 56 L84 56 L124 100 Z" ${LW}/>`,
+    `<path d="M160 90 Q170 92 174 100 L160 100 Z" ${LW}/>`,
+    `<circle cx="64" cy="100" r="5" ${LW}/><circle cx="82" cy="100" r="5" ${LW}/><circle cx="100" cy="100" r="5" ${LW}/><circle cx="118" cy="100" r="5" ${LW}/><circle cx="136" cy="100" r="5" ${LW}/>`,
+    `<path d="M40 108 H56" ${LN}/>`,
+  ] },
+  frog: { name: 'Frog', draw: () => [
+    `<path d="M0 150 Q25 142 50 150 T100 150 T150 150 T200 150 L200 200 L0 200 Z" ${LW}/>`,
+    `<path d="M20 172 q8 -5 16 0 M150 178 q8 -5 16 0 M90 190 q8 -5 16 0" ${LN}/>`,
+    `<path d="M30 160 Q30 140 100 138 Q170 140 170 160 Q170 176 100 178 Q30 176 30 160 Z" ${LW}/><path d="M100 158 L150 146" ${LN}/>`,
+    `<ellipse cx="100" cy="126" rx="46" ry="32" ${LW}/><ellipse cx="100" cy="132" rx="28" ry="20" ${LW}/>`,
+    `<path d="M56 138 Q40 150 56 160 Q66 160 70 150 Z" ${LW}/><path d="M144 138 Q160 150 144 160 Q134 160 130 150 Z" ${LW}/>`,
+    `<ellipse cx="100" cy="92" rx="44" ry="28" ${LW}/>`,
+    `<circle cx="76" cy="70" r="14" ${LW}/><circle cx="124" cy="70" r="14" ${LW}/>`, eye(76, 70, 6), eye(124, 70, 6),
+    `<path d="M74 98 Q100 116 126 98" ${LN}/><circle cx="94" cy="86" r="1.4" ${INKF}/><circle cx="106" cy="86" r="1.4" ${INKF}/>`,
+    `<path d="M160 40 C170 30 184 40 176 48 C170 54 162 48 170 44" fill="none" stroke="#1f1b2e" stroke-width="1.6" stroke-dasharray="3 3"/><circle cx="168" cy="36" r="3" ${LW}/>`,
+  ] },
+  ladybird: { name: 'Ladybird', draw: () => [
+    `<path d="M20 170 Q60 100 150 120 Q190 130 190 170 Q120 196 20 170 Z" ${LW}/><path d="M26 168 Q100 150 184 164" ${LN}/><path d="M70 160 L80 146 M110 156 L120 138 M150 160 L158 144" ${LT}/>`,
+    `<path d="M86 52 Q76 30 64 28 M114 52 Q124 30 136 28" ${LN}/><circle cx="64" cy="28" r="4" ${LW}/><circle cx="136" cy="28" r="4" ${LW}/>`,
+    `<path d="M52 96 L36 90 M50 116 L32 118 M56 134 L42 146 M148 96 L164 90 M150 116 L168 118 M144 134 L158 146" ${LN}/>`,
+    `<circle cx="100" cy="112" r="50" ${LW}/>`,
+    `<path d="M100 72 V160" ${LN}/>`,
+    `<path d="M68 74 A32 30 0 0 1 132 74 Z" ${LW}/>`, eye(88, 62, 4), eye(112, 62, 4), `<path d="M94 68 Q100 72 106 68" ${LT}/>`,
+    `<circle cx="76" cy="96" r="9" ${LW}/><circle cx="124" cy="96" r="9" ${LW}/><circle cx="70" cy="126" r="8" ${LW}/><circle cx="130" cy="126" r="8" ${LW}/><circle cx="88" cy="146" r="6" ${LW}/><circle cx="112" cy="146" r="6" ${LW}/>`,
+  ] },
+  octopus: { name: 'Octopus', draw: () => {
+    const out = [`<path d="M0 188 Q50 180 100 188 T200 186" ${LN}/>`, `<circle cx="30" cy="40" r="6" ${LW}/><circle cx="40" cy="22" r="4" ${LW}/><circle cx="170" cy="50" r="7" ${LW}/><circle cx="160" cy="28" r="4" ${LW}/>`];
+    const legs = [[64, 118, -1], [76, 124, -0.6], [90, 128, -0.2], [104, 128, 0.2], [118, 124, 0.6], [132, 118, 1]];
+    legs.forEach(([x, y, d]) => {
+      // Each wiggly leg is a thick outlined curve with a curl at the end.
+      const ex = x + d * 44 + (d === 0 ? 0 : 0), ey = 168;
+      const curve = `M${x} ${y - 4} C${x + d * 8 - 10} ${y + 22} ${x + d * 30 + 12} ${y + 30} ${ex} ${ey - 8} Q${ex - d * 2 - 8} ${ey + 6} ${ex - 14 * (d >= 0 ? -1 : 1)} ${ey}`;
+      out.push(`<path d="${curve}" fill="none" stroke="#1f1b2e" stroke-width="14.8" stroke-linecap="round"/><path d="${curve}" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round"/>`);
+    });
+    out.push(`<path d="M52 118 C44 58 76 30 100 30 C124 30 156 58 148 118 Z" ${LW}/>`, eye(84, 90, 7), eye(116, 90, 7), `<path d="M88 106 Q100 116 112 106" ${LN}/>`, `<circle cx="72" cy="104" r="5" ${LT}/><circle cx="128" cy="104" r="5" ${LT}/>`);
+    out.push(`<path d="M86 50 Q100 42 114 50" ${LT}/>`);
+    return out;
+  } },
+  unicorn: { name: 'Unicorn', draw: () => [
+    cStar(30, 36, 8), cStar(170, 40, 8), cStar(26, 150, 6), cStar(176, 150, 6),
+    `<circle cx="60" cy="74" r="16" ${LW}/><circle cx="52" cy="98" r="16" ${LW}/><circle cx="54" cy="122" r="16" ${LW}/><circle cx="62" cy="146" r="14" ${LW}/>`,
+    `<path d="M70 62 L58 26 L90 52 Z" ${LW}/><path d="M130 62 L142 26 L110 52 Z" ${LW}/><path d="M72 56 L64 36 L84 52" ${LT}/><path d="M128 56 L136 36 L116 52" ${LT}/>`,
+    `<ellipse cx="100" cy="108" rx="44" ry="54" ${LW}/>`,
+    `<circle cx="84" cy="62" r="12" ${LW}/><circle cx="100" cy="58" r="12" ${LW}/><circle cx="116" cy="62" r="12" ${LW}/>`,
+    `<path d="M100 8 L88 54 L112 54 Z" ${LW}/><path d="M92 40 L108 34 M90 48 L110 42 M95 28 L105 24" ${LT}/>`,
+    `<ellipse cx="100" cy="142" rx="30" ry="20" ${LW}/><ellipse cx="90" cy="140" rx="3" ry="4" ${INKF}/><ellipse cx="110" cy="140" rx="3" ry="4" ${INKF}/><path d="M90 152 Q100 158 110 152" ${LN}/>`,
+    `<path d="M74 104 Q82 112 90 104 M110 104 Q118 112 126 104" ${LN}/><path d="M74 104 l-4 -3 M78 108 l-3 3 M126 104 l4 -3 M122 108 l3 3" ${LT}/>`,
+    `<circle cx="70" cy="120" r="6" ${LT}/><circle cx="130" cy="120" r="6" ${LT}/>`,
+  ] },
 };
 
 function colouringArt(key) {
