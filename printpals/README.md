@@ -31,6 +31,9 @@ browser, so nothing typed is ever sent or stored.
   personalised colouring book); photo line art now solid (binarised, thickened); more stories (10), colour by number
   pictures (12), dot to dot shapes (15), beach and supermarket hunts; bigger coins, dots, fractions and number lines;
   homepage search box and a category menu on phones.
+- Batch 5 (`public/js/tools6.js`): place value (base ten blocks), shapes and symmetry, measuring (real-size rulers,
+  print at 100%), graphs and tallies, reading log (log, bookshelf, challenge), handwriting paper, story writing
+  (starters and comic strips), name labels (desk strips with alphabet and 0 to 20, book and peg labels).
 - Testing: `pp2/fuzz.js` in the scratchpad tries every option on every tool and flags errors, NaN and anything
   off the page. Run it before every publish.
 

@@ -795,6 +795,11 @@ function drawDots(pg, shape, want, mode, x, y, w, h, solved) {
   const n = mode === 'abc' ? Math.min(want, 26) : want;
   const { pts, segs } = dotPoints(shape, n);
   const all = segs.flat();
+  // Include the little details (like a balloon string) so nothing hangs outside the box.
+  for (const part of (shape.decor || '').match(/[ML][^MLQAZ]*|Q[^MLQAZ]*/g) || []) {
+    const nums = part.slice(1).trim().split(/[\s,]+/).map(Number);
+    for (let k = 0; k + 1 < nums.length; k += 2) all.push([nums[k], nums[k + 1]]);
+  }
   const minX = Math.min(...all.map((p) => p[0])), maxX = Math.max(...all.map((p) => p[0]));
   const minY = Math.min(...all.map((p) => p[1])), maxY = Math.max(...all.map((p) => p[1]));
   const s = Math.min((w - 16) / (maxX - minX), (h - 16) / (maxY - minY));

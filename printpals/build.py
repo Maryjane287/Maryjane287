@@ -10,7 +10,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '13'
+VERSION = '15'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -901,7 +901,7 @@ TOOLS += [
 
 TOOLS += [
     {
-        'id': 'colouring', 'cat': 'fun', 'slug': 'colouring-pages', 'tint': '#fff6e0', 'icon': '🎨', 'new': True,
+        'id': 'colouring', 'cat': 'fun', 'slug': 'colouring-pages', 'tint': '#fff6e0', 'icon': '🎨', 'new': False,
         'nav': 'Colouring pages',
         'title': 'Free Printable Colouring Pages for Kids | Personalised Colouring Book | PrintPals',
         'desc': 'Free printable colouring pages for kids: 23 friendly pictures with bold, clean lines. Add your child\'s name in bubble letters, or print a whole personalised colouring book with a cover.',
@@ -921,6 +921,131 @@ TOOLS += [
             ('How many pictures are there?', '23: animals, vehicles, a house, a castle, flowers, a rainbow, ice cream and a birthday cake. More are added over time.'),
             ('Can I turn my own photo into a colouring page?', 'Yes. Try our photo to colouring page tool; your photo never leaves your device.'),
         ],
+    },
+]
+
+
+TOOLS += [
+    {
+        'id': 'placevalue', 'cat': 'maths', 'slug': 'place-value-worksheets', 'tint': '#eef2ff', 'icon': '🧮', 'new': True,
+        'nav': 'Place value',
+        'title': 'Free Place Value Worksheets | Tens and Ones with Base Ten Blocks | PrintPals',
+        'desc': 'Free printable place value worksheets with base ten blocks: count the tens and ones, draw them, or split numbers up to 50, 99 or 999. Answer key included.',
+        'h1': 'Place value',
+        'lead': 'Tens sticks and ones cubes make big numbers easy to see. Count them, draw them, or split each number into its parts.',
+        'card': 'Tens and ones with base ten blocks: count, draw and split numbers.',
+        'form': field('Activity', seg('kind', [('count', 'Count the blocks'), ('draw', 'Draw the blocks'), ('expand', 'Split the number')], 'count'))
+        + field('Numbers', seg('range', [('to50', 'Up to 50'), ('to99', 'Up to 99'), ('to999', 'Hundreds')], 'to50'))
+        + check('key', 'Answer page') + SHUFFLE + PAPER,
+        'article': """
+<h2>Why place value matters</h2>
+<p>Knowing that 34 is 3 tens and 4 ones is the key to adding, taking away and understanding big numbers. Base ten blocks let children see and count the tens and the ones.</p>""",
+        'faq': [('What are base ten blocks?', 'Sticks of ten little cubes (tens) and single cubes (ones). Big squares of 100 are used for hundreds.')],
+    },
+    {
+        'id': 'shapes', 'cat': 'maths', 'slug': 'shapes-and-symmetry-worksheets', 'tint': '#fff0f0', 'icon': '🔷', 'new': True,
+        'nav': 'Shapes and symmetry',
+        'title': 'Free 2D Shapes and Symmetry Worksheets | Name, Trace, Mirror | PrintPals',
+        'desc': 'Free printable 2D shapes worksheets: name the shapes and count sides and corners, trace shapes and their names, or finish a symmetry pattern on a mirror grid.',
+        'h1': 'Shapes and symmetry',
+        'lead': 'Circles, hexagons, stars and more. Name them, count sides and corners, trace them, or finish a colourful mirror pattern.',
+        'card': 'Name and trace 2D shapes, or finish a mirror pattern.',
+        'form': field('Activity', seg('kind', [('name', 'Name the shapes'), ('trace', 'Trace the shapes'), ('symmetry', 'Mirror patterns')], 'name'))
+        + check('key', 'Answer page') + SHUFFLE + PAPER,
+        'article': """
+<h2>Shapes are everywhere</h2>
+<p>Learning shape names, and counting sides and corners, helps children describe the world around them. Symmetry patterns build careful looking and early geometry.</p>""",
+        'faq': [('Do the symmetry patterns need a colour printer?', 'Yes, for the best result. The coloured squares show which colour to use on the other side.')],
+    },
+    {
+        'id': 'measuring', 'cat': 'maths', 'slug': 'measuring-worksheets', 'tint': '#fff6e0', 'icon': '📏', 'new': True,
+        'nav': 'Measuring',
+        'title': 'Free Measuring Worksheets | Centimetres, Inches and Cubes | PrintPals',
+        'desc': 'Free printable measuring worksheets with real-size rulers in centimetres or inches, or count the cubes. Pencils, crayons, paintbrushes and caterpillars to measure.',
+        'h1': 'Measuring',
+        'lead': 'Real-size rulers in centimetres or inches, printed exactly to scale. Measure pencils, crayons and caterpillars, or start by counting cubes.',
+        'card': 'Real-size rulers in cm or inches, or count the cubes.',
+        'form': field('Measure in', seg('unit', [('cm', 'Centimetres'), ('inch', 'Inches'), ('cubes', 'Cubes')], 'cm'), 'Print at 100% (actual size) so the rulers are exact.')
+        + check('key', 'Answer page') + SHUFFLE + PAPER,
+        'article': """
+<h2>Real rulers, real sizes</h2>
+<p>Every ruler and picture is printed at its true size, so children can check with their own ruler too. Make sure your printer is set to 100% or "actual size".</p>""",
+        'faq': [('Why do the measurements not match my ruler?', 'Your printer may be shrinking the page. Choose "Actual size" or "100%" in the print settings.')],
+    },
+    {
+        'id': 'graphs', 'cat': 'maths', 'slug': 'pictogram-and-bar-graph-worksheets', 'tint': '#e8f8f4', 'icon': '📊', 'new': True,
+        'nav': 'Graphs and tallies',
+        'title': 'Free Bar Graph and Tally Chart Worksheets for Kids | PrintPals',
+        'desc': 'Free printable graph worksheets for kids: count the pictures, colour a bar graph or make a tally chart, then answer questions. Fruit, animals, toys and treats.',
+        'h1': 'Graphs and tally charts',
+        'lead': 'Count the pictures, colour the bar graph or make a tally chart, then answer the questions. A new set every click.',
+        'card': 'Count the pictures, colour a bar graph or tally, then answer questions.',
+        'form': field('Graph', seg('kind', [('bar', 'Bar graph'), ('tally', 'Tally chart')], 'bar'))
+        + field('Pictures', seg('theme', [('fruit', 'Fruit'), ('animals', 'Animals'), ('toys', 'Toys'), ('treats', 'Treats')], 'fruit'))
+        + check('key', 'Answer page') + SHUFFLE + PAPER,
+        'article': """<h2>First steps with data</h2><p>Counting, sorting and showing numbers in a graph is how children begin to understand data. Talk about the graph together: which is the most, which is the fewest, how many more?</p>""",
+        'faq': [('How do tally marks work?', 'Draw one line for each thing you count. The fifth line goes across the other four, making a group of five.')],
+    },
+    {
+        'id': 'readinglog', 'cat': 'charts', 'slug': 'reading-log-for-kids', 'tint': '#f5edff', 'icon': '📚', 'new': True,
+        'nav': 'Reading log',
+        'title': 'Free Printable Reading Log for Kids | Bookshelf and Reading Challenge | PrintPals',
+        'desc': 'Free printable reading log for kids with a bookshelf to colour for every book read and a 16-square reading challenge. Personalised with your child\'s name.',
+        'h1': 'Reading log',
+        'lead': 'Make reading every day feel like an adventure. A reading log, a bookshelf to colour book by book, and a reading challenge card.',
+        'card': 'A reading log, a bookshelf to colour and a reading challenge.',
+        'form': field("Child's name", '<input type="text" name="name" value="Leo" maxlength="24">')
+        + '<div class="field"><span class="label">Pages</span>' + check('log', 'Reading log') + check('shelf', 'My bookshelf') + check('challenge', 'Reading challenge') + '</div>'
+        + PAPER,
+        'article': """<h2>Little and often</h2><p>Ten minutes of reading every day makes a huge difference. Colouring a book on the shelf or ticking a challenge gives children something to be proud of.</p>""",
+        'faq': [('What age is the reading log for?', 'Ages 4 to 8. Younger children can colour and circle a face while a grown-up writes the title.')],
+    },
+    {
+        'id': 'writingpaper', 'cat': 'writing', 'slug': 'handwriting-paper', 'tint': '#e6f6fc', 'icon': '📄', 'new': True,
+        'nav': 'Handwriting paper',
+        'title': 'Free Printable Handwriting Paper for Kids | Big Lines, Picture Box | PrintPals',
+        'desc': 'Free printable handwriting paper for kids: rainbow lines, four-line guides or plain lines in big, medium or small sizes, with an optional picture box and border.',
+        'h1': 'Handwriting paper',
+        'lead': 'The right paper for every stage: rainbow lines for beginners, four-line handwriting guides, or plain lines. Add a picture box for draw-and-write pages.',
+        'card': 'Rainbow lines, four-line guides or plain lines, with a picture box.',
+        'form': field('Title', '<input type="text" name="title" value="My writing" maxlength="40">')
+        + field('Lines', seg('style', [('rainbow', 'Rainbow lines'), ('guides', 'Four-line guides'), ('plain', 'Plain lines')], 'rainbow'))
+        + field('Line size', seg('lines', [('big', 'Big'), ('medium', 'Medium'), ('small', 'Small')], 'big'))
+        + check('picture', 'Picture box at the top', False) + check('border', 'Pretty border', False)
+        + PAPER,
+        'article': """<h2>Which lines to choose</h2><ul><li><b>Rainbow lines:</b> blue sky line, green dotted middle and red ground line. Great for beginners.</li><li><b>Four-line guides:</b> the lines taught in many schools, with room for tails.</li><li><b>Plain lines:</b> for confident writers.</li></ul>""",
+        'faq': [('Can I print several copies?', 'Yes. Print as many pages as you need from the print window.')],
+    },
+    {
+        'id': 'storywriting', 'cat': 'writing', 'slug': 'story-writing-worksheets', 'tint': '#fff0f7', 'icon': '🖋️', 'new': True,
+        'nav': 'Story writing',
+        'title': 'Free Story Writing Worksheets for Kids | Story Starters and Comic Strips | PrintPals',
+        'desc': 'Free printable story writing worksheets: a picture box, words to help and a story starter to trace, or a comic strip with speech bubbles. Eight story ideas.',
+        'h1': 'Story writing',
+        'lead': 'A dragon at the door, a magic seed, a talking cat. Each page has a story starter, a picture box and words to help, or choose a comic strip with speech bubbles.',
+        'card': 'Story starters with pictures and word banks, or a comic strip.',
+        'form': field("Child's name (optional)", '<input type="text" name="name" value="" maxlength="24" placeholder="Mia">')
+        + field('Story idea', '<select name="prompt"><option value="">Surprise me</option><option value="dragon">The Dragon at the Door</option><option value="seed">The Magic Seed</option><option value="moon">My Trip to the Moon</option><option value="cat">The Talking Cat</option><option value="sea">Under the Sea</option><option value="birthday">The Best Birthday</option><option value="puppy">The Lost Puppy</option><option value="power">If I Had a Superpower</option></select>')
+        + field('Page', seg('layout', [('story', 'Story page'), ('comic', 'Comic strip')], 'story'))
+        + field('Lines', seg('lines', [('big', 'Big'), ('small', 'Smaller')], 'big'))
+        + SHUFFLE + PAPER,
+        'article': """<h2>Getting started is the hardest part</h2><p>A blank page can feel scary. A story starter, a picture and a few helpful words give children a running start, so they can enjoy the fun part: deciding what happens next.</p>""",
+        'faq': [('What age are these for?', 'Ages 5 to 8. Younger children can draw the story and tell it to a grown-up who writes it.')],
+    },
+    {
+        'id': 'labels', 'cat': 'charts', 'slug': 'name-labels-for-kids', 'tint': '#f1f8e6', 'icon': '🏷️', 'new': True,
+        'nav': 'Name labels',
+        'title': 'Free Printable Name Labels and Desk Name Plates for Classrooms | PrintPals',
+        'desc': 'Free printable desk name plates with an alphabet strip and number line 0 to 20, and name labels for books, pegs and drawers. Print the whole class at once.',
+        'h1': 'Name labels',
+        'lead': 'Paste your class list and print everything at once: desk name strips with an alphabet and a number line, or cheerful labels for books, pegs and drawers.',
+        'card': 'Desk name strips with alphabet and number line, and labels for books and pegs.',
+        'form': field('Names', '<textarea name="names" rows="5" spellcheck="false">Mia\nLeo\nEmma\nSam</textarea>', 'One name per line.')
+        + field('Type', seg('kind', [('desk', 'Desk name strips'), ('labels', 'Book and peg labels')], 'desk'))
+        + check('repeat', 'Fill the page with repeats (labels)')
+        + PAPER,
+        'article': """<h2>Ready for the first day</h2><p>Desk name strips help children find their seat, and the alphabet and number line are there every time they need them. Labels make books, pegs and drawers easy to find.</p>""",
+        'faq': [('Can I print a whole class at once?', 'Yes. Paste every name, one per line, and every child gets their own strip or labels.')],
     },
 ]
 
@@ -1020,6 +1145,7 @@ def tool_page(t):
 <script src="/js/cursive.js?v={VERSION}"></script>
 <script src="/js/tools5.js?v={VERSION}"></script>
 <script src="/js/colouring.js?v={VERSION}"></script>
+<script src="/js/tools6.js?v={VERSION}"></script>
 <script src="/js/app.js?v={VERSION}"></script>
 </body>
 </html>
