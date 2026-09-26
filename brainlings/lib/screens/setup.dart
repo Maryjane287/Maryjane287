@@ -140,8 +140,8 @@ class _SetupScreenState extends State<SetupScreen> {
                       Text('Who will send $kid letters?', style: T.d(28)),
                       const SizedBox(height: 6),
                       Text(
-                        'Family members do not need the app. They get a little link by WhatsApp or email and '
-                        'record a voice note. Only the people you invite can ever send anything. No strangers, ever.',
+                        'Record a voice letter from any of them in the grown-up area, and $kid\'s creature will deliver it. '
+                        'Soon they will be able to send letters from their own phones too. Only the people you choose, never strangers.',
                         style: T.b(15, color: C.inkSoft),
                       ),
                       const SizedBox(height: 14),

@@ -88,7 +88,7 @@ Support email for parents: graceandloannesofficial@gmail.com
   (Google only counts data that leaves the device). Mention in the privacy policy (done) that Say It! uses the phone's
   own speech recognition. "Is all data encrypted in transit?" not applicable. "Can users request deletion?" Yes, Start again.
   (This changes when family messages go online with Firebase; we will update it then.)
-- **Upload:** Production (or Internal testing first) → Create new release → upload `Brainlings-1.7.0.aab`.
+- **Upload:** Production (or Internal testing first) → Create new release → upload `Brainlings-1.7.1.aab`.
   Choose "Use Google-generated app signing key" (Play App Signing). Keep `brainlings-upload.jks` and its password safe:
   every future update must be signed with it.
 - **Teacher Approved:** once live, you can apply. The app already follows the rules (no ads, age appropriate, grown-up gate).
