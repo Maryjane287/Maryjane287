@@ -10,7 +10,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '19'
+VERSION = '21'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -1221,7 +1221,7 @@ TOOLS += [
         'card': 'Butterfly, frog, plant and chicken: learn, label, or cut and stick.',
         'form': field('Life cycle', seg('cycle', [('butterfly', '🦋 Butterfly'), ('frog', '🐸 Frog'), ('plant', '🌻 Plant'), ('chicken', '🐔 Chicken')], 'butterfly'))
         + field('Activity', seg('kind', [('learn', 'Learn it'), ('label', 'Label it'), ('cut', 'Cut and stick')], 'learn'))
-        + SHUFFLE + PAPER,
+        + PAPER,
         'article': """<h2>Science they can watch</h2><p>Life cycles are one of the first science topics in school. Pair the sheet with real life: plant a seed, visit a pond in spring, or watch caterpillars grow.</p>""",
         'faq': [('What is a chrysalis?', 'The hard case a caterpillar makes around itself while it turns into a butterfly.')],
     },
@@ -1255,6 +1255,35 @@ TOOLS += [
 ]
 
 
+# The homepage sections, in learning order (easiest first). Every tool appears in exactly one section.
+ARRANGE = [
+    ('handwriting', 'Handwriting', 'Handwriting', 'From first pencil lines to joined writing, with real letter shapes and stroke order.',
+     ['prewriting', 'names', 'letters', 'mixups', 'joined', 'writingpaper', 'alphabets']),
+    ('reading', 'Reading & phonics', 'Reading', 'Letter sounds, CVC words, sight words, spelling and stories where your child is the hero.',
+     ['cvc', 'sounds', 'families', 'rhyming', 'sight', 'spelling', 'flashcards', 'opposites', 'story', 'storywriting']),
+    ('maths', 'Maths', 'Maths', 'Counting, number bonds, sums, money, times tables, time, fractions and shapes, with answer keys.',
+     ['numbers', 'numberday', 'compare', 'bonds', 'maths', 'numberlines', 'wordproblems', 'placevalue', 'money', 'times', 'clocks', 'fractions', 'shapes', 'measuring', 'graphs']),
+    ('puzzles', 'Puzzles & games', 'Puzzles', 'Mazes, dot to dot, matching, spot the difference, word searches, crosswords, sudoku and bingo.',
+     ['mazes', 'dots', 'matching', 'spotdiff', 'wordsearch', 'crossword', 'sudoku', 'bingo', 'travel']),
+    ('crafts', 'Colouring, crafts & parties', 'Colouring & crafts', 'Colouring pages, photo colouring, colour by number, cut and paste, crowns, masks, cards and party packs.',
+     ['colouring', 'photo', 'colournum', 'cutpaste', 'crafts', 'cards', 'party']),
+    ('charts', 'Charts & planners', 'Charts', 'Routines, chores, reward charts, certificates, reading logs, homework planners, calendars and name labels.',
+     ['routine', 'chores', 'reward', 'certificate', 'readinglog', 'homework', 'calendar', 'labels']),
+    ('world', 'Me & my world', 'My world', 'Family, feelings, weather, life cycles and scavenger hunts that get children exploring.',
+     ['family', 'feelings', 'weather', 'lifecycle', 'hunt']),
+]
+_by_id = {t['id']: t for t in TOOLS}
+_listed = [i for a in ARRANGE for i in a[4]]
+assert sorted(_by_id) == sorted(_listed) and len(_listed) == len(set(_listed)), 'every tool must be in exactly one section'
+TOOLS = [_by_id[i] for i in _listed]
+for a in ARRANGE:
+    for i in a[4]:
+        _by_id[i]['cat'] = a[0]
+CATS = [(a[0], a[1]) for a in ARRANGE]
+CAT_TEXT = {a[0]: a[3] for a in ARRANGE}
+NAV_LABEL = {a[0]: a[2] for a in ARRANGE}
+
+
 def head(title, desc, path, extra=''):
     url = SITE + path
     return f'''<!doctype html>
@@ -1281,27 +1310,19 @@ def head(title, desc, path, extra=''):
 </head>'''
 
 
-CATS = [('writing', 'Writing & reading'), ('maths', 'Maths'), ('puzzles', 'Puzzles & games'), ('fun', 'Colouring & parties'), ('charts', 'Charts & awards')]
-CAT_TEXT = {
-    'writing': 'Tracing, phonics, sight words, spelling and reading, with real letter shapes and stroke order.',
-    'maths': 'Counting, number bonds, sums, money, times tables and telling the time, with answer keys.',
-    'puzzles': 'Word searches, mazes, crosswords, dot to dot, sudoku, matching and bingo you can make yourself.',
-    'fun': 'Photo colouring pages, colour by number, scavenger hunts and a birthday party in minutes.',
-    'charts': 'Routines, chores, feelings, reward charts and certificates that make everyday life easier.',
-}
 
 
 def top(active=''):
     act = next((t['cat'] for t in TOOLS if t['id'] == active), '')
     cur = ' aria-current="page"'
-    nav = ''.join(f'<a href="/#{k}"{cur if k == act else ""}>{v}</a>' for k, v in CATS)
+    nav = ''.join(f'<a href="/#{k}"{cur if k == act else ""}>{NAV_LABEL[k]}</a>' for k, v in CATS)
     return f'''<header class="top"><div class="wrap"><a class="brand" href="/">{LOGO}<span>Print<b>Pals</b></span></a><nav class="nav">{nav}</nav></div></header>'''
 
 
-FOOT = '''<footer><div class="wrap"><div><div class="brand" style="font-size:24px;color:#fff">Print<b style="color:#ff8a8a">Pals</b></div>
-<p style="max-width:420px;margin-top:8px">Free printable worksheets for children, made in seconds. Everything is made inside your own browser: nothing you type is sent to us or stored.</p></div>
-<div style="max-width:560px"><p><b style="color:#fff">Worksheets</b></p><p style="line-height:2">''' + ''.join(f'<a href="/{t["slug"]}">{t["nav"]}</a>' for t in TOOLS) + '''</p>
-<p style="margin-top:14px">© PrintPals. Free for home and classroom use.</p></div></div></footer>'''
+FOOT = '''<footer><div class="wrap"><div class="foot-brand"><div class="brand" style="font-size:24px;color:#fff">Print<b style="color:#ff8a8a">Pals</b></div>
+<p style="max-width:420px;margin-top:8px">Free printable worksheets for children, made in seconds. Everything is made inside your own browser: nothing you type is sent to us or stored.</p>
+<p style="margin-top:14px">© PrintPals. Free for home and classroom use.</p></div>
+<div class="foot-cols">''' + ''.join(f'<div><h4>{v}</h4>' + ''.join(f'<a href="/{t["slug"]}">{t["nav"]}</a>' for t in TOOLS if t['cat'] == k) + '</div>' for k, v in CATS) + '''</div></div></footer>'''
 
 
 def tool_page(t):
@@ -1314,7 +1335,8 @@ def tool_page(t):
             {'@type': 'FAQPage', 'mainEntity': [{'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in t['faq']]},
         ],
     }
-    others = ''.join(f'<a href="/{o["slug"]}">{o["icon"]} {o["h1"]}</a>' for o in TOOLS if o is not t)
+    others = ''.join(f'<a href="/{o["slug"]}">{o["icon"]} {o["h1"]}</a>' for o in TOOLS if o['cat'] == t['cat'] and o is not t)
+    cat_name = dict(CATS)[t['cat']]
     return head(t['title'], t['desc'], '/' + t['slug'], f'<style id="pageStyle">@page {{ size: A4 portrait; margin: 0; }}</style>\n<script type="application/ld+json">{json.dumps(ld)}</script>') + f'''
 <body class="tool-page">
 {top(t['id'])}
@@ -1334,8 +1356,9 @@ def tool_page(t):
 {t['article']}
 <h2>Questions parents and teachers ask</h2>
 {faq_html}
-<h2>More free worksheets</h2>
+<h2>More in {html.escape(cat_name)}</h2>
 <div class="more">{others}</div>
+<p><a class="all-link" href="/#{t['cat']}">See all {len(TOOLS)} free worksheet makers →</a></p>
 </article>
 </div>
 </main>
@@ -1379,6 +1402,7 @@ def home():
 <p class="lead">Personalised tracing, reading, maths, puzzles, colouring pages from your own photos, party packs and certificates for children aged 3 to 8. Type, tap print, done.</p>
 <div class="chips"><span class="chip">✓ 100% free</span><span class="chip">✓ No sign up</span><span class="chip">✓ A4 and US Letter</span><span class="chip">✓ Save as PDF</span></div>
 <div class="find"><input type="search" id="find" placeholder="Find a worksheet: try name, money or dinosaur" aria-label="Find a worksheet" autocomplete="off"></div>
+<div class="jumps">''' + ''.join(f'<a href="#{k}">{NAV_LABEL[k]} <b>{sum(1 for t in TOOLS if t["cat"] == k)}</b></a>' for k, v in CATS) + f'''</div>
 </div></section>
 <div class="wrap">{sections}<p class="none" id="none">Nothing found. Try another word, like letters, maths or colouring.</p></div>
 <script>

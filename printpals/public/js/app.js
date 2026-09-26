@@ -68,7 +68,11 @@
   }
   document.querySelectorAll('[data-action=print]').forEach((b) => b.addEventListener('click', () => { render(); picturesReady().then(() => setTimeout(() => window.print(), 80)); }));
   window.PrintPals = { render: () => render() };
-  document.querySelectorAll('[data-action=shuffle]').forEach((b) => b.addEventListener('click', () => { seed = Math.floor(Math.random() * 1e9); render(); }));
+  // "Make a new set" always gives a different sheet (a random pick can land on the same one by chance).
+  document.querySelectorAll('[data-action=shuffle]').forEach((b) => b.addEventListener('click', () => {
+    const before = preview.innerHTML;
+    for (let i = 0; i < 6; i++) { seed = Math.floor(Math.random() * 1e9); render(); if (preview.innerHTML !== before) break; }
+  }));
 
   // Pictures and fonts can arrive after the first drawing: draw again then.
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(render);
