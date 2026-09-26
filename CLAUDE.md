@@ -76,7 +76,9 @@ use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in 
 for painted pictures on every sheet.
 Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
 (colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
-fractions, colour by number, spot the difference. Batch 14 live (VERSION 31, 119 tools, tools14.js): party invitations (4 per page), countdown calendar
+fractions, colour by number, spot the difference. Batch 15 live (VERSION 32, 126 tools, tools15.js): reading comprehension (6 stories starring the child, answers),
+maths minute (30 facts, score tracker), savings jar (any currency, spend/save/share labels), love coupons, packing lists (6 trips),
+family meal planner (week plan, shopping list, chef menu), healthy habits posters (handwash, sneeze, dressed, toilet). Batch 14 live (VERSION 31, 119 tools, tools14.js): party invitations (4 per page), countdown calendar
 (any occasion, 24/12/7 days with family activities), tooth brushing chart, family rules poster, babysitter info sheet (phone numbers only by hand),
 kitchen science (6 experiments), letter writing kit (paper, envelope net, guide); storybook now has 5 stories (dino, garden added). Batch 13 live (VERSION 30, 112 tools, tools13.js): big feelings toolkit, sleep pack, food explorer, social stories,
 personalised storybook (Plus, 3 stories), conversation cards, gratitude journal, potty training pack. Batch 12 live (VERSION 29, 104 tools, tools12.js): home language flashcards (6 languages + type your own), story dice,

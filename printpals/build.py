@@ -11,7 +11,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '31'
+VERSION = '32'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -1944,7 +1944,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'Yes. You can try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year, and you can cancel any time.')],
     },
     {
-        'id': 'invites', 'cat': 'crafts', 'slug': 'birthday-party-invitations', 'tint': '#fff0f5', 'icon': '💌', 'new': True,
+        'id': 'invites', 'cat': 'crafts', 'slug': 'birthday-party-invitations', 'tint': '#fff0f5', 'icon': '💌', 'new': False,
         'nav': 'Party invitations',
         'title': 'Free Printable Birthday Party Invitations for Kids | Personalised, 4 per Page | PrintPals',
         'desc': 'Free printable kids birthday party invitations with your child\'s name, age, date, time, place and RSVP. Balloons, animals or sweet treats, bright or colour in. 4 per page.',
@@ -1963,7 +1963,7 @@ TOOLS += [
         'faq': [('Can I print on card?', 'Yes. Thin card (160 to 200 gsm) makes lovely sturdy invitations and works in most home printers.')],
     },
     {
-        'id': 'countdown', 'cat': 'charts', 'slug': 'countdown-calendar-for-kids', 'tint': '#fff6e0', 'icon': '⏳', 'new': True,
+        'id': 'countdown', 'cat': 'charts', 'slug': 'countdown-calendar-for-kids', 'tint': '#fff6e0', 'icon': '⏳', 'new': False,
         'nav': 'Countdown calendar',
         'title': 'Free Printable Countdown Calendar for Kids | Christmas, Eid, Diwali, Birthday, Holiday | PrintPals',
         'desc': 'A free printable countdown calendar for children: count down to Christmas, Eid, Diwali, a birthday, a holiday or any big day, with a little family activity for each day.',
@@ -1978,7 +1978,7 @@ TOOLS += [
         'faq': [('Is it only for festivals?', 'No. Choose "Something else" and type anything: a new baby, a visit from Grandma, the first day of school or moving house.')],
     },
     {
-        'id': 'teeth', 'cat': 'charts', 'slug': 'tooth-brushing-chart', 'tint': '#e6f6fc', 'icon': '🪥', 'new': True,
+        'id': 'teeth', 'cat': 'charts', 'slug': 'tooth-brushing-chart', 'tint': '#e6f6fc', 'icon': '🪥', 'new': False,
         'nav': 'Tooth brushing chart',
         'title': 'Free Printable Tooth Brushing Chart for Kids | Morning and Night | PrintPals',
         'desc': 'A free printable tooth brushing chart for children: 31 days of morning and night teeth to colour, plus a picture guide showing how to brush properly.',
@@ -1991,7 +1991,7 @@ TOOLS += [
         'faq': [('How much toothpaste should my child use?', 'A smear for babies and toddlers under 3, and a pea sized amount from age 3. Always check local dental advice.')],
     },
     {
-        'id': 'familyrules', 'cat': 'world', 'slug': 'family-rules-poster', 'tint': '#fff0f5', 'icon': '🏡', 'new': True,
+        'id': 'familyrules', 'cat': 'world', 'slug': 'family-rules-poster', 'tint': '#fff0f5', 'icon': '🏡', 'new': False,
         'nav': 'Family rules poster',
         'title': 'Free Printable Family Rules Poster | Personalised House Rules for Kids | PrintPals',
         'desc': 'A free printable family rules poster with your family name and your own rules. Bright, or colour it in together.',
@@ -2005,7 +2005,7 @@ TOOLS += [
         'faq': [('How many rules should we have?', 'Five to eight is plenty for young children. Fewer rules are easier to remember.')],
     },
     {
-        'id': 'sitter', 'cat': 'charts', 'slug': 'babysitter-information-sheet', 'tint': '#fff0f0', 'icon': '📋', 'new': True,
+        'id': 'sitter', 'cat': 'charts', 'slug': 'babysitter-information-sheet', 'tint': '#fff0f0', 'icon': '📋', 'new': False,
         'nav': 'Babysitter info sheet',
         'title': 'Free Printable Babysitter Information Sheet | Grandparents, Childminder, Emergency Contacts | PrintPals',
         'desc': 'A free printable babysitter and grandparent information sheet: allergies and medicines, bedtime, food, what calms your child, favourite games, house rules and emergency contacts.',
@@ -2024,7 +2024,7 @@ TOOLS += [
         'faq': [('Why can I not type phone numbers?', 'To keep your family safe, we leave the emergency contacts for you to write by hand. Nothing you type ever leaves your device, but a printed sheet can.')],
     },
     {
-        'id': 'science', 'cat': 'world', 'slug': 'kitchen-science-experiments-for-kids', 'tint': '#e8f8f4', 'icon': '🧪', 'new': True,
+        'id': 'science', 'cat': 'world', 'slug': 'kitchen-science-experiments-for-kids', 'tint': '#e8f8f4', 'icon': '🧪', 'new': False,
         'nav': 'Kitchen science',
         'title': 'Free Kitchen Science Experiments for Kids | Printable Worksheets | PrintPals',
         'desc': 'Free printable kitchen science experiments for children: sink or float, dancing raisins, walking water, fizzing volcano, magic pepper and ice melting race. Each with a need list, steps, a prediction and a drawing box.',
@@ -2036,7 +2036,7 @@ TOOLS += [
         'faq': [('Is it safe?', 'All six use everyday kitchen things, but always do them with a grown-up and keep ingredients away from eyes and mouths.')],
     },
     {
-        'id': 'letterkit', 'cat': 'reading', 'slug': 'letter-writing-kit-for-kids', 'tint': '#fff6e0', 'icon': '✉️', 'new': True,
+        'id': 'letterkit', 'cat': 'reading', 'slug': 'letter-writing-kit-for-kids', 'tint': '#fff6e0', 'icon': '✉️', 'new': False,
         'nav': 'Letter writing kit',
         'title': 'Free Letter Writing Kit for Kids | Letter Paper, Envelope Template and Guide | PrintPals',
         'desc': 'A free printable letter writing kit for children: pretty letter paper with "Dear" and "Love from", a fold your own envelope template and a simple guide to writing a letter.',
@@ -2049,6 +2049,106 @@ TOOLS += [
         'article': """<h2>A real letter</h2><p>Writing a real letter gives children a reason to write, and the joy of a reply is enormous. Younger children can draw a picture and write just their name. Older children can use the five steps to write a full letter.</p>""",
         'faq': [('Will the envelope fit the letter?', 'Fold the letter in half, then in half again, and it will fit inside.')],
     },
+    {
+        'id': 'comprehension', 'cat': 'reading', 'slug': 'reading-comprehension-worksheets', 'tint': '#fff6e0', 'icon': '📖', 'new': True,
+        'nav': 'Reading comprehension',
+        'title': 'Free Reading Comprehension Worksheets for Kids | Short Stories With Their Name, With Answers | PrintPals',
+        'desc': 'Free printable reading comprehension worksheets where your child is in the story: short stories for ages 5 to 7 and longer stories for ages 7 to 9, with tick box questions, a written answer, a drawing box and an answer key.',
+        'h1': 'Reading comprehension',
+        'lead': 'Short, warm stories with your child as the star, then questions to show they understood. Tick the right answer, write a sentence, and draw a picture.',
+        'card': 'Little stories starring your child, with questions and answers.',
+        'form': field('Length', seg('level', [('short', 'Short (ages 5 to 7)'), ('longer', 'Longer (ages 7 to 9)')], 'short'))
+        + field('Story', seg('story', [('1', 'Story 1'), ('2', 'Story 2'), ('3', 'Story 3')], '1'))
+        + field('Child\'s name', '<input type="text" name="name" maxlength="20" placeholder="Mia" autocomplete="off">')
+        + check('key', 'Answer key') + PAPER,
+        'article': """<h2>Read it together first</h2><p>Read the story aloud together, then let your child read it again by themselves. Show them that looking back at the story to find an answer is a clever thing to do, not cheating. Good readers check!</p>""",
+        'faq': [('What age is this for?', 'The short stories suit ages 5 to 7. The longer stories, with a written answer, suit ages 7 to 9.')],
+    },
+    {
+        'id': 'mathsminute', 'cat': 'maths', 'slug': 'maths-minute-worksheets', 'tint': '#fff0f0', 'icon': '⏱️', 'new': True,
+        'nav': 'Maths minute',
+        'title': 'Free Maths Minute Worksheets | Quick Fact Fluency Drills, Adding, Taking Away, Times Tables | PrintPals',
+        'desc': 'Free printable one minute maths drills: 30 quick facts for adding and taking away within 10 and 20, doubles and times tables, with a daily score tracker and answers.',
+        'h1': 'Maths minute',
+        'lead': 'Thirty quick sums, one minute on the clock. Do it every day for a week and watch the score grow. Fast facts make all of maths easier.',
+        'card': '30 quick facts in one minute, with a daily score tracker.',
+        'form': field('Facts', seg('kind', [('add10', 'Add to 10'), ('sub10', 'Take away in 10'), ('add20', 'Add to 20'), ('sub20', 'Take away in 20'), ('doubles', 'Doubles'), ('times', 'Times tables')], 'add10'))
+        + field('Times table (for times tables)', '<select name="table">' + ''.join(f'<option value="{t}">{t} times</option>' for t in range(2, 13)) + '<option value="mix">Mixed 2 to 10</option></select>')
+        + check('key', 'Answer key') + PAPER + SHUFFLE,
+        'article': """<h2>Beat your own score</h2><p>The aim is not to beat anyone else, only yesterday's score. Print the same sheet for the whole week, or press "Make a new set" for fresh sums each day. Stop at one minute, count the right answers, and celebrate every improvement.</p>""",
+        'faq': [('What if one minute is too stressful?', 'Take the timer away. Let your child finish all 30 at their own pace, and time it only when they feel confident.')],
+    },
+    {
+        'id': 'savings', 'cat': 'maths', 'slug': 'savings-jar-chart-for-kids', 'tint': '#fff6e0', 'icon': '🐷', 'new': True,
+        'nav': 'Savings jar',
+        'title': 'Free Printable Savings Chart for Kids | Money Jar Goal Tracker, Spend Save Share | PrintPals',
+        'desc': 'A free printable savings jar chart for children in your own currency: set a goal, colour a coin each time you save, plus spend, save and share jar labels.',
+        'h1': 'Savings jar',
+        'lead': 'Teach children to save for something they really want. Choose the goal and the amount, then colour a coin every time money goes in the jar.',
+        'card': 'Colour a coin each time you save towards a goal.',
+        'form': field('Child\'s name (optional)', '<input type="text" name="name" maxlength="24" placeholder="Leo" autocomplete="off">')
+        + field('Saving for (optional)', '<input type="text" name="goal" maxlength="30" placeholder="a new football" autocomplete="off">')
+        + field('Currency', '<select name="currency"><option value="GBP">Pounds £</option><option value="USD">US dollars $</option><option value="EUR">Euros €</option><option value="NGN">Naira ₦</option><option value="GHS">Cedis GH₵</option><option value="KES">Shillings KSh</option><option value="ZAR">Rand R</option><option value="CAD">Canadian dollars $</option><option value="AUD">Australian dollars $</option></select>')
+        + field('Goal amount', '<input type="number" name="target" min="1" max="100000" value="20">')
+        + field('Coins in the jar', seg('steps', [('10', '10'), ('20', '20'), ('30', '30')], '20'))
+        + check('jars', 'Spend, save and share jar labels') + PAPER,
+        'article': """<h2>Waiting is the lesson</h2><p>Saving teaches patience and planning. Keep the chart next to a real jar, so your child can see the chart and the jar fill up together. When they reach the goal, go shopping together and let them pay.</p>""",
+        'faq': [('How do the three jars work?', 'Each time your child gets money, they split it between Spend (now), Save (for a goal) and Share (to give). It is a lovely first lesson in money and kindness.')],
+    },
+    {
+        'id': 'coupons', 'cat': 'crafts', 'slug': 'love-coupons-for-kids-to-give', 'tint': '#fff0f5', 'icon': '💝', 'new': True,
+        'nav': 'Love coupons',
+        'title': 'Free Printable Love Coupons for Kids to Give | Mother\'s Day, Father\'s Day, Birthdays | PrintPals',
+        'desc': 'Free printable love coupons for children to give to Mum, Dad or Grandma: a big hug, breakfast in bed, I will tidy my room and more, or write your own. Bright or colour in.',
+        'h1': 'Love coupons',
+        'lead': 'The perfect gift a child can give for free. Eight coupons like "One great big hug" and "I will set the table" to cut out, colour and give with love.',
+        'card': 'Coupons for Mum, Dad or Grandma: hugs, help and breakfast in bed.',
+        'form': field('For', '<input type="text" name="to" maxlength="20" placeholder="Mum" autocomplete="off">')
+        + field('From (child\'s name)', '<input type="text" name="name" maxlength="20" placeholder="Emma" autocomplete="off">')
+        + field('Your own coupons (optional, one per line)', '<textarea name="own" rows="3" spellcheck="true" placeholder="A picnic in the garden&#10;I will feed the cat"></textarea>')
+        + field('Style', seg('style', [('bright', 'Bright'), ('colour', 'Colour in')], 'bright')) + PAPER + SHUFFLE,
+        'article': """<h2>A gift from the heart</h2><p>Help your child choose coupons they will really do, then staple them into a little book or put them in an envelope. Perfect for Mother's Day, Father's Day, birthdays or just because.</p>""",
+        'faq': [('Can the coupons be for anyone?', 'Yes. Type any name in "For": Grandpa, a teacher, a big sister or a best friend.')],
+    },
+    {
+        'id': 'packing', 'cat': 'charts', 'slug': 'packing-list-for-kids', 'tint': '#e6f6fc', 'icon': '🧳', 'new': True,
+        'nav': 'Packing lists',
+        'title': 'Free Printable Packing List for Kids | Holiday, Beach, Sleepover, Camping, School Trip | PrintPals',
+        'desc': 'Free printable picture packing lists for children: holiday, beach bag, sleepover, camping, school trip and staying with family. Add your own items.',
+        'h1': 'Packing lists',
+        'lead': 'Let children pack their own bag with a picture checklist. They feel grown-up, and nothing gets left behind.',
+        'card': 'Picture checklists so children can pack their own bag.',
+        'form': field('Trip', '<select name="trip"><option value="holiday">Holiday</option><option value="beach">Beach day</option><option value="sleepover">Sleepover</option><option value="camping">Camping</option><option value="school">School trip</option><option value="grandparents">Staying with family</option></select>')
+        + field('Child\'s name (optional)', '<input type="text" name="name" maxlength="24" placeholder="Sam" autocomplete="off">')
+        + field('Add your own (optional, one per line)', '<textarea name="extra" rows="3" spellcheck="true" placeholder="Swimming goggles&#10;Football"></textarea>') + PAPER,
+        'article': """<h2>Independence, one sock at a time</h2><p>Lay the list next to the suitcase and let your child find each thing and colour the star. Check the bag together at the end. Even three year olds can do it with the pictures.</p>""",
+        'faq': [('Can I use it again?', 'Slip it into a plastic sleeve and use a whiteboard pen, and it will last for every trip.')],
+    },
+    {
+        'id': 'mealplan', 'cat': 'charts', 'slug': 'family-meal-planner-printable', 'tint': '#f1f8e6', 'icon': '🍽️', 'new': True,
+        'nav': 'Family meal planner',
+        'title': 'Free Printable Family Meal Planner With Kids | Weekly Menu, Shopping List, Chef Menu | PrintPals',
+        'desc': 'A free printable family meal planner made for cooking with children: a weekly breakfast, lunch and dinner plan with a little chef column, a shopping list and a menu card to draw.',
+        'h1': 'Family meal planner',
+        'lead': '"What\'s for dinner?" answered for the whole week. Plan meals together, let a little chef help each day, and take the shopping list to the shop.',
+        'card': 'A weekly meal plan, shopping list and a little chef\'s menu.',
+        'form': field('Little chef\'s name (optional)', '<input type="text" name="name" maxlength="20" placeholder="Chris" autocomplete="off">')
+        + check('shopping', 'Shopping list') + check('menu', 'Little chef\'s menu card') + PAPER,
+        'article': """<h2>Children eat what they cook</h2><p>Children who help plan and cook meals are more likely to try them. Give each child a day to be chef: they choose the meal, help with safe jobs like washing and stirring, and design the menu card for the table.</p>""",
+        'faq': [('How can young children help in the kitchen?', 'Washing vegetables, tearing lettuce, stirring, spreading, counting and laying the table are all great jobs for little chefs.')],
+    },
+    {
+        'id': 'habits', 'cat': 'world', 'slug': 'handwashing-poster-for-kids', 'tint': '#e6f6fc', 'icon': '🧼', 'new': True,
+        'nav': 'Healthy habits posters',
+        'title': 'Free Handwashing Poster for Kids | Sneeze, Getting Dressed and Toilet Steps Posters | PrintPals',
+        'desc': 'Free printable healthy habits posters for children: how to wash my hands, catch that sneeze, I can get dressed and toilet time steps, with pictures for every step.',
+        'h1': 'Healthy habits posters',
+        'lead': 'Picture step posters for the bathroom and bedroom: washing hands properly, catching sneezes, getting dressed and using the toilet by themselves.',
+        'card': 'Handwashing, sneezing, dressing and toilet steps in pictures.',
+        'form': field('Poster', '<select name="poster"><option value="handwash">How to wash my hands</option><option value="sneeze">Catch that sneeze!</option><option value="dressed">I can get dressed!</option><option value="toilet">Toilet time steps</option><option value="all">All four posters</option></select>') + PAPER,
+        'article': """<h2>Put it at their height</h2><p>Stick the handwashing poster by the sink at your child's eye level, and the getting dressed poster in their bedroom. Point to each step as they do it, and soon they will not need you at all.</p>""",
+        'faq': [('How long should children wash their hands?', 'About 20 seconds, which is the time it takes to sing Happy Birthday twice.')],
+    },
 ]
 
 # The homepage sections, in learning order (easiest first). Every tool appears in exactly one section.
@@ -2058,20 +2158,21 @@ ARRANGE = [
     ('handwriting', 'Handwriting', 'Handwriting', 'From first pencil lines to joined writing, with real letter shapes and stroke order.',
      ['prewriting', 'names', 'letters', 'mixups', 'joined', 'writingpaper', 'alphabets']),
     ('reading', 'Reading & phonics', 'Reading', 'Letter sounds, CVC words, syllables, sight words, sentences, spelling and stories where your child is the hero.',
-     ['abcorder', 'cvc', 'sounds', 'families', 'rhyming', 'syllables', 'sight', 'colourwords', 'spelling', 'flashcards', 'homelang', 'opposites', 'position', 'sentences', 'story', 'storywriting', 'storydice', 'letterkit']),
+     ['abcorder', 'cvc', 'sounds', 'families', 'rhyming', 'syllables', 'sight', 'colourwords', 'spelling', 'flashcards', 'homelang', 'opposites', 'position', 'sentences', 'comprehension', 'story', 'storywriting', 'storydice', 'letterkit']),
     ('maths', 'Maths', 'Maths', 'Counting, patterns, number bonds, doubles, dominoes, sums, money, times tables, time, fractions and shapes, with answer keys.',
-     ['numbers', 'patterns', 'numberday', 'hundred', 'compare', 'bonds', 'doubles', 'dominoes', 'maths', 'numberlines', 'wordproblems', 'placevalue', 'money', 'times', 'clocks', 'clockcraft', 'fractions', 'shapes', 'measuring', 'graphs']),
+     ['numbers', 'patterns', 'numberday', 'hundred', 'compare', 'bonds', 'doubles', 'dominoes', 'maths', 'mathsminute', 'numberlines', 'wordproblems', 'placevalue', 'money', 'savings', 'times', 'clocks', 'clockcraft', 'fractions', 'shapes', 'measuring', 'graphs']),
     ('puzzles', 'Puzzles & games', 'Puzzles', 'Mazes, dot to dot, odd one out, spot the difference, word searches, crosswords, secret codes, sudoku, bingo and board games.',
      ['mazes', 'dots', 'matching', 'oddone', 'spotdiff', 'wordsearch', 'crossword', 'secretcode', 'sudoku', 'bingo', 'snakes', 'travel']),
     ('crafts', 'Colouring, crafts & parties', 'Colouring & crafts', 'Colouring pages, photo colouring, grid drawing, how to draw, puppets, crowns, bookmarks, door hangers, cards, keepsakes and party packs.',
-     ['colouring', 'photo', 'colournum', 'gridcopy', 'howtodraw', 'rolldraw', 'cutpaste', 'crafts', 'puppets', 'bookmarks', 'doorhangers', 'cards', 'handprints', 'party', 'invites']),
+     ['colouring', 'photo', 'colournum', 'gridcopy', 'howtodraw', 'rolldraw', 'cutpaste', 'crafts', 'puppets', 'bookmarks', 'doorhangers', 'cards', 'coupons', 'handprints', 'party', 'invites']),
     ('charts', 'Charts & planners', 'Charts', 'Routines, chores, reward charts, 30 day challenges, certificates, reading logs, planners, calendars, height charts and labels.',
-     ['routine', 'chores', 'reward', 'potty', 'teeth', 'sleep', 'screentime', 'challenge', 'gratitude', 'certificate', 'signs', 'readinglog', 'homework', 'calendar', 'countdown', 'heightchart', 'labels', 'sitter']),
+     ['routine', 'chores', 'reward', 'potty', 'teeth', 'sleep', 'screentime', 'challenge', 'packing', 'mealplan', 'gratitude', 'certificate', 'signs', 'readinglog', 'homework', 'calendar', 'countdown', 'heightchart', 'labels', 'sitter']),
     ('world', 'Me & my world', 'My world', 'Family, siblings, big feelings, new experiences, food, conversations, my body, days and months, weather, life cycles and scavenger hunts.',
-     ['family', 'familyrules', 'siblings', 'lunchnotes', 'talkcards', 'mybody', 'calmkit', 'socialstory', 'foods', 'feelings', 'daysmonths', 'weather', 'lifecycle', 'science', 'hunt']),
+     ['family', 'familyrules', 'siblings', 'lunchnotes', 'talkcards', 'mybody', 'habits', 'calmkit', 'socialstory', 'foods', 'feelings', 'daysmonths', 'weather', 'lifecycle', 'science', 'hunt']),
 ]
 # Ages each tool suits (first year, last year).
 AGES = {
+    'comprehension': (5, 9), 'mathsminute': (5, 10), 'savings': (4, 12), 'coupons': (3, 12), 'packing': (3, 10), 'mealplan': (3, 12), 'habits': (2, 7),
     'invites': (3, 12), 'countdown': (3, 10), 'teeth': (2, 8), 'familyrules': (3, 12), 'sitter': (1, 10), 'science': (4, 10), 'letterkit': (5, 11),
     'pack': (3, 8), 'quickpack': (3, 8), 'faraway': (3, 10), 'monthplan': (3, 8), 'activitybook': (3, 9), 'passport': (3, 8), 'classpack': (3, 8),
     'homelang': (2, 8), 'schoolready': (3, 6), 'holidayplan': (3, 8), 'signs': (3, 11), 'storydice': (4, 9), 'siblings': (3, 10), 'screentime': (4, 12), 'lunchnotes': (3, 10),
@@ -2092,6 +2193,7 @@ AGES = {
 }
 # The option that sets how hard a sheet is, ordered easiest first (drives the Easier and Harder buttons).
 LEVELS = {
+    'comprehension': 'level', 'mathsminute': 'kind',
     'patterns': 'level', 'hundred': 'level', 'bonds': 'to', 'maths': 'within', 'numberlines': 'range', 'wordproblems': 'within', 'placevalue': 'range',
     'money': 'level', 'clocks': 'level', 'fractions': 'level', 'mazes': 'level', 'dots': 'dots', 'matching': 'pairs', 'oddone': 'level', 'spotdiff': 'level',
     'wordsearch': 'level', 'sudoku': 'level', 'doubles': 'max', 'colournum': 'mode', 'compare': 'kind', 'secretcode': 'code', 'sentences': 'kind',
@@ -2117,7 +2219,7 @@ CAT_TEXT = {a[0]: a[3] for a in ARRANGE}
 NAV_LABEL = {a[0]: a[2] for a in ARRANGE}
 
 
-JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'plus', 'app']
+JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'plus', 'app']
 CONTACT = 'graceandloannesofficial@gmail.com'
 # Stripe customer portal: parents manage, switch or cancel their Plus subscription here.
 STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'
