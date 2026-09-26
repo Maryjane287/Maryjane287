@@ -159,8 +159,20 @@ function lineArt(img, detail) {
     }
     if (n < minArea) for (const p of blob) ink[p] = 0;
   }
+  // Solid lines: every line pixel becomes full ink (no pale, fading lines), then lines are
+  // thickened a little and softened by one pixel so they print smooth and even.
+  const solid = new Float32Array(w * h);
+  for (let i = 0; i < w * h; i++) solid[i] = ink[i] > 0.22 ? 1 : 0;
+  const grow = { simple: 3, medium: 2, detailed: 1 }[detail] || 2;
+  let thick = solid;
+  if (grow > 0) {
+    const t = boxBlur(solid, w, h, grow);
+    thick = new Float32Array(w * h);
+    for (let i = 0; i < w * h; i++) thick[i] = t[i] > 0.12 ? 1 : 0;
+  }
+  const soft = boxBlur(thick, w, h, 1);
   for (let i = 0; i < w * h; i++) {
-    const v = mask[i] || ink[i] > 0.05 ? 255 - Math.round(Math.min(1, ink[i] * 1.25) * 225) : 255;
+    const v = 255 - Math.round(Math.min(1, soft[i] * 1.6) * 240);
     px[i * 4] = px[i * 4 + 1] = px[i * 4 + 2] = v; px[i * 4 + 3] = 255;
   }
   x.putImageData(data, 0, 0);
@@ -242,6 +254,31 @@ const STORIES = {
       'Speedy keeps going, step by step.', 'Speedy wins the race! {name} and {friend} cheer.'],
     q: [['What is the turtle called?', 'Speedy', 'Sleepy', 'Spot'], ['Who stops for a nap?', '🐰 the rabbit', '🐢 Speedy', '🐶 the dog'],
       ['Who wins the race?', '🐢 Speedy', '🐰 the rabbit', '🦊 the fox']],
+  },
+
+  beach: {
+    title: '{name} Goes to the Beach', pic: '🏖️', words: ['beach', 'sandcastle', 'wave'],
+    text: ['{name} and {friend} go to the beach.', 'The sun is hot and the sea is blue.', 'They build a big sandcastle.', 'A little crab walks past. Snip, snap!', 'Then a wave comes. Splash!', 'The sandcastle is gone, so they build another one.'],
+    q: [['Where do they go?', '🏖️ the beach', '🌳 the park', '🏫 school'], ['What do they build?', '🏰 a sandcastle', '🚀 a rocket', '🏠 a house'],
+      ['What walks past?', '🦀 a crab', '🐶 a dog', '🐢 a turtle']],
+  },
+  snowman: {
+    title: '{name} Builds a Snowman', pic: '⛄', words: ['snow', 'snowman', 'scarf'],
+    text: ['It is snowing!', '{name} puts on a hat and gloves.', '{name} and {friend} roll a big ball of snow.', 'They make a snowman with a carrot nose.', 'The snowman gets a warm scarf.', '"Hello, Mr Snowman!" says {name}.'],
+    q: [['What is the weather?', '❄️ snowy', '☀️ sunny', '🌧️ rainy'], ['What is the nose made of?', '🥕 a carrot', '🍎 an apple', '🍌 a banana'],
+      ['What does the snowman get?', '🧣 a scarf', '👟 shoes', '🎒 a bag']],
+  },
+  teddy: {
+    title: '{name} and the Lost Teddy', pic: 'img/bear.webp', words: ['teddy', 'under', 'garden'],
+    text: ['{name} cannot find Teddy.', '{name} looks under the bed. No Teddy!', '{name} looks in the toy box. No Teddy!', '{friend} looks in the garden.', 'Teddy is sitting under a tree!', '{name} gives Teddy a big squeeze.'],
+    q: [['Who is lost?', '🧸 Teddy', '🐱 the cat', '🐶 the dog'], ['Where is Teddy?', '🌳 under a tree', '🛏️ under the bed', '📦 in the toy box'],
+      ['What does {name} do at the end?', '🤗 gives Teddy a squeeze', '😴 goes to sleep', '🏃 runs away']],
+  },
+  baking: {
+    title: '{name} Bakes a Cake', pic: 'img/cake.webp', words: ['bake', 'oven', 'share'],
+    text: ['{name} wants to bake a cake.', 'In go the eggs, the flour and the sugar.', '{name} and {friend} mix and mix.', 'The cake goes in the hot oven.', 'Ding! The cake is ready.', 'They share it with everyone. Yum!'],
+    q: [['What do they make?', '🎂 a cake', '🍕 a pizza', '🥪 a sandwich'], ['Where does the cake go?', '🔥 in the oven', '🧊 in the fridge', '🛁 in the bath'],
+      ['What do they do with the cake?', '🤝 share it', '🗑️ throw it away', '🎁 hide it']],
   },
 };
 
@@ -678,6 +715,11 @@ const DOT_SHAPES = {
     decor: 'M50 52 L50 86 Q50 94 42 94 Q35 94 35 87' },
   balloon: { name: 'balloon', path: 'M50 4 C78 4 90 32 82 54 C75 70 60 78 54 80 L57 87 L43 87 L46 80 C40 78 25 70 18 54 C10 32 22 4 50 4 Z',
     decor: 'M50 87 Q44 91 50 95 Q56 99 50 102' },
+  tree: { name: 'tree', path: 'M50 4 L80 40 L66 40 L88 66 L70 66 L92 90 L56 90 L56 100 L44 100 L44 90 L8 90 L30 66 L12 66 L34 40 L20 40 Z' },
+  duck: { name: 'duck', path: 'M20 62 C20 42 36 32 48 38 C52 22 70 18 78 30 C84 38 80 46 74 50 L92 48 L80 58 C86 62 92 66 94 74 C96 92 72 98 52 98 C32 98 20 86 20 62 Z',
+    decor: 'M60 30 A2.5 2.5 0 1 0 65 30 A2.5 2.5 0 1 0 60 30 M40 72 Q54 64 68 72 Q54 84 40 72' },
+  mushroom: { name: 'mushroom', path: 'M8 54 C8 18 92 18 92 54 C92 60 88 62 80 62 L64 62 L66 96 L34 96 L36 62 L20 62 C12 62 8 60 8 54 Z',
+    decor: 'M26 40 A5 5 0 1 0 36 40 A5 5 0 1 0 26 40 M46 30 A6 6 0 1 0 58 30 A6 6 0 1 0 46 30 M66 42 A5 5 0 1 0 76 42 A5 5 0 1 0 66 42' },
   crown: { name: 'crown', path: 'M10 80 L6 28 L30 52 L50 16 L70 52 L94 28 L90 80 Z',
     decor: 'M9 70 L91 70 M27 75 A3 3 0 1 0 33 75 A3 3 0 1 0 27 75 M47 75 A3 3 0 1 0 53 75 A3 3 0 1 0 47 75 M67 75 A3 3 0 1 0 73 75 A3 3 0 1 0 67 75' },
   moon: { name: 'moon', path: 'M62 4 C30 8 12 32 14 54 C17 80 42 97 70 94 C50 86 36 70 36 50 C36 30 46 14 62 4 Z',
@@ -767,7 +809,7 @@ function drawDots(pg, shape, want, mode, x, y, w, h, solved) {
   if (shape.decor) pg.add(`<path d="${shape.decor}" transform="${T}" fill="none" stroke="${INK}" stroke-width="${sw(0.5)}" stroke-linecap="round" stroke-linejoin="round"/>`);
   if (solved) return;
   const cx = P.reduce((a, p) => a + p[0], 0) / P.length, cy = P.reduce((a, p) => a + p[1], 0) / P.length;
-  const fs = Math.max(2.6, Math.min(3.8, w / 55));
+  const fs = Math.max(3.4, Math.min(4.8, w / 38));
   const placed = [];
   P.forEach((p, i) => {
     const prev = P[(i - 1 + P.length) % P.length], next = P[(i + 1) % P.length];
@@ -789,7 +831,7 @@ function drawDots(pg, shape, want, mode, x, y, w, h, solved) {
     placed.push([best[0], best[1], lw]);
     pg.add(`<text x="${best[0].toFixed(2)}" y="${(best[1] + fs * 0.35).toFixed(2)}" text-anchor="middle" font-family="${FONT}" font-weight="800" font-size="${fs.toFixed(2)}" fill="${i === 0 ? '#2e9d63' : '#5b5580'}">${label}</text>`);
   });
-  P.forEach((p, i) => pg.add(`<circle cx="${p[0].toFixed(2)}" cy="${p[1].toFixed(2)}" r="${i === 0 ? 1.4 : 0.85}" fill="${i === 0 ? '#3fbf7f' : INK}"/>`));
+  P.forEach((p, i) => pg.add(`<circle cx="${p[0].toFixed(2)}" cy="${p[1].toFixed(2)}" r="${i === 0 ? 1.9 : 1.2}" fill="${i === 0 ? '#3fbf7f' : INK}"/>`));
   const first = P[0];
   pg.add(`<text x="${first[0].toFixed(2)}" y="${(first[1] - 3.2).toFixed(2)}" text-anchor="middle" font-family="${FONT}" font-weight="800" font-size="${(fs * 0.85).toFixed(2)}" fill="#2e9d63">start</text>`);
 }
@@ -804,7 +846,7 @@ function makeDots(o, paper) {
   while (keys.length < howMany) keys.push(pool[keys.length % pool.length]);
   keys = keys.slice(0, howMany);
   const per = o.layout === 'two' ? 2 : 1;
-  const sub = { '1': 'Join the dots from 1, then colour it in!', '2': 'Count in twos to join the dots: 2, 4, 6...', '5': 'Count in fives to join the dots: 5, 10, 15...', '10': 'Count in tens to join the dots: 10, 20, 30...', abc: 'Join the letters from A to Z, then colour it in!' }[mode];
+  const sub = { '1': 'Join the dots in order from 1, then colour it in!', '2': 'Count in twos to join the dots: 2, 4, 6...', '5': 'Count in fives to join the dots: 5, 10, 15...', '10': 'Count in tens to join the dots: 10, 20, 30...', abc: 'Join the letters from A to Z, then colour it in!' }[mode];
   const pages = [];
   for (let i = 0; i < keys.length; i += per) {
     const pg = new Page(paper, 'Dot to dot: what will it be?', { subtitle: sub });
@@ -940,8 +982,9 @@ function makeSudoku(o, paper) {
   }
   if (o.key !== false) {
     const pg = new Page(paper, 'Sudoku answers', { subtitle: 'Answer key for grown-ups.', noName: true });
-    const cols = n === 4 ? 4 : 3;
-    const size = Math.min(pg.width / cols - 8, 44);
+    const cols = puzzles.length > 6 ? 3 : 2;
+    const rowsK = Math.ceil(puzzles.length / cols);
+    const size = Math.min(pg.width / cols - 16, (pg.room - 6) / rowsK - 12, 70);
     puzzles.forEach((pz, k) => {
       const x = pg.left + (k % cols) * (pg.width / cols) + (pg.width / cols - size) / 2, y = pg.y + 6 + Math.floor(k / cols) * (size + 12);
       pg.add(`<text x="${x}" y="${y - 2}" font-family="${FONT}" font-weight="800" font-size="3.6" fill="${SOFT}">Puzzle ${k + 1}</text>`);

@@ -4,12 +4,13 @@
 Run: python3 printpals/build.py
 """
 import html
+import re
 import json
 import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '10'
+VERSION = '13'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -407,7 +408,7 @@ TOOLS += [
         'form': field('Photo', '<input type="file" name="photo" accept="image/*">', 'Clear photos with one or two people or animals work best.')
         + field("Child's name (optional)", '<input type="text" name="name" value="" maxlength="30" placeholder="Mia">')
         + field('Title (optional)', '<input type="text" name="title" value="" maxlength="40" placeholder="My Colouring Page">')
-        + field('Lines', seg('detail', [('simple', 'Bold and simple'), ('medium', 'Medium'), ('detailed', 'Lots of detail')], 'medium'), 'Bold and simple is best for little hands.')
+        + field('Lines', seg('detail', [('simple', 'Bold and simple'), ('medium', 'Medium'), ('detailed', 'Lots of detail')], 'simple'), 'Bold and simple is best for little hands.')
         + check('frame', 'Starry frame around the picture')
         + PAPER,
         'article': """
@@ -430,10 +431,10 @@ TOOLS += [
         'desc': 'Free printable reading comprehension for early readers where your child is the hero of the story. Short stories, words to know, questions with pictures and a drawing box.',
         'h1': 'Story sheets starring your child',
         'lead': "Short stories where your child is the hero, with their best friend beside them. Children read more happily when the story is about them. Each sheet has words to know, three questions and a space to draw.",
-        'card': 'Short reading stories where your child is the hero, with questions and a space to draw.',
+        'card': 'Ten short stories where your child is the hero, with questions and a space to draw.',
         'form': field("Child's name", '<input type="text" name="name" value="Mia" maxlength="24">')
         + field("Friend's name", '<input type="text" name="friend" value="Leo" maxlength="24">', 'A friend, brother, sister or cousin.')
-        + field('Story', '<select name="story"><option value="balloon">The Big Red Balloon</option><option value="kitten">Finds a Kitten</option><option value="picnic">Picnic in the Park</option><option value="rocket">Goes to the Moon</option><option value="rain">The Rainy Day</option><option value="turtle">The Turtle Race</option><option value="all">All six stories</option></select>')
+        + field('Story', '<select name="story"><option value="balloon">The Big Red Balloon</option><option value="kitten">Finds a Kitten</option><option value="picnic">Picnic in the Park</option><option value="rocket">Goes to the Moon</option><option value="rain">The Rainy Day</option><option value="turtle">The Turtle Race</option><option value="beach">Goes to the Beach</option><option value="snowman">Builds a Snowman</option><option value="teddy">The Lost Teddy</option><option value="baking">Bakes a Cake</option><option value="all">All ten stories</option></select>')
         + field('Text size', seg('text', [('big', 'Big (ages 4 to 5)'), ('small', 'Smaller (ages 6 to 7)')], 'big'))
         + field('Answers', seg('answers', [('tick', 'Tick the answer'), ('write', 'Write the answer')], 'tick'))
         + PAPER,
@@ -444,7 +445,7 @@ TOOLS += [
 <ul><li><b>Words to know:</b> three key words to read together first.</li><li><b>The story:</b> short, clear sentences with plenty of space between the lines.</li><li><b>Questions:</b> three questions with picture answers to tick, or lines to write on.</li><li><b>Draw your favourite part:</b> a big box to show what they understood.</li></ul>""",
         'faq': [
             ('What age are the stories for?', 'Ages 4 to 7. Choose big text for new readers and smaller text for children who read more confidently.'),
-            ('Can I print all the stories at once?', 'Yes. Choose "All six stories" to get a little reading book of six sheets.'),
+            ('Can I print all the stories at once?', 'Yes. Choose "All ten stories" to get a little reading book of ten sheets.'),
         ],
     },
     {
@@ -533,7 +534,7 @@ TOOLS += [
         'h1': 'Dot to dot puzzles',
         'lead': 'Join the dots and watch a picture appear. Choose how many dots and how to count: in ones, twos, fives, tens, or from A to Z. A gentle way to practise counting and pencil control.',
         'card': 'Count in ones, twos, fives, tens or join the alphabet, from 10 to 50 dots.',
-        'form': field('Picture', '<select name="shape"><option value="">Surprise me</option>' + ''.join(f'<option value="{k}">{v}</option>' for k, v in [('star', 'Star'), ('heart', 'Heart'), ('house', 'House'), ('fish', 'Fish'), ('rocket', 'Rocket'), ('apple', 'Apple'), ('cat', 'Cat'), ('umbrella', 'Umbrella'), ('balloon', 'Balloon'), ('crown', 'Crown'), ('moon', 'Moon'), ('butterfly', 'Butterfly')]) + '</select>')
+        'form': field('Picture', '<select name="shape"><option value="">Surprise me</option>' + ''.join(f'<option value="{k}">{v}</option>' for k, v in [('star', 'Star'), ('heart', 'Heart'), ('house', 'House'), ('fish', 'Fish'), ('rocket', 'Rocket'), ('apple', 'Apple'), ('cat', 'Cat'), ('umbrella', 'Umbrella'), ('balloon', 'Balloon'), ('crown', 'Crown'), ('moon', 'Moon'), ('butterfly', 'Butterfly'), ('tree', 'Tree'), ('duck', 'Duck'), ('mushroom', 'Mushroom')]) + '</select>')
         + field('Dots', seg('dots', [('10', '10'), ('20', '20'), ('30', '30'), ('50', '50')], '20'))
         + field('Count in', seg('count', [('1', '1s'), ('2', '2s'), ('5', '5s'), ('10', '10s'), ('abc', 'A to Z')], '1'))
         + field('How many puzzles', seg('puzzles', [('1', '1'), ('2', '2'), ('4', '4'), ('6', '6')], '2'))
@@ -728,7 +729,7 @@ TOOLS += [
         'h1': 'Scavenger hunts',
         'lead': 'Pictures for children who cannot read yet, a tick box for every find and a medal at the end. Perfect for rainy days, garden time and walks in the park.',
         'card': 'Indoor, garden, park, colour and shape hunts with pictures to tick.',
-        'form': field('Hunt', seg('theme', [('home', '🏠 Indoor'), ('garden', '🌼 Garden'), ('park', '🌳 Park'), ('colours', '🎨 Colours'), ('shapes', '🔷 Shapes')], 'garden'))
+        'form': field('Hunt', seg('theme', [('home', '🏠 Indoor'), ('garden', '🌼 Garden'), ('park', '🌳 Park'), ('beach', '🏖️ Beach'), ('shop', '🛒 Supermarket'), ('colours', '🎨 Colours'), ('shapes', '🔷 Shapes')], 'garden'))
         + PAPER,
         'article': """
 <h2>Screen-free fun</h2>
@@ -759,7 +760,7 @@ TOOLS += [
 
 TOOLS += [
     {
-        'id': 'joined', 'cat': 'writing', 'slug': 'joined-handwriting-worksheets', 'tint': '#eef2ff', 'icon': '✍️', 'new': True,
+        'id': 'joined', 'cat': 'writing', 'slug': 'joined-handwriting-worksheets', 'tint': '#eef2ff', 'icon': '✍️', 'new': False,
         'nav': 'Joined handwriting',
         'title': 'Free Joined Handwriting Worksheets | Cursive Practice with Your Own Words | PrintPals',
         'desc': 'Free printable joined handwriting (cursive) worksheets in the style taught in UK schools: practise common joins, Year 2 words, sentences or your own words, with a dotted trace and a green start dot.',
@@ -768,7 +769,7 @@ TOOLS += [
         'card': 'Joined (cursive) writing with your own words: joins, tricky words and sentences.',
         'form': field('Practise', '<select name="preset"><option value="joins">Common joins (an, ch, ing...)</option><option value="words">Tricky words</option><option value="sentences">Short sentences</option><option value="own">My own words</option></select>')
         + field('Words or sentences', '<textarea name="text" rows="6" spellcheck="false"></textarea>', 'One line of practice for each line you type.')
-        + field('Letter size', seg('size', [('big', 'Big'), ('medium', 'Medium'), ('small', 'Small')], 'medium'))
+        + field('Letter size', seg('size', [('big', 'Big'), ('medium', 'Medium'), ('small', 'Small')], 'big'))
         + field('Rows for each line', seg('rows', [('normal', 'Model, trace, try'), ('more', 'Extra trace row')], 'normal'))
         + DOTS + PAPER,
         'article': """
@@ -782,7 +783,7 @@ TOOLS += [
         ],
     },
     {
-        'id': 'alphabets', 'cat': 'writing', 'slug': 'alphabet-in-other-languages', 'tint': '#fff6e0', 'icon': '🌍', 'new': True,
+        'id': 'alphabets', 'cat': 'writing', 'slug': 'alphabet-in-other-languages', 'tint': '#fff6e0', 'icon': '🌍', 'new': False,
         'nav': 'World alphabets',
         'title': 'Free Printable Alphabets in Other Languages | Spanish, French, German, Swahili, Yoruba, Igbo, Hausa, Twi | PrintPals',
         'desc': 'Free printable alphabet charts and tracing sheets in Spanish, French, German, Italian, Portuguese, Swahili, Yoruba, Igbo, Hausa and Twi, with the special letters highlighted.',
@@ -803,7 +804,7 @@ TOOLS += [
         ],
     },
     {
-        'id': 'families', 'cat': 'writing', 'slug': 'word-families-worksheets', 'tint': '#fff0f7', 'icon': '🏠', 'new': True,
+        'id': 'families', 'cat': 'writing', 'slug': 'word-families-worksheets', 'tint': '#fff0f7', 'icon': '🏠', 'new': False,
         'nav': 'Word families',
         'title': 'Free Word Families Worksheets | -at, -an, -ig, -op, -ug and More | PrintPals',
         'desc': 'Free printable word family worksheets with a word family house: -at, -an, -ig, -op, -ug, -en, -ot, -ing, -ake and -ell. Pictures, first letter boxes and writing lines.',
@@ -818,7 +819,7 @@ TOOLS += [
         'faq': [('Which word families are included?', '-at, -an, -ig, -op, -ug, -en, -ot, -ing, -ake and -ell. Choose "All ten families" for a little book.')],
     },
     {
-        'id': 'rhyming', 'cat': 'writing', 'slug': 'rhyming-worksheets', 'tint': '#e8f8f4', 'icon': '🎵', 'new': True,
+        'id': 'rhyming', 'cat': 'writing', 'slug': 'rhyming-worksheets', 'tint': '#e8f8f4', 'icon': '🎵', 'new': False,
         'nav': 'Rhyming',
         'title': 'Free Rhyming Worksheets with Pictures | Match the Rhymes | PrintPals',
         'desc': 'Free printable rhyming worksheets with pictures for preschool and reception: match the rhyming pairs or find the picture that rhymes. New sheet every click, answer key included.',
@@ -833,7 +834,7 @@ TOOLS += [
         'faq': [('What age is rhyming for?', 'Ages 3 to 6. Say every word out loud together; it is all about listening.')],
     },
     {
-        'id': 'numberlines', 'cat': 'maths', 'slug': 'number-line-worksheets', 'tint': '#e6f6fc', 'icon': '📏', 'new': True,
+        'id': 'numberlines', 'cat': 'maths', 'slug': 'number-line-worksheets', 'tint': '#e6f6fc', 'icon': '📏', 'new': False,
         'nav': 'Number lines',
         'title': 'Free Number Line Worksheets | Missing Numbers, Adding and Taking Away | PrintPals',
         'desc': 'Free printable number line worksheets: fill in the missing numbers to 10, 20 or 100, or add and take away by jumping along the line. Answer key with the jumps drawn.',
@@ -849,7 +850,7 @@ TOOLS += [
         'faq': [('What does 0 to 100 in tens mean?', 'The line counts 0, 10, 20 and so on up to 100, great for learning to count in tens.')],
     },
     {
-        'id': 'fractions', 'cat': 'maths', 'slug': 'fractions-worksheets', 'tint': '#fff0f0', 'icon': '🍕', 'new': True,
+        'id': 'fractions', 'cat': 'maths', 'slug': 'fractions-worksheets', 'tint': '#fff0f0', 'icon': '🍕', 'new': False,
         'nav': 'Fractions',
         'title': 'Free Fractions Worksheets for Kids | Halves, Quarters, Thirds | PrintPals',
         'desc': 'Free printable fractions worksheets: colour the fraction, name the shaded fraction, equal parts or not, and fractions of a group. Halves, quarters, thirds and eighths with answer keys.',
@@ -865,14 +866,14 @@ TOOLS += [
         'faq': [('Which fractions are included?', 'Halves, quarters, thirds and, in the mixed option, eighths too.')],
     },
     {
-        'id': 'colournum', 'cat': 'fun', 'slug': 'colour-by-number', 'tint': '#f5edff', 'icon': '🖍️', 'new': True,
+        'id': 'colournum', 'cat': 'fun', 'slug': 'colour-by-number', 'tint': '#f5edff', 'icon': '🖍️', 'new': False,
         'nav': 'Colour by number',
         'title': 'Free Colour by Number Printables for Kids | With Sums Option | PrintPals',
-        'desc': 'Free printable colour by number pages for kids: a heart, apple, house, fish, flower, star, cat or rainbow appears as you colour. Choose numbers, adding sums or taking away sums.',
+        'desc': 'Free printable colour by number pages for kids: a heart, apple, house, fish, flower, star, cat, rainbow, butterfly, apple tree, rocket or duck appears as you colour. Choose numbers, adding sums or taking away sums.',
         'h1': 'Colour by number',
         'lead': 'Colour each square to reveal a hidden picture. Choose plain numbers, or turn it into maths practice with adding or taking away sums.',
         'card': 'Colour the squares to reveal a picture. Numbers or sums.',
-        'form': field('Picture', '<select name="picture"><option value="">Surprise me</option><option value="heart">Heart</option><option value="apple">Apple</option><option value="house">House</option><option value="fish">Fish</option><option value="flower">Flower</option><option value="star">Star</option><option value="cat">Cat</option><option value="rainbow">Rainbow</option></select>')
+        'form': field('Picture', '<select name="picture"><option value="">Surprise me</option><option value="heart">Heart</option><option value="apple">Apple</option><option value="house">House</option><option value="fish">Fish</option><option value="flower">Flower</option><option value="star">Star</option><option value="cat">Cat</option><option value="rainbow">Rainbow</option><option value="butterfly">Butterfly</option><option value="tree">Apple tree</option><option value="rocket">Rocket</option><option value="duck">Duck</option></select>')
         + field('Squares show', seg('mode', [('numbers', 'Numbers'), ('add', 'Adding sums'), ('sub', 'Taking away sums')], 'numbers'))
         + check('key', 'Answer page') + SHUFFLE + PAPER,
         'article': """
@@ -881,7 +882,7 @@ TOOLS += [
         'faq': [('What does "Surprise me" do?', 'It picks a picture at random, so your child does not know what will appear.')],
     },
     {
-        'id': 'spotdiff', 'cat': 'puzzles', 'slug': 'spot-the-difference', 'tint': '#f1f8e6', 'icon': '🔍', 'new': True,
+        'id': 'spotdiff', 'cat': 'puzzles', 'slug': 'spot-the-difference', 'tint': '#f1f8e6', 'icon': '🔍', 'new': False,
         'nav': 'Spot the difference',
         'title': 'Free Spot the Difference Printables for Kids | New Puzzle Every Click | PrintPals',
         'desc': 'Free printable spot the difference puzzles for kids with colourful pictures. Easy, medium or hard, a brand new puzzle every click, with the answers circled.',
@@ -894,6 +895,32 @@ TOOLS += [
 <h2>A puzzle for sharp eyes</h2>
 <p>Spot the difference builds concentration and careful looking, skills children use every day when reading and writing. Print in colour for the best result.</p>""",
         'faq': [('Is every puzzle different?', 'Yes. Press "Make a new set" for a brand new picture and new differences.')],
+    },
+]
+
+
+TOOLS += [
+    {
+        'id': 'colouring', 'cat': 'fun', 'slug': 'colouring-pages', 'tint': '#fff6e0', 'icon': '🎨', 'new': True,
+        'nav': 'Colouring pages',
+        'title': 'Free Printable Colouring Pages for Kids | Personalised Colouring Book | PrintPals',
+        'desc': 'Free printable colouring pages for kids: 23 friendly pictures with bold, clean lines. Add your child\'s name in bubble letters, or print a whole personalised colouring book with a cover.',
+        'h1': 'Colouring pages',
+        'lead': 'Friendly pictures with bold, clean lines that are easy for little hands: animals, a rocket, a castle, a birthday cake and more. Add your child\'s name in bubble letters, or print the whole personalised colouring book.',
+        'card': '23 friendly pictures with bold lines, or a whole colouring book with your child\'s name.',
+        'form': field("Child's name (optional)", '<input type="text" name="name" value="" maxlength="20" placeholder="Mia">', 'Shown in bubble letters to colour in.')
+        + field('Print', seg('book', [('one', 'One picture'), ('book', 'The whole colouring book')], 'one'))
+        + field('Picture', '<select name="picture"><option value="">Surprise me</option>' + ''.join(f'<option value="{k}">{v}</option>' for k, v in [('cat', 'Cat'), ('dog', 'Puppy'), ('bunny', 'Bunny'), ('teddy', 'Teddy bear'), ('owl', 'Owl'), ('elephant', 'Elephant'), ('dino', 'Dinosaur'), ('turtle', 'Turtle'), ('snail', 'Snail'), ('bee', 'Bee'), ('butterfly', 'Butterfly'), ('fish', 'Fish'), ('whale', 'Whale'), ('house', 'House'), ('castle', 'Castle'), ('rocket', 'Rocket'), ('car', 'Car'), ('train', 'Train'), ('boat', 'Sailing boat'), ('sunflower', 'Sunflower'), ('rainbow', 'Rainbow'), ('icecream', 'Ice cream'), ('cake', 'Birthday cake')]) + '</select>', 'Used when printing one picture.')
+        + SHUFFLE + PAPER,
+        'article': """
+<h2>Bold lines for little hands</h2>
+<p>Every picture is drawn with thick, clear lines and big spaces, so young children can colour without getting frustrated. There is no grey shading and nothing fades, so they print perfectly on any printer.</p>
+<h2>A colouring book with their name on it</h2>
+<p>Choose "The whole colouring book" to print a cover with your child's name in bubble letters, followed by all 23 pictures. Staple it together for a lovely rainy day gift.</p>""",
+        'faq': [
+            ('How many pictures are there?', '23: animals, vehicles, a house, a castle, flowers, a rainbow, ice cream and a birthday cake. More are added over time.'),
+            ('Can I turn my own photo into a colouring page?', 'Yes. Try our photo to colouring page tool; your photo never leaves your device.'),
+        ],
     },
 ]
 
@@ -992,6 +1019,7 @@ def tool_page(t):
 <script src="/js/tools4.js?v={VERSION}"></script>
 <script src="/js/cursive.js?v={VERSION}"></script>
 <script src="/js/tools5.js?v={VERSION}"></script>
+<script src="/js/colouring.js?v={VERSION}"></script>
 <script src="/js/app.js?v={VERSION}"></script>
 </body>
 </html>
@@ -1000,7 +1028,7 @@ def tool_page(t):
 
 def home():
     def card(t):
-        return f'''<a class="tool" href="/{t['slug']}" style="--tint:{t['tint']}"><div class="thumb"><img src="/img/thumb-{t['id']}.webp" alt="{html.escape(t['h1'])} example" loading="lazy" width="400" height="566"></div>
+        return f'''<a class="tool" href="/{t['slug']}" style="--tint:{t['tint']}" data-keys="{html.escape(re.sub(r'<[^>]+>|&[a-z#0-9]+;', ' ', t['title'] + ' ' + t['desc'] + ' ' + t['form']).lower())}"><div class="thumb"><img src="/img/thumb-{t['id']}.webp" alt="{html.escape(t['h1'])} example" loading="lazy" width="400" height="566"></div>
 <h3>{t['icon']} {html.escape(t['h1'])}{'<span class="new">New</span>' if t.get('new') else ''}</h3><p>{html.escape(t['card'])}</p><span class="go">Make one free →</span></a>'''
     sections = ''.join(f'''<section class="cat" id="{k}"><h2>{v}</h2><p class="cat-lead">{CAT_TEXT[k]}</p><div class="tools">{''.join(card(t) for t in TOOLS if t['cat'] == k)}</div></section>''' for k, v in CATS)
     ld = {'@context': 'https://schema.org', '@type': 'WebSite', 'name': 'PrintPals', 'url': SITE + '/',
@@ -1017,8 +1045,23 @@ def home():
 <h1>Free printable worksheets,<br><span class="hl">made in seconds</span></h1>
 <p class="lead">Personalised tracing, reading, maths, puzzles, colouring pages from your own photos, party packs and certificates for children aged 3 to 8. Type, tap print, done.</p>
 <div class="chips"><span class="chip">✓ 100% free</span><span class="chip">✓ No sign up</span><span class="chip">✓ A4 and US Letter</span><span class="chip">✓ Save as PDF</span></div>
+<div class="find"><input type="search" id="find" placeholder="Find a worksheet: try name, money or dinosaur" aria-label="Find a worksheet" autocomplete="off"></div>
 </div></section>
-<div class="wrap">{sections}</div>
+<div class="wrap">{sections}<p class="none" id="none">Nothing found. Try another word, like letters, maths or colouring.</p></div>
+<script>
+(function () {{
+  var box = document.getElementById('find'); if (!box) return;
+  box.addEventListener('input', function () {{
+    var q = box.value.trim().toLowerCase(), any = false;
+    document.querySelectorAll('.cat').forEach(function (sec) {{
+      var shown = 0;
+      sec.querySelectorAll('a.tool').forEach(function (a) {{ var ok = !q || a.textContent.toLowerCase().indexOf(q) >= 0 || (a.dataset.keys || '').indexOf(q) >= 0; a.style.display = ok ? '' : 'none'; if (ok) shown++; }});
+      sec.style.display = shown ? '' : 'none'; if (shown) any = true;
+    }});
+    document.getElementById('none').style.display = any ? 'none' : 'block';
+  }});
+}})();
+</script>
 <section class="band"><div class="wrap">
 <h2>Made for busy parents and teachers</h2>
 <div class="why">

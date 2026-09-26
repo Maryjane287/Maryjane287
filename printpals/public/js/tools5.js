@@ -156,8 +156,12 @@ function makeFamilies(o, paper) {
       const x = hx + 6 + (i % cols) * (ww + 6), y = y0 + roofH + 5 + Math.floor(i / cols) * (wh + 3);
       pg.add(`<rect x="${x}" y="${y}" width="${ww}" height="${wh}" rx="4" fill="#fff" stroke="${INK}" stroke-width="0.5"/>`);
       if (src) pg.add(pic(src, x + 16, y + wh / 2, Math.min(24, wh - 8)));
+      else {
+        // No picture yet: the child draws one.
+        pg.add(`<rect x="${x + 4}" y="${y + 4}" width="24" height="${wh - 8}" rx="3" fill="#fff" stroke="#b9b3d6" stroke-width="0.45" stroke-dasharray="1.6 1.2"/><text x="${x + 16}" y="${y + wh / 2 + 1.4}" text-anchor="middle" font-family="${FONT}" font-weight="800" font-size="3.2" fill="${SOFT}">draw it</text>`);
+      }
       const size = 11;
-      const bx = x + (src ? 32 : 12);
+      const bx = x + 32;
       const first = w.length - fam.length;
       pg.add(`<rect x="${bx}" y="${y + wh / 2 - size * 0.7}" width="${size * 1.2 * first}" height="${size * 1.25}" rx="2" fill="${TINTS[c]}" stroke="${PALETTE[c]}" stroke-width="0.6"/>`);
       pg.add(drawText(fam, bx + size * 1.2 * first + 3, y + wh / 2 - size * 0.62 - (fam === 'ake' || fam === 'ell' ? 0 : 0), size, 'model'));
@@ -243,8 +247,8 @@ function numberLine(pg, x, y, w, from, to, step, blanks, marks) {
   for (let i = 0; i <= n; i++) {
     const v = from + i * step, tx = x + i * dx;
     pg.add(`<line x1="${tx}" x2="${tx}" y1="${y - 2.2}" y2="${y + 2.2}" stroke="${INK}" stroke-width="0.5"/>`);
-    if (blanks.has(v)) pg.add(`<rect x="${tx - 4}" y="${y + 3.4}" width="8" height="6.4" rx="1.4" fill="#fff" stroke="${marks && marks.answers ? '#e0457b' : '#9a93b8'}" stroke-width="0.45"/>` + (marks && marks.answers ? `<text x="${tx}" y="${y + 8.4}" text-anchor="middle" font-family="${FONT}" font-weight="800" font-size="${n > 12 ? 3.2 : 4}" fill="#e0457b">${v}</text>` : ''));
-    else pg.add(`<text x="${tx}" y="${y + 8.4}" text-anchor="middle" font-family="${FONT}" font-weight="800" font-size="${n > 12 ? 3.2 : 4}" fill="${INK}">${v}</text>`);
+    if (blanks.has(v)) pg.add(`<rect x="${tx - 5}" y="${y + 3.6}" width="10" height="7.8" rx="1.6" fill="#fff" stroke="${marks && marks.answers ? '#e0457b' : '#9a93b8'}" stroke-width="0.45"/>` + (marks && marks.answers ? `<text x="${tx}" y="${y + 9.4}" text-anchor="middle" font-family="${FONT}" font-weight="800" font-size="${n > 12 ? 4 : 5}" fill="#e0457b">${v}</text>` : ''));
+    else pg.add(`<text x="${tx}" y="${y + 9.4}" text-anchor="middle" font-family="${FONT}" font-weight="800" font-size="${n > 12 ? 4 : 5}" fill="${INK}">${v}</text>`);
   }
   return (v) => x + ((v - from) / step) * dx;
 }
@@ -353,7 +357,7 @@ function makeFractions(o, paper) {
       const x = pg.left + (i % cols) * cw, y = pg.y + Math.floor(i / cols) * ch;
       const c = PALETTE[i % PALETTE.length];
       pg.add(`<rect x="${x + 1.5}" y="${y + 1.5}" width="${cw - 3}" height="${ch - 3}" rx="6" fill="#fff" stroke="#e3def3" stroke-width="0.5"/>`);
-      const r = Math.min(cw, ch) * 0.24, cx = x + cw / 2, cy = y + ch * 0.4;
+      const r = Math.min(cw, ch) * 0.3, cx = x + cw / 2, cy = y + ch * 0.42;
       if (kind === 'set') {
         const m = it.set, want = (m / it.d) * it.n;
         const colsA = Math.min(6, m), rowsA = Math.ceil(m / colsA), s = Math.min((cw - 10) / colsA, (ch * 0.55) / rowsA);
@@ -371,9 +375,9 @@ function makeFractions(o, paper) {
       if (kind === 'name' || answers) for (let k = 0; k < it.n; k++) shaded.add(k);
       if (kind === 'fair') shaded.clear();
       fracShape(pg, it.shape, cx, cy, r, it.d, shaded, kind === 'name' ? '#8ecbff' : '#ffc6d9', it.equal);
-      if (kind === 'colour') fracText(pg, cx, y + ch - 13, it.n, it.d, 5.4);
+      if (kind === 'colour') fracText(pg, cx, y + ch - 12, it.n, it.d, 6);
       else if (kind === 'name') {
-        if (answers) fracText(pg, cx, y + ch - 13, it.n, it.d, 5.4, '#e0457b');
+        if (answers) fracText(pg, cx, y + ch - 12, it.n, it.d, 6, '#e0457b');
         else pg.add(`<rect x="${cx - 6}" y="${y + ch - 20}" width="12" height="16" rx="2" fill="#fff" stroke="#9a93b8" stroke-width="0.5"/><line x1="${cx - 4}" x2="${cx + 4}" y1="${y + ch - 12}" y2="${y + ch - 12}" stroke="#9a93b8" stroke-width="0.5"/>`);
       } else {
         ['yes', 'no'].forEach((t, k) => {
@@ -401,7 +405,15 @@ const PIXEL = {
   flower: { name: 'a flower', colours: { '.': ['light blue', '#cfe8ff'], P: ['pink', '#ff70a6'], Y: ['yellow', '#ffd23f'], G: ['green', '#4caf50'] },
     rows: ['....PPPP....', '...PPPPPP...', '..PPPYYPPP..', '..PPYYYYPP..', '..PPYYYYPP..', '..PPPYYPPP..', '...PPPPPP...', '....PPPP....', '.....GG.....', '..GG.GG.....', '...GGGG.GG..', '.....GGGG...'] },
   star: { name: 'a star', colours: { '.': ['dark blue', '#3a3f8f'], Y: ['yellow', '#ffd23f'], O: ['orange', '#ff9f1c'] },
-    rows: ['.....YY.....', '.....YY.....', '....YOOY....', 'YYYYYOOYYYYY', '.YYYYOOYYYY.', '..YYYYYYYY..', '...YYYYYY...', '...YYYYYY...', '..YYYYYYYY..', '..YYY..YYY..', '.YYY....YYY.', '.Y........Y.'] },
+    rows: ['.....YY.....', '.....YY.....', '....YYYY....', '....YOOY....', 'YYYYYOOYYYYY', '.YYYYYYYYYY.', '..YYYYYYYY..', '...YYYYYY...', '..YYYYYYYY..', '..YYY..YYY..', '.YYY....YYY.', '.YY......YY.'] },
+  butterfly: { name: 'a butterfly', colours: { '.': ['light blue', '#cfe8ff'], P: ['purple', '#b06cff'], Y: ['yellow', '#ffd23f'], K: ['black', '#2d2350'] },
+    rows: ['............', '.PP......PP.', 'PPPP....PPPP', 'PPYPP..PPYPP', 'PPPPPKKPPPPP', '.PPPPKKPPPP.', '..PPPKKPPP..', '.PPPPKKPPPP.', 'PPYPPKKPPYPP', 'PPPP.KK.PPPP', '.PP......PP.', '............'] },
+  tree: { name: 'an apple tree', colours: { '.': ['light blue', '#cfe8ff'], G: ['green', '#3fbf60'], R: ['red', '#ff4d4d'], B: ['brown', '#8d5524'], L: ['light green', '#b6e3a8'] },
+    rows: ['....GGGG....', '..GGGGGGGG..', '.GGGGRGGGGG.', '.GGGGGGGRGG.', 'GGRGGGGGGGGG', '.GGGGGGGGGG.', '..GGGGRGGG..', '.....BB.....', '.....BB.....', '.....BB.....', '....BBBB....', 'LLLLLLLLLLLL'] },
+  rocket: { name: 'a rocket', colours: { '.': ['dark blue', '#3a3f8f'], W: ['white', '#ffffff'], R: ['red', '#ff4d4d'], B: ['light blue', '#8ecbff'], O: ['orange', '#ff9f1c'] },
+    rows: ['.....RR.....', '....RWWR....', '....WWWW....', '....WBBW....', '....WBBW....', '....WWWW....', '...RWWWWR...', '..RRWWWWRR..', '..RR.OO.RR..', '.....OO.....', '....O..O....', '............'] },
+  duck: { name: 'a duck', colours: { '.': ['light blue', '#cfe8ff'], Y: ['yellow', '#ffd23f'], O: ['orange', '#ff9f1c'], K: ['black', '#2d2350'], B: ['blue', '#3a86ff'] },
+    rows: ['............', '...YYY......', '..YYKYY.....', '..YYYYYOO...', '...YYY......', '..YYYYY.....', '.YYYYYYYYYY.', 'YYYYYYYYYYY.', 'YYYYYYYYYY..', '.YYYYYYYY...', 'BBBBBBBBBBBB', 'BBBBBBBBBBBB'] },
   cat: { name: 'a cat', colours: { '.': ['green', '#a5d6a7'], O: ['orange', '#ff9f1c'], K: ['black', '#2d2350'], P: ['pink', '#ff8fab'] },
     rows: ['.O........O.', '.OO......OO.', '.OOOOOOOOOO.', 'OOOOOOOOOOOO', 'OOKKOOOOKKOO', 'OOKKOOOOKKOO', 'OOOOOPPOOOOO', 'OOOOOOOOOOOO', '.OOOKOOKOOO.', '..OOOKKOOO..', '...OOOOOO...', '............'] },
   rainbow: { name: 'a rainbow', colours: { '.': ['light blue', '#cfe8ff'], R: ['red', '#ff4d4d'], O: ['orange', '#ff9f1c'], Y: ['yellow', '#ffd23f'], G: ['green', '#4caf50'], B: ['blue', '#3a86ff'], W: ['white', '#ffffff'] },

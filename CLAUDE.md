@@ -74,7 +74,8 @@ children count in; it has nothing to do with how the owner is paid (she wants pa
 Batch 2 is live (22 tools). Owner asked for it to feel more premium. On 2026-09-26 the owner said PrintPals SHOULD
 use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in tools2.js swaps matching emoji
 for painted pictures on every sheet.
-Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
+Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
+(colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
 fractions, colour by number, spot the difference. Still to do from the list of 50: place value, shapes and symmetry,
 measuring, graphs, cut and paste, reading logs, lined paper, classroom labels, story writing pages, homework planner.
 Higgsfield credits are nearly gone (0.66), so new art needs the owner's say.

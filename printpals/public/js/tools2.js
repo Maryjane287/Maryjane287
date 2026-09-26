@@ -230,7 +230,7 @@ function makeMoney(o, paper) {
       const areaT = y + 15, areaB = y + bh - 17;
       const isNote = (v) => cur.notes.includes(v) && !cur.coins.includes(v);
       const size = (v, sc) => isNote(v) ? [30 * sc * 0.85, 15 * sc * 0.85] : [(5 + cur.coins.indexOf(v) * 0.55) * 2 * sc, (5 + cur.coins.indexOf(v) * 0.55) * 2 * sc];
-      let sc = 1.3, spots = [];
+      let sc = 2.1, spots = [];
       for (; sc > 0.45; sc -= 0.05) {
         spots = [];
         let mx = areaL, my = areaT, rowH = 0, ok = true;

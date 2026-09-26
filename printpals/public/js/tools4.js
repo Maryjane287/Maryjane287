@@ -413,6 +413,8 @@ const HUNTS = {
   home: ['🥄 spoon', '🧦 sock', '📚 book', '☕ cup', `${ART('bear')} teddy`, '🔑 key', '⏰ clock', '🪥 toothbrush', '👟 shoe', '⚽ ball', `${ART('apple')} apple`, `${ART('blocks')} blocks`],
   garden: ['🍃 leaf', `${ART('daisy')} flower`, `${ART('ladybird')} ladybird`, '🪨 stone', '🪵 stick', '🪶 feather', '🐌 snail', `${ART('ant')} ant`, '🐦 bird', '🪱 worm', `${ART('mushroom')} mushroom`, '🦋 butterfly'],
   park: ['🪑 bench', '🌳 tree', `${ART('dog')} dog`, '🦆 duck', '💧 puddle', '🌲 pine cone', '🛝 slide', '🚲 bike', '☁️ cloud', `${ART('sun')} sun`, '🐿️ squirrel', `${ART('tulip')} flower`],
+  beach: ['🐚 shell', '🦀 crab', '⛱️ umbrella', '🌊 wave', `${ART('fish')} fish`, '🪣 bucket', '⛵ boat', '🩴 flip-flops', `${ART('star')} starfish`, '🍦 ice cream', `${ART('sun')} sun`, '🪨 rock'],
+  shop: [`${ART('apple')} apple`, `${ART('banana')} banana`, `${ART('egg')} eggs`, '🍞 bread', '🥛 milk', '🧀 cheese', `${ART('orange')} orange`, '🥕 carrot', `${ART('strawberry')} strawberry`, '🍝 pasta', '🥫 tin', '🛒 trolley'],
   colours: ['#ff4d4d red', '#ff9f1c orange', '#ffd23f yellow', '#3fbf60 green', '#3a86ff blue', '#9b5de5 purple', '#ff70a6 pink', '#8d5524 brown', '#2d2350 black', '#ffffff white', '#9aa5b1 grey', '#ffd700 gold'],
   shapes: ['circle circle', 'square square', 'triangle triangle', 'rectangle rectangle', 'star star', 'heart heart', 'oval oval', 'diamond diamond'],
 };
@@ -434,7 +436,7 @@ function shapeIcon(kind, cx, cy, r) {
 function makeHunt(o, paper) {
   const theme = HUNTS[o.theme] ? o.theme : 'garden';
   const items = HUNTS[theme].map((s) => { const i = s.indexOf(' '); return [s.slice(0, i), s.slice(i + 1)]; });
-  const title = { home: 'Indoor treasure hunt', garden: 'Garden scavenger hunt', park: 'Park scavenger hunt', colours: 'Colour hunt', shapes: 'Shape hunt' }[theme];
+  const title = { home: 'Indoor treasure hunt', garden: 'Garden scavenger hunt', park: 'Park scavenger hunt', beach: 'Beach scavenger hunt', shop: 'Supermarket hunt', colours: 'Colour hunt', shapes: 'Shape hunt' }[theme];
   const sub = theme === 'colours' ? 'Find something in each colour. Tick it or draw what you found!' : theme === 'shapes' ? 'Find something shaped like each one. Draw what you found!' : 'Can you find them all? Tick each one when you spot it!';
   const pg = new Page(paper, title, { subtitle: sub });
   const cols = 3, rows = Math.ceil(items.length / cols);

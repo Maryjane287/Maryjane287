@@ -27,6 +27,10 @@ browser, so nothing typed is ever sent or stored.
   baseline or the top after o r v w; b g j p q s x y z do not join; round letters joined on their left side),
   world alphabets (Spanish, French, German, Italian, Portuguese, Swahili, Yoruba, Igbo, Hausa, Twi), word families,
   rhyming, number lines, fractions, colour by number (pixel pictures, sums option), spot the difference.
+- Review (2026-09-26): hand-drawn colouring pages (`public/js/colouring.js`, 23 vector pictures, bubble-letter names,
+  personalised colouring book); photo line art now solid (binarised, thickened); more stories (10), colour by number
+  pictures (12), dot to dot shapes (15), beach and supermarket hunts; bigger coins, dots, fractions and number lines;
+  homepage search box and a category menu on phones.
 - Testing: `pp2/fuzz.js` in the scratchpad tries every option on every tool and flags errors, NaN and anything
   off the page. Run it before every publish.
 
