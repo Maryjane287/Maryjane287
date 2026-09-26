@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>A letter for your little one · Brainlings</title>
+<link rel="icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sky1: #bfe8ff; --sky2: #fff4d6; --grass: #9ad66b; --grass2: #6fbf4b;
+    --ink: #2d2350; --soft: #6b6388; --berry: #ff5d8f; --berryDeep: #d93a6e;
+    --leaf: #3fbf7f; --leafDeep: #2b9a62; --sun: #ffc93c; --card: #ffffffee;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--grass2); }
+  html, body { margin: 0; min-height: 100%; }
+  body {
+    font-family: 'Nunito', system-ui, sans-serif; color: var(--ink);
+    background: linear-gradient(180deg, var(--sky1) 0%, var(--sky2) 70%, var(--grass) 70%, var(--grass2) 100%);
+    min-height: 100vh;
+    display: flex; justify-content: center; padding: 20px 16px 40px;
+  }
+  main { width: 100%; max-width: 460px; }
+  h1, h2, .big { font-family: 'Baloo 2', 'Nunito', sans-serif; margin: 0; line-height: 1.1; }
+  h1 { font-size: 30px; }
+  h2 { font-size: 22px; }
+  p { margin: 8px 0; line-height: 1.45; }
+  .soft { color: var(--soft); }
+  .card { background: var(--card); border-radius: 28px; padding: 22px; box-shadow: 0 8px 0 #00000014, 0 18px 40px #2d235022; margin-top: 16px; }
+  .hero { text-align: center; }
+  .bibi { width: 170px; height: 170px; object-fit: contain; animation: bob 2.6s ease-in-out infinite; filter: drop-shadow(0 10px 12px #0002); }
+  @keyframes bob { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-10px) rotate(2deg); } }
+  .rec {
+    width: 150px; height: 150px; border-radius: 50%; border: none; cursor: pointer;
+    background: radial-gradient(circle at 35% 30%, #ff8fb1, var(--berry)); color: #fff;
+    box-shadow: 0 8px 0 var(--berryDeep), 0 16px 30px #d93a6e55; display: grid; place-items: center;
+    margin: 10px auto 6px; font: 800 20px 'Baloo 2', sans-serif; transition: transform .1s;
+  }
+  .rec:active { transform: translateY(4px); box-shadow: 0 4px 0 var(--berryDeep); }
+  .rec svg { width: 52px; height: 52px; }
+  .rec.on { animation: pulse 1.2s ease-in-out infinite; background: radial-gradient(circle at 35% 30%, #ff9b9b, #ff4d4d); }
+  @keyframes pulse { 0%,100% { box-shadow: 0 8px 0 #c73232, 0 0 0 0 #ff4d4d66; } 50% { box-shadow: 0 8px 0 #c73232, 0 0 0 22px #ff4d4d00; } }
+  .timer { text-align: center; font: 800 26px 'Baloo 2', sans-serif; }
+  .bar { height: 10px; border-radius: 99px; background: #0001; overflow: hidden; margin: 8px 0 2px; }
+  .bar > i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--sun), var(--berry)); transition: width .25s linear; }
+  button.go, a.go {
+    display: block; width: 100%; border: none; border-radius: 99px; padding: 16px; margin-top: 12px; cursor: pointer;
+    font: 800 20px 'Baloo 2', sans-serif; color: #fff; background: var(--leaf); box-shadow: 0 6px 0 var(--leafDeep); text-align: center; text-decoration: none;
+  }
+  button.go:disabled { opacity: .5; }
+  button.ghost { background: transparent; color: var(--soft); box-shadow: none; border: 2px solid #0001; font-size: 17px; padding: 12px; }
+  textarea { width: 100%; border-radius: 18px; border: 2px solid #e6e1f5; padding: 12px; font: 600 16px 'Nunito', sans-serif; resize: vertical; min-height: 70px; color: var(--ink); }
+  audio { width: 100%; margin-top: 10px; }
+  .hidden { display: none !important; }
+  .sent { display: flex; gap: 12px; align-items: center; padding: 12px; border-radius: 18px; background: #f6f4fe; margin-top: 10px; }
+  .sent img { width: 44px; height: 44px; object-fit: contain; }
+  .foot { text-align: center; font-size: 13px; color: #2d2350aa; margin-top: 18px; }
+  .foot a { color: inherit; }
+  .err { color: #c0304f; font-weight: 700; }
+</style>
+</head>
+<body>
+<main>
+  <section class="card hero">
+    <img class="bibi" id="bibi" src="img/wave.webp" alt="Bibi waving">
+    <h1 id="title">A letter for your little one</h1>
+    <p class="soft" id="intro">Record a voice message and Bibi will deliver it in a special envelope.</p>
+  </section>
+
+  <!-- Recording -->
+  <section class="card" id="recordCard">
+    <h2 id="step1">Tap the pink button and say hello</h2>
+    <p class="soft">Up to one minute. Speak close to your phone, like you are right there with them.</p>
+    <button class="rec" id="rec" aria-label="Record">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+    </button>
+    <div class="timer" id="timer">Tap to record</div>
+    <div class="bar"><i id="bar"></i></div>
+    <div id="review" class="hidden">
+      <audio id="player" controls></audio>
+      <p class="soft" style="margin-top:14px">Want to add a few written words too? (optional)</p>
+      <textarea id="text" maxlength="500" placeholder="I love you to the moon and back!"></textarea>
+      <button class="go" id="send">Send my letter 💌</button>
+      <button class="go ghost" id="again">Record again</button>
+    </div>
+    <p class="err" id="err"></p>
+  </section>
+
+  <!-- Sent -->
+  <section class="card hero hidden" id="doneCard">
+    <img class="bibi" src="img/letter.webp" alt="Bibi with a letter">
+    <h2 id="doneTitle">Your letter is on its way!</h2>
+    <p class="soft" id="doneText">Bibi will bring it in a special envelope next time they play.</p>
+    <button class="go" id="another">Record another letter</button>
+  </section>
+
+  <!-- Letters already sent, with replies -->
+  <section class="card hidden" id="historyCard">
+    <h2>Your letters</h2>
+    <div id="history"></div>
+  </section>
+
+  <!-- Link stopped or wrong -->
+  <section class="card hero hidden" id="badCard">
+    <img class="bibi" src="img/hug.webp" alt="Bibi">
+    <h2>This link is not working</h2>
+    <p class="soft">It may have been stopped. Please ask for a new link from the grown-up who sent it.</p>
+  </section>
+
+  <p class="foot">Brainlings by Grace and Loannes Ltd. Only people with a private family link can send letters.<br>
+    <a href="https://github.com/Maryjane287/Maryjane287/blob/claude/keen-ritchie-was4uj/brainlings/store/privacy_policy.md" target="_blank" rel="noopener">Privacy</a></p>
+</main>
+
+<script type="module">
+  // Firebase loads in the background, so the page works (and greets) even
+  // on a slow connection.
+  const V = 'https://www.gstatic.com/firebasejs/10.12.2/';
+  let auth, db, fs, signInAnonymously;
+  async function connect() {
+    const [a, b, c] = await Promise.all([import(V + 'firebase-app.js'), import(V + 'firebase-auth.js'), import(V + 'firebase-firestore.js')]);
+    const app = a.initializeApp({
+      apiKey: 'AIzaSyDDxRhWQLp_Tr1J_Gdxfykt2Kk-61w8A_0',
+      authDomain: 'brainlings-6b9cf.firebaseapp.com',
+      projectId: 'brainlings-6b9cf',
+    });
+    auth = b.getAuth(app);
+    signInAnonymously = b.signInAnonymously;
+    db = c.getFirestore(app);
+    fs = c;
+  }
+
+  // Everything we need is after the # in the link, so it never reaches a server.
+  const q = new URLSearchParams(location.hash.slice(1));
+  const fid = q.get('f'), token = q.get('t');
+  const from = q.get('w') || 'Family';
+  const child = q.get('n') || 'your little one';
+  const pet = q.get('c') || 'Bibi';
+  const $ = (id) => document.getElementById(id);
+  const show = (id, on = true) => $(id).classList.toggle('hidden', !on);
+
+  $('title').textContent = `Hello ${from}! A letter for ${child}`;
+  $('intro').textContent = `Record a voice message and ${pet} will deliver it to ${child} in a special envelope. You will see here when ${child} listens.`;
+  $('send').textContent = `Send my letter to ${child} 💌`;
+  $('doneText').textContent = `${pet} will bring it to ${child} in a special envelope next time they play. Come back to this link to see when ${child} listens and sends you a hug.`;
+
+  const storeKey = `brainlings-sent-${token}`;
+  const sentList = () => { try { return JSON.parse(localStorage.getItem(storeKey) || '[]'); } catch { return []; } };
+  const remember = (id) => { try { localStorage.setItem(storeKey, JSON.stringify([{ id, at: Date.now() }, ...sentList()].slice(0, 30))); } catch {} };
+
+  const bad = () => { show('recordCard', false); show('badCard'); };
+
+  let invite = null;
+  async function start() {
+    if (!fid || !token) return bad();
+    try {
+      await connect();
+      await signInAnonymously(auth);
+      invite = await fs.getDoc(fs.doc(db, 'families', fid, 'invites', token));
+      if (!invite.exists()) return bad();
+    } catch (e) {
+      $('err').textContent = 'We could not connect. Please check your internet and open the link again.';
+      return;
+    }
+    loadHistory();
+  }
+
+  async function loadHistory() {
+    const list = sentList();
+    if (!list.length) return;
+    show('historyCard');
+    const box = $('history');
+    box.innerHTML = '';
+    for (const s of list) {
+      let text = `On its way. ${pet} will deliver it when ${child} next plays.`;
+      let img = 'img/envelope.webp';
+      try {
+        const r = await fs.getDoc(fs.doc(db, 'families', fid, 'replies', s.id));
+        if (r.exists()) {
+          const d = r.data();
+          const times = d.plays === 1 ? 'once' : d.plays === 2 ? 'twice' : `${d.plays} times`;
+          text = `${child} listened ${times} 💛`;
+          if (d.hug) { text += ` and sent you a big hug back! 🤗`; img = 'img/hug.webp'; }
+          else img = 'img/cheer.webp';
+        }
+      } catch {}
+      const when = new Date(s.at).toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short' });
+      const row = document.createElement('div');
+      row.className = 'sent';
+      row.innerHTML = `<img alt="" src="${img}"><div><b>${when}</b><br><span></span></div>`;
+      row.querySelector('span').textContent = text;
+      box.appendChild(row);
+    }
+  }
+
+  // ----- recording -----
+  const MAX = 60;
+  let rec = null, chunks = [], blob = null, mime = '', started = 0, tick = null;
+
+  function pickMime() {
+    const options = ['audio/webm;codecs=opus', 'audio/mp4', 'audio/webm', 'audio/ogg;codecs=opus'];
+    return options.find((m) => window.MediaRecorder && MediaRecorder.isTypeSupported(m)) || '';
+  }
+
+  async function startRec() {
+    $('err').textContent = '';
+    let stream;
+    try {
+      stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true } });
+    } catch {
+      $('err').textContent = 'Please allow the microphone so you can record your letter.';
+      return;
+    }
+    mime = pickMime();
+    chunks = [];
+    rec = new MediaRecorder(stream, mime ? { mimeType: mime, audioBitsPerSecond: 32000 } : undefined);
+    rec.ondataavailable = (e) => e.data.size && chunks.push(e.data);
+    rec.onstop = () => {
+      stream.getTracks().forEach((t) => t.stop());
+      blob = new Blob(chunks, { type: rec.mimeType || mime || 'audio/webm' });
+      $('player').src = URL.createObjectURL(blob);
+      show('review');
+      $('timer').textContent = 'Listen, then send it!';
+    };
+    rec.start();
+    started = Date.now();
+    $('rec').classList.add('on');
+    $('bibi').src = 'img/cheer.webp';
+    tick = setInterval(() => {
+      const s = Math.floor((Date.now() - started) / 1000);
+      $('timer').textContent = `Recording… 0:${String(s).padStart(2, '0')}  (tap to stop)`;
+      $('bar').style.width = `${Math.min(100, (s / MAX) * 100)}%`;
+      if (s >= MAX) stopRec();
+    }, 250);
+  }
+
+  function stopRec() {
+    clearInterval(tick);
+    $('rec').classList.remove('on');
+    $('bibi').src = 'img/wave.webp';
+    if (rec && rec.state !== 'inactive') rec.stop();
+  }
+
+  $('rec').onclick = () => (rec && rec.state === 'recording' ? stopRec() : startRec());
+  $('again').onclick = () => { blob = null; show('review', false); $('bar').style.width = '0'; $('timer').textContent = 'Tap to record'; };
+
+  $('send').onclick = async () => {
+    if (!blob) return;
+    if (!invite) { $('err').textContent = 'Still connecting. Please check your internet and try again in a moment.'; start(); return; }
+    $('send').disabled = true;
+    $('send').textContent = 'Sending…';
+    $('err').textContent = '';
+    try {
+      const bytes = new Uint8Array(await blob.arrayBuffer());
+      if (bytes.length > 880000) throw new Error('too long');
+      const ref = await fs.addDoc(fs.collection(db, 'families', fid, 'letters'), {
+        from: invite.data().from,
+        invite: token,
+        audio: fs.Bytes.fromUint8Array(bytes),
+        mime: (blob.type || mime || 'audio/webm').slice(0, 50),
+        text: $('text').value.trim().slice(0, 500),
+        sent: fs.serverTimestamp(),
+        sender: auth.currentUser.uid,
+      });
+      remember(ref.id);
+      show('recordCard', false);
+      show('doneCard');
+      loadHistory();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (e) {
+      $('err').textContent = String(e && e.message) === 'too long'
+        ? 'That recording is a little too long. Please record a shorter one.'
+        : 'Sorry, the letter did not send. Please check your internet and try again.';
+    } finally {
+      $('send').disabled = false;
+      $('send').textContent = `Send my letter to ${child} 💌`;
+    }
+  };
+
+  $('another').onclick = () => {
+    blob = null; $('text').value = '';
+    show('review', false); show('doneCard', false); show('recordCard');
+    $('bar').style.width = '0'; $('timer').textContent = 'Tap to record';
+  };
+
+  start();
+</script>
+</body>
+</html>

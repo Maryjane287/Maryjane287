@@ -13,6 +13,7 @@ import '../games/pattern_party.dart';
 import '../games/shape_builder.dart';
 import '../games/say_it.dart';
 import '../games/teach_bibi.dart';
+import '../services/family_link.dart';
 import '../services/lines.dart';
 import '../services/music.dart';
 import '../services/sfx.dart';
@@ -135,6 +136,9 @@ class _HomeScreenState extends State<HomeScreen> {
     app.addListener(_onApp);
     _pickStage();
     _director = Timer.periodic(const Duration(seconds: 1), (_) => _tick());
+    // Letters from far away: look when the app opens, then every 2 minutes.
+    FamilyLink.instance.sync();
+    _mailman = Timer.periodic(const Duration(minutes: 2), (_) => _checkMail());
     WidgetsBinding.instance.addPostFrameCallback((_) {
       Music.play('play');
       _arrive();
@@ -145,7 +149,24 @@ class _HomeScreenState extends State<HomeScreen> {
   void dispose() {
     app.removeListener(_onApp);
     _director?.cancel();
+    _mailman?.cancel();
     super.dispose();
+  }
+
+  Timer? _mailman;
+
+  /// A letter from far away arrived while the child is on the home screen:
+  /// Bibi brings the envelope straight away (only when nothing else is on).
+  Future<void> _checkMail() async {
+    final n = await FamilyLink.instance.sync();
+    if (n == 0 || !_free || !app.feelingDoneToday) return;
+    _showing = true;
+    try {
+      await _afterFeeling();
+    } finally {
+      _showing = false;
+      _quietSince = DateTime.now();
+    }
   }
 
   void _onApp() {

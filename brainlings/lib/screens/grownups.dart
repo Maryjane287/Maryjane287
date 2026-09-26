@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 
 import 'paywall.dart';
 import '../services/premium.dart';
+import '../services/family_link.dart';
 import '../services/music.dart';
 import '../services/voice.dart';
 import '../state.dart';
@@ -24,6 +26,17 @@ class _GrownUpsScreenState extends State<GrownUpsScreen> {
   late final _creature = TextEditingController(text: app.creatureName);
 
   String get kid => app.displayName;
+
+  Map<String, String> _links = {};
+  String? _busy; // who we are making a link for right now
+
+  @override
+  void initState() {
+    super.initState();
+    FamilyLink.instance.invites().then((m) {
+      if (mounted) setState(() => _links = m);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,6 +62,7 @@ class _GrownUpsScreenState extends State<GrownUpsScreen> {
                 const SizedBox(height: 16),
                 _plan(),
                 _progress(),
+                _familyLinks(),
                 _letters(),
                 _settings(),
               ],
@@ -205,8 +219,8 @@ class _GrownUpsScreenState extends State<GrownUpsScreen> {
         Text('Voice letters', style: T.d(26)),
         const SizedBox(height: 6),
         Text(
-          'Soon, everyone in your family circle will get their own link by WhatsApp or email to record letters from anywhere. '
-          'For now, you can record one right here and ${app.creatureName} will deliver it.',
+          'Record a letter right here on this phone, and ${app.creatureName} will deliver it. '
+          'Family far away can send their own with a family link (above).',
           style: T.b(15, color: C.inkSoft),
         ),
         const SizedBox(height: 12),
@@ -254,6 +268,94 @@ class _GrownUpsScreenState extends State<GrownUpsScreen> {
           ),
       ],
     );
+  }
+
+  /// Private links for the family circle: they record letters on their
+  /// own phones, with no app and no password.
+  Widget _familyLinks() => GrownCard(children: [
+        const Eyebrow('Letters from far away'),
+        Text('Family links', style: T.d(26)),
+        const SizedBox(height: 6),
+        Text(
+          'Send each person their own private link, for example by WhatsApp. They tap it, record a voice letter '
+          'on their phone, and ${app.creatureName} delivers it to $kid. They can see when $kid listens and sends a hug. '
+          'No app or password needed. Only people with a link you send can write, and you can stop a link at any time.',
+          style: T.b(15, color: C.inkSoft),
+        ),
+        const SizedBox(height: 12),
+        for (final who in app.circle)
+          Container(
+            margin: const EdgeInsets.only(top: 8),
+            padding: const EdgeInsets.fromLTRB(14, 8, 8, 8),
+            decoration: BoxDecoration(color: const Color(0xFFF6F4FE), borderRadius: BorderRadius.circular(16)),
+            child: Row(children: [
+              Expanded(
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  Text(who, style: T.d(18)),
+                  Text(_links.containsKey(who) ? 'Has a link' : 'No link yet', style: T.b(13, color: C.inkSoft)),
+                ]),
+              ),
+              if (_busy == who)
+                const Padding(padding: EdgeInsets.all(12), child: SizedBox(width: 22, height: 22, child: CircularProgressIndicator(strokeWidth: 3)))
+              else ...[
+                if (_links.containsKey(who))
+                  TextButton(onPressed: () => _stopLink(who), child: Text('Stop', style: T.b(14, color: C.berryDeep))),
+                FilledButton.icon(
+                  onPressed: _busy == null ? () => _sendLink(who) : null,
+                  icon: const Icon(Icons.share_rounded, size: 18),
+                  label: Text(_links.containsKey(who) ? 'Send again' : 'Send link'),
+                ),
+              ],
+            ]),
+          ),
+        const SizedBox(height: 8),
+        TextButton.icon(
+          onPressed: _checkNow,
+          icon: const Icon(Icons.refresh_rounded),
+          label: const Text('Check for new letters now'),
+        ),
+      ]);
+
+  void _toast(String s) => ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(s)));
+
+  Future<void> _sendLink(String who) async {
+    setState(() => _busy = who);
+    final url = await FamilyLink.instance.linkFor(who);
+    final links = await FamilyLink.instance.invites();
+    if (!mounted) return;
+    setState(() {
+      _busy = null;
+      _links = links;
+    });
+    if (url == null) {
+      _toast('We could not make the link. Please check the internet and try again.');
+      return;
+    }
+    final child = app.childName.isEmpty ? 'your little one' : app.childName;
+    await SharePlus.instance.share(ShareParams(
+      subject: 'A letter for $child',
+      text: 'Hello $who! 💌 $child would love a voice letter from you. Tap this link, record a little message, '
+          'and ${app.creatureName} will deliver it: $url',
+    ));
+  }
+
+  Future<void> _stopLink(String who) async {
+    setState(() => _busy = who);
+    final ok = await FamilyLink.instance.stop(who);
+    final links = await FamilyLink.instance.invites();
+    if (!mounted) return;
+    setState(() {
+      _busy = null;
+      _links = links;
+    });
+    _toast(ok ? '$who\'s link has stopped working.' : 'We could not reach the internet. Please try again.');
+  }
+
+  Future<void> _checkNow() async {
+    final n = await FamilyLink.instance.sync();
+    if (!mounted) return;
+    setState(() {});
+    _toast(n == 0 ? 'No new letters yet.' : '$n new ${n == 1 ? 'letter' : 'letters'} for $kid!');
   }
 
   String _status(Letter l) {
@@ -414,6 +516,7 @@ class _GrownUpsScreenState extends State<GrownUpsScreen> {
       ),
     );
     if (yes == true && mounted) {
+      FamilyLink.instance.forget();
       app.resetAll();
       Navigator.of(context)
           .pushAndRemoveUntil(softRoute(const SetupScreen()), (_) => false);

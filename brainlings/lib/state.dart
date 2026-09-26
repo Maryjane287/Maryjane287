@@ -18,6 +18,7 @@ class Letter {
     this.plays = 0,
     this.hugSent = false,
     this.reminded = false,
+    this.remote = false,
   });
 
   final String id;
@@ -33,6 +34,9 @@ class Letter {
   bool hugSent;
   bool reminded;
 
+  /// Sent from far away through a family link (the sender sees plays and hugs).
+  final bool remote;
+
   Map<String, dynamic> toJson() => {
     'id': id,
     'from': from,
@@ -44,6 +48,7 @@ class Letter {
     'plays': plays,
     'hugSent': hugSent,
     'reminded': reminded,
+    'remote': remote,
   };
 
   factory Letter.fromJson(Map<String, dynamic> j) => Letter(
@@ -57,6 +62,7 @@ class Letter {
     plays: j['plays'] ?? 0,
     hugSent: j['hugSent'] ?? false,
     reminded: j['reminded'] ?? false,
+    remote: j['remote'] ?? false,
   );
 }
 
@@ -228,7 +234,8 @@ class AppState extends ChangeNotifier {
       };
       final dir = await getApplicationDocumentsDirectory();
       for (final f in dir.listSync().whereType<File>()) {
-        if (f.path.endsWith('.m4a') && !keep.contains(name(f.path))) f.deleteSync();
+        final voice = f.path.endsWith('.m4a') || name(f.path).startsWith('letter-');
+        if (voice && !keep.contains(name(f.path))) f.deleteSync();
       }
     } catch (_) {}
   }

@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 
+import '../services/family_link.dart';
 import '../services/sfx.dart';
 import '../services/voice.dart';
 import '../state.dart';
@@ -75,6 +76,7 @@ class _LetterScreenState extends State<LetterScreen>
     l.opened = true;
     l.plays++;
     app.save();
+    FamilyLink.instance.report(l);
     await Voice.say('Here is ${l.from}!');
     if (!mounted) return;
     final audio = l.audioPath;
@@ -98,6 +100,7 @@ class _LetterScreenState extends State<LetterScreen>
   Future<void> _hug() async {
     l.hugSent = true;
     app.save();
+    FamilyLink.instance.report(l);
     Sfx.hug();
     celebrate(context, count: 26, hearts: true);
     setState(() {

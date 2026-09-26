@@ -1,0 +1,61 @@
+rules_version = '2';
+
+// Brainlings: letters from far away.
+// - A family belongs to the child's phone that created it (anonymous sign-in).
+// - Only someone holding a private invite link can send a letter, and only
+//   as the name on that invite. Letters are small (up to about 60 seconds).
+// - Only the family's phone can read letters; it deletes them once delivered.
+// - The sender can see the reply (plays and hug) for a letter they sent,
+//   because only they know the letter's random id.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+
+    match /families/{fid} {
+      function isOwner() {
+        return signedIn() && get(/databases/$(database)/documents/families/$(fid)).data.owner == request.auth.uid;
+      }
+
+      allow create: if signedIn()
+        && request.resource.data.keys().hasOnly(['owner', 'created'])
+        && request.resource.data.owner == request.auth.uid;
+      allow get, delete: if signedIn() && resource.data.owner == request.auth.uid;
+
+      match /invites/{token} {
+        allow create: if isOwner()
+          && request.resource.data.keys().hasOnly(['from', 'created'])
+          && request.resource.data.from is string
+          && request.resource.data.from.size() > 0
+          && request.resource.data.from.size() <= 40;
+        allow delete, list: if isOwner();
+        // Knowing the long random token is what lets a family member in.
+        allow get: if signedIn();
+      }
+
+      match /letters/{lid} {
+        function invitePath() {
+          return /databases/$(database)/documents/families/$(fid)/invites/$(request.resource.data.invite);
+        }
+        allow create: if signedIn()
+          && request.resource.data.keys().hasOnly(['from', 'invite', 'audio', 'mime', 'text', 'sent', 'sender'])
+          && request.resource.data.sender == request.auth.uid
+          && request.resource.data.invite is string
+          && exists(invitePath())
+          && request.resource.data.from == get(invitePath()).data.from
+          && request.resource.data.sent == request.time
+          && request.resource.data.mime is string && request.resource.data.mime.size() < 60
+          && (!('audio' in request.resource.data) || (request.resource.data.audio is bytes && request.resource.data.audio.size() < 900000))
+          && (!('text' in request.resource.data) || (request.resource.data.text is string && request.resource.data.text.size() <= 500));
+        allow get, list, delete: if isOwner();
+      }
+
+      match /replies/{lid} {
+        allow create, update: if isOwner()
+          && request.resource.data.keys().hasOnly(['plays', 'hug', 'at']);
+        allow delete: if isOwner();
+        allow get: if signedIn();
+      }
+    }
+  }
+}
