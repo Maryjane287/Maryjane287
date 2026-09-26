@@ -297,14 +297,14 @@ function makePack(o, paper) {
 }
 
 // ================================================================ monthly learning plan (Plus)
-function monthOverview(paper, name, theme, g, weeks) {
+function monthOverview(paper, name, theme, g, weeks, labels) {
   const pg = new Page(paper, name ? `${possessive(name)} learning month` : 'My learning month', { subtitle: `${theme.label}, ${ageLabel(g)}. Four weeks that get a little harder each week. Colour a star for each day you finish!` });
   const rh = (pg.room - 26) / weeks.length;
-  const focus = ['Getting started', 'Growing strong', 'A little stretch', 'Super stretch'];
+  const focus = labels || ['Getting started', 'Growing strong', 'A little stretch', 'Super stretch'];
   weeks.forEach((w, i) => {
     const y = pg.y + i * rh, c = PALETTE[i % PALETTE.length];
     pg.add(panel(pg.left, y + 1.5, pg.width, rh - 3, TINTS[i % TINTS.length], c, 7));
-    pg.add(txt(pg.left + 6, y + 10, `Week ${i + 1}`, 7, { anchor: 'start', colour: c }) + txt(pg.left + 6, y + 16.5, focus[i], 4, { anchor: 'start', font: FONT, colour: SOFT }));
+    pg.add(txt(pg.left + 6, y + 10, `Week ${i + 1}`, 7, { anchor: 'start', colour: c }) + txt(pg.left + 6, y + 16.5, focus[i] || '', 4, { anchor: 'start', font: FONT, colour: SOFT }));
     const cw = (pg.width - 44) / w.titles.length;
     w.titles.forEach((ts, d) => {
       const cx = pg.left + 42 + cw * (d + 0.5);

@@ -56,7 +56,7 @@ const ROUTINES = {
   school: ['🎒 Unpack my bag', '🧼 Wash my hands', '🍎 Snack', '📝 Homework', '📚 Reading', '🧸 Play time', '🧹 Tidy up'],
   weekend: ['🥞 Breakfast', '🧹 Tidy my room', '🌳 Play outside', '🥪 Lunch', '🎨 Arts and crafts', '📞 Call family', '🛁 Bath time', '📖 Story time'],
 };
-const ROUTINE_TITLES = { morning: 'Morning Routine', bedtime: 'Bedtime Routine', school: 'After School Routine', weekend: 'Weekend Routine', custom: 'My Routine' };
+const ROUTINE_TITLES = { morning: 'Morning Routine', bedtime: 'Bedtime Routine', school: 'After School Routine', weekend: 'Weekend Routine', custom: 'Routine' };
 const KEY_EMOJI = [
   [/teeth|brush/i, '🪥'], [/bath|shower/i, '🛁'], [/dress|clothes/i, '👕'], [/breakfast|cereal/i, '🥣'], [/lunch/i, '🥪'],
   [/dinner|supper|eat/i, '🍽️'], [/snack/i, '🍎'], [/shoe/i, '👟'], [/bag/i, '🎒'], [/toilet|potty|wee/i, '🚽'],
