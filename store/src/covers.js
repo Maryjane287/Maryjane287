@@ -203,9 +203,101 @@ const LAYOUTS = {
   },
 };
 
-export function renderCover(mag, values = {}, { palette = 'coral', portraitOpts = {}, photos = {} } = {}) {
+// Designs: every magazine can be made in any of these styles. "signature" is
+// the magazine's own layout above; the rest read the magazine's `cover` slots
+// (masthead, lines, badge, quote), so one design works for every category.
+export const DESIGNS = {
+  signature: { label: 'Signature', palettes: null },
+  fashion: { label: 'High fashion', palettes: ['midnight', 'rose'] },
+  retro: { label: 'Retro 70s', palettes: ['coral', 'butter'] },
+  scrapbook: { label: 'Scrapbook', palettes: ['mint', 'rose'] },
+  minimal: { label: 'Minimal', palettes: ['sky', 'butter'] },
+  comic: { label: 'Comic book', palettes: ['butter', 'coral'] },
+};
+
+// Example covers for a design: signature uses the magazine's own examples, other
+// designs reuse the first two examples in colours that suit the design.
+export function designExamples(mag, design = 'signature') {
+  const d = DESIGNS[design];
+  if (!d || !d.palettes) return mag.examples;
+  return mag.examples.slice(0, 2).map((ex, i) => ({ ...ex, palette: d.palettes[i % d.palettes.length] }));
+}
+
+const fill = (t, v) => String(t || '').replace(/\{(\w+)\}/g, (_, k) => v[k] ?? '');
+
+function slots(mag, v) {
+  const c = mag.cover;
+  const raw = fill(c.mast, v);
+  return {
+    raw, mast: esc(raw), up: esc(raw.toUpperCase()),
+    issue: esc(fill(c.issue, v)), edition: esc(fill(c.edition, v)),
+    lines: c.lines.map(([l, t]) => [esc(l), esc(fill(t, v))]),
+    badge: c.badge.map(b => esc(fill(b, v))), big: fill(c.badge[1], v),
+    quote: esc(fill(c.quote, v)), credit: esc(fill(c.credit, v)),
+  };
+}
+
+const DESIGN_LAYOUTS = {
+  fashion(s, photo) {
+    return `
+      ${photo}
+      <div class="fs-top">${s.issue} &middot; ${s.edition}</div>
+      <h2 class="fs-mast" style="font-size:${fit(s.raw, 94, 0.8, 30)}cqw">${s.up}</h2>
+      <div class="fs-left">${s.lines.slice(0, 2).map(([l, t]) => `<p><b>${l}</b>${t}</p>`).join('')}</div>
+      <div class="fs-right"><p class="fs-num" style="font-size:${fit(s.big, 30, 0.62, 16)}cqw">${s.badge[1]}</p><small>${s.badge[0]} ${s.badge[2]}</small><p><b>${s.lines[2][0]}</b>${s.lines[2][1]}</p></div>
+      <div class="fs-quote"><em>&ldquo;${s.quote}&rdquo;</em><span>${s.credit}</span></div>`;
+  },
+  retro(s, photo) {
+    return `
+      <div class="rt-rays" aria-hidden="true"></div>
+      <div class="rt-top"><span>${s.issue}</span><span>${s.edition}</span></div>
+      <h2 class="rt-mast" style="font-size:${fit(s.raw, 90, 0.6, 22)}cqw">${s.mast}</h2>
+      <div class="rt-arch">${photo}</div>
+      <div class="rt-stripes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="rt-lines">${s.lines.map(([l, t]) => `<p><b>${l}</b>${t}</p>`).join('')}</div>
+      <div class="rt-flower"><span style="font-size:${fit(s.big, 18, 0.62, 9)}cqw"><small>${s.badge[0]}</small>${s.badge[1]}<small>${s.badge[2]}</small></span></div>
+      <div class="rt-quote">&ldquo;${s.quote}&rdquo;</div>`;
+  },
+  scrapbook(s, photo) {
+    return `
+      <div class="sb-paper" aria-hidden="true"></div>
+      <div class="sb-top">${s.issue}</div>
+      <h2 class="sb-mast" style="font-size:${fit(s.raw, 86, 0.42, 26)}cqw">${s.mast}</h2>
+      <div class="sb-polaroid"><i class="sb-tape"></i><i class="sb-tape sb-tape2"></i>${photo}<span>${s.edition}</span></div>
+      <div class="sb-notes">${s.lines.map(([l, t]) => `<p><b>${l}</b>${t}</p>`).join('')}</div>
+      <div class="sb-sticker"><small>${s.badge[0]}</small>${s.badge[1]}<small>${s.badge[2]}</small></div>
+      <div class="sb-quote">${s.quote} <span>&hearts;</span></div>
+      <div class="sb-doodles" aria-hidden="true"><i>&#10022;</i><i>&#10022;</i><i>&hearts;</i></div>`;
+  },
+  minimal(s, photo) {
+    return `
+      <div class="mn-top"><span>${s.issue}</span><span>No. ${s.badge[1]}</span></div>
+      <div class="mn-frame">${photo}</div>
+      <h2 class="mn-mast" style="font-size:${fit(s.raw, 88, 0.6, 22)}cqw">${s.mast}</h2>
+      <ol class="mn-lines">${s.lines.map(([l, t], i) => `<li><i>0${i + 1}</i><b>${l}</b>${t}</li>`).join('')}</ol>
+      <div class="mn-foot"><span>${s.edition}</span><span>&ldquo;${s.quote}&rdquo;</span></div>`;
+  },
+  comic(s, photo) {
+    return `
+      <div class="cm-dots" aria-hidden="true"></div>
+      <div class="cm-box"><small>No.</small><span style="font-size:${fit(s.big, 12, 0.5, 7)}cqw">${s.badge[1]}</span></div>
+      <div class="cm-top">${s.issue}</div>
+      <h2 class="cm-mast" style="font-size:${fit(s.raw, 72, 0.5, 26)}cqw">${s.up}</h2>
+      <div class="cm-panel">${photo}</div>
+      <div class="cm-bubble">${s.quote}!</div>
+      <div class="cm-pow"><span>Wow!</span></div>
+      <div class="cm-caps">${s.lines.slice(0, 2).map(([l, t]) => `<p><b>${l}</b>${t}</p>`).join('')}</div>
+      <div class="cm-strip">${s.edition} &middot; ${s.lines[2][0]}: ${s.lines[2][1]}</div>`;
+  },
+};
+
+export function renderCover(mag, values = {}, { palette = 'coral', portraitOpts = {}, photos = {}, design = 'signature' } = {}) {
   const p = PALETTES[palette] || PALETTES.coral;
   const v = fillValues(mag, values);
+  if (design !== 'signature' && DESIGN_LAYOUTS[design] && mag.cover) {
+    const photo = photoOrPortrait(photos.photo1, portraitOpts, p, 'dz-photo');
+    return `<div class="cv cv-${design}" style="${vars(p)}">${DESIGN_LAYOUTS[design](slots(mag, v), photo)}</div>`;
+  }
   const photoCls = { newspaper: 'np-photo', kids: 'kd-photo', stars: 'st-photo' }[mag.layout] || 'cv-photo';
   const photo = photoOrPortrait(photos.photo1, portraitOpts, p, photoCls);
   const body = (LAYOUTS[mag.layout] || LAYOUTS.birthday)(v, p, photo);

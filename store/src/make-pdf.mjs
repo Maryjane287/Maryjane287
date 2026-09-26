@@ -1,7 +1,7 @@
 // Makes the finished, print-ready A4 PDF for one order.
 //   npm run make-pdf -- order.json [out.pdf]
 // order.json holds the fields from the order form:
-//   { "magazine": "birthday-magazine", "palette": "coral",
+//   { "magazine": "birthday-magazine", "design": "retro", "palette": "coral",
 //     "answers": { "name": "Mia", ... }, "photos": { "photo1": "path or https URL", ... } }
 // "answers" may also be the JSON string exactly as Netlify Forms stores it.
 import { readFile, writeFile, unlink } from 'node:fs/promises';
@@ -34,7 +34,7 @@ const photos = {};
 for (const [k, src] of Object.entries(order.photos || {})) if (src) photos[k] = await embed(src);
 
 const example = mag.examples.find(e => e.palette === order.palette) || mag.examples[0];
-const pages = renderFullMagazine(mag, answers, { palette: order.palette || example.palette, portraitOpts: example.portrait, photos });
+const pages = renderFullMagazine(mag, answers, { palette: order.palette || example.palette, portraitOpts: example.portrait, photos, design: order.design || 'signature' });
 const css = await readFile(new URL('assets/covers.css', root), 'utf8');
 const html = `<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="assets/fonts.css"><style>${css}
   @page { size: A4; margin: 0; }

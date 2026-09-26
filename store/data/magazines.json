@@ -156,7 +156,33 @@
           "words": "Wise, warm, wildly funny"
         }
       }
-    ]
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The birthday issue",
+      "edition": "Special collector's edition",
+      "lines": [
+        [
+          "Exclusive",
+          "{name} on turning {age}"
+        ],
+        [
+          "Secret talent",
+          "{talent}"
+        ],
+        [
+          "Obsessed",
+          "{obsession}"
+        ]
+      ],
+      "badge": [
+        "Now",
+        "{age}",
+        "and iconic"
+      ],
+      "quote": "{words}",
+      "credit": "Friends tell all, page 6"
+    }
   },
   {
     "slug": "anniversary-magazine",
@@ -304,7 +330,33 @@
           "joke": "Left at the big tree"
         }
       }
-    ]
+    ],
+    "cover": {
+      "mast": "{names}",
+      "issue": "The anniversary issue",
+      "edition": "{years} years of love",
+      "lines": [
+        [
+          "How it all began",
+          "{met}"
+        ],
+        [
+          "Finally explained",
+          "{joke}"
+        ],
+        [
+          "Best adventure",
+          "{trip}"
+        ]
+      ],
+      "badge": [
+        "Year",
+        "{years}",
+        "of us"
+      ],
+      "quote": "A love story",
+      "credit": "The exclusive interview"
+    }
   },
   {
     "slug": "grandparents-newspaper",
@@ -456,7 +508,33 @@
           "weather": "Bright and breezy with big hugs"
         }
       }
-    ]
+    ],
+    "cover": {
+      "mast": "{forWho}",
+      "issue": "The family edition",
+      "edition": "News from {fromWho}",
+      "lines": [
+        [
+          "Breaking news",
+          "{headline}"
+        ],
+        [
+          "We miss",
+          "{miss}"
+        ],
+        [
+          "The kids say",
+          "{quote}"
+        ]
+      ],
+      "badge": [
+        "Price",
+        "1",
+        "hug"
+      ],
+      "quote": "{weather}",
+      "credit": "Today's forecast"
+    }
   },
   {
     "slug": "kids-magazine",
@@ -608,7 +686,33 @@
           "fact": "Says goodnight to the moon every single night"
         }
       }
-    ]
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "{name} weekly",
+      "edition": "Superstar issue",
+      "lines": [
+        [
+          "Top expert in",
+          "{expert}"
+        ],
+        [
+          "When I grow up",
+          "{dream}"
+        ],
+        [
+          "Fun fact",
+          "{fact}"
+        ]
+      ],
+      "badge": [
+        "Age",
+        "{age}",
+        "and awesome"
+      ],
+      "quote": "{food}",
+      "credit": "Favourite food"
+    }
   },
   {
     "slug": "year-in-review-magazine",
@@ -767,7 +871,33 @@
           "word": "Joy"
         }
       }
-    ]
+    ],
+    "cover": {
+      "mast": "{family}",
+      "issue": "The year in review",
+      "edition": "Special double issue",
+      "lines": [
+        [
+          "Biggest adventure",
+          "{adventure}"
+        ],
+        [
+          "Proudest moment",
+          "{proud}"
+        ],
+        [
+          "Word of the year",
+          "{word}"
+        ]
+      ],
+      "badge": [
+        "The",
+        "{year}",
+        "awards"
+      ],
+      "quote": "Our year, all the best bits",
+      "credit": "Awards inside"
+    }
   },
   {
     "slug": "pet-magazine",
@@ -938,7 +1068,33 @@
           "snack": "Chicken, never the cheap one"
         }
       }
-    ]
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The pet issue",
+      "edition": "Most wanted edition",
+      "lines": [
+        [
+          "Secret talent",
+          "{talent}"
+        ],
+        [
+          "Most wanted for",
+          "{crime}"
+        ],
+        [
+          "Favourite snack",
+          "{snack}"
+        ]
+      ],
+      "badge": [
+        "Age",
+        "{age}",
+        "and iconic"
+      ],
+      "quote": "{award}",
+      "credit": "Official title"
+    }
   },
   {
     "slug": "star-sign-birthday-magazine",
@@ -1110,6 +1266,32 @@
           "prediction": "A new city, a new hobby and a lot of laughing"
         }
       }
-    ]
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The {sign} birthday issue",
+      "edition": "Cosmic edition",
+      "lines": [
+        [
+          "Lucky crystal",
+          "{crystal}"
+        ],
+        [
+          "Cosmic superpower",
+          "{power}"
+        ],
+        [
+          "The stars predict",
+          "{prediction}"
+        ]
+      ],
+      "badge": [
+        "Turns",
+        "{age}",
+        "today"
+      ],
+      "quote": "{sign} season",
+      "credit": "Born {born}"
+    }
   }
 ]

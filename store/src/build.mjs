@@ -1,7 +1,7 @@
 // Builds the whole shop into dist/ as plain HTML. No dependencies: run `npm run build`.
 // Every page is real HTML so Pinterest can read titles, prices and images (rich pins).
 import { readFile, writeFile, mkdir, rm, cp, readdir } from 'node:fs/promises';
-import { renderCover, renderPages, esc } from './covers.js';
+import { renderCover, renderPages, esc, DESIGNS, designExamples } from './covers.js';
 
 const root = new URL('..', import.meta.url);
 const dist = new URL('dist/', root);
@@ -10,7 +10,9 @@ const site = JSON.parse(await read('data/site.json'));
 const mags = JSON.parse(await read('data/magazines.json'));
 const ideas = await loadIdeas();
 const abs = p => site.url.replace(/\/$/, '') + p;
-const pinSrc = (mag, ex) => `/pins/${mag.slug}-${ex.id}.jpg`;
+const pinSrc = (mag, ex, design = 'signature') => `/pins/${mag.slug}-${design === 'signature' ? '' : design + '-'}${ex.id}.jpg`;
+const designIds = Object.keys(DESIGNS);
+const magPath = (mag, design = 'signature') => `/${mag.slug}/${design === 'signature' ? '' : design + '/'}`;
 const tiers = site.tiers;
 const from = tiers[0];
 
@@ -23,8 +25,8 @@ function saveImg(src, alt, desc, cls = '') {
   return `<img class="${cls}" src="${src}" alt="${esc(alt)}" loading="lazy" width="1000" height="1500" data-pin-description="${esc(desc)}" data-pin-media="${abs(src)}">`;
 }
 
-function coverFor(mag, ex) {
-  return renderCover(mag, ex.values, { palette: ex.palette, portraitOpts: ex.portrait });
+function coverFor(mag, ex, design = 'signature') {
+  return renderCover(mag, ex.values, { palette: ex.palette, portraitOpts: ex.portrait, design });
 }
 
 function layout({ title, description, path, body, og = {}, jsonld, bodyClass = '', scripts = '' }) {
@@ -162,7 +164,7 @@ async function home() {
         <p class="kicker">${esc(m.occasion)}</p>
         <h3>${esc(m.title)}</h3>
         <p>${esc(m.short)}</p>
-        <p class="from">From ${fromPrice}</p>
+        <p class="from">From ${fromPrice} &middot; ${designIds.length} designs</p>
       </div>
     </a>`).join('');
   const wall = mags.flatMap(m => m.examples.map(ex => ({ m, ex })));
@@ -213,36 +215,50 @@ ${tickerHtml}
   }));
 }
 
-async function magazinePage(mag) {
-  const path = `/${mag.slug}/`;
-  const main = mag.examples[0];
+async function magazinePage(mag, design = 'signature') {
+  const path = magPath(mag, design);
+  const exs = designExamples(mag, design);
+  const main = exs[0];
+  const dLabel = DESIGNS[design].label;
+  const name = design === 'signature' ? mag.searchTitle : `${mag.searchTitle}, ${dLabel} Design`;
+  const pin = ex => pinSrc(mag, ex, design);
+  const cover = ex => coverFor(mag, ex, design);
+  const makeUrl = `/make/?m=${mag.slug}${design === 'signature' ? '' : '&amp;d=' + design}`;
+  const designCards = designIds.map(d => {
+    const ex = designExamples(mag, d)[0];
+    return `<a class="design-card${d === design ? ' is-on' : ''}" href="${magPath(mag, d)}"${d === design ? ' aria-current="page"' : ''}>${coverFor(mag, ex, d)}<span>${esc(DESIGNS[d].label)}</span></a>`;
+  }).join('');
   const lowest = Math.min(...tiers.map(t => t.gbp));
   const highest = Math.max(...tiers.map(t => t.gbp));
   const inside = renderPages(mag, main.values, { palette: main.palette, portraitOpts: main.portrait });
-  const desc = `${mag.searchTitle}: ${mag.short} Made in 5 minutes from your answers and photos. Instant PDF or printed and posted worldwide.`;
+  const desc = `${name}: ${mag.short} Made in 5 minutes from your answers and photos. Instant PDF or printed and posted worldwide.`;
   const body = `
-<nav class="crumbs"><a href="/">Home</a> <span>/</span> ${esc(mag.occasion)}</nav>
+<nav class="crumbs"><a href="/">Home</a> <span>/</span> ${design === 'signature' ? esc(mag.occasion) : `<a href="${magPath(mag)}">${esc(mag.occasion)}</a> <span>/</span> ${esc(dLabel)}`}</nav>
 <section class="mag-hero">
   <div class="mag-gallery">
-    <div class="mag-main">${saveImg(pinSrc(mag, main), `${mag.title} example: ${Object.values(main.values)[0]}`, `${mag.pinTitle}. ${mag.short} Personalise it in 5 minutes.`, 'mag-main-img')}</div>
-    <div class="mag-thumbs">${mag.examples.map((ex, i) => `<button type="button" class="mag-thumb${i ? '' : ' is-on'}" data-src="${pinSrc(mag, ex)}" aria-label="Show example ${i + 1}">${coverFor(mag, ex)}</button>`).join('')}</div>
+    <div class="mag-main">${saveImg(pin(main), `${mag.title} example: ${Object.values(main.values)[0]}`, `${mag.pinTitle}${design === 'signature' ? '' : ', ' + dLabel + ' design'}. ${mag.short} Personalise it in 5 minutes.`, 'mag-main-img')}</div>
+    <div class="mag-thumbs">${exs.map((ex, i) => `<button type="button" class="mag-thumb${i ? '' : ' is-on'}" data-src="${pin(ex)}" aria-label="Show example ${i + 1}">${cover(ex)}</button>`).join('')}</div>
   </div>
   <div class="mag-info">
     <p class="kicker">${esc(mag.occasion)}</p>
-    <h1>${esc(mag.searchTitle)}</h1>
+    <h1>${esc(name)}</h1>
     <p class="lead">${esc(mag.description)}</p>
     <p class="mag-price">From ${fromPrice}</p>
-    <a class="btn btn-big" href="/make/?m=${mag.slug}">Make yours in 5 minutes</a>
-    <a class="pin-btn" href="https://www.pinterest.com/pin/create/button/?url=${encodeURIComponent(abs(path))}&amp;media=${encodeURIComponent(abs(pinSrc(mag, main)))}&amp;description=${encodeURIComponent(mag.pinTitle + '. ' + mag.short)}" data-pin-do="none" target="_blank" rel="noopener">Save to Pinterest</a>
+    <a class="btn btn-big" href="${makeUrl}">Make yours in 5 minutes</a>
+    <a class="pin-btn" href="https://www.pinterest.com/pin/create/button/?url=${encodeURIComponent(abs(path))}&amp;media=${encodeURIComponent(abs(pin(main)))}&amp;description=${encodeURIComponent(mag.pinTitle + '. ' + mag.short)}" data-pin-do="none" target="_blank" rel="noopener">Save to Pinterest</a>
     <h2 class="h-small">What's inside</h2>
     <ul class="ticks">${mag.inside.map(i => `<li>${esc(i)}</li>`).join('')}</ul>
     <p class="chips">${mag.keywords.map(k => `<span>${esc(k)}</span>`).join('')}</p>
   </div>
 </section>
+<section class="section">
+  <div class="section-head"><p class="kicker">${designIds.length} designs</p><h2>Pick the look they will love</h2><p>Same questions, same price. Every design is made from your answers and photos.</p></div>
+  <div class="design-grid">${designCards}</div>
+</section>
 <section class="section section-tint">
   <div class="section-head"><p class="kicker">Peek inside</p><h2>Every page is about them</h2></div>
   <div class="spread">
-    <div class="spread-page">${coverFor(mag, main)}</div>
+    <div class="spread-page">${cover(main)}</div>
     ${inside.map(p => `<div class="spread-page">${p}</div>`).join('')}
   </div>
 </section>
@@ -255,18 +271,18 @@ async function magazinePage(mag) {
   ${steps}
 </section>
 <section class="section">${faqHtml}</section>
-<section class="cta-band"><h2>Ready to make ${esc(mag.title)}?</h2><a class="btn btn-big btn-light" href="/make/?m=${mag.slug}">Start now</a></section>`;
+<section class="cta-band"><h2>Ready to make ${esc(mag.title)}?</h2><a class="btn btn-big btn-light" href="${makeUrl}">Start now</a></section>`;
   const jsonld = [{
     '@context': 'https://schema.org', '@type': 'Product',
-    name: mag.searchTitle, description: mag.description,
-    image: mag.examples.map(ex => abs(pinSrc(mag, ex))),
+    name, description: mag.description,
+    image: exs.map(ex => abs(pin(ex))),
     brand: { '@type': 'Brand', name: site.name },
     offers: { '@type': 'AggregateOffer', priceCurrency: 'GBP', lowPrice: lowest.toFixed(2), highPrice: highest.toFixed(2), offerCount: tiers.length, availability: 'https://schema.org/InStock', url: abs(path) },
   }, faqLd];
   await page(path, layout({
-    title: mag.searchTitle, description: desc, path, body, jsonld,
+    title: name, description: desc, path, body, jsonld,
     og: {
-      type: 'product', image: abs(pinSrc(mag, main)),
+      type: 'product', image: abs(pin(main)),
       extra: { 'product:price:amount': lowest.toFixed(2), 'product:price:currency': 'GBP', 'og:price:amount': lowest.toFixed(2), 'og:price:currency': 'GBP', 'product:availability': 'in stock', 'og:availability': 'instock', 'product:brand': site.name },
     },
     scripts: `<script type="module">
@@ -290,10 +306,12 @@ async function makerPage() {
     <div class="pick" role="radiogroup" aria-label="Choose a magazine">
       ${mags.map(m => `<button type="button" class="pick-btn" data-m="${m.slug}" role="radio">${coverFor(m, m.examples[0])}<span>${esc(m.title)}</span></button>`).join('')}
     </div>
+    <p class="maker-label">Design</p>
+    <div class="designs" role="radiogroup" aria-label="Choose a design"></div>
     <div class="palette" aria-label="Choose a colour"></div>
     <form id="order" name="order" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="company" enctype="multipart/form-data">
       <input type="hidden" name="form-name" value="order">
-      <input type="hidden" name="magazine"><input type="hidden" name="palette"><input type="hidden" name="answers">
+      <input type="hidden" name="magazine"><input type="hidden" name="design"><input type="hidden" name="palette"><input type="hidden" name="answers">
       <p class="hp"><label>Leave this empty <input name="company"></label></p>
       <div id="fields"></div>
       <p class="photo-note">Your photos stay on your device while you design. They are only sent when you place your order.</p>
@@ -399,14 +417,16 @@ async function simplePages() {
 }
 
 async function feeds() {
-  const urls = ['/', ...mags.map(m => `/${m.slug}/`), '/make/', '/ideas/', ...ideas.map(i => `/ideas/${i.slug}/`), '/help/', '/about/', '/privacy/', '/terms/'];
+  const urls = ['/', ...mags.flatMap(m => designIds.map(d => magPath(m, d))), '/make/', '/ideas/', ...ideas.map(i => `/ideas/${i.slug}/`), '/help/', '/about/', '/privacy/', '/terms/'];
   await page('/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${abs(u)}</loc></url>`).join('\n')}\n</urlset>\n`);
   await page('/robots.txt', `User-agent: *\nAllow: /\nSitemap: ${abs('/sitemap.xml')}\n`);
   // Pinterest catalog feed: one row per magazine and edition, so each shows up as a shoppable product.
   const csvCell = s => `"${String(s).replace(/"/g, '""')}"`;
   const rows = [['id', 'title', 'description', 'link', 'image_link', 'additional_image_link', 'price', 'availability', 'condition', 'brand', 'item_group_id', 'google_product_category', 'product_type']];
-  for (const m of mags) for (const t of tiers) {
-    rows.push([`${m.slug}-${t.id}`, `${m.searchTitle} (${t.label})`, `${m.description} ${t.blurb}.`, abs(`/${m.slug}/`), abs(pinSrc(m, m.examples[0])), m.examples.slice(1).map(ex => abs(pinSrc(m, ex))).join(','), `${t.gbp.toFixed(2)} GBP`, 'in stock', 'new', site.name, m.slug, 'Media > Magazines & Newspapers', `Personalised gifts > ${m.occasion}`]);
+  for (const m of mags) for (const d of designIds) for (const t of tiers) {
+    const exs = designExamples(m, d);
+    const sig = d === 'signature';
+    rows.push([sig ? `${m.slug}-${t.id}` : `${m.slug}-${d}-${t.id}`, `${m.searchTitle}${sig ? '' : `, ${DESIGNS[d].label} Design`} (${t.label})`, `${m.description} ${t.blurb}.`, abs(magPath(m, d)), abs(pinSrc(m, exs[0], d)), exs.slice(1).map(ex => abs(pinSrc(m, ex, d))).join(','), `${t.gbp.toFixed(2)} GBP`, 'in stock', 'new', site.name, m.slug, 'Media > Magazines & Newspapers', `Personalised gifts > ${m.occasion}`]);
   }
   await page('/feed/pinterest-catalog.csv', rows.map(r => r.map(csvCell).join(',')).join('\n') + '\n');
 }
@@ -419,7 +439,7 @@ await cp(new URL('assets/', root), new URL('assets/', dist), { recursive: true }
 await cp(new URL('pins/', root), new URL('pins/', dist), { recursive: true });
 await cp(new URL('src/covers.js', root), new URL('assets/covers.js', dist));
 await home();
-for (const m of mags) await magazinePage(m);
+for (const m of mags) for (const d of designIds) await magazinePage(m, d);
 await makerPage();
 await ideasPages();
 await simplePages();
