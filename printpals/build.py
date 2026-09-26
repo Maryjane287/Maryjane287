@@ -9,7 +9,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '8'
+VERSION = '10'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -599,7 +599,7 @@ TOOLS += [
 
 TOOLS += [
     {
-        'id': 'sight', 'cat': 'writing', 'slug': 'sight-words-worksheets', 'tint': '#eef2ff', 'icon': '👀', 'new': True,
+        'id': 'sight', 'cat': 'writing', 'slug': 'sight-words-worksheets', 'tint': '#eef2ff', 'icon': '👀', 'new': False,
         'nav': 'Sight words',
         'title': 'Free Sight Words Worksheets | Dolch, Fry and Year 1 Common Exception Words | PrintPals',
         'desc': 'Free printable sight word worksheets: read it, trace it, write it and find it. Dolch pre-primer, primer and first grade, Fry first 100, UK Year 1 common exception words, or your own list.',
@@ -623,7 +623,7 @@ TOOLS += [
         ],
     },
     {
-        'id': 'cvc', 'cat': 'writing', 'slug': 'cvc-words-worksheets', 'tint': '#e8f8f4', 'icon': '🐱', 'new': True,
+        'id': 'cvc', 'cat': 'writing', 'slug': 'cvc-words-worksheets', 'tint': '#e8f8f4', 'icon': '🐱', 'new': False,
         'nav': 'CVC words',
         'title': 'Free CVC Words Worksheets with Pictures | Short Vowel Phonics | PrintPals',
         'desc': 'Free printable CVC word worksheets with pictures: sound it out, missing vowel, first sound and cut and stick word building. Short a, e, i, o and u.',
@@ -644,7 +644,7 @@ TOOLS += [
         ],
     },
     {
-        'id': 'bonds', 'cat': 'maths', 'slug': 'number-bonds-worksheets', 'tint': '#fff6e0', 'icon': '🔗', 'new': True,
+        'id': 'bonds', 'cat': 'maths', 'slug': 'number-bonds-worksheets', 'tint': '#fff6e0', 'icon': '🔗', 'new': False,
         'nav': 'Number bonds',
         'title': 'Free Number Bonds Worksheets to 5, 10 and 20 | Part Whole Models | PrintPals',
         'desc': 'Free printable number bonds worksheets with part-whole circles and pictures to count. Number bonds to 5, 10, 20 or mixed, with an answer key.',
@@ -662,7 +662,7 @@ TOOLS += [
         'faq': [('What are number bonds to 10?', 'Pairs of numbers that add up to 10: 0 and 10, 1 and 9, 2 and 8, and so on.'), ('Is there an answer key?', 'Yes, on the second page.')],
     },
     {
-        'id': 'flashcards', 'cat': 'writing', 'slug': 'flashcard-maker', 'tint': '#fff0f7', 'icon': '🃏', 'new': True,
+        'id': 'flashcards', 'cat': 'writing', 'slug': 'flashcard-maker', 'tint': '#fff0f7', 'icon': '🃏', 'new': False,
         'nav': 'Flashcards',
         'title': 'Free Printable Flashcards for Kids | Pictures, Alphabet, Numbers, Sight Words | PrintPals',
         'desc': 'Make free printable flashcards: animals, food, alphabet, numbers 0 to 20, sight words or your own words. Picture and word together, or double-sided with the word on the back.',
@@ -682,7 +682,7 @@ TOOLS += [
         'faq': [('Can I make flashcards with my own words?', 'Yes. Choose "My own words". If we have a picture for a word, it is added automatically.'), ('How do I print double-sided?', 'Choose Double-sided, then in the print window turn on "Print on both sides" and flip on the long edge.')],
     },
     {
-        'id': 'chores', 'cat': 'charts', 'slug': 'chore-chart-maker', 'tint': '#e6f6fc', 'icon': '🧹', 'new': True,
+        'id': 'chores', 'cat': 'charts', 'slug': 'chore-chart-maker', 'tint': '#e6f6fc', 'icon': '🧹', 'new': False,
         'nav': 'Chore charts',
         'title': 'Free Chore Chart Maker for Kids | By Age, With Pocket Money | PrintPals',
         'desc': 'Make a free printable chore chart for kids with pictures: jobs by age, stars to colour every day, an optional pocket money column, and one chart for each child.',
@@ -702,7 +702,7 @@ TOOLS += [
         'faq': [('Can I make charts for several children?', 'Yes. Type each name on its own line and everyone gets their own chart.'), ('Should I pay pocket money for chores?', 'That is up to you. Turn on the pocket money column if you do.')],
     },
     {
-        'id': 'feelings', 'cat': 'charts', 'slug': 'feelings-chart-for-kids', 'tint': '#fff0f0', 'icon': '😊', 'new': True,
+        'id': 'feelings', 'cat': 'charts', 'slug': 'feelings-chart-for-kids', 'tint': '#fff0f0', 'icon': '😊', 'new': False,
         'nav': 'Feelings chart',
         'title': 'Free Feelings Chart for Kids | Emotions Check-In and Calm Down Ideas | PrintPals',
         'desc': 'Free printable feelings chart for kids with 12 friendly faces, a weekly feelings check-in and calm down ideas. Colour or colour-in versions.',
@@ -721,7 +721,7 @@ TOOLS += [
         'faq': [('What age is this for?', 'Ages 3 to 8. Younger children can point to the faces; older children can write why they feel that way.'), ('Is it useful for anxious children?', 'Many families find a daily feelings check-in helpful. Always follow advice from your child\'s own doctor, teacher or therapist.')],
     },
     {
-        'id': 'hunt', 'cat': 'fun', 'slug': 'scavenger-hunt-for-kids', 'tint': '#f1f8e6', 'icon': '🔎', 'new': True,
+        'id': 'hunt', 'cat': 'fun', 'slug': 'scavenger-hunt-for-kids', 'tint': '#f1f8e6', 'icon': '🔎', 'new': False,
         'nav': 'Scavenger hunts',
         'title': 'Free Printable Scavenger Hunts for Kids | Indoor, Garden, Park, Colours, Shapes | PrintPals',
         'desc': 'Free printable scavenger hunts for kids with pictures: indoor treasure hunt, garden, park and nature walks, colour hunt and shape hunt.',
@@ -738,7 +738,7 @@ TOOLS += [
         'faq': [('Do children need to read?', 'No. Every item has a picture, so even little ones can join in.'), ('Which hunt is best indoors?', 'Try the indoor treasure hunt, the colour hunt or the shape hunt.')],
     },
     {
-        'id': 'matching', 'cat': 'puzzles', 'slug': 'matching-worksheets', 'tint': '#f5edff', 'icon': '🔀', 'new': True,
+        'id': 'matching', 'cat': 'puzzles', 'slug': 'matching-worksheets', 'tint': '#f5edff', 'icon': '🔀', 'new': False,
         'nav': 'Matching',
         'title': 'Free Matching Worksheets for Preschool | Pictures, Letters, Numbers, Shadows | PrintPals',
         'desc': 'Free printable matching worksheets: match pictures to words, big and little letters, count and match numbers, or match the shadow. New sheet every click, answer key included.',
@@ -754,6 +754,146 @@ TOOLS += [
 <h2>Match the shadow</h2>
 <p>Shadow matching asks children to recognise a picture from its outline alone. It is a favourite with preschoolers and brilliant for careful looking.</p>""",
         'faq': [('What age are matching worksheets for?', 'Ages 2 to 6. Start with 4 pairs and move up to 6.'), ('Is every sheet different?', 'Yes. Press "Make a new set" for new pictures and a new order.')],
+    },
+]
+
+TOOLS += [
+    {
+        'id': 'joined', 'cat': 'writing', 'slug': 'joined-handwriting-worksheets', 'tint': '#eef2ff', 'icon': '✍️', 'new': True,
+        'nav': 'Joined handwriting',
+        'title': 'Free Joined Handwriting Worksheets | Cursive Practice with Your Own Words | PrintPals',
+        'desc': 'Free printable joined handwriting (cursive) worksheets in the style taught in UK schools: practise common joins, Year 2 words, sentences or your own words, with a dotted trace and a green start dot.',
+        'h1': 'Joined handwriting',
+        'lead': 'Real joined handwriting, drawn stroke by stroke, in the style many UK schools teach. Practise the common joins, tricky words, sentences, or type your own. Every line has a solid model, dotted letters to trace and a line to try alone.',
+        'card': 'Joined (cursive) writing with your own words: joins, tricky words and sentences.',
+        'form': field('Practise', '<select name="preset"><option value="joins">Common joins (an, ch, ing...)</option><option value="words">Tricky words</option><option value="sentences">Short sentences</option><option value="own">My own words</option></select>')
+        + field('Words or sentences', '<textarea name="text" rows="6" spellcheck="false"></textarea>', 'One line of practice for each line you type.')
+        + field('Letter size', seg('size', [('big', 'Big'), ('medium', 'Medium'), ('small', 'Small')], 'medium'))
+        + field('Rows for each line', seg('rows', [('normal', 'Model, trace, try'), ('more', 'Extra trace row')], 'normal'))
+        + DOTS + PAPER,
+        'article': """
+<h2>Why joined handwriting?</h2>
+<p>Joining letters helps children write faster and more smoothly, and many schools start teaching it in Year 1 or Year 2. Practising the joins that come up most often, like an, ch, th and ing, makes the biggest difference.</p>
+<h2>How the joins work</h2>
+<ul><li>Most letters join from the baseline with a little upward flick.</li><li>After o, r, v and w the join goes along the top.</li><li>Letters with tails or that end on the left, like b, g, j, p, q, s, x, y and z, do not join to the next letter.</li><li>Capitals are written on their own.</li></ul>""",
+        'faq': [
+            ('Which handwriting style is this?', 'A clear, upright joined style similar to the ones used in many UK primary schools. If your school uses a slightly different scheme, the joins will still be very familiar.'),
+            ('Can I type my child\'s spelling words?', 'Yes. Choose "My own words" and type anything, one practice line per line.'),
+        ],
+    },
+    {
+        'id': 'alphabets', 'cat': 'writing', 'slug': 'alphabet-in-other-languages', 'tint': '#fff6e0', 'icon': '🌍', 'new': True,
+        'nav': 'World alphabets',
+        'title': 'Free Printable Alphabets in Other Languages | Spanish, French, German, Swahili, Yoruba, Igbo, Hausa, Twi | PrintPals',
+        'desc': 'Free printable alphabet charts and tracing sheets in Spanish, French, German, Italian, Portuguese, Swahili, Yoruba, Igbo, Hausa and Twi, with the special letters highlighted.',
+        'h1': 'Alphabets from around the world',
+        'lead': 'Help your child learn the alphabet of another language, or of your family\'s home language. A colourful chart with the special letters starred, plus tracing sheets for every letter.',
+        'card': 'Spanish, French, German, Swahili, Yoruba, Igbo, Hausa, Twi and more.',
+        'form': field('Language', '<select name="language"><option value="spanish">Spanish</option><option value="french">French</option><option value="german">German</option><option value="italian">Italian</option><option value="portuguese">Portuguese</option><option value="swahili">Swahili</option><option value="yoruba">Yoruba</option><option value="igbo">Igbo</option><option value="hausa">Hausa</option><option value="twi">Twi (Akan)</option></select>')
+        + '<div class="field"><span class="label">Pages</span>' + check('chart', 'Alphabet chart') + check('trace', 'Tracing sheets') + '</div>'
+        + PAPER,
+        'article': """
+<h2>Keep a home language alive</h2>
+<p>Many families speak more than one language. Learning the alphabet of a home language, with its own special letters, helps children read and write it, and feel proud of where their family comes from.</p>
+<h2>What is included</h2>
+<ul><li><b>Alphabet chart:</b> every letter, big and small, with the letters English does not have marked with a star.</li><li><b>Tracing sheets:</b> each letter to trace and then write alone.</li></ul>""",
+        'faq': [
+            ('Which languages are there?', 'Spanish, French, German, Italian, Portuguese, Swahili, Yoruba, Igbo, Hausa and Twi (Akan). More are coming.'),
+            ('Why are some letters starred?', 'Starred letters, like ñ in Spanish or ẹ in Yoruba, are not in the English alphabet, so they need a little extra practice.'),
+        ],
+    },
+    {
+        'id': 'families', 'cat': 'writing', 'slug': 'word-families-worksheets', 'tint': '#fff0f7', 'icon': '🏠', 'new': True,
+        'nav': 'Word families',
+        'title': 'Free Word Families Worksheets | -at, -an, -ig, -op, -ug and More | PrintPals',
+        'desc': 'Free printable word family worksheets with a word family house: -at, -an, -ig, -op, -ug, -en, -ot, -ing, -ake and -ell. Pictures, first letter boxes and writing lines.',
+        'h1': 'Word families',
+        'lead': 'Words that end the same way live in the same house. Children fill in the first letter of each word, find the family words and write their own.',
+        'card': 'A word family house for -at, -an, -ig, -op, -ug and more.',
+        'form': field('Word family', '<select name="family"><option value="at">-at</option><option value="an">-an</option><option value="ig">-ig</option><option value="op">-op</option><option value="ug">-ug</option><option value="en">-en</option><option value="ot">-ot</option><option value="ing">-ing</option><option value="ake">-ake</option><option value="ell">-ell</option><option value="all">All ten families</option></select>')
+        + SHUFFLE + PAPER,
+        'article': """
+<h2>Why word families help</h2>
+<p>Once a child can read "at", they can read cat, hat, bat, mat and sat. Word families show children the patterns in English spelling, so every new word they learn unlocks many more.</p>""",
+        'faq': [('Which word families are included?', '-at, -an, -ig, -op, -ug, -en, -ot, -ing, -ake and -ell. Choose "All ten families" for a little book.')],
+    },
+    {
+        'id': 'rhyming', 'cat': 'writing', 'slug': 'rhyming-worksheets', 'tint': '#e8f8f4', 'icon': '🎵', 'new': True,
+        'nav': 'Rhyming',
+        'title': 'Free Rhyming Worksheets with Pictures | Match the Rhymes | PrintPals',
+        'desc': 'Free printable rhyming worksheets with pictures for preschool and reception: match the rhyming pairs or find the picture that rhymes. New sheet every click, answer key included.',
+        'h1': 'Rhyming worksheets',
+        'lead': 'Cat and hat, moon and spoon, goat and boat. Rhyming is one of the first steps to reading. Match the rhymes or ring the picture that rhymes.',
+        'card': 'Match the rhyming pictures or ring the one that rhymes.',
+        'form': field('Activity', seg('kind', [('match', 'Match the rhymes'), ('circle', 'Which one rhymes?')], 'match'))
+        + check('key', 'Answer page') + SHUFFLE + PAPER,
+        'article': """
+<h2>Why rhyming matters</h2>
+<p>Hearing that words rhyme shows a child is listening to the sounds inside words. That skill, called phonological awareness, is one of the strongest signs of reading success later on.</p>""",
+        'faq': [('What age is rhyming for?', 'Ages 3 to 6. Say every word out loud together; it is all about listening.')],
+    },
+    {
+        'id': 'numberlines', 'cat': 'maths', 'slug': 'number-line-worksheets', 'tint': '#e6f6fc', 'icon': '📏', 'new': True,
+        'nav': 'Number lines',
+        'title': 'Free Number Line Worksheets | Missing Numbers, Adding and Taking Away | PrintPals',
+        'desc': 'Free printable number line worksheets: fill in the missing numbers to 10, 20 or 100, or add and take away by jumping along the line. Answer key with the jumps drawn.',
+        'h1': 'Number lines',
+        'lead': 'Fill in the missing numbers, or add and take away by jumping along the line. The answer key shows every jump.',
+        'card': 'Missing numbers, and adding or taking away with jumps.',
+        'form': field('Activity', seg('kind', [('missing', 'Missing numbers'), ('add', 'Adding'), ('sub', 'Taking away')], 'missing'))
+        + field('Numbers', seg('range', [('10', '0 to 10'), ('20', '0 to 20'), ('100', '0 to 100 in tens')], '10'))
+        + check('key', 'Answer page') + SHUFFLE + PAPER,
+        'article': """
+<h2>Seeing numbers in order</h2>
+<p>A number line helps children see that numbers have an order and a size. Jumping forward to add and back to take away makes sums something they can see, not just remember.</p>""",
+        'faq': [('What does 0 to 100 in tens mean?', 'The line counts 0, 10, 20 and so on up to 100, great for learning to count in tens.')],
+    },
+    {
+        'id': 'fractions', 'cat': 'maths', 'slug': 'fractions-worksheets', 'tint': '#fff0f0', 'icon': '🍕', 'new': True,
+        'nav': 'Fractions',
+        'title': 'Free Fractions Worksheets for Kids | Halves, Quarters, Thirds | PrintPals',
+        'desc': 'Free printable fractions worksheets: colour the fraction, name the shaded fraction, equal parts or not, and fractions of a group. Halves, quarters, thirds and eighths with answer keys.',
+        'h1': 'Fractions worksheets',
+        'lead': 'Halves, quarters and thirds with circles, squares, bars and groups of pictures. Colour them, name them, or check whether the parts are equal.',
+        'card': 'Halves, quarters and thirds: colour, name, equal parts and groups.',
+        'form': field('Activity', seg('kind', [('colour', 'Colour the fraction'), ('name', 'Name the fraction'), ('fair', 'Equal parts?'), ('set', 'Fraction of a group')], 'colour'))
+        + field('Fractions', seg('level', [('halves', 'Halves'), ('quarters', 'Halves and quarters'), ('thirds', 'Thirds'), ('mix', 'Mixed')], 'quarters'))
+        + check('key', 'Answer page') + SHUFFLE + PAPER,
+        'article': """
+<h2>Fractions start with fair shares</h2>
+<p>Young children understand fractions first as sharing fairly: half a sandwich, a quarter of a pizza. These sheets build that idea step by step, from equal parts to naming and colouring fractions.</p>""",
+        'faq': [('Which fractions are included?', 'Halves, quarters, thirds and, in the mixed option, eighths too.')],
+    },
+    {
+        'id': 'colournum', 'cat': 'fun', 'slug': 'colour-by-number', 'tint': '#f5edff', 'icon': '🖍️', 'new': True,
+        'nav': 'Colour by number',
+        'title': 'Free Colour by Number Printables for Kids | With Sums Option | PrintPals',
+        'desc': 'Free printable colour by number pages for kids: a heart, apple, house, fish, flower, star, cat or rainbow appears as you colour. Choose numbers, adding sums or taking away sums.',
+        'h1': 'Colour by number',
+        'lead': 'Colour each square to reveal a hidden picture. Choose plain numbers, or turn it into maths practice with adding or taking away sums.',
+        'card': 'Colour the squares to reveal a picture. Numbers or sums.',
+        'form': field('Picture', '<select name="picture"><option value="">Surprise me</option><option value="heart">Heart</option><option value="apple">Apple</option><option value="house">House</option><option value="fish">Fish</option><option value="flower">Flower</option><option value="star">Star</option><option value="cat">Cat</option><option value="rainbow">Rainbow</option></select>')
+        + field('Squares show', seg('mode', [('numbers', 'Numbers'), ('add', 'Adding sums'), ('sub', 'Taking away sums')], 'numbers'))
+        + check('key', 'Answer page') + SHUFFLE + PAPER,
+        'article': """
+<h2>Colouring with a surprise</h2>
+<p>Children love watching the picture appear. Colour by number practises number recognition and careful colouring; the sums option adds quick mental maths to every square.</p>""",
+        'faq': [('What does "Surprise me" do?', 'It picks a picture at random, so your child does not know what will appear.')],
+    },
+    {
+        'id': 'spotdiff', 'cat': 'puzzles', 'slug': 'spot-the-difference', 'tint': '#f1f8e6', 'icon': '🔍', 'new': True,
+        'nav': 'Spot the difference',
+        'title': 'Free Spot the Difference Printables for Kids | New Puzzle Every Click | PrintPals',
+        'desc': 'Free printable spot the difference puzzles for kids with colourful pictures. Easy, medium or hard, a brand new puzzle every click, with the answers circled.',
+        'h1': 'Spot the difference',
+        'lead': 'Two colourful pictures, a few sneaky differences. Something missing, something swapped, something bigger or turned around. A brand new puzzle every time.',
+        'card': 'Two colourful pictures, 3 to 7 differences, new every click.',
+        'form': field('Level', seg('level', [('easy', 'Easy: 3'), ('medium', 'Medium: 5'), ('hard', 'Hard: 7')], 'medium'))
+        + check('key', 'Answer page') + SHUFFLE + PAPER,
+        'article': """
+<h2>A puzzle for sharp eyes</h2>
+<p>Spot the difference builds concentration and careful looking, skills children use every day when reading and writing. Print in colour for the best result.</p>""",
+        'faq': [('Is every puzzle different?', 'Yes. Press "Make a new set" for a brand new picture and new differences.')],
     },
 ]
 
@@ -789,7 +929,7 @@ CAT_TEXT = {
     'writing': 'Tracing, phonics, sight words, spelling and reading, with real letter shapes and stroke order.',
     'maths': 'Counting, number bonds, sums, money, times tables and telling the time, with answer keys.',
     'puzzles': 'Word searches, mazes, crosswords, dot to dot, sudoku, matching and bingo you can make yourself.',
-    'fun': 'Photo colouring pages, scavenger hunts and a birthday party in minutes.',
+    'fun': 'Photo colouring pages, colour by number, scavenger hunts and a birthday party in minutes.',
     'charts': 'Routines, chores, feelings, reward charts and certificates that make everyday life easier.',
 }
 
@@ -850,6 +990,8 @@ def tool_page(t):
 <script src="/js/tools2.js?v={VERSION}"></script>
 <script src="/js/tools3.js?v={VERSION}"></script>
 <script src="/js/tools4.js?v={VERSION}"></script>
+<script src="/js/cursive.js?v={VERSION}"></script>
+<script src="/js/tools5.js?v={VERSION}"></script>
 <script src="/js/app.js?v={VERSION}"></script>
 </body>
 </html>

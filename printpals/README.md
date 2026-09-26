@@ -23,6 +23,10 @@ browser, so nothing typed is ever sent or stored.
 - Batch 3 (2026-09-26, `public/js/tools4.js`): sight words (Dolch, Fry, UK Year 1), CVC words with pictures,
   number bonds (part-whole), flashcards (double-sided option, backs mirrored), chore charts per child,
   feelings chart (12 drawn faces, weekly check-in, calm down ideas), scavenger hunts, matching (incl. shadows).
+- Batch 4 (2026-09-26, `public/js/cursive.js`, `public/js/tools5.js`): joined handwriting (UK style: joins from the
+  baseline or the top after o r v w; b g j p q s x y z do not join; round letters joined on their left side),
+  world alphabets (Spanish, French, German, Italian, Portuguese, Swahili, Yoruba, Igbo, Hausa, Twi), word families,
+  rhyming, number lines, fractions, colour by number (pixel pictures, sums option), spot the difference.
 - Testing: `pp2/fuzz.js` in the scratchpad tries every option on every tool and flags errors, NaN and anything
   off the page. Run it before every publish.
 
