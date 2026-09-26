@@ -76,7 +76,12 @@ use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in 
 for painted pictures on every sheet.
 Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
 (colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
-fractions, colour by number, spot the difference. PAYMENT PLAN + batch 11 live (92 tools, VERSION 27): free forever core; PrintPals Plus $4.99/month or $39/year with 7 day
+fractions, colour by number, spot the difference. PAYMENTS LIVE (VERSION 28, Stripe account acct_1UJzb8BlA0P4Xlju, Grace and Loannes Ltd): public/js/plus.js holds the 3 Stripe
+payment links (monthly $4.99, yearly $39, teacher $59, all live, USD, tax inclusive) and the customer portal link. Plus tools
+(monthplan, activitybook = any plan; classpack = teacher) get 7 free days per device (pp-plus-trial), then print is locked and the
+plans show. Stripe redirects to /plus?plan=..&session_id=cs_live_.. which saves pp-plus on that device; other devices unlock with the
+receipt number (format check only). No server yet: renewals/cancellations are not checked (next step: Firebase function with the
+Stripe secret key, needs Blaze). Terms page at /terms. PAYMENT PLAN + batch 11 live (92 tools, VERSION 27): free forever core; PrintPals Plus $4.99/month or $39/year with 7 day
 trial (monthly learning plan, personalised activity book up to 40 pages); Teacher $59/year (class packs). All Plus features are
 'free while we launch' (tools have 'plus': True, /plus pricing page) until the owner sets up a payment provider (recommended a
 merchant of record such as Lemon Squeezy or Paddle: handles global VAT; licence keys can unlock Plus without a server). Also new:

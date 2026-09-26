@@ -21,7 +21,7 @@
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="preload" href="/fonts/baloo2.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/site.css?v=27">
+<link rel="stylesheet" href="/css/site.css?v=28">
 
 </head>
 <body>
@@ -32,24 +32,35 @@
 <main id="main"><div class="wrap article page">
 <h1>PrintPals Plus</h1>
 <p class="lead-p">Everything you love on PrintPals stays free, forever. Plus is for families and teachers who want even more, and it helps us keep PrintPals free for everyone.</p>
-<div class="launch">✨ <b>Plus is free while we launch.</b> Enjoy every Plus feature now. No card, no sign up.</div>
+<div id="plusstatus" class="launch">🎁 <b>Try Plus free for 7 days.</b> Just open any Plus pack. No card, no sign up.</div>
 <div class="plans">
 <div class="plan"><h3>Free</h3><div class="price">$0<span> forever</span></div><ul>
 <li>85 worksheet makers</li><li>Weekly learning pack</li><li>Siblings packs</li><li>Quick packs and family far away pack</li><li>Learning passport</li><li>Ink saver, easy-read letters, Easier and Harder</li><li>No sign up, ever</li></ul>
 <a class="btn alt" href="/">Start printing</a></div>
 <div class="plan best"><span class="ribbon">Most loved</span><h3>Plus for families</h3><div class="price">$4.99<span> a month</span></div><p class="or">or $39 a year (save 35%)</p><ul>
-<li>Everything in Free</li><li><b>Monthly learning plans</b> that grow with your child</li><li><b>Personalised activity books</b> up to 40 pages</li><li>New Plus packs every month</li><li>7 day free trial, cancel any time</li></ul>
-<a class="btn" href="/monthly-learning-plan">Try Plus free now</a></div>
+<li>Everything in Free</li><li><b>Monthly learning plans</b> that grow with your child</li><li><b>Personalised activity books</b> up to 40 pages</li><li>New Plus packs every month</li><li>7 free days first, cancel any time</li></ul>
+<a class="btn" href="https://buy.stripe.com/7sYcN43U39lV6xW1i21kA01" rel="noopener">Get Plus yearly, $39</a><a class="btn alt" href="https://buy.stripe.com/14A00igGPbu309ygcW1kA00" rel="noopener" style="margin-top:12px">Get Plus monthly, $4.99</a><a class="try" href="/monthly-learning-plan">or try it free for 7 days →</a></div>
 <div class="plan"><h3>Teachers</h3><div class="price">$59<span> a year</span></div><ul>
 <li>Everything in Plus</li><li><b>Class packs</b> for up to 40 children</li><li>Name tracing, labels, bookmarks, reward charts, stories and certificates for every child</li><li>Use it in every class you teach</li></ul>
-<a class="btn alt" href="/class-pack-for-teachers">Try class packs free</a></div>
+<a class="btn" href="https://buy.stripe.com/aFa28qaircy7bSgbWG1kA02" rel="noopener">Get the teacher plan, $59</a><a class="try" href="/class-pack-for-teachers">or try class packs free for 7 days →</a></div>
 </div>
 <p class="manage">Already a Plus member? <a href="https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00" rel="noopener">Manage or cancel my subscription →</a></p>
 <h2>Questions</h2>
 <details><summary>Will the free worksheets stay free?</summary><p>Yes, always. Every worksheet maker, the weekly pack, quick packs, the family pack and the passport are free forever.</p></details>
-<details><summary>What happens when the launch offer ends?</summary><p>We will tell you clearly on this page first. Everything you have already printed is yours to keep.</p></details>
-<details><summary>How will payment work?</summary><p>Prices are in US dollars. Payments will be handled by a trusted payment partner, so we never see your card details, and you can cancel any time.</p></details>
+<details><summary>How does the free week work?</summary><p>Open any Plus pack and your 7 free days start on that phone or computer. No card, no sign up. When the week ends, you can choose a plan, or keep using everything that is free.</p></details>
+<details><summary>I paid on my phone. How do I use Plus on my computer?</summary><p>Plus opens on the device you paid on. On another device, open any Plus pack and choose "Already paid on another phone or computer?", then type the receipt number from your payment email.</p></details>
+<details><summary>How do I cancel?</summary><p>Any time, in two taps: <a href="https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00" rel="noopener">manage or cancel my subscription</a>. Plus stays open until the end of the time you have paid for.</p></details>
+<details><summary>How does payment work?</summary><p>Prices are in US dollars, tax included. Payments are handled securely by Stripe, so we never see your card details. Your bank may show the amount in your own currency.</p></details>
 <details><summary>Do you show adverts?</summary><p>No. PrintPals has no adverts, for free or Plus families.</p></details>
+<script src="/js/plus.js?v=28"></script>
+<script>
+(function () {
+  var P = window.PPPlus, box = document.getElementById('plusstatus'); if (!P || !box) return;
+  var names = { monthly: 'PrintPals Plus', yearly: 'PrintPals Plus', teacher: 'PrintPals Teacher' };
+  if (P.welcome) box.innerHTML = '🎉 <b>Welcome to ' + names[P.welcome] + '!</b> Thank you for supporting PrintPals. Plus is now open on this device. <a href="/monthly-learning-plan">Plan a learning month →</a>';
+  else if (P.has(false)) box.innerHTML = '✨ <b>You have ' + names[P.paid().plan] + ' on this device.</b> Thank you! <a href="' + P.PORTAL + '" rel="noopener">Manage my subscription</a>';
+})();
+</script>
 </div></main>
 <footer><div class="wrap"><div class="foot-brand"><div class="brand" style="font-size:24px;color:#fff">Print<b style="color:#ff8a8a">Pals</b></div>
 <p style="max-width:420px;margin-top:8px">Free printable worksheets and ready-made packs for children, made in seconds. Everything is made inside your own browser: nothing you type is sent to us or stored.</p>

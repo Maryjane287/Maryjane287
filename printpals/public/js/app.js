@@ -95,6 +95,35 @@
   form.addEventListener('change', syncLevel);
   syncLevel();
 
+  // PrintPals Plus tools: free for 7 days on this device, then a plan is needed to print.
+  const plusNeed = form.dataset.plus;
+  const plusBox = document.getElementById('plusbox');
+  function plusNote(html, kind) { if (!plusBox) return; plusBox.className = `plusbox ${kind}`; plusBox.innerHTML = html; plusBox.hidden = false; }
+  function plusAllowed() {
+    if (!plusNeed || !window.PPPlus) return true;
+    const P = window.PPPlus, teacher = plusNeed === 'teacher';
+    let ok = true;
+    if (P.has(teacher)) plusNote(`✨ You have PrintPals ${teacher ? 'Teacher' : 'Plus'} on this device. Thank you for supporting PrintPals! <a href="${P.PORTAL}" rel="noopener">Manage my subscription</a>`, 'ok');
+    else {
+      P.trialStart();
+      const left = P.trialLeft();
+      if (left > 0) plusNote(`🎁 <b>Your free Plus week: ${left} day${left > 1 ? 's' : ''} left.</b> No card needed. <a href="/plus">See plans</a>`, 'trial');
+      else {
+        ok = false;
+        plusNote(P.offerHtml(teacher), 'locked');
+        const go = plusBox.querySelector('.unlock-go');
+        if (go) go.addEventListener('click', () => {
+          const done = P.unlock(plusBox.querySelector('.unlock-code').value, teacher);
+          plusBox.querySelector('.unlock-msg').textContent = done ? 'Thank you! Plus is now open on this device.' : 'That does not look like a receipt number. Please check your payment email and try again.';
+          if (done) setTimeout(plusAllowed, 900);
+        });
+      }
+    }
+    document.body.classList.toggle('plus-locked', !ok);
+    return ok;
+  }
+  plusAllowed();
+
   let timer = null;
   const soon = () => { clearTimeout(timer); timer = setTimeout(render, 180); };
   function render() {
@@ -135,7 +164,9 @@
     const one = (src) => new Promise((done) => { const im = new Image(); im.onload = im.onerror = done; im.src = src; });
     return Promise.race([Promise.all(srcs.map(one)), new Promise((done) => setTimeout(done, 4000))]);
   }
-  document.querySelectorAll('[data-action=print]').forEach((b) => b.addEventListener('click', () => { render(); picturesReady().then(() => setTimeout(() => window.print(), 80)); }));
+  document.querySelectorAll('[data-action=print]').forEach((b) => b.addEventListener('click', () => {
+    if (!plusAllowed()) { plusBox.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    render(); picturesReady().then(() => setTimeout(() => window.print(), 80)); }));
   window.PrintPals = { render: () => render() };
   // "Make a new set" always gives a different sheet (a random pick can land on the same one by chance).
   document.querySelectorAll('[data-action=shuffle]').forEach((b) => b.addEventListener('click', () => {

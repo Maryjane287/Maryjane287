@@ -11,7 +11,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '27'
+VERSION = '28'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -1657,7 +1657,7 @@ TOOLS += [
         + SHUFFLE + PAPER,
         'article': """<h2>Progress you can see</h2><p>Children grow in confidence when they finish things. The month chart lets them colour a star for every day, and the stretch weeks move them on just when they are ready. Print one week at a time if you prefer: the pages are grouped by week.</p>""",
         'faq': [('How does it get harder?', 'Weeks 1 and 2 are at your child\'s level. In week 3 the reading pages move up a level, and in week 4 the maths moves up too.'),
-                ('Is this part of PrintPals Plus?', 'Yes. Plus is free while we launch, so you can use it now.')],
+                ('Is this part of PrintPals Plus?', 'Yes. You can try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year, and you can cancel any time.')],
     },
     {
         'id': 'activitybook', 'cat': 'packs', 'slug': 'personalised-activity-book', 'tint': '#fff0f5', 'icon': '📚', 'new': True, 'plus': True,
@@ -1675,7 +1675,7 @@ TOOLS += [
         + SHUFFLE + PAPER,
         'article': """<h2>A gift they will actually use</h2><p>Print it double sided, fold or staple it, and you have a real book with their name on it. Use the Pages option for a quick 12 page booklet for a restaurant, or a big 40 page book for a long journey or the school holidays.</p>""",
         'faq': [('Can I print it as a book?', 'Yes. Print double sided and staple along the left edge, or take the PDF to a print shop and ask for it to be bound.'),
-                ('Is this part of PrintPals Plus?', 'Yes. Plus is free while we launch, so you can use it now.')],
+                ('Is this part of PrintPals Plus?', 'Yes. You can try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year, and you can cancel any time.')],
     },
     {
         'id': 'passport', 'cat': 'packs', 'slug': 'learning-passport', 'tint': '#fff6e0', 'icon': '🛂', 'new': True,
@@ -1707,7 +1707,7 @@ TOOLS += [
         + SHUFFLE + PAPER,
         'article': """<h2>Your first week, done in a minute</h2><p>New class? Print the desk labels, name tracing and bookmarks for day one. End of term? Print a certificate and a story starring every child. Names are never sent anywhere: the whole pack is made inside your browser.</p>""",
         'faq': [('Is my class list private?', 'Yes. Everything is made on your own device. The names never leave your computer.'),
-                ('Is this part of PrintPals Plus?', 'Yes, it is part of the teacher plan. Plus is free while we launch, so you can use it now.')],
+                ('Is this part of PrintPals Plus?', 'Yes, it is part of the teacher plan. You can try it free for 7 days, no card needed. After that, the teacher plan is $59 a year.')],
     },
 ]
 
@@ -1774,7 +1774,7 @@ CAT_TEXT = {a[0]: a[3] for a in ARRANGE}
 NAV_LABEL = {a[0]: a[2] for a in ARRANGE}
 
 
-JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'app']
+JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'plus', 'app']
 CONTACT = 'graceandloannesofficial@gmail.com'
 # Stripe customer portal: parents manage, switch or cancel their Plus subscription here.
 STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'
@@ -1858,9 +1858,9 @@ def tool_page(t):
 <main id="main">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><a href="/">PrintPals</a> › <a href="/#{t['cat']}">{html.escape(cat_name)}</a> › {html.escape(t['h1'])}</nav>
-<div class="tool-head"><h1>{html.escape(t['h1'])}</h1><p>{html.escape(t['lead'])}</p><div class="tags">{'<a class="tag plus" href="/plus">✨ PrintPals Plus, free while we launch</a>' if t.get('plus') else ''}<span class="tag">👧 {ages_text(t['id'])}</span><span class="tag">✓ Free, no sign up</span><span class="tag">✓ A4 and US Letter</span></div><a class="jump" href="#preview">See your worksheet ↓</a></div>
+<div class="tool-head"><h1>{html.escape(t['h1'])}</h1><p>{html.escape(t['lead'])}</p><div class="tags">{'<a class="tag plus" href="/plus">✨ PrintPals Plus: try 7 days free</a>' if t.get('plus') else ''}<span class="tag">👧 {ages_text(t['id'])}</span><span class="tag">✓ Free, no sign up</span><span class="tag">✓ A4 and US Letter</span></div><a class="jump" href="#preview">See your worksheet ↓</a></div>
 <div class="maker">
-<form class="panel" id="maker" data-tool="{t['id']}"{level_attr} autocomplete="off">
+<form class="panel" id="maker" data-tool="{t['id']}"{level_attr}{(' data-plus="teacher"' if t['id'] == 'classpack' else ' data-plus="plus"') if t.get('plus') else ''} autocomplete="off">
 {level_btns}
 {t['form']}
 {check('inksaver', '🖨️ Ink saver: less colour, great for black and white printers', False)}
@@ -1869,7 +1869,7 @@ def tool_page(t):
 <p class="hint">Free. No sign up. Nothing you type leaves your device.</p>
 <p class="hint" id="remember" hidden>💛 We remember your child's name on this device only. <button type="button" class="linkish" data-action="forget">Forget it</button></p>
 </form>
-<section aria-label="Worksheet preview"><div class="preview-head"><span>Preview</span><span id="pageCount"></span></div><div id="preview"></div></section>
+<section aria-label="Worksheet preview"><div id="plusbox" class="plusbox" hidden></div><div class="preview-head"><span>Preview</span><span id="pageCount"></span></div><div id="preview"></div></section>
 </div>
 <article class="article">
 {nudge}
@@ -1961,7 +1961,7 @@ def home():
   }});
 }})();
 </script>
-<section class="plus-band"><div class="wrap"><div><span class="new plus">Plus</span><h2>Want a whole month planned?</h2><p>Monthly learning plans, personalised activity books and class packs for teachers. Free while we launch.</p></div><a class="btn big" href="/plus">See PrintPals Plus</a></div></section>
+<section class="plus-band"><div class="wrap"><div><span class="new plus">Plus</span><h2>Want a whole month planned?</h2><p>Monthly learning plans, personalised activity books and class packs for teachers. Try any Plus pack free for 7 days, no card needed.</p></div><a class="btn big" href="/plus">See PrintPals Plus</a></div></section>
 <section class="band"><div class="wrap">
 <h2>Made for busy parents and teachers</h2>
 <div class="why">
@@ -2029,24 +2029,35 @@ PRIVACY = f'''<h1>Privacy</h1>
 
 PLUS = f'''<h1>PrintPals Plus</h1>
 <p class="lead-p">Everything you love on PrintPals stays free, forever. Plus is for families and teachers who want even more, and it helps us keep PrintPals free for everyone.</p>
-<div class="launch">✨ <b>Plus is free while we launch.</b> Enjoy every Plus feature now. No card, no sign up.</div>
+<div id="plusstatus" class="launch">🎁 <b>Try Plus free for 7 days.</b> Just open any Plus pack. No card, no sign up.</div>
 <div class="plans">
 <div class="plan"><h3>Free</h3><div class="price">$0<span> forever</span></div><ul>
 <li>{sum(1 for t in TOOLS if t['cat'] != 'packs')} worksheet makers</li><li>Weekly learning pack</li><li>Siblings packs</li><li>Quick packs and family far away pack</li><li>Learning passport</li><li>Ink saver, easy-read letters, Easier and Harder</li><li>No sign up, ever</li></ul>
 <a class="btn alt" href="/">Start printing</a></div>
 <div class="plan best"><span class="ribbon">Most loved</span><h3>Plus for families</h3><div class="price">$4.99<span> a month</span></div><p class="or">or $39 a year (save 35%)</p><ul>
-<li>Everything in Free</li><li><b>Monthly learning plans</b> that grow with your child</li><li><b>Personalised activity books</b> up to 40 pages</li><li>New Plus packs every month</li><li>7 day free trial, cancel any time</li></ul>
-<a class="btn" href="/monthly-learning-plan">Try Plus free now</a></div>
+<li>Everything in Free</li><li><b>Monthly learning plans</b> that grow with your child</li><li><b>Personalised activity books</b> up to 40 pages</li><li>New Plus packs every month</li><li>7 free days first, cancel any time</li></ul>
+<a class="btn" href="https://buy.stripe.com/7sYcN43U39lV6xW1i21kA01" rel="noopener">Get Plus yearly, $39</a><a class="btn alt" href="https://buy.stripe.com/14A00igGPbu309ygcW1kA00" rel="noopener" style="margin-top:12px">Get Plus monthly, $4.99</a><a class="try" href="/monthly-learning-plan">or try it free for 7 days →</a></div>
 <div class="plan"><h3>Teachers</h3><div class="price">$59<span> a year</span></div><ul>
 <li>Everything in Plus</li><li><b>Class packs</b> for up to 40 children</li><li>Name tracing, labels, bookmarks, reward charts, stories and certificates for every child</li><li>Use it in every class you teach</li></ul>
-<a class="btn alt" href="/class-pack-for-teachers">Try class packs free</a></div>
+<a class="btn" href="https://buy.stripe.com/aFa28qaircy7bSgbWG1kA02" rel="noopener">Get the teacher plan, $59</a><a class="try" href="/class-pack-for-teachers">or try class packs free for 7 days →</a></div>
 </div>
 <p class="manage">Already a Plus member? <a href="{STRIPE_PORTAL}" rel="noopener">Manage or cancel my subscription →</a></p>
 <h2>Questions</h2>
 <details><summary>Will the free worksheets stay free?</summary><p>Yes, always. Every worksheet maker, the weekly pack, quick packs, the family pack and the passport are free forever.</p></details>
-<details><summary>What happens when the launch offer ends?</summary><p>We will tell you clearly on this page first. Everything you have already printed is yours to keep.</p></details>
-<details><summary>How will payment work?</summary><p>Prices are in US dollars. Payments will be handled by a trusted payment partner, so we never see your card details, and you can cancel any time.</p></details>
-<details><summary>Do you show adverts?</summary><p>No. PrintPals has no adverts, for free or Plus families.</p></details>'''
+<details><summary>How does the free week work?</summary><p>Open any Plus pack and your 7 free days start on that phone or computer. No card, no sign up. When the week ends, you can choose a plan, or keep using everything that is free.</p></details>
+<details><summary>I paid on my phone. How do I use Plus on my computer?</summary><p>Plus opens on the device you paid on. On another device, open any Plus pack and choose "Already paid on another phone or computer?", then type the receipt number from your payment email.</p></details>
+<details><summary>How do I cancel?</summary><p>Any time, in two taps: <a href="{STRIPE_PORTAL}" rel="noopener">manage or cancel my subscription</a>. Plus stays open until the end of the time you have paid for.</p></details>
+<details><summary>How does payment work?</summary><p>Prices are in US dollars, tax included. Payments are handled securely by Stripe, so we never see your card details. Your bank may show the amount in your own currency.</p></details>
+<details><summary>Do you show adverts?</summary><p>No. PrintPals has no adverts, for free or Plus families.</p></details>
+<script src="/js/plus.js?v={VERSION}"></script>
+<script>
+(function () {{
+  var P = window.PPPlus, box = document.getElementById('plusstatus'); if (!P || !box) return;
+  var names = {{ monthly: 'PrintPals Plus', yearly: 'PrintPals Plus', teacher: 'PrintPals Teacher' }};
+  if (P.welcome) box.innerHTML = '🎉 <b>Welcome to ' + names[P.welcome] + '!</b> Thank you for supporting PrintPals. Plus is now open on this device. <a href="/monthly-learning-plan">Plan a learning month →</a>';
+  else if (P.has(false)) box.innerHTML = '✨ <b>You have ' + names[P.paid().plan] + ' on this device.</b> Thank you! <a href="' + P.PORTAL + '" rel="noopener">Manage my subscription</a>';
+}})();
+</script>'''
 
 TERMS = f'''<h1>Terms of use</h1>
 <p class="lead-p">The friendly version: use PrintPals to help children learn, at home or in class. Be kind, and do not resell our pages.</p>
@@ -2060,6 +2071,7 @@ TERMS = f'''<h1>Terms of use</h1>
 <ul>
 <li><b>Prices.</b> Plus costs US$4.99 a month or US$39 a year. The teacher plan costs US$59 a year. Prices include any sales tax or VAT. Your bank may show the amount in your own currency.</li>
 <li><b>Free week.</b> New families can try Plus free for 7 days on our website, with no card needed.</li>
+<li><b>Your devices.</b> Plus opens on the phone or computer you subscribe on. To open it on another device, use your receipt number from your payment email, as explained on our Plus page.</li>
 <li><b>Renewal.</b> Subscriptions renew automatically at the end of each month or year until you cancel.</li>
 <li><b>Cancelling.</b> You can cancel any time using the <a href="{STRIPE_PORTAL}" rel="noopener">manage my subscription</a> link, which is also on our <a href="/plus">Plus page</a>. Plus stays open until the end of the period you have paid for, and you will not be charged again.</li>
 <li><b>Refunds.</b> If you are not happy, email us within 14 days of a payment and we will refund it in full. After 14 days, payments are not refunded, but you can cancel so you are not charged again.</li>
