@@ -1776,6 +1776,8 @@ NAV_LABEL = {a[0]: a[2] for a in ARRANGE}
 
 JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'app']
 CONTACT = 'graceandloannesofficial@gmail.com'
+# Stripe customer portal: parents manage, switch or cancel their Plus subscription here.
+STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'
 
 
 def head(title, desc, path, extra='', image='/img/og.png'):
@@ -2039,6 +2041,7 @@ PLUS = f'''<h1>PrintPals Plus</h1>
 <li>Everything in Plus</li><li><b>Class packs</b> for up to 40 children</li><li>Name tracing, labels, bookmarks, reward charts, stories and certificates for every child</li><li>Use it in every class you teach</li></ul>
 <a class="btn alt" href="/class-pack-for-teachers">Try class packs free</a></div>
 </div>
+<p class="manage">Already a Plus member? <a href="{STRIPE_PORTAL}" rel="noopener">Manage or cancel my subscription →</a></p>
 <h2>Questions</h2>
 <details><summary>Will the free worksheets stay free?</summary><p>Yes, always. Every worksheet maker, the weekly pack, quick packs, the family pack and the passport are free forever.</p></details>
 <details><summary>What happens when the launch offer ends?</summary><p>We will tell you clearly on this page first. Everything you have already printed is yours to keep.</p></details>
@@ -2058,7 +2061,7 @@ TERMS = f'''<h1>Terms of use</h1>
 <li><b>Prices.</b> Plus costs US$4.99 a month or US$39 a year. The teacher plan costs US$59 a year. Prices include any sales tax or VAT. Your bank may show the amount in your own currency.</li>
 <li><b>Free week.</b> New families can try Plus free for 7 days on our website, with no card needed.</li>
 <li><b>Renewal.</b> Subscriptions renew automatically at the end of each month or year until you cancel.</li>
-<li><b>Cancelling.</b> You can cancel any time from the "Manage my subscription" link on our <a href="/plus">Plus page</a>. Plus stays open until the end of the period you have paid for, and you will not be charged again.</li>
+<li><b>Cancelling.</b> You can cancel any time using the <a href="{STRIPE_PORTAL}" rel="noopener">manage my subscription</a> link, which is also on our <a href="/plus">Plus page</a>. Plus stays open until the end of the period you have paid for, and you will not be charged again.</li>
 <li><b>Refunds.</b> If you are not happy, email us within 14 days of a payment and we will refund it in full. After 14 days, payments are not refunded, but you can cancel so you are not charged again.</li>
 <li><b>Payments.</b> Payments are handled securely by our payment partner, Stripe. We never see or store your card details.</li>
 </ul>

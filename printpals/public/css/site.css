@@ -216,3 +216,6 @@ footer .foot-cols a:hover { color: #fff; }
 .plan ul { padding-left: 20px; margin: 14px 0 20px; flex: 1; }
 .plan .btn.alt { margin: 0; }
 .page .plans ~ h2 { margin-top: 10px; }
+
+.manage { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 14px 18px; font-weight: 700; }
+.manage a { color: var(--coral); font-weight: 800; }
