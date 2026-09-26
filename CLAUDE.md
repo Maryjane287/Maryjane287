@@ -97,8 +97,10 @@ Done and working:
   (storePassword, keyPassword, keyAlias=upload, storeFile=<abs path>) to sign; without it builds use the debug key.
   Release bundle committed at brainlings/store/release/Brainlings-1.6.3.aab (too big to send, 65.7 MB).
   Privacy policy: brainlings/store/privacy_policy.md (support email graceandloannesofficial@gmail.com).
-  SUBSCRIPTION IS DONE (v1.7.0, 2026-09-25): seven free days, then Google Play subscription 'brainlings_premium' (lib/services/premium.dart),
-  set up in Play Console by the owner. Do not ask her to set it up or test it again. PrintPals payments are separate (web payment company).
+  SUBSCRIPTION IS DONE and live in the uploaded v1.7.1 (code added in 1.7.0, 2026-09-25): the 7 free days are built into the app
+  (no card, no Play trial offer), then Google Play subscription 'brainlings_premium' with monthly and yearly base plans
+  (lib/services/premium.dart, store/Play_Store_listing.md). The owner set it up in Play Console. Do not ask her to set it up or
+  test it again. PrintPals payments are separate (web payment company) and copy the same idea: free week built in, no card.
 - v1.6.2 Say It (owner: Bibi made the child repeat up to 10 times): wrong or no answer is now corrected at once:
   "Nearly! Let me help you. The answer is: X", spells it (names, colours, opposites), "Your turn! Say it once!",
   ONE listen, then "I heard you! Brilliant!" or "Good try! Let's keep going!" and move on. Sentences the same way.
