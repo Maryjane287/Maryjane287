@@ -11,7 +11,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '29'
+VERSION = '30'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -1710,7 +1710,7 @@ TOOLS += [
                 ('Is this part of PrintPals Plus?', 'Yes, it is part of the teacher plan. You can try it free for 7 days, no card needed. After that, the teacher plan is $59 a year.')],
     },
     {
-        'id': 'homelang', 'cat': 'reading', 'slug': 'bilingual-flashcards', 'tint': '#e6f6fc', 'icon': '🌍', 'new': True,
+        'id': 'homelang', 'cat': 'reading', 'slug': 'bilingual-flashcards', 'tint': '#e6f6fc', 'icon': '🌍', 'new': False,
         'nav': 'Home language cards',
         'title': 'Free Bilingual Flashcards for Kids | Spanish, French, Swahili or Your Own Language | PrintPals',
         'desc': 'Free printable bilingual picture flashcards: English with Spanish, French, German, Italian, Portuguese or Swahili, or type the words in any language your family speaks. Flashcards or a word mat.',
@@ -1727,7 +1727,7 @@ TOOLS += [
         'faq': [('My language is not in the list. Can I still use it?', 'Yes. Choose "My own language", type its name, and add your words one per line like this: cat = ologbo. The card shows the picture, your word big, and the English word small.')],
     },
     {
-        'id': 'storydice', 'cat': 'reading', 'slug': 'story-dice-printable', 'tint': '#fff6e0', 'icon': '🎲', 'new': True,
+        'id': 'storydice', 'cat': 'reading', 'slug': 'story-dice-printable', 'tint': '#fff6e0', 'icon': '🎲', 'new': False,
         'nav': 'Story dice',
         'title': 'Free Printable Story Dice for Kids | Roll and Tell a Story | PrintPals',
         'desc': 'Free printable story dice: three picture dice to cut and fold (who, where and what), plus a story mat to draw and write the beginning, middle and end.',
@@ -1740,7 +1740,7 @@ TOOLS += [
         'faq': [('How do I make the dice stronger?', 'Print on thin card, or glue the page onto a cereal box before cutting.')],
     },
     {
-        'id': 'signs', 'cat': 'charts', 'slug': 'first-day-of-school-sign', 'tint': '#fff0f5', 'icon': '📸', 'new': True,
+        'id': 'signs', 'cat': 'charts', 'slug': 'first-day-of-school-sign', 'tint': '#fff0f5', 'icon': '📸', 'new': False,
         'nav': 'Milestone signs',
         'title': 'Free First Day of School Sign Printable | Last Day, 100 Days, Birthday | PrintPals',
         'desc': 'Free printable milestone signs for photos: first day of school, last day of school, 100 days of school, birthday, first lost tooth and big brother or sister. Add their name and favourites.',
@@ -1757,7 +1757,7 @@ TOOLS += [
         'faq': [('Can I leave the favourites blank?', 'Yes. Empty boxes stay blank so your child can write or draw their answers.')],
     },
     {
-        'id': 'screentime', 'cat': 'charts', 'slug': 'screen-time-tickets', 'tint': '#eef2ff', 'icon': '🎟️', 'new': True,
+        'id': 'screentime', 'cat': 'charts', 'slug': 'screen-time-tickets', 'tint': '#eef2ff', 'icon': '🎟️', 'new': False,
         'nav': 'Screen time tickets',
         'title': 'Free Printable Screen Time Tickets for Kids | End the Screen Time Battles | PrintPals',
         'desc': 'Free printable screen time tickets: children earn tickets for reading, playing outside and helping, then swap them for 15 or 30 minutes of screen time. With a "how to earn" chart.',
@@ -1773,7 +1773,7 @@ TOOLS += [
         'faq': [('How many tickets should they earn?', 'Start small: two or three a day is plenty for most families. You can change the ways to earn at any time.')],
     },
     {
-        'id': 'siblings', 'cat': 'world', 'slug': 'sibling-turn-taking-chart', 'tint': '#f1f8e6', 'icon': '👫', 'new': True,
+        'id': 'siblings', 'cat': 'world', 'slug': 'sibling-turn-taking-chart', 'tint': '#f1f8e6', 'icon': '👫', 'new': False,
         'nav': 'Sibling peace pack',
         'title': 'Free Sibling Turn Taking Chart and Kindness Coupons | Sibling Peace Pack | PrintPals',
         'desc': 'Free printables to stop sibling arguments: a whose turn is it chart, a turn spinner, team rules to sign and kindness coupons for brothers and sisters.',
@@ -1788,7 +1788,7 @@ TOOLS += [
         'faq': [('Does it work for more than two children?', 'Yes. Add up to four names and the chart, spinner and signatures share turns between everyone.')],
     },
     {
-        'id': 'lunchnotes', 'cat': 'world', 'slug': 'lunchbox-notes-for-kids', 'tint': '#fff0f0', 'icon': '🥪', 'new': True,
+        'id': 'lunchnotes', 'cat': 'world', 'slug': 'lunchbox-notes-for-kids', 'tint': '#fff0f0', 'icon': '🥪', 'new': False,
         'nav': 'Lunchbox notes',
         'title': 'Free Printable Lunchbox Notes for Kids | Love Notes and Jokes | PrintPals',
         'desc': 'Free printable lunchbox notes with love notes and funny jokes, personalised with your child\'s name and signed from you. Ten notes a page, bright or to colour in.',
@@ -1804,7 +1804,7 @@ TOOLS += [
         'faq': [('Can I write my own messages?', 'Yes. Choose "Write my own" for blank notes to write by hand.')],
     },
     {
-        'id': 'schoolready', 'cat': 'packs', 'slug': 'ready-for-school-pack', 'tint': '#e8f8f4', 'icon': '🏫', 'new': True,
+        'id': 'schoolready', 'cat': 'packs', 'slug': 'ready-for-school-pack', 'tint': '#e8f8f4', 'icon': '🏫', 'new': False,
         'nav': 'Ready for school',
         'title': 'Free Starting School Pack | Ready for School Checklist, All About Me, Countdown | PrintPals',
         'desc': 'A free ready for school pack for children starting school or nursery: an "I can do it myself" checklist, All about me for the teacher, a school morning routine, bag checklist, feelings page, countdown and first day sign.',
@@ -1819,7 +1819,7 @@ TOOLS += [
         'faq': [('When should we start?', 'Two to four weeks before the first day is perfect. Choose the countdown length to match.')],
     },
     {
-        'id': 'holidayplan', 'cat': 'packs', 'slug': 'holiday-learning-plan', 'tint': '#fff6e0', 'icon': '🏖️', 'new': True, 'plus': True,
+        'id': 'holidayplan', 'cat': 'packs', 'slug': 'holiday-learning-plan', 'tint': '#fff6e0', 'icon': '🏖️', 'new': False, 'plus': True,
         'nav': 'Holiday learning plan',
         'title': 'Holiday Learning Plan for Kids | Stop the Summer Slide, 3 Days a Week | PrintPals',
         'desc': 'A personalised school holiday learning plan: 2, 4 or 6 weeks of short reading, maths and fun pages three days a week, a holiday bucket list, a reading log and a certificate. Keeps skills fresh without spoiling the holiday.',
@@ -1836,12 +1836,119 @@ TOOLS += [
         'article': """<h2>Beat the summer slide</h2><p>Children can lose a little of what they learned over a long break. Just ten minutes, three days a week, keeps reading and maths fresh, and leaves plenty of time for adventures. The last weeks gently stretch reading ready for the new school year.</p>""",
         'faq': [('Is this part of PrintPals Plus?', 'Yes. You can try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year, and you can cancel any time.')],
     },
+    {
+        'id': 'calmkit', 'cat': 'world', 'slug': 'calm-down-kit-for-kids', 'tint': '#eef2ff', 'icon': '🌈', 'new': True,
+        'nav': 'Big feelings toolkit',
+        'title': 'Free Calm Down Kit for Kids | Breathing Cards, Feelings Thermometer, Worry Jar | PrintPals',
+        'desc': 'A free printable calm down kit for children with big feelings: breathing exercises (star, rainbow, balloon), calm down choice cards, a feelings thermometer and a worry jar with slips.',
+        'h1': 'Big feelings toolkit',
+        'lead': 'Tantrums, worries and meltdowns are hard for everyone. Give your child simple tools to calm their body and name their feelings: breathing games, calm down choices, a feelings thermometer and a worry jar.',
+        'card': 'Breathing games, calm down cards, a feelings thermometer and a worry jar.',
+        'form': check('breathing', 'Breathing games') + check('choices', 'Calm down choice cards') + check('thermometer', 'Feelings thermometer') + check('worry', 'Worry jar and slips') + PAPER,
+        'article': """<h2>Practise when calm</h2><p>Children cannot learn a new skill in the middle of a meltdown. Practise the breathing games at calm times, like bedtime, so they become easy to use when big feelings arrive. Stay close, keep your voice low, and name the feeling: "You are really cross. I am here."</p>""",
+        'faq': [('What age is this for?', 'The breathing games work from about age 3. The thermometer and worry jar suit ages 4 to 10.')],
+    },
+    {
+        'id': 'socialstory', 'cat': 'world', 'slug': 'social-stories-for-kids', 'tint': '#e6f6fc', 'icon': '📖', 'new': True,
+        'nav': 'Social stories',
+        'title': 'Free Personalised Social Stories for Kids | Dentist, Doctor, Haircut, New Baby, Flying | PrintPals',
+        'desc': 'Free printable social stories with your child\'s name, to prepare them for new experiences: the dentist, doctor, a haircut, a new baby, moving house, flying and a first sleepover.',
+        'h1': 'Social stories',
+        'lead': 'New experiences can be scary. A short story with your child\'s name, read a few times beforehand, helps them know exactly what will happen. Wonderful for anxious children and for autistic children.',
+        'card': 'Short stories with their name that prepare them for new experiences.',
+        'form': field('The story', '<select name="topic"><option value="dentist">Going to the dentist</option><option value="doctor">Going to the doctor</option><option value="haircut">Having a haircut</option><option value="baby">A new baby is coming</option><option value="moving">Moving to a new home</option><option value="flying">Going on an aeroplane</option><option value="sleepover">My first sleepover</option></select>')
+        + field('Child\'s name', '<input type="text" name="name" maxlength="24" placeholder="Leo" autocomplete="off">')
+        + field('Who will come with them? (optional)', '<input type="text" name="who" maxlength="20" placeholder="Mummy" autocomplete="off">')
+        + PAPER,
+        'article': """<h2>Knowing what comes next</h2><p>Social stories describe a new situation calmly, step by step, from the child's point of view. Read the story together several times in the days before, and bring it along on the day. The last page lets your child draw how it went.</p>""",
+        'faq': [('What is a social story?', 'A short, simple story that explains a situation and what to expect. They are widely used to help children feel safe and prepared.')],
+    },
+    {
+        'id': 'foods', 'cat': 'world', 'slug': 'picky-eater-food-chart', 'tint': '#f1f8e6', 'icon': '🥦', 'new': True,
+        'nav': 'Food explorer',
+        'title': 'Free Picky Eater Chart | Food Explorer Passport and Eat the Rainbow Chart | PrintPals',
+        'desc': 'Free printables for picky eaters: a food explorer passport where children rate new foods they try, an eat the rainbow weekly chart, and a favourite plate to draw.',
+        'h1': 'Food explorer',
+        'lead': 'Turn trying new food into an adventure. Children collect foods in their explorer passport, rate them with a face, and colour the rainbow as they eat fruit and vegetables.',
+        'card': 'A food explorer passport and eat the rainbow chart for picky eaters.',
+        'form': field('Child\'s name (optional)', '<input type="text" name="name" maxlength="24" placeholder="Sam" autocomplete="off">')
+        + check('passport', 'Food explorer passport') + check('rainbow', 'Eat the rainbow chart') + check('plate', 'My favourite plate') + PAPER,
+        'article': """<h2>One tiny taste counts</h2><p>Children often need to try a new food many times before they like it. Celebrate every tiny taste, even if they do not like it yet: "You were so brave to try it!" No pressure, lots of praise, and let them see you enjoying the same food.</p>""",
+        'faq': [('What if my child refuses to try anything?', 'Start with touching or smelling a new food, and count that as exploring. Tiny steps build confidence.')],
+    },
+    {
+        'id': 'talkcards', 'cat': 'world', 'slug': 'conversation-cards-for-kids', 'tint': '#fff0f5', 'icon': '💬', 'new': True,
+        'nav': 'Conversation cards',
+        'title': 'Free Conversation Cards for Kids | Dinner Table, Car Journey, Bedtime, Grandparents | PrintPals',
+        'desc': 'Free printable conversation starter cards for families: dinner table questions, car journey games, bedtime chats and questions to ask grandparents.',
+        'h1': 'Conversation cards',
+        'lead': 'Swap "How was school?" "Fine." for real conversations. Question cards for dinner, the car, bedtime and grandparents.',
+        'card': 'Question cards for dinner, the car, bedtime and grandparents.',
+        'form': field('Cards', seg('set', [('dinner', 'Dinner'), ('car', 'Car'), ('bedtime', 'Bedtime'), ('grandparents', 'Grandparents'), ('all', 'All four')], 'dinner')) + PAPER,
+        'article': """<h2>Put the phones down</h2><p>Keep the cards in a jar on the table. Everyone takes a turn to pick one, and everyone answers, grown-ups too. The grandparents cards are perfect for video calls with family far away.</p>""",
+        'faq': [('What age is this for?', 'Ages 3 and up. Younger children can answer with a picture or a single word.')],
+    },
+    {
+        'id': 'sleep', 'cat': 'charts', 'slug': 'bedtime-chart-and-ok-to-wake-sign', 'tint': '#eef2ff', 'icon': '🌙', 'new': True,
+        'nav': 'Sleep pack',
+        'title': 'Free Bedtime Pass, OK to Wake Sign and Stay in Bed Chart | Sleep Pack | PrintPals',
+        'desc': 'A free printable sleep pack for children who get out of bed: bedtime passes, a two sided OK to wake door sign, a stay in bed reward chart and a bedtime routine.',
+        'h1': 'Sleep pack',
+        'lead': 'For the child who pops out of bed again and again, or wakes at 5am. Bedtime passes, an "OK to wake" sign, a stay in bed chart and a calm routine.',
+        'card': 'Bedtime passes, an OK to wake sign and a stay in bed chart.',
+        'form': field('Child\'s name (optional)', '<input type="text" name="name" maxlength="24" placeholder="Mia" autocomplete="off">')
+        + check('ok', '"OK to wake" sign') + check('pass', 'Bedtime passes') + check('chart', 'Stay in bed chart') + check('routine', 'Bedtime routine cards') + PAPER,
+        'article': """<h2>How bedtime passes work</h2><p>Each night your child gets one pass. They can swap it for one quick thing after lights out: a drink, a hug or a trip to the toilet. Once it is used, it is time to stay in bed. Children feel in control, and the endless call-backs stop. Turn the sign to the sun side when it is time to get up.</p>""",
+        'faq': [('How do I use the OK to wake sign?', 'Hang it on the door showing the moon at bedtime. At your chosen wake up time, turn it to the sun. Praise every morning they wait!')],
+    },
+    {
+        'id': 'gratitude', 'cat': 'charts', 'slug': 'gratitude-journal-for-kids', 'tint': '#fff6e0', 'icon': '🙏', 'new': True,
+        'nav': 'Gratitude journal',
+        'title': 'Free Printable Gratitude Journal for Kids | Three Good Things | PrintPals',
+        'desc': 'A free printable gratitude and happy journal for kids: three good things, a kind moment, something they are proud of and a picture every day, or a one page thankful week.',
+        'h1': 'Gratitude journal',
+        'lead': 'Three good things a day builds a happier, kinder child. A week of journal pages, or a one page thankful week for younger children.',
+        'card': 'Three good things, kindness and pride, one page a day.',
+        'form': field('Journal', seg('kind', [('daily', '7 daily pages'), ('week', 'One page week')], 'daily'))
+        + field('Child\'s name (optional)', '<input type="text" name="name" maxlength="24" placeholder="Emma" autocomplete="off">') + PAPER,
+        'article': """<h2>A happy habit</h2><p>Fill it in together at bedtime. Noticing good things, big or tiny, helps children feel calmer and more positive. Share your own three good things too.</p>""",
+        'faq': [('What if my child cannot write yet?', 'They can draw, and you can write their words for them. Choose the one page week for younger children.')],
+    },
+    {
+        'id': 'potty', 'cat': 'charts', 'slug': 'potty-training-chart', 'tint': '#e8f8f4', 'icon': '🚽', 'new': True,
+        'nav': 'Potty training',
+        'title': 'Free Potty Training Chart and Printables | Picture Steps, Sticker Chart, Certificate | PrintPals',
+        'desc': 'A free printable potty training pack: picture steps for using the potty, a sticker chart with your child\'s name and a certificate to celebrate.',
+        'h1': 'Potty training pack',
+        'lead': 'Everything for potty training in one print: picture steps to follow, a sticker chart with their name, and a certificate for the big day.',
+        'card': 'Picture steps, a sticker chart and a certificate for potty training.',
+        'form': field('Child\'s name (optional)', '<input type="text" name="name" maxlength="24" placeholder="Leo" autocomplete="off">')
+        + field('Chart pictures', seg('theme', [('stars', 'Stars'), ('hearts', 'Hearts'), ('rockets', 'Rockets'), ('dinos', 'Dinos')], 'stars'))
+        + check('steps', 'Picture steps') + check('chart', 'Sticker chart') + check('certificate', 'Certificate') + PAPER,
+        'article': """<h2>Patience and praise</h2><p>Stick the picture steps next to the potty or toilet, and go through them together every time. Celebrate each try, not only each success. Accidents are part of learning: stay calm and say "Let's try again next time."</p>""",
+        'faq': [('When should we start?', 'Most children are ready between 2 and 3 years old, when they can tell you they need to go and stay dry for a couple of hours.')],
+    },
+    {
+        'id': 'storybook', 'cat': 'packs', 'slug': 'personalised-storybook', 'tint': '#f5edff', 'icon': '📕', 'new': True, 'plus': True,
+        'nav': 'Personalised storybook',
+        'title': 'Personalised Storybook for Kids | Your Child Is the Hero, Printable and Colour In | PrintPals',
+        'desc': 'A printable personalised storybook where your child is the hero: 12 pages with their name, pictures to colour, a dedication page from you and a page to draw their favourite part.',
+        'h1': 'Personalised storybook',
+        'lead': 'A real picture book where your child is the hero. Their name on the cover and every page, pictures to colour in, and a dedication from you. A gift they will keep.',
+        'card': 'A picture book starring your child, with pictures to colour.',
+        'form': field('Story', seg('story', [('star', 'The Lost Star'), ('party', 'Big Animal Party'), ('sea', 'Under the Sea')], 'star'))
+        + field('Child\'s name', '<input type="text" name="name" maxlength="24" placeholder="Mia" autocomplete="off">')
+        + field('With love from (optional)', '<input type="text" name="from" maxlength="30" placeholder="Grandma and Grandpa" autocomplete="off">')
+        + PAPER,
+        'article': """<h2>Make it a keepsake</h2><p>Print double sided, fold and staple, or take the PDF to a print shop and ask for it to be bound. Grandparents far away can make one and post it, and it makes a beautiful birthday gift.</p>""",
+        'faq': [('Is this part of PrintPals Plus?', 'Yes. You can try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year, and you can cancel any time.')],
+    },
 ]
 
 # The homepage sections, in learning order (easiest first). Every tool appears in exactly one section.
 ARRANGE = [
-    ('packs', 'Ready-made packs', 'Packs', 'Stop searching. A week, a month or the whole holiday planned for your child, activity books, starting school, quick packs, family far away, a learning passport and class packs.',
-     ['pack', 'monthplan', 'holidayplan', 'activitybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack']),
+    ('packs', 'Ready-made packs', 'Packs', 'Stop searching. A week, a month or the whole holiday planned for your child, storybooks and activity books, starting school, quick packs, family far away, a learning passport and class packs.',
+     ['pack', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack']),
     ('handwriting', 'Handwriting', 'Handwriting', 'From first pencil lines to joined writing, with real letter shapes and stroke order.',
      ['prewriting', 'names', 'letters', 'mixups', 'joined', 'writingpaper', 'alphabets']),
     ('reading', 'Reading & phonics', 'Reading', 'Letter sounds, CVC words, syllables, sight words, sentences, spelling and stories where your child is the hero.',
@@ -1853,14 +1960,15 @@ ARRANGE = [
     ('crafts', 'Colouring, crafts & parties', 'Colouring & crafts', 'Colouring pages, photo colouring, grid drawing, how to draw, puppets, crowns, bookmarks, door hangers, cards, keepsakes and party packs.',
      ['colouring', 'photo', 'colournum', 'gridcopy', 'howtodraw', 'rolldraw', 'cutpaste', 'crafts', 'puppets', 'bookmarks', 'doorhangers', 'cards', 'handprints', 'party']),
     ('charts', 'Charts & planners', 'Charts', 'Routines, chores, reward charts, 30 day challenges, certificates, reading logs, planners, calendars, height charts and labels.',
-     ['routine', 'chores', 'reward', 'screentime', 'challenge', 'certificate', 'signs', 'readinglog', 'homework', 'calendar', 'heightchart', 'labels']),
-    ('world', 'Me & my world', 'My world', 'Family, my body, feelings, days and months, weather, life cycles and scavenger hunts that get children exploring.',
-     ['family', 'siblings', 'lunchnotes', 'mybody', 'feelings', 'daysmonths', 'weather', 'lifecycle', 'hunt']),
+     ['routine', 'chores', 'reward', 'potty', 'sleep', 'screentime', 'challenge', 'gratitude', 'certificate', 'signs', 'readinglog', 'homework', 'calendar', 'heightchart', 'labels']),
+    ('world', 'Me & my world', 'My world', 'Family, siblings, big feelings, new experiences, food, conversations, my body, days and months, weather, life cycles and scavenger hunts.',
+     ['family', 'siblings', 'lunchnotes', 'talkcards', 'mybody', 'calmkit', 'socialstory', 'foods', 'feelings', 'daysmonths', 'weather', 'lifecycle', 'hunt']),
 ]
 # Ages each tool suits (first year, last year).
 AGES = {
     'pack': (3, 8), 'quickpack': (3, 8), 'faraway': (3, 10), 'monthplan': (3, 8), 'activitybook': (3, 9), 'passport': (3, 8), 'classpack': (3, 8),
     'homelang': (2, 8), 'schoolready': (3, 6), 'holidayplan': (3, 8), 'signs': (3, 11), 'storydice': (4, 9), 'siblings': (3, 10), 'screentime': (4, 12), 'lunchnotes': (3, 10),
+    'calmkit': (3, 10), 'sleep': (2, 7), 'foods': (2, 8), 'socialstory': (2, 8), 'storybook': (2, 8), 'talkcards': (3, 12), 'gratitude': (4, 12), 'potty': (1, 4),
     'prewriting': (2, 4), 'names': (3, 6), 'letters': (3, 6), 'mixups': (5, 7), 'joined': (6, 9), 'writingpaper': (4, 9), 'alphabets': (4, 9),
     'abcorder': (4, 6), 'cvc': (4, 6), 'sounds': (5, 7), 'families': (5, 7), 'rhyming': (4, 6), 'syllables': (4, 7), 'sight': (4, 7), 'colourwords': (3, 5),
     'spelling': (5, 9), 'flashcards': (2, 7), 'opposites': (3, 6), 'position': (3, 6), 'sentences': (5, 8), 'story': (4, 8), 'storywriting': (5, 9),
@@ -1902,7 +2010,7 @@ CAT_TEXT = {a[0]: a[3] for a in ARRANGE}
 NAV_LABEL = {a[0]: a[2] for a in ARRANGE}
 
 
-JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'plus', 'app']
+JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'plus', 'app']
 CONTACT = 'graceandloannesofficial@gmail.com'
 # Stripe customer portal: parents manage, switch or cancel their Plus subscription here.
 STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'
@@ -2163,7 +2271,7 @@ PLUS = f'''<h1>PrintPals Plus</h1>
 <li>{sum(1 for t in TOOLS if t['cat'] != 'packs')} worksheet makers</li><li>Weekly learning pack</li><li>Siblings packs</li><li>Quick packs and family far away pack</li><li>Learning passport</li><li>Ink saver, easy-read letters, Easier and Harder</li><li>No sign up, ever</li></ul>
 <a class="btn alt" href="/">Start printing</a></div>
 <div class="plan best"><span class="ribbon">Most loved</span><h3>Plus for families</h3><div class="price">$4.99<span> a month</span></div><p class="or">or $39 a year (save 35%)</p><ul>
-<li>Everything in Free</li><li><b>Monthly learning plans</b> that grow with your child</li><li><b>Holiday learning plans</b> for 2, 4 or 6 weeks</li><li><b>Personalised activity books</b> up to 40 pages</li><li>New Plus packs every month</li><li>7 free days first, cancel any time</li></ul>
+<li>Everything in Free</li><li><b>Monthly learning plans</b> that grow with your child</li><li><b>Holiday learning plans</b> for 2, 4 or 6 weeks</li><li><b>Personalised storybooks</b> starring your child</li><li><b>Personalised activity books</b> up to 40 pages</li><li>New Plus packs every month</li><li>7 free days first, cancel any time</li></ul>
 <a class="btn" href="https://buy.stripe.com/7sYcN43U39lV6xW1i21kA01" rel="noopener">Get Plus yearly, $39</a><a class="btn alt" href="https://buy.stripe.com/14A00igGPbu309ygcW1kA00" rel="noopener" style="margin-top:12px">Get Plus monthly, $4.99</a><a class="try" href="/monthly-learning-plan">or try it free for 7 days →</a></div>
 <div class="plan"><h3>Teachers</h3><div class="price">$59<span> a year</span></div><ul>
 <li>Everything in Plus</li><li><b>Class packs</b> for up to 40 children</li><li>Name tracing, labels, bookmarks, reward charts, stories and certificates for every child</li><li>Use it in every class you teach</li></ul>

@@ -76,7 +76,8 @@ use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in 
 for painted pictures on every sheet.
 Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
 (colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
-fractions, colour by number, spot the difference. Batch 12 live (VERSION 29, 104 tools, tools12.js): home language flashcards (6 languages + type your own), story dice,
+fractions, colour by number, spot the difference. Batch 13 live (VERSION 30, 112 tools, tools13.js): big feelings toolkit, sleep pack, food explorer, social stories,
+personalised storybook (Plus, 3 stories), conversation cards, gratitude journal, potty training pack. Batch 12 live (VERSION 29, 104 tools, tools12.js): home language flashcards (6 languages + type your own), story dice,
 milestone signs, screen time tickets, sibling peace pack, lunchbox notes, ready for school pack (free), holiday learning plan (Plus).
 #plusbox is hidden in print. PAYMENTS LIVE (VERSION 28, Stripe account acct_1UJzb8BlA0P4Xlju, Grace and Loannes Ltd): public/js/plus.js holds the 3 Stripe
 payment links (monthly $4.99, yearly $39, teacher $59, all live, USD, tax inclusive) and the customer portal link. Plus tools
