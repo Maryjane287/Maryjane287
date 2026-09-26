@@ -236,3 +236,40 @@ footer .foot-cols a:hover { color: #fff; }
 .plan .try { display: block; text-align: center; margin-top: 12px; font-weight: 800; color: var(--coral); text-decoration: none; }
 @media print { body.plus-locked #preview { display: none !important; } }
 .new.plus { display: inline-block; padding: 3px 11px; border-radius: 99px; font: 800 13px 'Nunito', sans-serif; vertical-align: middle; }
+
+/* ---- Review polish (v34) ---- */
+/* The Print button stays in view at the bottom of the settings panel. */
+@media screen and (min-width: 901px) {
+  .panel > .btn[data-action=print] { position: sticky; bottom: -22px; z-index: 2; width: 100%; margin-top: 14px; box-shadow: 0 5px 0 #d94f4f, 0 -18px 18px 6px #fff; }
+}
+/* Badges sit neatly in the corner of each card, never wrapping under the title. */
+.tool h3 .new { position: absolute; top: 32px; right: 32px; margin: 0; z-index: 1; box-shadow: 0 4px 12px rgba(224, 69, 123, .3); vertical-align: 0; }
+.tool h3 .new.plus { box-shadow: 0 4px 12px rgba(138, 63, 209, .3); }
+/* Each section shows its best six, with a button to see the rest. */
+.cat:not(.open) .tool.more { display: none; }
+@media (max-width: 700px) { .cat:not(.open) .tool.m-more { display: none; } }
+.finder-on .cat .tool.more, .finder-on .cat .tool.m-more { display: block; }
+.finder-on .more-row { display: none; }
+.more-row { display: flex; justify-content: center; margin: -6px 0 18px; }
+.more-btn { font: 800 16px 'Nunito', sans-serif; color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 99px; padding: 12px 24px; cursor: pointer; box-shadow: 0 4px 0 var(--line); transition: transform .15s; }
+.more-btn:hover { transform: translateY(-2px); }
+.more-btn b { color: #e0457b; }
+.cat { border-top: 1px solid var(--line); margin-top: 18px; }
+.cat:first-of-type { border-top: 0; margin-top: 0; }
+.cat h2 .count { display: inline-block; margin-left: 6px; vertical-align: 4px; white-space: nowrap; font: 800 14px 'Nunito', sans-serif; color: var(--soft); background: #f4f1fb; padding: 3px 10px; border-radius: 99px; }
+/* Phones: compact cards with the picture beside the words, and a swipeable feature row. */
+@media (max-width: 700px) {
+  .tools { grid-template-columns: 1fr; gap: 14px; }
+  .tool { display: grid; grid-template-columns: 112px 1fr; column-gap: 14px; align-items: start; padding: 14px; }
+  .tool .thumb { grid-row: 1 / span 4; height: 150px; margin: 0; border-radius: 12px; }
+  .tool .thumb img { width: 86%; transform: translateY(12px) rotate(-2deg); }
+  .tool h3 { font-size: 17px; line-height: 1.25; margin: 2px 0 4px; padding-right: 0; }
+  .tool p { font-size: 14px; line-height: 1.4; }
+  .tool .age-mini { margin-top: 8px; font-size: 12px; justify-self: start; }
+  .tool .go { margin-top: 6px; font-size: 14px; }
+  .tool h3 .new { top: 8px; right: auto; left: 8px; font-size: 11px; }
+  .only-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; padding: 4px 16px 18px; margin: 0 -16px; scrollbar-width: none; }
+  .only-grid::-webkit-scrollbar { display: none; }
+  .only-card { flex: 0 0 80%; scroll-snap-align: center; }
+}
+footer .foot-all { color: #ffb3c7 !important; font-weight: 800; margin-top: 4px; }

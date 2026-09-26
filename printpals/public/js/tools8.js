@@ -137,7 +137,9 @@ function makeCompare(o, paper) {
   const max = kind === 'to100' ? 100 : kind === 'to20' ? 20 : 10;
   const items = [];
   for (let i = 0; i < (kind === 'pictures' ? 8 : 16); i++) {
-    const a = Math.floor(rand() * (max + 1)), b = rand() < 0.12 ? a : Math.floor(rand() * (max + 1));
+    // Picture rows always show at least one thing on each side, so no row looks empty.
+    const lo = kind === 'pictures' ? 1 : 0, R = () => lo + Math.floor(rand() * (max + 1 - lo));
+    const a = R(), b = rand() < 0.12 ? a : R();
     items.push([a, b]);
   }
   const arts = ['apple', 'star', 'strawberry', 'ladybird', 'cupcake', 'balloon', 'orange', 'chick'].map(ART);
@@ -338,9 +340,9 @@ function makeFamily(o, paper) {
   const cx = pg.w / 2;
   // The tree
   const top = pg.y + 4, bottom = pg.bottom - 4;
-  pg.add(`<path d="M${cx - 16} ${bottom} Q${cx - 10} ${bottom - 60} ${cx - 8} ${top + 120} L${cx + 8} ${top + 120} Q${cx + 10} ${bottom - 60} ${cx + 16} ${bottom} Z" fill="#f3e3cf" stroke="${INK}" stroke-width="0.8"/>`);
+  pg.add(`<path d="M${cx - 16} ${bottom} Q${cx - 10} ${bottom - 60} ${cx - 8} ${top + 150} L${cx + 8} ${top + 150} Q${cx + 10} ${bottom - 60} ${cx + 16} ${bottom} Z" fill="#f3e3cf" stroke="${INK}" stroke-width="0.8"/>`);
   let crown = '';
-  const r = pg.width * 0.46, ry = (bottom - top) * 0.38, ccy = top + ry + 4;
+  const r = pg.width * 0.47, ry = (bottom - top) * 0.41, ccy = top + ry + 2;
   for (let i = 0; i <= 14; i++) {
     const a = (i * 2 * Math.PI) / 14, b = ((i + 0.5) * 2 * Math.PI) / 14;
     const x = cx + Math.cos(a) * r, y = ccy + Math.sin(a) * ry;
@@ -349,22 +351,24 @@ function makeFamily(o, paper) {
   pg.add(`<path d="${crown} Z" fill="#effaf0" stroke="${INK}" stroke-width="0.8"/>`);
   const frame = (x, y, w, label) => {
     pg.add(`<rect x="${x - w / 2}" y="${y}" width="${w}" height="${w * 1.05}" rx="${w * 0.2}" fill="#fff" stroke="${INK}" stroke-width="0.7"/>`);
+    // The label sits just above the frame, so it never falls off the edge of the tree.
+    pg.add(`<text x="${x}" y="${y - 1.6}" text-anchor="middle" font-family="${FONT}" font-weight="800" font-size="3.4" fill="${SOFT}">${label}</text>`);
     pg.add(`<rect x="${x - w / 2 - 2}" y="${y + w * 1.05 + 2}" width="${w + 4}" height="9" rx="3" fill="#fff" stroke="#c9c3e3" stroke-width="0.4"/>`);
-    pg.add(`<text x="${x}" y="${y + w * 1.05 + 16}" text-anchor="middle" font-family="${FONT}" font-weight="800" font-size="3.2" fill="${SOFT}">${label}</text>`);
   };
   const w = 30;
   // Grandparents
-  const gy = top + 12;
-  [['Grandma', -64], ['Grandpa', -36], ['Grandma', 36], ['Grandpa', 64]].forEach(([l, dx]) => frame(cx + dx, gy + 6, w * 0.76, l));
+  const gy = top + 20;
+  [['Grandma', -60], ['Grandpa', -33], ['Grandma', 33], ['Grandpa', 60]].forEach(([l, dx]) => frame(cx + dx, gy + 6, w * 0.76, l));
   // Parents
   const py = gy + 58;
   [['Mum', -1], ['Dad', 1]].forEach(([l, k]) => frame(cx + k * 34, py, w, l));
   pg.add(`<path d="${starPath(cx, py + 16, 5, 0.45)}" fill="#ffc93c"/>`);
   // Children
-  const cyy = py + 62;
+  const cyy = py + 60;
   const people = [['Me', 0], ...[...Array(kids)].map((_, i) => ['Brother or sister', i + 1])];
   const span = people.length;
-  people.forEach(([l], i) => frame(cx + (i - (span - 1) / 2) * 44, cyy, i === 0 ? w * 1.1 : w, l));
+  const gap = span > 3 ? 36 : 44, cw2 = span > 3 ? w * 0.84 : w;
+  people.forEach(([l], i) => frame(cx + (i - (span - 1) / 2) * gap, cyy, cw2, l));
   pages.push(pg.svg());
   if (o.about !== false) {
     const p2 = new Page(paper, name ? `All about ${possessive(name)} family` : 'All about my family', { subtitle: 'Talk about these with your family, then fill them in together.', noName: true });

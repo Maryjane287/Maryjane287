@@ -76,12 +76,16 @@ use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in 
 for painted pictures on every sheet.
 Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
 (colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
-fractions, colour by number, spot the difference. Batch 16 live (VERSION 33, 134 tools, tools16.js): paper games (noughts and crosses, dots and boxes,
+fractions, colour by number, spot the difference. Full site review live (VERSION 34, 130 tools = 120 makers + 10 packs): home shows 6 cards per
+section (4 on phones) with Show all, search/age/jump/hash open everything; phone cards are compact (picture left); feature boxes swipe on phones;
+New/Plus badges sit in the card corner; footer shows 6 per category + See all; Print button pinned in the panel. Sheet fixes: pack covers
+(name line clear of rainbow), family tree labels above frames, crocodile rows never empty, story dice fit, sibling rows taller, crown stars.
+Count tools with len(TOOLS), never by hand. Batch 16 live (VERSION 33, 130 tools, tools16.js): paper games (noughts and crosses, dots and boxes,
 word guess with a monster instead of hangman, squiggles), scissor skills (5 levels), ten frames, story sequencing (6 stories, cut and glue),
 screen-free coding (BFS always solvable, answers), animal fact files (8 animals + own topic), pet care chart (6 pets), holiday diary.
-NOTE tools.js already has tenFrame(); batch 16 uses drawTenFrame. Always grep new helper names across all js files. Batch 15 live (VERSION 32, 126 tools, tools15.js): reading comprehension (6 stories starring the child, answers),
+NOTE tools.js already has tenFrame(); batch 16 uses drawTenFrame. Always grep new helper names across all js files. Batch 15 live (VERSION 32, 123 tools, tools15.js): reading comprehension (6 stories starring the child, answers),
 maths minute (30 facts, score tracker), savings jar (any currency, spend/save/share labels), love coupons, packing lists (6 trips),
-family meal planner (week plan, shopping list, chef menu), healthy habits posters (handwash, sneeze, dressed, toilet). Batch 14 live (VERSION 31, 119 tools, tools14.js): party invitations (4 per page), countdown calendar
+family meal planner (week plan, shopping list, chef menu), healthy habits posters (handwash, sneeze, dressed, toilet). Batch 14 live (VERSION 31, 116 tools, tools14.js): party invitations (4 per page), countdown calendar
 (any occasion, 24/12/7 days with family activities), tooth brushing chart, family rules poster, babysitter info sheet (phone numbers only by hand),
 kitchen science (6 experiments), letter writing kit (paper, envelope net, guide); storybook now has 5 stories (dino, garden added). Batch 13 live (VERSION 30, 112 tools, tools13.js): big feelings toolkit, sleep pack, food explorer, social stories,
 personalised storybook (Plus, 3 stories), conversation cards, gratitude journal, potty training pack. Batch 12 live (VERSION 29, 104 tools, tools12.js): home language flashcards (6 languages + type your own), story dice,

@@ -5043,7 +5043,7 @@ function makeCrafts(o, paper) {
   const by = 120, bh = 38;
   pg.add(`<rect x="${x0}" y="${by}" width="${bw - 20}" height="${bh}" ${LW}/><rect x="${x0 + bw - 20}" y="${by}" width="20" height="${bh}" fill="#f4f1fb" stroke="#1f1b2e" stroke-width="1" stroke-dasharray="3 2"/>`);
   pg.add(`<text x="${x0 + bw - 10}" y="${by + bh / 2 + 1.5}" text-anchor="middle" font-family="${FONT}" font-weight="800" font-size="4" fill="${SOFT}">glue</text>`);
-  for (let i = 0; i < 8; i++) pg.add(`<path d="${starPath(x0 + 16 + i * ((bw - 40) / 7), by + bh / 2, 7, 0.45)}" ${LW}/>`);
+  for (let i = 0; i < 8; i++) pg.add(`<path d="${starPath(x0 + 16 + i * ((bw - 56) / 7), by + bh / 2, 7, 0.45)}" ${LW}/>`);
   pg.add(`<text x="${W / 2}" y="${pg.h - 18}" text-anchor="middle" font-family="${FONT}" font-weight="700" font-size="4" fill="${SOFT}">✂️ Colour both strips, cut them out, then glue the strips together to fit around your head.</text>`);
   pg.footer = () => {};
   return [pg.svg()];
@@ -5305,7 +5305,9 @@ function makeCompare(o, paper) {
   const max = kind === 'to100' ? 100 : kind === 'to20' ? 20 : 10;
   const items = [];
   for (let i = 0; i < (kind === 'pictures' ? 8 : 16); i++) {
-    const a = Math.floor(rand() * (max + 1)), b = rand() < 0.12 ? a : Math.floor(rand() * (max + 1));
+    // Picture rows always show at least one thing on each side, so no row looks empty.
+    const lo = kind === 'pictures' ? 1 : 0, R = () => lo + Math.floor(rand() * (max + 1 - lo));
+    const a = R(), b = rand() < 0.12 ? a : R();
     items.push([a, b]);
   }
   const arts = ['apple', 'star', 'strawberry', 'ladybird', 'cupcake', 'balloon', 'orange', 'chick'].map(ART);
@@ -5506,9 +5508,9 @@ function makeFamily(o, paper) {
   const cx = pg.w / 2;
   // The tree
   const top = pg.y + 4, bottom = pg.bottom - 4;
-  pg.add(`<path d="M${cx - 16} ${bottom} Q${cx - 10} ${bottom - 60} ${cx - 8} ${top + 120} L${cx + 8} ${top + 120} Q${cx + 10} ${bottom - 60} ${cx + 16} ${bottom} Z" fill="#f3e3cf" stroke="${INK}" stroke-width="0.8"/>`);
+  pg.add(`<path d="M${cx - 16} ${bottom} Q${cx - 10} ${bottom - 60} ${cx - 8} ${top + 150} L${cx + 8} ${top + 150} Q${cx + 10} ${bottom - 60} ${cx + 16} ${bottom} Z" fill="#f3e3cf" stroke="${INK}" stroke-width="0.8"/>`);
   let crown = '';
-  const r = pg.width * 0.46, ry = (bottom - top) * 0.38, ccy = top + ry + 4;
+  const r = pg.width * 0.47, ry = (bottom - top) * 0.41, ccy = top + ry + 2;
   for (let i = 0; i <= 14; i++) {
     const a = (i * 2 * Math.PI) / 14, b = ((i + 0.5) * 2 * Math.PI) / 14;
     const x = cx + Math.cos(a) * r, y = ccy + Math.sin(a) * ry;
@@ -5517,22 +5519,24 @@ function makeFamily(o, paper) {
   pg.add(`<path d="${crown} Z" fill="#effaf0" stroke="${INK}" stroke-width="0.8"/>`);
   const frame = (x, y, w, label) => {
     pg.add(`<rect x="${x - w / 2}" y="${y}" width="${w}" height="${w * 1.05}" rx="${w * 0.2}" fill="#fff" stroke="${INK}" stroke-width="0.7"/>`);
+    // The label sits just above the frame, so it never falls off the edge of the tree.
+    pg.add(`<text x="${x}" y="${y - 1.6}" text-anchor="middle" font-family="${FONT}" font-weight="800" font-size="3.4" fill="${SOFT}">${label}</text>`);
     pg.add(`<rect x="${x - w / 2 - 2}" y="${y + w * 1.05 + 2}" width="${w + 4}" height="9" rx="3" fill="#fff" stroke="#c9c3e3" stroke-width="0.4"/>`);
-    pg.add(`<text x="${x}" y="${y + w * 1.05 + 16}" text-anchor="middle" font-family="${FONT}" font-weight="800" font-size="3.2" fill="${SOFT}">${label}</text>`);
   };
   const w = 30;
   // Grandparents
-  const gy = top + 12;
-  [['Grandma', -64], ['Grandpa', -36], ['Grandma', 36], ['Grandpa', 64]].forEach(([l, dx]) => frame(cx + dx, gy + 6, w * 0.76, l));
+  const gy = top + 20;
+  [['Grandma', -60], ['Grandpa', -33], ['Grandma', 33], ['Grandpa', 60]].forEach(([l, dx]) => frame(cx + dx, gy + 6, w * 0.76, l));
   // Parents
   const py = gy + 58;
   [['Mum', -1], ['Dad', 1]].forEach(([l, k]) => frame(cx + k * 34, py, w, l));
   pg.add(`<path d="${starPath(cx, py + 16, 5, 0.45)}" fill="#ffc93c"/>`);
   // Children
-  const cyy = py + 62;
+  const cyy = py + 60;
   const people = [['Me', 0], ...[...Array(kids)].map((_, i) => ['Brother or sister', i + 1])];
   const span = people.length;
-  people.forEach(([l], i) => frame(cx + (i - (span - 1) / 2) * 44, cyy, i === 0 ? w * 1.1 : w, l));
+  const gap = span > 3 ? 36 : 44, cw2 = span > 3 ? w * 0.84 : w;
+  people.forEach(([l], i) => frame(cx + (i - (span - 1) / 2) * gap, cyy, cw2, l));
   pages.push(pg.svg());
   if (o.about !== false) {
     const p2 = new Page(paper, name ? `All about ${possessive(name)} family` : 'All about my family', { subtitle: 'Talk about these with your family, then fill them in together.', noName: true });
@@ -7316,7 +7320,7 @@ function packCover(paper, title, sub, lineArt, extra, tint, owner = 'pack') {
   pg.add(`<g transform="translate(${cx - size / 2} ${y + 10}) scale(${(size / 200).toFixed(4)})">${colouringArt(lineArt)}</g>`);
   const ly = pg.bottom - 38;
   (extra || []).forEach((l, i) => pg.add(txt(cx, ly + i * 7, l, 4.6, { font: FONT, colour: SOFT })));
-  pg.add(txt(pg.left + 12, pg.bottom - 16, `This ${owner} belongs to`, 4.6, { anchor: 'start', font: FONT }) + `<line x1="${pg.left + 56}" x2="${pg.right - 12}" y1="${pg.bottom - 15.4}" y2="${pg.bottom - 15.4}" stroke="#b9b3d6" stroke-width="0.4"/>`);
+  pg.add(txt(pg.left + 22, pg.bottom - 16, `This ${owner} belongs to`, 4.6, { anchor: 'start', font: FONT }) + `<line x1="${pg.left + 66}" x2="${pg.right - 22}" y1="${pg.bottom - 15.4}" y2="${pg.bottom - 15.4}" stroke="#b9b3d6" stroke-width="0.4"/>`);
   pg.footer = () => {};
   return pg.svg();
 }
@@ -8048,7 +8052,7 @@ function makeStoryDice(o, paper) {
   const pages = [];
   for (let d = 0; d < 3; d += 2) {
     const pg = new Page(paper, d ? 'Story dice (page 2)' : 'Story dice', { subtitle: 'Cut out each dice, fold on the lines and glue the grey tabs inside. Roll all three and tell a story!', noName: true });
-    const s = Math.min(34, (pg.room / 2 - 18) / 3);
+    const s = Math.min(34, (pg.room - 46) / 6);
     set.slice(d, d + 2).forEach(([label, faces], k) => dieNet(pg, pg.left + 12, pg.y + 12 + k * (s * 3 + 24), s, faces, PALETTE[(d + k) * 2 % PALETTE.length], label));
     pages.push(pg.svg());
   }
@@ -8078,7 +8082,7 @@ function makeSiblings(o, paper) {
     const pg = new Page(paper, 'Whose turn is it?', { subtitle: 'No more arguing! Take turns each day. Write or colour the name of whose turn it is.', noName: true });
     const jobs = listOf(o.jobs, 6).length ? listOf(o.jobs, 6) : ['Goes first', 'Chooses the film', 'Sits in the front', 'Picks the story', 'Presses the lift button'];
     const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-    const lw = 50, cw = (pg.width - lw) / 7, rh = Math.min(26, (pg.room - 20) / jobs.length);
+    const lw = 50, cw = (pg.width - lw) / 7, rh = Math.min(36, (pg.room - 20) / jobs.length);
     days.forEach((d, i) => pg.add(txt(pg.left + lw + cw * (i + 0.5), pg.y + 6, d, 4.4, { colour: PALETTE[i] })));
     jobs.forEach((j, r) => {
       const y = pg.y + 10 + r * rh;

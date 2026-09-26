@@ -294,7 +294,7 @@ function makeCrafts(o, paper) {
   const by = 120, bh = 38;
   pg.add(`<rect x="${x0}" y="${by}" width="${bw - 20}" height="${bh}" ${LW}/><rect x="${x0 + bw - 20}" y="${by}" width="20" height="${bh}" fill="#f4f1fb" stroke="#1f1b2e" stroke-width="1" stroke-dasharray="3 2"/>`);
   pg.add(`<text x="${x0 + bw - 10}" y="${by + bh / 2 + 1.5}" text-anchor="middle" font-family="${FONT}" font-weight="800" font-size="4" fill="${SOFT}">glue</text>`);
-  for (let i = 0; i < 8; i++) pg.add(`<path d="${starPath(x0 + 16 + i * ((bw - 40) / 7), by + bh / 2, 7, 0.45)}" ${LW}/>`);
+  for (let i = 0; i < 8; i++) pg.add(`<path d="${starPath(x0 + 16 + i * ((bw - 56) / 7), by + bh / 2, 7, 0.45)}" ${LW}/>`);
   pg.add(`<text x="${W / 2}" y="${pg.h - 18}" text-anchor="middle" font-family="${FONT}" font-weight="700" font-size="4" fill="${SOFT}">✂️ Colour both strips, cut them out, then glue the strips together to fit around your head.</text>`);
   pg.footer = () => {};
   return [pg.svg()];

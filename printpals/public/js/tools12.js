@@ -266,7 +266,7 @@ function makeStoryDice(o, paper) {
   const pages = [];
   for (let d = 0; d < 3; d += 2) {
     const pg = new Page(paper, d ? 'Story dice (page 2)' : 'Story dice', { subtitle: 'Cut out each dice, fold on the lines and glue the grey tabs inside. Roll all three and tell a story!', noName: true });
-    const s = Math.min(34, (pg.room / 2 - 18) / 3);
+    const s = Math.min(34, (pg.room - 46) / 6);
     set.slice(d, d + 2).forEach(([label, faces], k) => dieNet(pg, pg.left + 12, pg.y + 12 + k * (s * 3 + 24), s, faces, PALETTE[(d + k) * 2 % PALETTE.length], label));
     pages.push(pg.svg());
   }
@@ -296,7 +296,7 @@ function makeSiblings(o, paper) {
     const pg = new Page(paper, 'Whose turn is it?', { subtitle: 'No more arguing! Take turns each day. Write or colour the name of whose turn it is.', noName: true });
     const jobs = listOf(o.jobs, 6).length ? listOf(o.jobs, 6) : ['Goes first', 'Chooses the film', 'Sits in the front', 'Picks the story', 'Presses the lift button'];
     const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-    const lw = 50, cw = (pg.width - lw) / 7, rh = Math.min(26, (pg.room - 20) / jobs.length);
+    const lw = 50, cw = (pg.width - lw) / 7, rh = Math.min(36, (pg.room - 20) / jobs.length);
     days.forEach((d, i) => pg.add(txt(pg.left + lw + cw * (i + 0.5), pg.y + 6, d, 4.4, { colour: PALETTE[i] })));
     jobs.forEach((j, r) => {
       const y = pg.y + 10 + r * rh;

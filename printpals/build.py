@@ -11,7 +11,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '33'
+VERSION = '34'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -2368,11 +2368,11 @@ def top(active=''):
     return f'''<a class="skip" href="#main">Skip to content</a><header class="top"><div class="wrap"><a class="brand" href="/">{LOGO}<span>Print<b>Pals</b></span></a><nav class="nav" aria-label="Sections">{nav}</nav></div></header>'''
 
 
-FOOT = '''<footer><div class="wrap"><div class="foot-brand"><div class="brand" style="font-size:24px;color:#fff">Print<b style="color:#ff8a8a">Pals</b></div>
+FOOT = '''<footer><div class="wrap"><div class="foot-brand"><div class="brand" style="font-size:24px;color:#fff;gap:0">Print<b style="color:#ff8a8a">Pals</b></div>
 <p style="max-width:420px;margin-top:8px">Free printable worksheets and ready-made packs for children, made in seconds. Everything is made inside your own browser: nothing you type is sent to us or stored.</p>
 <p class="foot-links"><a href="/plus">PrintPals Plus</a><a href="/help">Help</a><a href="/about">About us</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:''' + CONTACT + '''">Contact</a></p>
 <p style="margin-top:14px">© PrintPals. Free for home and classroom use.</p></div>
-<div class="foot-cols">''' + ''.join(f'<div><h4>{v}</h4>' + ''.join(f'<a href="/{t["slug"]}">{t["nav"]}</a>' for t in TOOLS if t['cat'] == k) + '</div>' for k, v in CATS) + '''</div></div></footer>'''
+<div class="foot-cols">''' + ''.join(f'<div><h4>{v}</h4>' + ''.join(f'<a href="/{t["slug"]}">{t["nav"]}</a>' for t in [x for x in TOOLS if x['cat'] == k][:6]) + f'<a class="foot-all" href="/#{k}">See all {sum(1 for x in TOOLS if x["cat"] == k)} →</a></div>' for k, v in CATS) + '''</div></div></footer>'''
 
 SCRIPTS = f'<script src="/js/pp.js?v={VERSION}"></script>'
 
@@ -2452,12 +2452,17 @@ ONLY = [
 
 
 def home():
-    def card(t):
+    def card(t, i=0):
         a, b = AGES[t['id']]
+        extra = ' more' if i >= 6 else ' m-more' if i >= 4 else ''
         keys = html.escape(re.sub(r'<[^>]+>|&[a-z#0-9]+;', ' ', t['title'] + ' ' + t['desc'] + ' ' + t['form']).lower())
-        return f'''<a class="tool" href="/{t['slug']}" style="--tint:{t['tint']}" data-min="{a}" data-max="{b}" data-keys="{keys}"><div class="thumb"><img src="/img/thumb-{t['id']}.webp" alt="{html.escape(t['h1'])} example" loading="lazy" width="400" height="566"></div>
+        return f'''<a class="tool{extra}" href="/{t['slug']}" style="--tint:{t['tint']}" data-min="{a}" data-max="{b}" data-keys="{keys}"><div class="thumb"><img src="/img/thumb-{t['id']}.webp" alt="{html.escape(t['h1'])} example" loading="lazy" width="400" height="566"></div>
 <h3>{t['icon']} {html.escape(t['h1'])}{'<span class="new plus">Plus</span>' if t.get('plus') else '<span class="new">New</span>' if t.get('new') else ''}</h3><p>{html.escape(t['card'])}</p><span class="age-mini">{ages_text(t['id'])}</span><span class="go">Make one free →</span></a>'''
-    sections = ''.join(f'''<section class="cat{' cat-packs' if k == 'packs' else ''}" id="{k}"><h2>{v}</h2><p class="cat-lead">{CAT_TEXT[k]}</p><div class="tools">{''.join(card(t) for t in TOOLS if t['cat'] == k)}</div></section>''' for k, v in CATS)
+    def section(k, v):
+        ts = [t for t in TOOLS if t['cat'] == k]
+        more = f'<div class="more-row"><button type="button" class="more-btn" data-more="{len(ts)}">Show all <b>{len(ts)}</b> in {html.escape(NAV_LABEL[k])} ▾</button></div>' if len(ts) > 4 else ''
+        return f'''<section class="cat{' cat-packs' if k == 'packs' else ''}" id="{k}"><h2>{v} <span class="count">{len(ts)}</span></h2><p class="cat-lead">{CAT_TEXT[k]}</p><div class="tools">{''.join(card(t, i) for i, t in enumerate(ts))}</div>{more}</section>'''
+    sections = ''.join(section(k, v) for k, v in CATS)
     ld = {'@context': 'https://schema.org', '@type': 'WebSite', 'name': 'PrintPals', 'url': SITE + '/',
           'description': 'Free printable worksheets and ready-made learning packs for children aged 2 to 10: a personalised week in one click, tracing, reading, maths, puzzles, crafts and charts.'}
     shapes = ''.join(f'<span style="width:{s}px;height:{s}px;left:{x}%;top:{y}%;background:{c};animation-delay:{d}s"></span>'
@@ -2488,9 +2493,22 @@ def home():
 {sections}<p class="none" id="none">Nothing found. Try another word, like letters, maths or colouring.</p></div>
 <script>
 (function () {{
-  var box = document.getElementById('find'), age = 'all';
+  var box = document.getElementById('find'), age = 'all', wrap = box.closest('.wrap');
+  function openCat(id) {{ var sec = document.getElementById(id); if (sec && sec.classList.contains('cat')) {{ sec.classList.add('open'); var b = sec.querySelector('.more-btn'); if (b) b.innerHTML = 'Show fewer ▴'; }} }}
+  document.querySelectorAll('.more-btn').forEach(function (b) {{
+    var label = b.innerHTML;
+    b.addEventListener('click', function () {{
+      var sec = b.closest('.cat'), open = sec.classList.toggle('open');
+      b.innerHTML = open ? 'Show fewer ▴' : label;
+      if (!open) sec.scrollIntoView({{ block: 'start' }});
+    }});
+  }});
+  document.querySelectorAll('.jumps a, .cta a[href^="#"]').forEach(function (a) {{ a.addEventListener('click', function () {{ openCat(a.getAttribute('href').slice(1)); }}); }});
+  if (location.hash) openCat(location.hash.slice(1));
+  window.addEventListener('hashchange', function () {{ openCat(location.hash.slice(1)); }});
   function apply() {{
     var q = box.value.trim().toLowerCase(), any = false;
+    wrap.classList.toggle('finder-on', !!q || age !== 'all');
     document.querySelectorAll('.cat').forEach(function (sec) {{
       var shown = 0;
       sec.querySelectorAll('a.tool').forEach(function (a) {{

@@ -154,7 +154,7 @@ function packCover(paper, title, sub, lineArt, extra, tint, owner = 'pack') {
   pg.add(`<g transform="translate(${cx - size / 2} ${y + 10}) scale(${(size / 200).toFixed(4)})">${colouringArt(lineArt)}</g>`);
   const ly = pg.bottom - 38;
   (extra || []).forEach((l, i) => pg.add(txt(cx, ly + i * 7, l, 4.6, { font: FONT, colour: SOFT })));
-  pg.add(txt(pg.left + 12, pg.bottom - 16, `This ${owner} belongs to`, 4.6, { anchor: 'start', font: FONT }) + `<line x1="${pg.left + 56}" x2="${pg.right - 12}" y1="${pg.bottom - 15.4}" y2="${pg.bottom - 15.4}" stroke="#b9b3d6" stroke-width="0.4"/>`);
+  pg.add(txt(pg.left + 22, pg.bottom - 16, `This ${owner} belongs to`, 4.6, { anchor: 'start', font: FONT }) + `<line x1="${pg.left + 66}" x2="${pg.right - 22}" y1="${pg.bottom - 15.4}" y2="${pg.bottom - 15.4}" stroke="#b9b3d6" stroke-width="0.4"/>`);
   pg.footer = () => {};
   return pg.svg();
 }
