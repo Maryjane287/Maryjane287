@@ -208,6 +208,7 @@ const LAYOUTS = {
 // (masthead, lines, badge, quote), so one design works for every category.
 export const DESIGNS = {
   signature: { label: 'Signature', palettes: null },
+  glossy: { label: 'Glossy celebrity', palettes: ['coral', 'midnight'] },
   fashion: { label: 'High fashion', palettes: ['midnight', 'rose'] },
   retro: { label: 'Retro 70s', palettes: ['coral', 'butter'] },
   scrapbook: { label: 'Scrapbook', palettes: ['mint', 'rose'] },
@@ -217,9 +218,14 @@ export const DESIGNS = {
 
 // Example covers for a design: signature uses the magazine's own examples, other
 // designs reuse the first two examples in colours that suit the design.
-export function designExamples(mag, design = 'signature') {
+// Magazines with their own layout offer it as "signature"; newer ones start
+// from the glossy design. The first design in the list is the main product.
+export const designsFor = mag => Object.keys(DESIGNS).filter(d => d !== (mag.layout ? 'glossy' : 'signature') && !(mag.skipDesigns || []).includes(d));
+export const baseDesign = mag => designsFor(mag)[0];
+
+export function designExamples(mag, design = baseDesign(mag)) {
   const d = DESIGNS[design];
-  if (!d || !d.palettes) return mag.examples;
+  if (!d || !d.palettes || design === baseDesign(mag)) return mag.examples;
   return mag.examples.slice(0, 2).map((ex, i) => ({ ...ex, palette: d.palettes[i % d.palettes.length] }));
 }
 
@@ -238,6 +244,15 @@ function slots(mag, v) {
 }
 
 const DESIGN_LAYOUTS = {
+  glossy(s, photo) {
+    return `
+      ${photo}
+      <div class="cv-top"><span>${s.issue}</span><span>${s.edition}</span></div>
+      <h2 class="cv-mast cv-anton" style="font-size:${fit(s.raw, 90, 0.52, 40)}cqw">${s.up}</h2>
+      <div class="cv-lines">${s.lines.map(([l, t], i) => `<p><b${i ? '' : ' class="cv-tag"'}>${l}</b>${t}</p>`).join('')}</div>
+      <div class="cv-sticker" style="font-size:${fit(s.big, 20, 0.5, 10)}cqw"><small>${s.badge[0]}</small>${s.badge[1]}<small>${s.badge[2]}</small></div>
+      <div class="cv-bottom"><p>&ldquo;${s.quote}&rdquo;<span>${s.credit}</span></p>${barcode()}</div>`;
+  },
   fashion(s, photo) {
     return `
       ${photo}
@@ -294,9 +309,11 @@ const DESIGN_LAYOUTS = {
 export function renderCover(mag, values = {}, { palette = 'coral', portraitOpts = {}, photos = {}, design = 'signature' } = {}) {
   const p = PALETTES[palette] || PALETTES.coral;
   const v = fillValues(mag, values);
+  if (design === 'signature' && !mag.layout) design = 'glossy';
   if (design !== 'signature' && DESIGN_LAYOUTS[design] && mag.cover) {
-    const photo = photoOrPortrait(photos.photo1, portraitOpts, p, 'dz-photo');
-    return `<div class="cv cv-${design}" style="${vars(p)}">${DESIGN_LAYOUTS[design](slots(mag, v), photo)}</div>`;
+    const photo = photoOrPortrait(photos.photo1, portraitOpts, p, design === 'glossy' ? 'cv-photo' : 'dz-photo');
+    const cls = design === 'glossy' ? 'cv-birthday cv-glossy' : `cv-${design}`;
+    return `<div class="cv ${cls}" style="${vars(p)}">${DESIGN_LAYOUTS[design](slots(mag, v), photo)}</div>`;
   }
   const photoCls = { newspaper: 'np-photo', kids: 'kd-photo', stars: 'st-photo' }[mag.layout] || 'cv-photo';
   const photo = photoOrPortrait(photos.photo1, portraitOpts, p, photoCls);
@@ -309,9 +326,9 @@ export function renderCover(mag, values = {}, { palette = 'coral', portraitOpts 
 export function renderPages(mag, values = {}, { palette = 'coral', portraitOpts = {}, photos = {} } = {}) {
   const p = PALETTES[palette] || PALETTES.coral;
   const v = fillValues(mag, values);
-  const who = v.name || v.names || v.forWho || v.family;
+  const who = v.name || v.names || v.forWho || v.family || v.who;
   const from = v.from || v.fromWho || (mag.layout === 'anniversary' ? 'Me' : 'All of us');
-  const letterTitle = { newspaper: 'Letters page', kids: 'A letter for you', anniversary: 'What I love about you', stars: 'Your birthday reading', pet: 'A letter to a very good pet', review: 'A note from the editor' }[mag.layout] || "Editor's letter";
+  const letterTitle = mag.letterTitle || { newspaper: 'Letters page', kids: 'A letter for you', anniversary: 'What I love about you', stars: 'Your birthday reading', pet: 'A letter to a very good pet', review: 'A note from the editor' }[mag.layout] || "Editor's letter";
   const facts = mag.fields.filter(f => f.type !== 'photo' && f.type !== 'textarea' && !['name', 'names', 'from', 'fromWho', 'forWho', 'family'].includes(f.id));
   const pg = (cls, inner) => `<div class="pg pg-${cls}" style="${vars(p)}"><div class="pg-in">${inner}</div></div>`;
   return [
@@ -326,9 +343,9 @@ export function renderPages(mag, values = {}, { palette = 'coral', portraitOpts 
 export function renderFullMagazine(mag, values = {}, opts = {}) {
   const p = PALETTES[opts.palette] || PALETTES.coral;
   const v = fillValues(mag, values);
-  const who = v.name || v.names || v.forWho || v.family;
+  const who = v.name || v.names || v.forWho || v.family || v.who;
   const from = v.from || v.fromWho || 'all of us';
-  const feature = {
+  const feature = mag.feature ? [mag.feature[0], v[mag.feature[1]]] : {
     birthday: ['The moment everyone still talks about', v.moment],
     anniversary: ['What I love most about you', v.love],
     newspaper: ['What we miss most', v.miss],

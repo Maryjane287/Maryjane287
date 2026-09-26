@@ -1,6 +1,6 @@
 // The magazine maker: pick a magazine, answer questions, add photos, and watch
 // the cover update live. Photos stay in the browser until the order is placed.
-import { renderCover, renderPages, PALETTES, DESIGNS, esc } from './covers.js';
+import { renderCover, renderPages, PALETTES, DESIGNS, designsFor, baseDesign, esc } from './covers.js';
 
 const mags = JSON.parse(document.getElementById('mags').textContent);
 const checkout = JSON.parse(document.getElementById('site-checkout').textContent);
@@ -38,6 +38,9 @@ function choose(slug) {
   state.photos = {};
   state.tab = 0;
   document.querySelectorAll('.pick-btn').forEach(b => b.setAttribute('aria-checked', String(b.dataset.m === slug)));
+  const on = document.querySelector('.pick-btn[aria-checked="true"]');
+  if (on) on.parentElement.scrollLeft = on.offsetLeft - on.parentElement.offsetLeft - (on.parentElement.clientWidth - on.offsetWidth) / 2;
+  if (!designsFor(m).includes(state.design)) state.design = baseDesign(m);
   if (state.design !== 'signature' && state.palette === 'paper') state.palette = DESIGNS[state.design].palettes[0];
   renderPalette();
   renderDesigns();
@@ -53,7 +56,7 @@ const coverOpts = (design = state.design) => {
 
 function renderDesigns() {
   const m = mag();
-  $('.designs').innerHTML = Object.entries(DESIGNS).map(([k, d]) =>
+  $('.designs').innerHTML = designsFor(m).map(k => [k, DESIGNS[k]]).map(([k, d]) =>
     `<button type="button" class="design-btn" role="radio" aria-checked="${k === state.design}" data-d="${k}">${renderCover(m, state.values, coverOpts(k))}<span>${esc(d.label)}</span></button>`).join('');
 }
 

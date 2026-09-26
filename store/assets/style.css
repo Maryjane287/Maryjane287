@@ -169,7 +169,9 @@ p { margin: 0 0 1em; }
 /* Maker */
 .maker { display: grid; grid-template-columns: 1fr minmax(320px, 460px); gap: clamp(28px, 4vw, 60px); padding: 32px var(--gutter) 80px; max-width: 1320px; margin: 0 auto; align-items: start; }
 .maker h1 { font-size: clamp(36px, 4.6vw, 60px); }
-.pick { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 22px 0 16px; }
+.maker-form { min-width: 0; }
+.pick { max-width: 100%; display: grid; grid-auto-flow: column; grid-auto-columns: 132px; gap: 14px; margin: 22px 0 16px; overflow-x: auto; scroll-snap-type: x proximity; padding: 4px 4px 12px; overscroll-behavior-x: contain; }
+.pick-btn { scroll-snap-align: start; }
 .pick-btn { background: var(--paper); border: 3px solid transparent; border-radius: 16px; padding: 10px 10px 12px; cursor: pointer; font: 700 14px/1.2 'Outfit', sans-serif; color: var(--ink); display: grid; gap: 8px; box-shadow: 0 6px 18px -10px rgba(29, 26, 47, .35); transition: transform .2s, border-color .2s; }
 .pick-btn .cv { border-radius: 3px; }
 .pick-btn:hover { transform: translateY(-3px) rotate(-1deg); }
@@ -266,7 +268,7 @@ p { margin: 0 0 1em; }
   .mag-hero { grid-template-columns: 1fr; }
   .mag-info { position: static; }
   .pin-btn { margin: 16px 0 0; display: flex; }
-  .pick { grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .pick { grid-auto-columns: 88px; gap: 8px; }
   .pick-btn { padding: 5px 5px 7px; font-size: 11px; border-radius: 10px; }
   .peek { display: inline-flex !important; }
   #fields { grid-template-columns: 1fr; }

@@ -3,7 +3,7 @@
 // committed, so the site build itself needs no browser.
 import { readFile, writeFile, mkdir, unlink } from 'node:fs/promises';
 import { chromium } from 'playwright-core';
-import { renderCover, PALETTES, DESIGNS, designExamples, esc } from './covers.js';
+import { renderCover, PALETTES, DESIGNS, designExamples, designsFor, baseDesign, esc } from './covers.js';
 
 const root = new URL('..', import.meta.url);
 const mags = JSON.parse(await readFile(new URL('data/magazines.json', root)));
@@ -33,7 +33,7 @@ const pinHtml = (mag, ex, design) => {
     .band span{display:block;font:800 22px/1 Outfit;letter-spacing:.18em;text-transform:uppercase;color:#ff6b5b;margin-top:10px}
     .spark{position:absolute;color:${light ? p.pop : '#fff'};font-size:60px;opacity:.9}
   </style></head><body>
-    <div class="top">${design === 'signature' ? 'Made in 5 minutes' : esc(DESIGNS[design].label) + ' design'}<b>${esc(mag.pinTitle)}</b></div>
+    <div class="top">${design === baseDesign(mag) ? 'Made in 5 minutes' : esc(DESIGNS[design].label) + ' design'}<b>${esc(mag.pinTitle)}</b></div>
     <span class="spark" style="left:90px;top:330px">&#10022;</span><span class="spark" style="right:90px;top:900px;font-size:44px">&#10022;</span>
     <div class="wrap">${cover}</div>
     <div class="band">Answer a few fun questions, add photos. Instant PDF or printed and posted worldwide.<span>${esc(site.name)}</span></div>
@@ -44,11 +44,11 @@ const pinHtml = (mag, ex, design) => {
 const only = process.env.ONLY?.split(',');
 const onlyDesigns = process.env.DESIGNS?.split(',');
 for (const mag of mags.filter(m => !only || only.includes(m.slug))) {
-  for (const design of Object.keys(DESIGNS).filter(d => !onlyDesigns || onlyDesigns.includes(d))) for (const ex of designExamples(mag, design)) {
+  for (const design of designsFor(mag).filter(d => !onlyDesigns || onlyDesigns.includes(d))) for (const ex of designExamples(mag, design)) {
     await writeFile(tmp, pinHtml(mag, ex, design));
     await page.goto(tmp.href, { waitUntil: 'load' });
     await page.evaluate(() => document.fonts.ready);
-    const file = new URL(`pins/${mag.slug}-${design === 'signature' ? '' : design + '-'}${ex.id}.jpg`, root);
+    const file = new URL(`pins/${mag.slug}-${design === baseDesign(mag) ? '' : design + '-'}${ex.id}.jpg`, root);
     await writeFile(file, await page.screenshot({ type: 'jpeg', quality: 86 }));
     console.log('pin', mag.slug, design, ex.id);
   }
