@@ -1,0 +1,613 @@
+[
+  {
+    "slug": "birthday-magazine",
+    "layout": "birthday",
+    "title": "Birthday Cover Story",
+    "searchTitle": "Personalised Birthday Magazine",
+    "pinTitle": "Personalised Birthday Magazine",
+    "occasion": "Birthdays",
+    "short": "A glossy celebrity style magazine where the birthday star is on every page.",
+    "description": "Turn their birthday into front page news. A glossy, funny, celebrity style magazine with their photo on the cover, headlines about their best moments, a friends tell all page and your message inside. Made in five minutes from a few questions.",
+    "keywords": [
+      "birthday magazine template",
+      "personalised birthday gift",
+      "birthday gift for her",
+      "birthday gift for him",
+      "30th birthday ideas",
+      "last minute birthday gift"
+    ],
+    "inside": [
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their first name or nickname",
+        "example": "Mia",
+        "max": 14
+      },
+      {
+        "id": "age",
+        "label": "The age they are turning",
+        "example": "30",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Chris",
+        "max": 30
+      },
+      {
+        "id": "talent",
+        "label": "Their secret talent",
+        "example": "Finds anything you have lost in under a minute",
+        "max": 70
+      },
+      {
+        "id": "obsession",
+        "label": "Their current obsession",
+        "example": "Iced coffee and true crime podcasts",
+        "max": 60
+      },
+      {
+        "id": "words",
+        "label": "Three words that sum them up",
+        "example": "Kind, chaotic, magnificent",
+        "max": 40
+      },
+      {
+        "id": "moment",
+        "label": "A moment you will never forget",
+        "example": "Singing the wrong words to a song at a wedding, very loudly, and getting a standing ovation",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "Happy birthday to the funniest, kindest person I know. Here is to another year of you being wonderful.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "Photo for inside",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "mia",
+        "palette": "coral",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Mia",
+          "age": "30",
+          "talent": "Finds anything you have lost in under a minute",
+          "obsession": "Iced coffee and true crime podcasts",
+          "words": "Kind, chaotic, magnificent"
+        }
+      },
+      {
+        "id": "chris",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#1c1410"
+        },
+        "values": {
+          "name": "Chris",
+          "age": "40",
+          "talent": "Can reverse park anything, first time",
+          "obsession": "Sourdough. Still. Somehow.",
+          "words": "Loyal, legendary, loud"
+        }
+      },
+      {
+        "id": "emma",
+        "palette": "butter",
+        "portrait": {
+          "skin": 0,
+          "hair": "bun",
+          "hairColor": "#b5652b"
+        },
+        "values": {
+          "name": "Emma",
+          "age": "21",
+          "talent": "Knows every word to every song, ever",
+          "obsession": "Tiny plants and big earrings",
+          "words": "Bright, brave, brilliant"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "mint",
+        "portrait": {
+          "skin": 2,
+          "hair": "curly",
+          "hairColor": "#1a1a1a"
+        },
+        "values": {
+          "name": "Sam",
+          "age": "50",
+          "talent": "Makes friends in any queue in the world",
+          "obsession": "Crosswords and garden birds",
+          "words": "Wise, warm, wildly funny"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "anniversary-magazine",
+    "layout": "anniversary",
+    "title": "A Year of Us",
+    "searchTitle": "Personalised Anniversary Magazine",
+    "pinTitle": "Personalised Anniversary Magazine",
+    "occasion": "Anniversaries",
+    "short": "Your love story told like a magazine exclusive, from the first date to now.",
+    "description": "Your relationship, told as a glamorous magazine exclusive. How you met, the inside jokes nobody else gets, your best trips and everything you love about them, with your photos on every page. The anniversary gift that makes them laugh, then cry, then laugh again.",
+    "keywords": [
+      "anniversary gift ideas",
+      "anniversary gifts for him",
+      "anniversary gifts for her",
+      "long distance relationship gift",
+      "paper anniversary gift",
+      "valentines gift ideas"
+    ],
+    "inside": [
+      "A romantic cover starring the two of you",
+      "How it all began: the story of how you met",
+      "The inside jokes glossary",
+      "Our greatest adventures",
+      "What I love about you: a love letter page",
+      "A photo spread of your favourite moments"
+    ],
+    "fields": [
+      {
+        "id": "names",
+        "label": "Your two names",
+        "example": "Chris & Emma",
+        "max": 22
+      },
+      {
+        "id": "years",
+        "label": "How many years together?",
+        "example": "5",
+        "max": 3
+      },
+      {
+        "id": "met",
+        "label": "How you met",
+        "example": "Arguing over the last croissant in a tiny bakery",
+        "max": 90
+      },
+      {
+        "id": "joke",
+        "label": "An inside joke",
+        "example": "The Great Sofa Incident of 2021",
+        "max": 60
+      },
+      {
+        "id": "trip",
+        "label": "Your favourite trip or day together",
+        "example": "Getting lost in Lisbon and finding the best dinner of our lives",
+        "max": 90
+      },
+      {
+        "id": "love",
+        "label": "What you love most about them",
+        "example": "The way they laugh at their own jokes before the punchline",
+        "max": 120
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "Five years and I would still choose you in every bakery, in every city, every single time.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of you both",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "Photo for inside",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "chris-emma",
+        "palette": "rose",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#6b3a1f"
+        },
+        "values": {
+          "names": "Chris & Emma",
+          "years": "5",
+          "met": "Arguing over the last croissant in a tiny bakery",
+          "joke": "The Great Sofa Incident of 2021"
+        }
+      },
+      {
+        "id": "leo-sam",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#141010"
+        },
+        "values": {
+          "names": "Leo & Sam",
+          "years": "10",
+          "met": "A wrong number that turned into a four hour call",
+          "joke": "Never trust a quiet cat"
+        }
+      },
+      {
+        "id": "mia-leo",
+        "palette": "sky",
+        "portrait": {
+          "skin": 2,
+          "hair": "curly",
+          "hairColor": "#20150f"
+        },
+        "values": {
+          "names": "Mia & Leo",
+          "years": "1",
+          "met": "Both reaching for the same library book",
+          "joke": "Chapter eleven"
+        }
+      },
+      {
+        "id": "emma-sam",
+        "palette": "butter",
+        "portrait": {
+          "skin": 0,
+          "hair": "bun",
+          "hairColor": "#d9a066"
+        },
+        "values": {
+          "names": "Emma & Sam",
+          "years": "25",
+          "met": "A rainy bus stop and one shared umbrella",
+          "joke": "Left at the big tree"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "grandparents-newspaper",
+    "layout": "newspaper",
+    "title": "Letters to Grandma",
+    "searchTitle": "Personalised Family Newspaper for Grandparents",
+    "pinTitle": "Family Newspaper for Grandma",
+    "occasion": "Grandparents and family far away",
+    "short": "A family newspaper full of news, jokes and photos for someone who lives far away.",
+    "description": "For the grandparents, aunties and loved ones who live far away. A proper old style newspaper packed with family headlines, what the kids have been up to, their funniest quotes and a weather report of pure love. Perfect for birthdays, Mother's Day, Father's Day or just because.",
+    "keywords": [
+      "gift for grandma",
+      "gift for grandparents",
+      "long distance family gift",
+      "snail mail gifts",
+      "mothers day gift from kids",
+      "family newspaper"
+    ],
+    "inside": [
+      "A front page headline all about your family",
+      "The kids' page: news, drawings and funny quotes",
+      "What we miss most about you",
+      "The family weather report",
+      "Photo gallery of the latest adventures",
+      "A letter from all of us"
+    ],
+    "fields": [
+      {
+        "id": "forWho",
+        "label": "Who is it for?",
+        "example": "Grandma",
+        "max": 14
+      },
+      {
+        "id": "fromWho",
+        "label": "Who is it from?",
+        "example": "Leo, Mia and Sam",
+        "max": 40
+      },
+      {
+        "id": "headline",
+        "label": "The biggest family news",
+        "example": "Leo lost his first tooth and the tooth fairy paid a whole £2",
+        "max": 90
+      },
+      {
+        "id": "miss",
+        "label": "What you miss most about them",
+        "example": "Sunday pancakes and her terrible jokes",
+        "max": 70
+      },
+      {
+        "id": "quote",
+        "label": "Something funny the kids said",
+        "example": "Grandma is a hundred and cool",
+        "max": 70
+      },
+      {
+        "id": "weather",
+        "label": "Family weather report",
+        "example": "Sunny with a strong chance of cuddles",
+        "max": 50
+      },
+      {
+        "id": "message",
+        "label": "Your letter to them",
+        "example": "We think about you every day. The house is louder than ever and we cannot wait to see you soon.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Front page photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "Photo for inside",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "grandma",
+        "palette": "paper",
+        "portrait": {
+          "skin": 2,
+          "hair": "curly",
+          "hairColor": "#1c120c"
+        },
+        "values": {
+          "forWho": "Grandma",
+          "fromWho": "Leo, Mia and Sam",
+          "headline": "Leo lost his first tooth and the tooth fairy paid a whole £2",
+          "quote": "Grandma is a hundred and cool",
+          "weather": "Sunny with a strong chance of cuddles"
+        }
+      },
+      {
+        "id": "grandpa",
+        "palette": "paper",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#8a5a2b"
+        },
+        "values": {
+          "forWho": "Grandpa",
+          "fromWho": "Emma and the twins",
+          "headline": "Twins learn to ride bikes, garden fence survives",
+          "quote": "Is Grandpa older than the internet?",
+          "weather": "Cloudy with occasional giggles"
+        }
+      },
+      {
+        "id": "nana",
+        "palette": "paper",
+        "portrait": {
+          "skin": 3,
+          "hair": "bun",
+          "hairColor": "#0f0b09"
+        },
+        "values": {
+          "forWho": "Nana",
+          "fromWho": "Sam, Chris and baby Leo",
+          "headline": "Baby Leo says first word, and it is definitely Nana",
+          "quote": "Nana's house has the best biscuits in the world",
+          "weather": "Warm spells of missing you"
+        }
+      },
+      {
+        "id": "auntie",
+        "palette": "paper",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#2b1a12"
+        },
+        "values": {
+          "forWho": "Auntie",
+          "fromWho": "Mia and Leo",
+          "headline": "Mia wins the school spelling bee with the word enthusiastic",
+          "quote": "Auntie is basically a superhero with nicer shoes",
+          "weather": "Bright and breezy with big hugs"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "kids-magazine",
+    "layout": "kids",
+    "title": "All About Me",
+    "searchTitle": "Personalised Kids Magazine",
+    "pinTitle": "Personalised Kids Magazine",
+    "occasion": "Children",
+    "short": "A bright, silly magazine where your child is the star, the expert and the hero.",
+    "description": "A colourful, joyful magazine where your child is the cover star. Their favourite things, their big dreams, their funniest facts and a special message from you. Brilliant for birthdays, the first day of school, or a keepsake to look back on when they are all grown up.",
+    "keywords": [
+      "gift for kids",
+      "personalised gift for child",
+      "kids birthday gift",
+      "first day of school keepsake",
+      "all about me",
+      "memory keepsake for kids"
+    ],
+    "inside": [
+      "A comic style cover starring your child",
+      "My expert page: everything they know about their favourite thing",
+      "My favourite things, from food to animals",
+      "When I grow up",
+      "Fun facts about me",
+      "A letter from the grown ups who love them"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Your child's first name or nickname",
+        "example": "Leo",
+        "max": 12
+      },
+      {
+        "id": "age",
+        "label": "Their age",
+        "example": "6",
+        "max": 2
+      },
+      {
+        "id": "expert",
+        "label": "What they are an expert in",
+        "example": "Dinosaurs",
+        "max": 30
+      },
+      {
+        "id": "food",
+        "label": "Their favourite food",
+        "example": "Pancakes with far too much syrup",
+        "max": 50
+      },
+      {
+        "id": "dream",
+        "label": "When I grow up I want to be",
+        "example": "A volcano scientist",
+        "max": 40
+      },
+      {
+        "id": "fact",
+        "label": "A funny fact about them",
+        "example": "Once tried to post a letter to a real T rex",
+        "max": 80
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "We are so proud of you, our brave, clever, dinosaur loving boy. Never stop asking questions.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "Photo for inside",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "leo",
+        "palette": "sky",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Leo",
+          "age": "6",
+          "expert": "Dinosaurs",
+          "dream": "A volcano scientist",
+          "fact": "Once tried to post a letter to a real T rex"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "coral",
+        "portrait": {
+          "skin": 0,
+          "hair": "bun",
+          "hairColor": "#c4803f"
+        },
+        "values": {
+          "name": "Mia",
+          "age": "5",
+          "expert": "Unicorns",
+          "dream": "A unicorn vet",
+          "fact": "Has named every pigeon in the park"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "mint",
+        "portrait": {
+          "skin": 2,
+          "hair": "curly",
+          "hairColor": "#1b120c"
+        },
+        "values": {
+          "name": "Sam",
+          "age": "7",
+          "expert": "Space",
+          "dream": "The first chef on Mars",
+          "fact": "Can burp the alphabet up to letter M"
+        }
+      },
+      {
+        "id": "emma",
+        "palette": "butter",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#3a2214"
+        },
+        "values": {
+          "name": "Emma",
+          "age": "4",
+          "expert": "Bugs",
+          "dream": "A ladybird",
+          "fact": "Says goodnight to the moon every single night"
+        }
+      }
+    ]
+  }
+]

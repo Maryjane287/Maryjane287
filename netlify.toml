@@ -1,0 +1,10 @@
+# Cover Story shop (store/). Netlify builds the static site and collects orders through Netlify Forms.
+[build]
+  base = "store"
+  command = "node src/build.mjs"
+  publish = "dist"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

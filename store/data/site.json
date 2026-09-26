@@ -1,0 +1,18 @@
+{
+  "name": "Cover Story",
+  "tagline": "Make them the cover story",
+  "description": "Personalised keepsake magazines made from your memories. Answer a few fun questions, add photos, and get a beautiful magazine all about the person you love. Instant PDF or printed and posted worldwide.",
+  "url": "https://coverstory.example",
+  "email": "hello@coverstory.example",
+  "company": "Grace and Loannes Ltd",
+  "companyNumber": "SC899696",
+  "pinterestDomainVerify": "",
+  "pinterestTagId": "",
+  "tiers": [
+    { "id": "pdf", "label": "Instant PDF", "blurb": "Ready to download, print at home or send by message", "gbp": 9, "usd": 12 },
+    { "id": "cards", "label": "PDF plus card set", "blurb": "The magazine plus matching printable cards and gift tags", "gbp": 12, "usd": 16 },
+    { "id": "print", "label": "Printed magazine", "blurb": "Glossy A4 magazine, printed near them and posted", "gbp": 29, "usd": 36, "popular": true },
+    { "id": "premium", "label": "Premium gift edition", "blurb": "Extra pages, thicker cover and a handwritten style gift note", "gbp": 39, "usd": 49 }
+  ],
+  "checkout": { "pdf": "", "cards": "", "print": "", "premium": "" }
+}
