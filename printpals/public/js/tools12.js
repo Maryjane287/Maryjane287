@@ -416,7 +416,7 @@ function makeLunchNotes(o, paper) {
       const note = love[i % love.length].replace('{name}', name || 'superstar');
       textLines(pg, wrap(note, 22), tx, y + 14, 5.4, { weight: 800, font: TITLE_FONT, colour: colourIn ? INK : c });
     }
-    if (from && kind !== 'jokes') pg.add(txt(x + cw - 8, y + ch - 7, `Love, ${from}`, 4, { anchor: 'end', font: FONT, colour: SOFT }));
+    if (from && !isJoke) pg.add(txt(x + cw - 8, y + ch - 7, `Love, ${from}`, 4, { anchor: 'end', font: FONT, colour: SOFT }));
   }
   pg.footer = () => {};
   return [pg.svg()];
