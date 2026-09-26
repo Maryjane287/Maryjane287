@@ -1819,7 +1819,7 @@ def top(active=''):
 
 FOOT = '''<footer><div class="wrap"><div class="foot-brand"><div class="brand" style="font-size:24px;color:#fff">Print<b style="color:#ff8a8a">Pals</b></div>
 <p style="max-width:420px;margin-top:8px">Free printable worksheets and ready-made packs for children, made in seconds. Everything is made inside your own browser: nothing you type is sent to us or stored.</p>
-<p class="foot-links"><a href="/plus">PrintPals Plus</a><a href="/about">About us</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:''' + CONTACT + '''">Contact</a></p>
+<p class="foot-links"><a href="/plus">PrintPals Plus</a><a href="/help">Help</a><a href="/about">About us</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:''' + CONTACT + '''">Contact</a></p>
 <p style="margin-top:14px">© PrintPals. Free for home and classroom use.</p></div>
 <div class="foot-cols">''' + ''.join(f'<div><h4>{v}</h4>' + ''.join(f'<a href="/{t["slug"]}">{t["nav"]}</a>' for t in TOOLS if t['cat'] == k) + '</div>' for k, v in CATS) + '''</div></div></footer>'''
 
@@ -2085,6 +2085,23 @@ TERMS = f'''<h1>Terms of use</h1>
 <p>These terms are governed by the laws of Scotland. If you have a problem, please email us first: we are a small family company and we will always try to put things right.</p>
 <p><i>Last updated: {datetime.date.today().strftime('%d %B %Y')}</i></p>'''
 
+HELP = f'''<h1>Help and support</h1>
+<p class="lead-p">We are a small family company and we read every message. Here are the answers parents ask for most.</p>
+<div class="launch">💌 Still stuck? Email us at <a href="mailto:{CONTACT}">{CONTACT}</a> and we will reply within 2 working days.</div>
+<h2>PrintPals Plus and payments</h2>
+<details><summary>How do I cancel my subscription?</summary><p>Open <a href="{STRIPE_PORTAL}" rel="noopener">manage or cancel my subscription</a>, type the email you paid with, and press Cancel. Plus stays open until the end of the time you have paid for, and you will not be charged again.</p></details>
+<details><summary>Can I get a refund?</summary><p>Yes. If you are not happy, email us within 14 days of a payment and we will refund it in full. Please tell us the email you paid with.</p></details>
+<details><summary>I see a charge from PRINTPALS.WEB.APP. What is it?</summary><p>That is your PrintPals Plus subscription ($4.99 a month, $39 a year, or $59 a year for teachers). If you do not recognise it, email us and we will look into it straight away.</p></details>
+<details><summary>Where is my receipt?</summary><p>Stripe emails a receipt after every payment. Check your spam folder, or open <a href="{STRIPE_PORTAL}" rel="noopener">manage my subscription</a> to see and download every invoice.</p></details>
+<details><summary>How do I change from monthly to yearly?</summary><p>Open <a href="{STRIPE_PORTAL}" rel="noopener">manage my subscription</a> and choose Update plan. Yearly saves you 35%.</p></details>
+<details><summary>I paid on my phone. How do I use Plus on my computer?</summary><p>Open any Plus pack on your computer and choose "Already paid on another phone or computer?", then type the receipt number from your payment email. It looks like 1234-5678.</p></details>
+<details><summary>How does the free week work?</summary><p>Open any Plus pack and your 7 free days start on that phone or computer. No card and no sign up. After the week you can choose a plan, or keep using everything that is free.</p></details>
+<h2>Printing</h2>
+<details><summary>How do I print or save a worksheet?</summary><p>Press "Print or save as PDF". On a computer, choose your printer, or choose "Save as PDF" to keep it. On a phone, choose Print, then Save as PDF, and print it later at home or at any print shop.</p></details>
+<details><summary>The page comes out too small or cut off.</summary><p>Pick your paper size on the worksheet page (A4 or US Letter), and in the print window choose "Actual size" or 100% scale, not "Fit to page".</p></details>
+<details><summary>My printer is black and white.</summary><p>Tick "Ink saver" on any worksheet for white backgrounds and light grey pictures that use much less ink.</p></details>
+<p>More about us on the <a href="/about">About page</a>. Read our <a href="/terms">Terms</a> and <a href="/privacy">Privacy</a> pages.</p>'''
+
 NOT_FOUND = '''<h1>Oops, this page got lost!</h1>
 <p class="lead-p">It may have wandered off to play. Let us help you find something lovely instead.</p>
 <p><a class="btn big" href="/weekly-learning-pack" style="max-width:420px">🎒 Plan my child's week</a></p>
@@ -2099,6 +2116,7 @@ def main():
             f.write(tool_page(t))
     pages = [('about', 'About PrintPals | Free Worksheets Made for Real Families', 'Why we made PrintPals: free, private worksheets and ready-made learning packs built around the real problems parents face.', ABOUT),
              ('privacy', 'Privacy | PrintPals', 'PrintPals does not collect what you type. Worksheets are made inside your own browser.', PRIVACY),
+             ('help', 'Help and Support | PrintPals', 'Help with PrintPals: cancelling or changing your Plus subscription, refunds, receipts, the free week and printing tips.', HELP),
              ('terms', 'Terms of Use | PrintPals', 'The terms for using PrintPals and PrintPals Plus subscriptions, including prices, cancelling and refunds.', TERMS),
              ('plus', 'PrintPals Plus | Monthly Learning Plans, Activity Books and Class Packs', 'Everything on PrintPals stays free. Plus adds monthly learning plans, personalised activity books and class packs for teachers. Free while we launch.', PLUS)]
     for slug, title, desc, body in pages:
@@ -2110,7 +2128,7 @@ def main():
     with open(os.path.join(OUT, 'js', 'pp.js'), 'w', encoding='utf-8') as f:
         f.write('\n;\n'.join(open(os.path.join(OUT, 'js', n + '.js'), encoding='utf-8').read() for n in JS_FILES))
     today = datetime.date.today().isoformat()
-    urls = ['/'] + ['/' + t['slug'] for t in TOOLS] + ['/plus', '/about', '/privacy', '/terms']
+    urls = ['/'] + ['/' + t['slug'] for t in TOOLS] + ['/plus', '/help', '/about', '/privacy', '/terms']
     with open(os.path.join(OUT, 'sitemap.xml'), 'w', encoding='utf-8') as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                 + ''.join(f'  <url><loc>{SITE}{u}</loc><lastmod>{today}</lastmod></url>\n' for u in urls) + '</urlset>\n')
