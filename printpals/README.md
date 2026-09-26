@@ -41,6 +41,10 @@ browser, so nothing typed is ever sent or stored.
 - Batch 8 (`public/js/tools9.js`): hundred square (fill in, patterns, jigsaw pieces), alphabet order, colour words,
   how to draw (6 steps built from a colouring picture; `DRAW_ORDER` lists parts in the order an artist draws them),
   fix the sentence, bookmarks, paper clock craft, snakes and ladders with dice net and counters.
+- Batch 9 (`public/js/tools10.js`): odd one out (painted pictures in groups, ODD_CLASH keeps close groups apart),
+  roll and draw (ROLL_THEMES: six drawn options per part), patterns (AB to ABC, gaps), syllables (count, sort, split),
+  door hangers (two sides, name, own words), 30 day challenges (4 themes, 14 or 30 days), doubles and halves
+  (ladybirds, fair sharing, facts), position words (box and table scenes; circle, write or draw).
 - Arrangement: `ARRANGE` in build.py sets the 7 homepage sections and their learning order (every tool in exactly
   one; the build fails otherwise). Tool pages show 'More in <section>'; the footer is grouped by section.
 - Checks: `pp2/fuzz.js` (every option), `pp2/func.js` (new set, paper sizes, print button), a link checker.

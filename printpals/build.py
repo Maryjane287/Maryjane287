@@ -10,7 +10,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '23'
+VERSION = '24'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -1258,7 +1258,7 @@ TOOLS += [
 
 TOOLS += [
     {
-        'id': 'hundred', 'cat': 'maths', 'slug': 'hundred-square-worksheets', 'tint': '#fff6e0', 'icon': '💯', 'new': True,
+        'id': 'hundred', 'cat': 'maths', 'slug': 'hundred-square-worksheets', 'tint': '#fff6e0', 'icon': '💯', 'new': False,
         'nav': 'Hundred square',
         'title': 'Free Printable Hundred Square | 100 Chart, Missing Numbers, Skip Counting | PrintPals',
         'desc': 'Free printable hundred squares (100 charts): a colourful full chart, missing numbers, a blank chart to fill, skip counting patterns in 2s, 3s, 5s and 10s, and hundred square puzzle pieces.',
@@ -1273,7 +1273,7 @@ TOOLS += [
         'faq': [('What are the puzzle pieces?', 'Small pieces cut from a hundred square with only the middle number shown. Children work out the numbers above, below and on each side.')],
     },
     {
-        'id': 'abcorder', 'cat': 'reading', 'slug': 'alphabet-order-worksheets', 'tint': '#eef2ff', 'icon': '🔡', 'new': True,
+        'id': 'abcorder', 'cat': 'reading', 'slug': 'alphabet-order-worksheets', 'tint': '#eef2ff', 'icon': '🔡', 'new': False,
         'nav': 'Alphabet order',
         'title': 'Free Alphabet Order Worksheets | Missing Letters, Before and After, ABC Order | PrintPals',
         'desc': 'Free printable alphabet order worksheets: fill in the missing letters, write the letters before and after, and put picture words in ABC order. Small or capital letters.',
@@ -1287,7 +1287,7 @@ TOOLS += [
         'faq': [('What age is this for?', 'Ages 4 to 7, once children can say the alphabet.')],
     },
     {
-        'id': 'colourwords', 'cat': 'reading', 'slug': 'colour-words-worksheets', 'tint': '#fff0f0', 'icon': '🖍️', 'new': True,
+        'id': 'colourwords', 'cat': 'reading', 'slug': 'colour-words-worksheets', 'tint': '#fff0f0', 'icon': '🖍️', 'new': False,
         'nav': 'Colour words',
         'title': 'Free Colour Words Worksheets | Learn Colour Names, Read and Colour | PrintPals',
         'desc': 'Free printable colour words worksheets: learn to read and write red, blue, green and more with tracing and shapes to colour, or read the colour word and colour the picture.',
@@ -1301,7 +1301,7 @@ TOOLS += [
         'faq': [('Can I print just one colour?', 'Yes. Choose a colour, or print all 11 as a little book.')],
     },
     {
-        'id': 'sentences', 'cat': 'reading', 'slug': 'sentence-worksheets', 'tint': '#e8f8f4', 'icon': '✍️', 'new': True,
+        'id': 'sentences', 'cat': 'reading', 'slug': 'sentence-worksheets', 'tint': '#e8f8f4', 'icon': '✍️', 'new': False,
         'nav': 'Sentences',
         'title': 'Free Sentence Worksheets | Capital Letters and Full Stops, Unscramble, Finish | PrintPals',
         'desc': 'Free printable sentence worksheets for Year 1 and 2: fix the sentence with a capital letter and full stop, unscramble mixed-up sentences, and finish the sentence. Answer key included.',
@@ -1314,7 +1314,7 @@ TOOLS += [
         'faq': [('What age is this for?', 'Ages 5 to 7, usually Year 1 and Year 2.')],
     },
     {
-        'id': 'howtodraw', 'cat': 'crafts', 'slug': 'how-to-draw-for-kids', 'tint': '#f5edff', 'icon': '✏️', 'new': True,
+        'id': 'howtodraw', 'cat': 'crafts', 'slug': 'how-to-draw-for-kids', 'tint': '#f5edff', 'icon': '✏️', 'new': False,
         'nav': 'How to draw',
         'title': 'Free Step by Step Drawing for Kids | How to Draw a Cat, Owl, Unicorn and More | PrintPals',
         'desc': 'Free printable step by step drawing guides for kids: how to draw a cat, owl, teddy, penguin, robot, frog, puppy, bunny, unicorn, ladybird, fish and rocket, with a big box to try it.',
@@ -1327,7 +1327,7 @@ TOOLS += [
         'faq': [('What age is this for?', 'Ages 4 to 9. Younger children may like a grown-up to draw alongside them.')],
     },
     {
-        'id': 'bookmarks', 'cat': 'crafts', 'slug': 'bookmarks-to-colour', 'tint': '#fff0f7', 'icon': '🔖', 'new': True,
+        'id': 'bookmarks', 'cat': 'crafts', 'slug': 'bookmarks-to-colour', 'tint': '#fff0f7', 'icon': '🔖', 'new': False,
         'nav': 'Bookmarks',
         'title': 'Free Printable Bookmarks for Kids | To Colour, With Their Name | PrintPals',
         'desc': 'Free printable bookmarks for kids: bookmarks to colour or bright picture bookmarks, with reading quotes and each child\'s name. Print a whole class set.',
@@ -1341,7 +1341,7 @@ TOOLS += [
         'faq': [('Can I make one for every child in my class?', 'Yes. Type every name, one per line, and each bookmark gets a name.')],
     },
     {
-        'id': 'clockcraft', 'cat': 'maths', 'slug': 'paper-clock-craft', 'tint': '#e6f6fc', 'icon': '🕰️', 'new': True,
+        'id': 'clockcraft', 'cat': 'maths', 'slug': 'paper-clock-craft', 'tint': '#e6f6fc', 'icon': '🕰️', 'new': False,
         'nav': 'Make a clock',
         'title': 'Free Printable Paper Clock Craft | Learn to Tell the Time | PrintPals',
         'desc': 'Free printable paper clock for kids with cut-out hour and minute hands, minute numbers and past and to halves. Make your own clock to learn to tell the time.',
@@ -1353,7 +1353,7 @@ TOOLS += [
         'faq': [('What is a split pin?', 'A small paper fastener with two legs that fold flat at the back. A grown-up can help push it through.')],
     },
     {
-        'id': 'snakes', 'cat': 'puzzles', 'slug': 'snakes-and-ladders-printable', 'tint': '#f1f8e6', 'icon': '🎲', 'new': True,
+        'id': 'snakes', 'cat': 'puzzles', 'slug': 'snakes-and-ladders-printable', 'tint': '#f1f8e6', 'icon': '🎲', 'new': False,
         'nav': 'Snakes and ladders',
         'title': 'Free Printable Snakes and Ladders Board Game | New Board Every Time | PrintPals',
         'desc': 'Free printable snakes and ladders board game with a new board every click, a dice to cut and fold, and counters to cut out. A colourful family game night in minutes.',
@@ -1364,6 +1364,119 @@ TOOLS += [
         'article': """<h2>Maths in disguise</h2><p>Snakes and ladders is secretly great counting practice: children count the dots on the dice and count along the squares. Great for learning numbers to 100.</p>""",
         'faq': [('Is every board different?', 'Yes. Press "Make a new set" for a new board with the snakes and ladders in new places.')],
     },
+    {
+        'id': 'oddone', 'cat': 'puzzles', 'slug': 'odd-one-out-worksheets', 'tint': '#fff6e0', 'icon': '🔍', 'new': True,
+        'nav': 'Odd one out',
+        'title': 'Free Odd One Out Worksheets for Kids | Picture Puzzles With Answers | PrintPals',
+        'desc': 'Free printable odd one out worksheets with bright painted pictures: spot the different picture, or find the one that does not belong and say why. Three levels and an answer key.',
+        'h1': 'Odd one out',
+        'lead': 'Which one does not belong? Bright picture puzzles that build sorting and thinking skills, with a new set every click.',
+        'card': 'Spot the one that does not belong, with bright pictures and answers.',
+        'form': field('Level', seg('level', [('easy', 'Spot the different one'), ('medium', 'Which group? (4)'), ('hard', 'Trickier (5)')], 'medium'))
+        + check('key', 'Answer key page') + SHUFFLE + PAPER,
+        'article': """<h2>Talk about the why</h2><p>The best part is the reason. Ask "why is that one different?" and let your child explain in their own words: "the others are all fruit, and that is an animal". That is real reasoning, the start of science and maths.</p>""",
+        'faq': [('What age is this for?', 'Spot the different one suits ages 3 to 4. Which group suits ages 4 to 6, and the trickier level ages 5 to 7.')],
+    },
+    {
+        'id': 'rolldraw', 'cat': 'crafts', 'slug': 'roll-and-draw-game', 'tint': '#f5edff', 'icon': '🎲', 'new': True,
+        'nav': 'Roll and draw',
+        'title': 'Free Roll and Draw Game for Kids | Roll a Monster or Robot | PrintPals',
+        'desc': 'Free printable roll and draw game: roll the dice to pick the body, eyes, mouth, arms, legs and extras, then draw a silly monster or robot. Every drawing is different.',
+        'h1': 'Roll and draw',
+        'lead': 'Roll the dice six times and draw whatever it says. Every monster and robot is one of a kind, and every one is funny.',
+        'card': 'Roll the dice, then draw a one of a kind monster or robot.',
+        'form': field('Draw a', seg('theme', [('monster', 'Monster'), ('robot', 'Robot')], 'monster'))
+        + field('Child\'s name (optional)', '<input type="text" name="name" maxlength="24" placeholder="Leo" autocomplete="off">')
+        + PAPER,
+        'article': """<h2>A game and a drawing lesson</h2><p>Children practise counting dice dots, following a key and drawing simple shapes, and they laugh the whole way through. Play together: everyone rolls the same parts and draws their own version, then compare!</p>""",
+        'faq': [('No dice at home?', 'Print our snakes and ladders page: it has a dice to cut out and fold.')],
+    },
+    {
+        'id': 'patterns', 'cat': 'maths', 'slug': 'pattern-worksheets', 'tint': '#e8f8f4', 'icon': '🔁', 'new': True,
+        'nav': 'Patterns',
+        'title': 'Free Pattern Worksheets for Kids | What Comes Next? | PrintPals',
+        'desc': 'Free printable pattern worksheets: what comes next with bright pictures or coloured shapes. AB, AAB, ABB and ABC patterns in three levels, with an answer key.',
+        'h1': 'Patterns: what comes next?',
+        'lead': 'Spot the pattern and finish the row. Bright pictures or shapes to colour, from simple AB patterns to tricky ones with a gap in the middle.',
+        'card': 'What comes next? Picture and shape patterns in three levels.',
+        'form': field('Use', seg('kind', [('pictures', 'Pictures'), ('shapes', 'Coloured shapes')], 'pictures'))
+        + field('Level', seg('level', [('easy', 'AB'), ('medium', 'AAB, ABB'), ('hard', 'ABC and gaps')], 'medium'))
+        + check('key', 'Answer key page') + SHUFFLE + PAPER,
+        'article': """<h2>Patterns are the start of maths</h2><p>Noticing what repeats is the same skill children later use for times tables, number sequences and even reading. Say the pattern out loud together: "apple, banana, apple, banana, apple..." and the answer pops out.</p>""",
+        'faq': [('What is an AB pattern?', 'Two things taking turns: red, blue, red, blue. AAB is two of one then one of another. ABC uses three things.')],
+    },
+    {
+        'id': 'syllables', 'cat': 'reading', 'slug': 'syllable-worksheets', 'tint': '#fff0f7', 'icon': '🥁', 'new': True,
+        'nav': 'Syllables',
+        'title': 'Free Syllable Worksheets | Clap and Count the Beats | PrintPals',
+        'desc': 'Free printable syllable worksheets with bright pictures: clap and count the beats, sort pictures into 1, 2 and 3 claps, or split words into syllables. With answer keys.',
+        'h1': 'Syllables: clap the beats',
+        'lead': 'Say the word, clap the beats, colour the drums. A playful way to hear the parts of words, a key step before reading and spelling longer words.',
+        'card': 'Clap and count the beats in words, with bright pictures.',
+        'form': field('Activity', seg('kind', [('count', 'Clap and count'), ('sort', 'Cut and sort'), ('split', 'Split the word')], 'count'))
+        + check('key', 'Answer key page') + SHUFFLE + PAPER,
+        'article': """<h2>Clap, stamp or jump</h2><p>A syllable is a beat in a word. Ba-na-na has three. Clap it, stamp it or jump it! Hearing beats helps children read longer words one chunk at a time.</p>""",
+        'faq': [('What age is this for?', 'Clap and count suits ages 4 to 5. Splitting words into boxes suits ages 5 to 7.')],
+    },
+    {
+        'id': 'doorhangers', 'cat': 'crafts', 'slug': 'door-hangers-for-kids', 'tint': '#eef2ff', 'icon': '🚪', 'new': True,
+        'nav': 'Door hangers',
+        'title': 'Free Printable Door Hangers for Kids | To Colour, With Their Name | PrintPals',
+        'desc': 'Free printable door hangers for kids: two sided signs like Shh! Sleeping and Good morning! Come in, to colour or bright, with the child\'s name or your own words.',
+        'h1': 'Door hangers',
+        'lead': 'A two sided sign for your child\'s bedroom door: sleepy on one side, awake on the other. Add their name and colour it in.',
+        'card': 'Two sided door signs with their name, to colour or bright.',
+        'form': field('Signs', '<select name="set"><option value="sleep">Shh! Sleeping / Good morning!</option><option value="reading">Do not disturb, reading / Come in</option><option value="play">Genius at work / Come in</option><option value="tidy">Tidying up / All tidy!</option><option value="custom">My own words</option></select>')
+        + field('My own words (optional)', '<textarea name="custom" rows="2" spellcheck="false" placeholder="Dance party!&#10;Come and join in"></textarea>', 'One line for each side. Choose "My own words" above.')
+        + field('Style', seg('style', [('colour', 'To colour in'), ('bright', 'Bright pictures')], 'colour'))
+        + field('Child\'s name (optional)', '<input type="text" name="name" maxlength="24" placeholder="Emma" autocomplete="off">')
+        + PAPER,
+        'article': """<h2>Make it sturdy</h2><p>Print on card, or glue the two sides onto a cereal box before cutting. Cut out the circle and the slit, and slide it over the door handle.</p>""",
+        'faq': [('Can I write my own message?', 'Yes. Choose "My own words" and type one line for each side of the sign.')],
+    },
+    {
+        'id': 'challenge', 'cat': 'charts', 'slug': '30-day-challenge-for-kids', 'tint': '#fff6e0', 'icon': '🌟', 'new': True,
+        'nav': '30 day challenges',
+        'title': 'Free 30 Day Challenge for Kids | Kindness, Reading, Outdoors | PrintPals',
+        'desc': 'Free printable 30 day challenges for kids: 30 days of kindness, a reading challenge, outdoor adventures and helping at home. Colour a star for each one done. 14 day versions too.',
+        'h1': '30 day challenges',
+        'lead': 'Thirty little missions to colour off one by one: kind acts, reading adventures, outdoor fun and helping at home.',
+        'card': 'Kindness, reading, outdoor and helper challenges to colour off.',
+        'form': field('Challenge', seg('theme', [('kindness', 'Kindness'), ('reading', 'Reading'), ('outdoors', 'Outdoors'), ('helper', 'Helper')], 'kindness'))
+        + field('Days', seg('days', [('30', '30 days'), ('14', '14 days')], '30'))
+        + field('Order', seg('order', [('list', 'Our order'), ('shuffle', 'Mixed up')], 'list'))
+        + field('Child\'s name (optional)', '<input type="text" name="name" maxlength="24" placeholder="Mia" autocomplete="off">')
+        + PAPER,
+        'article': """<h2>Small steps, big pride</h2><p>Stick it on the fridge and let your child choose one each day. Colouring the star is the reward, and seeing the page fill up builds real pride. Great for school holidays.</p>""",
+        'faq': [('Do they have to go in order?', 'No. Children can pick any mission they like each day. Choose "Mixed up" for a new order.')],
+    },
+    {
+        'id': 'doubles', 'cat': 'maths', 'slug': 'doubles-and-halves-worksheets', 'tint': '#fff0f0', 'icon': '🐞', 'new': True,
+        'nav': 'Doubles and halves',
+        'title': 'Free Doubles and Halves Worksheets | Ladybird Doubles, Sharing | PrintPals',
+        'desc': 'Free printable doubles and halves worksheets: ladybird doubles, sharing treats fairly between two friends, and double and half number facts. With answer keys.',
+        'h1': 'Doubles and halves',
+        'lead': 'Draw the same spots on both wings, share treats fairly between two friends, then practise the number facts.',
+        'card': 'Ladybird doubles, fair sharing and double and half facts.',
+        'form': field('Activity', seg('kind', [('ladybird', 'Ladybird doubles'), ('halves', 'Share it fairly'), ('facts', 'Number facts')], 'ladybird'))
+        + field('Numbers up to', seg('max', [('5', '5'), ('10', '10')], '5'))
+        + check('key', 'Answer key page') + SHUFFLE + PAPER,
+        'article': """<h2>Doubles are a superpower</h2><p>Once children know their doubles (3 + 3, 4 + 4) they can work out near doubles in their head: 4 + 5 is just double 4 and one more. Halving is simply sharing fairly, which every child already cares about!</p>""",
+        'faq': [('What age is this for?', 'Ladybird doubles and sharing suit ages 4 to 6. Number facts to 10 suit ages 5 to 7.')],
+    },
+    {
+        'id': 'position', 'cat': 'reading', 'slug': 'position-words-worksheets', 'tint': '#e6f6fc', 'icon': '📦', 'new': True,
+        'nav': 'Position words',
+        'title': 'Free Position Words Worksheets | In, On, Under, Behind | PrintPals',
+        'desc': 'Free printable position words worksheets: in, on, under, next to, behind, in front of, above and between, with cute animals and boxes. Circle, write or draw, with answer keys.',
+        'h1': 'Position words',
+        'lead': 'Where is the cat? In the box, on the box, behind the box! Cute pictures that teach the little words children use every day.',
+        'card': 'In, on, under, behind: circle, write or draw where it is.',
+        'form': field('Activity', seg('kind', [('circle', 'Circle the word'), ('write', 'Write the word'), ('draw', 'Read and draw')], 'circle'))
+        + check('key', 'Answer key page') + SHUFFLE + PAPER,
+        'article': """<h2>Play it for real</h2><p>After the sheet, hide a teddy around the room: "Teddy is under the table!" Children learn position words fastest when they move things around themselves.</p>""",
+        'faq': [('Which words are included?', 'In, on, under, next to, behind, in front of, above and between. Each sheet uses six of them.')],
+    },
 ]
 
 # The homepage sections, in learning order (easiest first). Every tool appears in exactly one section.
@@ -1371,15 +1484,15 @@ ARRANGE = [
     ('handwriting', 'Handwriting', 'Handwriting', 'From first pencil lines to joined writing, with real letter shapes and stroke order.',
      ['prewriting', 'names', 'letters', 'mixups', 'joined', 'writingpaper', 'alphabets']),
     ('reading', 'Reading & phonics', 'Reading', 'Letter sounds, CVC words, sight words, spelling and stories where your child is the hero.',
-     ['abcorder', 'cvc', 'sounds', 'families', 'rhyming', 'sight', 'colourwords', 'spelling', 'flashcards', 'opposites', 'sentences', 'story', 'storywriting']),
+     ['abcorder', 'cvc', 'sounds', 'families', 'rhyming', 'syllables', 'sight', 'colourwords', 'spelling', 'flashcards', 'opposites', 'position', 'sentences', 'story', 'storywriting']),
     ('maths', 'Maths', 'Maths', 'Counting, number bonds, sums, money, times tables, time, fractions and shapes, with answer keys.',
-     ['numbers', 'numberday', 'hundred', 'compare', 'bonds', 'maths', 'numberlines', 'wordproblems', 'placevalue', 'money', 'times', 'clocks', 'clockcraft', 'fractions', 'shapes', 'measuring', 'graphs']),
+     ['numbers', 'patterns', 'numberday', 'hundred', 'compare', 'bonds', 'doubles', 'maths', 'numberlines', 'wordproblems', 'placevalue', 'money', 'times', 'clocks', 'clockcraft', 'fractions', 'shapes', 'measuring', 'graphs']),
     ('puzzles', 'Puzzles & games', 'Puzzles', 'Mazes, dot to dot, matching, spot the difference, word searches, crosswords, sudoku and bingo.',
-     ['mazes', 'dots', 'matching', 'spotdiff', 'wordsearch', 'crossword', 'sudoku', 'bingo', 'snakes', 'travel']),
+     ['mazes', 'dots', 'matching', 'oddone', 'spotdiff', 'wordsearch', 'crossword', 'sudoku', 'bingo', 'snakes', 'travel']),
     ('crafts', 'Colouring, crafts & parties', 'Colouring & crafts', 'Colouring pages, photo colouring, colour by number, cut and paste, crowns, masks, cards and party packs.',
-     ['colouring', 'photo', 'colournum', 'howtodraw', 'cutpaste', 'crafts', 'bookmarks', 'cards', 'party']),
+     ['colouring', 'photo', 'colournum', 'howtodraw', 'rolldraw', 'cutpaste', 'crafts', 'bookmarks', 'doorhangers', 'cards', 'party']),
     ('charts', 'Charts & planners', 'Charts', 'Routines, chores, reward charts, certificates, reading logs, homework planners, calendars and name labels.',
-     ['routine', 'chores', 'reward', 'certificate', 'readinglog', 'homework', 'calendar', 'labels']),
+     ['routine', 'chores', 'reward', 'challenge', 'certificate', 'readinglog', 'homework', 'calendar', 'labels']),
     ('world', 'Me & my world', 'My world', 'Family, feelings, weather, life cycles and scavenger hunts that get children exploring.',
      ['family', 'feelings', 'weather', 'lifecycle', 'hunt']),
 ]
@@ -1488,6 +1601,7 @@ def tool_page(t):
 <script src="/js/tools7.js?v={VERSION}"></script>
 <script src="/js/tools8.js?v={VERSION}"></script>
 <script src="/js/tools9.js?v={VERSION}"></script>
+<script src="/js/tools10.js?v={VERSION}"></script>
 <script src="/js/app.js?v={VERSION}"></script>
 </body>
 </html>

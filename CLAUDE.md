@@ -76,7 +76,8 @@ use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in 
 for painted pictures on every sheet.
 Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
 (colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
-fractions, colour by number, spot the difference. Batch 8 live (69 tools, tools9.js, VERSION 23): hundred square, alphabet order,
+fractions, colour by number, spot the difference. Batch 9 live (77 tools, tools10.js, VERSION 24): odd one out, roll and draw (monster/robot),
+patterns, syllables, door hangers, 30 day challenges, doubles and halves, position words. Batch 8 live (69 tools, tools9.js, VERSION 23): hundred square, alphabet order,
 colour words, how to draw (step by step from the colouring pictures, DRAW_ORDER = artist order), fix the sentence, bookmarks, paper clock craft,
 snakes and ladders. Batch 7 live (61 tools): calendar, number of the day, greater/less than, phonics sounds, opposites, life cycles,
 family tree, road trip pack. Batch 6 live (53 tools): pre-writing lines, cut and paste, homework planner, crowns and masks, weather chart, cards to
