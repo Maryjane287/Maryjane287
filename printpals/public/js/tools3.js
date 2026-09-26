@@ -51,17 +51,19 @@ const SETS = {
   animals: [['Cat', 'img/cat.webp'], ['Dog', 'img/dog.webp'], ['Fish', 'img/fish.webp'], ['Gorilla', 'img/gorilla.webp'], ['Lion', 'img/lion.webp'],
     ['Monkey', 'img/monkey.webp'], ['Octopus', 'img/octopus.webp'], ['Pig', 'img/pig.webp'], ['Turtle', 'img/turtle.webp'], ['Zebra', 'img/zebra.webp'],
     ['Rabbit', '🐰'], ['Frog', '🐸'], ['Owl', '🦉'], ['Elephant', '🐘'], ['Giraffe', '🦒'], ['Bee', '🐝'], ['Duck', '🦆'], ['Penguin', '🐧'],
-    ['Butterfly', '🦋'], ['Snail', '🐌']],
+    ['Butterfly', '🦋'], ['Snail', '🐌'], ['Bear', '🐻'], ['Chick', '🐥'], ['Ladybird', '🐞'], ['Ant', '🐜']],
   food: [['Apple', 'img/apple.webp'], ['Egg', 'img/egg.webp'], ['Banana', '🍌'], ['Strawberry', '🍓'], ['Carrot', '🥕'], ['Cake', '🎂'],
     ['Cookie', '🍪'], ['Pizza', '🍕'], ['Ice cream', '🍦'], ['Grapes', '🍇'], ['Pear', '🍐'], ['Cheese', '🧀'], ['Bread', '🍞'],
-    ['Watermelon', '🍉'], ['Cupcake', '🧁'], ['Lemon', '🍋'], ['Corn', '🌽'], ['Cherries', '🍒']],
+    ['Watermelon', '🍉'], ['Cupcake', '🧁'], ['Lemon', '🍋'], ['Corn', '🌽'], ['Cherries', '🍒'], ['Orange', '🍊'], ['Blueberries', '🫐'], ['Doughnut', '🍩'], ['Mushroom', '🍄']],
   things: [['Balloon', 'img/balloon.webp'], ['Hat', 'img/hat.webp'], ['Rainbow', 'img/rainbow.webp'], ['Star', 'img/star.webp'], ['Sun', 'img/sun.webp'],
     ['Nest', 'img/nest.webp'], ['Kite', '🪁'], ['Ball', '⚽'], ['Car', '🚗'], ['Rocket', '🚀'], ['Umbrella', '☂️'], ['Book', '📚'], ['Teddy', '🧸'],
-    ['Crayon', '🖍️'], ['Bike', '🚲'], ['Boat', '⛵'], ['Moon', '🌙'], ['Tree', '🌳'], ['Flower', '🌸'], ['Drum', '🥁']],
+    ['Crayon', '🖍️'], ['Bike', '🚲'], ['Boat', '⛵'], ['Moon', '🌙'], ['Tree', '🌳'], ['Sunflower', '🌻'], ['Tulip', '🌷'], ['Drum', '🥁'], ['Blocks', 'img/blocks.webp'], ['Heart', '❤️'], ['Medal', '🏅']],
   party: [['Cake', '🎂'], ['Balloon', 'img/balloon.webp'], ['Present', '🎁'], ['Popper', '🎉'], ['Cupcake', '🧁'], ['Party hat', 'img/hat.webp'],
     ['Sweets', '🍬'], ['Lollipop', '🍭'], ['Star', 'img/star.webp'], ['Crown', '👑'], ['Music', '🎵'], ['Juice', '🧃'], ['Ice cream', '🍦'],
     ['Teddy', '🧸'], ['Confetti', '🎊'], ['Doughnut', '🍩'], ['Rainbow', 'img/rainbow.webp'], ['Games', '🎲']],
 };
+// Use our painted pictures wherever we have one.
+for (const k in SETS) SETS[k] = SETS[k].map(([n, src]) => [n, artFor(src) || src]);
 const PAINTED = [...SETS.animals, ...SETS.food, ...SETS.things].filter(([, s]) => s.startsWith('img/'));
 const SIGHT_WORDS = ['the', 'and', 'is', 'it', 'in', 'to', 'my', 'you', 'we', 'see', 'look', 'can', 'go', 'said', 'was', 'play', 'like', 'come', 'here', 'big', 'little', 'up', 'down', 'said', 'yes', 'no', 'for', 'at'];
 

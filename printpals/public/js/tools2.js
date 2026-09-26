@@ -5,7 +5,21 @@ const EMOJI_FONT = "'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji','Twe
 const PALETTE = ['#ff6b6b', '#ffb938', '#3fbfa8', '#6c8cff', '#b06cff', '#ff7eb6', '#35b5e5', '#8bc34a'];
 const TINTS = ['#fff0f0', '#fff6e0', '#e8f8f4', '#eef2ff', '#f5edff', '#fff0f7', '#e6f6fc', '#f1f8e6'];
 
+// Our painted pictures replace the matching emoji everywhere, so sheets look the same on every device.
+const EMOJI_ART = {
+  '🐜': 'ant', '🍎': 'apple', '🎈': 'balloon', '🍌': 'banana', '🐻': 'bear', '🫐': 'blueberry', '🥣': 'bowl', '🎂': 'cake',
+  '🐱': 'cat', '🐈': 'cat', '🐥': 'chick', '🐤': 'chick', '🍪': 'cookie', '🧁': 'cupcake', '🌼': 'daisy', '🐶': 'dog', '🐕': 'dog',
+  '🍩': 'donut', '🥚': 'egg', '✉️': 'envelope', '🐟': 'fish', '🐠': 'fish', '🦍': 'gorilla', '🎩': 'hat', '❤️': 'heart', '💖': 'heart',
+  '🐞': 'ladybird', '🦁': 'lion', '🍭': 'lolly', '🏅': 'medal', '🐒': 'monkey', '🐵': 'monkey', '🍄': 'mushroom', '🪺': 'nest',
+  '🐙': 'octopus', '🍊': 'orange', '🐷': 'pig', '🐖': 'pig', '🎉': 'popper', '🎁': 'present', '🌈': 'rainbow', '🌹': 'rose',
+  '⭐': 'star', '🌟': 'star', '🍓': 'strawberry', '☀️': 'sun', '🌞': 'sun', '🌻': 'sunflower', '🌷': 'tulip', '🐢': 'turtle', '🦓': 'zebra',
+  '🧸': 'bear',
+};
+function artFor(ch) { return EMOJI_ART[ch] ? `img/${EMOJI_ART[ch]}.webp` : ''; }
+
 function emoji(ch, x, y, size) {
+  const art = artFor(ch);
+  if (art) return `<image href="${art}" x="${(x - size * 0.56).toFixed(2)}" y="${(y - size * 0.56).toFixed(2)}" width="${(size * 1.12).toFixed(2)}" height="${(size * 1.12).toFixed(2)}" preserveAspectRatio="xMidYMid meet"/>`;
   return `<text x="${x}" y="${y + size * 0.36}" font-size="${size}" text-anchor="middle" font-family="${EMOJI_FONT}">${ch}</text>`;
 }
 

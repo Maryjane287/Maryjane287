@@ -71,8 +71,9 @@ branch (owner asked). See printpals/README.md. Owner wants quality: test every c
 (Playwright page.pdf) and looking at the pages before publishing.
 Batch 1 of the owner's 50 ideas is live (14 tools, 2026-09-26). Money worksheets let parents pick the currency
 children count in; it has nothing to do with how the owner is paid (she wants payment in dollars).
-Batch 2 is live (22 tools). Owner asked for it to feel more premium. Brainlings art must NOT be copied into
-PrintPals (keep them separate); PrintPals has its own 18 painted pictures in public/img plus emoji and SVG art.
+Batch 2 is live (22 tools). Owner asked for it to feel more premium. On 2026-09-26 the owner said PrintPals SHOULD
+use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in tools2.js swaps matching emoji
+for painted pictures on every sheet.
 Higgsfield credits are nearly gone (0.66), so new art needs the owner's say.
 
 ## Other projects (paused)
