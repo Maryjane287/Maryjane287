@@ -30,12 +30,33 @@ function applyCase(s, c) {
 
 const SIZES = { large: 20, medium: 15, small: 11 };
 
+// A painted friend in the corner cheers the child on.
+const CHEER_FRIENDS = ['star', 'lion', 'turtle', 'monkey', 'octopus', 'bear', 'chick', 'cat', 'dog', 'pig', 'zebra', 'ladybird'];
+const CHEER_WORDS = ['Great work!', 'You can do it!', 'Super job!', 'Keep going!', 'Brilliant!', 'Well done!'];
+const CHEER_ROOM = 26;
+function cheer(pg, k) {
+  const friend = CHEER_FRIENDS[Math.abs(k) % CHEER_FRIENDS.length], words = CHEER_WORDS[Math.abs(k) % CHEER_WORDS.length];
+  const y = pg.bottom + 2, size = 23;
+  pg.add(`<image href="img/${friend}.webp" x="${pg.right - size}" y="${y}" width="${size}" height="${size}" preserveAspectRatio="xMidYMid meet"/>`);
+  const bw = words.length * 2.7 + 10, bx = pg.right - size - bw - 3, by = y + 4;
+  pg.add(`<rect x="${bx}" y="${by}" width="${bw}" height="11" rx="5.5" fill="#fff6e0" stroke="#ffb938" stroke-width="0.5"/>`);
+  pg.add(`<path d="M${bx + bw - 0.4} ${by + 4} L${bx + bw + 3.5} ${by + 6.5} L${bx + bw - 0.4} ${by + 8}" fill="#fff6e0" stroke="#ffb938" stroke-width="0.5" stroke-linejoin="round"/>`);
+  pg.add(`<text x="${bx + bw / 2}" y="${by + 7.4}" text-anchor="middle" font-family="${TITLE_FONT}" font-weight="800" font-size="5" fill="${INK}">${words}</text>`);
+}
+
+// Pictures to count on each number page.
+const COUNT_ART = [['apple', 'apples'], ['star', 'stars'], ['balloon', 'balloons'], ['fish', 'fish'], ['strawberry', 'strawberries'], ['cupcake', 'cupcakes'],
+  ['ladybird', 'ladybirds'], ['banana', 'bananas'], ['sunflower', 'sunflowers'], ['egg', 'eggs'], ['cookie', 'cookies'], ['chick', 'chicks'],
+  ['heart', 'hearts'], ['orange', 'oranges'], ['tulip', 'tulips'], ['turtle', 'turtles'], ['donut', 'doughnuts'], ['blueberry', 'blueberries'],
+  ['daisy', 'daisies'], ['mushroom', 'mushrooms']];
+
 // ---------------------------------------------------------------- names
 function makeNames(o, paper) {
   const names = (o.names || '').split(/[,\n]/).map((s) => applyCase(s.trim(), o.case)).filter((s) => cleanText(s).trim());
   if (!names.length) names.push('Your Name');
   return names.map((name) => {
     const pg = new Page(paper, 'Trace my name', { subtitle: 'Start at the green dot. Follow the dots, then try on your own!' });
+    pg.bottom -= CHEER_ROOM;
     const want = SIZES[o.size] || 20;
     const size = fitSize(name, want, pg.width - want * 0.6);
     const rh = rowHeight(size);
@@ -49,6 +70,7 @@ function makeNames(o, paper) {
       pg.y += rh;
       row++;
     }
+    cheer(pg, name.length);
     return pg.svg();
   });
 }
@@ -128,6 +150,20 @@ function numberPage(n, paper, o) {
     if (text) fillRow(pg, text, pg.y, size, style, o.dots !== false);
     pg.y += rh;
   }
+  // Count the painted pictures
+  if (n > 0) {
+    const [art, plural] = COUNT_ART[(n - 1) % COUNT_ART.length];
+    const ps = Math.min(15, (pg.width - 4) / 10);
+    const rows = Math.ceil(n / 10);
+    if (pg.room > rows * ps + 12) {
+      pg.add(`<text x="${pg.left}" y="${pg.y + 2}" font-family="${FONT}" font-weight="800" font-size="4.5" fill="${INK}">Count the ${n === 1 ? art : plural}:</text>`);
+      for (let i = 0; i < n; i++) {
+        const x = pg.left + (i % 10) * ps, y = pg.y + 5 + Math.floor(i / 10) * ps;
+        pg.add(`<image href="img/${art}.webp" x="${x + ps * 0.06}" y="${y}" width="${ps * 0.88}" height="${ps * 0.88}" preserveAspectRatio="xMidYMid meet"/>`);
+      }
+      pg.y += rows * ps + 10;
+    }
+  }
   // Colour the right amount of stars
   if (pg.room > 24) {
     pg.add(`<text x="${pg.left}" y="${pg.y + 2}" font-family="${FONT}" font-weight="800" font-size="4.5" fill="${INK}">Colour ${n} ${n === 1 ? 'star' : 'stars'}:</text>`);
@@ -185,6 +221,7 @@ function mathsPages(o, paper, problems, answers) {
   const perPage = o.layout === 'vertical' ? 20 : 20;
   for (let start = 0; start < problems.length; start += perPage) {
     const pg = new Page(paper, answers ? `${title}: answers` : title, { subtitle: `Numbers up to ${o.within}. ${answers ? 'Answer key for grown-ups.' : 'Take your time and check your work!'}`, noName: answers });
+    if (!answers) pg.bottom -= CHEER_ROOM;
     const chunk = problems.slice(start, start + perPage);
     const pics = o.pictures && +o.within <= 10;
     if (o.layout === 'vertical') {
@@ -227,6 +264,7 @@ function mathsPages(o, paper, problems, answers) {
         }
       });
     }
+    if (!answers) cheer(pg, (+o.seed || 0) + start);
     pages.push(pg.svg());
   }
   return pages;
@@ -293,7 +331,9 @@ function makeWordSearch(o, paper) {
       pages.push(pg.svg());
       break;
     }
-    const gw = Math.min(pg.width, pg.room - 40);
+    if (!answers) pg.bottom -= CHEER_ROOM;
+    const listH = Math.ceil(words.length / 3) * 8 + 14;
+    const gw = Math.min(pg.width, pg.room - listH);
     const cell = gw / size;
     const gx = pg.left + (pg.width - gw) / 2, gy = pg.y;
     pg.add(`<rect x="${gx - 2}" y="${gy - 2}" width="${gw + 4}" height="${gw + 4}" rx="4" fill="#fbfaff" stroke="#b9b3d6" stroke-width="0.6"/>`);
@@ -315,6 +355,7 @@ function makeWordSearch(o, paper) {
       pg.add(`<rect x="${x}" y="${y - 3.8}" width="4.4" height="4.4" rx="1" fill="none" stroke="${SOFT}" stroke-width="0.45"/>`);
       pg.add(`<text x="${x + 7}" y="${y}" font-family="${FONT}" font-weight="800" font-size="4.8" fill="${INK}">${w}</text>`);
     });
+    if (!answers) cheer(pg, (+o.seed || 0) + words.length);
     pages.push(pg.svg());
   }
   return pages;
@@ -333,8 +374,9 @@ function makeSpelling(o, paper) {
     const rh = rowHeight(size);
     const block = rh * 2;
     if (!pg || pg.room < block) {
-      if (pg) pages.push(pg.svg());
+      if (pg) { cheer(pg, pages.length + 3); pages.push(pg.svg()); }
       pg = new Page(paper, title, { subtitle: 'Look, trace, then write it on your own.' });
+      pg.bottom -= CHEER_ROOM;
     }
     pg.guides(pg.y, size);
     const unit = (textWidth(w) / 100) * size;
@@ -349,6 +391,7 @@ function makeSpelling(o, paper) {
     pg.guides(pg.y, size); // an empty row to write it alone
     pg.y += rh;
   }
+  cheer(pg, pages.length + 3);
   pages.push(pg.svg());
   return pages;
 }

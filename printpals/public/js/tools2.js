@@ -27,7 +27,9 @@ function wrap(text, maxChars) {
   const words = String(text).split(/\s+/);
   const lines = [];
   let line = '';
-  for (const w of words) {
+  for (let w of words) {
+    // A very long word with no spaces is split so it never runs off the page.
+    while (w.length > maxChars) { if (line) { lines.push(line); line = ''; } lines.push(w.slice(0, maxChars)); w = w.slice(maxChars); }
     if ((line + ' ' + w).trim().length > maxChars && line) { lines.push(line); line = w; }
     else line = (line + ' ' + w).trim();
   }
@@ -371,7 +373,7 @@ function certificate(paper, name, title, line) {
   pg.add(emoji('⭐', W / 2, H * 0.3, 30));
   pg.add(`<text x="${W / 2}" y="${H * 0.47}" text-anchor="middle" font-family="${TITLE_FONT}" font-weight="800" font-size="13" fill="${INK}">${esc(title)}</text>`);
   pg.add(`<text x="${W / 2}" y="${H * 0.53}" text-anchor="middle" font-family="${FONT}" font-weight="700" font-size="5.5" fill="${SOFT}">This certificate is proudly awarded to</text>`);
-  if (name) pg.add(`<text x="${W / 2}" y="${H * 0.61}" text-anchor="middle" font-family="${TITLE_FONT}" font-weight="800" font-size="16" fill="#ff6b6b">${esc(name)}</text>`);
+  if (name) pg.add(`<text x="${W / 2}" y="${H * 0.61}" text-anchor="middle" font-family="${TITLE_FONT}" font-weight="800" font-size="${Math.min(16, (W - 50) / (name.length * 0.55)).toFixed(2)}" fill="#ff6b6b">${esc(name)}</text>`);
   pg.add(`<line x1="${W * 0.22}" x2="${W * 0.78}" y1="${H * 0.63}" y2="${H * 0.63}" stroke="#ffb938" stroke-width="0.6"/>`);
   wrap(line, 48).forEach((l, i) => pg.add(`<text x="${W / 2}" y="${H * 0.69 + i * 8}" text-anchor="middle" font-family="${FONT}" font-weight="800" font-size="6.2" fill="${INK}">${esc(l)}</text>`));
   [['Date', W * 0.3], ['Signed', W * 0.7]].forEach(([t, x]) => {
@@ -746,7 +748,10 @@ function makeReward(o, paper) {
   pg.add(`<rect x="${pg.left}" y="${pg.y}" width="${pg.width}" height="${rewardH - 6}" rx="8" fill="#fff8e6" stroke="#ffb938" stroke-width="0.8" stroke-dasharray="3 2"/>`);
   pg.add(emoji('🎁', pg.left + 14, pg.y + (rewardH - 6) / 2, 15));
   pg.add(`<text x="${pg.left + 28}" y="${pg.y + 11}" font-family="${FONT}" font-weight="800" font-size="4.8" fill="${SOFT}">When my chart is full, I get:</text>`);
-  if (o.reward) pg.add(`<text x="${pg.left + 28}" y="${pg.y + 21}" font-family="${TITLE_FONT}" font-weight="800" font-size="7" fill="${INK}">${esc(o.reward.slice(0, 50))}</text>`);
+  if (o.reward) {
+    const r = o.reward.slice(0, 50);
+    pg.add(`<text x="${pg.left + 28}" y="${pg.y + 21}" font-family="${TITLE_FONT}" font-weight="800" font-size="${Math.min(7, (pg.width - 34) / (r.length * 0.52)).toFixed(2)}" fill="${INK}">${esc(r)}</text>`);
+  }
   else pg.add(`<line x1="${pg.left + 28}" x2="${pg.right - 8}" y1="${pg.y + 21}" y2="${pg.y + 21}" stroke="${SOFT}" stroke-width="0.4"/>`);
   return [pg.svg()];
 }

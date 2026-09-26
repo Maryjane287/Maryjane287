@@ -552,11 +552,11 @@ function thankYouCards(o, paper, name, guests) {
       pg.add(emoji('🎂', x + w / 2, y + 62, 20));
       const gy = y + h - 36;
       pg.add(`<text x="${x + 12}" y="${gy}" font-family="${FONT}" font-weight="700" font-size="4.4" fill="${SOFT}">Dear</text>`);
-      if (g) pg.add(`<text x="${x + 25}" y="${gy}" font-family="${TITLE_FONT}" font-weight="800" font-size="6" fill="${INK}">${esc(nameOf(g, ''))}</text>`);
+      if (g) pg.add(`<text x="${x + 25}" y="${gy}" font-family="${TITLE_FONT}" font-weight="800" font-size="${fitFont(nameOf(g, ''), 6, w - 40)}" fill="${INK}">${esc(nameOf(g, ''))}</text>`);
       else pg.add(`<line x1="${x + 24}" x2="${x + w - 12}" y1="${gy + 0.5}" y2="${gy + 0.5}" stroke="#9a93b8" stroke-width="0.35"/>`);
       pg.add(`<line x1="${x + 12}" x2="${x + w - 12}" y1="${gy + 10}" y2="${gy + 10}" stroke="#d9d4ec" stroke-width="0.35"/>`);
       pg.add(`<text x="${x + 12}" y="${gy + 22}" font-family="${FONT}" font-weight="700" font-size="4.4" fill="${SOFT}">Love from</text>`);
-      pg.add(`<text x="${x + 34}" y="${gy + 22}" font-family="${TITLE_FONT}" font-weight="800" font-size="6" fill="${INK}">${esc(name)}</text>`);
+      pg.add(`<text x="${x + 34}" y="${gy + 22}" font-family="${TITLE_FONT}" font-weight="800" font-size="${fitFont(name, 6, w - 49)}" fill="${INK}">${esc(name)}</text>`);
     }
     pages.push(pg.svg());
   }
