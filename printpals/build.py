@@ -1817,7 +1817,7 @@ def top(active=''):
 
 FOOT = '''<footer><div class="wrap"><div class="foot-brand"><div class="brand" style="font-size:24px;color:#fff">Print<b style="color:#ff8a8a">Pals</b></div>
 <p style="max-width:420px;margin-top:8px">Free printable worksheets and ready-made packs for children, made in seconds. Everything is made inside your own browser: nothing you type is sent to us or stored.</p>
-<p class="foot-links"><a href="/plus">PrintPals Plus</a><a href="/about">About us</a><a href="/privacy">Privacy</a><a href="mailto:''' + CONTACT + '''">Contact</a></p>
+<p class="foot-links"><a href="/plus">PrintPals Plus</a><a href="/about">About us</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:''' + CONTACT + '''">Contact</a></p>
 <p style="margin-top:14px">© PrintPals. Free for home and classroom use.</p></div>
 <div class="foot-cols">''' + ''.join(f'<div><h4>{v}</h4>' + ''.join(f'<a href="/{t["slug"]}">{t["nav"]}</a>' for t in TOOLS if t['cat'] == k) + '</div>' for k, v in CATS) + '''</div></div></footer>'''
 
@@ -2011,11 +2011,13 @@ ABOUT = f'''<h1>About PrintPals</h1>
 <p>We read every message, and ideas for new worksheets are very welcome: <a href="mailto:{CONTACT}">{CONTACT}</a></p>'''
 
 PRIVACY = f'''<h1>Privacy</h1>
-<p class="lead-p">Short version: we do not collect your information. Worksheets are made on your own device.</p>
+<p class="lead-p">Short version: we do not collect what you type. Worksheets are made on your own device. If you buy PrintPals Plus, we keep only what we need to give you your subscription.</p>
 <h2>What we collect</h2>
 <p>Nothing that you type. Names, word lists, messages and photos you use in a worksheet are processed inside your web browser and are never sent to us. There are no accounts, no sign up forms and no advertising trackers.</p>
 <h2>What stays on your device</h2>
 <p>To make PrintPals easier to use, your browser remembers a few settings in its own local storage: your paper size, whether Ink saver is on, and your child's first name if you typed one, so the next sheet is ready for you. This never leaves your device. Press "Forget it" under the print button, or clear your browser data, to remove it.</p>
+<h2>If you buy PrintPals Plus</h2>
+<p>When you subscribe, you pay through our payment partner Stripe. Stripe collects your payment details and billing information and handles them under its own privacy policy. We never see your card number. We receive your name, email address, country and subscription details from Stripe, so we can give you Plus, send receipts and help if something goes wrong. We keep this only while you are a customer and for as long as the law requires for tax records, and we never sell it or use it for advertising.</p>
 <h2>Services we use</h2>
 <p>The website is hosted on Google Firebase Hosting, which keeps standard server logs (such as IP addresses and the pages requested) to run and protect the service. Please see Google's privacy policy for how they handle this information. Our fonts are hosted on PrintPals itself, so no other services are contacted.</p>
 <h2>Children</h2>
@@ -2043,6 +2045,31 @@ PLUS = f'''<h1>PrintPals Plus</h1>
 <details><summary>How will payment work?</summary><p>Prices are in US dollars. Payments will be handled by a trusted payment partner, so we never see your card details, and you can cancel any time.</p></details>
 <details><summary>Do you show adverts?</summary><p>No. PrintPals has no adverts, for free or Plus families.</p></details>'''
 
+TERMS = f'''<h1>Terms of use</h1>
+<p class="lead-p">The friendly version: use PrintPals to help children learn, at home or in class. Be kind, and do not resell our pages.</p>
+<h2>Who we are</h2>
+<p>PrintPals (printpals.web.app) is run by Grace and Loannes Ltd, a company registered in Scotland (company number SC899696). You can reach us at <a href="mailto:{CONTACT}">{CONTACT}</a>.</p>
+<h2>Using PrintPals</h2>
+<p>You may make, print and share PrintPals worksheets for your own family and for the children you teach, including whole classes and schools. Please do not sell our worksheets, packs or pictures, or upload them to other websites as your own. Worksheets are made inside your own browser, and you are responsible for what you type into them.</p>
+<h2>Free and Plus</h2>
+<p>Every worksheet maker, the weekly learning pack, quick packs, the family far away pack and the learning passport are free. PrintPals Plus is an optional subscription that adds monthly learning plans, personalised activity books and, on the teacher plan, class packs.</p>
+<h2>Plus subscriptions</h2>
+<ul>
+<li><b>Prices.</b> Plus costs US$4.99 a month or US$39 a year. The teacher plan costs US$59 a year. Prices include any sales tax or VAT. Your bank may show the amount in your own currency.</li>
+<li><b>Free week.</b> New families can try Plus free for 7 days on our website, with no card needed.</li>
+<li><b>Renewal.</b> Subscriptions renew automatically at the end of each month or year until you cancel.</li>
+<li><b>Cancelling.</b> You can cancel any time from the "Manage my subscription" link on our <a href="/plus">Plus page</a>. Plus stays open until the end of the period you have paid for, and you will not be charged again.</li>
+<li><b>Refunds.</b> If you are not happy, email us within 14 days of a payment and we will refund it in full. After 14 days, payments are not refunded, but you can cancel so you are not charged again.</li>
+<li><b>Payments.</b> Payments are handled securely by our payment partner, Stripe. We never see or store your card details.</li>
+</ul>
+<h2>Changes</h2>
+<p>We keep improving PrintPals, so pages and features may change. If we ever change Plus prices, we will tell subscribers by email before the change affects them, and you can cancel before then.</p>
+<h2>Our responsibility</h2>
+<p>We work hard to make every page correct and safe for children, but PrintPals is provided as it is. Please check each worksheet before you give it to a child, and supervise children when they use scissors and glue. Nothing in these terms limits your rights under the consumer laws of your country.</p>
+<h2>Law</h2>
+<p>These terms are governed by the laws of Scotland. If you have a problem, please email us first: we are a small family company and we will always try to put things right.</p>
+<p><i>Last updated: {datetime.date.today().strftime('%d %B %Y')}</i></p>'''
+
 NOT_FOUND = '''<h1>Oops, this page got lost!</h1>
 <p class="lead-p">It may have wandered off to play. Let us help you find something lovely instead.</p>
 <p><a class="btn big" href="/weekly-learning-pack" style="max-width:420px">🎒 Plan my child's week</a></p>
@@ -2057,6 +2084,7 @@ def main():
             f.write(tool_page(t))
     pages = [('about', 'About PrintPals | Free Worksheets Made for Real Families', 'Why we made PrintPals: free, private worksheets and ready-made learning packs built around the real problems parents face.', ABOUT),
              ('privacy', 'Privacy | PrintPals', 'PrintPals does not collect what you type. Worksheets are made inside your own browser.', PRIVACY),
+             ('terms', 'Terms of Use | PrintPals', 'The terms for using PrintPals and PrintPals Plus subscriptions, including prices, cancelling and refunds.', TERMS),
              ('plus', 'PrintPals Plus | Monthly Learning Plans, Activity Books and Class Packs', 'Everything on PrintPals stays free. Plus adds monthly learning plans, personalised activity books and class packs for teachers. Free while we launch.', PLUS)]
     for slug, title, desc, body in pages:
         with open(os.path.join(OUT, slug + '.html'), 'w', encoding='utf-8') as f:
@@ -2067,7 +2095,7 @@ def main():
     with open(os.path.join(OUT, 'js', 'pp.js'), 'w', encoding='utf-8') as f:
         f.write('\n;\n'.join(open(os.path.join(OUT, 'js', n + '.js'), encoding='utf-8').read() for n in JS_FILES))
     today = datetime.date.today().isoformat()
-    urls = ['/'] + ['/' + t['slug'] for t in TOOLS] + ['/plus', '/about', '/privacy']
+    urls = ['/'] + ['/' + t['slug'] for t in TOOLS] + ['/plus', '/about', '/privacy', '/terms']
     with open(os.path.join(OUT, 'sitemap.xml'), 'w', encoding='utf-8') as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                 + ''.join(f'  <url><loc>{SITE}{u}</loc><lastmod>{today}</lastmod></url>\n' for u in urls) + '</urlset>\n')
