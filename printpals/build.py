@@ -3,6 +3,7 @@
 
 Run: python3 printpals/build.py
 """
+import datetime
 import html
 import re
 import json
@@ -10,7 +11,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '25'
+VERSION = '26'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -1478,7 +1479,7 @@ TOOLS += [
         'faq': [('Which words are included?', 'In, on, under, next to, behind, in front of, above and between. Each sheet uses six of them.')],
     },
     {
-        'id': 'secretcode', 'cat': 'puzzles', 'slug': 'secret-code-worksheets', 'tint': '#f5edff', 'icon': '🕵️', 'new': True,
+        'id': 'secretcode', 'cat': 'puzzles', 'slug': 'secret-code-worksheets', 'tint': '#f5edff', 'icon': '🕵️', 'new': False,
         'nav': 'Secret code',
         'title': 'Free Secret Code Worksheets for Kids | Picture Code, Number Code | PrintPals',
         'desc': 'Free printable secret code puzzles for kids: crack the picture code, number code or backwards alphabet to read kind messages, or type your own secret message. New code every click.',
@@ -1492,7 +1493,7 @@ TOOLS += [
         'faq': [('Can I write my own message?', 'Yes. Type up to four messages, one per line. Each one is turned into the code for your child to crack.')],
     },
     {
-        'id': 'gridcopy', 'cat': 'crafts', 'slug': 'grid-drawing-for-kids', 'tint': '#eef2ff', 'icon': '🔲', 'new': True,
+        'id': 'gridcopy', 'cat': 'crafts', 'slug': 'grid-drawing-for-kids', 'tint': '#eef2ff', 'icon': '🔲', 'new': False,
         'nav': 'Copy the picture',
         'title': 'Free Grid Drawing Worksheets for Kids | Copy the Picture, Finish the Half | PrintPals',
         'desc': 'Free printable grid drawing worksheets: copy a pixel picture square by square, or colour the other half to finish a symmetrical picture. With grid letters and numbers to help.',
@@ -1506,7 +1507,7 @@ TOOLS += [
         'faq': [('What age is this for?', 'Finish the other half suits ages 4 to 6. Copying the whole picture suits ages 5 to 8.')],
     },
     {
-        'id': 'puppets', 'cat': 'crafts', 'slug': 'finger-puppets-printable', 'tint': '#fff0f7', 'icon': '🧤', 'new': True,
+        'id': 'puppets', 'cat': 'crafts', 'slug': 'finger-puppets-printable', 'tint': '#fff0f7', 'icon': '🧤', 'new': False,
         'nav': 'Finger puppets',
         'title': 'Free Printable Finger Puppets for Kids | To Colour or Bright | PrintPals',
         'desc': 'Free printable finger puppets: nine animal puppets on a page, to colour in or bright and ready to cut. Wrap the band around a finger and put on a puppet show.',
@@ -1518,7 +1519,7 @@ TOOLS += [
         'faq': [('How do I make them sturdy?', 'Print on thin card, or glue the page onto a cereal box before cutting.')],
     },
     {
-        'id': 'handprints', 'cat': 'crafts', 'slug': 'handprint-art-keepsakes', 'tint': '#fff6e0', 'icon': '🖐️', 'new': True,
+        'id': 'handprints', 'cat': 'crafts', 'slug': 'handprint-art-keepsakes', 'tint': '#fff6e0', 'icon': '🖐️', 'new': False,
         'nav': 'Handprint keepsakes',
         'title': 'Free Handprint Art Templates | Keepsake Poems for Kids | PrintPals',
         'desc': 'Free printable handprint and footprint keepsake templates with sweet poems: little hands, a handprint flower, tiny feet and a handprint heart. Add name, age and date.',
@@ -1533,7 +1534,7 @@ TOOLS += [
         'faq': [('Is the hand shape the real size?', 'It is a guide only. Every hand is different, so press anywhere inside the space.')],
     },
     {
-        'id': 'heightchart', 'cat': 'charts', 'slug': 'printable-height-chart', 'tint': '#e8f8f4', 'icon': '🦒', 'new': True,
+        'id': 'heightchart', 'cat': 'charts', 'slug': 'printable-height-chart', 'tint': '#e8f8f4', 'icon': '🦒', 'new': False,
         'nav': 'Height chart',
         'title': 'Free Printable Height Chart for Kids | Growth Chart in cm or Inches | PrintPals',
         'desc': 'Free printable growth chart for kids in centimetres or inches, printed at real size in strips you stick on the wall. With their name and cute painted animals.',
@@ -1548,7 +1549,7 @@ TOOLS += [
         'faq': [('Is it accurate?', 'Yes, when printed at 100% scale. Always check with a ruler first, because some printers shrink pages a little.')],
     },
     {
-        'id': 'daysmonths', 'cat': 'world', 'slug': 'days-of-the-week-worksheets', 'tint': '#fff0f0', 'icon': '☀️', 'new': True,
+        'id': 'daysmonths', 'cat': 'world', 'slug': 'days-of-the-week-worksheets', 'tint': '#fff0f0', 'icon': '☀️', 'new': False,
         'nav': 'Days and months',
         'title': 'Free Days of the Week and Months of the Year Worksheets | PrintPals',
         'desc': 'Free printable days of the week and months of the year worksheets: fill in the missing days, what comes before and after, plus a daily "my day today" sheet with date, weather and feelings.',
@@ -1561,7 +1562,7 @@ TOOLS += [
         'faq': [('Can I use it every day?', 'Yes. Slip the "my day today" sheet into a plastic sleeve and write on it with a whiteboard pen.')],
     },
     {
-        'id': 'mybody', 'cat': 'world', 'slug': 'my-body-worksheets', 'tint': '#e6f6fc', 'icon': '🧒', 'new': True,
+        'id': 'mybody', 'cat': 'world', 'slug': 'my-body-worksheets', 'tint': '#e6f6fc', 'icon': '🧒', 'new': False,
         'nav': 'My body',
         'title': 'Free My Body Worksheets for Kids | Label the Body, Face, Five Senses | PrintPals',
         'desc': 'Free printable my body worksheets for kids: label the parts of the body or the face with a word bank, and match the five senses. With answer keys.',
@@ -1574,7 +1575,7 @@ TOOLS += [
         'faq': [('What age is this for?', 'Ages 3 to 6. Younger children can point and say the words while a grown-up writes.')],
     },
     {
-        'id': 'dominoes', 'cat': 'maths', 'slug': 'domino-maths-worksheets', 'tint': '#f1f8e6', 'icon': '🎴', 'new': True,
+        'id': 'dominoes', 'cat': 'maths', 'slug': 'domino-maths-worksheets', 'tint': '#f1f8e6', 'icon': '🎴', 'new': False,
         'nav': 'Domino maths',
         'title': 'Free Domino Maths Worksheets | Domino Addition and a Printable Set | PrintPals',
         'desc': 'Free printable domino maths: count the dots and write the sum, draw the missing dots to make a number, or print a full double six domino set to cut out and play.',
@@ -1586,25 +1587,111 @@ TOOLS += [
         'article': """<h2>Dots before digits</h2><p>Dominoes help children see numbers as patterns, so they can spot "five" without counting each dot. That quick seeing is a big step towards adding in their head.</p>""",
         'faq': [('How do you play dominoes?', 'Share out the dominoes. Take turns to add one that matches a number at either end of the line. The first to use all theirs wins!')],
     },
+    {
+        'id': 'pack', 'cat': 'packs', 'slug': 'weekly-learning-pack', 'tint': '#fff6e0', 'icon': '🎒', 'new': True,
+        'nav': 'Weekly learning pack',
+        'title': 'Free Personalised Weekly Learning Pack for Kids | A Whole Week Planned in One Click | PrintPals',
+        'desc': 'A free personalised learning week for your child: pick their age and a theme and get a balanced week of reading, maths and fun pages with their name, a star chart, a certificate and a grown-up guide. Siblings too.',
+        'h1': 'Weekly learning pack',
+        'lead': 'Stop searching for worksheets. Tell us your child\'s name, age and favourite theme, and get a whole balanced week in one click: reading, maths and fun, a star chart, a certificate and a simple guide for you.',
+        'card': 'A whole week planned for your child in one click, with their name, a star chart and a grown-up guide.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="24" placeholder="Mia" autocomplete="off">')
+        + field('Age', seg('age', [('3', '3'), ('4', '4'), ('5', '5'), ('6', '6'), ('7', '7+')], '4'))
+        + field('Theme', '<select name="theme">' + ''.join(f'<option value="{k}">{v}</option>' for k, v in [('animals', 'Animals'), ('space', 'Space'), ('sea', 'Under the sea'), ('go', 'Things that go'), ('magic', 'Magic and unicorns'), ('garden', 'Bugs and gardens')]) + '</select>')
+        + field('Days', seg('days', [('3', '3 days'), ('5', '5 days')], '5'))
+        + field('Pages a day', seg('per', [('1', '1'), ('2', '2'), ('3', '3')], '2'), 'About 10 minutes a page.')
+        + field('Brothers and sisters (optional)', '<textarea name="siblings" rows="2" spellcheck="false" placeholder="Leo 6&#10;Sam 3"></textarea>', 'One child per line with their age. Each child gets their own pack at their own level, with the same theme, so they can sit and work together.')
+        + check('cover', 'A cover to colour') + check('stars', 'Star chart') + check('certificate', 'Certificate at the end') + check('guide', 'Grown-up guide') + check('key', 'Answer pages')
+        + SHUFFLE + PAPER,
+        'article': """<h2>Why a planned week works</h2><p>Parents tell us the hardest part is not printing, it is choosing. Which sheet? Is it too hard? What comes next? The weekly pack answers all of that. Every day mixes words, numbers and something fun, at the right level for your child's age, with their name on every page. The grown-up guide tells you what each page teaches and exactly what to say to help.</p><h2>Little and often</h2><p>Ten to fifteen minutes a day is plenty for young children. Let them colour a star on the chart after each page, and hand over the certificate at the end of the week. Want next week? Press "Make a new set" for a brand new week on the same theme.</p>""",
+        'faq': [('Is it really free?', 'Yes. No sign up, no email, no payment. The whole pack is made inside your own browser.'),
+                ('Can I make packs for more than one child?', 'Yes. Add brothers and sisters with their ages. Each child gets their own pack at their own level, with the same theme so they can work side by side.'),
+                ('What if it is too hard or too easy?', 'Change the age and press "Make a new set". Every single sheet on PrintPals also has Easier and Harder buttons.')],
+    },
+    {
+        'id': 'quickpack', 'cat': 'packs', 'slug': 'quick-activity-packs', 'tint': '#e8f8f4', 'icon': '⚡', 'new': True,
+        'nav': 'Quick packs',
+        'title': 'Free Quick Activity Packs for Kids | Restaurant, Rainy Day, Sick Day, Bedtime | PrintPals',
+        'desc': 'Free printable activity packs for the moments you need them most: waiting at a restaurant, a rainy day indoors, a sick day in bed, calm before bedtime and outdoor adventures. Ready in one click, at your child\'s level.',
+        'h1': 'Quick packs for busy moments',
+        'lead': 'Need twenty quiet minutes right now? Pick the moment, and get a ready-made pack of screen-free activities at your child\'s level.',
+        'card': 'Screen-free packs for restaurants, rainy days, sick days and bedtime.',
+        'form': field('The moment', seg('occasion', [('waiting', 'Restaurant or waiting room'), ('rainy', 'Rainy day'), ('sick', 'Sick day in bed'), ('bedtime', 'Calm before bed'), ('outside', 'Outdoors')], 'waiting'))
+        + field('Child\'s name (optional)', '<input type="text" name="name" maxlength="24" placeholder="Leo" autocomplete="off">')
+        + field('Age', seg('age', [('3', '3'), ('4', '4'), ('5', '5'), ('6', '6'), ('7', '7+')], '5'))
+        + check('cover', 'A cover to colour') + check('key', 'Answer pages')
+        + SHUFFLE + PAPER,
+        'article': """<h2>Screen-free, without the guilt</h2><p>Keep a quiet pack in your bag with a few crayons for restaurants, queues and doctor visits. On rainy days, print the crafts pack. For sick days and bedtime, the gentle packs help little ones rest and settle.</p>""",
+        'faq': [('Can I print it from my phone?', 'Yes. Tap "Print or save as PDF", save the PDF, and print it at home or at any print shop.')],
+    },
+    {
+        'id': 'faraway', 'cat': 'packs', 'slug': 'family-far-away-activities', 'tint': '#fff0f5', 'icon': '💌', 'new': True,
+        'nav': 'Family far away',
+        'title': 'Free Activities for Kids With Family Far Away | Video Call Bingo, Postcards | PrintPals',
+        'desc': 'Free printables that keep children close to family who live far away: postcards to send, video call bingo, questions to ask Grandma, a news page to photograph and share, and a countdown to the next visit.',
+        'h1': 'Family far away pack',
+        'lead': 'For grandparents abroad, a parent who travels for work, or cousins in another country. Little things to make and send, and games that turn video calls into real connection.',
+        'card': 'Postcards, video call bingo and a countdown for family who live far away.',
+        'form': field('Who is far away?', '<input type="text" name="family" maxlength="24" placeholder="Grandma" autocomplete="off">', 'For example Grandma, Grandpa, Daddy, Auntie or a cousin\'s name.')
+        + field('Child\'s name (optional)', '<input type="text" name="name" maxlength="24" placeholder="Emma" autocomplete="off">')
+        + field('Pages', seg('kind', [('all', 'The whole pack'), ('postcards', 'Postcards'), ('bingo', 'Video call bingo'), ('interview', 'Interview questions'), ('news', 'My news'), ('countdown', 'Countdown')], 'all'))
+        + field('Countdown days', seg('days', [('7', '7'), ('14', '14'), ('21', '21'), ('30', '30')], '14'))
+        + SHUFFLE + PAPER,
+        'article': """<h2>Love travels well</h2><p>Children feel close to people they do things with. A postcard they drew, a game played during a call, questions that start real conversations: small rituals like these build a bond across any distance. Take a photo of the finished pages and send them on WhatsApp or email in seconds.</p>""",
+        'faq': [('Do I need to post anything?', 'No. Most families take a photo and send it by message. Posting the postcards is a lovely extra.')],
+    },
 ]
 
 # The homepage sections, in learning order (easiest first). Every tool appears in exactly one section.
 ARRANGE = [
+    ('packs', 'Ready-made packs', 'Packs', 'Stop searching. A whole week planned for your child, quick packs for busy moments, and a pack for family far away.',
+     ['pack', 'quickpack', 'faraway']),
     ('handwriting', 'Handwriting', 'Handwriting', 'From first pencil lines to joined writing, with real letter shapes and stroke order.',
      ['prewriting', 'names', 'letters', 'mixups', 'joined', 'writingpaper', 'alphabets']),
-    ('reading', 'Reading & phonics', 'Reading', 'Letter sounds, CVC words, sight words, spelling and stories where your child is the hero.',
+    ('reading', 'Reading & phonics', 'Reading', 'Letter sounds, CVC words, syllables, sight words, sentences, spelling and stories where your child is the hero.',
      ['abcorder', 'cvc', 'sounds', 'families', 'rhyming', 'syllables', 'sight', 'colourwords', 'spelling', 'flashcards', 'opposites', 'position', 'sentences', 'story', 'storywriting']),
-    ('maths', 'Maths', 'Maths', 'Counting, number bonds, sums, money, times tables, time, fractions and shapes, with answer keys.',
+    ('maths', 'Maths', 'Maths', 'Counting, patterns, number bonds, doubles, dominoes, sums, money, times tables, time, fractions and shapes, with answer keys.',
      ['numbers', 'patterns', 'numberday', 'hundred', 'compare', 'bonds', 'doubles', 'dominoes', 'maths', 'numberlines', 'wordproblems', 'placevalue', 'money', 'times', 'clocks', 'clockcraft', 'fractions', 'shapes', 'measuring', 'graphs']),
-    ('puzzles', 'Puzzles & games', 'Puzzles', 'Mazes, dot to dot, matching, spot the difference, word searches, crosswords, sudoku and bingo.',
+    ('puzzles', 'Puzzles & games', 'Puzzles', 'Mazes, dot to dot, odd one out, spot the difference, word searches, crosswords, secret codes, sudoku, bingo and board games.',
      ['mazes', 'dots', 'matching', 'oddone', 'spotdiff', 'wordsearch', 'crossword', 'secretcode', 'sudoku', 'bingo', 'snakes', 'travel']),
-    ('crafts', 'Colouring, crafts & parties', 'Colouring & crafts', 'Colouring pages, photo colouring, colour by number, cut and paste, crowns, masks, cards and party packs.',
+    ('crafts', 'Colouring, crafts & parties', 'Colouring & crafts', 'Colouring pages, photo colouring, grid drawing, how to draw, puppets, crowns, bookmarks, door hangers, cards, keepsakes and party packs.',
      ['colouring', 'photo', 'colournum', 'gridcopy', 'howtodraw', 'rolldraw', 'cutpaste', 'crafts', 'puppets', 'bookmarks', 'doorhangers', 'cards', 'handprints', 'party']),
-    ('charts', 'Charts & planners', 'Charts', 'Routines, chores, reward charts, certificates, reading logs, homework planners, calendars and name labels.',
+    ('charts', 'Charts & planners', 'Charts', 'Routines, chores, reward charts, 30 day challenges, certificates, reading logs, planners, calendars, height charts and labels.',
      ['routine', 'chores', 'reward', 'challenge', 'certificate', 'readinglog', 'homework', 'calendar', 'heightchart', 'labels']),
-    ('world', 'Me & my world', 'My world', 'Family, feelings, weather, life cycles and scavenger hunts that get children exploring.',
+    ('world', 'Me & my world', 'My world', 'Family, my body, feelings, days and months, weather, life cycles and scavenger hunts that get children exploring.',
      ['family', 'mybody', 'feelings', 'daysmonths', 'weather', 'lifecycle', 'hunt']),
 ]
+# Ages each tool suits (first year, last year).
+AGES = {
+    'pack': (3, 8), 'quickpack': (3, 8), 'faraway': (3, 10),
+    'prewriting': (2, 4), 'names': (3, 6), 'letters': (3, 6), 'mixups': (5, 7), 'joined': (6, 9), 'writingpaper': (4, 9), 'alphabets': (4, 9),
+    'abcorder': (4, 6), 'cvc': (4, 6), 'sounds': (5, 7), 'families': (5, 7), 'rhyming': (4, 6), 'syllables': (4, 7), 'sight': (4, 7), 'colourwords': (3, 5),
+    'spelling': (5, 9), 'flashcards': (2, 7), 'opposites': (3, 6), 'position': (3, 6), 'sentences': (5, 8), 'story': (4, 8), 'storywriting': (5, 9),
+    'numbers': (3, 5), 'patterns': (3, 6), 'numberday': (5, 8), 'hundred': (5, 8), 'compare': (4, 7), 'bonds': (4, 7), 'doubles': (4, 7), 'dominoes': (4, 7),
+    'maths': (4, 8), 'numberlines': (5, 8), 'wordproblems': (5, 9), 'placevalue': (6, 9), 'money': (5, 9), 'times': (6, 10), 'clocks': (5, 8), 'clockcraft': (4, 8),
+    'fractions': (5, 8), 'shapes': (3, 6), 'measuring': (5, 8), 'graphs': (5, 8),
+    'mazes': (3, 9), 'dots': (3, 8), 'matching': (2, 5), 'oddone': (3, 7), 'spotdiff': (3, 8), 'wordsearch': (5, 10), 'crossword': (6, 10), 'secretcode': (4, 9),
+    'sudoku': (4, 9), 'bingo': (3, 8), 'snakes': (4, 10), 'travel': (4, 10),
+    'colouring': (2, 8), 'photo': (2, 10), 'colournum': (4, 8), 'gridcopy': (4, 9), 'howtodraw': (3, 9), 'rolldraw': (4, 9), 'cutpaste': (3, 6), 'crafts': (3, 8),
+    'puppets': (3, 8), 'bookmarks': (4, 10), 'doorhangers': (3, 10), 'cards': (3, 10), 'handprints': (1, 6), 'party': (3, 10),
+    'routine': (2, 8), 'chores': (3, 10), 'reward': (2, 8), 'challenge': (4, 10), 'certificate': (3, 11), 'readinglog': (4, 10), 'homework': (6, 11),
+    'calendar': (4, 10), 'heightchart': (1, 10), 'labels': (3, 10),
+    'family': (4, 8), 'mybody': (3, 6), 'feelings': (2, 8), 'daysmonths': (4, 7), 'weather': (3, 7), 'lifecycle': (4, 8), 'hunt': (3, 8),
+}
+# The option that sets how hard a sheet is, ordered easiest first (drives the Easier and Harder buttons).
+LEVELS = {
+    'patterns': 'level', 'hundred': 'level', 'bonds': 'to', 'maths': 'within', 'numberlines': 'range', 'wordproblems': 'within', 'placevalue': 'range',
+    'money': 'level', 'clocks': 'level', 'fractions': 'level', 'mazes': 'level', 'dots': 'dots', 'matching': 'pairs', 'oddone': 'level', 'spotdiff': 'level',
+    'wordsearch': 'level', 'sudoku': 'level', 'doubles': 'max', 'colournum': 'mode', 'compare': 'kind', 'secretcode': 'code', 'sentences': 'kind',
+    'abcorder': 'kind', 'pack': 'age', 'quickpack': 'age',
+}
+
+
+def ages_text(i):
+    a, b = AGES[i]
+    return f'Ages {a} to {b}' if a > 1 else f'Up to age {b}'
+
+
 _by_id = {t['id']: t for t in TOOLS}
 _listed = [i for a in ARRANGE for i in a[4]]
 assert sorted(_by_id) == sorted(_listed) and len(_listed) == len(set(_listed)), 'every tool must be in exactly one section'
@@ -1613,11 +1700,16 @@ for a in ARRANGE:
     for i in a[4]:
         _by_id[i]['cat'] = a[0]
 CATS = [(a[0], a[1]) for a in ARRANGE]
+assert all(t['id'] in AGES for t in TOOLS), [t['id'] for t in TOOLS if t['id'] not in AGES]
 CAT_TEXT = {a[0]: a[3] for a in ARRANGE}
 NAV_LABEL = {a[0]: a[2] for a in ARRANGE}
 
 
-def head(title, desc, path, extra=''):
+JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'app']
+CONTACT = 'graceandloannesofficial@gmail.com'
+
+
+def head(title, desc, path, extra='', image='/img/og.png'):
     url = SITE + path
     return f'''<!doctype html>
 <html lang="en">
@@ -1628,64 +1720,87 @@ def head(title, desc, path, extra=''):
 <meta name="description" content="{html.escape(desc)}">
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="PrintPals">
 <meta property="og:title" content="{html.escape(title)}">
 <meta property="og:description" content="{html.escape(desc)}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{SITE}/img/og.png">
+<meta property="og:image" content="{SITE}{image}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#ff6b6b">
 <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" href="/img/icon-180.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="preload" href="/fonts/baloo2.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/site.css?v={VERSION}">
 {extra}
 </head>'''
-
-
 
 
 def top(active=''):
     act = next((t['cat'] for t in TOOLS if t['id'] == active), '')
     cur = ' aria-current="page"'
     nav = ''.join(f'<a href="/#{k}"{cur if k == act else ""}>{NAV_LABEL[k]}</a>' for k, v in CATS)
-    return f'''<header class="top"><div class="wrap"><a class="brand" href="/">{LOGO}<span>Print<b>Pals</b></span></a><nav class="nav">{nav}</nav></div></header>'''
+    return f'''<a class="skip" href="#main">Skip to content</a><header class="top"><div class="wrap"><a class="brand" href="/">{LOGO}<span>Print<b>Pals</b></span></a><nav class="nav" aria-label="Sections">{nav}</nav></div></header>'''
 
 
 FOOT = '''<footer><div class="wrap"><div class="foot-brand"><div class="brand" style="font-size:24px;color:#fff">Print<b style="color:#ff8a8a">Pals</b></div>
-<p style="max-width:420px;margin-top:8px">Free printable worksheets for children, made in seconds. Everything is made inside your own browser: nothing you type is sent to us or stored.</p>
+<p style="max-width:420px;margin-top:8px">Free printable worksheets and ready-made packs for children, made in seconds. Everything is made inside your own browser: nothing you type is sent to us or stored.</p>
+<p class="foot-links"><a href="/about">About us</a><a href="/privacy">Privacy</a><a href="mailto:''' + CONTACT + '''">Contact</a></p>
 <p style="margin-top:14px">© PrintPals. Free for home and classroom use.</p></div>
 <div class="foot-cols">''' + ''.join(f'<div><h4>{v}</h4>' + ''.join(f'<a href="/{t["slug"]}">{t["nav"]}</a>' for t in TOOLS if t['cat'] == k) + '</div>' for k, v in CATS) + '''</div></div></footer>'''
+
+SCRIPTS = f'<script src="/js/pp.js?v={VERSION}"></script>'
+
+
+def og_for(t):
+    return f'/img/og/{t["id"]}.jpg' if os.path.exists(os.path.join(OUT, 'img', 'og', t['id'] + '.jpg')) else '/img/og.png'
 
 
 def tool_page(t):
     faq_html = ''.join(f'<details><summary>{html.escape(q)}</summary><p>{html.escape(a)}</p></details>' for q, a in t['faq'])
+    cat_name = dict(CATS)[t['cat']]
     ld = {
         '@context': 'https://schema.org',
         '@graph': [
             {'@type': 'WebApplication', 'name': t['h1'] + ' | PrintPals', 'url': f'{SITE}/{t["slug"]}', 'applicationCategory': 'EducationalApplication',
-             'operatingSystem': 'Any', 'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'USD'}, 'description': t['desc']},
+             'operatingSystem': 'Any', 'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'USD'}, 'description': t['desc'],
+             'audience': {'@type': 'EducationalAudience', 'educationalRole': 'parent'}, 'typicalAgeRange': '{}-{}'.format(*AGES[t['id']])},
+            {'@type': 'BreadcrumbList', 'itemListElement': [
+                {'@type': 'ListItem', 'position': 1, 'name': 'PrintPals', 'item': SITE + '/'},
+                {'@type': 'ListItem', 'position': 2, 'name': cat_name, 'item': f'{SITE}/#{t["cat"]}'},
+                {'@type': 'ListItem', 'position': 3, 'name': t['h1'], 'item': f'{SITE}/{t["slug"]}'}]},
             {'@type': 'FAQPage', 'mainEntity': [{'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in t['faq']]},
         ],
     }
     others = ''.join(f'<a href="/{o["slug"]}">{o["icon"]} {o["h1"]}</a>' for o in TOOLS if o['cat'] == t['cat'] and o is not t)
-    cat_name = dict(CATS)[t['cat']]
-    return head(t['title'], t['desc'], '/' + t['slug'], f'<style id="pageStyle">@page {{ size: A4 portrait; margin: 0; }}</style>\n<script type="application/ld+json">{json.dumps(ld)}</script>') + f'''
+    level = LEVELS.get(t['id'])
+    level_attr = f' data-level="{level}"' if level else ''
+    level_btns = ('<div class="levels-wrap"><span class="label">Not quite right?</span><div class="levels"><button type="button" class="btn alt small" data-action="easier">🐢 Easier</button>'
+                  '<button type="button" class="btn alt small" data-action="harder">🚀 Harder</button></div></div>') if level else ''
+    nudge = '' if t['cat'] == 'packs' else '<a class="pack-nudge" href="/weekly-learning-pack"><span>🎒</span><span><b>Not sure what to print?</b> Get a whole week planned for your child, free, with their name on every page.</span></a>'
+    return head(t['title'], t['desc'], '/' + t['slug'], f'<style id="pageStyle">@page {{ size: A4 portrait; margin: 0; }}</style>\n<script type="application/ld+json">{json.dumps(ld)}</script>', og_for(t)) + f'''
 <body class="tool-page">
 {top(t['id'])}
-<main>
+<main id="main">
 <div class="wrap">
-<div class="crumbs"><a href="/">PrintPals</a> › {html.escape(t['h1'])}</div>
-<div class="tool-head"><h1>{html.escape(t['h1'])}</h1><p>{html.escape(t['lead'])}</p><a class="jump" href="#preview">See your worksheet ↓</a></div>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">PrintPals</a> › <a href="/#{t['cat']}">{html.escape(cat_name)}</a> › {html.escape(t['h1'])}</nav>
+<div class="tool-head"><h1>{html.escape(t['h1'])}</h1><p>{html.escape(t['lead'])}</p><div class="tags"><span class="tag">👧 {ages_text(t['id'])}</span><span class="tag">✓ Free, no sign up</span><span class="tag">✓ A4 and US Letter</span></div><a class="jump" href="#preview">See your worksheet ↓</a></div>
 <div class="maker">
-<form class="panel" id="maker" data-tool="{t['id']}" autocomplete="off">
+<form class="panel" id="maker" data-tool="{t['id']}"{level_attr} autocomplete="off">
+{level_btns}
 {t['form']}
+{check('inksaver', '🖨️ Ink saver: less colour, great for black and white printers', False)}
 <button type="button" class="btn" data-action="print">{PRINT_ICON} Print or save as PDF</button>
 <p class="hint">Free. No sign up. Nothing you type leaves your device.</p>
+<p class="hint" id="remember" hidden>💛 We remember your child's name on this device only. <button type="button" class="linkish" data-action="forget">Forget it</button></p>
 </form>
 <section aria-label="Worksheet preview"><div class="preview-head"><span>Preview</span><span id="pageCount"></span></div><div id="preview"></div></section>
 </div>
 <article class="article">
+{nudge}
 {t['article']}
 <h2>Questions parents and teachers ask</h2>
 {faq_html}
@@ -1697,61 +1812,80 @@ def tool_page(t):
 </main>
 <div class="mobile-print no-print"><button type="button" class="btn" data-action="print">{PRINT_ICON} Print or save as PDF</button></div>
 {FOOT}
-<script src="/js/glyphs.js?v={VERSION}"></script>
-<script src="/js/sheet.js?v={VERSION}"></script>
-<script src="/js/tools.js?v={VERSION}"></script>
-<script src="/js/tools2.js?v={VERSION}"></script>
-<script src="/js/tools3.js?v={VERSION}"></script>
-<script src="/js/tools4.js?v={VERSION}"></script>
-<script src="/js/cursive.js?v={VERSION}"></script>
-<script src="/js/tools5.js?v={VERSION}"></script>
-<script src="/js/colouring.js?v={VERSION}"></script>
-<script src="/js/tools6.js?v={VERSION}"></script>
-<script src="/js/tools7.js?v={VERSION}"></script>
-<script src="/js/tools8.js?v={VERSION}"></script>
-<script src="/js/tools9.js?v={VERSION}"></script>
-<script src="/js/tools10.js?v={VERSION}"></script>
-<script src="/js/tools11.js?v={VERSION}"></script>
-<script src="/js/app.js?v={VERSION}"></script>
+{SCRIPTS}
 </body>
 </html>
 '''
 
 
+ONLY = [
+    ('🎒', 'A whole week, planned for you', "Tell us your child's name, age and favourite theme. Get a balanced week of reading, maths and fun, a star chart, a certificate and a guide for you.", '/weekly-learning-pack', "Plan my child's week"),
+    ('👧👦', 'Siblings, together', 'Two or three children of different ages? Same theme, each at their own level, so they can sit and learn side by side.', '/weekly-learning-pack', 'Make a sibling pack'),
+    ('💌', 'Family far away', 'Postcards to send, video call bingo and a countdown to the next visit, for grandparents and loved ones in other places.', '/family-far-away-activities', 'Make a family pack'),
+    ('⚡', 'Twenty quiet minutes, now', "Ready packs for restaurants, rainy days, sick days and calm before bed. Screen-free, at your child's level.", '/quick-activity-packs', 'Get a quick pack'),
+    ('🖨️', 'Kind to your ink', 'Only have a black and white printer, or printing at a shop? Tick Ink saver on any sheet for white backgrounds and grey pictures.', '/colouring-pages', 'Try it on any sheet'),
+    ('🐢', 'Easier or harder, in one tap', "Not quite right? Sheets have Easier and Harder buttons, and remember your child's name on your device only.", '/addition-subtraction-worksheets', 'See how it works'),
+]
+
+
 def home():
     def card(t):
-        return f'''<a class="tool" href="/{t['slug']}" style="--tint:{t['tint']}" data-keys="{html.escape(re.sub(r'<[^>]+>|&[a-z#0-9]+;', ' ', t['title'] + ' ' + t['desc'] + ' ' + t['form']).lower())}"><div class="thumb"><img src="/img/thumb-{t['id']}.webp" alt="{html.escape(t['h1'])} example" loading="lazy" width="400" height="566"></div>
-<h3>{t['icon']} {html.escape(t['h1'])}{'<span class="new">New</span>' if t.get('new') else ''}</h3><p>{html.escape(t['card'])}</p><span class="go">Make one free →</span></a>'''
-    sections = ''.join(f'''<section class="cat" id="{k}"><h2>{v}</h2><p class="cat-lead">{CAT_TEXT[k]}</p><div class="tools">{''.join(card(t) for t in TOOLS if t['cat'] == k)}</div></section>''' for k, v in CATS)
+        a, b = AGES[t['id']]
+        keys = html.escape(re.sub(r'<[^>]+>|&[a-z#0-9]+;', ' ', t['title'] + ' ' + t['desc'] + ' ' + t['form']).lower())
+        return f'''<a class="tool" href="/{t['slug']}" style="--tint:{t['tint']}" data-min="{a}" data-max="{b}" data-keys="{keys}"><div class="thumb"><img src="/img/thumb-{t['id']}.webp" alt="{html.escape(t['h1'])} example" loading="lazy" width="400" height="566"></div>
+<h3>{t['icon']} {html.escape(t['h1'])}{'<span class="new">New</span>' if t.get('new') else ''}</h3><p>{html.escape(t['card'])}</p><span class="age-mini">{ages_text(t['id'])}</span><span class="go">Make one free →</span></a>'''
+    sections = ''.join(f'''<section class="cat{' cat-packs' if k == 'packs' else ''}" id="{k}"><h2>{v}</h2><p class="cat-lead">{CAT_TEXT[k]}</p><div class="tools">{''.join(card(t) for t in TOOLS if t['cat'] == k)}</div></section>''' for k, v in CATS)
     ld = {'@context': 'https://schema.org', '@type': 'WebSite', 'name': 'PrintPals', 'url': SITE + '/',
-          'description': 'Free printable worksheets for children: name tracing, alphabet, numbers, maths, word searches and spelling.'}
+          'description': 'Free printable worksheets and ready-made learning packs for children aged 2 to 10: a personalised week in one click, tracing, reading, maths, puzzles, crafts and charts.'}
     shapes = ''.join(f'<span style="width:{s}px;height:{s}px;left:{x}%;top:{y}%;background:{c};animation-delay:{d}s"></span>'
                      for s, x, y, c, d in [(90, 6, 18, '#ffe08a', 0), (60, 88, 12, '#bfe8ff', 1.5), (46, 80, 70, '#ffc6d9', 3), (70, 12, 72, '#c9f2e6', 4.5)])
-    return head('PrintPals | Free Printable Worksheets for Kids, Made in Seconds',
-                'Free printable worksheets for kids: tracing, story sheets starring your child, maths, money in your currency, times tables, puzzles, bingo, photo colouring pages, birthday party packs, certificates, routine and reward charts.',
-                '/', f'<script type="application/ld+json">{json.dumps(ld)}</script>') + f'''
+    only = ''.join(f'<a class="only-card" href="{u}"><span class="only-ico">{i}</span><b>{html.escape(h)}</b><span>{html.escape(d)}</span><em>{html.escape(c)} →</em></a>' for i, h, d, u, c in ONLY)
+    pressed = ' aria-pressed="true"'
+    ages = ''.join(f'<button type="button" data-age="{a}"{pressed if a == "all" else ""}>{lab}</button>' for a, lab in [('all', 'All ages'), ('3', 'Age 3'), ('4', 'Age 4'), ('5', 'Age 5'), ('6', 'Age 6'), ('7', 'Age 7'), ('8', 'Age 8+')])
+    jumps = ''.join(f'<a href="#{k}">{NAV_LABEL[k]} <b>{sum(1 for t in TOOLS if t["cat"] == k)}</b></a>' for k, v in CATS)
+    return head('PrintPals | Free Printable Worksheets and Ready-Made Learning Packs for Kids',
+                'Free printable worksheets for kids, and a whole personalised learning week in one click. Tracing, reading, maths, puzzles, crafts, charts, quick packs for busy moments and activities for family far away. No sign up.',
+                '/', f'<script type="application/ld+json">{json.dumps(ld)}</script>', '/img/og/home.jpg') + f'''
 <body>
 {top()}
-<main>
+<main id="main">
 <section class="hero"><div class="shapes" aria-hidden="true">{shapes}</div><div class="wrap" style="position:relative">
-<h1>Free printable worksheets,<br><span class="hl">made in seconds</span></h1>
-<p class="lead">Personalised tracing, reading, maths, puzzles, colouring pages from your own photos, party packs and certificates for children aged 3 to 8. Type, tap print, done.</p>
-<div class="chips"><span class="chip">✓ 100% free</span><span class="chip">✓ No sign up</span><span class="chip">✓ A4 and US Letter</span><span class="chip">✓ Save as PDF</span></div>
-<div class="find"><input type="search" id="find" placeholder="Find a worksheet: try name, money or dinosaur" aria-label="Find a worksheet" autocomplete="off"></div>
-<div class="jumps">''' + ''.join(f'<a href="#{k}">{NAV_LABEL[k]} <b>{sum(1 for t in TOOLS if t["cat"] == k)}</b></a>' for k, v in CATS) + f'''</div>
+<h1>Stop searching.<br><span class="hl">Start learning.</span></h1>
+<p class="lead">A whole week of learning planned for your child in one click, with their name on every page. Plus {len(TOOLS) - 3} free worksheet makers for ages 2 to 10. No sign up, ever.</p>
+<div class="cta"><a class="btn big" href="/weekly-learning-pack">🎒 Plan my child's week, free</a><a class="btn alt big" href="#packs">Browse everything</a></div>
+<div class="chips"><span class="chip">✓ 100% free</span><span class="chip">✓ No sign up</span><span class="chip">✓ Private on your device</span><span class="chip">✓ A4 and US Letter</span><span class="chip">✓ Ink saver</span></div>
 </div></section>
-<div class="wrap">{sections}<p class="none" id="none">Nothing found. Try another word, like letters, maths or colouring.</p></div>
+<section class="only"><div class="wrap"><h2>What only PrintPals does</h2><p class="cat-lead">Other sites give you ten thousand worksheets and leave you to work it out. We built PrintPals around the real problems parents tell us about.</p><div class="only-grid">{only}</div></div></section>
+<div class="wrap">
+<div class="finder">
+<div class="find"><input type="search" id="find" placeholder="Find a worksheet: try name, money or dinosaur" aria-label="Find a worksheet" autocomplete="off"></div>
+<div class="ages" role="group" aria-label="Filter by age">{ages}</div>
+<div class="jumps">{jumps}</div>
+</div>
+{sections}<p class="none" id="none">Nothing found. Try another word, like letters, maths or colouring.</p></div>
 <script>
 (function () {{
-  var box = document.getElementById('find'); if (!box) return;
-  box.addEventListener('input', function () {{
+  var box = document.getElementById('find'), age = 'all';
+  function apply() {{
     var q = box.value.trim().toLowerCase(), any = false;
     document.querySelectorAll('.cat').forEach(function (sec) {{
       var shown = 0;
-      sec.querySelectorAll('a.tool').forEach(function (a) {{ var ok = !q || a.textContent.toLowerCase().indexOf(q) >= 0 || (a.dataset.keys || '').indexOf(q) >= 0; a.style.display = ok ? '' : 'none'; if (ok) shown++; }});
+      sec.querySelectorAll('a.tool').forEach(function (a) {{
+        var okAge = age === 'all' || (+a.dataset.min <= +age && +a.dataset.max >= +age);
+        var ok = okAge && (!q || a.textContent.toLowerCase().indexOf(q) >= 0 || (a.dataset.keys || '').indexOf(q) >= 0);
+        a.style.display = ok ? '' : 'none'; if (ok) shown++;
+      }});
       sec.style.display = shown ? '' : 'none'; if (shown) any = true;
     }});
     document.getElementById('none').style.display = any ? 'none' : 'block';
+  }}
+  box.addEventListener('input', apply);
+  document.querySelectorAll('.ages button').forEach(function (b) {{
+    b.addEventListener('click', function () {{
+      age = b.dataset.age;
+      document.querySelectorAll('.ages button').forEach(function (x) {{ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); }});
+      apply();
+    }});
   }});
 }})();
 </script>
@@ -1765,7 +1899,7 @@ def home():
 </div></div></section>
 <div class="wrap article" style="margin:0 auto">
 <h2>Free worksheets for home and school</h2>
-<p>PrintPals makes printable worksheets for early learners in nursery, preschool, kindergarten, reception and the first years of primary school. Make a name tracing sheet for a child who is just learning to write their name, print the whole alphabet with pictures and stroke order, practise numbers 0 to 20 with ten frames, or make a fresh page of addition and subtraction with an answer key. Teachers can turn the weekly spelling list into a handwriting sheet and a word search in under a minute.</p>
+<p>PrintPals makes printable worksheets and ready-made learning packs for early learners in nursery, preschool, kindergarten, reception and the first years of primary school. Plan a whole week for your child in one click, make a name tracing sheet for a child just learning to write their name, print the whole alphabet with pictures and stroke order, or make a fresh page of sums with an answer key. Teachers can turn the weekly spelling list into a handwriting sheet and a word search in under a minute.</p>
 <p>Every worksheet is free for home and classroom use. Print as many as you like.</p>
 </div>
 </main>
@@ -1775,20 +1909,83 @@ def home():
 '''
 
 
+def simple_page(title, desc, path, body):
+    return head(title, desc, path) + f'''
+<body>
+{top()}
+<main id="main"><div class="wrap article page">
+{body}
+</div></main>
+{FOOT}
+</body>
+</html>
+'''
+
+
+ABOUT = f'''<h1>About PrintPals</h1>
+<p class="lead-p">Every child deserves beautiful learning at home, whatever the budget, the printer or the distance from the people who love them.</p>
+<h2>Why we made it</h2>
+<p>There are thousands of worksheet websites. Many hide the good pages behind a subscription, ask for your email, fill the screen with adverts, and then leave you to work out which of ten thousand sheets is right for your child. We kept hearing the same things from parents: <b>I do not know what to print. I am not a teacher. My printer is black and white. Grandma lives in another country.</b></p>
+<p>So we built PrintPals around those problems. Plan a whole week in one click. Get a simple guide that tells you what to say. Make packs for brothers and sisters of different ages. Save ink. Send a postcard to someone far away.</p>
+<h2>Our promises</h2>
+<ul>
+<li><b>Free.</b> Every maker, every pack, every page. No sign up and no email needed.</li>
+<li><b>Private.</b> Worksheets are made inside your own browser. Names you type stay on your device.</li>
+<li><b>For every family.</b> A4 and US Letter paper, money in many currencies, alphabets in 15 languages, and an ink saver for black and white printers.</li>
+<li><b>Made with care.</b> Real letter shapes with stroke order, answer keys, and pictures children love.</li>
+</ul>
+<h2>Who we are</h2>
+<p>PrintPals is made by Grace and Loannes Ltd, a small family company that builds warm, playful learning for young children. We are also making Brainlings, a learning app where a little creature grows as your child learns, and where family can send voice letters from anywhere in the world.</p>
+<h2>Say hello</h2>
+<p>We read every message, and ideas for new worksheets are very welcome: <a href="mailto:{CONTACT}">{CONTACT}</a></p>'''
+
+PRIVACY = f'''<h1>Privacy</h1>
+<p class="lead-p">Short version: we do not collect your information. Worksheets are made on your own device.</p>
+<h2>What we collect</h2>
+<p>Nothing that you type. Names, word lists, messages and photos you use in a worksheet are processed inside your web browser and are never sent to us. There are no accounts, no sign up forms and no advertising trackers.</p>
+<h2>What stays on your device</h2>
+<p>To make PrintPals easier to use, your browser remembers a few settings in its own local storage: your paper size, whether Ink saver is on, and your child's first name if you typed one, so the next sheet is ready for you. This never leaves your device. Press "Forget it" under the print button, or clear your browser data, to remove it.</p>
+<h2>Services we use</h2>
+<p>The website is hosted on Google Firebase Hosting, which keeps standard server logs (such as IP addresses and the pages requested) to run and protect the service. Please see Google's privacy policy for how they handle this information. Our fonts are hosted on PrintPals itself, so no other services are contacted.</p>
+<h2>Children</h2>
+<p>PrintPals is made for parents and teachers to use with children. We do not knowingly collect any personal information from children.</p>
+<h2>Questions</h2>
+<p>PrintPals is made by Grace and Loannes Ltd. Email us any time at <a href="mailto:{CONTACT}">{CONTACT}</a>.</p>'''
+
+NOT_FOUND = '''<h1>Oops, this page got lost!</h1>
+<p class="lead-p">It may have wandered off to play. Let us help you find something lovely instead.</p>
+<p><a class="btn big" href="/weekly-learning-pack" style="max-width:420px">🎒 Plan my child's week</a></p>
+<p><a href="/">See all the free worksheets →</a></p>'''
+
+
 def main():
     with open(os.path.join(OUT, 'index.html'), 'w', encoding='utf-8') as f:
         f.write(home())
     for t in TOOLS:
         with open(os.path.join(OUT, t['slug'] + '.html'), 'w', encoding='utf-8') as f:
             f.write(tool_page(t))
-    urls = ['/'] + ['/' + t['slug'] for t in TOOLS]
+    pages = [('about', 'About PrintPals | Free Worksheets Made for Real Families', 'Why we made PrintPals: free, private worksheets and ready-made learning packs built around the real problems parents face.', ABOUT),
+             ('privacy', 'Privacy | PrintPals', 'PrintPals does not collect what you type. Worksheets are made inside your own browser.', PRIVACY)]
+    for slug, title, desc, body in pages:
+        with open(os.path.join(OUT, slug + '.html'), 'w', encoding='utf-8') as f:
+            f.write(simple_page(title, desc, '/' + slug, body))
+    with open(os.path.join(OUT, '404.html'), 'w', encoding='utf-8') as f:
+        f.write(simple_page('Page not found | PrintPals', 'This page could not be found.', '/404', NOT_FOUND).replace('<head>', '<head>\n<meta name="robots" content="noindex">', 1))
+    # One script file for every tool page: fewer downloads, faster pages.
+    with open(os.path.join(OUT, 'js', 'pp.js'), 'w', encoding='utf-8') as f:
+        f.write('\n;\n'.join(open(os.path.join(OUT, 'js', n + '.js'), encoding='utf-8').read() for n in JS_FILES))
+    today = datetime.date.today().isoformat()
+    urls = ['/'] + ['/' + t['slug'] for t in TOOLS] + ['/about', '/privacy']
     with open(os.path.join(OUT, 'sitemap.xml'), 'w', encoding='utf-8') as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-                + ''.join(f'  <url><loc>{SITE}{u}</loc></url>\n' for u in urls) + '</urlset>\n')
+                + ''.join(f'  <url><loc>{SITE}{u}</loc><lastmod>{today}</lastmod></url>\n' for u in urls) + '</urlset>\n')
     with open(os.path.join(OUT, 'robots.txt'), 'w', encoding='utf-8') as f:
         f.write(f'User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n')
     with open(os.path.join(OUT, 'img', 'logo.svg'), 'w', encoding='utf-8') as f:
         f.write(LOGO.replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" '))
+    with open(os.path.join(OUT, 'manifest.webmanifest'), 'w', encoding='utf-8') as f:
+        json.dump({'name': 'PrintPals', 'short_name': 'PrintPals', 'start_url': '/', 'display': 'standalone', 'background_color': '#fffaf3', 'theme_color': '#ff6b6b',
+                   'icons': [{'src': '/img/icon-192.png', 'sizes': '192x192', 'type': 'image/png'}, {'src': '/img/icon-512.png', 'sizes': '512x512', 'type': 'image/png'}]}, f)
     print('built', len(urls), 'pages')
 
 

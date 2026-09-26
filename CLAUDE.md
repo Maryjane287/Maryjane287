@@ -76,7 +76,14 @@ use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in 
 for painted pictures on every sheet.
 Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
 (colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
-fractions, colour by number, spot the difference. Batch 10 live (85 tools, tools11.js, VERSION 25): secret code, copy the picture, finger puppets, handprint
+fractions, colour by number, spot the difference. BLUE OCEAN update live (88 tools, VERSION 26, see printpals/BLUE_OCEAN.md): owner asked to solve problems competitors ignore.
+New 'Packs' section first: weekly learning pack (pack.js makePack: CURRICULUM by age group 3/4/5/6 reusing other makers,
+cover, star chart, day badges, certificate, grown-up guide, answers; siblings textarea "Leo 6"), quick packs (restaurant, rainy,
+sick, bedtime, outdoors), family far away (postcards, video call bingo, interview, news, countdown). app.js: Ink saver (white
+fills, grey pictures and emoji), remember child's name on device (pp-child, replaces untouched example names), Easier/Harder
+buttons (LEVELS in build.py). Site: AGES per tool + age filter on home, About, Privacy, 404, breadcrumbs, per-tool share images
+(img/og/*.jpg made by pp2/og.js), app icons + manifest, one script bundle js/pp.js (JS_FILES), fonts self-hosted in /fonts.
+Batch 10 live (85 tools, tools11.js, VERSION 25): secret code, copy the picture, finger puppets, handprint
 keepsakes, height chart (real size, 4 strips), days and months, my body (drawn child), domino maths. Batch 9 live (77 tools, tools10.js, VERSION 24): odd one out, roll and draw (monster/robot),
 patterns, syllables, door hangers, 30 day challenges, doubles and halves, position words. Batch 8 live (69 tools, tools9.js, VERSION 23): hundred square, alphabet order,
 colour words, how to draw (step by step from the colouring pictures, DRAW_ORDER = artist order), fix the sentence, bookmarks, paper clock craft,

@@ -49,7 +49,9 @@ class Page {
     }
     if (subtitle) {
       y += 6.5;
-      this.add(`<text x="${this.left}" y="${y}" font-family="${FONT}" font-weight="600" font-size="4" fill="${SOFT}">${esc(subtitle)}</text>`);
+      // Long subtitles (a long name, say) shrink to stay on the page.
+      const sfs = Math.max(2.6, Math.min(4, this.width / (String(subtitle).length * 0.47)));
+      this.add(`<text x="${this.left}" y="${y}" font-family="${FONT}" font-weight="600" font-size="${sfs.toFixed(2)}" fill="${SOFT}">${esc(subtitle)}</text>`);
     }
     y += 4;
     // A soft rainbow line under the title

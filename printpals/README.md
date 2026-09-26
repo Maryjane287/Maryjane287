@@ -48,6 +48,10 @@ browser, so nothing typed is ever sent or stored.
 - Batch 10 (`public/js/tools11.js`): secret code (picture, number, backwards; own messages), grid copy and finish
   the half (PIXEL designs), finger puppets, handprint keepsakes (handOutline/footOutline), real size height chart,
   days and months plus 'my day today', my body (bodyFigure, face zoom via clip-path, five senses), domino maths and set.
+- Blue ocean (`public/js/pack.js`, see BLUE_OCEAN.md): weekly learning pack, quick packs, family far away pack.
+  `app.js` adds Ink saver, remember my child (local storage only) and Easier/Harder (`LEVELS` in build.py).
+  `AGES` in build.py drives age chips and the homepage age filter. Pages load one bundle `js/pp.js` built from `JS_FILES`
+  (add new js files there). Share images: `pp2/og.js` writes `img/og/<id>.jpg`. Fonts are self-hosted in `public/fonts`.
 - Arrangement: `ARRANGE` in build.py sets the 7 homepage sections and their learning order (every tool in exactly
   one; the build fails otherwise). Tool pages show 'More in <section>'; the footer is grouped by section.
 - Checks: `pp2/fuzz.js` (every option), `pp2/func.js` (new set, paper sizes, print button), a link checker.

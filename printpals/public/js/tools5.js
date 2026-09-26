@@ -446,13 +446,15 @@ function makeColourByNumber(o, paper) {
     if (answers && o.key === false) break;
     const pg = new Page(paper, answers ? 'Colour by number: answer' : mode === 'numbers' ? 'Colour by number' : 'Colour by sums', { subtitle: answers ? `It is ${art.name}!` : mode === 'numbers' ? 'Colour each square with the colour for its number. What picture appears?' : 'Work out each sum. Colour the square with the colour for the answer.', noName: answers });
     // Colour key
-    const kw = pg.width / Math.min(chars.length, 7);
+    // The key never gets cut off: long lists wrap onto a second row and the words shrink to fit.
+    const perRow = chars.length <= 4 ? chars.length : Math.ceil(chars.length / 2), kw = pg.width / perRow;
     chars.forEach((c, i) => {
-      const x = pg.left + (i % 7) * kw, y = pg.y + Math.floor(i / 7) * 10;
+      const x = pg.left + (i % perRow) * kw, y = pg.y + Math.floor(i / perRow) * 10;
+      const t = `${num[c]} = ${art.colours[c][0]}`;
       pg.add(`<rect x="${x}" y="${y}" width="8" height="8" rx="2" fill="${art.colours[c][1]}" stroke="${INK}" stroke-width="0.4"/>`);
-      pg.add(`<text x="${x + 10}" y="${y + 5.8}" font-family="${FONT}" font-weight="800" font-size="4.2" fill="${INK}">${num[c]} = ${art.colours[c][0]}</text>`);
+      pg.add(`<text x="${x + 10}" y="${y + 5.8}" font-family="${FONT}" font-weight="800" font-size="${fitFont(t, 4.2, kw - 12, 0.52).toFixed(2)}" fill="${INK}">${t}</text>`);
     });
-    pg.y += Math.ceil(chars.length / 7) * 10 + 4;
+    pg.y += Math.ceil(chars.length / perRow) * 10 + 4;
     const R = art.rows.length, C = art.rows[0].length;
     const cell = Math.min(pg.width / C, (pg.room - 2) / R);
     const gx = pg.left + (pg.width - cell * C) / 2;

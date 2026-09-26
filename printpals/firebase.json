@@ -5,7 +5,7 @@
     "cleanUrls": true,
     "trailingSlash": false,
     "headers": [
-      { "source": "**/*.@(js|css|webp|png|svg)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] },
+      { "source": "**/*.@(js|css|webp|png|svg|woff2)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] },
       { "source": "**", "headers": [{ "key": "X-Content-Type-Options", "value": "nosniff" }, { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }] }
     ]
   }
