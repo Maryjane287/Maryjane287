@@ -171,7 +171,7 @@ form.addEventListener('submit', async e => {
   btn.disabled = true; btn.textContent = 'Sending your story...';
   const tier = form.tier.value;
   try {
-    const res = await fetch('/', { method: 'POST', body: new FormData(form) });
+    const res = window.PREVIEW ? { ok: true } : await fetch('/', { method: 'POST', body: new FormData(form) });
     if (!res.ok) throw new Error(res.status);
     const pay = checkout[tier];
     if (pay) {
@@ -179,7 +179,7 @@ form.addEventListener('submit', async e => {
       url.searchParams.set('prefilled_email', form.email.value);
       location.href = url.href;
     } else {
-      location.href = '/thanks/';
+      location.href = new URL(form.getAttribute('action'), location.href).href;
     }
   } catch {
     btn.disabled = false; btn.textContent = 'Place my order';

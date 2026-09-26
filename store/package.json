@@ -5,7 +5,8 @@
   "scripts": {
     "build": "node src/build.mjs",
     "pins": "node src/pins.mjs",
-    "serve": "node src/serve.mjs"
+    "serve": "node src/serve.mjs",
+    "preview": "node src/preview.mjs"
   },
   "devDependencies": {
     "playwright-core": "1.55.0"
