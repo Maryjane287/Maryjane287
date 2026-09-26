@@ -96,7 +96,7 @@ Done and working:
   (repo is PUBLIC). The owner has the .jks and its password. Put it at a path and write android/key.properties
   (storePassword, keyPassword, keyAlias=upload, storeFile=<abs path>) to sign; without it builds use the debug key.
   Release bundle committed at brainlings/store/release/Brainlings-1.6.3.aab (too big to send, 65.7 MB).
-  Privacy policy: brainlings/store/privacy_policy.md (SUPPORT_EMAIL placeholder for the owner to fill).
+  Privacy policy: brainlings/store/privacy_policy.md (support email graceloannesofficial@gmail.com).
   First release is free; subscription + 7-day trial is the next update (create it in Play Console, then add a paywall).
 - v1.6.2 Say It (owner: Bibi made the child repeat up to 10 times): wrong or no answer is now corrected at once:
   "Nearly! Let me help you. The answer is: X", spells it (names, colours, opposites), "Your turn! Say it once!",

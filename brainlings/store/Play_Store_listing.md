@@ -75,7 +75,7 @@ set "Made for kids: Yes"), then paste the YouTube link into the "Video" box of t
 
 Paste this link in App content → Privacy policy:
 https://github.com/Maryjane287/Maryjane287/blob/claude/keen-ritchie-was4uj/brainlings/store/privacy_policy.md
-(First replace SUPPORT_EMAIL in `privacy_policy.md` with the support email you want parents to use.)
+Support email for parents: graceloannesofficial@gmail.com
 
 ## Settings to choose in Play Console
 

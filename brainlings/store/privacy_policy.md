@@ -47,4 +47,4 @@ If a future version adds features that send information off the phone (for examp
 ## Contact
 
 Grace and Loannes Ltd, United Kingdom.
-Email: SUPPORT_EMAIL
+Email: graceloannesofficial@gmail.com
