@@ -51,7 +51,7 @@ Family members do NOT need the app: they get a link (WhatsApp/email) to a small 
   phone numbers still to verify. Apple enrollment submitted but $99 not paid (later).
 - Payouts need a proper company bank account (Wise was rejected by KDP; unresolved).
 
-### Build status (updated 2026-09-25, v1.6.3)
+### Build status (updated 2026-09-26, v1.8.0)
 Flutter app lives in `brainlings/` (Android + iOS). Everything runs offline on the device for now.
 Done and working:
 - First-run grown-up setup: name/nickname, age, family circle, optional name recording, bedtime minutes, privacy promise.
@@ -164,7 +164,7 @@ Done and working:
   orchard, garden, playroom, party, classroom, bedroom) with animated sun/clouds/butterflies/stars/fireflies on top.
 - Videos (Kling 3.0 std, 5s, 9:16, compressed to 540p ~0.4MB each) in `assets/video/`: hatch (cut scene),
   dance (reward), letter (envelope arrives), bed (bedtime), grow (new stage celebration), wave (welcome).
-Next up: Firebase (family web link page, real letters, push), trial and billing, storybooks, decorating Bibi's home,
+Next up: push notifications for letters (needs paid Blaze plan, so for now the app checks every 2 min), storybooks, decorating Bibi's home,
 seasonal days and birthday, Guess What Mummy Picked, report before trial ends, Play Store listing.
 Build: `flutter build apk --release` works in the container (Android SDK at /opt/android-sdk, Flutter at /opt/flutter,
 both installed per session). Maven Central sometimes rate-limits (429): retry. GitHub Actions workflow

@@ -41,8 +41,8 @@ Original Brainlings songs, sung by Bibi and friends: the ABC song from A to Z, c
 ⭐ 7 LEVELS IN EVERY GAME
 Every learning game grows with your child, from first steps to real challenges, with stars, stickers, a bonus star catch and big celebrations along the way.
 
-💌 LOVE FROM FAMILY
-Record a loving voice message in the grown-up area and Bibi delivers it in a special envelope. Your child can send a hug back, and you can see how many times they listened.
+💌 LETTERS FROM FAR AWAY
+Mummy at work? Grandma in another country? Send family members a private link by WhatsApp. They record a voice letter on their own phone, no app needed, and Bibi delivers it to your child in a special envelope. Your child sends a hug back, and they can see how many times it was played. Only people you invite, never strangers.
 
 🌙 HEALTHY SCREEN TIME
 You choose how long your child can play each day, from 30 minutes up to 5 hours. When time is up, Bibi yawns, says "See you tomorrow!" and goes to sleep. No battles, no tears.
@@ -84,11 +84,15 @@ Support email for parents: graceandloannesofficial@gmail.com
 - **Ads:** No, my app does not contain ads.
 - **Content rating questionnaire:** answer No to violence, fear, gambling, user interaction and sharing location.
   Expect a rating of "Everyone" / PEGI 3.
-- **Data safety:** "Does your app collect or share user data?" answer **No**: everything stays on the phone
-  (Google only counts data that leaves the device). Mention in the privacy policy (done) that Say It! uses the phone's
-  own speech recognition. "Is all data encrypted in transit?" not applicable. "Can users request deletion?" Yes, Start again.
-  (This changes when family messages go online with Firebase; we will update it then.)
-- **Upload:** Production (or Internal testing first) → Create new release → upload `Brainlings-1.7.1.aab`.
+- **Data safety (update this BEFORE sending version 1.8.0 for review):** App content → Data safety → Edit.
+  "Does your app collect or share any of the required user data types?" **Yes**.
+  "Is all of the user data collected by your app encrypted in transit?" **Yes**.
+  "Do you provide a way for users to request that their data is deleted?" **Yes** (Start again, or email).
+  Data types: tick **Audio → Voice or sound recordings** only. For it: Collected **Yes**, Shared **No**,
+  Processed ephemerally **Yes** (deleted once delivered), Required **No, users can choose** (only if they use family links),
+  Purpose **App functionality**. Everything else stays unticked (the child's name and age never leave the phone).
+  Families policy commitment: keep **Yes**.
+- **Upload:** Production (or Internal testing first) → Create new release → upload `Brainlings-1.8.0.aab`.
   Choose "Use Google-generated app signing key" (Play App Signing). Keep `brainlings-upload.jks` and its password safe:
   every future update must be signed with it.
 - **Teacher Approved:** once live, you can apply. The app already follows the rules (no ads, age appropriate, grown-up gate).
