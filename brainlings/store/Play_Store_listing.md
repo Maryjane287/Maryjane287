@@ -5,58 +5,58 @@ Everything here is ready to copy and paste into Google Play Console
 
 ## App name (max 30 characters)
 
-Brainlings: Learn, Sing, Grow
+Brainlings: Kids Learning Fun
 
 ## Short description (max 80 characters)
 
-Fun learning for ages 4 to 7: counting, phonics, songs and a friend who listens.
+ABC phonics, counting, maths & songs for kids 4 to 7. A buddy who listens!
 
 ## Full description (max 4000 characters)
 
 Meet Bibi, the cuddly learning buddy who grows every time your child learns!
 
-Brainlings turns counting, letters, shapes and words into games, songs and giggles. Bibi talks, sings, dances and even listens, so little ones who cannot read yet can play and learn all by themselves.
+Brainlings is a gentle, joyful early learning app for kids aged 4 to 7, made for preschool, kindergarten and the first years of school. It turns the alphabet, phonics, counting, math, shapes and first words into educational games, kids songs and giggles. Bibi talks, sings, dances and even listens, so little ones who cannot read yet can learn all by themselves.
 
-🌱 HATCH YOUR OWN BIBI
-Your child taps a magic egg, names their very own creature and watches it grow. Bibi grows in the direction your child learns most: counting gives Bibi shining stars, letters give Bibi a storybook hat.
+🌱 HATCH YOUR OWN LEARNING BUDDY
+Your child taps a magic egg, names their very own creature and watches it grow. Bibi grows the way your child learns: counting gives Bibi shining stars, letters and reading give Bibi a storybook hat.
 
-🔢 COUNTING AND EARLY MATHS
-Feed hungry Bibi, count along, compare plates, add up and take away, all with pictures, so every sum makes sense.
+🔤 ABC, PHONICS AND READING
+Pop bubbles that start with the right letter sound, find big and little letters, learn the alphabet from A to Z and spell first words like cat, dog and sun. A fun first step into reading and spelling.
 
-🔤 PHONICS AND FIRST WORDS
-Pop bubbles that start with the right sound, find big and little letters, and spell first words like cat, dog and sun.
+🔢 COUNTING, NUMBERS AND MATHS
+Feed hungry Bibi and count along. Compare plates, add up and take away with pictures, so every sum makes sense. Numbers to 10, counting in twos and early math games that feel like play.
 
-🔷 SHAPES AND PATTERNS
-Build a house, a rocket, a castle and a train from shapes. Finish patterns and count in twos at a colourful party.
+🔷 SHAPES, COLOURS AND PATTERNS
+Build a house, a rocket, a castle and a train from shapes. Name colours, finish patterns and count stars at a colourful party. Perfect for learning shapes and colors.
+
+🎤 A BUDDY WHO LISTENS: SPEAKING PRACTICE
+In Say It!, Bibi asks your child to name pictures, make sentences, find rhymes and answer questions out loud. Bibi really listens, gently shows the right answer and cheers every try. Wonderful speech and vocabulary practice. On the Talk screen, Bibi copies your child in a funny voice.
 
 🎓 YOUR CHILD BECOMES THE TEACHER
 Silly Bibi makes mistakes, and your child corrects them. Teaching is the best way to learn!
 
-🎤 BIBI LISTENS AND TALKS BACK
-Say It! asks your child to name pictures, make sentences, find rhymes and answer questions out loud. Bibi hears the answer, helps gently when needed and cheers every try. On the Talk screen Bibi copies your child in a funny voice.
-
-🎵 SING AND DANCE
-Original Brainlings songs, sung by Bibi and friends, with the words lighting up as they are sung and pictures that show what they mean. Dance parties pop up in every game.
+🎵 KIDS SONGS AND DANCE PARTIES
+Original Brainlings songs, sung by Bibi and friends: the ABC song from A to Z, counting songs, a colour song and more. The words light up as they are sung, with pictures that show what they mean. Dance parties pop up in every game.
 
 ⭐ 7 LEVELS IN EVERY GAME
-Every game grows with your child, from first steps to real challenges, with stars, stickers and big celebrations along the way.
+Every learning game grows with your child, from first steps to real challenges, with stars, stickers, a bonus star catch and big celebrations along the way.
 
 💌 LOVE FROM FAMILY
-Record a loving voice message in the grown-up area and Bibi delivers it to your child in a special envelope. Your child can send a hug back, and you can see how many times they listened.
+Record a loving voice message in the grown-up area and Bibi delivers it in a special envelope. Your child can send a hug back, and you can see how many times they listened.
 
-🌙 HEALTHY PLAY
-You choose how long your child can play each day, from 30 minutes up to 5 hours, or no limit. When time is up, Bibi yawns, says "See you tomorrow!" and goes to sleep. No battles, no tears.
+🌙 HEALTHY SCREEN TIME
+You choose how long your child can play each day, from 30 minutes up to 5 hours. When time is up, Bibi yawns, says "See you tomorrow!" and goes to sleep. No battles, no tears.
 
 🔒 SAFE FOR CHILDREN
 • No ads, ever
 • No chat with strangers or other children
 • Grown-up area protected by a parent lock
-• We keep only a first name and an age. Voice recordings stay on your phone.
-
-No ads. No chat. Just learning, songs and lots of love.
+• Works offline. Your child's name and voice recordings stay on your phone.
 
 🎁 FREE FOR 7 DAYS
 Everything is free for the first 7 days, no card needed. After that, a simple subscription keeps every game and song open. Talking to Bibi and letters from family always stay free. Cancel any time in Google Play.
+
+Brainlings: learn, grow, and hear from the people who love you. 💛
 
 ## Promo video
 
