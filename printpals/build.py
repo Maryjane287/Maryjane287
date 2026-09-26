@@ -11,7 +11,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '32'
+VERSION = '33'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -2050,7 +2050,7 @@ TOOLS += [
         'faq': [('Will the envelope fit the letter?', 'Fold the letter in half, then in half again, and it will fit inside.')],
     },
     {
-        'id': 'comprehension', 'cat': 'reading', 'slug': 'reading-comprehension-worksheets', 'tint': '#fff6e0', 'icon': '📖', 'new': True,
+        'id': 'comprehension', 'cat': 'reading', 'slug': 'reading-comprehension-worksheets', 'tint': '#fff6e0', 'icon': '📖', 'new': False,
         'nav': 'Reading comprehension',
         'title': 'Free Reading Comprehension Worksheets for Kids | Short Stories With Their Name, With Answers | PrintPals',
         'desc': 'Free printable reading comprehension worksheets where your child is in the story: short stories for ages 5 to 7 and longer stories for ages 7 to 9, with tick box questions, a written answer, a drawing box and an answer key.',
@@ -2065,7 +2065,7 @@ TOOLS += [
         'faq': [('What age is this for?', 'The short stories suit ages 5 to 7. The longer stories, with a written answer, suit ages 7 to 9.')],
     },
     {
-        'id': 'mathsminute', 'cat': 'maths', 'slug': 'maths-minute-worksheets', 'tint': '#fff0f0', 'icon': '⏱️', 'new': True,
+        'id': 'mathsminute', 'cat': 'maths', 'slug': 'maths-minute-worksheets', 'tint': '#fff0f0', 'icon': '⏱️', 'new': False,
         'nav': 'Maths minute',
         'title': 'Free Maths Minute Worksheets | Quick Fact Fluency Drills, Adding, Taking Away, Times Tables | PrintPals',
         'desc': 'Free printable one minute maths drills: 30 quick facts for adding and taking away within 10 and 20, doubles and times tables, with a daily score tracker and answers.',
@@ -2079,7 +2079,7 @@ TOOLS += [
         'faq': [('What if one minute is too stressful?', 'Take the timer away. Let your child finish all 30 at their own pace, and time it only when they feel confident.')],
     },
     {
-        'id': 'savings', 'cat': 'maths', 'slug': 'savings-jar-chart-for-kids', 'tint': '#fff6e0', 'icon': '🐷', 'new': True,
+        'id': 'savings', 'cat': 'maths', 'slug': 'savings-jar-chart-for-kids', 'tint': '#fff6e0', 'icon': '🐷', 'new': False,
         'nav': 'Savings jar',
         'title': 'Free Printable Savings Chart for Kids | Money Jar Goal Tracker, Spend Save Share | PrintPals',
         'desc': 'A free printable savings jar chart for children in your own currency: set a goal, colour a coin each time you save, plus spend, save and share jar labels.',
@@ -2096,7 +2096,7 @@ TOOLS += [
         'faq': [('How do the three jars work?', 'Each time your child gets money, they split it between Spend (now), Save (for a goal) and Share (to give). It is a lovely first lesson in money and kindness.')],
     },
     {
-        'id': 'coupons', 'cat': 'crafts', 'slug': 'love-coupons-for-kids-to-give', 'tint': '#fff0f5', 'icon': '💝', 'new': True,
+        'id': 'coupons', 'cat': 'crafts', 'slug': 'love-coupons-for-kids-to-give', 'tint': '#fff0f5', 'icon': '💝', 'new': False,
         'nav': 'Love coupons',
         'title': 'Free Printable Love Coupons for Kids to Give | Mother\'s Day, Father\'s Day, Birthdays | PrintPals',
         'desc': 'Free printable love coupons for children to give to Mum, Dad or Grandma: a big hug, breakfast in bed, I will tidy my room and more, or write your own. Bright or colour in.',
@@ -2111,7 +2111,7 @@ TOOLS += [
         'faq': [('Can the coupons be for anyone?', 'Yes. Type any name in "For": Grandpa, a teacher, a big sister or a best friend.')],
     },
     {
-        'id': 'packing', 'cat': 'charts', 'slug': 'packing-list-for-kids', 'tint': '#e6f6fc', 'icon': '🧳', 'new': True,
+        'id': 'packing', 'cat': 'charts', 'slug': 'packing-list-for-kids', 'tint': '#e6f6fc', 'icon': '🧳', 'new': False,
         'nav': 'Packing lists',
         'title': 'Free Printable Packing List for Kids | Holiday, Beach, Sleepover, Camping, School Trip | PrintPals',
         'desc': 'Free printable picture packing lists for children: holiday, beach bag, sleepover, camping, school trip and staying with family. Add your own items.',
@@ -2125,7 +2125,7 @@ TOOLS += [
         'faq': [('Can I use it again?', 'Slip it into a plastic sleeve and use a whiteboard pen, and it will last for every trip.')],
     },
     {
-        'id': 'mealplan', 'cat': 'charts', 'slug': 'family-meal-planner-printable', 'tint': '#f1f8e6', 'icon': '🍽️', 'new': True,
+        'id': 'mealplan', 'cat': 'charts', 'slug': 'family-meal-planner-printable', 'tint': '#f1f8e6', 'icon': '🍽️', 'new': False,
         'nav': 'Family meal planner',
         'title': 'Free Printable Family Meal Planner With Kids | Weekly Menu, Shopping List, Chef Menu | PrintPals',
         'desc': 'A free printable family meal planner made for cooking with children: a weekly breakfast, lunch and dinner plan with a little chef column, a shopping list and a menu card to draw.',
@@ -2138,7 +2138,7 @@ TOOLS += [
         'faq': [('How can young children help in the kitchen?', 'Washing vegetables, tearing lettuce, stirring, spreading, counting and laying the table are all great jobs for little chefs.')],
     },
     {
-        'id': 'habits', 'cat': 'world', 'slug': 'handwashing-poster-for-kids', 'tint': '#e6f6fc', 'icon': '🧼', 'new': True,
+        'id': 'habits', 'cat': 'world', 'slug': 'handwashing-poster-for-kids', 'tint': '#e6f6fc', 'icon': '🧼', 'new': False,
         'nav': 'Healthy habits posters',
         'title': 'Free Handwashing Poster for Kids | Sneeze, Getting Dressed and Toilet Steps Posters | PrintPals',
         'desc': 'Free printable healthy habits posters for children: how to wash my hands, catch that sneeze, I can get dressed and toilet time steps, with pictures for every step.',
@@ -2149,6 +2149,110 @@ TOOLS += [
         'article': """<h2>Put it at their height</h2><p>Stick the handwashing poster by the sink at your child's eye level, and the getting dressed poster in their bedroom. Point to each step as they do it, and soon they will not need you at all.</p>""",
         'faq': [('How long should children wash their hands?', 'About 20 seconds, which is the time it takes to sing Happy Birthday twice.')],
     },
+    {
+        'id': 'papergames', 'cat': 'puzzles', 'slug': 'paper-games-for-kids', 'tint': '#eef2ff', 'icon': '❌', 'new': True,
+        'nav': 'Paper games',
+        'title': 'Free Printable Paper Games for Kids | Noughts and Crosses, Dots and Boxes, Word Guess, Squiggles | PrintPals',
+        'desc': 'Free printable pencil and paper games for kids: noughts and crosses grids, dots and boxes, a kind word guessing game with a silly monster, and squiggle drawing. Perfect for cafés, journeys and rainy days.',
+        'h1': 'Paper games',
+        'lead': 'Screen-free fun for two. Keep a few pages in your bag for cafés, waiting rooms and long journeys. All you need is a pencil.',
+        'card': 'Noughts and crosses, dots and boxes, word guess and squiggles.',
+        'form': check('noughts', 'Noughts and crosses') + check('dots', 'Dots and boxes') + check('guess', 'Guess the word, draw the monster') + check('squiggles', 'Squiggle pictures') + PAPER + SHUFFLE,
+        'article': """<h2>Games that teach</h2><p>Paper games build more than you might think: taking turns, planning ahead, spelling and imagination. Let your child win sometimes, and talk about your moves out loud so they can learn your tricks.</p>""",
+        'faq': [('What is "draw the monster"?', 'It is a friendly version of hangman. Each wrong guess adds a part to a silly monster instead.')],
+    },
+    {
+        'id': 'scissors', 'cat': 'handwriting', 'slug': 'cutting-practice-worksheets', 'tint': '#fff0f0', 'icon': '✂️', 'new': True,
+        'nav': 'Scissor skills',
+        'title': 'Free Cutting Practice Worksheets | Scissor Skills for Toddlers and Preschool | PrintPals',
+        'desc': 'Free printable scissor skills worksheets for toddlers and preschoolers: straight, zigzag and wavy lines, shapes to cut out and spirals. Help each animal reach its food!',
+        'h1': 'Scissor skills',
+        'lead': 'Cutting builds the hand strength children need for writing. Start with straight lines, then zigzags, waves, shapes and spirals.',
+        'card': 'Straight, zigzag and wavy lines, shapes and spirals to cut.',
+        'form': field('Lines', seg('level', [('straight', 'Straight'), ('zigzag', 'Zigzag'), ('wavy', 'Wavy'), ('shapes', 'Shapes'), ('spiral', 'Spirals')], 'straight')) + PAPER,
+        'article': """<h2>Thumbs up!</h2><p>Teach "thumbs up": the thumb goes in the small hole, on top, and the other hand holds the paper and turns it. Use child safe scissors, and cut slowly. Snipping playdough or straws is great practice too.</p>""",
+        'faq': [('When can children use scissors?', 'Most children can start snipping with child safe scissors, and a grown-up close by, at around 2 and a half to 3.')],
+    },
+    {
+        'id': 'tenframes', 'cat': 'maths', 'slug': 'ten-frame-worksheets', 'tint': '#fff6e0', 'icon': '🔟', 'new': True,
+        'nav': 'Ten frames',
+        'title': 'Free Ten Frame Worksheets | Count, Show Numbers, Make 10, Count to 20 | PrintPals',
+        'desc': 'Free printable ten frame worksheets: count the dots, show a number, make 10 and count to 20 with double ten frames. With answer keys.',
+        'h1': 'Ten frames',
+        'lead': 'Ten frames help children see numbers at a glance and understand how numbers make 10. The building block for all adding and taking away.',
+        'card': 'Count, show numbers, make 10 and count to 20.',
+        'form': field('Activity', seg('kind', [('count', 'How many?'), ('show', 'Show it'), ('make10', 'Make 10'), ('twenty', 'Count to 20')], 'count'))
+        + check('key', 'Answer key') + PAPER + SHUFFLE,
+        'article': """<h2>Seeing numbers</h2><p>With ten frames, children stop counting one by one and start seeing: "That's 5 and 2 more, so 7." Ask "How many more to make 10?" often. It is the secret to quick mental maths later.</p>""",
+        'faq': [('What age is this for?', 'Ages 4 to 7. Start with "How many?" and "Show it", then move to "Make 10" and "Count to 20".')],
+    },
+    {
+        'id': 'sequencing', 'cat': 'reading', 'slug': 'sequencing-worksheets', 'tint': '#f1f8e6', 'icon': '🔢', 'new': True,
+        'nav': 'Story sequencing',
+        'title': 'Free Sequencing Worksheets for Kids | Cut and Paste First, Next, Then, Last | PrintPals',
+        'desc': 'Free printable picture sequencing worksheets: cut out the pictures and put them in order with first, next, then and last. Growing a flower, making a sandwich, a snowy day and more.',
+        'h1': 'Story sequencing',
+        'lead': 'Cut, order and glue. Putting pictures in order builds the thinking behind reading, retelling stories and writing.',
+        'card': 'Cut out the pictures and put them in order.',
+        'form': field('Stories', '<select name="set"><option value="plant">Growing a flower (and one more)</option><option value="sandwich">Making a sandwich (and one more)</option><option value="snowman">A snowy day (and one more)</option><option value="morning">Getting ready (and one more)</option><option value="chick">From egg to hen (and one more)</option><option value="rain">Rain and rainbow (and one more)</option><option value="all">All six (3 pages)</option></select>')
+        + PAPER + SHUFFLE,
+        'article': """<h2>Tell the story</h2><p>Once the pictures are glued in, ask your child to tell you the story using the words first, next, then and last. Then try it with real life: "What did we do first this morning?"</p>""",
+        'faq': [('What age is this for?', 'Ages 3 to 7. Younger children can simply point to the order before cutting.')],
+    },
+    {
+        'id': 'coding', 'cat': 'puzzles', 'slug': 'coding-worksheets-for-kids', 'tint': '#e6f6fc', 'icon': '🤖', 'new': True,
+        'nav': 'Screen-free coding',
+        'title': 'Free Coding Worksheets for Kids | Unplugged Arrow Coding Puzzles | PrintPals',
+        'desc': 'Free printable unplugged coding worksheets: write the arrow code to move the robot, bunny, rocket or bee to its prize around the blocks. Easy, medium and hard, with answers.',
+        'h1': 'Screen-free coding',
+        'lead': 'Real coding thinking, no screen needed. Children write a list of arrow steps to guide a robot to its prize. New puzzles every time.',
+        'card': 'Write the arrows to guide the robot to its prize.',
+        'form': field('Level', seg('level', [('easy', 'Easy'), ('medium', 'Medium'), ('hard', 'Hard')], 'easy'))
+        + check('key', 'Answer key') + PAPER + SHUFFLE,
+        'article': """<h2>Thinking like a coder</h2><p>Coding is really about giving clear step by step instructions. After solving a puzzle, play it for real: one person is the robot and follows the arrows exactly. Mistakes are called bugs, and fixing them is called debugging!</p>""",
+        'faq': [('Is there only one right answer?', 'No. The answer key shows the shortest route, but any route that reaches the prize without crossing a block is correct.')],
+    },
+    {
+        'id': 'factfile', 'cat': 'world', 'slug': 'animal-fact-file-template', 'tint': '#f5edff', 'icon': '🦁', 'new': True,
+        'nav': 'Animal fact files',
+        'title': 'Free Animal Fact File Template for Kids | Research Worksheet | PrintPals',
+        'desc': 'Free printable animal fact files and research templates for kids: lion, penguin, elephant, octopus, bee, sea turtle, giraffe and blue whale, or any topic you choose.',
+        'h1': 'Animal fact files',
+        'lead': 'For curious children who ask a hundred questions. Two amazing facts to start, then boxes to find out where it lives, what it eats and more.',
+        'card': 'A research sheet for any animal, with amazing facts to start.',
+        'form': field('Animal', '<select name="animal"><option value="lion">Lion</option><option value="penguin">Penguin</option><option value="elephant">Elephant</option><option value="octopus">Octopus</option><option value="bee">Honey bee</option><option value="turtle">Sea turtle</option><option value="giraffe">Giraffe</option><option value="whale">Blue whale</option><option value="own">My own topic</option></select>')
+        + field('My own topic (optional)', '<input type="text" name="own" maxlength="24" placeholder="Dinosaurs" autocomplete="off">', 'Choose "My own topic" to use it.') + PAPER,
+        'article': """<h2>Finding out together</h2><p>Look for answers in library books, nature programmes or safe websites together. The last box, "A question I still have", is the most important: it keeps curiosity going.</p>""",
+        'faq': [('Can we use it for things that are not animals?', 'Yes. Choose "My own topic" and type anything, like volcanoes, space or a country.')],
+    },
+    {
+        'id': 'petcare', 'cat': 'charts', 'slug': 'pet-care-chart-for-kids', 'tint': '#fff6e0', 'icon': '🐾', 'new': True,
+        'nav': 'Pet care chart',
+        'title': 'Free Pet Care Chart for Kids | Dog, Cat, Fish, Rabbit, Hamster, Bird | PrintPals',
+        'desc': 'A free printable pet care chart for children: daily jobs for a dog, cat, fish, rabbit, hamster or bird, a paw to colour for each job, and an all about my pet page.',
+        'h1': 'Pet care chart',
+        'lead': '"I promise I will look after it!" Now they can. Daily pet jobs with a paw to colour, and a page all about your pet.',
+        'card': 'Daily pet jobs with paws to colour, plus all about my pet.',
+        'form': field('Pet', seg('pet', [('dog', 'Dog'), ('cat', 'Cat'), ('fish', 'Fish'), ('rabbit', 'Rabbit'), ('hamster', 'Hamster'), ('bird', 'Bird')], 'dog'))
+        + field('Pet\'s name (optional)', '<input type="text" name="petname" maxlength="20" placeholder="Biscuit" autocomplete="off">')
+        + check('profile', 'All about my pet page') + PAPER,
+        'article': """<h2>Kindness and responsibility</h2><p>Caring for a pet teaches children gentleness and routine. Share the jobs out, write the helpers' names at the bottom, and keep a grown-up in charge of cleaning and anything tricky.</p>""",
+        'faq': [('What age can children help with pets?', 'Even toddlers can help fill a food bowl with you. From about 5, children can do simple jobs each day with a reminder.')],
+    },
+    {
+        'id': 'diary', 'cat': 'reading', 'slug': 'holiday-diary-for-kids', 'tint': '#e6f6fc', 'icon': '📔', 'new': True,
+        'nav': 'Holiday diary',
+        'title': 'Free Printable Holiday Diary for Kids | Travel Journal | PrintPals',
+        'desc': 'A free printable holiday diary and travel journal for kids: a cover with their name, and a page for each day with date, weather, where we went, the best bit, feelings and a drawing box.',
+        'h1': 'Holiday diary',
+        'lead': 'Turn holidays into lasting memories and gentle writing practice. A page each evening, with space to stick in tickets, leaves and photos.',
+        'card': 'A travel journal with a page for every day away.',
+        'form': field('Child\'s name (optional)', '<input type="text" name="name" maxlength="24" placeholder="Emma" autocomplete="off">')
+        + field('Where are you going? (optional)', '<input type="text" name="where" maxlength="28" placeholder="Scotland" autocomplete="off">')
+        + field('Days', seg('days', [('3', '3'), ('7', '7'), ('14', '14')], '7')) + PAPER,
+        'article': """<h2>Small moments matter</h2><p>Fill it in at the end of each day while memories are fresh. Younger children can draw while you write their words. It will become a treasure they look back on for years.</p>""",
+        'faq': [('Is it only for going away?', 'Not at all. It works just as well for days out and holidays at home.')],
+    },
 ]
 
 # The homepage sections, in learning order (easiest first). Every tool appears in exactly one section.
@@ -2156,22 +2260,23 @@ ARRANGE = [
     ('packs', 'Ready-made packs', 'Packs', 'Stop searching. A week, a month or the whole holiday planned for your child, storybooks and activity books, starting school, quick packs, family far away, a learning passport and class packs.',
      ['pack', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack']),
     ('handwriting', 'Handwriting', 'Handwriting', 'From first pencil lines to joined writing, with real letter shapes and stroke order.',
-     ['prewriting', 'names', 'letters', 'mixups', 'joined', 'writingpaper', 'alphabets']),
+     ['prewriting', 'scissors', 'names', 'letters', 'mixups', 'joined', 'writingpaper', 'alphabets']),
     ('reading', 'Reading & phonics', 'Reading', 'Letter sounds, CVC words, syllables, sight words, sentences, spelling and stories where your child is the hero.',
-     ['abcorder', 'cvc', 'sounds', 'families', 'rhyming', 'syllables', 'sight', 'colourwords', 'spelling', 'flashcards', 'homelang', 'opposites', 'position', 'sentences', 'comprehension', 'story', 'storywriting', 'storydice', 'letterkit']),
+     ['abcorder', 'cvc', 'sounds', 'families', 'rhyming', 'syllables', 'sight', 'colourwords', 'spelling', 'flashcards', 'homelang', 'opposites', 'position', 'sentences', 'sequencing', 'comprehension', 'story', 'storywriting', 'storydice', 'letterkit', 'diary']),
     ('maths', 'Maths', 'Maths', 'Counting, patterns, number bonds, doubles, dominoes, sums, money, times tables, time, fractions and shapes, with answer keys.',
-     ['numbers', 'patterns', 'numberday', 'hundred', 'compare', 'bonds', 'doubles', 'dominoes', 'maths', 'mathsminute', 'numberlines', 'wordproblems', 'placevalue', 'money', 'savings', 'times', 'clocks', 'clockcraft', 'fractions', 'shapes', 'measuring', 'graphs']),
+     ['numbers', 'tenframes', 'patterns', 'numberday', 'hundred', 'compare', 'bonds', 'doubles', 'dominoes', 'maths', 'mathsminute', 'numberlines', 'wordproblems', 'placevalue', 'money', 'savings', 'times', 'clocks', 'clockcraft', 'fractions', 'shapes', 'measuring', 'graphs']),
     ('puzzles', 'Puzzles & games', 'Puzzles', 'Mazes, dot to dot, odd one out, spot the difference, word searches, crosswords, secret codes, sudoku, bingo and board games.',
-     ['mazes', 'dots', 'matching', 'oddone', 'spotdiff', 'wordsearch', 'crossword', 'secretcode', 'sudoku', 'bingo', 'snakes', 'travel']),
+     ['mazes', 'dots', 'matching', 'oddone', 'spotdiff', 'wordsearch', 'crossword', 'secretcode', 'coding', 'sudoku', 'bingo', 'snakes', 'papergames', 'travel']),
     ('crafts', 'Colouring, crafts & parties', 'Colouring & crafts', 'Colouring pages, photo colouring, grid drawing, how to draw, puppets, crowns, bookmarks, door hangers, cards, keepsakes and party packs.',
      ['colouring', 'photo', 'colournum', 'gridcopy', 'howtodraw', 'rolldraw', 'cutpaste', 'crafts', 'puppets', 'bookmarks', 'doorhangers', 'cards', 'coupons', 'handprints', 'party', 'invites']),
     ('charts', 'Charts & planners', 'Charts', 'Routines, chores, reward charts, 30 day challenges, certificates, reading logs, planners, calendars, height charts and labels.',
-     ['routine', 'chores', 'reward', 'potty', 'teeth', 'sleep', 'screentime', 'challenge', 'packing', 'mealplan', 'gratitude', 'certificate', 'signs', 'readinglog', 'homework', 'calendar', 'countdown', 'heightchart', 'labels', 'sitter']),
+     ['routine', 'chores', 'reward', 'potty', 'teeth', 'sleep', 'screentime', 'challenge', 'packing', 'mealplan', 'petcare', 'gratitude', 'certificate', 'signs', 'readinglog', 'homework', 'calendar', 'countdown', 'heightchart', 'labels', 'sitter']),
     ('world', 'Me & my world', 'My world', 'Family, siblings, big feelings, new experiences, food, conversations, my body, days and months, weather, life cycles and scavenger hunts.',
-     ['family', 'familyrules', 'siblings', 'lunchnotes', 'talkcards', 'mybody', 'habits', 'calmkit', 'socialstory', 'foods', 'feelings', 'daysmonths', 'weather', 'lifecycle', 'science', 'hunt']),
+     ['family', 'familyrules', 'siblings', 'lunchnotes', 'talkcards', 'mybody', 'habits', 'calmkit', 'socialstory', 'foods', 'feelings', 'daysmonths', 'weather', 'lifecycle', 'science', 'factfile', 'hunt']),
 ]
 # Ages each tool suits (first year, last year).
 AGES = {
+    'papergames': (4, 12), 'scissors': (2, 6), 'tenframes': (4, 7), 'sequencing': (3, 7), 'coding': (4, 10), 'factfile': (5, 11), 'petcare': (3, 12), 'diary': (4, 11),
     'comprehension': (5, 9), 'mathsminute': (5, 10), 'savings': (4, 12), 'coupons': (3, 12), 'packing': (3, 10), 'mealplan': (3, 12), 'habits': (2, 7),
     'invites': (3, 12), 'countdown': (3, 10), 'teeth': (2, 8), 'familyrules': (3, 12), 'sitter': (1, 10), 'science': (4, 10), 'letterkit': (5, 11),
     'pack': (3, 8), 'quickpack': (3, 8), 'faraway': (3, 10), 'monthplan': (3, 8), 'activitybook': (3, 9), 'passport': (3, 8), 'classpack': (3, 8),
@@ -2193,6 +2298,7 @@ AGES = {
 }
 # The option that sets how hard a sheet is, ordered easiest first (drives the Easier and Harder buttons).
 LEVELS = {
+    'scissors': 'level', 'tenframes': 'kind', 'coding': 'level',
     'comprehension': 'level', 'mathsminute': 'kind',
     'patterns': 'level', 'hundred': 'level', 'bonds': 'to', 'maths': 'within', 'numberlines': 'range', 'wordproblems': 'within', 'placevalue': 'range',
     'money': 'level', 'clocks': 'level', 'fractions': 'level', 'mazes': 'level', 'dots': 'dots', 'matching': 'pairs', 'oddone': 'level', 'spotdiff': 'level',
@@ -2219,7 +2325,7 @@ CAT_TEXT = {a[0]: a[3] for a in ARRANGE}
 NAV_LABEL = {a[0]: a[2] for a in ARRANGE}
 
 
-JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'plus', 'app']
+JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'plus', 'app']
 CONTACT = 'graceandloannesofficial@gmail.com'
 # Stripe customer portal: parents manage, switch or cancel their Plus subscription here.
 STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'

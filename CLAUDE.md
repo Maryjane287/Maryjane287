@@ -76,7 +76,10 @@ use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in 
 for painted pictures on every sheet.
 Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
 (colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
-fractions, colour by number, spot the difference. Batch 15 live (VERSION 32, 126 tools, tools15.js): reading comprehension (6 stories starring the child, answers),
+fractions, colour by number, spot the difference. Batch 16 live (VERSION 33, 134 tools, tools16.js): paper games (noughts and crosses, dots and boxes,
+word guess with a monster instead of hangman, squiggles), scissor skills (5 levels), ten frames, story sequencing (6 stories, cut and glue),
+screen-free coding (BFS always solvable, answers), animal fact files (8 animals + own topic), pet care chart (6 pets), holiday diary.
+NOTE tools.js already has tenFrame(); batch 16 uses drawTenFrame. Always grep new helper names across all js files. Batch 15 live (VERSION 32, 126 tools, tools15.js): reading comprehension (6 stories starring the child, answers),
 maths minute (30 facts, score tracker), savings jar (any currency, spend/save/share labels), love coupons, packing lists (6 trips),
 family meal planner (week plan, shopping list, chef menu), healthy habits posters (handwash, sneeze, dressed, toilet). Batch 14 live (VERSION 31, 119 tools, tools14.js): party invitations (4 per page), countdown calendar
 (any occasion, 24/12/7 days with family activities), tooth brushing chart, family rules poster, babysitter info sheet (phone numbers only by hand),
