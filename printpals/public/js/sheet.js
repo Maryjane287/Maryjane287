@@ -16,15 +16,17 @@ function esc(s) {
 class Page {
   constructor(paper, title, opts = {}) {
     this.p = PAPER[paper] || PAPER.a4;
-    this.w = this.p.w;
-    this.h = this.p.h;
+    this.landscape = !!opts.landscape;
+    this.w = this.landscape ? this.p.h : this.p.w;
+    this.h = this.landscape ? this.p.w : this.p.h;
     this.m = 13; // margin
     this.parts = [];
     this.y = this.m;
     this.left = this.m;
     this.right = this.w - this.m;
     this.bottom = this.h - this.m - 6; // room for the footer
-    this.header(title, opts);
+    this.tint = opts.tint || '#fff';
+    if (!opts.bare) this.header(title, opts);
   }
 
   get width() { return this.right - this.left; }
@@ -76,8 +78,8 @@ class Page {
 
   svg() {
     this.footer();
-    return `<svg class="sheet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${this.w} ${this.h}" data-w="${this.w}" data-h="${this.h}">`
-      + `<rect width="${this.w}" height="${this.h}" fill="#fff"/>${this.parts.join('')}</svg>`;
+    return `<svg class="sheet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${this.w} ${this.h}" data-w="${this.w}" data-h="${this.h}" data-orient="${this.landscape ? 'landscape' : 'portrait'}">`
+      + `<rect width="${this.w}" height="${this.h}" fill="${this.tint}"/>${this.parts.join('')}</svg>`;
   }
 }
 

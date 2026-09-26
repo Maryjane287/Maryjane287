@@ -9,7 +9,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '2'
+VERSION = '3'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -395,6 +395,209 @@ TOOLS += [
 ]
 
 
+TOOLS += [
+    {
+        'id': 'photo', 'cat': 'fun', 'slug': 'photo-to-colouring-page', 'tint': '#fff0f7', 'icon': '📸', 'new': True,
+        'nav': 'Photo to colouring page',
+        'title': 'Turn a Photo into a Colouring Page Free | Private, No Upload | PrintPals',
+        'desc': 'Turn any photo into a printable colouring page for free: your child, your pet, a family day out. Made inside your browser, so your photo never leaves your device.',
+        'h1': 'Photo to colouring page',
+        'lead': 'Choose a photo of your child, your pet or a special day, and it becomes a colouring page in seconds. Your photo stays on your own device. It is never uploaded.',
+        'card': 'Your child, your pet, your family day out, turned into a colouring page. Private: photos never leave your device.',
+        'form': field('Photo', '<input type="file" name="photo" accept="image/*">', 'Clear photos with one or two people or animals work best.')
+        + field("Child's name (optional)", '<input type="text" name="name" value="" maxlength="30" placeholder="Mia">')
+        + field('Title (optional)', '<input type="text" name="title" value="" maxlength="40" placeholder="My Colouring Page">')
+        + field('Lines', seg('detail', [('simple', 'Bold and simple'), ('medium', 'Medium'), ('detailed', 'Lots of detail')], 'medium'), 'Bold and simple is best for little hands.')
+        + check('frame', 'Starry frame around the picture')
+        + PAPER,
+        'article': """
+<h2>A colouring page they will actually care about</h2>
+<p>Children colour for longer when the picture means something to them. A photo of themselves on their birthday, the family dog, grandma's visit or a day at the beach becomes a page they are proud to colour and keep. It also makes a lovely gift: colour it together and post it to a grandparent.</p>
+<h2>Your photo stays private</h2>
+<p>Most photo-to-colouring sites upload your picture to their servers. PrintPals does not. The lines are drawn by your own phone or computer, inside the page, and nothing is sent anywhere.</p>
+<h2>Tips for the best result</h2>
+<ul><li>Use a bright, sharp photo with a plain background.</li><li>Close-up faces and pets work beautifully.</li><li>Try "Bold and simple" for ages 3 to 5 and "Lots of detail" for older children.</li></ul>""",
+        'faq': [
+            ('Is my photo uploaded anywhere?', 'No. The colouring page is made inside your browser on your own device. Your photo is never sent to us or stored.'),
+            ('Which photos work best?', 'Bright, sharp photos with one or two people or animals and a simple background. Very dark or busy photos give messier lines.'),
+            ('Can I use it on my phone?', 'Yes. Choose a photo from your gallery or take a new one, then print or save it as a PDF.'),
+        ],
+    },
+    {
+        'id': 'story', 'cat': 'writing', 'slug': 'personalised-story-worksheets', 'tint': '#eef2ff', 'icon': '📖', 'new': True,
+        'nav': 'Story sheets',
+        'title': 'Free Personalised Reading Comprehension Worksheets | Your Child in the Story | PrintPals',
+        'desc': 'Free printable reading comprehension for early readers where your child is the hero of the story. Short stories, words to know, questions with pictures and a drawing box.',
+        'h1': 'Story sheets starring your child',
+        'lead': "Short stories where your child is the hero, with their best friend beside them. Children read more happily when the story is about them. Each sheet has words to know, three questions and a space to draw.",
+        'card': 'Short reading stories where your child is the hero, with questions and a space to draw.',
+        'form': field("Child's name", '<input type="text" name="name" value="Mia" maxlength="24">')
+        + field("Friend's name", '<input type="text" name="friend" value="Leo" maxlength="24">', 'A friend, brother, sister or cousin.')
+        + field('Story', '<select name="story"><option value="balloon">The Big Red Balloon</option><option value="kitten">Finds a Kitten</option><option value="picnic">Picnic in the Park</option><option value="rocket">Goes to the Moon</option><option value="rain">The Rainy Day</option><option value="turtle">The Turtle Race</option><option value="all">All six stories</option></select>')
+        + field('Text size', seg('text', [('big', 'Big (ages 4 to 5)'), ('small', 'Smaller (ages 6 to 7)')], 'big'))
+        + field('Answers', seg('answers', [('tick', 'Tick the answer'), ('write', 'Write the answer')], 'tick'))
+        + PAPER,
+        'article': """
+<h2>Why a story about them works</h2>
+<p>When a child sees their own name in a story, they lean in. They want to know what happens next, they reread it, and they show it to everyone. That motivation is exactly what early readers need.</p>
+<h2>What is on each sheet</h2>
+<ul><li><b>Words to know:</b> three key words to read together first.</li><li><b>The story:</b> short, clear sentences with plenty of space between the lines.</li><li><b>Questions:</b> three questions with picture answers to tick, or lines to write on.</li><li><b>Draw your favourite part:</b> a big box to show what they understood.</li></ul>""",
+        'faq': [
+            ('What age are the stories for?', 'Ages 4 to 7. Choose big text for new readers and smaller text for children who read more confidently.'),
+            ('Can I print all the stories at once?', 'Yes. Choose "All six stories" to get a little reading book of six sheets.'),
+        ],
+    },
+    {
+        'id': 'bingo', 'cat': 'puzzles', 'slug': 'picture-bingo-maker', 'tint': '#fff6e0', 'icon': '🎱', 'new': True,
+        'nav': 'Bingo maker',
+        'title': 'Free Picture Bingo Card Maker for Kids | Class Sets, Sight Words | PrintPals',
+        'desc': 'Make free printable bingo cards for kids: animals, food, party pictures or your own sight words. Every card is different, with a name on each and calling cards to cut out.',
+        'h1': 'Picture bingo maker',
+        'lead': "Every card is different, so everyone has a fair chance. Add each child's name to print a whole class set in one go, with calling cards to cut out. Use pictures for little ones or type your own sight words.",
+        'card': "Unique bingo cards for a whole class, each with a child's name. Pictures or your own sight words.",
+        'form': field('Theme', '<select name="theme"><option value="animals">Animals</option><option value="food">Food</option><option value="things">Toys and things</option><option value="party">Party</option><option value="mix">Mixed pictures</option><option value="words">My own words</option></select>')
+        + field('Grid', seg('grid', [('3', '3 by 3'), ('4', '4 by 4'), ('5', '5 by 5')], '3'))
+        + field("Children's names (optional)", '<textarea name="names" rows="4" spellcheck="false" placeholder="Mia&#10;Leo&#10;Emma"></textarea>', 'One name per line. You get one card for each child.')
+        + field('Number of cards', '<select name="cards"><option>2</option><option>4</option><option selected>6</option><option>8</option><option>10</option><option>16</option><option>20</option><option>30</option></select>', 'Used when no names are typed.')
+        + field('My own words', '<textarea name="words" rows="3" spellcheck="false" placeholder="the, and, is, see, can"></textarea>', 'For the "My own words" theme: sight words, spellings or vocabulary.')
+        + check('labels', 'Show the word under each picture')
+        + check('free', 'Free space in the middle (3 by 3 and 5 by 5)')
+        + check('caller', 'Calling cards to cut out')
+        + PAPER,
+        'article': """
+<h2>How to play</h2>
+<ul><li>Cut out the calling cards and put them in a bag or a hat.</li><li>Pull out one card at a time and say the word (or show the picture).</li><li>Children cover or colour the matching square. The first to get a full line shouts "Bingo!"</li></ul>
+<h2>Great for learning</h2>
+<p>Bingo is a brilliant way to practise sight words, new vocabulary and listening. Type your own words for this week's spellings, or use pictures with children who cannot read yet.</p>""",
+        'faq': [
+            ('Is every card different?', 'Yes. Each card is shuffled separately and checked so no two are the same.'),
+            ('Can I make cards with each child\'s name?', 'Yes. Type the names, one per line, and each child gets their own card.'),
+            ('Can I use my own words?', 'Yes. Choose "My own words" and type sight words, spellings or any words you like.'),
+        ],
+    },
+    {
+        'id': 'party', 'cat': 'fun', 'slug': 'birthday-party-printables', 'tint': '#fff0f0', 'icon': '🎂', 'new': True,
+        'nav': 'Birthday party pack',
+        'title': 'Free Personalised Birthday Party Printables for Kids | PrintPals',
+        'desc': "Free personalised birthday printables: a Happy Birthday poster with your child's name and age, All About Me page, party word search with the guests' names, party bingo and thank-you cards.",
+        'h1': 'Birthday party pack',
+        'lead': "Everything for a little party, made for your child. A birthday poster with their name and age, an All About Me page to keep, a word search with the guests' names, party bingo and thank-you cards for each friend.",
+        'card': "A poster, All About Me page, word search with guests' names, party bingo and thank-you cards.",
+        'form': field("Birthday child's name", '<input type="text" name="name" value="Emma" maxlength="20">')
+        + field('Age they are turning', '<select name="age">' + ''.join(f'<option{" selected" if a == 6 else ""}>{a}</option>' for a in range(1, 13)) + '</select>')
+        + field("Guests' names (optional)", '<textarea name="guests" rows="4" spellcheck="false" placeholder="Leo&#10;Mia&#10;Sam&#10;Chris"></textarea>', 'Guests appear in the word search and each gets a bingo card and a thank-you card.')
+        + '<div class="field"><span class="label">Pages</span>' + check('poster', 'Birthday poster') + check('aboutme', 'All about me') + check('search', 'Party word search') + check('bingo', 'Party bingo') + check('thanks', 'Thank-you cards') + '</div>'
+        + PAPER,
+        'article': """
+<h2>A party pack in two minutes</h2>
+<p>Type the birthday child's name, their age and the guests, and the whole pack is ready. Put the poster on the door, use the word search and bingo as party games, and send a thank-you card home with every friend.</p>
+<h2>The All About Me page</h2>
+<p>Fill it in on every birthday and keep them together. Looking back at them years later, with the drawings and the "when I grow up" answers, is a lovely memory.</p>""",
+        'faq': [
+            ('Does each guest get their own bingo card?', 'Yes. Type the guests\' names and each gets a different party bingo card with their name on it.'),
+            ('Can I print only some pages?', 'Yes. Untick any page you do not need.'),
+        ],
+    },
+    {
+        'id': 'certificate', 'cat': 'charts', 'slug': 'certificate-maker', 'tint': '#fff6e0', 'icon': '🏅', 'new': True,
+        'nav': 'Certificates',
+        'title': 'Free Certificate Maker for Kids | Awards for Home and School | PrintPals',
+        'desc': 'Make beautiful free printable certificates for children: Star of the Week, Super Reader, Kindness Award, Potty Champion and more. Print one for every child in the class at once.',
+        'h1': 'Certificates and awards',
+        'lead': "Beautiful certificates to celebrate every win, big or small. Choose an award, add the names and print one for each child. Four designs: rainbow, gold, space and nature.",
+        'card': 'Star of the Week, Super Reader, Kindness Award and more, in four beautiful designs.',
+        'form': field('Award', '<select name="award"><option value="star">Star of the Week</option><option value="reading">Super Reader</option><option value="writing">Wonderful Writer</option><option value="maths">Maths Whizz</option><option value="kindness">Kindness Award</option><option value="listening">Great Listener</option><option value="brave">Bravery Award</option><option value="helper">Super Helper</option><option value="potty">Potty Champion</option><option value="sports">Sports Star</option><option value="times">Times Tables Champion</option><option value="custom">My own award</option></select>')
+        + field('Names', '<textarea name="names" rows="4" spellcheck="false">Emma</textarea>', 'One name per line. Each gets their own certificate.')
+        + field('My own award title', '<input type="text" name="title" value="" maxlength="36" placeholder="Amazing Artist">', 'Used when you choose "My own award".')
+        + field('Reason (optional)', '<input type="text" name="reason" value="" maxlength="90" placeholder="for always trying your best">')
+        + field('From', '<input type="text" name="from" value="" maxlength="40" placeholder="Miss Emma, or Mum and Dad">')
+        + field('Date', '<input type="text" name="date" value="" maxlength="30" placeholder="Today">')
+        + field('Design', seg('style', [('rainbow', '🌈 Rainbow'), ('gold', '⭐ Gold'), ('space', '🚀 Space'), ('nature', '🌸 Nature')], 'rainbow'))
+        + PAPER,
+        'article': """
+<h2>Celebrate the small wins too</h2>
+<p>A certificate tells a child: I noticed. It works for the big moments, like finishing a reading book or learning the times tables, and for the everyday ones, like being brave at the dentist or kind to a friend.</p>
+<h2>A whole class in one go</h2>
+<p>Teachers can paste the class list and print a certificate for every child at once. Each prints on its own landscape page.</p>""",
+        'faq': [
+            ('Can I print certificates for the whole class?', 'Yes. Type or paste every name, one per line, and each child gets their own certificate.'),
+            ('Can I write my own award?', 'Yes. Choose "My own award" and type the title and the reason.'),
+            ('Do the certificates print in landscape?', 'Yes. They print sideways on A4 or US Letter automatically.'),
+        ],
+    },
+    {
+        'id': 'dots', 'cat': 'puzzles', 'slug': 'dot-to-dot-maker', 'tint': '#e6f6fc', 'icon': '✨', 'new': True,
+        'nav': 'Dot to dot',
+        'title': 'Free Dot to Dot Printables for Kids | Count by 1s, 2s, 5s, 10s or ABC | PrintPals',
+        'desc': 'Free printable dot to dot puzzles for kids: stars, animals, rockets and more. Choose 10 to 50 dots and count in ones, twos, fives, tens or join the alphabet. Answer key included.',
+        'h1': 'Dot to dot puzzles',
+        'lead': 'Join the dots and watch a picture appear. Choose how many dots and how to count: in ones, twos, fives, tens, or from A to Z. A gentle way to practise counting and pencil control.',
+        'card': 'Count in ones, twos, fives, tens or join the alphabet, from 10 to 50 dots.',
+        'form': field('Picture', '<select name="shape"><option value="">Surprise me</option>' + ''.join(f'<option value="{k}">{v}</option>' for k, v in [('star', 'Star'), ('heart', 'Heart'), ('house', 'House'), ('fish', 'Fish'), ('rocket', 'Rocket'), ('apple', 'Apple'), ('cat', 'Cat'), ('umbrella', 'Umbrella'), ('balloon', 'Balloon'), ('crown', 'Crown'), ('moon', 'Moon'), ('butterfly', 'Butterfly')]) + '</select>')
+        + field('Dots', seg('dots', [('10', '10'), ('20', '20'), ('30', '30'), ('50', '50')], '20'))
+        + field('Count in', seg('count', [('1', '1s'), ('2', '2s'), ('5', '5s'), ('10', '10s'), ('abc', 'A to Z')], '1'))
+        + field('How many puzzles', seg('puzzles', [('1', '1'), ('2', '2'), ('4', '4'), ('6', '6')], '2'))
+        + field('Layout', seg('layout', [('one', 'One big per page'), ('two', 'Two per page')], 'one'))
+        + check('key', 'Answer page')
+        + PAPER,
+        'article': """
+<h2>More than a puzzle</h2>
+<p>Dot to dot practises number order, counting and the careful pencil control children need for handwriting. Counting in twos, fives and tens turns it into times tables practice, and the A to Z option helps with the alphabet.</p>
+<h2>Which to choose</h2>
+<ul><li><b>Ages 3 to 4:</b> 10 dots, counting in ones.</li><li><b>Ages 5 to 6:</b> 20 or 30 dots, or A to Z.</li><li><b>Ages 6 to 8:</b> 50 dots, or counting in twos, fives and tens.</li></ul>""",
+        'faq': [
+            ('Can I count in twos or fives?', 'Yes. Choose 2s, 5s or 10s and the dots are numbered in that step, which is great for early times tables.'),
+            ('Is there an answer key?', 'Yes. The answer page shows each finished picture.'),
+        ],
+    },
+    {
+        'id': 'sudoku', 'cat': 'puzzles', 'slug': 'sudoku-for-kids', 'tint': '#effaf6', 'icon': '🔢', 'new': True,
+        'nav': 'Sudoku for kids',
+        'title': 'Free Picture Sudoku for Kids | 4x4 and 6x6 Printable Puzzles | PrintPals',
+        'desc': 'Free printable sudoku for kids with pictures or numbers: 4x4 for beginners and 6x6 for older children, easy to hard, every puzzle checked to have one answer. Answer key included.',
+        'h1': 'Sudoku for kids',
+        'lead': 'Little sudoku puzzles with pictures or numbers. Start with 4 by 4 picture puzzles and move up to 6 by 6. Every puzzle is checked to have exactly one answer.',
+        'card': '4 by 4 picture puzzles for beginners and 6 by 6 for older children, easy to hard.',
+        'form': field('Size', seg('size', [('4', '4 by 4'), ('6', '6 by 6')], '4'))
+        + field('Use', seg('symbols', [('pictures', 'Pictures'), ('numbers', 'Numbers')], 'pictures'))
+        + field('Level', seg('level', [('easy', 'Easy'), ('medium', 'Medium'), ('hard', 'Hard')], 'easy'))
+        + field('Pages', seg('pages', [('1', '1'), ('2', '2'), ('3', '3')], '1'))
+        + check('key', 'Answer page')
+        + PAPER,
+        'article': """
+<h2>Logic for little ones</h2>
+<p>Sudoku builds careful thinking: looking along a row, checking a column and working out what is missing. Picture sudoku makes it possible even before a child knows their numbers.</p>
+<h2>How to play</h2>
+<p>Every row, every column and every box must have each picture once. Children can draw the picture or write its number from the key.</p>""",
+        'faq': [
+            ('Does every puzzle have one answer?', 'Yes. Each puzzle is checked by the computer so there is exactly one correct answer.'),
+            ('What age is picture sudoku for?', 'The 4 by 4 picture puzzles suit ages 4 to 6. The 6 by 6 puzzles suit ages 6 to 9.'),
+        ],
+    },
+    {
+        'id': 'mixups', 'cat': 'writing', 'slug': 'b-d-reversal-worksheets', 'tint': '#fdf6e3', 'icon': '🔁', 'new': True,
+        'nav': 'b and d mix-ups',
+        'title': 'Free b and d Reversal Worksheets | Dyslexia Friendly b d p q Practice | PrintPals',
+        'desc': 'Free printable worksheets to stop b and d (and p and q) mix-ups: the bed trick, tracing with stroke order, find and colour, and missing letter words. Choose cream, blue or green tinted paper.',
+        'h1': 'b and d mix-ups',
+        'lead': 'Many children mix up b and d, and p and q. These gentle sheets teach the famous bed trick, practise the right stroke order and mix the letters in fun activities. Choose tinted paper, which many children with dyslexia find easier to read.',
+        'card': 'The bed trick, tracing, find and colour and missing letters. Dyslexia friendly tinted paper.',
+        'form': field('Letters', seg('letters', [('bd', 'b and d'), ('pq', 'p and q'), ('all', 'b d p q')], 'bd'))
+        + field('Paper colour', seg('tint', [('white', 'White'), ('cream', 'Cream'), ('blue', 'Blue'), ('green', 'Green')], 'cream'), 'Tinted paper can make letters easier to read for some children.')
+        + PAPER,
+        'article': """
+<h2>Mixing up b and d is normal</h2>
+<p>Almost every young child reverses letters while learning. b, d, p and q are the same shape turned around, so they are the hardest. With practice most children grow out of it by about age 7 or 8. If reversals carry on for longer alongside other reading difficulties, talk to your child's teacher.</p>
+<h2>What helps</h2>
+<ul><li><b>The bed trick:</b> the word bed looks like a bed, with b at the headboard and d at the footboard.</li><li><b>Start in the right place:</b> b starts with a tall stick, d starts with a round tummy. The green dots show where.</li><li><b>Little and often:</b> five minutes a day works better than one long session.</li></ul>""",
+        'faq': [
+            ('Why tinted paper?', 'Some children, especially those with dyslexia or visual stress, find black text on bright white paper harder to read. A soft cream, blue or green page can help. Try each one and see which your child prefers.'),
+            ('Does mixing up b and d mean my child has dyslexia?', 'Not on its own. Letter reversals are a normal part of learning to write. If you are worried, speak to your child\'s teacher.'),
+        ],
+    },
+]
+
+
 def head(title, desc, path, extra=''):
     url = SITE + path
     return f'''<!doctype html>
@@ -421,12 +624,13 @@ def head(title, desc, path, extra=''):
 </head>'''
 
 
-CATS = [('writing', 'Writing & reading'), ('maths', 'Maths'), ('puzzles', 'Puzzles'), ('charts', 'Charts')]
+CATS = [('writing', 'Writing & reading'), ('maths', 'Maths'), ('puzzles', 'Puzzles & games'), ('fun', 'Colouring & parties'), ('charts', 'Charts & awards')]
 CAT_TEXT = {
     'writing': 'Tracing, handwriting and spelling, with real letter shapes and stroke order.',
     'maths': 'Counting, sums, money, times tables and telling the time, with answer keys.',
-    'puzzles': 'Word searches, mazes and crosswords you can make yourself.',
-    'charts': 'Routines and reward charts that make everyday life easier.',
+    'puzzles': 'Word searches, mazes, crosswords, dot to dot, sudoku and bingo you can make yourself.',
+    'fun': 'Turn your own photos into colouring pages and throw a birthday party in minutes.',
+    'charts': 'Routines, reward charts and certificates that make everyday life easier.',
 }
 
 
@@ -484,6 +688,7 @@ def tool_page(t):
 <script src="/js/sheet.js?v={VERSION}"></script>
 <script src="/js/tools.js?v={VERSION}"></script>
 <script src="/js/tools2.js?v={VERSION}"></script>
+<script src="/js/tools3.js?v={VERSION}"></script>
 <script src="/js/app.js?v={VERSION}"></script>
 </body>
 </html>
@@ -493,21 +698,21 @@ def tool_page(t):
 def home():
     def card(t):
         return f'''<a class="tool" href="/{t['slug']}" style="--tint:{t['tint']}"><div class="thumb"><img src="/img/thumb-{t['id']}.webp" alt="{html.escape(t['h1'])} example" loading="lazy" width="400" height="566"></div>
-<h3>{t['icon']} {html.escape(t['h1'])}</h3><p>{html.escape(t['card'])}</p><span class="go">Make one free →</span></a>'''
+<h3>{t['icon']} {html.escape(t['h1'])}{'<span class="new">New</span>' if t.get('new') else ''}</h3><p>{html.escape(t['card'])}</p><span class="go">Make one free →</span></a>'''
     sections = ''.join(f'''<section class="cat" id="{k}"><h2>{v}</h2><p class="cat-lead">{CAT_TEXT[k]}</p><div class="tools">{''.join(card(t) for t in TOOLS if t['cat'] == k)}</div></section>''' for k, v in CATS)
     ld = {'@context': 'https://schema.org', '@type': 'WebSite', 'name': 'PrintPals', 'url': SITE + '/',
           'description': 'Free printable worksheets for children: name tracing, alphabet, numbers, maths, word searches and spelling.'}
     shapes = ''.join(f'<span style="width:{s}px;height:{s}px;left:{x}%;top:{y}%;background:{c};animation-delay:{d}s"></span>'
                      for s, x, y, c, d in [(90, 6, 18, '#ffe08a', 0), (60, 88, 12, '#bfe8ff', 1.5), (46, 80, 70, '#ffc6d9', 3), (70, 12, 72, '#c9f2e6', 4.5)])
     return head('PrintPals | Free Printable Worksheets for Kids, Made in Seconds',
-                'Free printable worksheets for kids: name and alphabet tracing, maths, money in your currency, times tables, telling the time, word searches, mazes, crosswords, routine and reward charts. Personalise and print.',
+                'Free printable worksheets for kids: tracing, story sheets starring your child, maths, money in your currency, times tables, puzzles, bingo, photo colouring pages, birthday party packs, certificates, routine and reward charts.',
                 '/', f'<script type="application/ld+json">{json.dumps(ld)}</script>') + f'''
 <body>
 {top()}
 <main>
 <section class="hero"><div class="shapes" aria-hidden="true">{shapes}</div><div class="wrap" style="position:relative">
 <h1>Free printable worksheets,<br><span class="hl">made in seconds</span></h1>
-<p class="lead">Personalised tracing, maths, money, puzzles, routines and reward charts for children aged 3 to 8. Type, tap print, done.</p>
+<p class="lead">Personalised tracing, reading, maths, puzzles, colouring pages from your own photos, party packs and certificates for children aged 3 to 8. Type, tap print, done.</p>
 <div class="chips"><span class="chip">✓ 100% free</span><span class="chip">✓ No sign up</span><span class="chip">✓ A4 and US Letter</span><span class="chip">✓ Save as PDF</span></div>
 </div></section>
 <div class="wrap">{sections}</div>

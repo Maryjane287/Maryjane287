@@ -128,3 +128,5 @@ footer a { color: #fff; text-decoration: none; font-weight: 700; margin-right: 1
 .cat-lead { color: var(--soft); margin-bottom: 4px; }
 .cat .tools { padding-bottom: 20px; }
 .seg input[type=checkbox] + span { min-width: 40px; text-align: center; }
+.tool h3 .new { display: inline-block; margin-left: 8px; padding: 2px 8px; border-radius: 99px; background: linear-gradient(135deg, #ff8a7a, #ff6b9e); color: #fff; font-size: 12px; font-weight: 800; letter-spacing: .3px; vertical-align: 3px; }
+input[type=file] { width: 100%; padding: 12px; border: 2px dashed var(--line); border-radius: 14px; background: #fffaf6; font: inherit; cursor: pointer; }
