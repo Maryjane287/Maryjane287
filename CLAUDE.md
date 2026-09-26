@@ -185,6 +185,10 @@ Higgsfield credits: about 4.4 left on 2026-09-25 after the Letter Song verses (i
 - Images are hosted on d8j0ntlcm91z4.cloudfront.net. The network allowlist was being updated
   so a new session can download them.
 
+## Other projects
+- PrintPals (free printable worksheet website, live at https://printpals.web.app) lives on its own branch
+  `claude/printpals`. Keep it separate from Brainlings.
+
 ## Other projects (paused)
 - `samesies/`: daily crowd-guessing web game prototype (owner found it boring; paused).
 - "Nearly" (working name): app for long-distance couples/families (photo drops on home screen,
