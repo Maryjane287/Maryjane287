@@ -19,6 +19,16 @@ npm install
 npm run pins       # writes 1000 x 1500 images into pins/
 ```
 
+## Making an order's magazine
+
+When an order comes in (Netlify Forms shows the answers and photos), save it as a small JSON file like `examples/order-example.json`, then:
+
+```
+npm run make-pdf -- order.json
+```
+
+This makes the finished A4 PDF (cover, letter, facts, photo spread, feature page and back cover) with the buyer's photos inside. Send the PDF by email, or upload it to Prodigi for a printed copy. Prodigi's magazines need at least 20 pages, so printed copies need extra pages added before that part goes live.
+
 ## What is where
 
 | Path | What it is |

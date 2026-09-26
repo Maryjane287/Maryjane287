@@ -115,10 +115,10 @@
 .pg-in { padding: 9cqw 8cqw; }
 .pg { background: #fffaf2; color: #1d1a2f; }
 .pg::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 3cqw; background: var(--bg); }
-.pg-kicker { margin: 0 0 3cqw; font-size: 2.8cqw; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--bg); filter: brightness(.8); }
+.pg-kicker { margin: 0 0 3cqw; font-size: 2.8cqw; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: color-mix(in srgb, var(--bg) 55%, var(--ink)); }
 .pg h3 { margin: 0 0 5cqw; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 9cqw; line-height: 1; }
 .pg-body { font-family: 'DM Serif Display', serif; font-size: 5.4cqw; line-height: 1.35; margin: 0 0 6cqw; }
-.pg-body::first-letter { float: left; font-size: 15cqw; line-height: .8; margin: 1cqw 2cqw 0 0; color: var(--bg); filter: brightness(.85); }
+.pg-body::first-letter { float: left; font-size: 15cqw; line-height: .8; margin: 1cqw 2cqw 0 0; color: color-mix(in srgb, var(--bg) 55%, var(--ink)); }
 .pg-sign { font-family: 'Caveat', cursive; font-size: 7cqw; margin: 0; }
 .pg dl { margin: 0; display: grid; gap: 3.2cqw; }
 .pg dt { font-size: 2.6cqw; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; opacity: .6; }
@@ -127,3 +127,12 @@
 .pg-ph1 { left: 7cqw; top: 22cqw; width: 54cqw; height: 66cqw; transform: rotate(-4deg); }
 .pg-ph2 { right: 7cqw; top: 70cqw; width: 46cqw; height: 54cqw; transform: rotate(5deg); }
 .pg-cap { position: absolute; left: 8cqw; right: 8cqw; bottom: 8cqw; margin: 0; font-family: 'Caveat', cursive; font-size: 6cqw; line-height: 1.05; }
+.pg-feature, .pg-back { background: var(--bg); color: var(--ink); }
+.pg-feature .pg-kicker, .pg-back .pg-kicker { color: var(--ink); opacity: .7; }
+.pg-feature::before, .pg-back::before { background: var(--accent); }
+.pg-feature .pg-in, .pg-back .pg-in { height: 100%; display: flex; flex-direction: column; justify-content: center; }
+.pg-feature blockquote { margin: 0 0 6cqw; font-family: 'DM Serif Display', serif; font-size: 9cqw; line-height: 1.08; }
+.pg-back { text-align: center; }
+.pg-back .pg-in { align-items: center; }
+.pg-back h3 { font-size: 11cqw; }
+.pg-back .pg-body::first-letter { float: none; font-size: inherit; margin: 0; color: inherit; }

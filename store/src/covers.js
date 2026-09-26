@@ -7,7 +7,7 @@ export const PALETTES = {
   butter:   { bg: '#ffd23f', ink: '#1d1a2f', accent: '#ff4f7b', pop: '#ffffff' },
   mint:     { bg: '#7ee0b5', ink: '#14323a', accent: '#ff6b5b', pop: '#fffbe8' },
   rose:     { bg: '#f7c6cf', ink: '#3a0f1f', accent: '#c2185b', pop: '#ffffff' },
-  sky:      { bg: '#6ec6ff', ink: '#10233f', accent: '#ffd23f', pop: '#ff5a8a' },
+  sky:      { bg: '#6ec6ff', ink: '#10233f', accent: '#ffd23f', pop: '#ffffff' },
   paper:    { bg: '#f3ead8', ink: '#1b1b1b', accent: '#8b1e1e', pop: '#ffffff' },
 };
 
@@ -152,5 +152,27 @@ export function renderPages(mag, values = {}, { palette = 'coral', portraitOpts 
     pg('letter', `<p class="pg-kicker">${esc(letterTitle)}</p><h3>Dear ${esc(who)},</h3><p class="pg-body">${esc(v.message)}</p><p class="pg-sign">With love, ${esc(from)}</p>`),
     pg('facts', `<p class="pg-kicker">By the numbers</p><h3>All about ${esc(who)}</h3><dl>${facts.map(f => `<dt>${esc(f.label)}</dt><dd>${esc(v[f.id])}</dd>`).join('')}</dl>`),
     pg('photos', `<p class="pg-kicker">The photo spread</p>${photoOrPortrait(photos.photo2, { ...portraitOpts, hair: portraitOpts.hair }, p, 'pg-ph pg-ph1')}${photoOrPortrait(photos.photo3, portraitOpts, p, 'pg-ph pg-ph2')}<p class="pg-cap">${esc(v.moment || v.trip || v.miss || v.fact || '')}</p>`),
+  ];
+}
+
+// The complete magazine for the finished PDF: cover, inside pages, a big
+// feature page and a back cover.
+export function renderFullMagazine(mag, values = {}, opts = {}) {
+  const p = PALETTES[opts.palette] || PALETTES.coral;
+  const v = fillValues(mag, values);
+  const who = v.name || v.names || v.forWho;
+  const from = v.from || v.fromWho || 'all of us';
+  const feature = {
+    birthday: ['The moment everyone still talks about', v.moment],
+    anniversary: ['What I love most about you', v.love],
+    newspaper: ['What we miss most', v.miss],
+    kids: ['When I grow up I want to be', v.dream],
+  }[mag.layout] || ['A moment to remember', v.message];
+  const style = `style="${vars(p)}"`;
+  return [
+    renderCover(mag, values, opts),
+    ...renderPages(mag, values, opts),
+    `<div class="pg pg-feature" ${style}><div class="pg-in"><p class="pg-kicker">${esc(feature[0])}</p><blockquote>&ldquo;${esc(feature[1])}&rdquo;</blockquote><p class="pg-sign">About ${esc(who)}, with love</p></div></div>`,
+    `<div class="pg pg-back" ${style}><div class="pg-in"><p class="pg-kicker">That's a wrap</p><h3>The end.<br>Until the next issue.</h3><p class="pg-body">Made for ${esc(who)} by ${esc(from)}.</p>${barcode()}</div></div>`,
   ];
 }

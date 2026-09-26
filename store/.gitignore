@@ -2,3 +2,5 @@ node_modules/
 dist/
 .pin-render.html
 preview/
+.pdf-render.html
+*.pdf
