@@ -38,6 +38,9 @@ browser, so nothing typed is ever sent or stored.
   chart, cards to colour (inside printed upside down for folding). Alphabets now 15 languages; colouring 31 pictures.
 - Batch 7 (`public/js/tools8.js`): calendar maker (special days parsed from 'day month text' lines), number of the day,
   greater than and less than (crocodile), phonics digraphs and blends, opposites, life cycles, family tree, road trip pack.
+- Batch 8 (`public/js/tools9.js`): hundred square (fill in, patterns, jigsaw pieces), alphabet order, colour words,
+  how to draw (6 steps built from a colouring picture; `DRAW_ORDER` lists parts in the order an artist draws them),
+  fix the sentence, bookmarks, paper clock craft, snakes and ladders with dice net and counters.
 - Arrangement: `ARRANGE` in build.py sets the 7 homepage sections and their learning order (every tool in exactly
   one; the build fails otherwise). Tool pages show 'More in <section>'; the footer is grouped by section.
 - Checks: `pp2/fuzz.js` (every option), `pp2/func.js` (new set, paper sizes, print button), a link checker.

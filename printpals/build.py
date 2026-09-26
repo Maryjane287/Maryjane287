@@ -10,7 +10,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '21'
+VERSION = '23'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -1142,7 +1142,7 @@ TOOLS += [
 
 TOOLS += [
     {
-        'id': 'calendar', 'cat': 'charts', 'slug': 'calendar-maker', 'tint': '#fff6e0', 'icon': '📅', 'new': True,
+        'id': 'calendar', 'cat': 'charts', 'slug': 'calendar-maker', 'tint': '#fff6e0', 'icon': '📅', 'new': False,
         'nav': 'Calendar maker',
         'title': 'Free Printable Calendar for Kids | Any Month, Birthdays Marked, Pictures to Colour | PrintPals',
         'desc': 'Make a free printable calendar for kids: any month or the whole year, a picture to colour for every month, and your family birthdays and special days marked on the right dates.',
@@ -1159,7 +1159,7 @@ TOOLS += [
         'faq': [('How do I add birthdays?', 'Type one per line, like "12 March Mum\'s birthday" or "12/3 Mum\'s birthday". They appear on the right date with a star.'), ('Can I print the whole year?', 'Yes. Choose "The whole year" to print twelve pages.')],
     },
     {
-        'id': 'numberday', 'cat': 'maths', 'slug': 'number-of-the-day', 'tint': '#eef2ff', 'icon': '🔟', 'new': True,
+        'id': 'numberday', 'cat': 'maths', 'slug': 'number-of-the-day', 'tint': '#eef2ff', 'icon': '🔟', 'new': False,
         'nav': 'Number of the day',
         'title': 'Free Number of the Day Worksheets | Printable for Kindergarten and Year 1 | PrintPals',
         'desc': 'Free printable number of the day worksheets: trace it, write it in words, ten frames, tally marks, one more and one less, odd or even, number line and draw it. Up to 20 or 100.',
@@ -1173,7 +1173,7 @@ TOOLS += [
         'faq': [('Can I choose the number?', 'Yes. Type any number from 0 to 100.')],
     },
     {
-        'id': 'compare', 'cat': 'maths', 'slug': 'greater-than-less-than-worksheets', 'tint': '#effaf6', 'icon': '🐊', 'new': True,
+        'id': 'compare', 'cat': 'maths', 'slug': 'greater-than-less-than-worksheets', 'tint': '#effaf6', 'icon': '🐊', 'new': False,
         'nav': 'Greater and less than',
         'title': 'Free Greater Than Less Than Worksheets | Hungry Crocodile | PrintPals',
         'desc': 'Free printable greater than, less than and equal to worksheets with the hungry crocodile: compare groups of pictures, numbers to 20 or numbers to 100. Answer key included.',
@@ -1186,7 +1186,7 @@ TOOLS += [
         'faq': [('What does = mean?', 'Both sides are the same, so the crocodile cannot choose and closes its mouth.')],
     },
     {
-        'id': 'sounds', 'cat': 'writing', 'slug': 'phonics-digraphs-and-blends', 'tint': '#fff0f7', 'icon': '🔤', 'new': True,
+        'id': 'sounds', 'cat': 'writing', 'slug': 'phonics-digraphs-and-blends', 'tint': '#fff0f7', 'icon': '🔤', 'new': False,
         'nav': 'Phonics sounds',
         'title': 'Free Phonics Digraphs and Blends Worksheets | sh ch th ck ng | PrintPals',
         'desc': 'Free printable phonics worksheets for digraphs (sh, ch, th, wh, ck, ng) and blends (cr, st, sn, tr, fr, bl) with pictures: say the word, ring the sound and write it in.',
@@ -1199,7 +1199,7 @@ TOOLS += [
         'faq': [('What age is this for?', 'Usually ages 5 to 7, once children can blend simple words like cat and dog.')],
     },
     {
-        'id': 'opposites', 'cat': 'writing', 'slug': 'opposites-worksheets', 'tint': '#fff6e0', 'icon': '↔️', 'new': True,
+        'id': 'opposites', 'cat': 'writing', 'slug': 'opposites-worksheets', 'tint': '#fff6e0', 'icon': '↔️', 'new': False,
         'nav': 'Opposites',
         'title': 'Free Opposites Worksheets for Preschool | Match and Draw | PrintPals',
         'desc': 'Free printable opposites worksheets with pictures: big and small, hot and cold, fast and slow, day and night. Match the opposites or draw the opposite.',
@@ -1212,7 +1212,7 @@ TOOLS += [
         'faq': [('How many opposites are there?', 'Twelve pairs. Each sheet shows six, and "Make a new set" picks new ones.')],
     },
     {
-        'id': 'lifecycle', 'cat': 'fun', 'slug': 'life-cycle-worksheets', 'tint': '#f1f8e6', 'icon': '🦋', 'new': True,
+        'id': 'lifecycle', 'cat': 'fun', 'slug': 'life-cycle-worksheets', 'tint': '#f1f8e6', 'icon': '🦋', 'new': False,
         'nav': 'Life cycles',
         'title': 'Free Life Cycle Worksheets | Butterfly, Frog, Plant, Chicken | PrintPals',
         'desc': 'Free printable life cycle worksheets for kids: butterfly, frog, plant and chicken. Learn the stages, label them with a word bank, or cut and stick them in order.',
@@ -1226,7 +1226,7 @@ TOOLS += [
         'faq': [('What is a chrysalis?', 'The hard case a caterpillar makes around itself while it turns into a butterfly.')],
     },
     {
-        'id': 'family', 'cat': 'charts', 'slug': 'family-tree-for-kids', 'tint': '#fff0f0', 'icon': '🌳', 'new': True,
+        'id': 'family', 'cat': 'charts', 'slug': 'family-tree-for-kids', 'tint': '#fff0f0', 'icon': '🌳', 'new': False,
         'nav': 'Family tree',
         'title': 'Free Printable Family Tree for Kids | All About My Family | PrintPals',
         'desc': 'Free printable family tree for kids with frames to draw or stick photos of grandparents, parents, brothers and sisters, plus an All About My Family page: where we come from and languages we speak.',
@@ -1240,7 +1240,7 @@ TOOLS += [
         'faq': [('Our family is not a mum and a dad. Can I change it?', 'The labels are small, so you can simply write the right name in each frame, and leave any frame empty.')],
     },
     {
-        'id': 'travel', 'cat': 'puzzles', 'slug': 'road-trip-activity-pack', 'tint': '#e6f6fc', 'icon': '🚗', 'new': True,
+        'id': 'travel', 'cat': 'puzzles', 'slug': 'road-trip-activity-pack', 'tint': '#e6f6fc', 'icon': '🚗', 'new': False,
         'nav': 'Road trip pack',
         'title': 'Free Printable Road Trip Activities for Kids | Car Bingo, Noughts and Crosses | PrintPals',
         'desc': 'Free printable road trip pack for kids: car journey bingo with pictures for two players, noughts and crosses grids and dots and boxes. Perfect for long car journeys.',
@@ -1255,18 +1255,129 @@ TOOLS += [
 ]
 
 
+
+TOOLS += [
+    {
+        'id': 'hundred', 'cat': 'maths', 'slug': 'hundred-square-worksheets', 'tint': '#fff6e0', 'icon': '💯', 'new': True,
+        'nav': 'Hundred square',
+        'title': 'Free Printable Hundred Square | 100 Chart, Missing Numbers, Skip Counting | PrintPals',
+        'desc': 'Free printable hundred squares (100 charts): a colourful full chart, missing numbers, a blank chart to fill, skip counting patterns in 2s, 3s, 5s and 10s, and hundred square puzzle pieces.',
+        'h1': 'Hundred square',
+        'lead': 'The most useful maths chart there is. Print a colourful 1 to 100 chart, fill in missing numbers, colour the counting patterns, or solve hundred square puzzle pieces.',
+        'card': '1 to 100 charts: missing numbers, patterns in 2s, 5s and 10s, and puzzles.',
+        'form': field('Activity', seg('kind', [('full', 'Full chart'), ('missing', 'Missing numbers'), ('blank', 'Fill it in'), ('pattern', 'Counting patterns'), ('pieces', 'Puzzle pieces')], 'missing'))
+        + field('Missing', seg('level', [('easy', 'A few'), ('medium', 'Some'), ('hard', 'Lots')], 'medium'), 'For the missing numbers activity.')
+        + field('Count in', seg('step', [('2', '2s'), ('3', '3s'), ('5', '5s'), ('10', '10s')], '5'), 'For the counting patterns activity.')
+        + check('key', 'Answer page') + SHUFFLE + PAPER,
+        'article': """<h2>Patterns everywhere</h2><p>A hundred square shows how our numbers work: go right to add one, go down to add ten. Colouring the counting patterns makes the times tables visible.</p>""",
+        'faq': [('What are the puzzle pieces?', 'Small pieces cut from a hundred square with only the middle number shown. Children work out the numbers above, below and on each side.')],
+    },
+    {
+        'id': 'abcorder', 'cat': 'reading', 'slug': 'alphabet-order-worksheets', 'tint': '#eef2ff', 'icon': '🔡', 'new': True,
+        'nav': 'Alphabet order',
+        'title': 'Free Alphabet Order Worksheets | Missing Letters, Before and After, ABC Order | PrintPals',
+        'desc': 'Free printable alphabet order worksheets: fill in the missing letters, write the letters before and after, and put picture words in ABC order. Small or capital letters.',
+        'h1': 'Alphabet order',
+        'lead': 'Knowing the order of the alphabet helps with dictionaries, word lists and so much more. Fill in missing letters, find the letters before and after, and put words in ABC order.',
+        'card': 'Missing letters, before and after, and putting words in ABC order.',
+        'form': field('Activity', seg('kind', [('missing', 'Missing letters'), ('between', 'Before and after'), ('words', 'ABC order words')], 'missing'))
+        + field('Letters', seg('case', [('lower', 'Small letters'), ('upper', 'Capital letters')], 'lower'))
+        + check('key', 'Answer page') + SHUFFLE + PAPER,
+        'article': """<h2>Sing it, then write it</h2><p>Singing the alphabet song helps children find missing letters. Point to each letter as you sing, then fill in the gaps.</p>""",
+        'faq': [('What age is this for?', 'Ages 4 to 7, once children can say the alphabet.')],
+    },
+    {
+        'id': 'colourwords', 'cat': 'reading', 'slug': 'colour-words-worksheets', 'tint': '#fff0f0', 'icon': '🖍️', 'new': True,
+        'nav': 'Colour words',
+        'title': 'Free Colour Words Worksheets | Learn Colour Names, Read and Colour | PrintPals',
+        'desc': 'Free printable colour words worksheets: learn to read and write red, blue, green and more with tracing and shapes to colour, or read the colour word and colour the picture.',
+        'h1': 'Colour words',
+        'lead': 'Learn to read and write the colour names: trace the word, colour the shapes, then read and colour the pictures.',
+        'card': 'Read, trace and write red, blue, green and more, then read and colour.',
+        'form': field('Activity', seg('kind', [('learn', 'Learn a colour'), ('read', 'Read and colour')], 'learn'))
+        + field('Colour', '<select name="colour"><option value="all">All 11 colours</option>' + ''.join(f'<option value="{c}">{c}</option>' for c in ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink', 'brown', 'black', 'white', 'grey']) + '</select>')
+        + SHUFFLE + PAPER,
+        'article': """<h2>Colours are some of the first words</h2><p>Colour words are everywhere in picture books. Learning to read them early gives children quick wins and lots of confidence.</p>""",
+        'faq': [('Can I print just one colour?', 'Yes. Choose a colour, or print all 11 as a little book.')],
+    },
+    {
+        'id': 'sentences', 'cat': 'reading', 'slug': 'sentence-worksheets', 'tint': '#e8f8f4', 'icon': '✍️', 'new': True,
+        'nav': 'Sentences',
+        'title': 'Free Sentence Worksheets | Capital Letters and Full Stops, Unscramble, Finish | PrintPals',
+        'desc': 'Free printable sentence worksheets for Year 1 and 2: fix the sentence with a capital letter and full stop, unscramble mixed-up sentences, and finish the sentence. Answer key included.',
+        'h1': 'Sentence practice',
+        'lead': 'Every sentence needs a capital letter and a full stop. Fix the sentences, put mixed-up words in order, or finish each sentence your own way.',
+        'card': 'Capital letters and full stops, mixed-up sentences and sentence starters.',
+        'form': field('Activity', seg('kind', [('fix', 'Fix the sentence'), ('unscramble', 'Mixed-up words'), ('finish', 'Finish it')], 'fix'))
+        + check('key', 'Answer page') + SHUFFLE + PAPER,
+        'article': """<h2>Building good sentences</h2><p>A sentence starts with a capital letter, ends with a full stop, and makes sense on its own. These short, picture-supported sentences help children practise all three.</p>""",
+        'faq': [('What age is this for?', 'Ages 5 to 7, usually Year 1 and Year 2.')],
+    },
+    {
+        'id': 'howtodraw', 'cat': 'crafts', 'slug': 'how-to-draw-for-kids', 'tint': '#f5edff', 'icon': '✏️', 'new': True,
+        'nav': 'How to draw',
+        'title': 'Free Step by Step Drawing for Kids | How to Draw a Cat, Owl, Unicorn and More | PrintPals',
+        'desc': 'Free printable step by step drawing guides for kids: how to draw a cat, owl, teddy, penguin, robot, frog, puppy, bunny, unicorn, ladybird, fish and rocket, with a big box to try it.',
+        'h1': 'How to draw',
+        'lead': 'Draw a cat, a unicorn or a robot, one easy step at a time. The new lines in each step are dark and the old ones are light, so it is always clear what to draw next.',
+        'card': 'Step by step drawing: cat, unicorn, robot, owl and more.',
+        'form': field('Draw a', '<select name="picture"><option value="">Surprise me</option>' + ''.join(f'<option value="{k}">{v}</option>' for k, v in [('cat', 'Cat'), ('owl', 'Owl'), ('teddy', 'Teddy bear'), ('penguin', 'Penguin'), ('robot', 'Robot'), ('frog', 'Frog'), ('dog', 'Puppy'), ('bunny', 'Bunny'), ('unicorn', 'Unicorn'), ('ladybird', 'Ladybird'), ('fish', 'Fish'), ('rocket', 'Rocket')]) + '</select>')
+        + SHUFFLE + PAPER,
+        'article': """<h2>Anyone can draw</h2><p>Big drawings are just lots of small, simple shapes. Following steps builds confidence, pencil control and patience, and children love showing off what they made.</p>""",
+        'faq': [('What age is this for?', 'Ages 4 to 9. Younger children may like a grown-up to draw alongside them.')],
+    },
+    {
+        'id': 'bookmarks', 'cat': 'crafts', 'slug': 'bookmarks-to-colour', 'tint': '#fff0f7', 'icon': '🔖', 'new': True,
+        'nav': 'Bookmarks',
+        'title': 'Free Printable Bookmarks for Kids | To Colour, With Their Name | PrintPals',
+        'desc': 'Free printable bookmarks for kids: bookmarks to colour or bright picture bookmarks, with reading quotes and each child\'s name. Print a whole class set.',
+        'h1': 'Bookmarks',
+        'lead': 'Four bookmarks on every page, to colour in or already bright. Add names for a whole class set, great for World Book Day and end of term gifts.',
+        'card': 'Bookmarks to colour or bright ones, with each child\'s name.',
+        'form': field('Style', seg('style', [('colour', 'To colour in'), ('bright', 'Bright pictures')], 'colour'))
+        + field('Names (optional)', '<textarea name="names" rows="4" spellcheck="false" placeholder="Mia&#10;Leo&#10;Emma&#10;Sam"></textarea>', 'One name per line. Each child gets a bookmark with their name.')
+        + SHUFFLE + PAPER,
+        'article': """<h2>Make them last</h2><p>Print on thicker paper or card, or cover with sticky-back plastic. Punch a hole at the top and add a ribbon or wool tassel.</p>""",
+        'faq': [('Can I make one for every child in my class?', 'Yes. Type every name, one per line, and each bookmark gets a name.')],
+    },
+    {
+        'id': 'clockcraft', 'cat': 'maths', 'slug': 'paper-clock-craft', 'tint': '#e6f6fc', 'icon': '🕰️', 'new': True,
+        'nav': 'Make a clock',
+        'title': 'Free Printable Paper Clock Craft | Learn to Tell the Time | PrintPals',
+        'desc': 'Free printable paper clock for kids with cut-out hour and minute hands, minute numbers and past and to halves. Make your own clock to learn to tell the time.',
+        'h1': 'Make your own clock',
+        'lead': 'A big paper clock with hands that really move. Past and to are coloured differently, and the minutes are shown around the edge, which makes telling the time much easier.',
+        'card': 'A paper clock with moving hands, minutes and past and to.',
+        'form': check('helpers', 'Past and to colours and labels') + check('minutes', 'Minutes around the edge') + PAPER,
+        'article': """<h2>How to make it</h2><p>Colour the clock, glue it onto card, and cut out the clock and both hands. Push a paper fastener (split pin) through the middle of the clock and both hands. Now set the time and ask: what time is it?</p>""",
+        'faq': [('What is a split pin?', 'A small paper fastener with two legs that fold flat at the back. A grown-up can help push it through.')],
+    },
+    {
+        'id': 'snakes', 'cat': 'puzzles', 'slug': 'snakes-and-ladders-printable', 'tint': '#f1f8e6', 'icon': '🎲', 'new': True,
+        'nav': 'Snakes and ladders',
+        'title': 'Free Printable Snakes and Ladders Board Game | New Board Every Time | PrintPals',
+        'desc': 'Free printable snakes and ladders board game with a new board every click, a dice to cut and fold, and counters to cut out. A colourful family game night in minutes.',
+        'h1': 'Snakes and ladders',
+        'lead': 'A classic family game, printed in a minute. Every board is different, with a dice to fold and animal counters to cut out.',
+        'card': 'A new board every click, with a dice to fold and counters.',
+        'form': check('extras', 'Dice and counters page') + SHUFFLE + PAPER,
+        'article': """<h2>Maths in disguise</h2><p>Snakes and ladders is secretly great counting practice: children count the dots on the dice and count along the squares. Great for learning numbers to 100.</p>""",
+        'faq': [('Is every board different?', 'Yes. Press "Make a new set" for a new board with the snakes and ladders in new places.')],
+    },
+]
+
 # The homepage sections, in learning order (easiest first). Every tool appears in exactly one section.
 ARRANGE = [
     ('handwriting', 'Handwriting', 'Handwriting', 'From first pencil lines to joined writing, with real letter shapes and stroke order.',
      ['prewriting', 'names', 'letters', 'mixups', 'joined', 'writingpaper', 'alphabets']),
     ('reading', 'Reading & phonics', 'Reading', 'Letter sounds, CVC words, sight words, spelling and stories where your child is the hero.',
-     ['cvc', 'sounds', 'families', 'rhyming', 'sight', 'spelling', 'flashcards', 'opposites', 'story', 'storywriting']),
+     ['abcorder', 'cvc', 'sounds', 'families', 'rhyming', 'sight', 'colourwords', 'spelling', 'flashcards', 'opposites', 'sentences', 'story', 'storywriting']),
     ('maths', 'Maths', 'Maths', 'Counting, number bonds, sums, money, times tables, time, fractions and shapes, with answer keys.',
-     ['numbers', 'numberday', 'compare', 'bonds', 'maths', 'numberlines', 'wordproblems', 'placevalue', 'money', 'times', 'clocks', 'fractions', 'shapes', 'measuring', 'graphs']),
+     ['numbers', 'numberday', 'hundred', 'compare', 'bonds', 'maths', 'numberlines', 'wordproblems', 'placevalue', 'money', 'times', 'clocks', 'clockcraft', 'fractions', 'shapes', 'measuring', 'graphs']),
     ('puzzles', 'Puzzles & games', 'Puzzles', 'Mazes, dot to dot, matching, spot the difference, word searches, crosswords, sudoku and bingo.',
-     ['mazes', 'dots', 'matching', 'spotdiff', 'wordsearch', 'crossword', 'sudoku', 'bingo', 'travel']),
+     ['mazes', 'dots', 'matching', 'spotdiff', 'wordsearch', 'crossword', 'sudoku', 'bingo', 'snakes', 'travel']),
     ('crafts', 'Colouring, crafts & parties', 'Colouring & crafts', 'Colouring pages, photo colouring, colour by number, cut and paste, crowns, masks, cards and party packs.',
-     ['colouring', 'photo', 'colournum', 'cutpaste', 'crafts', 'cards', 'party']),
+     ['colouring', 'photo', 'colournum', 'howtodraw', 'cutpaste', 'crafts', 'bookmarks', 'cards', 'party']),
     ('charts', 'Charts & planners', 'Charts', 'Routines, chores, reward charts, certificates, reading logs, homework planners, calendars and name labels.',
      ['routine', 'chores', 'reward', 'certificate', 'readinglog', 'homework', 'calendar', 'labels']),
     ('world', 'Me & my world', 'My world', 'Family, feelings, weather, life cycles and scavenger hunts that get children exploring.',
@@ -1376,6 +1487,7 @@ def tool_page(t):
 <script src="/js/tools6.js?v={VERSION}"></script>
 <script src="/js/tools7.js?v={VERSION}"></script>
 <script src="/js/tools8.js?v={VERSION}"></script>
+<script src="/js/tools9.js?v={VERSION}"></script>
 <script src="/js/app.js?v={VERSION}"></script>
 </body>
 </html>
