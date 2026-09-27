@@ -138,7 +138,7 @@ const faq = [
   ['Can you send it straight to them as a surprise?', 'Yes. Tick "It\'s a gift, send it to them for me" when you order, add their name and email, and pick the day. We email the finished magazine to them with your name on it, and you get your own copy first so you can see it. For a printed copy, just type their address at the printer\'s checkout.'],
   ['Where do you deliver?', 'Everywhere. Your magazine arrives by email, so you can send it to anyone in the world in seconds. Want it printed? Choose a printed magazine and it is printed near them and posted to their door, with shipping added at checkout.'],
   ['Can I see it before I pay?', 'Yes. You see a live preview of the cover and pages while you fill in the form.'],
-  ['What happens to my photos?', 'They are used only to make your magazine and are deleted 30 days after your order. We never share or post them anywhere.'],
+  ['What happens to my photos?', 'They are used only to make your magazine and are deleted 30 days after your order (or 30 days after your gift is delivered). We never share or post them anywhere.'],
   ['What if something is wrong?', 'If anything in your magazine is not right, email us and we will fix it for free.'],
 ];
 const faqHtml = `<div class="faq">${faq.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}</div>`;
@@ -412,7 +412,7 @@ async function simplePages() {
       <p>This policy explains how ${esc(site.company)} (trading as ${esc(site.name)}) uses your information. We collect as little as we can, and only to make and deliver your magazine.</p>
       <h2>What we collect</h2><ul><li>Your answers and photos for the magazine</li><li>Your email address, and the delivery address for printed copies</li><li>Payment details, which are handled by our payment provider. We never see your card number.</li></ul>
       <h2>How we use it</h2><p>Only to design, print, deliver and support your order. We never sell your information or post your photos anywhere.</p>
-      <h2>How long we keep it</h2><p>Photos and answers are deleted 30 days after your order. Order records are kept as long as the law requires for tax and accounting.</p>
+      <h2>How long we keep it</h2><p>Photos and answers are deleted 30 days after your order, or 30 days after a gift is delivered. If you send your magazine as a gift, we use the email address you give only to deliver it. Order records are kept as long as the law requires for tax and accounting.</p>
       <h2>Who helps us</h2><p>Our website host (which receives your order form), our payment provider, and our print partner (for printed copies only). Each one only receives what it needs.</p>
       <h2>Cookies</h2><p>We do not use advertising cookies unless you say yes. If we add Pinterest measurement, you will be asked first.</p>
       <h2>Your rights</h2><p>You can ask to see, correct or delete your information at any time by emailing <a href="mailto:${esc(site.email)}">${esc(site.email)}</a>. You can also complain to the UK Information Commissioner's Office.</p>`),

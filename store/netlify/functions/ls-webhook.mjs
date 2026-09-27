@@ -10,6 +10,11 @@ export default async req => {
   let event;
   try { event = JSON.parse(raw); } catch { return json({ error: 'Bad JSON' }, 400); }
   const result = await handleLemonSqueezy(getStore({ name: 'orders', consistency: 'strong' }), event);
+  // Paid: email the buyer their magazine (and send a gift that is due) straight away.
+  if (result === 'paid') {
+    const origin = process.env.URL || new URL(req.url).origin;
+    await fetch(`${origin}/.netlify/functions/deliver-background`, { method: 'POST' }).catch(e => console.error('Could not start emails:', e.message));
+  }
   return json({ ok: true, result });
 };
 

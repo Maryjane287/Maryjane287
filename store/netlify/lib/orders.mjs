@@ -106,10 +106,18 @@ export async function handleLemonSqueezy(store, event) {
 export async function cleanOldOrders(store, now = Date.now(), days = 30) {
   const cutoff = now - days * 24 * 60 * 60 * 1000;
   const { blobs } = await store.list();
+  // A gift's files stay until 30 days after it was (or is due to be) sent, so the person it is for can still download it.
+  const giftTime = {};
+  for (const { key } of blobs) {
+    if (!key.endsWith('/order.json')) continue;
+    const gift = JSON.parse((await store.get(key, { type: 'text' })) || '{}').gift;
+    if (gift) giftTime[key.split('/')[0]] = Number(gift.sentAt || gift.sendAt) || 0;
+  }
   let removed = 0;
   for (const { key } of blobs) {
     const meta = await store.getMetadata(key);
-    const created = Number(meta?.metadata?.created) || 0;
+    const id = key.startsWith('pending/') ? key.slice(8) : key.split('/')[0];
+    const created = Math.max(Number(meta?.metadata?.created) || 0, giftTime[id] || 0);
     if (created < cutoff) { await store.delete(key); removed++; }
   }
   return removed;

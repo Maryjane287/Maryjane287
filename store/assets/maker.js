@@ -210,6 +210,7 @@ const syncFinish = () => {
 };
 form.gift.addEventListener('change', syncFinish);
 form.gift_date.min = new Date().toISOString().slice(0, 10);
+form.gift_date.max = new Date(Date.now() + 30 * 864e5).toISOString().slice(0, 10);
 form.addEventListener('change', e => { if (e.target.name === 'tier') syncFinish(); });
 syncFinish();
 if (params.get('print_error')) alert('Sorry, something went wrong at the printing checkout. Please try again, or choose the digital magazine.');
@@ -237,7 +238,7 @@ form.addEventListener('submit', async e => {
       say('Printing page 1 of 24...');
       const id = await renderAndUpload({ mag: m, values: state.values, opts: coverOpts(), cards: tier === 'cards', onProgress: (n, total) => say(`Printing page ${Math.min(n + 1, total)} of ${total}...`) });
       say('Binding your magazine...');
-      made = { id, ...(await finishOrder({ id, kind: printed ? 'print' : 'digital', finish: form.finish.value, title: `${m.title}: ${who}` })) };
+      made = { id, ...(await finishOrder({ id, kind: printed ? 'print' : 'digital', finish: form.finish.value, title: `${m.title}: ${who}`, email: form.email.value, who, tz: new Date().getTimezoneOffset(), gift: form.gift.checked ? { name: form.gift_name.value, email: form.gift_email.value, date: form.gift_date.value, from: form.gift_from.value } : null })) };
       form['order-id'].value = id;
       form.pdf.value = made.pdf;
       if (made.cards) form.cards.value = made.cards;
