@@ -66,6 +66,9 @@ Family members do NOT need the app: they get a link (WhatsApp/email) to a small 
   so a new session can download them.
 
 ## PrintPals (branch claude/printpals, folder printpals/)
+OWNER RULE (2026-09-27): every new batch from now on is for PrintPals PLUS (the monthly subscription). Plus must be the best out there,
+worth far more than the price, premium in design and features, blue ocean (things others overlook), and must keep parents AND teachers
+glued: several designs per product, series and volumes to collect, seasonal drops, things that bring families back every month.
 Free printable worksheet website, live at https://printpals.web.app. Kept separate from Brainlings on its own
 branch (owner asked). See printpals/README.md. Owner wants quality: test every change by printing to PDF
 (Playwright page.pdf) and looking at the pages before publishing.
