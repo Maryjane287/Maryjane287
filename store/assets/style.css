@@ -117,7 +117,13 @@ p { margin: 0 0 1em; }
 .wall-item img { display: block; width: 100%; }
 
 /* Tiers */
-.tiers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; }
+.tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 320px)); justify-content: center; gap: 20px; max-width: 1200px; margin: 0 auto; }
+.tiers-soon { text-align: center; margin: 22px 0 0; opacity: .7; font-weight: 600; }
+.flip { display: grid; grid-auto-flow: column; grid-auto-columns: 190px; gap: 16px; overflow-x: auto; scroll-snap-type: x proximity; padding: 8px 4px 20px; max-width: 1200px; margin: 0 auto; }
+.flip-page { scroll-snap-align: start; border-radius: 4px; overflow: hidden; box-shadow: var(--shadow); }
+.flip-page .cv, .flip-page .pg { pointer-events: none; }
+.flip-n { display: block; text-align: center; font-size: 13px; font-weight: 700; opacity: .6; margin-top: 8px; }
+@media (max-width: 640px) { .flip { grid-auto-columns: 140px; } }
 .tier { position: relative; background: var(--paper); border-radius: var(--radius); padding: 30px 24px; text-align: center; box-shadow: var(--shadow); display: flex; flex-direction: column; }
 .tier p { color: var(--soft); font-size: 16px; flex: 1; }
 .tier h3 { font-size: 24px; }
