@@ -196,7 +196,20 @@ $('#fields').addEventListener('change', async e => {
 
 // Printed options stay hidden until printing is switched on; ?print=1 shows them for testing.
 if (params.get('print') === '1') form.querySelectorAll('[data-soon="print"]').forEach(el => { el.hidden = false; });
-const syncFinish = () => { $('.finish').hidden = form.tier.value !== 'print'; };
+const syncFinish = () => {
+  const printed = form.tier.value === 'print';
+  $('.finish').hidden = !printed;
+  // Printed copies are posted to the address typed at the printer's checkout, so the email gift fields only apply to digital.
+  $('.gift-toggle').hidden = printed;
+  $('.gift-print').hidden = !printed;
+  if (printed) form.gift.checked = false;
+  const on = form.gift.checked;
+  $('.gift-fields').hidden = !on;
+  form.gift_email.required = on;
+  form.gift_name.required = on;
+};
+form.gift.addEventListener('change', syncFinish);
+form.gift_date.min = new Date().toISOString().slice(0, 10);
 form.addEventListener('change', e => { if (e.target.name === 'tier') syncFinish(); });
 syncFinish();
 if (params.get('print_error')) alert('Sorry, something went wrong at the printing checkout. Please try again, or choose the digital magazine.');

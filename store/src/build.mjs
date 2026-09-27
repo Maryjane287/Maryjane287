@@ -135,6 +135,7 @@ const steps = `
 
 const faq = [
   ['How long does it take?', 'About five minutes to fill in. Your finished 24 page magazine is ready to download as soon as you have paid, and we email it to you too.'],
+  ['Can you send it straight to them as a surprise?', 'Yes. Tick "It\'s a gift, send it to them for me" when you order, add their name and email, and pick the day. We email the finished magazine to them with your name on it, and you get your own copy first so you can see it. For a printed copy, just type their address at the printer\'s checkout.'],
   ['Where do you deliver?', 'Everywhere. Your magazine arrives by email, so you can send it to anyone in the world in seconds. Want it printed? Choose a printed magazine and it is printed near them and posted to their door, with shipping added at checkout.'],
   ['Can I see it before I pay?', 'Yes. You see a live preview of the cover and pages while you fill in the form.'],
   ['What happens to my photos?', 'They are used only to make your magazine and are deleted 30 days after your order. We never share or post them anywhere.'],
@@ -325,8 +326,19 @@ async function makerPage() {
         ${tierOpts}
         <div class="finish" hidden><p class="maker-label">Cover finish</p><label class="finish-opt"><input type="radio" name="finish" value="glossy" checked><span><b>Glossy</b><small>Shiny, bright, like a newsstand magazine</small></span></label><label class="finish-opt"><input type="radio" name="finish" value="matte"><span><b>Matte</b><small>Soft touch and elegant</small></span></label></div>
         <label class="field"><span>Your email (we send the magazine here)</span><input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
+        <fieldset class="gift">
+          <label class="gift-toggle"><input type="checkbox" name="gift" value="yes"> <span><b>It's a gift, send it to them for me</b><small>We email the finished magazine straight to them, with your name on it, on the day you choose.</small></span></label>
+          <div class="gift-fields" hidden>
+            <label class="field"><span>Their name</span><input type="text" name="gift_name" maxlength="60" placeholder="Mia"></label>
+            <label class="field"><span>Their email</span><input type="email" name="gift_email" placeholder="mia@example.com"></label>
+            <label class="field"><span>Send it on <small>(leave empty to send it right away)</small></span><input type="date" name="gift_date"></label>
+            <label class="field wide"><span>From <small>(how your name appears)</small></span><input type="text" name="gift_from" maxlength="60" placeholder="Love, Chris"></label>
+            <p class="small">You get your own copy too, so you can see it first.</p>
+          </div>
+          <p class="small gift-print" hidden>Printed gifts go straight to them: just type their address at the printer's checkout.</p>
+        </fieldset>
         <label class="field"><span>Where is it going?</span><select name="country" required>${countries.map(c => `<option>${c}</option>`).join('')}</select></label>
-        <label class="consent"><input type="checkbox" name="consent" required> I agree to the <a href="/terms/" target="_blank">terms</a> and <a href="/privacy/" target="_blank">privacy policy</a>, and have permission to use these photos.</label>
+        <label class="consent"><input type="checkbox" name="consent" required> <span>I agree to the <a href="/terms/" target="_blank">terms</a> and <a href="/privacy/" target="_blank">privacy policy</a>, and have permission to use these photos.</span></label>
         <button class="btn btn-big" type="submit">Place my order</button>
         <p class="small" id="pay-note">Next, you pay securely. Your magazine is ready to download the moment you have paid, and we email it to you too.</p>
         <p class="small order-progress" id="order-progress" hidden></p>

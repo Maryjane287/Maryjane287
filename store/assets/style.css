@@ -339,3 +339,12 @@ p { margin: 0 0 1em; }
 .all-page figcaption { text-align: center; font-size: 13px; font-weight: 700; opacity: .6; margin-top: 8px; }
 @media (max-width: 520px) { .all-grid { grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px; } }
 .all-sheet .watermark { font-size: 26px; }
+.gift { border: 0; padding: 0; margin: 0; min-width: 0; display: grid; gap: 10px; }
+.gift-toggle { display: flex; gap: 10px; align-items: flex-start; background: var(--paper); border-radius: 14px; padding: 14px; cursor: pointer; border: 2px solid transparent; }
+.gift-toggle:has(input:checked) { border-color: var(--coral); }
+.gift-toggle input { accent-color: var(--coral); margin-top: 4px; width: 18px; height: 18px; flex: none; }
+.gift-toggle small { display: block; color: var(--soft); font-size: 13px; }
+.gift-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 12px; }
+.gift-fields .wide, .gift-fields p { grid-column: 1 / -1; margin: 0; }
+.gift-fields small { font-weight: 400; opacity: .7; }
+@media (max-width: 560px) { .gift-fields { grid-template-columns: 1fr; } }
