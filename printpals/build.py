@@ -12,7 +12,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '43'
+VERSION = '44'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -2572,7 +2572,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'handwritingbook', 'cat': 'packs', 'slug': 'handwriting-books-for-kids', 'tint': '#e8f8f4', 'icon': '✏️', 'new': True, 'plus': True,
+        'id': 'handwritingbook', 'cat': 'packs', 'slug': 'handwriting-books-for-kids', 'tint': '#e8f8f4', 'icon': '✏️', 'plus': True,
         'nav': 'My Handwriting Books',
         'title': 'Personalised Handwriting Books for Kids | Pencil Control, a to z, Capitals and Name Tracing: Four Books | PrintPals',
         'desc': 'A series of four personalised handwriting books: pencil control and shapes, letters a to m, letters n to z, then capitals, name writing and first sentences. Real letter shapes, numbered start dots and a certificate that leads to the next book.',
@@ -2585,7 +2585,7 @@ TOOLS += [
         'faq': [('What age is this for?', 'Book 1 suits ages 3 to 4, books 2 and 3 ages 4 to 6, and book 4 ages 5 to 7.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'superhero', 'cat': 'packs', 'slug': 'superhero-academy-printables', 'tint': '#fff0f0', 'icon': '🦸', 'new': True, 'plus': True,
+        'id': 'superhero', 'cat': 'packs', 'slug': 'superhero-academy-printables', 'tint': '#fff0f0', 'icon': '🦸', 'plus': True,
         'nav': 'Superhero Academy',
         'title': 'Superhero Academy Printables for Kids | Hero ID Card, Kindness Missions, Mask and Badges | PrintPals',
         'desc': 'A printable superhero academy pack: an official hero ID card, design your own superhero, 20 kindness and courage missions, a hero training week, a mask and badges to cut out and an Official Superhero certificate.',
@@ -2598,7 +2598,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'flying', 'cat': 'packs', 'slug': 'kids-flying-activity-pack', 'tint': '#eef6ff', 'icon': '✈️', 'new': True, 'plus': True,
+        'id': 'flying', 'cat': 'packs', 'slug': 'kids-flying-activity-pack', 'tint': '#eef6ff', 'icon': '✈️', 'plus': True,
         'nav': 'Flying Adventure kit',
         'title': 'First Flight Activity Pack for Kids | Boarding Pass, Airport Bingo, Flight Log | PrintPals',
         'desc': 'A personalised flying activity pack for kids: boarding passes with their name and destination, a travel passport to stamp, airport and plane bingo, a window drawing and flight log, a hand luggage checklist, a colouring page, a maze and a Brave Flyer award.',
@@ -2612,7 +2612,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'feelingsbook', 'cat': 'packs', 'slug': 'my-feelings-book-printable', 'tint': '#fff0f5', 'icon': '💛', 'new': True, 'plus': True,
+        'id': 'feelingsbook', 'cat': 'packs', 'slug': 'my-feelings-book-printable', 'tint': '#fff0f5', 'icon': '💛', 'plus': True,
         'nav': 'My Feelings Book',
         'title': 'My Feelings Book Printable for Kids | 10 Feelings, Body Clues, Calm Ideas and Weekly Check-in | PrintPals',
         'desc': 'A personalised feelings book for kids: a page for each of ten feelings with what makes me feel it, how it feels in my body and things that help, a weekly feelings check-in and a Feelings Explorer award.',
@@ -2623,12 +2623,63 @@ TOOLS += [
         'article': """<h2>All feelings are welcome</h2><p>Children who can name a feeling can start to manage it. Fill in one page a day, sitting close, and share your own answers too. The weekly check-in is a lovely bedtime habit that keeps little worries from growing big.</p>""",
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
+    {
+        'id': 'readers', 'cat': 'packs', 'slug': 'sight-word-readers-for-kids', 'tint': '#fff0f5', 'icon': '📖', 'new': True, 'plus': True,
+        'nav': 'My Sight Word Readers',
+        'title': 'Personalised Sight Word Readers for Kids | Printable Early Reader Books, Four Levels | PrintPals',
+        'desc': 'A series of four personalised sight word readers: five words per book to trace, write and find, then a little story starring your child with the new words in colour, and a certificate that leads to the next reader.',
+        'h1': 'My Sight Word Readers',
+        'lead': 'The magic moment when your child reads a whole story on their own. Each reader teaches five sight words, one page at a time, then gives them a little story where they are the star. Four readers to collect, each ending with a Super Reader award.',
+        'card': 'Four readers: five sight words each, then a story starring them.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="20" placeholder="Leo" autocomplete="off">')
+        + field('Reader', seg('book', [('1', '1. I can see'), ('2', '2. The park'), ('3', '3. My kite'), ('4', '4. Come and play')], '1')) + PAPER + SHUFFLE,
+        'article': """<h2>Sight words, the quick way to reading</h2><p>Sight words are the little words that appear in almost every sentence. Once a child knows them by heart, reading suddenly flows. Do one word a day, then read the story together, pointing to each word. Let them read it to someone they love.</p>""",
+        'faq': [('What age is this for?', 'Readers 1 and 2 suit ages 4 to 5, readers 3 and 4 ages 5 to 6.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'dinokit', 'cat': 'packs', 'slug': 'dinosaur-activity-pack-for-kids', 'tint': '#f1f8e6', 'icon': '🦖', 'new': True, 'plus': True,
+        'nav': 'Dinosaur Explorer kit',
+        'title': 'Dinosaur Printables for Kids | Dinosaur Fact Cards, Size Chart, Counting and Maze | PrintPals',
+        'desc': 'A personalised dinosaur activity pack: 8 dinosaur fact cards with how to say each name, a how long was it size chart, dig site counting, design your own dinosaur, dinosaur words to trace, colouring, a maze and a Junior Palaeontologist award.',
+        'h1': 'Dinosaur Explorer kit',
+        'lead': 'For every little dinosaur fan. Eight fact cards that teach them to say the big names, a size chart that shows how many of them would fit along a Brachiosaurus, dig site counting, a dino to invent and a Junior Palaeontologist award.',
+        'card': 'Dino fact cards, a size chart, counting and a palaeontologist award.',
+        'form': field('Explorer\'s name', '<input type="text" name="name" maxlength="20" placeholder="Leo" autocomplete="off">')
+        + field('Design', seg('look', [('jungle', 'Jungle green'), ('volcano', 'Volcano orange')], 'jungle')) + PAPER + SHUFFLE,
+        'article': """<h2>Dinosaurs make learning huge</h2><p>Children who love dinosaurs will happily learn long words, big numbers and real science. Cut out the cards and play snap, sort them into meat and plant eaters, or line them up from shortest to longest.</p>""",
+        'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'spacekit', 'cat': 'packs', 'slug': 'space-activity-pack-for-kids', 'tint': '#eef0ff', 'icon': '🚀', 'new': True, 'plus': True,
+        'nav': 'Space Academy',
+        'title': 'Space Printables for Kids | Planet Cards, Solar System Order, Constellations, Countdown | PrintPals',
+        'desc': 'A personalised space activity pack: 8 planet fact cards, the planets in order with a rhyme to remember them, countdown number tracing, join the stars constellations, astronaut training missions, rocket colouring and a Space Cadet award.',
+        'h1': 'Space Academy',
+        'lead': 'Blast off into learning. Beautiful night sky planet cards, a rhyme that helps them remember the order of the planets, a countdown to trace, real constellations to find in the sky, astronaut training and a Space Cadet award.',
+        'card': 'Planet cards, real constellations and astronaut training.',
+        'form': field('Astronaut\'s name', '<input type="text" name="name" maxlength="20" placeholder="Emma" autocomplete="off">') + PAPER,
+        'article': """<h2>Look up together</h2><p>Space is the perfect reason for an evening adventure. Wrap up warm, find the Moon, and see if you can spot the Plough or Orion from the Join the Stars page. The planet cards make a lovely game: shuffle them and put them back in order.</p>""",
+        'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'winter', 'cat': 'packs', 'slug': 'winter-activity-pack-for-kids', 'tint': '#eef6ff', 'icon': '❄️', 'new': True, 'plus': True,
+        'nav': 'Winter Wonderland pack',
+        'title': 'Winter Activity Pack for Kids | Winter Bingo, Snowflake Drawing, Roll a Snowman, New Year Goals | PrintPals',
+        'desc': 'A personalised winter activity pack for January and February: winter counting, winter words to trace, finish the snowflake, roll a snowman game, winter bingo, a cosy winter bucket list, new year goals, colouring pages and a Winter Wonder Star award.',
+        'h1': 'Winter Wonderland pack',
+        'lead': 'For the long, cosy weeks after the holidays. Winter counting and words, a snowflake to finish, a roll a snowman game, winter bingo, a cosy bucket list, new year goals and a Winter Wonder Star award. No snow needed.',
+        'card': 'Winter bingo, roll a snowman, a bucket list and new year goals.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="20" placeholder="Mia" autocomplete="off">')
+        + field('Design', seg('look', [('snowy', 'Snowy blue'), ('frosty', 'Frosty purple')], 'snowy')) + PAPER + SHUFFLE,
+        'article': """<h2>Cosy winter learning</h2><p>January can feel long for little ones. Pin the bucket list on the fridge and tick off one small joy each week, and keep the bingo sheet by the door for winter walks. The goals page is a lovely thing to look back on next year.</p>""",
+        'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
 ]
 
 # The homepage sections, in learning order (easiest first). Every tool appears in exactly one section.
 ARRANGE = [
     ('packs', 'Ready-made packs', 'Packs', 'Stop searching. A week, a month or the whole holiday planned for your child, storybooks and activity books, starting school, quick packs, family far away, a learning passport and class packs.',
-     ['pack', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'journal', 'easter', 'levels', 'poppy', 'handwritingbook', 'phonicsbook', 'mathsbook', 'superhero', 'feelingsbook', 'flying', 'adventure', 'familynight', 'cookbook', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack', 'classseason', 'yearbook', 'displays']),
+     ['pack', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'journal', 'easter', 'levels', 'poppy', 'handwritingbook', 'phonicsbook', 'readers', 'mathsbook', 'winter', 'dinokit', 'spacekit', 'superhero', 'feelingsbook', 'flying', 'adventure', 'familynight', 'cookbook', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack', 'classseason', 'yearbook', 'displays']),
     ('handwriting', 'Handwriting', 'Handwriting', 'From first pencil lines to joined writing, with real letter shapes and stroke order.',
      ['prewriting', 'scissors', 'names', 'letters', 'mixups', 'joined', 'writingpaper', 'alphabets']),
     ('reading', 'Reading & phonics', 'Reading', 'Letter sounds, CVC words, syllables, sight words, sentences, spelling and stories where your child is the hero.',
@@ -2646,6 +2697,7 @@ ARRANGE = [
 ]
 # Ages each tool suits (first year, last year).
 AGES = {
+    'readers': (4, 6), 'dinokit': (3, 9), 'spacekit': (4, 10), 'winter': (3, 9),
     'handwritingbook': (3, 7), 'superhero': (3, 9), 'flying': (3, 10), 'feelingsbook': (3, 9),
     'mathsbook': (3, 8), 'adventure': (3, 10), 'familynight': (3, 12), 'cookbook': (3, 10),
     'toothfairy': (4, 10), 'bigsibling': (2, 8), 'treasure': (3, 10), 'phonicsbook': (3, 6), 'busters': (3, 10),
@@ -2675,6 +2727,7 @@ AGES = {
 }
 # The option that sets how hard a sheet is, ordered easiest first (drives the Easier and Harder buttons).
 LEVELS = {
+    'readers': 'book',
     'handwritingbook': 'book',
     'mathsbook': 'book',
     'phonicsbook': 'book',
@@ -2706,7 +2759,7 @@ CAT_TEXT = {a[0]: a[3] for a in ARRANGE}
 NAV_LABEL = {a[0]: a[2] for a in ARRANGE}
 
 
-JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'tools21', 'tools22', 'tools23', 'plus', 'app']
+JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'tools21', 'tools22', 'tools23', 'tools24', 'plus', 'app']
 CONTACT = 'graceandloannesofficial@gmail.com'
 # Stripe customer portal: parents manage, switch or cancel their Plus subscription here.
 STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'
@@ -2960,11 +3013,12 @@ def shelf_body():
         ('📕', 'Storybooks', 'storybook', [('star', 'The Lost Star'), ('party', 'Big Animal Party'), ('sea', 'Under the Sea'), ('dino', 'Sleepy Dinosaur'), ('garden', 'Magic Garden'), ('snow', 'Snowy Surprise'), ('jungle', 'Jungle Band'), ('kind', 'Kind Heart Day')]),
         ('🏅', 'Little Learner Levels', 'levels', [(str(i + 1), f'Level {i + 1}') for i in range(10)]),
         ('💌', 'Letters from Poppy', 'poppy', [(str(i), m) for i, m in enumerate(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'])]),
-        ('🎉', 'Seasons and celebrations', None, [(k, names[k]['h1']) for k in ['halloween', 'diwali', 'thankful', 'christmas', 'easter']]),
+        ('🎉', 'Seasons and celebrations', None, [(k, names[k]['h1']) for k in ['halloween', 'diwali', 'thankful', 'christmas', 'winter', 'easter']]),
         ('✏️', 'My Handwriting Books', 'handwritingbook', [(str(i), f'Book {i}') for i in range(1, 5)]),
+        ('📖', 'My Sight Word Readers', 'readers', [(str(i), f'Reader {i}') for i in range(1, 5)]),
         ('🔤', 'My Phonics Books', 'phonicsbook', [(str(i), f'Book {i}') for i in range(1, 5)]),
         ('🔢', 'My Maths Books', 'mathsbook', [(str(i), f'Book {i}') for i in range(1, 5)]),
-        ('🎂', 'Keepsakes and kits', None, [(k, names[k]['h1']) for k in ['namebook', 'timecapsule', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'adventure', 'familynight', 'cookbook', 'superhero', 'flying', 'feelingsbook', 'activitybook', 'monthplan', 'holidayplan']]),
+        ('🎂', 'Keepsakes and kits', None, [(k, names[k]['h1']) for k in ['namebook', 'timecapsule', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'adventure', 'familynight', 'cookbook', 'superhero', 'flying', 'feelingsbook', 'dinokit', 'spacekit', 'activitybook', 'monthplan', 'holidayplan']]),
     ]
     data = [{'icon': ic, 'title': ti, 'tool': tool, 'items': [{'v': v, 'name': n, 'url': '/' + names[tool or v]['slug']} for v, n in items]} for ic, ti, tool, items in groups]
     return f"""<h1>My PrintPals shelf</h1>

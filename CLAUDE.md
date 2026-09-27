@@ -79,7 +79,13 @@ use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in 
 for painted pictures on every sheet.
 Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
 (colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
-fractions, colour by number, spot the difference. PLUS STAGE 7 (VERSION 43, 156 tools, tools23.js): My Handwriting Books 1 to 4 (pencil power: prewriting
+fractions, colour by number, spot the difference. PLUS STAGE 8 (VERSION 44, 160 tools, tools24.js): My Sight Word Readers 1 to 4 (5 words each: trace,
+write, colour the bubbles, then a 4 scene story starring the child with the words in colour; Easier/Harder = book), Dinosaur Explorer
+kit (8 dino cards with say-it names, how long was it chart, dig counting, design a dino, words, colouring, maze), Space Academy
+(8 planet cards, planet order rhyme, countdown tracing, join the stars: Plough, Cassiopeia, Orion; astronaut training), Winter
+Wonderland pack (seasonal drop for Jan/Feb: counting, words, finish the snowflake, roll a snowman, bingo, bucket list, goals for
+the year; looks snowy/frosty; in the Seasons shelf group). Helpers picGridPage, colourSentence. 99 pins wait for file 3 (winter
+and Easter pins held at the end). PLUS STAGE 7 (VERSION 43, 156 tools, tools23.js): My Handwriting Books 1 to 4 (pencil power: prewriting
 lines, zigzag, castle, loops and shapes; a to m; n to z with a picture, trace/fade/write rows and a word per letter; capitals, my name,
 first sentences; Easier/Harder = book; seriesCover helper with an "Inside this book" list), Superhero Academy (hero ID card, design
 your hero, 20 kindness missions, training week, mask and badges; looks red/blue/purple), Flying Adventure kit (name, destination,
@@ -96,7 +102,7 @@ sound-button reading, certificate to next book; Easier/Harder = book), Boredom B
 Shelf now has Phonics Books and a Keepsakes and kits group. 15 new pins added to next-file-start.json (63 waiting for file 3).
 PINTEREST FILES (owner rule): files of 100 pins, named PrintPals-pins-<n>-UPLOAD-ON-<date>.csv (max 100 scheduled, 14 days ahead,
 8 pins a day). File 1 = 55 pins (only 55 slots free), upload 4 Oct 2026, pins 12 to 18 Oct. File 2 = 100, upload 19 Oct, pins 20 Oct to 1 Nov.
-File 3 upload 2 Nov: 87 pins waiting (was 50) in printpals/pinterest/next-file-start.json (Easter held for spring), add 50 new ones.
+File 3 upload 2 Nov: 99 pins waiting in printpals/pinterest/next-file-start.json (Easter held for spring), add 50 new ones.
 Style B pins: pins/b-<key>.jpg made by pinterest/pinB.js from jobsB.json. PLUS STAGE 4 (VERSION 40, 143 tools, tools20.js): Little Learner Levels (10 levels, journey map, 5 challenges,
 badge sheet, certificate pointing to the next level; Easier/Harder steps levels), Letters from Poppy (the logo character; letter, challenge page,
 write back page for each month), TEACHER PLAN tools ('teacher': True gates to the teacher plan): class seasonal books (Christmas/Halloween/
