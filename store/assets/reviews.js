@@ -6,8 +6,8 @@ const when = t => new Date(t).toLocaleDateString(undefined, { month: 'long', yea
 for (const sec of document.querySelectorAll('[data-reviews]')) {
   const mag = sec.dataset.reviews;
   fetch(`/api/reviews${mag ? `?mag=${encodeURIComponent(mag)}` : ''}`).then(r => (r.ok ? r.json() : null)).then(data => {
-    if (!data?.count) return; // the "be one of our first reviewers" message stays
-    sec.querySelector('.rev-empty').hidden = true;
+    if (!data?.count) return; // no reviews yet: the section stays hidden
+    sec.hidden = false;
     const sum = sec.querySelector('.rev-summary');
     sum.innerHTML = `${stars(data.average)} <b>${data.average.toFixed(1)} out of 5</b> <span>from ${data.count} ${data.count === 1 ? 'review' : 'reviews'} by real buyers</span>`;
     sum.hidden = false;

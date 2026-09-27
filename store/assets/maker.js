@@ -205,10 +205,16 @@ const syncFinish = () => {
   if (printed) form.gift.checked = false;
   const on = form.gift.checked;
   $('.gift-fields').hidden = !on;
+  // The day picker only shows for "On a day I choose", already set to tomorrow so it is never an empty box.
+  const later = on && form.gift_when.value === 'later';
+  $('.gift-day').hidden = !later;
+  form.gift_date.required = later;
+  if (later && !form.gift_date.value) form.gift_date.value = new Date(Date.now() + 864e5).toISOString().slice(0, 10);
   form.gift_email.required = on;
   form.gift_name.required = on;
 };
 form.gift.addEventListener('change', syncFinish);
+form.querySelectorAll('[name=gift_when]').forEach(r => r.addEventListener('change', syncFinish));
 form.gift_date.min = new Date().toISOString().slice(0, 10);
 form.gift_date.max = new Date(Date.now() + 30 * 864e5).toISOString().slice(0, 10);
 form.addEventListener('change', e => { if (e.target.name === 'tier') syncFinish(); });
@@ -238,7 +244,7 @@ form.addEventListener('submit', async e => {
       say('Printing page 1 of 24...');
       const id = await renderAndUpload({ mag: m, values: state.values, opts: coverOpts(), cards: tier === 'cards', onProgress: (n, total) => say(`Printing page ${Math.min(n + 1, total)} of ${total}...`) });
       say('Binding your magazine...');
-      made = { id, ...(await finishOrder({ id, kind: printed ? 'print' : 'digital', finish: tier === 'hardcover' ? 'hardcover' : form.finish.value, title: `${m.title}: ${who}`, email: form.email.value, who, mag: m.slug, tz: new Date().getTimezoneOffset(), gift: form.gift.checked ? { name: form.gift_name.value, email: form.gift_email.value, date: form.gift_date.value, from: form.gift_from.value } : null })) };
+      made = { id, ...(await finishOrder({ id, kind: printed ? 'print' : 'digital', finish: tier === 'hardcover' ? 'hardcover' : form.finish.value, title: `${m.title}: ${who}`, email: form.email.value, who, mag: m.slug, tz: new Date().getTimezoneOffset(), gift: form.gift.checked ? { name: form.gift_name.value, email: form.gift_email.value, date: form.gift_when.value === 'later' ? form.gift_date.value : '', from: form.gift_from.value } : null })) };
       form['order-id'].value = id;
       form.pdf.value = made.pdf;
       if (made.cards) form.cards.value = made.cards;

@@ -127,26 +127,39 @@ const tierCards = (magSlug = '') => `
   ${site.tiers.some(t => t.soon && t.id === 'print') ? '<p class="tiers-soon">Printed, posted copies are coming soon.</p>' : ''}
   ${trustStrip}`;
 
+// Simple line icons drawn to match the site (no emojis).
+const ICONS = {
+  heart: '<path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.3a4.2 4.2 0 0 1 7.5 2.5C19.5 15.4 12 20 12 20z"/>',
+  lock: '<rect x="5" y="10.5" width="14" height="9.5" rx="2.5"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/><path d="M12 14.5v2"/>',
+  spark: '<path d="M12 3.5l1.9 5.2 5.4 1.3-4.3 3.4.9 5.6L12 16.2 8.1 19l.9-5.6-4.3-3.4 5.4-1.3z"/>',
+  globe: '<circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17"/><path d="M12 3.5c2.8 3 2.8 14 0 17M12 3.5c-2.8 3-2.8 14 0 17"/>',
+  pencil: '<path d="M5 19l1-4.2L15.8 5a2 2 0 0 1 2.9 0l.3.3a2 2 0 0 1 0 2.9L9.2 18 5 19z"/><path d="M14 7l3 3"/>',
+  camera: '<rect x="3.5" y="7" width="17" height="12.5" rx="2.5"/><circle cx="12" cy="13.2" r="3.4"/><path d="M8.5 7l1.4-2.5h4.2L15.5 7"/>',
+  gift: '<rect x="4" y="10.5" width="16" height="9.5" rx="1.5"/><rect x="3" y="7" width="18" height="3.5" rx="1"/><path d="M12 7v13"/><path d="M12 7C10.5 3.5 6.5 4 7.5 6.3 8 7 12 7 12 7zM12 7c1.5-3.5 5.5-3 4.5-.7C16 7 12 7 12 7z"/>',
+  calendar: '<rect x="4" y="5.5" width="16" height="14.5" rx="2.5"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"/>',
+};
+const icon = name => `<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name]}</svg>`;
+
 // The promises every premium gift shop makes, shown under the prices and at checkout.
 const trustStrip = `
   <ul class="trust">
-    <li><span aria-hidden="true">&#128156;</span><b>Love it or we make it right</b><small>Spotted a typo or a printing fault? We fix it free.</small></li>
-    <li><span aria-hidden="true">&#128274;</span><b>Safe, secure checkout</b><small>Pay by card or PayPal. We never see your card details.</small></li>
-    <li><span aria-hidden="true">&#9889;</span><b>Ready in minutes</b><small>Download straight after paying, and a copy by email.</small></li>
-    <li><span aria-hidden="true">&#127757;</span><b>Sent anywhere in the world</b><small>By email in seconds, or printed near them and posted.</small></li>
+    <li>${icon('heart')}<div><b>Love it or we make it right</b> <small>Spotted a typo or a printing fault? We fix it free.</small></div></li>
+    <li>${icon('lock')}<div><b>Safe, secure checkout</b> <small>Pay by card or PayPal. We never see your card details.</small></div></li>
+    <li>${icon('spark')}<div><b>Ready in minutes</b> <small>Download straight after paying, and a copy by email.</small></div></li>
+    <li>${icon('globe')}<div><b>Sent anywhere in the world</b> <small>By email in seconds, or printed near them and posted.</small></div></li>
   </ul>`;
 
 // "See it for real": the buyer's actual design shown as a printed magazine,
 // an open spread and on a phone, all drawn from the same pages as the PDF.
 const realLife = (mag, pages, name) => {
   const gentle = mag.slug === 'pet-memorial-magazine';
-  const [say, reply] = gentle ? ['Made this for you, thinking of you &#128156;', 'Oh, this is so beautiful. Thank you &#129402;'] : ["You're on the cover! &#127881;", 'WHAT?! I love it &#128557;&#10084;&#65039;'];
+  const [say, reply] = gentle ? ['Made this for you. Thinking of you.', 'Oh, this is so beautiful. Thank you.'] : ["You're on the cover!", 'WHAT?! I love it so much'];
   return `
 <section class="section real">
   <div class="section-head"><p class="kicker">See it for real</p><h2>Made to be held, shared and kept</h2><p>This is exactly what they get: their own magazine, as a glossy printed copy or on their phone in seconds.</p></div>
   <div class="real-grid">
     <figure class="real-scene real-print">
-      <div class="real-stage"><div class="mock-mag"><div class="mock-pages"></div><div class="mock-cover">${pages[0]}</div></div><div class="mock-tag">${gentle ? 'Forever loved' : `For you, ${esc(name)}`} <span>&#9829;</span></div></div>
+      <div class="real-stage"><div class="mock-mag"><div class="mock-pages"></div><div class="mock-cover">${pages[0]}</div></div><div class="mock-tag">${gentle ? 'Forever loved' : `For you, ${esc(name)}`}</div></div>
       <figcaption><b>Printed and posted</b>A4 glossy or matte, printed near them.</figcaption>
     </figure>
     <figure class="real-scene real-open">
@@ -161,24 +174,19 @@ const realLife = (mag, pages, name) => {
 </section>`;
 };
 
-// Real buyers' reviews, filled in by /assets/reviews.js. Until the first ones
-// arrive it invites people to be among the first (we never invent reviews).
+// Real buyers' reviews, filled in by /assets/reviews.js. The section stays
+// hidden until the first real review arrives (we never invent reviews).
 const reviewsSection = (magSlug = '', tint = false) => `
-<section class="section${tint ? ' section-tint' : ''} reviews-sec" data-reviews="${magSlug}">
+<section class="section${tint ? ' section-tint' : ''} reviews-sec" data-reviews="${magSlug}" hidden>
   <div class="section-head"><p class="kicker">Real buyers, real reactions</p><h2>What people are saying</h2><p class="rev-summary" hidden></p></div>
   <div class="rev-list" hidden></div>
-  <div class="rev-empty">
-    <p class="rev-empty-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-    <h3>Be one of our very first reviewers</h3>
-    <p>We are a brand new shop, so there are no reviews here yet, and we will never make any up. After your magazine arrives we will ask how it went. Your words and a photo of the big moment will appear right here.</p>
-  </div>
 </section>`;
 
 const steps = `
   <ol class="steps">
-    <li><span class="step-ico" aria-hidden="true">&#9998;</span><h3>Answer a few fun questions</h3><p>Their nickname, their secret talent, the moment you will never forget. Every question comes with an example, so nobody gets stuck.</p></li>
-    <li><span class="step-ico" aria-hidden="true">&#128247;</span><h3>Add your favourite photos</h3><p>Three photos is all it takes. Watch the cover come alive as you type.</p></li>
-    <li><span class="step-ico" aria-hidden="true">&#127873;</span><h3>Give the best gift of the year</h3><p>Their 24 page magazine lands in your inbox, ready to send by message, share on screen or print at home, anywhere in the world.</p></li>
+    <li><span class="step-ico">${icon('pencil')}</span><h3>Answer a few fun questions</h3><p>Their nickname, their secret talent, the moment you will never forget. Every question comes with an example, so nobody gets stuck.</p></li>
+    <li><span class="step-ico">${icon('camera')}</span><h3>Add your favourite photos</h3><p>Three photos is all it takes. Watch the cover come alive as you type.</p></li>
+    <li><span class="step-ico">${icon('gift')}</span><h3>Give the best gift of the year</h3><p>Their 24 page magazine lands in your inbox, ready to send by message, share on screen or print at home, anywhere in the world.</p></li>
   </ol>`;
 
 const faq = [
@@ -389,7 +397,13 @@ async function makerPage() {
           <div class="gift-fields" hidden>
             <label class="field"><span>Their name</span><input type="text" name="gift_name" maxlength="60" placeholder="Mia"></label>
             <label class="field"><span>Their email</span><input type="email" name="gift_email" placeholder="mia@example.com"></label>
-            <label class="field"><span>Send it on <small>(leave empty to send it right away)</small></span><input type="date" name="gift_date"></label>
+            <div class="field wide"><span>When should we send it?</span>
+              <div class="when">
+                <label class="when-opt"><input type="radio" name="gift_when" value="now" checked><span><b>Right away</b><small>As soon as you have paid</small></span></label>
+                <label class="when-opt"><input type="radio" name="gift_when" value="later"><span><b>On a day I choose</b><small>It arrives at 8am that morning</small></span></label>
+              </div>
+            </div>
+            <label class="field wide gift-day" hidden><span>Which day?</span><span class="date-wrap">${icon('calendar')}<input type="date" name="gift_date"></span></label>
             <label class="field wide"><span>From <small>(how your name appears)</small></span><input type="text" name="gift_from" maxlength="60" placeholder="Love, Chris"></label>
             <p class="small">You get your own copy too, so you can see it first.</p>
           </div>
@@ -559,4 +573,33 @@ await makerPage();
 await ideasPages();
 await simplePages();
 await feeds();
+await fingerprint();
 console.log(`Built ${site.name} into dist/`);
+
+// Browsers keep /assets/ files for a week, so every link to a script or
+// stylesheet gets ?v=<content hash>. A changed file then gets a new address
+// and nobody is left with an old copy after an update.
+async function fingerprint() {
+  const { createHash } = await import('node:crypto');
+  const dir = new URL('assets/', dist);
+  const names = (await readdir(dir)).filter(f => /\.(js|css)$/.test(f));
+  const hash = {};
+  for (const f of names) hash[f] = createHash('sha1').update(await readFile(new URL(f, dir))).digest('hex').slice(0, 10);
+  // Scripts import each other ('./covers.js'), so rewrite those first, then hash again.
+  // A few passes so a change deep down (covers.js) reaches every file that imports it.
+  for (let pass = 0; pass < 4; pass++) {
+    for (const f of names.filter(f => f.endsWith('.js'))) {
+      const file = new URL(f, dir);
+      const src = await readFile(file, 'utf8');
+      const out = src.replace(/(from\s+|import\()(['"])\.\/([\w-]+\.js)(?:\?v=[0-9a-f]+)?\2/g, (m, a, q, n) => (hash[n] ? `${a}${q}./${n}?v=${hash[n]}${q}` : m));
+      if (out !== src) { await writeFile(file, out); hash[f] = createHash('sha1').update(out).digest('hex').slice(0, 10); }
+    }
+  }
+  const pages = [];
+  const walk = async d => { for (const e of await readdir(d, { withFileTypes: true })) { const u = new URL(e.name + (e.isDirectory() ? '/' : ''), d); if (e.isDirectory()) { if (e.name !== 'pins') await walk(u); } else if (e.name.endsWith('.html')) pages.push(u); } };
+  await walk(dist);
+  for (const u of pages) {
+    const html = await readFile(u, 'utf8');
+    await writeFile(u, html.replace(/(["'])\/assets\/([\w-]+\.(?:js|css))\1/g, (m, q, n) => (hash[n] ? `${q}/assets/${n}?v=${hash[n]}${q}` : m)));
+  }
+}
