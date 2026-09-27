@@ -287,3 +287,18 @@ footer .foot-all { color: #ffb3c7 !important; font-weight: 800; margin-top: 4px;
 .drop-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
 .drop-links a { background: rgba(255, 255, 255, .9); color: #2d2350; font-weight: 800; text-decoration: none; padding: 8px 14px; border-radius: 99px; font-size: 15px; }
 .drop-links a:hover { background: #fff; }
+.shelf-top { background: linear-gradient(135deg, #fff6e0, #fff0f5); border: 1px solid #ffd98a; border-radius: 18px; padding: 16px 20px; font-size: 18px; margin: 10px 0 20px; }
+.shelf-top b { font-family: 'Baloo 2', sans-serif; font-size: 28px; color: #e0457b; }
+.shelf-group { margin-bottom: 26px; }
+.shelf-group h2 .count { font: 800 14px 'Nunito', sans-serif; color: var(--soft); background: #f4f1fb; padding: 3px 10px; border-radius: 99px; margin-left: 6px; vertical-align: 4px; }
+.shelf-bar { height: 8px; background: #f0edf8; border-radius: 99px; overflow: hidden; margin: 6px 0 12px; }
+.shelf-bar i { display: block; height: 100%; background: linear-gradient(90deg, #ff8a7a, #b06cff); border-radius: 99px; }
+.shelf-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; }
+.shelf-item { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border-radius: 14px; background: #fff; border: 1.5px dashed #d9d4ec; text-decoration: none; color: var(--ink); }
+.shelf-item em { font-style: normal; font-size: 13px; font-weight: 800; color: var(--coral); }
+.shelf-item.got { border: 1.5px solid #3fbfa8; background: #effaf6; }
+.shelf-item.got em { color: #2e9d85; }
+.shelf-tick { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; background: #f4f1fb; color: var(--soft); }
+.shelf-item.got .shelf-tick { background: #3fbfa8; color: #fff; }
+.shelf-toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); background: #2d2350; color: #fff; padding: 14px 20px; border-radius: 16px; font-weight: 700; z-index: 50; box-shadow: 0 14px 34px rgba(45, 35, 80, .3); max-width: calc(100% - 32px); }
+.shelf-toast a { color: #ffd166; margin-left: 6px; }

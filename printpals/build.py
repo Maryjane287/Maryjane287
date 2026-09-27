@@ -12,7 +12,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '39'
+VERSION = '40'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -2302,7 +2302,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'timecapsule', 'cat': 'packs', 'slug': 'birthday-time-capsule-for-kids', 'tint': '#fff0f5', 'icon': '🎂', 'new': True, 'plus': True,
+        'id': 'timecapsule', 'cat': 'packs', 'slug': 'birthday-time-capsule-for-kids', 'tint': '#fff0f5', 'icon': '🎂', 'new': False, 'plus': True,
         'nav': 'Birthday time capsule',
         'title': 'Birthday Time Capsule for Kids | Printable Yearly Keepsake Book, All About Me and Interview | PrintPals',
         'desc': 'A personalised birthday time capsule for every year: all about me, favourite things, height and handprint, a self portrait, a birthday interview, the best bits of the year, predictions for next year and a letter from you to read when they are grown up.',
@@ -2317,7 +2317,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'diwali', 'cat': 'packs', 'slug': 'diwali-activity-pack-for-kids', 'tint': '#fff6e0', 'icon': '🪔', 'new': True, 'plus': True,
+        'id': 'diwali', 'cat': 'packs', 'slug': 'diwali-activity-pack-for-kids', 'tint': '#fff6e0', 'icon': '🪔', 'new': False, 'plus': True,
         'nav': 'Diwali pack',
         'title': 'Personalised Diwali Activity Pack for Kids | Rangoli Colouring, Diya, Cards and Crafts | PrintPals',
         'desc': 'A personalised Diwali activity pack for children: new rangoli patterns to colour every time, finish the rangoli, diya and lantern colouring, counting, tracing, a word search, sweet box labels, a card, bunting and a Little Light award.',
@@ -2332,7 +2332,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'thankful', 'cat': 'packs', 'slug': 'thanksgiving-activity-pack-for-kids', 'tint': '#fff6e0', 'icon': '🦃', 'new': True, 'plus': True,
+        'id': 'thankful', 'cat': 'packs', 'slug': 'thanksgiving-activity-pack-for-kids', 'tint': '#fff6e0', 'icon': '🦃', 'new': False, 'plus': True,
         'nav': 'Thankful pack',
         'title': 'Personalised Thanksgiving Activity Pack for Kids | Thankful Turkey, Gratitude Leaves, Place Cards | PrintPals',
         'desc': 'A personalised Thanksgiving and harvest activity pack for children: a thankful turkey, gratitude leaves for a thankful tree, colouring, counting, a word search, place cards for the family table, bunting and a Kind Heart award.',
@@ -2377,12 +2377,88 @@ TOOLS += [
         'article': """<h2>A habit worth building</h2><p>A page a day, or a page a week: drawing and writing about their own life helps children find their words and feelings. Each journal ends with a completion page that invites them to the next volume, so there is always something to look forward to.</p>""",
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
+    {
+        'id': 'levels', 'cat': 'packs', 'slug': 'little-learner-levels', 'tint': '#fff6e0', 'icon': '🏅', 'new': True, 'plus': True,
+        'nav': 'Little Learner Levels',
+        'title': 'Little Learner Levels | Printable Learning Journey, Badges and Certificates for Kids | PrintPals',
+        'desc': 'Ten printable learning levels for children, from Pencil Pal to PrintPals Legend. Each level has five challenges, badges to colour and wear, and a certificate that points to the next level.',
+        'h1': 'Little Learner Levels',
+        'lead': 'A learning journey children love to climb: ten levels from Pencil Pal to PrintPals Legend. Each level has five real-life challenges, badges to colour and wear, and a certificate that shows the next adventure.',
+        'card': 'Ten levels with challenges, badges and certificates to collect.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="20" placeholder="Mia" autocomplete="off">')
+        + field('Level', seg('level', [(str(i + 1), f'{i + 1}') for i in range(10)], '1'), '1 Pencil Pal, 2 Shape Spotter, 3 Letter Lion, 4 Number Hero, 5 Word Builder, 6 Story Star, 7 Maths Magician, 8 Time Traveller, 9 Super Writer, 10 PrintPals Legend.')
+        + check('map', 'My learning journey map') + PAPER,
+        'article': """<h2>Something to work towards</h2><p>Children love levels in games, so we made learning feel the same. Stick the journey map on the wall, work through the five challenges together, then wear the badge with pride. The certificate always shows what comes next.</p>""",
+        'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'poppy', 'cat': 'packs', 'slug': 'monthly-letters-from-poppy', 'tint': '#fff0f5', 'icon': '💌', 'new': True, 'plus': True,
+        'nav': 'Letters from Poppy',
+        'title': 'Monthly Letters for Kids From Poppy | A Printable Letter and Challenge Every Month | PrintPals',
+        'desc': 'A personalised letter for your child every month from Poppy, the PrintPals friend, with a seasonal challenge, a challenge page and a page to write back.',
+        'h1': 'Letters from Poppy',
+        'lead': 'Every month, Poppy writes to your child by name with a little challenge: plant a seed, spot the moon, find five minibeasts. There is a page to do the challenge and a page to write back. Children start asking "Has Poppy written yet?"',
+        'card': 'A letter with their name and a new challenge every month.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="20" placeholder="Leo" autocomplete="off">')
+        + field('Month', '<select name="month"><option value="">This month</option>' + ''.join(f'<option value="{i}">{m}</option>' for i, m in enumerate(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'])) + '<option value="all">All twelve months</option></select>')
+        + PAPER,
+        'article': """<h2>The magic of real post</h2><p>Print Poppy's letter, fold it into an envelope and leave it on the doormat or by their breakfast. The challenge gets them outside and exploring, and writing back to Poppy is the best kind of writing practice.</p>""",
+        'faq': [('Who is Poppy?', 'Poppy is the smiling PrintPals page with her yellow pencil. She loves learning and writes a new letter every month.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'classseason', 'cat': 'packs', 'slug': 'class-seasonal-books-for-teachers', 'tint': '#e8f8f4', 'icon': '🎁', 'new': True, 'plus': True, 'teacher': True,
+        'nav': 'Class seasonal books',
+        'title': 'Class Seasonal Books for Teachers | Personalised Christmas, Halloween, Easter and Diwali Books for Every Child | PrintPals',
+        'desc': 'Paste your class list and get a personalised seasonal book for every child in one click: a named cover, colouring pages and a certificate. Christmas, Halloween, Diwali, Easter or spring.',
+        'h1': 'Class seasonal books',
+        'lead': 'Paste your class list once and make a personalised book for every child: their own named cover, colouring pages with their name, and a certificate. Christmas, Halloween, Diwali, Easter or spring, ready in seconds.',
+        'card': 'A named seasonal book for every child in your class.',
+        'form': field('Class list (one name per line)', '<textarea name="names" rows="6" spellcheck="false" placeholder="Mia&#10;Leo&#10;Emma&#10;Sam"></textarea>', 'Up to 40 children.')
+        + field('Class name (optional)', '<input type="text" name="cls" maxlength="24" placeholder="Class 2" autocomplete="off">')
+        + field('Season', seg('occasion', [('christmas', '🎄 Christmas'), ('halloween', '🎃 Halloween'), ('diwali', '🪔 Diwali'), ('easter', '🐣 Easter'), ('spring', '🌷 Spring')], 'christmas'))
+        + check('colouring', 'Colouring pages') + check('certificate', 'Certificate for every child') + PAPER,
+        'article': """<h2>Thirty books, one click</h2><p>Every child gets a book with their own name on the cover and on every page. Perfect for the last week before a holiday, or as a small gift to send home.</p>""",
+        'faq': [('Which plan includes this?', 'The teacher plan ($59 a year). You can try it free for 7 days, no card needed.')],
+    },
+    {
+        'id': 'yearbook', 'cat': 'packs', 'slug': 'end-of-year-memory-book-for-class', 'tint': '#f5edff', 'icon': '🎓', 'new': True, 'plus': True, 'teacher': True,
+        'nav': 'End of year memory books',
+        'title': 'End of Year Memory Book for Every Child | Personalised, With Your Message | PrintPals',
+        'desc': 'A personalised end of year memory book for every child in your class: a named cover, a message from you, friends\' signatures, what I learned, me at the start and now, and a certificate.',
+        'h1': 'End of year memory books',
+        'lead': 'Say goodbye beautifully. Every child gets their own memory book: a named cover, your personal message, a page for friends\' signatures, what they learned, a then and now portrait and a certificate.',
+        'card': 'A named memory book for every child, with your message inside.',
+        'form': field('Class list (one name per line)', '<textarea name="names" rows="6" spellcheck="false" placeholder="Mia&#10;Leo&#10;Emma&#10;Sam"></textarea>')
+        + field('Class name', '<input type="text" name="cls" maxlength="24" placeholder="Class 2" autocomplete="off">')
+        + field('Your name', '<input type="text" name="teacher" maxlength="30" placeholder="Mrs Taylor" autocomplete="off">')
+        + field('Your message to every child (optional)', '<textarea name="message" rows="3" maxlength="300" placeholder="It has been a joy to teach you this year. Keep being curious and kind!"></textarea>')
+        + field('Year', '<input type="text" name="year" maxlength="12" placeholder="2026" autocomplete="off">')
+        + field('Design', seg('look', [('rainbow', '🌈 Rainbow'), ('ocean', '🐳 Ocean'), ('garden', '🌻 Garden'), ('space', '🚀 Space')], 'rainbow'))
+        + PAPER,
+        'article': """<h2>A keepsake they will treasure</h2><p>Hand the books out in the last week and let children sign each other's friends pages. Families keep them for years.</p>""",
+        'faq': [('Which plan includes this?', 'The teacher plan ($59 a year). You can try it free for 7 days, no card needed.')],
+    },
+    {
+        'id': 'displays', 'cat': 'packs', 'slug': 'classroom-displays-printable', 'tint': '#fff6e0', 'icon': '🏫', 'new': True, 'plus': True, 'teacher': True,
+        'nav': 'Classroom displays',
+        'title': 'Printable Classroom Displays | Birthday Chart, Class Jobs and Welcome Bunting With Names | PrintPals',
+        'desc': 'Printable classroom displays made from your class list: a birthday chart with every child in their month, class job cards, and welcome bunting with a flag for every child.',
+        'h1': 'Classroom displays',
+        'lead': 'Set up your classroom in minutes: a birthday chart with every child in their month, bright class job cards, and welcome bunting with a flag for every child to colour.',
+        'card': 'A birthday chart, class jobs and name bunting from your class list.',
+        'form': field('Class list with birthdays (one per line)', '<textarea name="names" rows="6" spellcheck="false" placeholder="Mia 12 March&#10;Leo 4 July&#10;Emma 21 November&#10;Sam 9 January"></textarea>', 'Write the name, then the day and month. Birthdays are optional.')
+        + field('Class name (optional)', '<input type="text" name="cls" maxlength="24" placeholder="Class 2" autocomplete="off">')
+        + field('Class jobs (optional, one per line)', '<textarea name="jobs" rows="3" spellcheck="false" placeholder="Line leader&#10;Plant waterer"></textarea>')
+        + check('birthdays', 'Birthday chart') + check('jobcards', 'Class job cards') + check('welcome', 'Welcome bunting with every name') + PAPER,
+        'article': """<h2>A room that says "you belong"</h2><p>Children light up when they see their own name on the wall. Laminate the job cards and move name pegs each week.</p>""",
+        'faq': [('Which plan includes this?', 'The teacher plan ($59 a year). You can try it free for 7 days, no card needed.')],
+    },
 ]
 
 # The homepage sections, in learning order (easiest first). Every tool appears in exactly one section.
 ARRANGE = [
     ('packs', 'Ready-made packs', 'Packs', 'Stop searching. A week, a month or the whole holiday planned for your child, storybooks and activity books, starting school, quick packs, family far away, a learning passport and class packs.',
-     ['pack', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'journal', 'easter', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack']),
+     ['pack', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'journal', 'easter', 'levels', 'poppy', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack', 'classseason', 'yearbook', 'displays']),
     ('handwriting', 'Handwriting', 'Handwriting', 'From first pencil lines to joined writing, with real letter shapes and stroke order.',
      ['prewriting', 'scissors', 'names', 'letters', 'mixups', 'joined', 'writingpaper', 'alphabets']),
     ('reading', 'Reading & phonics', 'Reading', 'Letter sounds, CVC words, syllables, sight words, sentences, spelling and stories where your child is the hero.',
@@ -2400,6 +2476,7 @@ ARRANGE = [
 ]
 # Ages each tool suits (first year, last year).
 AGES = {
+    'levels': (3, 8), 'poppy': (3, 9), 'classseason': (3, 9), 'yearbook': (4, 11), 'displays': (3, 11),
     'easter': (3, 9), 'journal': (4, 10),
     'timecapsule': (1, 12), 'diwali': (3, 9), 'thankful': (3, 9),
     'halloween': (3, 9), 'christmas': (3, 9), 'namebook': (3, 7),
@@ -2425,6 +2502,7 @@ AGES = {
 }
 # The option that sets how hard a sheet is, ordered easiest first (drives the Easier and Harder buttons).
 LEVELS = {
+    'levels': 'level',
     'scissors': 'level', 'tenframes': 'kind', 'coding': 'level',
     'comprehension': 'level', 'mathsminute': 'kind',
     'patterns': 'level', 'hundred': 'level', 'bonds': 'to', 'maths': 'within', 'numberlines': 'range', 'wordproblems': 'within', 'placevalue': 'range',
@@ -2452,7 +2530,7 @@ CAT_TEXT = {a[0]: a[3] for a in ARRANGE}
 NAV_LABEL = {a[0]: a[2] for a in ARRANGE}
 
 
-JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'plus', 'app']
+JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'plus', 'app']
 CONTACT = 'graceandloannesofficial@gmail.com'
 # Stripe customer portal: parents manage, switch or cancel their Plus subscription here.
 STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'
@@ -2508,7 +2586,7 @@ def top(active=''):
 
 FOOT = '''<footer><div class="wrap"><div class="foot-brand"><div class="brand" style="font-size:24px;color:#fff;gap:0">Print<b style="color:#ff8a8a">Pals</b></div>
 <p style="max-width:420px;margin-top:8px">Free printable worksheets and ready-made packs for children, made in seconds. Everything is made inside your own browser: nothing you type is sent to us or stored.</p>
-<p class="foot-links"><a href="/plus">PrintPals Plus</a><a href="/help">Help</a><a href="/about">About us</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:''' + CONTACT + '''">Contact</a></p>
+<p class="foot-links"><a href="/plus">PrintPals Plus</a><a href="/my-shelf">My shelf</a><a href="/help">Help</a><a href="/about">About us</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:''' + CONTACT + '''">Contact</a></p>
 <p style="margin-top:14px">© PrintPals. Free for home and classroom use.</p></div>
 <div class="foot-cols">''' + ''.join(f'<div><h4>{v}</h4>' + ''.join(f'<a href="/{t["slug"]}">{t["nav"]}</a>' for t in [x for x in TOOLS if x['cat'] == k][:6]) + f'<a class="foot-all" href="/#{k}">See all {sum(1 for x in TOOLS if x["cat"] == k)} →</a></div>' for k, v in CATS) + '''</div></div></footer>'''
 
@@ -2549,7 +2627,7 @@ def tool_page(t):
 <nav class="crumbs" aria-label="Breadcrumb"><a href="/">PrintPals</a> › <a href="/#{t['cat']}">{html.escape(cat_name)}</a> › {html.escape(t['h1'])}</nav>
 <div class="tool-head"><h1>{html.escape(t['h1'])}</h1><p>{html.escape(t['lead'])}</p><div class="tags">{'<a class="tag plus" href="/plus">✨ PrintPals Plus: try 7 days free</a>' if t.get('plus') else ''}<span class="tag">👧 {ages_text(t['id'])}</span><span class="tag">{'✓ 7 days free, no card' if t.get('plus') else '✓ Free, no sign up'}</span><span class="tag">✓ A4 and US Letter</span>{pin_btn(t)}</div><a class="jump" href="#preview">See your worksheet ↓</a></div>
 <div class="maker">
-<form class="panel" id="maker" data-tool="{t['id']}"{level_attr}{(' data-plus="teacher"' if t['id'] == 'classpack' else ' data-plus="plus"') if t.get('plus') else ''} autocomplete="off">
+<form class="panel" id="maker" data-tool="{t['id']}"{level_attr}{(' data-plus="teacher"' if t['id'] == 'classpack' or t.get('teacher') else ' data-plus="plus"') if t.get('plus') else ''} autocomplete="off">
 {level_btns}
 {t['form']}
 {check('inksaver', '🖨️ Ink saver: less colour, great for black and white printers', False)}
@@ -2699,6 +2777,37 @@ def home():
 '''
 
 
+def shelf_body():
+    names = {t['id']: t for t in TOOLS}
+    groups = [
+        ('📓', 'My Journal series', 'journal', [(str(i), f'Volume {i}: {n}') for i, n in [(1, 'All about my world'), (2, 'Nature explorer'), (3, 'Big dreams'), (4, 'Kind and brave')]]),
+        ('📕', 'Storybooks', 'storybook', [('star', 'The Lost Star'), ('party', 'Big Animal Party'), ('sea', 'Under the Sea'), ('dino', 'Sleepy Dinosaur'), ('garden', 'Magic Garden'), ('snow', 'Snowy Surprise'), ('jungle', 'Jungle Band'), ('kind', 'Kind Heart Day')]),
+        ('🏅', 'Little Learner Levels', 'levels', [(str(i + 1), f'Level {i + 1}') for i in range(10)]),
+        ('💌', 'Letters from Poppy', 'poppy', [(str(i), m) for i, m in enumerate(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'])]),
+        ('🎉', 'Seasons and celebrations', None, [(k, names[k]['h1']) for k in ['halloween', 'diwali', 'thankful', 'christmas', 'easter']]),
+        ('🎂', 'Keepsakes', None, [(k, names[k]['h1']) for k in ['namebook', 'timecapsule', 'activitybook', 'monthplan', 'holidayplan']]),
+    ]
+    data = [{'icon': ic, 'title': ti, 'tool': tool, 'items': [{'v': v, 'name': n, 'url': '/' + names[tool or v]['slug']} for v, n in items]} for ic, ti, tool, items in groups]
+    return f"""<h1>My PrintPals shelf</h1>
+<p class="lead-p">Everything your family has made with PrintPals Plus, and what is waiting to be collected next. Your shelf lives on this device only.</p>
+<div id="shelf"></div>
+<p class="manage">Not a Plus member yet? <a href="/plus">Try Plus free for 7 days, no card needed →</a></p>
+<script>
+(function () {{
+  var G = {json.dumps(data)}, made = [];
+  try {{ made = JSON.parse(localStorage.getItem('pp-made') || '[]'); }} catch (e) {{}}
+  var has = function (tool, v) {{ return made.some(function (m) {{ return tool ? (m.id === tool && String(m.v) === String(v)) : m.id === v; }}); }};
+  var total = 0, got = 0, html = '';
+  G.forEach(function (g) {{
+    var n = 0, cards = g.items.map(function (it) {{ var ok = has(g.tool, it.v); if (ok) n++; return '<a class="shelf-item' + (ok ? ' got' : '') + '" href="' + it.url + '"><span class="shelf-tick">' + (ok ? '✓' : '+') + '</span><b>' + it.name + '</b><em>' + (ok ? 'Collected' : 'Make it →') + '</em></a>'; }}).join('');
+    total += g.items.length; got += n;
+    html += '<section class="shelf-group"><h2>' + g.icon + ' ' + g.title + ' <span class="count">' + n + ' of ' + g.items.length + '</span></h2><div class="shelf-bar"><i style="width:' + Math.round(100 * n / g.items.length) + '%"></i></div><div class="shelf-grid">' + cards + '</div></section>';
+  }});
+  document.getElementById('shelf').innerHTML = '<div class="shelf-top"><b>' + got + '</b> of ' + total + ' collected' + (got ? '. Wonderful!' : '. Your shelf is waiting to be filled!') + '</div>' + html;
+}})();
+</script>"""
+
+
 def simple_page(title, desc, path, body):
     return head(title, desc, path) + f'''
 <body>
@@ -2752,13 +2861,13 @@ PLUS = f'''<h1>PrintPals Plus</h1>
 <li>{sum(1 for t in TOOLS if t['cat'] != 'packs')} worksheet makers</li><li>Weekly learning pack</li><li>Siblings packs</li><li>Quick packs and family far away pack</li><li>Learning passport</li><li>Ink saver, easy-read letters, Easier and Harder</li><li>No sign up, ever</li></ul>
 <a class="btn alt" href="/">Start printing</a></div>
 <div class="plan best"><span class="ribbon">Most loved</span><h3>Plus for families</h3><div class="price">$4.99<span> a month</span></div><p class="or">or $39 a year (save 35%)</p><ul>
-<li>Everything in Free</li><li><b>Monthly learning plans</b> that grow with your child</li><li><b>Holiday learning plans</b> for 2, 4 or 6 weeks</li><li><b>Personalised storybooks</b> starring your child</li><li><b>Personalised activity books</b> up to 40 pages</li><li><b>Christmas Advent book</b>: 24 days of family moments</li><li><b>Halloween fun pack</b>, friendly not scary</li><li><b>My Name Book</b> with a special word for every letter</li><li><b>Birthday time capsule</b> for every year</li><li><b>Diwali, Thanksgiving and Easter packs</b></li><li><b>My Journal series</b>: four volumes to collect</li><li>Every pack in several beautiful designs</li><li>New Plus packs every month</li><li>7 free days first, cancel any time</li></ul>
+<li>Everything in Free</li><li><b>Monthly learning plans</b> that grow with your child</li><li><b>Holiday learning plans</b> for 2, 4 or 6 weeks</li><li><b>Personalised storybooks</b> starring your child</li><li><b>Personalised activity books</b> up to 40 pages</li><li><b>Christmas Advent book</b>: 24 days of family moments</li><li><b>Halloween fun pack</b>, friendly not scary</li><li><b>My Name Book</b> with a special word for every letter</li><li><b>Birthday time capsule</b> for every year</li><li><b>Diwali, Thanksgiving and Easter packs</b></li><li><b>My Journal series</b>: four volumes to collect</li><li><b>Little Learner Levels</b> with badges</li><li><b>A letter from Poppy</b> every month</li><li>Every pack in several beautiful designs</li><li>New Plus packs every month</li><li>7 free days first, cancel any time</li></ul>
 <a class="btn" href="https://buy.stripe.com/7sYcN43U39lV6xW1i21kA01" rel="noopener">Get Plus yearly, $39</a><a class="btn alt" href="https://buy.stripe.com/14A00igGPbu309ygcW1kA00" rel="noopener" style="margin-top:12px">Get Plus monthly, $4.99</a><a class="try" href="/monthly-learning-plan">or try it free for 7 days →</a></div>
 <div class="plan"><h3>Teachers</h3><div class="price">$59<span> a year</span></div><ul>
-<li>Everything in Plus</li><li><b>Class packs</b> for up to 40 children</li><li>Name tracing, labels, bookmarks, reward charts, stories and certificates for every child</li><li>Use it in every class you teach</li></ul>
+<li>Everything in Plus</li><li><b>Class packs</b> for up to 40 children</li><li><b>Class seasonal books</b>: a named book for every child</li><li><b>End of year memory books</b></li><li><b>Classroom displays</b> with every name</li><li>Name tracing, labels, bookmarks, reward charts, stories and certificates for every child</li><li>Use it in every class you teach</li></ul>
 <a class="btn" href="https://buy.stripe.com/aFa28qaircy7bSgbWG1kA02" rel="noopener">Get the teacher plan, $59</a><a class="try" href="/class-pack-for-teachers">or try class packs free for 7 days →</a></div>
 </div>
-<p class="manage">Already a Plus member? <a href="{STRIPE_PORTAL}" rel="noopener">Manage or cancel my subscription →</a></p>
+<p class="manage">Already a Plus member? <a href="/my-shelf">See your shelf</a> · <a href="{STRIPE_PORTAL}" rel="noopener">Manage or cancel my subscription →</a></p>
 <h2>Everything in Plus</h2><p class="cat-lead">{sum(1 for t in TOOLS if t.get('plus'))} premium packs, each personalised with your child's name, most in several designs, and new ones added through the year.</p>
 <div class="tools">{''.join(f'<a class="tool" href="/{t["slug"]}" style="--tint:{t["tint"]}"><div class="thumb"><img src="/img/thumb-{t["id"]}.webp" alt="{html.escape(t["h1"])} example" loading="lazy" width="400" height="566"></div><h3>{t["icon"]} {html.escape(t["h1"])}</h3><p>{html.escape(t["card"])}</p><span class="go">Try 7 days free →</span></a>' for t in TOOLS if t.get('plus'))}</div>
 <h2>Questions</h2>
@@ -2837,7 +2946,8 @@ def main():
              ('privacy', 'Privacy | PrintPals', 'PrintPals does not collect what you type. Worksheets are made inside your own browser.', PRIVACY),
              ('help', 'Help and Support | PrintPals', 'Help with PrintPals: cancelling or changing your Plus subscription, refunds, receipts, the free week and printing tips.', HELP),
              ('terms', 'Terms of Use | PrintPals', 'The terms for using PrintPals and PrintPals Plus subscriptions, including prices, cancelling and refunds.', TERMS),
-             ('plus', 'PrintPals Plus | Monthly Learning Plans, Activity Books and Class Packs', 'Everything on PrintPals stays free. Plus adds monthly learning plans, personalised activity books and class packs for teachers. Free while we launch.', PLUS)]
+             ('my-shelf', 'My PrintPals Shelf | Your Collection', 'Everything your family has made with PrintPals Plus, and what to collect next.', shelf_body()),
+             ('plus', 'PrintPals Plus | Monthly Learning Plans, Activity Books and Class Packs', 'Everything on PrintPals stays free. Plus adds seasonal packs, storybooks, journals, monthly plans and more for families, and class sets for teachers. Try it free for 7 days.', PLUS)]
     for slug, title, desc, body in pages:
         with open(os.path.join(OUT, slug + '.html'), 'w', encoding='utf-8') as f:
             f.write(simple_page(title, desc, '/' + slug, body))

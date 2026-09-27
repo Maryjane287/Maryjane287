@@ -166,7 +166,20 @@
   }
   document.querySelectorAll('[data-action=print]').forEach((b) => b.addEventListener('click', () => {
     if (!plusAllowed()) { plusBox.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
-    render(); picturesReady().then(() => setTimeout(() => { window.print(); invite(); }, 80)); }));
+    render(); picturesReady().then(() => setTimeout(() => { window.print(); shelf(); invite(); }, 80)); }));
+
+  // Remember what this family has made, for the "My PrintPals shelf" page (on this device only).
+  function shelf() {
+    const v = values(), variant = String(v.volume || v.story || v.level || (v.month === '' ? String(new Date().getMonth()) : v.month) || v.age || '');
+    let made = []; try { made = JSON.parse(store.get('pp-made') || '[]'); } catch (e) { made = []; }
+    made.push({ id: form.dataset.tool, v: variant, t: Date.now() });
+    store.set('pp-made', JSON.stringify(made.slice(-300)));
+    if (!form.dataset.plus || document.querySelector('.shelf-toast')) return;
+    const box = document.createElement('div');
+    box.className = 'shelf-toast no-print';
+    box.innerHTML = '📚 Added to your PrintPals shelf! <a href="/my-shelf">See what to collect next →</a>';
+    document.body.appendChild(box); setTimeout(() => box.remove(), 9000);
+  }
 
   // A gentle invitation to Plus after a few free prints, at most once every five days, never for Plus families.
   function invite() {

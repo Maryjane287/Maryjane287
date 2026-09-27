@@ -79,7 +79,14 @@ use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in 
 for painted pictures on every sheet.
 Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
 (colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
-fractions, colour by number, spot the difference. PLUS STAGE 3 (VERSION 38, 138 tools, tools19.js): Easter and spring pack (egg hunt guide + 12 rhyming clue cards,
+fractions, colour by number, spot the difference. PLUS STAGE 4 (VERSION 40, 143 tools, tools20.js): Little Learner Levels (10 levels, journey map, 5 challenges,
+badge sheet, certificate pointing to the next level; Easier/Harder steps levels), Letters from Poppy (the logo character; letter, challenge page,
+write back page for each month), TEACHER PLAN tools ('teacher': True gates to the teacher plan): class seasonal books (Christmas/Halloween/
+Diwali/Easter/Spring, a named book for every child), end of year memory books (teacher message, friends page, then and now), classroom
+displays (birthday chart from 'Mia 12 March', job cards (checkbox is 'jobcards', textarea 'jobs'), welcome bunting with names).
+/my-shelf page: app.js records every print in localStorage pp-made {id, v}; shelf shows collected vs to collect; toast after Plus prints.
+Test scripts must skip my-shelf.html. Full fuzz can run out of memory on class tools: run with SKIP=... and test those with fz2.
+Pins file PrintPals-pins-new-5.csv (2 to 10 Oct, 11:30). PLUS STAGE 3 (VERSION 38, 138 tools, tools19.js): Easter and spring pack (egg hunt guide + 12 rhyming clue cards,
 decorate the eggs, colouring, puzzles; looks pastel/meadow/sunny), My Journal series (Volumes 1 to 4, 10 prompts each, completion page
 points to the next volume), storybook cover looks (rainbow/ocean/garden/space). Home plus-band changes title and pack links by month
 (script after the band). Journal pin CSV. Easter pin should be scheduled in February 2027 (Easter is 28 March 2027). PLUS STAGE 2 (VERSION 37, 136 tools, tools18.js): birthday time capsule (9 pages, looks confetti/balloons/stars,
