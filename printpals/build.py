@@ -12,7 +12,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '35'
+VERSION = '36'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -2151,7 +2151,7 @@ TOOLS += [
         'faq': [('How long should children wash their hands?', 'About 20 seconds, which is the time it takes to sing Happy Birthday twice.')],
     },
     {
-        'id': 'papergames', 'cat': 'puzzles', 'slug': 'paper-games-for-kids', 'tint': '#eef2ff', 'icon': '❌', 'new': True,
+        'id': 'papergames', 'cat': 'puzzles', 'slug': 'paper-games-for-kids', 'tint': '#eef2ff', 'icon': '❌', 'new': False,
         'nav': 'Paper games',
         'title': 'Free Printable Paper Games for Kids | Noughts and Crosses, Dots and Boxes, Word Guess, Squiggles | PrintPals',
         'desc': 'Free printable pencil and paper games for kids: noughts and crosses grids, dots and boxes, a kind word guessing game with a silly monster, and squiggle drawing. Perfect for cafés, journeys and rainy days.',
@@ -2163,7 +2163,7 @@ TOOLS += [
         'faq': [('What is "draw the monster"?', 'It is a friendly version of hangman. Each wrong guess adds a part to a silly monster instead.')],
     },
     {
-        'id': 'scissors', 'cat': 'handwriting', 'slug': 'cutting-practice-worksheets', 'tint': '#fff0f0', 'icon': '✂️', 'new': True,
+        'id': 'scissors', 'cat': 'handwriting', 'slug': 'cutting-practice-worksheets', 'tint': '#fff0f0', 'icon': '✂️', 'new': False,
         'nav': 'Scissor skills',
         'title': 'Free Cutting Practice Worksheets | Scissor Skills for Toddlers and Preschool | PrintPals',
         'desc': 'Free printable scissor skills worksheets for toddlers and preschoolers: straight, zigzag and wavy lines, shapes to cut out and spirals. Help each animal reach its food!',
@@ -2175,7 +2175,7 @@ TOOLS += [
         'faq': [('When can children use scissors?', 'Most children can start snipping with child safe scissors, and a grown-up close by, at around 2 and a half to 3.')],
     },
     {
-        'id': 'tenframes', 'cat': 'maths', 'slug': 'ten-frame-worksheets', 'tint': '#fff6e0', 'icon': '🔟', 'new': True,
+        'id': 'tenframes', 'cat': 'maths', 'slug': 'ten-frame-worksheets', 'tint': '#fff6e0', 'icon': '🔟', 'new': False,
         'nav': 'Ten frames',
         'title': 'Free Ten Frame Worksheets | Count, Show Numbers, Make 10, Count to 20 | PrintPals',
         'desc': 'Free printable ten frame worksheets: count the dots, show a number, make 10 and count to 20 with double ten frames. With answer keys.',
@@ -2188,7 +2188,7 @@ TOOLS += [
         'faq': [('What age is this for?', 'Ages 4 to 7. Start with "How many?" and "Show it", then move to "Make 10" and "Count to 20".')],
     },
     {
-        'id': 'sequencing', 'cat': 'reading', 'slug': 'sequencing-worksheets', 'tint': '#f1f8e6', 'icon': '🔢', 'new': True,
+        'id': 'sequencing', 'cat': 'reading', 'slug': 'sequencing-worksheets', 'tint': '#f1f8e6', 'icon': '🔢', 'new': False,
         'nav': 'Story sequencing',
         'title': 'Free Sequencing Worksheets for Kids | Cut and Paste First, Next, Then, Last | PrintPals',
         'desc': 'Free printable picture sequencing worksheets: cut out the pictures and put them in order with first, next, then and last. Growing a flower, making a sandwich, a snowy day and more.',
@@ -2201,7 +2201,7 @@ TOOLS += [
         'faq': [('What age is this for?', 'Ages 3 to 7. Younger children can simply point to the order before cutting.')],
     },
     {
-        'id': 'coding', 'cat': 'puzzles', 'slug': 'coding-worksheets-for-kids', 'tint': '#e6f6fc', 'icon': '🤖', 'new': True,
+        'id': 'coding', 'cat': 'puzzles', 'slug': 'coding-worksheets-for-kids', 'tint': '#e6f6fc', 'icon': '🤖', 'new': False,
         'nav': 'Screen-free coding',
         'title': 'Free Coding Worksheets for Kids | Unplugged Arrow Coding Puzzles | PrintPals',
         'desc': 'Free printable unplugged coding worksheets: write the arrow code to move the robot, bunny, rocket or bee to its prize around the blocks. Easy, medium and hard, with answers.',
@@ -2214,7 +2214,7 @@ TOOLS += [
         'faq': [('Is there only one right answer?', 'No. The answer key shows the shortest route, but any route that reaches the prize without crossing a block is correct.')],
     },
     {
-        'id': 'factfile', 'cat': 'world', 'slug': 'animal-fact-file-template', 'tint': '#f5edff', 'icon': '🦁', 'new': True,
+        'id': 'factfile', 'cat': 'world', 'slug': 'animal-fact-file-template', 'tint': '#f5edff', 'icon': '🦁', 'new': False,
         'nav': 'Animal fact files',
         'title': 'Free Animal Fact File Template for Kids | Research Worksheet | PrintPals',
         'desc': 'Free printable animal fact files and research templates for kids: lion, penguin, elephant, octopus, bee, sea turtle, giraffe and blue whale, or any topic you choose.',
@@ -2227,7 +2227,7 @@ TOOLS += [
         'faq': [('Can we use it for things that are not animals?', 'Yes. Choose "My own topic" and type anything, like volcanoes, space or a country.')],
     },
     {
-        'id': 'petcare', 'cat': 'charts', 'slug': 'pet-care-chart-for-kids', 'tint': '#fff6e0', 'icon': '🐾', 'new': True,
+        'id': 'petcare', 'cat': 'charts', 'slug': 'pet-care-chart-for-kids', 'tint': '#fff6e0', 'icon': '🐾', 'new': False,
         'nav': 'Pet care chart',
         'title': 'Free Pet Care Chart for Kids | Dog, Cat, Fish, Rabbit, Hamster, Bird | PrintPals',
         'desc': 'A free printable pet care chart for children: daily jobs for a dog, cat, fish, rabbit, hamster or bird, a paw to colour for each job, and an all about my pet page.',
@@ -2241,7 +2241,7 @@ TOOLS += [
         'faq': [('What age can children help with pets?', 'Even toddlers can help fill a food bowl with you. From about 5, children can do simple jobs each day with a reminder.')],
     },
     {
-        'id': 'diary', 'cat': 'reading', 'slug': 'holiday-diary-for-kids', 'tint': '#e6f6fc', 'icon': '📔', 'new': True,
+        'id': 'diary', 'cat': 'reading', 'slug': 'holiday-diary-for-kids', 'tint': '#e6f6fc', 'icon': '📔', 'new': False,
         'nav': 'Holiday diary',
         'title': 'Free Printable Holiday Diary for Kids | Travel Journal | PrintPals',
         'desc': 'A free printable holiday diary and travel journal for kids: a cover with their name, and a page for each day with date, weather, where we went, the best bit, feelings and a drawing box.',
@@ -2254,12 +2254,58 @@ TOOLS += [
         'article': """<h2>Small moments matter</h2><p>Fill it in at the end of each day while memories are fresh. Younger children can draw while you write their words. It will become a treasure they look back on for years.</p>""",
         'faq': [('Is it only for going away?', 'Not at all. It works just as well for days out and holidays at home.')],
     },
+    {
+        'id': 'halloween', 'cat': 'packs', 'slug': 'halloween-activity-pack-for-kids', 'tint': '#fff6e0', 'icon': '🎃', 'new': True, 'plus': True,
+        'nav': 'Halloween pack',
+        'title': 'Personalised Halloween Activity Pack for Kids | Friendly, Not Scary, Printable | PrintPals',
+        'desc': 'A personalised Halloween activity pack for children aged 3 to 9: a cover with their name, colouring pages, counting, tracing, a word search, a maze, pumpkin face design, treat bag labels, bunting and a best costume award. Friendly, never scary.',
+        'h1': 'Halloween fun pack',
+        'lead': 'A whole Halloween pack with your child\'s name on the cover: colouring, counting, tracing, puzzles, pumpkin faces, treat bag labels, bunting and a best costume award. Friendly, never scary, in three beautiful designs.',
+        'card': 'A personalised, friendly Halloween pack in three designs.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="20" placeholder="Leo" autocomplete="off">')
+        + field('Age', seg('age', [('3', '3'), ('4', '4'), ('5', '5'), ('6', '6'), ('7', '7'), ('8', '8+')], '5'), 'Puzzles get harder for older children.')
+        + field('Design', seg('look', [('pumpkin', '🎃 Pumpkin Patch'), ('moon', '🌙 Moonlight'), ('candy', '🍭 Candy')], 'pumpkin'))
+        + PAPER + SHUFFLE,
+        'article': """<h2>A gentle Halloween</h2><p>Everything in this pack is friendly: smiling pumpkins, a waving ghost and a happy bat. Print it a week before Halloween, do a page each day, and use the treat bag labels and bunting for your party. Choose a different design each year, so it feels brand new.</p>""",
+        'faq': [('Is it scary?', 'Not at all. Every picture is friendly and smiling, made for little ones.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'christmas', 'cat': 'packs', 'slug': 'christmas-advent-activity-book-for-kids', 'tint': '#e8f8f4', 'icon': '🎄', 'new': True, 'plus': True,
+        'nav': 'Christmas & Advent book',
+        'title': 'Personalised Christmas Activity Book and Advent Calendar for Kids | 24 Days of Printable Fun | PrintPals',
+        'desc': 'A personalised Christmas activity book with a 24 day Advent calendar: a page for every day of December with a family moment and an activity, a letter to Santa or Father Christmas, a Nice List certificate, colouring, puzzles, gift tags, bunting and thank you notes.',
+        'h1': 'Christmas activity book',
+        'lead': 'The Advent calendar that brings your family together: 24 days, each with a small family moment and a page to colour, count, trace or draw. Plus a letter to Santa, a Nice List certificate, colouring, puzzles, gift tags, bunting and thank you notes. With your child\'s name, in three designs.',
+        'card': 'A 24 day Advent book, a letter to Santa, gift tags and more.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="20" placeholder="Emma" autocomplete="off">')
+        + field('Age', seg('age', [('3', '3'), ('4', '4'), ('5', '5'), ('6', '6'), ('7', '7'), ('8', '8+')], '5'))
+        + field('Design', seg('look', [('classic', '🎄 Classic'), ('snowy', '❄️ Snowy'), ('ginger', '🍪 Gingerbread')], 'classic'))
+        + field('Letter to', seg('santa', [('santa', 'Santa'), ('fc', 'Father Christmas')], 'santa'))
+        + '<div class="field"><span class="label">Pages</span>' + check('advent', '24 day Advent calendar and daily pages') + check('letter', 'Letter to Santa and Nice List certificate') + check('colouring', 'Christmas colouring pages') + check('puzzles', 'Word search, counting and maze') + check('crafts', 'Gift tags, bunting and thank you notes') + '</div>'
+        + PAPER + SHUFFLE,
+        'article': """<h2>An Advent calendar with no chocolate needed</h2><p>Each day in December, your child opens their page: a small family moment, like making a paper snowflake or calling someone you love, and an activity to do. Colour a door on the calendar each day. It becomes a memory book of your family's Christmas.</p>""",
+        'faq': [('When should I print it?', 'Print it at the end of November, so it is ready for 1 December. Staple the day pages together or keep them in a folder.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'namebook', 'cat': 'packs', 'slug': 'personalised-name-book-for-kids', 'tint': '#fff0f5', 'icon': '🔤', 'new': True, 'plus': True,
+        'nav': 'My Name Book',
+        'title': 'Personalised Name Book for Kids | Every Letter of Their Name, Tracing and Affirmations | PrintPals',
+        'desc': 'A personalised name book: every letter of your child\'s name gets its own page with a picture, tracing, and a special word about them, like M is for Marvellous. Ends with a name poster. Four beautiful designs.',
+        'h1': 'My Name Book',
+        'lead': 'A book all about the most important word in your child\'s world: their name. Every letter gets its own page with a picture to colour, letters to trace and a special word about them, like "M is for Marvellous". It ends with a poster they will want on their wall.',
+        'card': 'Every letter of their name, a picture and a special word.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="12" placeholder="Mia" autocomplete="off">', 'Up to 12 letters.')
+        + field('Design', seg('look', [('rainbow', '🌈 Rainbow'), ('ocean', '🐳 Ocean'), ('garden', '🌻 Garden'), ('space', '🚀 Space')], 'rainbow'))
+        + PAPER,
+        'article': """<h2>Words that grow confidence</h2><p>Children love seeing their own name. Read the book together and say each special word out loud: "Mia is Marvellous, Imaginative and Amazing." It builds letter knowledge and self belief at the same time. It makes a lovely gift for a new sibling, cousin or friend too.</p>""",
+        'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
 ]
 
 # The homepage sections, in learning order (easiest first). Every tool appears in exactly one section.
 ARRANGE = [
     ('packs', 'Ready-made packs', 'Packs', 'Stop searching. A week, a month or the whole holiday planned for your child, storybooks and activity books, starting school, quick packs, family far away, a learning passport and class packs.',
-     ['pack', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack']),
+     ['pack', 'christmas', 'halloween', 'namebook', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack']),
     ('handwriting', 'Handwriting', 'Handwriting', 'From first pencil lines to joined writing, with real letter shapes and stroke order.',
      ['prewriting', 'scissors', 'names', 'letters', 'mixups', 'joined', 'writingpaper', 'alphabets']),
     ('reading', 'Reading & phonics', 'Reading', 'Letter sounds, CVC words, syllables, sight words, sentences, spelling and stories where your child is the hero.',
@@ -2277,6 +2323,7 @@ ARRANGE = [
 ]
 # Ages each tool suits (first year, last year).
 AGES = {
+    'halloween': (3, 9), 'christmas': (3, 9), 'namebook': (3, 7),
     'papergames': (4, 12), 'scissors': (2, 6), 'tenframes': (4, 7), 'sequencing': (3, 7), 'coding': (4, 10), 'factfile': (5, 11), 'petcare': (3, 12), 'diary': (4, 11),
     'comprehension': (5, 9), 'mathsminute': (5, 10), 'savings': (4, 12), 'coupons': (3, 12), 'packing': (3, 10), 'mealplan': (3, 12), 'habits': (2, 7),
     'invites': (3, 12), 'countdown': (3, 10), 'teeth': (2, 8), 'familyrules': (3, 12), 'sitter': (1, 10), 'science': (4, 10), 'letterkit': (5, 11),
@@ -2326,7 +2373,7 @@ CAT_TEXT = {a[0]: a[3] for a in ARRANGE}
 NAV_LABEL = {a[0]: a[2] for a in ARRANGE}
 
 
-JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'plus', 'app']
+JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'plus', 'app']
 CONTACT = 'graceandloannesofficial@gmail.com'
 # Stripe customer portal: parents manage, switch or cancel their Plus subscription here.
 STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'
@@ -2616,7 +2663,7 @@ PLUS = f'''<h1>PrintPals Plus</h1>
 <li>{sum(1 for t in TOOLS if t['cat'] != 'packs')} worksheet makers</li><li>Weekly learning pack</li><li>Siblings packs</li><li>Quick packs and family far away pack</li><li>Learning passport</li><li>Ink saver, easy-read letters, Easier and Harder</li><li>No sign up, ever</li></ul>
 <a class="btn alt" href="/">Start printing</a></div>
 <div class="plan best"><span class="ribbon">Most loved</span><h3>Plus for families</h3><div class="price">$4.99<span> a month</span></div><p class="or">or $39 a year (save 35%)</p><ul>
-<li>Everything in Free</li><li><b>Monthly learning plans</b> that grow with your child</li><li><b>Holiday learning plans</b> for 2, 4 or 6 weeks</li><li><b>Personalised storybooks</b> starring your child</li><li><b>Personalised activity books</b> up to 40 pages</li><li>New Plus packs every month</li><li>7 free days first, cancel any time</li></ul>
+<li>Everything in Free</li><li><b>Monthly learning plans</b> that grow with your child</li><li><b>Holiday learning plans</b> for 2, 4 or 6 weeks</li><li><b>Personalised storybooks</b> starring your child</li><li><b>Personalised activity books</b> up to 40 pages</li><li><b>Christmas Advent book</b>: 24 days of family moments</li><li><b>Halloween fun pack</b>, friendly not scary</li><li><b>My Name Book</b> with a special word for every letter</li><li>Every pack in several beautiful designs</li><li>New Plus packs every month</li><li>7 free days first, cancel any time</li></ul>
 <a class="btn" href="https://buy.stripe.com/7sYcN43U39lV6xW1i21kA01" rel="noopener">Get Plus yearly, $39</a><a class="btn alt" href="https://buy.stripe.com/14A00igGPbu309ygcW1kA00" rel="noopener" style="margin-top:12px">Get Plus monthly, $4.99</a><a class="try" href="/monthly-learning-plan">or try it free for 7 days →</a></div>
 <div class="plan"><h3>Teachers</h3><div class="price">$59<span> a year</span></div><ul>
 <li>Everything in Plus</li><li><b>Class packs</b> for up to 40 children</li><li>Name tracing, labels, bookmarks, reward charts, stories and certificates for every child</li><li>Use it in every class you teach</li></ul>

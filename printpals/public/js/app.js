@@ -166,7 +166,26 @@
   }
   document.querySelectorAll('[data-action=print]').forEach((b) => b.addEventListener('click', () => {
     if (!plusAllowed()) { plusBox.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
-    render(); picturesReady().then(() => setTimeout(() => window.print(), 80)); }));
+    render(); picturesReady().then(() => setTimeout(() => { window.print(); invite(); }, 80)); }));
+
+  // A gentle invitation to Plus after a few free prints, at most once every five days, never for Plus families.
+  function invite() {
+    if (form.dataset.plus || !window.PPPlus || window.PPPlus.has()) return;
+    const n = (+store.get('pp-prints') || 0) + 1; store.set('pp-prints', String(n));
+    const last = +store.get('pp-invite-at') || 0;
+    if (n < 3 || Date.now() - last < 5 * 864e5 || document.querySelector('.invite')) return;
+    store.set('pp-invite-at', String(Date.now()));
+    const child = (store.get('pp-child') || '').trim().slice(0, 20), m = new Date().getMonth();
+    const who = child || 'your child';
+    const offer = m === 8 || m === 9 ? ['🎃', `A whole Halloween fun pack for ${who}`, 'Colouring, puzzles, pumpkin faces, treat bag labels and a costume award, with their name on the cover.', '/halloween-activity-pack-for-kids']
+      : m >= 10 ? ['🎄', `A Christmas Advent book for ${who}`, '24 days of family moments and activities, a letter to Santa, gift tags and more, with their name on every page.', '/christmas-advent-activity-book-for-kids']
+      : ['📅', `A whole month planned for ${who}`, 'Four weeks of learning that gets a little harder each week, with their name on every page.', '/monthly-learning-plan'];
+    const box = document.createElement('div');
+    box.className = 'invite no-print';
+    box.innerHTML = `<button type="button" class="invite-x" aria-label="Close">×</button><span class="invite-ico">${offer[0]}</span><div><b>You have printed ${n} sheets. Wonderful! 💛</b><p><strong>${offer[1]}?</strong> ${offer[2]}</p><a class="btn small" href="${offer[3]}">Try it free for 7 days →</a> <span class="invite-note">No card needed</span></div>`;
+    box.querySelector('.invite-x').addEventListener('click', () => box.remove());
+    preview.parentNode.insertBefore(box, preview.parentNode.querySelector('.preview-head'));
+  }
   window.PrintPals = { render: () => render() };
   // "Make a new set" always gives a different sheet (a random pick can land on the same one by chance).
   document.querySelectorAll('[data-action=shuffle]').forEach((b) => b.addEventListener('click', () => {

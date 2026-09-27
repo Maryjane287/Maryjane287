@@ -275,3 +275,12 @@ footer .foot-cols a:hover { color: #fff; }
 footer .foot-all { color: #ffb3c7 !important; font-weight: 800; margin-top: 4px; }
 .tag.pin { background: #e60023; color: #fff; border-color: #e60023; text-decoration: none; }
 .tag.pin:hover { background: #c8001e; }
+.invite { position: relative; display: flex; gap: 16px; align-items: flex-start; background: linear-gradient(135deg, #fff6e0, #fff0f5); border: 1px solid #ffd98a; border-radius: 20px; padding: 18px 22px; margin: 0 0 16px; box-shadow: 0 12px 30px rgba(45, 35, 80, .08); animation: invite-in .4s ease-out; }
+.invite-ico { font-size: 40px; line-height: 1; }
+.invite b { display: block; font-family: 'Baloo 2', sans-serif; font-size: 20px; }
+.invite p { margin: 4px 0 12px; color: var(--soft); }
+.invite p strong { color: var(--ink); }
+.invite-note { font-size: 14px; font-weight: 800; color: var(--soft); margin-left: 8px; }
+.invite-x { position: absolute; top: 8px; right: 12px; border: 0; background: none; font-size: 24px; color: var(--soft); cursor: pointer; }
+@keyframes invite-in { from { opacity: 0; transform: translateY(-8px); } }
+.invite .btn { display: inline-block; width: auto; padding: 10px 22px; font-size: 16px; }

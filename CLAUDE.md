@@ -76,7 +76,13 @@ use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in 
 for painted pictures on every sheet.
 Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
 (colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
-fractions, colour by number, spot the difference. PINTEREST (VERSION 35): 130 pins 1000x1500 at public/pins/<id>.jpg (made by printpals/pinterest/pin.js from
+fractions, colour by number, spot the difference. PLUS STAGE 1 (VERSION 36, 133 tools, tools17.js): Halloween pack (16 pages, looks pumpkin/moon/candy),
+Christmas activity book (cover, Advent calendar, 24 day pages with a family moment + colour/count/trace/draw, letter to Santa or Father Christmas,
+Nice List, colouring, puzzles, gift tags, bunting, thank you notes; looks classic/snowy/ginger), My Name Book (page per letter with picture,
+tracing and an affirmation; repeated letters get NAME_WORD2; poster; looks rainbow/ocean/garden/space). Owner wants every premium product in
+several designs, series/volumes with new designs, and 'glue' that brings families back monthly. Plus invitation in app.js after the 3rd free
+print (every 5 days, never for Plus): Sep/Oct Halloween, Nov/Dec Christmas, else monthly plan. Seasonal pins CSV (board 'Holiday Printables for Kids').
+NEXT: birthday time capsule, Diwali, Thanksgiving, Easter, storybook volumes, monthly Plus drop, Plus library page. PINTEREST (VERSION 35): 130 pins 1000x1500 at public/pins/<id>.jpg (made by printpals/pinterest/pin.js from
 sheet screenshots via pinsrc.js; run from scratchpad pp2 layout). Bulk upload CSVs (max 200, Publish date must be within 14 days) in
 printpals/pinterest/: part 1 = 65 pins 29 Sep to 11 Oct 2026, part 2 = 65 pins 12 to 24 Oct (upload on or after 10 Oct). makecsv.py <start> <1|2> <out>.
 8 boards must exist with exact names (see makecsv.py BOARDS). Plus tools never say free: 'Try 7 days free'. Tool pages have a Save to Pinterest
