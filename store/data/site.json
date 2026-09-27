@@ -9,9 +9,9 @@
   "pinterestDomainVerify": "",
   "pinterestTagId": "",
   "tiers": [
-    { "id": "pdf", "label": "Instant PDF", "blurb": "Their 24 page magazine, ready to download, print or send by message", "gbp": 9, "usd": 12 },
-    { "id": "cards", "label": "PDF plus card set", "blurb": "The 24 page magazine plus matching printable cards and gift tags", "gbp": 12, "usd": 16, "popular": true },
-    { "id": "print", "label": "Printed magazine", "blurb": "Glossy or matte A4 magazine, printed near them and posted. Shipping is added at checkout", "gbp": 21.5, "usd": 29, "soon": true },
+    { "id": "pdf", "label": "Instant PDF", "blurb": "Their 24 page magazine, ready to download, print or send by message", "gbp": 5, "usd": 7 },
+    { "id": "cards", "label": "PDF plus card set", "blurb": "The 24 page magazine plus matching printable cards and gift tags", "gbp": 7, "usd": 9, "popular": true },
+    { "id": "print", "label": "Printed magazine", "blurb": "Glossy or matte A4 magazine, printed near them and posted. Shipping is added at checkout", "gbp": 14.99, "usd": 19.99, "soon": true },
     { "id": "premium", "label": "Premium gift edition", "blurb": "Extra pages, thicker cover and a handwritten style gift note", "gbp": 39, "usd": 49, "soon": true }
   ],
   "peecho": { "offerings": { "glossy": 7380360, "matte": 7380353 } },
