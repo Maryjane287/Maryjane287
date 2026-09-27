@@ -76,7 +76,11 @@ use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in 
 for painted pictures on every sheet.
 Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
 (colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
-fractions, colour by number, spot the difference. Full site review live (VERSION 34, 130 tools = 120 makers + 10 packs): home shows 6 cards per
+fractions, colour by number, spot the difference. PINTEREST (VERSION 35): 130 pins 1000x1500 at public/pins/<id>.jpg (made by printpals/pinterest/pin.js from
+sheet screenshots via pinsrc.js; run from scratchpad pp2 layout). Bulk upload CSVs (max 200, Publish date must be within 14 days) in
+printpals/pinterest/: part 1 = 65 pins 29 Sep to 11 Oct 2026, part 2 = 65 pins 12 to 24 Oct (upload on or after 10 Oct). makecsv.py <start> <1|2> <out>.
+8 boards must exist with exact names (see makecsv.py BOARDS). Plus tools never say free: 'Try 7 days free'. Tool pages have a Save to Pinterest
+button. PINTEREST_VERIFY in build.py takes the p:domain_verify code once the owner sends it. Full site review live (VERSION 34, 130 tools = 120 makers + 10 packs): home shows 6 cards per
 section (4 on phones) with Show all, search/age/jump/hash open everything; phone cards are compact (picture left); feature boxes swipe on phones;
 New/Plus badges sit in the card corner; footer shows 6 per category + See all; Print button pinned in the panel. Sheet fixes: pack covers
 (name line clear of rainbow), family tree labels above frames, crocodile rows never empty, story dice fit, sibling rows taller, crown stars.

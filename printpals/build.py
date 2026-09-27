@@ -1,3 +1,4 @@
+import urllib.parse
 #!/usr/bin/env python3
 """Builds the PrintPals pages (home + one page per worksheet maker) into public/.
 
@@ -11,7 +12,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '34'
+VERSION = '35'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -2331,6 +2332,17 @@ CONTACT = 'graceandloannesofficial@gmail.com'
 STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'
 
 
+# Pinterest: paste the code from Pinterest's "claim your website" step here to verify the site.
+PINTEREST_VERIFY = ''
+
+
+def pin_btn(t):
+    if not os.path.exists(os.path.join(OUT, 'pins', t['id'] + '.jpg')):
+        return ''
+    q = urllib.parse.urlencode({'url': f"{SITE}/{t['slug']}", 'media': f"{SITE}/pins/{t['id']}.jpg", 'description': t['h1'] + ': ' + t['card']})
+    return f'<a class="tag pin" href="https://www.pinterest.com/pin/create/button/?{html.escape(q)}" target="_blank" rel="noopener">📌 Save to Pinterest</a>'
+
+
 def head(title, desc, path, extra='', image='/img/og.png'):
     url = SITE + path
     return f'''<!doctype html>
@@ -2339,7 +2351,7 @@ def head(title, desc, path, extra='', image='/img/og.png'):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)}</title>
-<meta name="description" content="{html.escape(desc)}">
+<meta name="description" content="{html.escape(desc)}">{f'<meta name="p:domain_verify" content="{PINTEREST_VERIFY}">' if PINTEREST_VERIFY else ''}
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PrintPals">
@@ -2409,7 +2421,7 @@ def tool_page(t):
 <main id="main">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><a href="/">PrintPals</a> › <a href="/#{t['cat']}">{html.escape(cat_name)}</a> › {html.escape(t['h1'])}</nav>
-<div class="tool-head"><h1>{html.escape(t['h1'])}</h1><p>{html.escape(t['lead'])}</p><div class="tags">{'<a class="tag plus" href="/plus">✨ PrintPals Plus: try 7 days free</a>' if t.get('plus') else ''}<span class="tag">👧 {ages_text(t['id'])}</span><span class="tag">✓ Free, no sign up</span><span class="tag">✓ A4 and US Letter</span></div><a class="jump" href="#preview">See your worksheet ↓</a></div>
+<div class="tool-head"><h1>{html.escape(t['h1'])}</h1><p>{html.escape(t['lead'])}</p><div class="tags">{'<a class="tag plus" href="/plus">✨ PrintPals Plus: try 7 days free</a>' if t.get('plus') else ''}<span class="tag">👧 {ages_text(t['id'])}</span><span class="tag">{'✓ 7 days free, no card' if t.get('plus') else '✓ Free, no sign up'}</span><span class="tag">✓ A4 and US Letter</span>{pin_btn(t)}</div><a class="jump" href="#preview">See your worksheet ↓</a></div>
 <div class="maker">
 <form class="panel" id="maker" data-tool="{t['id']}"{level_attr}{(' data-plus="teacher"' if t['id'] == 'classpack' else ' data-plus="plus"') if t.get('plus') else ''} autocomplete="off">
 {level_btns}
@@ -2457,7 +2469,7 @@ def home():
         extra = ' more' if i >= 6 else ' m-more' if i >= 4 else ''
         keys = html.escape(re.sub(r'<[^>]+>|&[a-z#0-9]+;', ' ', t['title'] + ' ' + t['desc'] + ' ' + t['form']).lower())
         return f'''<a class="tool{extra}" href="/{t['slug']}" style="--tint:{t['tint']}" data-min="{a}" data-max="{b}" data-keys="{keys}"><div class="thumb"><img src="/img/thumb-{t['id']}.webp" alt="{html.escape(t['h1'])} example" loading="lazy" width="400" height="566"></div>
-<h3>{t['icon']} {html.escape(t['h1'])}{'<span class="new plus">Plus</span>' if t.get('plus') else '<span class="new">New</span>' if t.get('new') else ''}</h3><p>{html.escape(t['card'])}</p><span class="age-mini">{ages_text(t['id'])}</span><span class="go">Make one free →</span></a>'''
+<h3>{t['icon']} {html.escape(t['h1'])}{'<span class="new plus">Plus</span>' if t.get('plus') else '<span class="new">New</span>' if t.get('new') else ''}</h3><p>{html.escape(t['card'])}</p><span class="age-mini">{ages_text(t['id'])}</span><span class="go">{'Try 7 days free →' if t.get('plus') else 'Make one free →'}</span></a>'''
     def section(k, v):
         ts = [t for t in TOOLS if t['cat'] == k]
         more = f'<div class="more-row"><button type="button" class="more-btn" data-more="{len(ts)}">Show all <b>{len(ts)}</b> in {html.escape(NAV_LABEL[k])} ▾</button></div>' if len(ts) > 4 else ''

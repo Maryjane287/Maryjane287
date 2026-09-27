@@ -273,3 +273,5 @@ footer .foot-cols a:hover { color: #fff; }
   .only-card { flex: 0 0 80%; scroll-snap-align: center; }
 }
 footer .foot-all { color: #ffb3c7 !important; font-weight: 800; margin-top: 4px; }
+.tag.pin { background: #e60023; color: #fff; border-color: #e60023; text-decoration: none; }
+.tag.pin:hover { background: #c8001e; }
