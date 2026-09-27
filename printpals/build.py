@@ -12,7 +12,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '42'
+VERSION = '43'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -2521,7 +2521,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'mathsbook', 'cat': 'packs', 'slug': 'maths-books-for-kids', 'tint': '#eef2ff', 'icon': '🔢', 'new': True, 'plus': True,
+        'id': 'mathsbook', 'cat': 'packs', 'slug': 'maths-books-for-kids', 'tint': '#eef2ff', 'icon': '🔢', 'plus': True,
         'nav': 'My Maths Books',
         'title': 'Personalised Maths Books for Kids | Counting, Adding, Numbers to 20, Times Tables: Four Books | PrintPals',
         'desc': 'A series of four personalised maths books: counting to 10, adding and taking away, numbers to 20 and doubles, and times tables fun. Pictures, ten frames, number bonds, number lines and a certificate that leads to the next book.',
@@ -2534,7 +2534,7 @@ TOOLS += [
         'faq': [('What age is this for?', 'Book 1 suits ages 3 to 5, books 2 and 3 ages 4 to 7, and book 4 ages 6 to 8.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'adventure', 'cat': 'packs', 'slug': 'outdoor-adventure-passport-for-kids', 'tint': '#f1f8e6', 'icon': '🧭', 'new': True, 'plus': True,
+        'id': 'adventure', 'cat': 'packs', 'slug': 'outdoor-adventure-passport-for-kids', 'tint': '#f1f8e6', 'icon': '🧭', 'plus': True,
         'nav': 'Outdoor Adventure Passport',
         'title': 'Outdoor Adventure Passport for Kids | Nature Missions, Seasonal Scavenger Hunt, Bug Hunt | PrintPals',
         'desc': 'A printable outdoor adventure passport: 24 nature missions with stamp spaces, seasonal spotter sheets, a bug hunt log, nature bingo, cloud watching, leaf rubbing and a Nature Explorer certificate.',
@@ -2547,7 +2547,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'familynight', 'cat': 'packs', 'slug': 'family-fun-night-kit', 'tint': '#fff0f5', 'icon': '🎲', 'new': True, 'plus': True,
+        'id': 'familynight', 'cat': 'packs', 'slug': 'family-fun-night-kit', 'tint': '#fff0f5', 'icon': '🎲', 'plus': True,
         'nav': 'Family Fun Night kit',
         'title': 'Family Fun Night Kit | Movie Night Tickets, Charades, Family Quiz and Bucket List Printables | PrintPals',
         'desc': 'A printable family fun night kit: a month of family nights, movie night tickets with your family name, a snack bar menu, 24 charades cards, a family quiz, a family bucket list and family awards.',
@@ -2559,7 +2559,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'cookbook', 'cat': 'packs', 'slug': 'kids-cookbook-printable', 'tint': '#fff6e0', 'icon': '👩‍🍳', 'new': True, 'plus': True,
+        'id': 'cookbook', 'cat': 'packs', 'slug': 'kids-cookbook-printable', 'tint': '#fff6e0', 'icon': '👩‍🍳', 'plus': True,
         'nav': 'Little Chef Cookbook',
         'title': 'Printable Cookbook for Kids | Easy Recipes With Picture Steps, Personalised | PrintPals',
         'desc': 'A personalised printable cookbook for kids: kitchen safety rules, eight easy recipes with ingredients and numbered steps, a rating for each recipe, a page to invent their own recipe, a shopping list and a Little Chef award.',
@@ -2571,12 +2571,64 @@ TOOLS += [
         'article': """<h2>Children eat what they make</h2><p>Cooking builds maths, reading, fine motor skills and confidence, and children are far more likely to try foods they made themselves. Choose recipes where they can do most of the work, and let the grown-up handle knives and heat.</p>""",
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
+    {
+        'id': 'handwritingbook', 'cat': 'packs', 'slug': 'handwriting-books-for-kids', 'tint': '#e8f8f4', 'icon': '✏️', 'new': True, 'plus': True,
+        'nav': 'My Handwriting Books',
+        'title': 'Personalised Handwriting Books for Kids | Pencil Control, a to z, Capitals and Name Tracing: Four Books | PrintPals',
+        'desc': 'A series of four personalised handwriting books: pencil control and shapes, letters a to m, letters n to z, then capitals, name writing and first sentences. Real letter shapes, numbered start dots and a certificate that leads to the next book.',
+        'h1': 'My Handwriting Books',
+        'lead': 'Beautiful handwriting, one happy page at a time. Four books that take your child from first pencil lines to writing their name and first sentences, with a picture for every letter, green start dots and a certificate that leads to the next book.',
+        'card': 'Four handwriting books from pencil lines to first sentences.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="20" placeholder="Leo" autocomplete="off">')
+        + field('Book', seg('book', [('1', '1. Pencil power'), ('2', '2. a to m'), ('3', '3. n to z'), ('4', '4. Capitals')], '1')) + PAPER + SHUFFLE,
+        'article': """<h2>Little and often</h2><p>Five happy minutes a day builds better handwriting than one long, tired session. Sit side by side, use a chunky pencil and praise the effort, not just the neatness. Each letter page starts with tracing, fades to light letters, then leaves space to write alone.</p>""",
+        'faq': [('What age is this for?', 'Book 1 suits ages 3 to 4, books 2 and 3 ages 4 to 6, and book 4 ages 5 to 7.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'superhero', 'cat': 'packs', 'slug': 'superhero-academy-printables', 'tint': '#fff0f0', 'icon': '🦸', 'new': True, 'plus': True,
+        'nav': 'Superhero Academy',
+        'title': 'Superhero Academy Printables for Kids | Hero ID Card, Kindness Missions, Mask and Badges | PrintPals',
+        'desc': 'A printable superhero academy pack: an official hero ID card, design your own superhero, 20 kindness and courage missions, a hero training week, a mask and badges to cut out and an Official Superhero certificate.',
+        'h1': 'Superhero Academy',
+        'lead': 'Every child wants to be a hero, so let them train as one. A hero ID card with their name, 20 real missions of kindness and courage, a training week, a mask and badges to cut out, and an Official Superhero certificate at the end.',
+        'card': 'Hero ID card, 20 kindness missions, a mask and badges.',
+        'form': field('Hero\'s real name', '<input type="text" name="name" maxlength="20" placeholder="Sam" autocomplete="off">')
+        + field('Hero colours', seg('look', [('red', 'Red and gold'), ('blue', 'Blue and gold'), ('purple', 'Purple and teal')], 'red')) + PAPER,
+        'article': """<h2>Real heroes are kind</h2><p>The missions turn good habits into adventures: helping without being asked, trying a new food, saying sorry, being brave. Pin the missions on the fridge and celebrate each one. Children love being caught doing something heroic.</p>""",
+        'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'flying', 'cat': 'packs', 'slug': 'kids-flying-activity-pack', 'tint': '#eef6ff', 'icon': '✈️', 'new': True, 'plus': True,
+        'nav': 'Flying Adventure kit',
+        'title': 'First Flight Activity Pack for Kids | Boarding Pass, Airport Bingo, Flight Log | PrintPals',
+        'desc': 'A personalised flying activity pack for kids: boarding passes with their name and destination, a travel passport to stamp, airport and plane bingo, a window drawing and flight log, a hand luggage checklist, a colouring page, a maze and a Brave Flyer award.',
+        'h1': 'Flying Adventure kit',
+        'lead': 'Turn a flight into an adventure, whether it is their first or their fiftieth. Boarding passes with their name, a travel passport to stamp, airport bingo, a flight log, a hand luggage checklist and a Brave Flyer award for landing like a superstar.',
+        'card': 'Boarding passes, airport bingo, a flight log and an award.',
+        'form': field('Passenger\'s name', '<input type="text" name="name" maxlength="20" placeholder="Emma" autocomplete="off">')
+        + field('Flying to (optional)', '<input type="text" name="dest" maxlength="22" placeholder="Grandma\'s house" autocomplete="off">')
+        + field('Going to see (optional)', '<input type="text" name="who" maxlength="22" placeholder="Nana and Grandad" autocomplete="off">') + PAPER + SHUFFLE,
+        'article': """<h2>Calm, happy flyers</h2><p>Knowing what will happen makes flying less scary. Go through the travel passport together before the trip so every step feels familiar, then let them stamp each one on the day. Print it the week before and pack it in their own little bag.</p>""",
+        'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'feelingsbook', 'cat': 'packs', 'slug': 'my-feelings-book-printable', 'tint': '#fff0f5', 'icon': '💛', 'new': True, 'plus': True,
+        'nav': 'My Feelings Book',
+        'title': 'My Feelings Book Printable for Kids | 10 Feelings, Body Clues, Calm Ideas and Weekly Check-in | PrintPals',
+        'desc': 'A personalised feelings book for kids: a page for each of ten feelings with what makes me feel it, how it feels in my body and things that help, a weekly feelings check-in and a Feelings Explorer award.',
+        'h1': 'My Feelings Book',
+        'lead': 'Help your child name big feelings and know what to do with them. A gentle page for each of ten feelings, from happy to worried to proud, with body clues, things that help and space to draw, plus a weekly check-in you fill in together.',
+        'card': 'Ten feelings, body clues, things that help and a weekly check-in.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="20" placeholder="Mia" autocomplete="off">') + PAPER,
+        'article': """<h2>All feelings are welcome</h2><p>Children who can name a feeling can start to manage it. Fill in one page a day, sitting close, and share your own answers too. The weekly check-in is a lovely bedtime habit that keeps little worries from growing big.</p>""",
+        'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
 ]
 
 # The homepage sections, in learning order (easiest first). Every tool appears in exactly one section.
 ARRANGE = [
     ('packs', 'Ready-made packs', 'Packs', 'Stop searching. A week, a month or the whole holiday planned for your child, storybooks and activity books, starting school, quick packs, family far away, a learning passport and class packs.',
-     ['pack', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'journal', 'easter', 'levels', 'poppy', 'phonicsbook', 'mathsbook', 'adventure', 'familynight', 'cookbook', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack', 'classseason', 'yearbook', 'displays']),
+     ['pack', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'journal', 'easter', 'levels', 'poppy', 'handwritingbook', 'phonicsbook', 'mathsbook', 'superhero', 'feelingsbook', 'flying', 'adventure', 'familynight', 'cookbook', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack', 'classseason', 'yearbook', 'displays']),
     ('handwriting', 'Handwriting', 'Handwriting', 'From first pencil lines to joined writing, with real letter shapes and stroke order.',
      ['prewriting', 'scissors', 'names', 'letters', 'mixups', 'joined', 'writingpaper', 'alphabets']),
     ('reading', 'Reading & phonics', 'Reading', 'Letter sounds, CVC words, syllables, sight words, sentences, spelling and stories where your child is the hero.',
@@ -2594,6 +2646,7 @@ ARRANGE = [
 ]
 # Ages each tool suits (first year, last year).
 AGES = {
+    'handwritingbook': (3, 7), 'superhero': (3, 9), 'flying': (3, 10), 'feelingsbook': (3, 9),
     'mathsbook': (3, 8), 'adventure': (3, 10), 'familynight': (3, 12), 'cookbook': (3, 10),
     'toothfairy': (4, 10), 'bigsibling': (2, 8), 'treasure': (3, 10), 'phonicsbook': (3, 6), 'busters': (3, 10),
     'levels': (3, 8), 'poppy': (3, 9), 'classseason': (3, 9), 'yearbook': (4, 11), 'displays': (3, 11),
@@ -2622,6 +2675,7 @@ AGES = {
 }
 # The option that sets how hard a sheet is, ordered easiest first (drives the Easier and Harder buttons).
 LEVELS = {
+    'handwritingbook': 'book',
     'mathsbook': 'book',
     'phonicsbook': 'book',
     'levels': 'level',
@@ -2652,7 +2706,7 @@ CAT_TEXT = {a[0]: a[3] for a in ARRANGE}
 NAV_LABEL = {a[0]: a[2] for a in ARRANGE}
 
 
-JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'tools21', 'tools22', 'plus', 'app']
+JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'tools21', 'tools22', 'tools23', 'plus', 'app']
 CONTACT = 'graceandloannesofficial@gmail.com'
 # Stripe customer portal: parents manage, switch or cancel their Plus subscription here.
 STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'
@@ -2907,9 +2961,10 @@ def shelf_body():
         ('🏅', 'Little Learner Levels', 'levels', [(str(i + 1), f'Level {i + 1}') for i in range(10)]),
         ('💌', 'Letters from Poppy', 'poppy', [(str(i), m) for i, m in enumerate(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'])]),
         ('🎉', 'Seasons and celebrations', None, [(k, names[k]['h1']) for k in ['halloween', 'diwali', 'thankful', 'christmas', 'easter']]),
+        ('✏️', 'My Handwriting Books', 'handwritingbook', [(str(i), f'Book {i}') for i in range(1, 5)]),
         ('🔤', 'My Phonics Books', 'phonicsbook', [(str(i), f'Book {i}') for i in range(1, 5)]),
         ('🔢', 'My Maths Books', 'mathsbook', [(str(i), f'Book {i}') for i in range(1, 5)]),
-        ('🎂', 'Keepsakes and kits', None, [(k, names[k]['h1']) for k in ['namebook', 'timecapsule', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'adventure', 'familynight', 'cookbook', 'activitybook', 'monthplan', 'holidayplan']]),
+        ('🎂', 'Keepsakes and kits', None, [(k, names[k]['h1']) for k in ['namebook', 'timecapsule', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'adventure', 'familynight', 'cookbook', 'superhero', 'flying', 'feelingsbook', 'activitybook', 'monthplan', 'holidayplan']]),
     ]
     data = [{'icon': ic, 'title': ti, 'tool': tool, 'items': [{'v': v, 'name': n, 'url': '/' + names[tool or v]['slug']} for v, n in items]} for ic, ti, tool, items in groups]
     return f"""<h1>My PrintPals shelf</h1>

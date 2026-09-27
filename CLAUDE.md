@@ -79,7 +79,13 @@ use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in 
 for painted pictures on every sheet.
 Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
 (colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
-fractions, colour by number, spot the difference. PLUS STAGE 6 (VERSION 42, 152 tools, tools22.js): My Maths Books 1 to 4 (counting to 10, adding and taking away,
+fractions, colour by number, spot the difference. PLUS STAGE 7 (VERSION 43, 156 tools, tools23.js): My Handwriting Books 1 to 4 (pencil power: prewriting
+lines, zigzag, castle, loops and shapes; a to m; n to z with a picture, trace/fade/write rows and a word per letter; capitals, my name,
+first sentences; Easier/Harder = book; seriesCover helper with an "Inside this book" list), Superhero Academy (hero ID card, design
+your hero, 20 kindness missions, training week, mask and badges; looks red/blue/purple), Flying Adventure kit (name, destination,
+who we visit; boarding passes, travel passport stamps, airport bingo, window and flight log, hand luggage, plane colouring, maze,
+Brave Flyer award), My Feelings Book (10 feelings pages, body clues, things that help, weekly check-in). Renamed handLetterPage
+(letterPage exists in tools.js). 87 pins now wait for file 3. PLUS STAGE 6 (VERSION 42, 152 tools, tools22.js): My Maths Books 1 to 4 (counting to 10, adding and taking away,
 numbers to 20 and doubles, times tables; Easier/Harder = book; seriesCert helper), Outdoor Adventure Passport (24 missions to stamp,
 season spotter sheets, bug hunt, nature bingo, sky and leaf lab), Family Fun Night kit (month plan, cinema tickets, snack bar, 24 charades,
 family quiz, bucket list, awards), Little Chef Cookbook (8 recipes, sweet/savoury filter, own recipe, shopping list). Names renamed to avoid
@@ -90,7 +96,7 @@ sound-button reading, certificate to next book; Easier/Harder = book), Boredom B
 Shelf now has Phonics Books and a Keepsakes and kits group. 15 new pins added to next-file-start.json (63 waiting for file 3).
 PINTEREST FILES (owner rule): files of 100 pins, named PrintPals-pins-<n>-UPLOAD-ON-<date>.csv (max 100 scheduled, 14 days ahead,
 8 pins a day). File 1 = 55 pins (only 55 slots free), upload 4 Oct 2026, pins 12 to 18 Oct. File 2 = 100, upload 19 Oct, pins 20 Oct to 1 Nov.
-File 3 upload 2 Nov: 50 pins waiting in printpals/pinterest/next-file-start.json (Easter held for spring), add 50 new ones.
+File 3 upload 2 Nov: 87 pins waiting (was 50) in printpals/pinterest/next-file-start.json (Easter held for spring), add 50 new ones.
 Style B pins: pins/b-<key>.jpg made by pinterest/pinB.js from jobsB.json. PLUS STAGE 4 (VERSION 40, 143 tools, tools20.js): Little Learner Levels (10 levels, journey map, 5 challenges,
 badge sheet, certificate pointing to the next level; Easier/Harder steps levels), Letters from Poppy (the logo character; letter, challenge page,
 write back page for each month), TEACHER PLAN tools ('teacher': True gates to the teacher plan): class seasonal books (Christmas/Halloween/
