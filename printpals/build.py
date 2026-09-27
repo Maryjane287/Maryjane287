@@ -2459,7 +2459,7 @@ STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'
 
 
 # Pinterest: paste the code from Pinterest's "claim your website" step here to verify the site.
-PINTEREST_VERIFY = ''
+PINTEREST_VERIFY = '4b35c96ffec994d3679c8024245b5217'
 
 
 def pin_btn(t):
