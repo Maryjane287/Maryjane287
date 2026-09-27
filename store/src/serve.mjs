@@ -3,15 +3,24 @@
 import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { extname, normalize } from 'node:path';
-import { savePage, buildPdf, getFile, createCheckout } from '../netlify/lib/orders.mjs';
+import { addReview, listReviews, canReview } from '../netlify/lib/reviews.mjs';
+import { saveOrderInfo } from '../netlify/lib/mail.mjs';
+import { savePage, buildPdf, getFile, createCheckout, markKind, orderStatus, isLocked, handleLemonSqueezy, verifyLemonSqueezy } from '../netlify/lib/orders.mjs';
 
-// In-memory stand-in for Netlify Blobs, so /api/order/* works locally too.
-const mem = new Map();
-const store = {
-  async get(k) { return mem.has(k) ? mem.get(k).slice().buffer : null; },
-  async set(k, v) { mem.set(k, Buffer.from(v instanceof ArrayBuffer ? new Uint8Array(v) : v)); },
-  async delete(k) { mem.delete(k); },
+// In-memory stand-in for Netlify Blobs, so /api/* works locally too.
+const memStore = () => {
+  const mem = new Map();
+  const meta = new Map();
+  return {
+    async get(k, o = {}) { if (!mem.has(k)) return null; const b = mem.get(k); return o.type === 'text' ? b.toString() : b.buffer.slice(b.byteOffset, b.byteOffset + b.length); },
+    async set(k, v, o = {}) { mem.set(k, Buffer.from(typeof v === 'string' ? v : v instanceof ArrayBuffer ? new Uint8Array(v) : v)); meta.set(k, o.metadata || {}); },
+    async delete(k) { mem.delete(k); meta.delete(k); },
+    async list(o = {}) { return { blobs: [...mem.keys()].filter(k => k.startsWith(o.prefix || '')).map(key => ({ key })) }; },
+    async getMetadata(k) { return mem.has(k) ? { metadata: meta.get(k) } : null; },
+  };
 };
+const store = memStore();
+const reviews = memStore();
 const site = JSON.parse(await readFile(new URL('../data/site.json', import.meta.url), 'utf8'));
 const body = req => new Promise(ok => { const c = []; req.on('data', d => c.push(d)); req.on('end', () => ok(Buffer.concat(c))); });
 const send = (res, status, data, type = 'application/json') => { res.writeHead(status, { 'content-type': type }); res.end(type === 'application/json' ? JSON.stringify(data) : data); };
@@ -20,15 +29,35 @@ async function api(req, res, url) {
   try {
     if (url.pathname === '/api/order/page') { await savePage(store, url.searchParams.get('id'), Number(url.searchParams.get('n')), new Uint8Array(await body(req))); return send(res, 200, { ok: true }); }
     if (url.pathname === '/api/order/finish') {
-      const { id, kind, finish, title } = JSON.parse(await body(req));
+      const { id, kind, finish, title, email, who, gift, tz, mag } = JSON.parse(await body(req));
       await buildPdf(store, id, title);
+      await markKind(store, id, kind);
+      await saveOrderInfo(store, id, { kind, email, title, who, gift, tz, mag });
       const origin = `http://${req.headers.host}`;
       const out = { pdf: `${origin}/api/order/file?id=${id}&f=pdf` };
+      if (await store.get(`${id}/cards.pdf`)) out.cards = `${origin}/api/order/file?id=${id}&f=cards`;
       // Without Peecho keys locally, pretend the checkout is our thank you page.
       if (kind === 'print') out.checkout = process.env.PEECHO_API_KEY ? await createCheckout({ env: process.env, origin, id, title, finish, offerings: site.peecho?.offerings }) : `${origin}/thanks/?printed=1&test=1`;
       return send(res, 200, out);
     }
+    if (url.pathname === '/api/reviews') {
+      if (url.searchParams.has('check')) return send(res, 200, await canReview(store, reviews, url.searchParams.get('check')));
+      if (req.method === 'GET') return send(res, 200, await listReviews(reviews, { mag: url.searchParams.get('mag') || '' }));
+      await addReview(store, reviews, JSON.parse(await body(req)));
+      return send(res, 200, { ok: true });
+    }
+    if (url.pathname === '/api/reviews/photo') {
+      const buf = await reviews.get(`photo/${url.searchParams.get('p')}`);
+      return buf ? send(res, 200, Buffer.from(buf), 'image/jpeg') : send(res, 404, { error: 'Not found' });
+    }
+    if (url.pathname === '/api/order/status') return send(res, 200, await orderStatus(store, url.searchParams.get('id'), `http://${req.headers.host}`));
+    if (url.pathname === '/api/ls-webhook') {
+      const raw = (await body(req)).toString();
+      if (!(await verifyLemonSqueezy(raw, req.headers['x-signature'], process.env.LEMON_SQUEEZY_WEBHOOK_SECRET))) return send(res, 401, { error: 'Bad signature' });
+      return send(res, 200, { ok: true, result: await handleLemonSqueezy(store, JSON.parse(raw)) });
+    }
     if (url.pathname === '/api/order/file') {
+      if (url.searchParams.get('f') !== 'cover' && await isLocked(store, url.searchParams.get('id'), process.env)) return send(res, 402, { error: 'Unpaid' });
       const f = await getFile(store, url.searchParams.get('id'), url.searchParams.get('f'));
       return f ? send(res, 200, Buffer.from(f.buf), f.type) : send(res, 404, { error: 'Not found' });
     }

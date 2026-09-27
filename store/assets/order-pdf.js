@@ -1,6 +1,6 @@
 // Renders all 24 finished pages of a buyer's magazine in their own browser and
 // uploads them, so the website can make the print-ready PDF without any help.
-import { renderFullMagazine } from './covers.js';
+import { renderFullMagazine, renderCardSet } from './covers.js';
 
 const LIB = 'https://cdn.jsdelivr.net/npm/modern-screenshot@4.6.0/+esm';
 const WIDTH = 794;      // A4 width in CSS pixels
@@ -19,10 +19,10 @@ async function upload(id, n, blob, tries = 3) {
   }
 }
 
-export async function renderAndUpload({ mag, values, opts, onProgress = () => {} }) {
+export async function renderAndUpload({ mag, values, opts, cards = false, onProgress = () => {} }) {
   const { domToBlob } = await import(LIB);
   const id = crypto.randomUUID();
-  const pages = renderFullMagazine(mag, values, opts);
+  const pages = [...renderFullMagazine(mag, values, opts), ...(cards ? renderCardSet(mag, values, opts) : [])];
   const host = document.createElement('div');
   host.setAttribute('aria-hidden', 'true');
   host.style.cssText = `position:fixed;left:-${WIDTH * 2}px;top:0;width:${WIDTH}px;pointer-events:none`;

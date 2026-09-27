@@ -1,6 +1,6 @@
 // The magazine maker: pick a magazine, answer questions, add photos, and watch
 // the cover update live. Photos stay in the browser until the order is placed.
-import { renderCover, renderPages, PALETTES, DESIGNS, designsFor, baseDesign, esc } from './covers.js';
+import { renderCover, renderPages, renderFullMagazine, renderCardSet, PALETTES, DESIGNS, designsFor, baseDesign, esc } from './covers.js';
 import { renderAndUpload, finishOrder } from './order-pdf.js';
 
 const mags = JSON.parse(document.getElementById('mags').textContent);
@@ -196,7 +196,21 @@ $('#fields').addEventListener('change', async e => {
 
 // Printed options stay hidden until printing is switched on; ?print=1 shows them for testing.
 if (params.get('print') === '1') form.querySelectorAll('[data-soon="print"]').forEach(el => { el.hidden = false; });
-const syncFinish = () => { $('.finish').hidden = form.tier.value !== 'print'; };
+const syncFinish = () => {
+  const printed = form.tier.value === 'print' || form.tier.value === 'hardcover';
+  $('.finish').hidden = form.tier.value !== 'print';
+  // Printed copies are posted to the address typed at the printer's checkout, so the email gift fields only apply to digital.
+  $('.gift-toggle').hidden = printed;
+  $('.gift-print').hidden = !printed;
+  if (printed) form.gift.checked = false;
+  const on = form.gift.checked;
+  $('.gift-fields').hidden = !on;
+  form.gift_email.required = on;
+  form.gift_name.required = on;
+};
+form.gift.addEventListener('change', syncFinish);
+form.gift_date.min = new Date().toISOString().slice(0, 10);
+form.gift_date.max = new Date(Date.now() + 30 * 864e5).toISOString().slice(0, 10);
 form.addEventListener('change', e => { if (e.target.name === 'tier') syncFinish(); });
 syncFinish();
 if (params.get('print_error')) alert('Sorry, something went wrong at the printing checkout. Please try again, or choose the digital magazine.');
@@ -214,7 +228,7 @@ form.addEventListener('submit', async e => {
   const reset = () => { btn.disabled = false; btn.textContent = 'Place my order'; progress.hidden = true; };
   btn.disabled = true; btn.textContent = 'Making your magazine...';
   const tier = form.tier.value;
-  const printed = tier === 'print';
+  const printed = tier === 'print' || tier === 'hardcover';
   const who = (state.values[m.fields[0].id] || m.fields[0].example || '').trim();
 
   // 1. Render the 24 finished pages in this browser and make the PDF.
@@ -222,11 +236,14 @@ form.addEventListener('submit', async e => {
   if (!window.PREVIEW) {
     try {
       say('Printing page 1 of 24...');
-      const id = await renderAndUpload({ mag: m, values: state.values, opts: coverOpts(), onProgress: (n, total) => say(`Printing page ${Math.min(n + 1, total)} of ${total}...`) });
+      const id = await renderAndUpload({ mag: m, values: state.values, opts: coverOpts(), cards: tier === 'cards', onProgress: (n, total) => say(`Printing page ${Math.min(n + 1, total)} of ${total}...`) });
       say('Binding your magazine...');
-      made = { id, ...(await finishOrder({ id, kind: printed ? 'print' : 'digital', finish: form.finish.value, title: `${m.title}: ${who}` })) };
+      made = { id, ...(await finishOrder({ id, kind: printed ? 'print' : 'digital', finish: tier === 'hardcover' ? 'hardcover' : form.finish.value, title: `${m.title}: ${who}`, email: form.email.value, who, mag: m.slug, tz: new Date().getTimezoneOffset(), gift: form.gift.checked ? { name: form.gift_name.value, email: form.gift_email.value, date: form.gift_date.value, from: form.gift_from.value } : null })) };
       form['order-id'].value = id;
       form.pdf.value = made.pdf;
+      if (made.cards) form.cards.value = made.cards;
+      // Remembered so the download page can find this order after payment.
+      store.set('order:last', { id, tier, title: `${m.title}: ${who}`, at: Date.now() });
     } catch (err) {
       console.error(err);
       if (printed) {
@@ -249,6 +266,8 @@ form.addEventListener('submit', async e => {
       const url = new URL(pay);
       // Lemon Squeezy and Stripe name the email prefill differently.
       url.searchParams.set(url.hostname.endsWith('lemonsqueezy.com') ? 'checkout[email]' : 'prefilled_email', form.email.value);
+      // Lets Lemon Squeezy tell us which magazine was paid for, to unlock the download.
+      if (made?.id && url.hostname.endsWith('lemonsqueezy.com')) url.searchParams.set('checkout[custom][order_id]', made.id);
       location.href = url.href;
     } else {
       location.href = new URL(form.getAttribute('action'), location.href).href;
@@ -260,3 +279,16 @@ form.addEventListener('submit', async e => {
 });
 
 choose(state.slug);
+
+// Flip through the whole finished magazine, with their answers, before paying.
+const allPages = $('#all-pages');
+$('#see-all')?.addEventListener('click', () => {
+  const m = mag();
+  const opts = coverOpts();
+  const pages = renderFullMagazine(m, state.values, opts);
+  const extra = form.tier.value === 'cards' ? renderCardSet(m, state.values, opts) : [];
+  allPages.querySelector('.all-grid').innerHTML = [...pages, ...extra].map((p, i) =>
+    `<figure class="all-page"><div class="all-sheet">${p}<span class="watermark" aria-hidden="true">Preview</span></div><figcaption>${i === 0 ? 'Cover' : i < pages.length ? `Page ${i + 1}` : `Card set ${i - pages.length + 1}`}</figcaption></figure>`).join('');
+  allPages.showModal();
+});
+allPages?.addEventListener('click', e => { if (e.target === allPages || e.target.closest('[data-close]')) allPages.close(); });

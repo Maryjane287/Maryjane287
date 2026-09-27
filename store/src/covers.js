@@ -499,3 +499,38 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
     `<div class="pg pg-back" ${style}><div class="pg-in"><p class="pg-kicker">That's a wrap</p><h3>The end.<br>Until the next issue.</h3><p class="pg-body">Made for ${esc(who)} by ${esc(from)}.</p>${barcode()}</div></div>`,
   ];
 }
+
+// The printable card set that comes with the "PDF plus card set" edition: two
+// message cards to cut out, then gift tags and bookmarks, all in the same
+// colours and design as their magazine.
+export function renderCardSet(mag, values = {}, opts = {}) {
+  const p = PALETTES[opts.palette] || PALETTES.coral;
+  const v = fillValues(mag, values);
+  const who = v.name || v.names || v.forWho || v.family || v.who;
+  const from = v.from || v.fromWho || 'all of us';
+  const gentle = mag.slug === 'pet-memorial-magazine';
+  const s = mag.cover ? slots(mag, v) : { quote: '', badge: ['', '', ''] };
+  const quote = s.quote || esc(v.words || 'One of a kind');
+  const style = `style="${vars(p)}"`;
+  const cover = `<div class="cs-cover">${renderCover(mag, values, opts)}</div>`;
+  const msg = String(v.message || '').trim();
+  const short = msg.length > 220 ? `${msg.slice(0, 217).replace(/\s+\S*$/, '')}...` : msg;
+  const tags = gentle
+    ? [['For', who], ['With love', `from ${from}`], ['Forever', 'loved'], ['Always', 'in our hearts'], ['A little', 'keepsake'], ['Remembering', who]]
+    : [['For', who], ['With love', `from ${from}`], ['Hot off', 'the press'], ['Read all', 'about it'], ['Open me', 'first'], ['Starring', who]];
+  const up = esc(String(who).toUpperCase());
+  return [
+    `<div class="pg pg-cards" ${style}>
+      <div class="cs-half cs-front">${cover}<div class="cs-front-txt"><p class="cs-kicker">${gentle ? 'Forever in our hearts' : 'Stop the press!'}</p><h3 style="font-size:${fit(String(who), 46, 0.5, 11)}cqw">${esc(who)}</h3><p class="cs-sub">${gentle ? 'A little keepsake, made with love' : /&| and /i.test(String(who)) ? 'are on the front page' : 'is on the front page'}</p><p class="cs-quote">&ldquo;${quote}&rdquo;</p></div></div>
+      <div class="cs-cut" aria-hidden="true"><span>&#9986; cut here</span></div>
+      <div class="cs-half cs-inside"><p class="cs-kicker">A little message</p><p class="cs-dear">Dear ${esc(who)},</p><p class="cs-msg" style="font-size:${short.length > 150 ? 4.3 : 5.2}cqw">${esc(short)}</p><p class="cs-sign" style="font-size:${String(from).length > 18 ? 4.4 : 5.6}cqw">With love, ${esc(from)}</p><i class="cs-heart" aria-hidden="true">&hearts;</i></div>
+      <p class="cs-note">Print on card, cut along the line, and pop them in an envelope with the magazine.</p>
+    </div>`,
+    `<div class="pg pg-cards pg-tags" ${style}>
+      <p class="cs-kicker cs-head">Gift tags and bookmarks</p>
+      <div class="cs-tags">${tags.map(([a, b], i) => `<div class="cs-tag cs-tag${i % 3}"><i class="cs-hole" aria-hidden="true"></i><small>${esc(a)}</small><b style="font-size:${String(b).length > 16 ? 4 : 5.4}cqw">${esc(b)}</b></div>`).join('')}</div>
+      <div class="cs-marks">${[0, 1].map(i => `<div class="cs-mark cs-mark${i}"><span class="cs-mark-name" style="font-size:${fit(String(who).toUpperCase(), 40, 0.55, 7)}cqw">${up}</span><span class="cs-mark-q">${String(who).length > 10 ? '' : `&ldquo;${quote}&rdquo;`}</span><span class="cs-mark-foot">${esc(mag.title)} &middot; ${i ? 'No. 002' : 'No. 001'}</span></div>`).join('')}</div>
+      <p class="cs-note">Cut out the tags and bookmarks. A ribbon through the little hole finishes the tags.</p>
+    </div>`,
+  ];
+}
