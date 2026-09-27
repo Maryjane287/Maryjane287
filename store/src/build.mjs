@@ -20,7 +20,8 @@ const from = tiers[0];
 
 // ---------- helpers ----------
 
-const price = t => `<span class="price" data-gbp="£${t.gbp}" data-usd="$${t.usd}">£${t.gbp}</span>`;
+const money = n => (Number.isInteger(n) ? String(n) : n.toFixed(2));
+const price = t => `<span class="price" data-gbp="£${money(t.gbp)}" data-usd="$${money(t.usd)}">£${money(t.gbp)}</span>`;
 const fromPrice = `<span class="price" data-gbp="£${from.gbp}" data-usd="$${from.usd}">£${from.gbp}</span>`;
 
 function saveImg(src, alt, desc, cls = '') {
@@ -129,11 +130,11 @@ const steps = `
   <ol class="steps">
     <li><span class="step-ico" aria-hidden="true">&#9998;</span><h3>Answer a few fun questions</h3><p>Their nickname, their secret talent, the moment you will never forget. Every question comes with an example, so nobody gets stuck.</p></li>
     <li><span class="step-ico" aria-hidden="true">&#128247;</span><h3>Add your favourite photos</h3><p>Three photos is all it takes. Watch the cover come alive as you type.</p></li>
-    <li><span class="step-ico" aria-hidden="true">&#127873;</span><h3>Give the best gift of the year</h3><p>Their 20 page magazine lands in your inbox, ready to send by message, share on screen or print at home, anywhere in the world.</p></li>
+    <li><span class="step-ico" aria-hidden="true">&#127873;</span><h3>Give the best gift of the year</h3><p>Their 24 page magazine lands in your inbox, ready to send by message, share on screen or print at home, anywhere in the world.</p></li>
   </ol>`;
 
 const faq = [
-  ['How long does it take?', 'About five minutes to fill in. Your finished 20 page magazine is emailed to you as a PDF, usually within 2 working days.'],
+  ['How long does it take?', 'About five minutes to fill in. Your finished 24 page magazine is emailed to you as a PDF, usually within 2 working days.'],
   ['Where do you deliver?', 'Everywhere. Your magazine arrives by email, so you can send it to anyone in the world in seconds. Printed, posted copies are coming soon.'],
   ['Can I see it before I pay?', 'Yes. You see a live preview of the cover and pages while you fill in the form.'],
   ['What happens to my photos?', 'They are used only to make your magazine and are deleted 30 days after your order. We never share or post them anywhere.'],
@@ -180,7 +181,7 @@ async function home() {
   <div class="hero-text">
     <p class="kicker">Personalised keepsake magazines</p>
     <h1>Make them the <span class="hl">cover story.</span></h1>
-    <p class="lead">Answer a few fun questions, add your photos, and we turn them into a beautiful magazine all about the person you love. A 20 page magazine, sent to you as a PDF, ready for anyone, anywhere in the world.</p>
+    <p class="lead">Answer a few fun questions, add your photos, and we turn them into a beautiful magazine all about the person you love. A 24 page magazine, sent to you as a PDF, ready for anyone, anywhere in the world.</p>
     <div class="hero-cta"><a class="btn btn-big" href="/make/">Make a magazine</a><a class="btn btn-ghost" href="#magazines">See the magazines</a></div>
     <p class="hero-note">Ready in 5 minutes &middot; From ${fromPrice} &middot; No design skills needed</p>
   </div>
@@ -236,7 +237,7 @@ async function magazinePage(mag, design = baseDesign(mag)) {
   const lowest = Math.min(...tiers.map(t => t.gbp));
   const highest = Math.max(...tiers.map(t => t.gbp));
   const inside = renderFullMagazine(mag, main.values, { palette: main.palette, portraitOpts: main.portrait, design });
-  const desc = `${name}: ${mag.short} Made in 5 minutes from your answers and photos. A 20 page magazine sent as an instant PDF, anywhere in the world.`;
+  const desc = `${name}: ${mag.short} Made in 5 minutes from your answers and photos. A 24 page magazine sent as an instant PDF, anywhere in the world.`;
   const body = `
 <nav class="crumbs"><a href="/">Home</a> <span>/</span> ${base ? esc(mag.occasion) : `<a href="${magPath(mag)}">${esc(mag.occasion)}</a> <span>/</span> ${esc(dLabel)}`}</nav>
 <section class="mag-hero">
@@ -297,8 +298,9 @@ async function magazinePage(mag, design = baseDesign(mag)) {
 }
 
 async function makerPage() {
-  const tierOpts = tiers.map((t, i) => `
-    <label class="tier-opt"><input type="radio" name="tier" value="${t.id}"${t.popular ? ' checked' : ''}><span><b>${esc(t.label)}</b> ${price(t)}<small>${esc(t.blurb)}</small></span></label>`).join('');
+  // Tiers marked "soon" are in the page but hidden; /make/?print=1 reveals them for testing.
+  const tierOpts = site.tiers.map((t, i) => `
+    <label class="tier-opt"${t.soon ? ` data-soon="${t.id}" hidden` : ''}><input type="radio" name="tier" value="${t.id}"${t.popular ? ' checked' : ''}><span><b>${esc(t.label)}</b> ${price(t)}<small>${esc(t.blurb)}</small></span></label>`).join('');
   const countries = ['United Kingdom', 'United States', 'Canada', 'Australia', 'Ireland', 'New Zealand', 'Germany', 'France', 'Netherlands', 'Spain', 'Italy', 'Sweden', 'South Africa', 'United Arab Emirates', 'Nigeria', 'Ghana', 'Kenya', 'India', 'Singapore', 'Other'];
   const body = `
 <section class="maker">
@@ -314,18 +316,20 @@ async function makerPage() {
     <div class="palette" aria-label="Choose a colour"></div>
     <form id="order" name="order" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="company" enctype="multipart/form-data">
       <input type="hidden" name="form-name" value="order">
-      <input type="hidden" name="magazine"><input type="hidden" name="design"><input type="hidden" name="palette"><input type="hidden" name="answers">
+      <input type="hidden" name="magazine"><input type="hidden" name="design"><input type="hidden" name="palette"><input type="hidden" name="answers"><input type="hidden" name="order-id"><input type="hidden" name="pdf">
       <p class="hp"><label>Leave this empty <input name="company"></label></p>
       <div id="fields"></div>
       <p class="photo-note">Your photos stay on your device while you design. They are only sent when you place your order.</p>
       <fieldset class="checkout">
         <legend>Love it? Choose your edition</legend>
         ${tierOpts}
+        <div class="finish" hidden><p class="maker-label">Cover finish</p><label class="finish-opt"><input type="radio" name="finish" value="glossy" checked><span><b>Glossy</b><small>Shiny, bright, like a newsstand magazine</small></span></label><label class="finish-opt"><input type="radio" name="finish" value="matte"><span><b>Matte</b><small>Soft touch and elegant</small></span></label></div>
         <label class="field"><span>Your email (we send the magazine here)</span><input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
         <label class="field"><span>Where is it going?</span><select name="country" required>${countries.map(c => `<option>${c}</option>`).join('')}</select></label>
         <label class="consent"><input type="checkbox" name="consent" required> I agree to the <a href="/terms/" target="_blank">terms</a> and <a href="/privacy/" target="_blank">privacy policy</a>, and have permission to use these photos.</label>
         <button class="btn btn-big" type="submit">Place my order</button>
-        <p class="small">We check every magazine by hand before it goes out, and email you a secure payment link with your final proof.</p>
+        <p class="small" id="pay-note">Next, you pay securely. Your finished 24 page magazine is emailed to you, usually within 2 working days.</p>
+        <p class="small order-progress" id="order-progress" hidden></p>
       </fieldset>
     </form>
   </div>
@@ -333,7 +337,7 @@ async function makerPage() {
   <aside class="maker-preview" id="preview-top" aria-label="Live preview">
     <div class="preview-tabs" role="tablist"></div>
     <div class="preview-stage"><div id="preview"></div><span class="watermark" aria-hidden="true">Preview</span></div>
-    <p class="small center">This updates as you type. Your finished magazine has 20 pages, with a poster, quiz, puzzle and certificate too.</p>
+    <p class="small center">This updates as you type. Your finished magazine has 24 pages, with a poster, quiz, puzzle and certificate too.</p>
   </aside>
 </section>
 <script type="application/json" id="mags">${JSON.stringify(mags).replace(/</g, '\\u003c')}</script>
@@ -374,7 +378,7 @@ async function simplePages() {
     title: 'Delivery and FAQ', description: 'Delivery times, worldwide shipping, photos, reprints and everything else you might wonder about.', path: '/help/', jsonld: faqLd,
     body: wrap('Help', 'Delivery and questions', `
       <h2>Delivery</h2>
-      <p>Your finished 20 page magazine is emailed to you as a PDF, usually within 2 working days. You can send it to anyone, anywhere, by email or message, or print it at home or at any print shop.</p>
+      <p>Your finished 24 page magazine is emailed to you as a PDF, usually within 2 working days. You can send it to anyone, anywhere, by email or message, or print it at home or at any print shop.</p>
       <p>Printed, posted copies are coming soon.</p>
       <p>Giving it for a special day? Order at least three days before, just to be safe.</p>
       <h2>Questions</h2>${faqHtml}
@@ -411,7 +415,7 @@ async function simplePages() {
   }));
   await page('/thanks/', layout({
     title: 'Thank you', description: 'Your magazine is on its way.', path: '/thanks/',
-    body: `<section class="thanks"><div class="confetti" aria-hidden="true">${Array.from({ length: 18 }, (_, i) => `<i style="--i:${i}"></i>`).join('')}</div><p class="kicker">Order received</p><h1>Stop the press! Your magazine is in the works.</h1><p class="lead">We are checking every page by hand. Look out for an email with your final proof and a secure payment link, usually within 24 hours.</p><a class="btn" href="/">Back to the front page</a></section>`,
+    body: `<section class="thanks"><div class="confetti" aria-hidden="true">${Array.from({ length: 18 }, (_, i) => `<i style="--i:${i}"></i>`).join('')}</div><p class="kicker">Order received</p><h1>Stop the press! Your magazine is in the works.</h1><p class="lead" id="thanks-lead">Your finished 24 page magazine is on its way to your inbox, usually within 2 working days. Printed copies are printed near the lucky person and posted, and our print partner emails you when it ships.</p><a class="btn" href="/">Back to the front page</a></section>`,
   }));
   await page('/404.html', layout({
     title: 'Page not found', description: 'This page has gone to print somewhere else.', path: '/404.html',

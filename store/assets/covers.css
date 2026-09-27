@@ -277,7 +277,7 @@
 .pg-back h3 { font-size: 11cqw; }
 .pg-back .pg-body::first-letter { float: none; font-size: inherit; margin: 0; color: inherit; }
 
-/* The full 20 page magazine */
+/* The full 24 page magazine */
 .pg-num { position: absolute; bottom: 3.5cqw; right: 5cqw; font-size: 2.4cqw; font-weight: 800; letter-spacing: .12em; opacity: .55; z-index: 3; }
 .pg h3 { text-wrap: balance; }
 .toc { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.1cqw; }
@@ -355,7 +355,7 @@
 .vch span { font-size: 3.4cqw; opacity: .75; }
 
 .notes { display: grid; grid-template-columns: 1fr 1fr; gap: 4cqw; }
-.notes div { height: 21cqw; border-radius: 2cqw; padding: 5cqw 4cqw; display: grid; align-content: space-around; transform: rotate(-1.5deg); background: color-mix(in srgb, var(--bg) 25%, #fff); box-shadow: 0 1cqw 2.6cqw rgba(0,0,0,.1); }
+.notes div { min-height: 21cqw; border-radius: 2cqw; padding: 5cqw 4cqw; display: grid; align-content: space-around; transform: rotate(-1.5deg); background: color-mix(in srgb, var(--bg) 25%, #fff); box-shadow: 0 1cqw 2.6cqw rgba(0,0,0,.1); }
 .notes div:nth-child(even) { transform: rotate(2deg); background: color-mix(in srgb, var(--accent) 22%, #fff); }
 .notes i { display: block; border-bottom: .3cqw solid color-mix(in srgb, currentColor 25%, transparent); }
 
@@ -411,3 +411,118 @@
 .tc-move b { display: block; font: 800 2.2cqw/1.4 'Outfit', sans-serif; letter-spacing: .12em; text-transform: uppercase; opacity: .6; }
 .tc-foot { display: flex; justify-content: space-between; font-size: 2.2cqw; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; opacity: .6; }
 .ws-ans { margin-top: 5cqw; }
+
+/* Front page news */
+.pg-news { background: #f6f1e6; }
+.pg-news .pg-in { padding: 8cqw 7cqw; }
+.nw-mast { display: flex; align-items: center; justify-content: space-between; gap: 2cqw; border-bottom: .4cqw solid #1d1a2f; padding-bottom: 1.6cqw; }
+.nw-mast span { font-size: 1.8cqw; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; border: .3cqw solid #1d1a2f; padding: 1cqw; width: 13cqw; text-align: center; line-height: 1.15; flex: none; }
+.nw-mast b { font-family: 'Playfair Display', Georgia, serif; font-weight: 900; line-height: 1; white-space: nowrap; text-align: center; flex: 1; }
+.nw-date { margin: 0; text-align: center; font-size: 2cqw; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; border-bottom: 1cqw double #1d1a2f; padding: 1.2cqw 0; }
+.pg .nw-head { font-family: 'Anton', Impact, sans-serif; text-transform: uppercase; font-size: 9.6cqw; line-height: .95; margin: 3.5cqw 0; text-align: center; }
+.nw-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 4cqw; border-bottom: .3cqw solid #1d1a2f; padding-bottom: 4cqw; }
+.nw-photo { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--bg); filter: saturate(.8) contrast(1.05); border: .4cqw solid #1d1a2f; }
+.nw-lead p { margin: 0; font-family: 'DM Serif Display', serif; font-size: 3.9cqw; line-height: 1.3; }
+.nw-lead p.nw-by { font-family: 'Outfit', sans-serif; font-size: 2.2cqw; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 2cqw; color: color-mix(in srgb, var(--bg) 55%, var(--ink)); }
+.nw-lead p:last-child::first-letter { float: left; font-size: 11cqw; line-height: .8; margin: .6cqw 1.4cqw 0 0; }
+.nw-briefs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3cqw; padding-top: 3cqw; }
+.nw-briefs div + div { border-left: .3cqw solid #1d1a2f; padding-left: 3cqw; }
+.nw-briefs b { display: block; font-size: 2cqw; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 1cqw; }
+.nw-briefs p { margin: 0; font-family: 'DM Serif Display', serif; font-size: 3cqw; line-height: 1.2; overflow-wrap: anywhere; }
+.nw-weather { margin: 4cqw 0 0; text-align: center; font-family: 'Caveat', cursive; font-size: 5.4cqw; background: var(--accent); color: var(--ink); padding: 1.6cqw; transform: rotate(-1.5deg); }
+
+/* The recipe card */
+.pg-recipe { background: color-mix(in srgb, var(--accent) 16%, #fffaf2); }
+.rc { background: #fffdf8; border-radius: 2cqw; padding: 6cqw; box-shadow: 0 1.6cqw 4cqw rgba(0,0,0,.12); background-image: repeating-linear-gradient(transparent 0 7.4cqw, color-mix(in srgb, var(--bg) 25%, transparent) 7.4cqw 7.6cqw); border-top: 3cqw solid var(--bg); }
+.rc h3 { font-family: 'Caveat', cursive; font-size: 11cqw; margin-bottom: 2cqw; }
+.rc-serves { margin: 0 0 5cqw; font-size: 2.4cqw; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; opacity: .7; }
+.rc-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 5cqw; }
+.rc-sub { margin: 0 0 2.4cqw; font-family: 'DM Serif Display', serif; font-size: 5.4cqw; color: color-mix(in srgb, var(--bg) 60%, var(--ink)); }
+.rc ul, .rc ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 2.6cqw; counter-reset: st; }
+.rc ul li { font-family: 'Caveat', cursive; font-size: 5.2cqw; line-height: 1; overflow-wrap: anywhere; }
+.rc ul li i { display: block; font-family: 'Outfit', sans-serif; font-style: normal; font-size: 2.2cqw; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; opacity: .6; margin-bottom: .6cqw; }
+.rc ol li { counter-increment: st; font-size: 3.2cqw; line-height: 1.3; padding-left: 6cqw; position: relative; }
+.rc ol li::before { content: counter(st); position: absolute; left: 0; top: -.2cqw; width: 4.4cqw; height: 4.4cqw; border-radius: 50%; background: var(--bg); color: var(--ink); display: grid; place-content: center; font-weight: 800; font-size: 2.4cqw; }
+.rc-tip { margin: 6cqw 0 0; font-family: 'Caveat', cursive; font-size: 5.4cqw; text-align: center; background: var(--accent); color: var(--ink); padding: 2cqw; border-radius: 1.4cqw; transform: rotate(-1.5deg); }
+
+/* The awards */
+.pg-awards { background: radial-gradient(circle at 50% 0, color-mix(in srgb, var(--bg) 45%, #2b2440) 0, #16131f 70%); color: #fff; }
+.pg-awards::before { background: linear-gradient(90deg, #b8912f, #ffe8a3, #b8912f); }
+.pg-awards .pg-kicker { color: #f3d67a; }
+.pg-awards h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-style: italic; color: #ffe8a3; font-size: 10cqw; }
+.aw { display: grid; grid-template-columns: 1fr 1fr; gap: 4cqw; }
+.aw-item { text-align: center; border: .3cqw solid rgba(243,214,122,.55); border-radius: 2cqw; padding: 4cqw 3cqw; background: rgba(255,255,255,.04); }
+.aw-cup { display: block; font-style: normal; font-size: 11cqw; line-height: 1; margin-bottom: 2cqw; filter: drop-shadow(0 .8cqw 1.6cqw rgba(243,214,122,.45)); }
+.aw-cat { margin: 0 0 1.6cqw; font-family: 'DM Serif Display', serif; font-size: 4.6cqw; line-height: 1.08; color: #ffe8a3; }
+.aw-win { margin: 0 0 1cqw; font-size: 2.8cqw; font-weight: 700; overflow-wrap: anywhere; }
+.aw-note { margin: 0; font-size: 2.2cqw; letter-spacing: .1em; text-transform: uppercase; opacity: .65; }
+.aw-foot { margin: 6cqw 0 0; text-align: center; font-family: 'Caveat', cursive; font-size: 6cqw; color: #f3d67a; }
+.pg-awards .pg-num { color: #fff; }
+
+/* The passport */
+.pg-passport { background: color-mix(in srgb, var(--bg) 22%, #fffaf2); }
+.pp { position: relative; border-radius: 2.4cqw; overflow: hidden; background: repeating-linear-gradient(45deg, rgba(0,0,0,.018) 0 1cqw, transparent 1cqw 2cqw), linear-gradient(160deg, #fdfbf5, color-mix(in srgb, var(--accent) 22%, #f7f1e3)); box-shadow: 0 1.6cqw 4cqw rgba(0,0,0,.16); border: .3cqw solid color-mix(in srgb, var(--bg) 40%, #d9cfbc); }
+.pp-head { display: flex; justify-content: space-between; padding: 2.6cqw 4cqw; background: var(--ink); color: var(--pop); font-size: 2.2cqw; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.pp-body { display: grid; grid-template-columns: 30cqw 1fr; gap: 4cqw; padding: 5cqw 4cqw 3cqw; }
+.pp-photo { position: relative; aspect-ratio: 3 / 4; overflow: hidden; background: var(--bg); border-radius: 1cqw; filter: saturate(.9); }
+.pp-data { margin: 0; display: grid; gap: .6cqw; }
+.pg .pp-data dt { font-size: 1.9cqw; }
+.pg .pp-data dd { margin: 0 0 1.6cqw; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 3.3cqw; line-height: 1.15; border: 0; padding: 0; overflow-wrap: anywhere; }
+.pp-stamps { position: relative; height: 22cqw; }
+.pp-stamps span { position: absolute; display: grid; place-content: center; text-align: center; width: 20cqw; height: 20cqw; border-radius: 50%; border: .7cqw double currentColor; font-family: 'Anton', Impact, sans-serif; text-transform: uppercase; font-size: 3.4cqw; line-height: 1; letter-spacing: .06em; opacity: .75; padding: 2cqw; }
+.pp-stamps span:nth-child(1) { left: 6cqw; top: 0; color: #c23b4b; transform: rotate(-14deg); }
+.pp-stamps span:nth-child(2) { left: 32cqw; top: 2cqw; color: #2e6fb5; transform: rotate(9deg); border-radius: 2cqw; height: 14cqw; }
+.pp-stamps span:nth-child(3) { left: 57cqw; top: 0; color: #2f8a57; transform: rotate(-6deg); }
+.pp-mrz { background: rgba(255,255,255,.7); padding: 2.6cqw 4cqw; border-top: .3cqw dashed rgba(0,0,0,.2); }
+.pp-mrz p { margin: 0; font-family: 'Courier New', ui-monospace, monospace; font-weight: 700; font-size: 3.05cqw; letter-spacing: .02em; white-space: nowrap; overflow: hidden; }
+
+.notes .note-full { align-content: space-between; padding: 3.6cqw 4cqw; gap: 1.6cqw; }
+.note-full p { margin: 0; font-family: 'Caveat', cursive; font-size: 4.1cqw; line-height: 1.02; overflow-wrap: anywhere; }
+.note-full b { font-size: 2.2cqw; letter-spacing: .1em; text-transform: uppercase; opacity: .7; text-align: right; }
+.note-full b::before { content: '\2665  '; color: color-mix(in srgb, var(--bg) 70%, var(--ink)); }
+
+/* 24 page fit tweaks */
+.pg-contents h3 { margin-bottom: 3.5cqw; }
+.pg-contents .toc { gap: .7cqw; }
+.pg-contents .toc li { padding-bottom: .9cqw; }
+.pg-contents .toc b { font-size: 4.6cqw; }
+.pg-contents .toc span { font-size: 3.4cqw; }
+.pg-facts dl { gap: 2.4cqw; }
+.pg-facts dd { font-size: 4.6cqw; padding-bottom: 1.8cqw; }
+.vch { gap: 3.2cqw; }
+.vch div { padding: 3.4cqw 5cqw; }
+.vch b { font-size: 5.4cqw; }
+.pg-recipe .pg-in { padding: 7cqw 6cqw; }
+.rc { padding: 5cqw; }
+.rc h3 { font-size: 9.6cqw; }
+.rc-serves { margin-bottom: 3.5cqw; }
+.rc ul li { font-size: 4.6cqw; }
+.rc ol li { font-size: 3cqw; }
+.rc-tip { margin-top: 4.5cqw; font-size: 4.8cqw; }
+
+.nw-mast span { width: 14cqw; font-size: 1.6cqw; padding: .8cqw; }
+.pp-body { grid-template-columns: 26cqw 1fr; padding: 4cqw 4cqw 2cqw; }
+.pg .pp-data dd { margin-bottom: 1.1cqw; font-size: 3.1cqw; }
+.pp-stamps { height: 17cqw; }
+.pp-stamps span { width: 16cqw; height: 16cqw; font-size: 2.8cqw; }
+.pp-stamps span:nth-child(2) { height: 11cqw; }
+.pp-mrz { padding: 2cqw 4cqw; }
+.pp-mrz p { font-size: 2.9cqw; }
+.pg-passport h3 { margin-bottom: 4cqw; }
+
+.rc ul, .rc ol { gap: 2cqw; }
+.rc ul li { font-size: 4.3cqw; }
+.aw { gap: 3cqw; }
+.aw-item { padding: 3.4cqw 2.6cqw; }
+.aw-cup { font-size: 9cqw; margin-bottom: 1.4cqw; }
+.aw-foot { margin-top: 4.5cqw; }
+.nw-mast b { min-width: 0; overflow: hidden; }
+.notes .note-full { min-height: 0; }
+.note-full p { font-size: 3.7cqw; }
+
+.pg-notes h3 { margin-bottom: 3.5cqw; }
+.notes { gap: 3cqw; }
+.pg-card h3 { margin-bottom: 4cqw; }
+.tc-photo { height: 32cqw; }
+.tc-move { overflow-wrap: anywhere; }
+.nw-long p:last-child { font-size: 3.2cqw; }

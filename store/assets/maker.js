@@ -1,6 +1,7 @@
 // The magazine maker: pick a magazine, answer questions, add photos, and watch
 // the cover update live. Photos stay in the browser until the order is placed.
 import { renderCover, renderPages, PALETTES, DESIGNS, designsFor, baseDesign, esc } from './covers.js';
+import { renderAndUpload, finishOrder } from './order-pdf.js';
 
 const mags = JSON.parse(document.getElementById('mags').textContent);
 const checkout = JSON.parse(document.getElementById('site-checkout').textContent);
@@ -77,7 +78,7 @@ function renderFields() {
     const common = `name="q_${f.id}" data-f="${f.id}" maxlength="${f.max || 200}" placeholder="${esc(f.example)}"${i === 0 ? ' required' : ''}`;
     const input = f.type === 'textarea' ? `<textarea ${common}>${val}</textarea>` : `<input type="text" ${common} value="${val}">`;
     return `<label class="field${f.type === 'textarea' || (f.max || 0) > 60 ? ' wide' : ''}"><span>${esc(f.label)}</span>${input}${f.type === 'textarea' ? `<small class="count" data-count="${f.id}"></small>` : ''}</label>`;
-  }).join('') + `<div class="photos">${photos.map(f => `
+  }).join('') + `<fieldset class="friend-notes wide"><legend>Little notes from family and friends <small>(optional)</small></legend><p class="small">Ask a few people who love them for one sweet line each. They all appear together on a special page in the magazine, each one signed with their name.</p>${[1, 2, 3, 4].map(i => `<div class="friend-note"><input type="text" data-f="note${i}_from" maxlength="30" placeholder="${['Grandma', 'Uncle Sam', 'Emma', 'Leo'][i - 1]}" aria-label="Note ${i}: who it is from" value="${esc(state.values[`note${i}_from`] || '')}"><input type="text" data-f="note${i}_msg" maxlength="110" placeholder="${['You make every room brighter.', 'Still the best dancer I know!', 'Here is to many more adventures together.', 'Love you to the moon and back.'][i - 1]}" aria-label="Note ${i}: their message" value="${esc(state.values[`note${i}_msg`] || '')}"></div>`).join('')}</fieldset><div class="photos">${photos.map(f => `
     <label class="photo-drop"><span><b>+</b>${esc(f.label)}</span><input type="file" name="${f.id}" data-photo="${f.id}" accept="image/*"></label>`).join('')}</div>`;
   updateCounts();
 }
@@ -193,6 +194,13 @@ $('#fields').addEventListener('change', async e => {
   update();
 });
 
+// Printed options stay hidden until printing is switched on; ?print=1 shows them for testing.
+if (params.get('print') === '1') form.querySelectorAll('[data-soon="print"]').forEach(el => { el.hidden = false; });
+const syncFinish = () => { $('.finish').hidden = form.tier.value !== 'print'; };
+form.addEventListener('change', e => { if (e.target.name === 'tier') syncFinish(); });
+syncFinish();
+if (params.get('print_error')) alert('Sorry, something went wrong at the printing checkout. Please try again, or choose the digital magazine.');
+
 form.addEventListener('submit', async e => {
   e.preventDefault();
   const m = mag();
@@ -201,11 +209,41 @@ form.addEventListener('submit', async e => {
   form.design.value = state.design;
   form.answers.value = JSON.stringify(state.values);
   const btn = form.querySelector('[type="submit"]');
-  btn.disabled = true; btn.textContent = 'Sending your story...';
+  const progress = $('#order-progress');
+  const say = t => { progress.hidden = false; progress.textContent = t; };
+  const reset = () => { btn.disabled = false; btn.textContent = 'Place my order'; progress.hidden = true; };
+  btn.disabled = true; btn.textContent = 'Making your magazine...';
   const tier = form.tier.value;
+  const printed = tier === 'print';
+  const who = (state.values[m.fields[0].id] || m.fields[0].example || '').trim();
+
+  // 1. Render the 24 finished pages in this browser and make the PDF.
+  let made = null;
+  if (!window.PREVIEW) {
+    try {
+      say('Printing page 1 of 24...');
+      const id = await renderAndUpload({ mag: m, values: state.values, opts: coverOpts(), onProgress: (n, total) => say(`Printing page ${Math.min(n + 1, total)} of ${total}...`) });
+      say('Binding your magazine...');
+      made = { id, ...(await finishOrder({ id, kind: printed ? 'print' : 'digital', finish: form.finish.value, title: `${m.title}: ${who}` })) };
+      form['order-id'].value = id;
+      form.pdf.value = made.pdf;
+    } catch (err) {
+      console.error(err);
+      if (printed) {
+        reset();
+        alert('Sorry, we could not prepare your printed copy just now. Please try again in a moment, or choose the digital magazine.');
+        return;
+      }
+      // Digital orders still go through: we can make the PDF from the answers.
+    }
+  }
+
+  // 2. Record the order, then 3. go to payment.
   try {
+    say('Sending your story...');
     const res = window.PREVIEW ? { ok: true } : await fetch('/', { method: 'POST', body: new FormData(form) });
     if (!res.ok) throw new Error(res.status);
+    if (printed && made?.checkout) { location.href = made.checkout; return; }
     const pay = checkout[tier];
     if (pay) {
       const url = new URL(pay);
@@ -216,7 +254,7 @@ form.addEventListener('submit', async e => {
       location.href = new URL(form.getAttribute('action'), location.href).href;
     }
   } catch {
-    btn.disabled = false; btn.textContent = 'Place my order';
+    reset();
     alert('Sorry, that did not send. Please check your connection and try again.');
   }
 });
