@@ -191,6 +191,8 @@ Higgsfield credits: about 4.4 left on 2026-09-25 after the Letter Song verses (i
 ## Other projects
 - PrintPals (free printable worksheet website, live at https://printpals.web.app) lives on its own branch
   `claude/printpals`. Keep it separate from Brainlings.
+  OWNER RULE: every new PrintPals batch is premium Plus content (monthly subscription): the best out there, several designs,
+  series to collect, seasonal drops, glue for parents and teachers. Full PrintPals notes are in CLAUDE.md on that branch.
 
 ## Other projects (paused)
 - `samesies/`: daily crowd-guessing web game prototype (owner found it boring; paused).
