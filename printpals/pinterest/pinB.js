@@ -2,7 +2,8 @@
 const { chromium } = require('playwright');
 const fs = require('fs'), path = require('path');
 const tools = require('./tools.json');
-const hooks = require('./hooks.json');
+const jobs = require('./jobsB.json');
+const byId = Object.fromEntries(tools.map((t) => [t.id, t]));
 const pub = path.resolve(__dirname, '../../pp-branch/printpals/public');
 const logo = fs.readFileSync(pub + '/img/logo.svg', 'utf8');
 const src = path.resolve(__dirname, 'src');
@@ -21,10 +22,9 @@ h1{margin:10px 0 12px;font:800 76px/1 B;color:#2d2350;letter-spacing:-1px}
 .url{margin-top:16px;font:800 26px N;color:#8a82a6}`;
 (async () => {
   const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1000, height: 1500 } });
-  for (const t of tools) {
-    if (!hooks[t.id]) continue;
-    const [hook, head, sub] = hooks[t.id], c = bold[t.tint] || '#ff6b6b';
-    const img = fs.existsSync(`${src}/${t.id}-1.png`) && t.id !== 'coding' ? `${src}/${t.id}-0.png` : `${src}/${t.id}-0.png`;
+  for (const j of jobs) {
+    const t = byId[j.id], hook = j.hook, head = j.head, sub = j.sub, c = bold[t.tint] || '#ff6b6b';
+    const img = `${src}/${t.id}-${j.img}.png`;
     const html = `<html><head><style>${css}</style></head><body style="background:linear-gradient(160deg,${c},${c}dd)"><div class="dots"></div>
 <div class="brand">${logo}<span>Print<b>Pals</b></span></div><div class="tag">${t.plus ? '✨ 7 DAYS FREE' : 'FREE'}</div>
 <div class="sheet"><img src="file://${img}"></div>
@@ -34,7 +34,7 @@ h1{margin:10px 0 12px;font:800 76px/1 B;color:#2d2350;letter-spacing:-1px}
     // Keep the sheet clear of the text card.
     await p.evaluate(() => { const s = document.querySelector('.sheet'), c = document.querySelector('.card'); const room = c.getBoundingClientRect().top - 150 - 30; const img = s.querySelector('img'); const r = img.naturalWidth / img.naturalHeight; const w = Math.min(700, room * r); s.style.width = w + 'px'; });
     await p.waitForTimeout(100);
-    await p.screenshot({ path: `${pub}/pins/b-${t.id}.jpg`, type: 'jpeg', quality: 84 });
+    await p.screenshot({ path: `${pub}/pins/b-${j.key}.jpg`, type: 'jpeg', quality: 84 });
   }
   await b.close();
 })();
