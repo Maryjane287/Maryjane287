@@ -170,7 +170,7 @@
 
   // Remember what this family has made, for the "My PrintPals shelf" page (on this device only).
   function shelf() {
-    const v = values(), variant = String(v.volume || v.story || v.level || (v.month === '' ? String(new Date().getMonth()) : v.month) || v.age || '');
+    const v = values(), variant = String(v.volume || v.book || v.story || v.level || (v.month === '' ? String(new Date().getMonth()) : v.month) || v.age || '');
     let made = []; try { made = JSON.parse(store.get('pp-made') || '[]'); } catch (e) { made = []; }
     made.push({ id: form.dataset.tool, v: variant, t: Date.now() });
     store.set('pp-made', JSON.stringify(made.slice(-300)));
