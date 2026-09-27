@@ -174,17 +174,12 @@ const realLife = (mag, pages, name) => {
 </section>`;
 };
 
-// Real buyers' reviews, filled in by /assets/reviews.js. Until the first ones
-// arrive it invites people to be among the first (we never invent reviews).
+// Real buyers' reviews, filled in by /assets/reviews.js. The section stays
+// hidden until the first real review arrives (we never invent reviews).
 const reviewsSection = (magSlug = '', tint = false) => `
-<section class="section${tint ? ' section-tint' : ''} reviews-sec" data-reviews="${magSlug}">
+<section class="section${tint ? ' section-tint' : ''} reviews-sec" data-reviews="${magSlug}" hidden>
   <div class="section-head"><p class="kicker">Real buyers, real reactions</p><h2>What people are saying</h2><p class="rev-summary" hidden></p></div>
   <div class="rev-list" hidden></div>
-  <div class="rev-empty">
-    <p class="rev-empty-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-    <h3>Be one of our very first reviewers</h3>
-    <p>We are a brand new shop, so there are no reviews here yet, and we will never make any up. After your magazine arrives we will ask how it went. Your words and a photo of the big moment will appear right here.</p>
-  </div>
 </section>`;
 
 const steps = `
