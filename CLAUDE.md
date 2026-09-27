@@ -79,11 +79,10 @@ use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in 
 for painted pictures on every sheet.
 Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
 (colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
-fractions, colour by number, spot the difference. PINTEREST FILES (owner rule): every file is EXACTLY 100 pins, named PrintPals-pins-<n>-UPLOAD-ON-<date>.csv.
-Pinterest allows max 100 scheduled and 14 days ahead, so a file is uploaded the day after the previous one runs out, 8 pins a day.
-File 1 upload 12 Oct 2026 (pins 13 to 25 Oct), file 2 upload 26 Oct (27 Oct to 8 Nov), file 3 upload 9 Nov (3 pins waiting in
-printpals/pinterest/next-file-start.json, incl. Easter). Style B pins: pins/b-<key>.jpg made by pinterest/pinB.js from jobsB.json.
-PLUS STAGE 4 (VERSION 40, 143 tools, tools20.js): Little Learner Levels (10 levels, journey map, 5 challenges,
+fractions, colour by number, spot the difference. PINTEREST FILES (owner rule): files of 100 pins, named PrintPals-pins-<n>-UPLOAD-ON-<date>.csv (max 100 scheduled, 14 days ahead,
+8 pins a day). File 1 = 55 pins (only 55 slots free), upload 4 Oct 2026, pins 12 to 18 Oct. File 2 = 100, upload 19 Oct, pins 20 Oct to 1 Nov.
+File 3 upload 2 Nov: 50 pins waiting in printpals/pinterest/next-file-start.json (Easter held for spring), add 50 new ones.
+Style B pins: pins/b-<key>.jpg made by pinterest/pinB.js from jobsB.json. PLUS STAGE 4 (VERSION 40, 143 tools, tools20.js): Little Learner Levels (10 levels, journey map, 5 challenges,
 badge sheet, certificate pointing to the next level; Easier/Harder steps levels), Letters from Poppy (the logo character; letter, challenge page,
 write back page for each month), TEACHER PLAN tools ('teacher': True gates to the teacher plan): class seasonal books (Christmas/Halloween/
 Diwali/Easter/Spring, a named book for every child), end of year memory books (teacher message, friends page, then and now), classroom
