@@ -69,16 +69,36 @@ function renderPalette() {
     `<button type="button" class="swatch" role="radio" aria-label="${k}" aria-checked="${k === state.palette}" data-p="${k}" style="background:linear-gradient(135deg, ${p.bg} 55%, ${p.accent} 55%)"></button>`).join('');
 }
 
+// Optional answers for the fun pages inside (the list, awards, vouchers,
+// recipe and passport), so those pages are about them too.
+const FUN = [
+  ['x_reasons', 'Reasons you love them', 'One per line, up to ten', 'The way they sing in the car\nTheir terrible jokes\nHow they always remember birthdays', 600, true],
+  ['x_awards', 'Awards they deserve', 'Up to four, separated by commas', 'Best dancer, Snack champion, Loudest laugh, Queen of plans', 160],
+  ['x_treats', 'Vouchers to give them', 'Up to four, separated by commas', 'Breakfast in bed, A lie in, Pizza night, One day off chores', 160, false, true],
+  ['x_recipe', 'What they are made of', 'For the recipe page, up to five, separated by commas', 'sunshine, strong coffee, bad puns', 140],
+  ['x_places', 'Places they love', 'Stamps for their passport, up to three', 'Paris, the seaside, Grandma\'s kitchen', 100],
+  ['x_job', 'Their job title, the fun version', 'Printed on their passport', 'Chief hug officer', 40],
+];
+function funPages(m) {
+  const gentle = m.slug === 'pet-memorial-magazine';
+  const rows = FUN.filter(r => !(gentle && r[6])).map(([id, label, hint, eg, max, area]) => {
+    const val = esc(state.values[id] || '');
+    const common = `data-f="${id}" maxlength="${max}" placeholder="${esc(eg)}"`;
+    return `<label class="field${area || max > 60 ? ' wide' : ''}"><span>${esc(label)} <small>${esc(hint)}</small></span>${area ? `<textarea rows="4" ${common}>${val}</textarea>` : `<input type="text" ${common} value="${val}">`}</label>`;
+  }).join('');
+  return `<fieldset class="fun-pages wide"><legend>Make the fun pages about them too <small>(optional)</small></legend><p class="small">These fill the list of reasons we love them, the awards night, ${gentle ? '' : 'the vouchers, '}the recipe and the passport. Leave any blank and we will write something warm for that page.</p><div class="fun-grid">${rows}</div></fieldset>`;
+}
+
 function renderFields() {
   const m = mag();
   const text = m.fields.filter(f => f.type !== 'photo');
   const photos = m.fields.filter(f => f.type === 'photo');
   $('#fields').innerHTML = text.map((f, i) => {
     const val = esc(state.values[f.id] || '');
-    const common = `name="q_${f.id}" data-f="${f.id}" maxlength="${f.max || 200}" placeholder="${esc(f.example)}"${i === 0 ? ' required' : ''}`;
+    const common = `name="q_${f.id}" data-f="${f.id}" maxlength="${f.max || 200}" placeholder="${esc(f.example)}" required`;
     const input = f.type === 'textarea' ? `<textarea ${common}>${val}</textarea>` : `<input type="text" ${common} value="${val}">`;
     return `<label class="field${f.type === 'textarea' || (f.max || 0) > 60 ? ' wide' : ''}"><span>${esc(f.label)}</span>${input}${f.type === 'textarea' ? `<small class="count" data-count="${f.id}"></small>` : ''}</label>`;
-  }).join('') + `<fieldset class="friend-notes wide"><legend>Little notes from family and friends <small>(optional)</small></legend><p class="small">Ask a few people who love them for one sweet line each. They all appear together on a special page in the magazine, each one signed with their name.</p>${[1, 2, 3, 4].map(i => `<div class="friend-note"><input type="text" data-f="note${i}_from" maxlength="30" placeholder="${['Grandma', 'Uncle Sam', 'Emma', 'Leo'][i - 1]}" aria-label="Note ${i}: who it is from" value="${esc(state.values[`note${i}_from`] || '')}"><input type="text" data-f="note${i}_msg" maxlength="110" placeholder="${['You make every room brighter.', 'Still the best dancer I know!', 'Here is to many more adventures together.', 'Love you to the moon and back.'][i - 1]}" aria-label="Note ${i}: their message" value="${esc(state.values[`note${i}_msg`] || '')}"></div>`).join('')}</fieldset><div class="photos">${photos.map(f => `
+  }).join('') + funPages(m) + `<fieldset class="friend-notes wide"><legend>Little notes from family and friends <small>(optional)</small></legend><p class="small">Ask a few people who love them for one sweet line each. They all appear together on a special page in the magazine, each one signed with their name.</p>${[1, 2, 3, 4].map(i => `<div class="friend-note"><input type="text" data-f="note${i}_from" maxlength="30" placeholder="${['Grandma', 'Uncle Sam', 'Emma', 'Leo'][i - 1]}" aria-label="Note ${i}: who it is from" value="${esc(state.values[`note${i}_from`] || '')}"><input type="text" data-f="note${i}_msg" maxlength="110" placeholder="${['You make every room brighter.', 'Still the best dancer I know!', 'Here is to many more adventures together.', 'Love you to the moon and back.'][i - 1]}" aria-label="Note ${i}: their message" value="${esc(state.values[`note${i}_msg`] || '')}"></div>`).join('')}</fieldset><div class="photos">${photos.map(f => `
     <label class="photo-drop"><span><b>+</b>${esc(f.label)}</span><input type="file" name="${f.id}" data-photo="${f.id}" accept="image/*"></label>`).join('')}</div>`;
   updateCounts();
 }
