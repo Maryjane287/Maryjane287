@@ -1,4 +1,4 @@
-// Renders all 20 finished pages of a buyer's magazine in their own browser and
+// Renders all 24 finished pages of a buyer's magazine in their own browser and
 // uploads them, so the website can make the print-ready PDF without any help.
 import { renderFullMagazine } from './covers.js';
 

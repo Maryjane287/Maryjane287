@@ -1,7 +1,7 @@
 {
   "name": "Cover Story",
   "tagline": "Make them the cover story",
-  "description": "Personalised keepsake magazines made from your memories. Answer a few fun questions, add photos, and get a beautiful magazine all about the person you love. A 20 page magazine, sent as an instant PDF anywhere in the world.",
+  "description": "Personalised keepsake magazines made from your memories. Answer a few fun questions, add photos, and get a beautiful magazine all about the person you love. A 24 page magazine, sent as an instant PDF anywhere in the world.",
   "url": "https://lively-cobbler-7b3eb5.netlify.app",
   "email": "graceandloannesofficial@gmail.com",
   "company": "Grace and Loannes Ltd",
@@ -9,9 +9,9 @@
   "pinterestDomainVerify": "",
   "pinterestTagId": "",
   "tiers": [
-    { "id": "pdf", "label": "Instant PDF", "blurb": "Their 20 page magazine, ready to download, print or send by message", "gbp": 9, "usd": 12 },
-    { "id": "cards", "label": "PDF plus card set", "blurb": "The 20 page magazine plus matching printable cards and gift tags", "gbp": 12, "usd": 16, "popular": true },
-    { "id": "print", "label": "Printed magazine", "blurb": "Glossy or matte A4 magazine, printed near them and posted. Shipping is added at checkout", "gbp": 19.5, "usd": 26, "soon": true },
+    { "id": "pdf", "label": "Instant PDF", "blurb": "Their 24 page magazine, ready to download, print or send by message", "gbp": 9, "usd": 12 },
+    { "id": "cards", "label": "PDF plus card set", "blurb": "The 24 page magazine plus matching printable cards and gift tags", "gbp": 12, "usd": 16, "popular": true },
+    { "id": "print", "label": "Printed magazine", "blurb": "Glossy or matte A4 magazine, printed near them and posted. Shipping is added at checkout", "gbp": 21.5, "usd": 29, "soon": true },
     { "id": "premium", "label": "Premium gift edition", "blurb": "Extra pages, thicker cover and a handwritten style gift note", "gbp": 39, "usd": 49, "soon": true }
   ],
   "peecho": { "offerings": { "glossy": 7380360, "matte": 7380353 } },

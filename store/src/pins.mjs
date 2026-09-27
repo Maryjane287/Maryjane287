@@ -36,7 +36,7 @@ const pinHtml = (mag, ex, design) => {
     <div class="top">${design === baseDesign(mag) ? 'Made in 5 minutes' : esc(DESIGNS[design].label) + ' design'}<b>${esc(mag.pinTitle)}</b></div>
     <span class="spark" style="left:90px;top:330px">&#10022;</span><span class="spark" style="right:90px;top:900px;font-size:44px">&#10022;</span>
     <div class="wrap">${cover}</div>
-    <div class="band">Answer a few fun questions, add photos. A 20 page magazine, sent as an instant PDF.<span>${esc(site.name)}</span></div>
+    <div class="band">Answer a few fun questions, add photos. A 24 page magazine, sent as an instant PDF.<span>${esc(site.name)}</span></div>
   </body></html>`;
 };
 

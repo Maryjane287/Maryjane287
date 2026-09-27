@@ -317,3 +317,11 @@ p { margin: 0 0 1em; }
 .finish-opt input { accent-color: var(--coral); margin-top: 4px; }
 .finish-opt small { display: block; color: var(--soft); font-size: 13px; }
 .order-progress { font-weight: 700; color: var(--coral); }
+.friend-notes { grid-column: 1 / -1; border: 2px dashed rgba(29, 26, 47, .16); border-radius: 18px; padding: 16px 18px 18px; margin: 4px 0 0; display: grid; gap: 10px; min-width: 0; }
+.friend-notes legend { font-weight: 700; font-size: 15px; padding: 0 6px; }
+.friend-notes legend small { font-weight: 400; opacity: .7; }
+.friend-notes .small { margin: 0 0 4px; }
+.friend-note { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.4fr); gap: 8px; }
+.friend-note input { font: 400 16px/1.4 'Outfit', sans-serif; padding: 12px 14px; border-radius: 12px; border: 2px solid rgba(29, 26, 47, .14); background: var(--paper); color: var(--ink); width: 100%; min-width: 0; }
+.friend-note input:focus { outline: none; border-color: var(--coral); box-shadow: 0 0 0 4px rgba(255, 107, 91, .18); }
+@media (max-width: 520px) { .friend-note { grid-template-columns: 1fr; } }

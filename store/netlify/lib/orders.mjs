@@ -1,9 +1,9 @@
-// Order files: each buyer's browser renders their 20 finished pages and uploads
+// Order files: each buyer's browser renders their 24 finished pages and uploads
 // them here. We stitch them into the print-ready PDF and, for printed copies,
 // create a Peecho publication so the buyer can pay Peecho directly.
 import { PDFDocument } from 'pdf-lib';
 
-export const PAGES = 20;
+export const PAGES = 24;
 const A4 = [595.28, 841.89]; // points
 const MAX_PAGE_BYTES = 5 * 1024 * 1024;
 
