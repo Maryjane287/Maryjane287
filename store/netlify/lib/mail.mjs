@@ -4,6 +4,7 @@
 import { idOk, orderStatus } from './orders.mjs';
 
 const DAY = 24 * 60 * 60 * 1000;
+const REVIEW_AFTER = 5 * DAY;
 const MAX_ATTACH = 15 * 1024 * 1024; // Gmail allows 25MB once encoded
 const emailOk = e => /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(String(e || '')) && String(e).length <= 120;
 const clean = (s, n) => String(s || '').replace(/[\r\n<>]/g, ' ').trim().slice(0, n);
@@ -19,9 +20,9 @@ export async function gmailSender(env) {
 
 // Saved when the order is finished. The gift is sent at 8am in the buyer's own
 // time zone on the chosen day, or straight away when no day is picked.
-export async function saveOrderInfo(store, id, { kind, email, title, who, gift, tz } = {}, now = Date.now()) {
+export async function saveOrderInfo(store, id, { kind, email, title, who, gift, tz, mag } = {}, now = Date.now()) {
   if (!idOk(id) || await store.get(`${id}/order.json`, { type: 'text' })) return;
-  const info = { kind: kind === 'print' ? 'print' : 'digital', email: emailOk(email) ? email : '', title: clean(title, 140), who: clean(who, 60) };
+  const info = { kind: kind === 'print' ? 'print' : 'digital', email: emailOk(email) ? email : '', title: clean(title, 140), who: clean(who, 60), mag: /^[a-z0-9-]{2,60}$/.test(mag || '') ? mag : '' };
   if (info.kind === 'digital' && gift && emailOk(gift.email)) {
     let sendAt = now;
     const d = /^(\d{4})-(\d{2})-(\d{2})$/.exec(gift.date || '');
@@ -44,8 +45,17 @@ function buyerEmail(info, links, origin, now) {
   const gift = info.gift ? `<p style="font-size:15px;line-height:1.5;margin:22px 0 0">We will send ${esc(info.gift.name || who)} their copy ${info.gift.sendAt <= now ? 'right now' : 'on the morning of the day you picked'}, with your name on it.</p>` : '';
   return {
     subject: `Your magazine for ${who} is ready`,
-    html: wrap(`<h1 style="font-family:Georgia,serif;font-weight:400;font-size:30px;margin:0 0 12px">It's ready!</h1><p style="font-size:16px;line-height:1.55;margin:0 0 22px">Thank you for your order. Your magazine for ${esc(who)} is finished and waiting for you.</p>${button(links.pdf, 'Download my magazine')}${cards}${gift}<p style="font-size:13px;line-height:1.5;color:#8a8499;margin:22px 0 0">Please save it to your phone or computer. For your privacy the download link is removed after 30 days. Questions? Just reply to this email.</p>`),
+    html: wrap(`<h1 style="font-family:Georgia,serif;font-weight:400;font-size:30px;margin:0 0 12px">It's ready!</h1><p style="font-size:16px;line-height:1.55;margin:0 0 22px">Thank you for your order. Your magazine for ${esc(who)} is finished and waiting for you.</p>${button(links.pdf, 'Download my magazine')}${cards}${gift}<p style="font-size:15px;line-height:1.5;margin:26px 0 8px">Once you have given it, we would love to hear how it went.</p><a href="${esc(links.review)}" style="color:#ff6f59;font-weight:700">Leave a review and a photo</a><p style="font-size:13px;line-height:1.5;color:#8a8499;margin:22px 0 0">Please save it to your phone or computer. For your privacy the download link is removed after 30 days. Questions? Just reply to this email.</p>`),
     text: `Your magazine for ${who} is ready.\n\nDownload it: ${links.pdf}\n${links.cards ? `Card set: ${links.cards}\n` : ''}\nPlease save it, the link is removed after 30 days for your privacy.\n\nCover Story\n${origin}`,
+  };
+}
+
+function reviewEmail(info, links) {
+  const who = info.who || 'them';
+  return {
+    subject: `Did ${who} love it?`,
+    html: wrap(`<h1 style="font-family:Georgia,serif;font-weight:400;font-size:28px;margin:0 0 12px">Did ${esc(who)} love it?</h1><p style="font-size:16px;line-height:1.55;margin:0 0 22px">We hope your magazine made someone smile. Would you tell us how it went? A few words and, if you like, a photo of the moment help other people find the perfect gift too.</p>${button(links.review, 'Leave a review')}<p style="font-size:13px;line-height:1.5;color:#8a8499;margin:22px 0 0">It takes a minute. Thank you for choosing us.</p>`),
+    text: `Did ${who} love it? Tell us how it went: ${links.review}\n\nThank you for choosing Cover Story.`,
   };
 }
 
@@ -66,7 +76,7 @@ export async function deliverOrder(store, id, { origin, send, now = Date.now() }
   if (!info || info.kind !== 'digital') return true;
   const status = await orderStatus(store, id, origin);
   if (!status.paid) return false;
-  const links = { pdf: `${status.pdf}&dl=1`, cards: status.cards && `${status.cards}&dl=1` };
+  const links = { pdf: `${status.pdf}&dl=1`, cards: status.cards && `${status.cards}&dl=1`, review: `${origin}/review/?id=${id}` };
   let changed = false;
   if (!info.buyerSentAt && info.email) {
     await send({ to: info.email, ...buyerEmail(info, links, origin, now) });
@@ -81,8 +91,13 @@ export async function deliverOrder(store, id, { origin, send, now = Date.now() }
     await send({ to: info.gift.email, ...(info.email ? { replyTo: info.email } : {}), ...giftEmail(info, links, !!cover), attachments });
     info.gift.sentAt = now; changed = true;
   }
+  // A friendly nudge for a review, 5 days after the magazine arrived.
+  if (info.buyerSentAt && !info.reviewAskedAt && info.email && now - info.buyerSentAt >= REVIEW_AFTER) {
+    await send({ to: info.email, ...reviewEmail(info, links) });
+    info.reviewAskedAt = now; changed = true;
+  }
   if (changed) await store.set(`${id}/order.json`, JSON.stringify(info), { metadata: { created: (await store.getMetadata(`${id}/order.json`))?.metadata?.created || now } });
-  return !!(info.buyerSentAt || !info.email) && (!info.gift || !!info.gift.sentAt);
+  return (!info.email || !!info.reviewAskedAt) && (!info.gift || !!info.gift.sentAt);
 }
 
 // Goes through every order still waiting for an email.

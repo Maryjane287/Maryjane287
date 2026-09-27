@@ -349,3 +349,99 @@ p { margin: 0 0 1em; }
 .gift-fields .wide, .gift-fields p { grid-column: 1 / -1; margin: 0; }
 .gift-fields small { font-weight: 400; opacity: .7; }
 @media (max-width: 560px) { .gift-fields { grid-template-columns: 1fr; } }
+
+/* Shorter cover wall on the home page */
+.wall-short .wall-item:nth-child(n+9) { display: none; }
+
+/* Promises under the prices */
+.trust { list-style: none; padding: 0; margin: 34px auto 0; max-width: 1100px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.trust li { background: var(--paper); border-radius: 18px; padding: 16px 18px; display: grid; grid-template-columns: auto 1fr; column-gap: 12px; align-items: start; box-shadow: 0 10px 24px -18px rgba(29, 26, 47, .4); }
+.trust li > span { font-size: 24px; line-height: 1; grid-row: span 2; }
+.trust b { font-size: 16px; }
+.trust small { color: var(--soft); font-size: 14px; line-height: 1.4; }
+.trust-mini { margin: 6px 0 0; grid-template-columns: 1fr 1fr; gap: 8px; }
+.trust-mini li { padding: 10px 12px; box-shadow: none; }
+.trust-mini li > span { font-size: 18px; }
+.trust-mini b { font-size: 14px; }
+.trust-mini small { font-size: 12.5px; }
+@media (max-width: 560px) { .trust-mini { grid-template-columns: 1fr; } }
+
+/* Reviews */
+.stars { color: #ffb21e; letter-spacing: 2px; white-space: nowrap; }
+.stars i { font-style: normal; color: rgba(29, 26, 47, .15); }
+.rev-summary { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; font-size: 18px; }
+.rev-summary .stars { font-size: 24px; }
+.rev-summary > span:not(.stars) { color: var(--soft); }
+.rev-list { columns: 3 280px; column-gap: 18px; max-width: 1160px; margin: 0 auto; }
+.rev { break-inside: avoid; margin: 0 0 18px; background: var(--paper); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); }
+.rev img { display: block; width: 100%; max-height: 380px; object-fit: cover; }
+.rev figcaption { padding: 18px 20px 20px; }
+.rev blockquote { margin: 8px 0 12px; font-size: 17px; line-height: 1.5; }
+.rev-who { margin: 0; font-size: 15px; }
+.rev-verified { display: inline-block; margin-left: 6px; font-size: 12px; font-weight: 700; color: #1d7a52; background: #dff6ea; padding: 2px 8px; border-radius: 99px; vertical-align: 2px; }
+.rev-verified::before { content: '\2713  '; }
+.rev-meta { margin: 4px 0 0; font-size: 13px; color: var(--soft); }
+.rev-empty { max-width: 620px; margin: 0 auto; text-align: center; background: var(--paper); border-radius: var(--radius); padding: 30px 26px; border: 2px dashed rgba(29, 26, 47, .14); }
+.rev-empty-stars { font-size: 34px; letter-spacing: 6px; color: #ffb21e; margin: 0 0 6px; animation: twinkle 2.4s ease-in-out infinite; }
+.rev-empty p:last-child { color: var(--soft); margin: 0; }
+@keyframes twinkle { 50% { opacity: .55; transform: scale(.96); } }
+
+/* Review page */
+.review-page { max-width: 680px; margin: 0 auto; }
+.review-form { display: grid; gap: 16px; background: var(--paper); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow); }
+.rev-stars { display: flex; justify-content: center; gap: 6px; }
+.rev-star { font-size: 46px; line-height: 1; background: none; border: 0; cursor: pointer; color: rgba(29, 26, 47, .15); transition: transform .15s, color .15s; padding: 0 2px; }
+.rev-star.on { color: #ffb21e; }
+.rev-star:hover { transform: scale(1.15) rotate(-6deg); }
+.rev-star-label { text-align: center; margin: -8px 0 0; font-weight: 700; color: var(--coral-dk); }
+.rev-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 560px) { .rev-row { grid-template-columns: 1fr; } }
+.rev-preview { max-height: 220px; width: auto; border-radius: 14px; justify-self: start; }
+.rev-msg { color: var(--coral-dk); font-weight: 700; margin: 0; }
+.field small { font-weight: 400; opacity: .7; }
+
+/* Two magazines per row on phones, so the home page is quick to scroll */
+@media (max-width: 760px) {
+  .mag-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .mag-card-cover { padding: 14px 16px 0; }
+  .mag-card-body { padding: 12px 14px 16px; }
+  .mag-card-body h3 { font-size: 19px; margin-bottom: 4px; }
+  .mag-card-body p:not(.kicker):not(.from) { display: none; }
+  .mag-card-body .kicker { font-size: 10px; letter-spacing: .1em; }
+  .mag-card-body .from { font-size: 13px; margin: 0; }
+}
+
+/* See it for real */
+.real-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: 1200px; margin: 0 auto; }
+.real-scene { margin: 0; }
+.real-stage { position: relative; aspect-ratio: 4 / 3.4; border-radius: var(--radius); overflow: hidden; display: grid; place-items: center; box-shadow: var(--shadow); }
+.real-scene figcaption { text-align: center; margin-top: 14px; color: var(--soft); font-size: 15px; line-height: 1.4; }
+.real-scene figcaption b { display: block; color: var(--ink); font-size: 18px; margin-bottom: 2px; }
+.real-scene .cv, .real-scene .pg { pointer-events: none; }
+/* printed copy lying on a wooden table */
+.real-print .real-stage { background: radial-gradient(circle at 20% 15%, rgba(255, 255, 255, .35), transparent 45%), repeating-linear-gradient(96deg, rgba(120, 72, 38, .07) 0 2px, transparent 2px 22px), linear-gradient(160deg, #d9a877, #b97f4f); }
+.mock-mag { position: relative; width: 46%; aspect-ratio: 210 / 297; transform: perspective(1200px) rotateX(34deg) rotateZ(-16deg) translateY(-4%); transform-style: preserve-3d; }
+.mock-pages { position: absolute; inset: 0; transform: translate(5px, 7px); background: repeating-linear-gradient(0deg, #fff 0 1px, #e8e3dc 1px 2px); border-radius: 2px 5px 5px 2px; box-shadow: 18px 30px 30px -8px rgba(60, 30, 10, .55); }
+.mock-cover { position: absolute; inset: 0; border-radius: 2px 5px 5px 2px; overflow: hidden; box-shadow: inset 6px 0 8px -4px rgba(0, 0, 0, .25); }
+.mock-cover::after { content: ''; position: absolute; inset: 0; background: linear-gradient(115deg, rgba(255, 255, 255, .38) 0%, transparent 32%, transparent 60%, rgba(255, 255, 255, .12) 75%, transparent 90%); pointer-events: none; }
+.mock-tag { position: absolute; right: 7%; bottom: 11%; background: #fffaf2; color: var(--ink); font: 400 clamp(14px, 1.6vw, 19px)/1.1 'Caveat', 'DM Serif Display', cursive; padding: 10px 16px 10px 22px; border-radius: 4px 10px 10px 4px; transform: rotate(8deg); box-shadow: 4px 8px 14px rgba(60, 30, 10, .35); clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 0 50%); }
+.mock-tag span { color: var(--coral); }
+/* open on a soft blanket */
+.real-open .real-stage { background: radial-gradient(circle at 70% 20%, #fff 0, transparent 50%), linear-gradient(150deg, #f6e3ef, #e8d4f2); }
+.mock-spread { display: grid; grid-template-columns: 1fr 1fr; width: 86%; transform: perspective(1400px) rotateX(24deg) rotateZ(4deg); filter: drop-shadow(0 26px 22px rgba(70, 40, 90, .35)); }
+.mock-left, .mock-right { position: relative; overflow: hidden; aspect-ratio: 210 / 297; }
+.mock-left { border-radius: 4px 0 0 4px; transform: perspective(900px) rotateY(8deg); transform-origin: right; }
+.mock-right { border-radius: 0 4px 4px 0; transform: perspective(900px) rotateY(-8deg); transform-origin: left; }
+.mock-left::after, .mock-right::after { content: ''; position: absolute; inset: 0; pointer-events: none; }
+.mock-left::after { background: linear-gradient(90deg, transparent 70%, rgba(0, 0, 0, .22)); }
+.mock-right::after { background: linear-gradient(270deg, transparent 70%, rgba(0, 0, 0, .18)); }
+/* on their phone */
+.real-phone .real-stage { background: radial-gradient(circle at 30% 80%, rgba(255, 255, 255, .5), transparent 50%), linear-gradient(160deg, #bfe9d8, #9ad3f0); }
+.mock-phone { width: 35%; aspect-ratio: 9 / 18.5; background: #1d1a2f; border-radius: 28px; padding: 7px; transform: rotate(-6deg); box-shadow: 0 30px 40px -14px rgba(20, 60, 80, .55); }
+.mock-screen { height: 100%; border-radius: 22px; background: #efe7dd; padding: 16% 8% 8%; display: flex; flex-direction: column; gap: 6%; overflow: hidden; }
+.mock-bubble { margin: 0; align-self: flex-end; background: #d9fdd3; font-size: clamp(9px, .95vw, 12px); line-height: 1.25; padding: 6px 9px; border-radius: 10px 10px 2px 10px; box-shadow: 0 1px 1px rgba(0, 0, 0, .12); }
+.mock-reply { align-self: flex-start; background: #fff; border-radius: 10px 10px 10px 2px; }
+.mock-file { align-self: flex-end; width: 74%; border-radius: 6px; overflow: hidden; border: 4px solid #d9fdd3; box-shadow: 0 1px 2px rgba(0, 0, 0, .15); }
+@media (max-width: 900px) {
+  .real-grid { grid-template-columns: 1fr; max-width: 460px; }
+}
