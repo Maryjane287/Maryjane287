@@ -79,7 +79,15 @@ use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in 
 for painted pictures on every sheet.
 Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
 (colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
-fractions, colour by number, spot the difference. PLUS STAGE 9 (VERSION 45, 164 tools, tools25.js): Ocean Explorer kit (explorer series with dino and
+fractions, colour by number, spot the difference. PLUS STAGE 10 (VERSION 46, 168 tools, tools26.js): Safari Explorer kit (explorer series 4: 8 cards,
+height chart vs child, who am I riddles, zoo bingo), Detective Academy (academy series with Superhero and Space: ID, fingerprint lab,
+secret codes via packRun secretcode custom, two logic mysteries CASES with upside down answers, case notebook, training),
+All About My Special Person (id grownupbook, gift book for any grown-up typed in 'who': portrait, favourites, always says,
+interview, love coupons, World's Best award; looks rose/sky/sunny; renamed from Grown-Up to avoid a hyphen break on pins),
+Farm Friends kit (ages 2 to 6: cards with baby names and sounds, mummies and babies, who says what, what the farm gives us).
+Helpers drawAndTellPage, factCardsPage. Home age buttons fixed (owner said they did nothing): picking an age now keeps sections collapsed,
+puts the closest matches first (narrowest age range), updates the section counts and shows 'Showing N printables for age X' with
+a Show all ages button. 123 pins waiting (file 3 takes 100). PLUS STAGE 9 (VERSION 45, 164 tools, tools25.js): Ocean Explorer kit (explorer series with dino and
 space: 8 creature cards by zone, down to the deep, bingo, design, ocean promise), Little Gardener kit (optional plant name: seed diary,
 growth chart in cm, parts of a plant with word bank, what plants need, bug hunt, jobs), Love and Kindness pack (Feb drop, looks
 pink/rainbow: 28 day kindness calendar, love notes KIND_NOTES, I love you because, compliment cards, bingo), Lunar New Year pack
@@ -108,7 +116,7 @@ sound-button reading, certificate to next book; Easier/Harder = book), Boredom B
 Shelf now has Phonics Books and a Keepsakes and kits group. 15 new pins added to next-file-start.json (63 waiting for file 3).
 PINTEREST FILES (owner rule): files of 100 pins, named PrintPals-pins-<n>-UPLOAD-ON-<date>.csv (max 100 scheduled, 14 days ahead,
 8 pins a day). File 1 = 55 pins (only 55 slots free), upload 4 Oct 2026, pins 12 to 18 Oct. File 2 = 100, upload 19 Oct, pins 20 Oct to 1 Nov.
-File 3 upload 2 Nov: first 100 of 111 waiting pins in printpals/pinterest/next-file-start.json (Easter held for spring), add 50 new ones.
+File 3 upload 2 Nov: first 100 of 123 waiting pins in printpals/pinterest/next-file-start.json (Easter held for spring), add 50 new ones.
 Style B pins: pins/b-<key>.jpg made by pinterest/pinB.js from jobsB.json. PLUS STAGE 4 (VERSION 40, 143 tools, tools20.js): Little Learner Levels (10 levels, journey map, 5 challenges,
 badge sheet, certificate pointing to the next level; Easier/Harder steps levels), Letters from Poppy (the logo character; letter, challenge page,
 write back page for each month), TEACHER PLAN tools ('teacher': True gates to the teacher plan): class seasonal books (Christmas/Halloween/

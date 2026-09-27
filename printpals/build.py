@@ -12,7 +12,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '45'
+VERSION = '46'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -2675,7 +2675,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'oceankit', 'cat': 'packs', 'slug': 'ocean-activity-pack-for-kids', 'tint': '#e9f6fc', 'icon': '🐙', 'new': True, 'plus': True,
+        'id': 'oceankit', 'cat': 'packs', 'slug': 'ocean-activity-pack-for-kids', 'tint': '#e9f6fc', 'icon': '🐙', 'plus': True,
         'nav': 'Ocean Explorer kit',
         'title': 'Ocean Printables for Kids | Sea Creature Cards, Ocean Zones, Beach Bingo | PrintPals',
         'desc': 'A personalised ocean activity pack: 8 sea creature fact cards, the ocean zones from sunlight to the abyss, counting, rock pool and beach bingo, design a sea creature, an ocean promise, ocean words, colouring and an Ocean Explorer award.',
@@ -2687,7 +2687,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'garden', 'cat': 'packs', 'slug': 'gardening-activity-pack-for-kids', 'tint': '#f1f8e6', 'icon': '🌱', 'new': True, 'plus': True,
+        'id': 'garden', 'cat': 'packs', 'slug': 'gardening-activity-pack-for-kids', 'tint': '#f1f8e6', 'icon': '🌱', 'plus': True,
         'nav': 'Little Gardener kit',
         'title': 'Gardening Printables for Kids | Seed Diary, Plant Growth Chart, Parts of a Plant, Bug Hunt | PrintPals',
         'desc': 'A personalised gardening pack for kids: a seed diary, a plant growth chart in centimetres, parts of a plant to label, what plants need cards, a garden bug hunt, gardener jobs, garden words, colouring and a Green Fingers award.',
@@ -2700,7 +2700,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'kindness', 'cat': 'packs', 'slug': 'kindness-activity-pack-for-kids', 'tint': '#fff0f5', 'icon': '💗', 'new': True, 'plus': True,
+        'id': 'kindness', 'cat': 'packs', 'slug': 'kindness-activity-pack-for-kids', 'tint': '#fff0f5', 'icon': '💗', 'plus': True,
         'nav': 'Love and Kindness pack',
         'title': 'Kindness Activities for Kids | 28 Day Kindness Calendar, Love Notes, Compliment Cards | PrintPals',
         'desc': 'A personalised love and kindness pack for February and all year: a 28 day kindness calendar, love notes to cut out, I love you because pages, compliment cards, kindness bingo, counting, kind words, colouring and a Kindness Champion award.',
@@ -2713,7 +2713,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'lunar', 'cat': 'packs', 'slug': 'lunar-new-year-activities-for-kids', 'tint': '#fff3e6', 'icon': '🏮', 'new': True, 'plus': True,
+        'id': 'lunar', 'cat': 'packs', 'slug': 'lunar-new-year-activities-for-kids', 'tint': '#fff3e6', 'icon': '🏮', 'plus': True,
         'nav': 'Lunar New Year pack',
         'title': 'Lunar New Year Activities for Kids | Zodiac Animals, Red Envelope, Paper Lantern Craft | PrintPals',
         'desc': 'A personalised Lunar New Year pack: the Great Race with all 12 zodiac animals, find my animal chart, a red envelope to fold, a paper lantern craft, new year wishes, lucky counting, words to trace, a lantern colouring page and a certificate.',
@@ -2724,12 +2724,62 @@ TOOLS += [
         'article': """<h2>A festival for everyone</h2><p>Lunar New Year is celebrated by more than a billion people. Children love finding their animal and those of their family. Tell the story of the Great Race, then make the lantern and fill the red envelope with a kind wish instead of money.</p>""",
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
+    {
+        'id': 'safari', 'cat': 'packs', 'slug': 'safari-animals-activity-pack', 'tint': '#fff4e6', 'icon': '🦁', 'new': True, 'plus': True,
+        'nav': 'Safari Explorer kit',
+        'title': 'Safari Animal Printables for Kids | Animal Fact Cards, Height Chart, Riddles, Zoo Bingo | PrintPals',
+        'desc': 'A personalised safari activity pack: 8 safari animal fact cards, a how tall are they chart, who am I riddle cards, safari spotter bingo for the zoo, counting, design an animal, safari words, colouring and a Safari Ranger award.',
+        'h1': 'Safari Explorer kit',
+        'lead': 'Grab the binoculars. Safari animal cards with wonderful facts, a chart that shows how they measure up next to your child, riddles to guess, spotter bingo for a zoo trip, a mixed-up animal to invent and a Safari Ranger award.',
+        'card': 'Safari animal cards, a height chart, riddles and zoo bingo.',
+        'form': field('Explorer\'s name', '<input type="text" name="name" maxlength="20" placeholder="Leo" autocomplete="off">') + PAPER + SHUFFLE,
+        'article': """<h2>The explorer series</h2><p>The Safari Explorer kit is the fourth in the explorer series, with dinosaurs, space and the ocean. Take the bingo sheet on your next zoo visit, and read the riddles in the car on the way.</p>""",
+        'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'detective', 'cat': 'packs', 'slug': 'detective-activity-pack-for-kids', 'tint': '#eef0fb', 'icon': '🔍', 'new': True, 'plus': True,
+        'nav': 'Detective Academy',
+        'title': 'Detective Activities for Kids | Mystery Puzzles, Fingerprint Lab, Secret Codes, Detective ID | PrintPals',
+        'desc': 'A personalised detective pack for kids: a detective ID badge, a fingerprint lab, secret code messages, two mysteries to solve with suspects and clues, a case notebook, detective training and a Master Detective award.',
+        'h1': 'Detective Academy',
+        'lead': 'Sharp eyes and clever thinking. A detective ID badge, a fingerprint lab, secret messages to crack, two real mysteries to solve with suspect cards and clues, a notebook for mysteries at home and a Master Detective award.',
+        'card': 'Two mysteries to solve, a fingerprint lab and secret codes.',
+        'form': field('Detective\'s name', '<input type="text" name="name" maxlength="20" placeholder="Sam" autocomplete="off">') + PAPER + SHUFFLE,
+        'article': """<h2>Thinking skills in disguise</h2><p>Solving a mystery means reading carefully, ruling things out and explaining why. That is logic, reading and reasoning, all while playing detective. The answers are printed upside down at the bottom of each case for grown-ups.</p>""",
+        'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'grownupbook', 'cat': 'packs', 'slug': 'all-about-my-mum-dad-book', 'tint': '#fff0f5', 'icon': '💝', 'new': True, 'plus': True,
+        'nav': 'All About My Special Person',
+        'title': 'All About My Mum, Dad or Grandma Printable Book | Mother\'s Day and Father\'s Day Gift From Kids | PrintPals',
+        'desc': 'A personalised gift book children make for Mum, Dad, Grandma, Grandad or anyone special: a portrait page, favourite things, they always say, an interview, things we love doing together, love coupons and a World\'s Best award.',
+        'h1': 'All About My Special Person',
+        'lead': 'The gift grown-ups keep forever. Your child draws and writes all about Mum, Dad, Grandma or anyone special: how old they think they are, what they always say, their favourite things, an interview, love coupons and a World\'s Best award.',
+        'card': 'A gift book for Mum, Dad, Grandma or anyone special.',
+        'form': field('Who is it for?', '<input type="text" name="who" maxlength="20" placeholder="Mum" autocomplete="off">')
+        + field('Made by (child\'s name)', '<input type="text" name="name" maxlength="20" placeholder="Mia" autocomplete="off">')
+        + field('Design', seg('look', [('rose', 'Rose pink'), ('sky', 'Sky blue'), ('sunny', 'Sunny yellow')], 'rose')) + PAPER,
+        'article': """<h2>For Mother\'s Day, Father\'s Day and every birthday</h2><p>Type Mum, Mummy, Dad, Grandma, Nana, Auntie or any name, and the whole book changes. Let your child answer on their own, the funny guesses are the best part. Staple it together and wrap it with a ribbon.</p>""",
+        'faq': [('Can I make it for more than one person?', 'Yes. Print one for each person: type a different name in the Who is it for box each time.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'farm', 'cat': 'packs', 'slug': 'farm-animals-activity-pack', 'tint': '#fff4ec', 'icon': '🐄', 'new': True, 'plus': True,
+        'nav': 'Farm Friends kit',
+        'title': 'Farm Animal Printables for Toddlers and Preschool | Baby Animals, Animal Sounds, Farm Bingo | PrintPals',
+        'desc': 'A personalised farm animal pack for little ones: 8 farm animal cards, match mummies and babies, who says what animal sounds, what the farm gives us, farm counting, farm bingo, farm words, colouring and a Little Farmer award.',
+        'h1': 'Farm Friends kit',
+        'lead': 'Moo, baa, oink! Farm animal cards with sounds and baby names, mummies and babies to match, animal noises to read in your silliest voice, where milk, eggs and wool come from, farm bingo and a Little Farmer award.',
+        'card': 'Farm animals, baby names, animal sounds and farm bingo.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="20" placeholder="Emma" autocomplete="off">') + PAPER + SHUFFLE,
+        'article': """<h2>Perfect for the youngest learners</h2><p>Farm animals are often among a child\'s first words. Make every animal sound together, sing Old MacDonald with the cards, and take the bingo sheet to a petting farm.</p>""",
+        'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
 ]
 
 # The homepage sections, in learning order (easiest first). Every tool appears in exactly one section.
 ARRANGE = [
     ('packs', 'Ready-made packs', 'Packs', 'Stop searching. A week, a month or the whole holiday planned for your child, storybooks and activity books, starting school, quick packs, family far away, a learning passport and class packs.',
-     ['pack', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'journal', 'easter', 'levels', 'poppy', 'handwritingbook', 'phonicsbook', 'readers', 'mathsbook', 'winter', 'lunar', 'kindness', 'dinokit', 'spacekit', 'oceankit', 'garden', 'superhero', 'feelingsbook', 'flying', 'adventure', 'familynight', 'cookbook', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack', 'classseason', 'yearbook', 'displays']),
+     ['pack', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'journal', 'easter', 'levels', 'poppy', 'handwritingbook', 'phonicsbook', 'readers', 'mathsbook', 'winter', 'lunar', 'kindness', 'grownupbook', 'dinokit', 'spacekit', 'oceankit', 'safari', 'farm', 'detective', 'garden', 'superhero', 'feelingsbook', 'flying', 'adventure', 'familynight', 'cookbook', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack', 'classseason', 'yearbook', 'displays']),
     ('handwriting', 'Handwriting', 'Handwriting', 'From first pencil lines to joined writing, with real letter shapes and stroke order.',
      ['prewriting', 'scissors', 'names', 'letters', 'mixups', 'joined', 'writingpaper', 'alphabets']),
     ('reading', 'Reading & phonics', 'Reading', 'Letter sounds, CVC words, syllables, sight words, sentences, spelling and stories where your child is the hero.',
@@ -2747,6 +2797,7 @@ ARRANGE = [
 ]
 # Ages each tool suits (first year, last year).
 AGES = {
+    'safari': (3, 9), 'detective': (5, 11), 'grownupbook': (3, 10), 'farm': (2, 6),
     'oceankit': (3, 9), 'garden': (3, 9), 'kindness': (3, 10), 'lunar': (3, 10),
     'readers': (4, 6), 'dinokit': (3, 9), 'spacekit': (4, 10), 'winter': (3, 9),
     'handwritingbook': (3, 7), 'superhero': (3, 9), 'flying': (3, 10), 'feelingsbook': (3, 9),
@@ -2810,7 +2861,7 @@ CAT_TEXT = {a[0]: a[3] for a in ARRANGE}
 NAV_LABEL = {a[0]: a[2] for a in ARRANGE}
 
 
-JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'tools21', 'tools22', 'tools23', 'tools24', 'tools25', 'plus', 'app']
+JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'tools21', 'tools22', 'tools23', 'tools24', 'tools25', 'tools26', 'plus', 'app']
 CONTACT = 'graceandloannesofficial@gmail.com'
 # Stripe customer portal: parents manage, switch or cancel their Plus subscription here.
 STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'
@@ -2984,6 +3035,7 @@ def home():
 <div class="finder">
 <div class="find"><input type="search" id="find" placeholder="Find a worksheet: try name, money or dinosaur" aria-label="Find a worksheet" autocomplete="off"></div>
 <div class="ages" role="group" aria-label="Filter by age">{ages}</div>
+<p class="age-note" id="ageNote" aria-live="polite"></p>
 <div class="jumps">{jumps}</div>
 </div>
 {sections}<p class="none" id="none">Nothing found. Try another word, like letters, maths or colouring.</p></div>
@@ -2991,11 +3043,23 @@ def home():
 (function () {{
   var box = document.getElementById('find'), age = 'all', wrap = box.closest('.wrap');
   function openCat(id) {{ var sec = document.getElementById(id); if (sec && sec.classList.contains('cat')) {{ sec.classList.add('open'); var b = sec.querySelector('.more-btn'); if (b) b.innerHTML = 'Show fewer ▴'; }} }}
+  var ageName = function (a) {{ return a === '8' ? 'ages 8 and up' : 'age ' + a; }};
+  // Remember each section's own order and "show more" layout, so All ages puts everything back.
+  document.querySelectorAll('.cat').forEach(function (sec) {{
+    sec.querySelectorAll('a.tool').forEach(function (a, i) {{ a.dataset.i = i; a.dataset.cls = a.className; }});
+    var b = sec.querySelector('.more-btn'); if (b) b.dataset.label = b.innerHTML;
+  }});
+  function moreLabel(sec) {{
+    var b = sec.querySelector('.more-btn'); if (!b) return;
+    if (sec.classList.contains('open')) {{ b.innerHTML = 'Show fewer ▴'; return; }}
+    if (age === 'all') {{ b.innerHTML = b.dataset.label; return; }}
+    var n = sec.querySelectorAll('a.tool:not(.age-out)').length;
+    b.innerHTML = 'Show all <b>' + n + '</b> for ' + ageName(age) + ' ▾';
+  }}
   document.querySelectorAll('.more-btn').forEach(function (b) {{
-    var label = b.innerHTML;
     b.addEventListener('click', function () {{
       var sec = b.closest('.cat'), open = sec.classList.toggle('open');
-      b.innerHTML = open ? 'Show fewer ▴' : label;
+      moreLabel(sec);
       if (!open) sec.scrollIntoView({{ block: 'start' }});
     }});
   }});
@@ -3003,18 +3067,36 @@ def home():
   if (location.hash) openCat(location.hash.slice(1));
   window.addEventListener('hashchange', function () {{ openCat(location.hash.slice(1)); }});
   function apply() {{
-    var q = box.value.trim().toLowerCase(), any = false;
-    wrap.classList.toggle('finder-on', !!q || age !== 'all');
+    var q = box.value.trim().toLowerCase(), any = false, total = 0;
+    wrap.classList.toggle('finder-on', !!q);
     document.querySelectorAll('.cat').forEach(function (sec) {{
-      var shown = 0;
-      sec.querySelectorAll('a.tool').forEach(function (a) {{
-        var okAge = age === 'all' || (+a.dataset.min <= +age && +a.dataset.max >= +age);
-        var ok = okAge && (!q || a.textContent.toLowerCase().indexOf(q) >= 0 || (a.dataset.keys || '').indexOf(q) >= 0);
-        a.style.display = ok ? '' : 'none'; if (ok) shown++;
+      var grid = sec.querySelector('.tools'), cards = [].slice.call(sec.querySelectorAll('a.tool')), fit = function (a) {{ return age === 'all' || (+a.dataset.min <= +age && +a.dataset.max >= +age); }};
+      // For an age, the closest matches come first: sheets made for that age before ones that suit everyone.
+      cards.sort(function (a, b) {{
+        if (age === 'all') return a.dataset.i - b.dataset.i;
+        var fa = fit(a), fb = fit(b);
+        if (fa !== fb) return fa ? -1 : 1;
+        return ((a.dataset.max - a.dataset.min) - (b.dataset.max - b.dataset.min)) || (a.dataset.i - b.dataset.i);
       }});
-      sec.style.display = shown ? '' : 'none'; if (shown) any = true;
+      var shown = 0, k = 0;
+      cards.forEach(function (a) {{
+        grid.appendChild(a);
+        var okAge = fit(a), ok = okAge && (!q || a.textContent.toLowerCase().indexOf(q) >= 0 || (a.dataset.keys || '').indexOf(q) >= 0);
+        a.style.display = ok ? '' : 'none'; a.classList.toggle('age-out', !okAge);
+        if (age === 'all') a.className = a.dataset.cls;
+        else if (okAge) {{ a.classList.remove('more', 'm-more'); if (k >= 6) a.classList.add('more'); else if (k >= 4) a.classList.add('m-more'); k++; }}
+        if (ok) shown++;
+      }});
+      var row = sec.querySelector('.more-row'); if (row) row.style.display = age !== 'all' && k <= 4 ? 'none' : '';
+      moreLabel(sec);
+      sec.style.display = shown ? '' : 'none'; if (shown) any = true; total += shown;
+      var jump = document.querySelector('.jumps a[href="#' + sec.id + '"]'); if (jump) {{ jump.querySelector('b').textContent = shown; jump.style.display = shown ? '' : 'none'; }}
     }});
     document.getElementById('none').style.display = any ? 'none' : 'block';
+    var note = document.getElementById('ageNote');
+    note.innerHTML = age === 'all' ? '' : '✨ Showing <b>' + total + '</b> printables for ' + ageName(age) + ', best matches first. <button type="button" id="allAges">Show all ages</button>';
+    note.style.display = age === 'all' ? 'none' : 'block';
+    var back = document.getElementById('allAges'); if (back) back.addEventListener('click', function () {{ document.querySelector('.ages button[data-age="all"]').click(); }});
   }}
   box.addEventListener('input', apply);
   document.querySelectorAll('.ages button').forEach(function (b) {{
@@ -3069,7 +3151,7 @@ def shelf_body():
         ('📖', 'My Sight Word Readers', 'readers', [(str(i), f'Reader {i}') for i in range(1, 5)]),
         ('🔤', 'My Phonics Books', 'phonicsbook', [(str(i), f'Book {i}') for i in range(1, 5)]),
         ('🔢', 'My Maths Books', 'mathsbook', [(str(i), f'Book {i}') for i in range(1, 5)]),
-        ('🎂', 'Keepsakes and kits', None, [(k, names[k]['h1']) for k in ['namebook', 'timecapsule', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'adventure', 'familynight', 'cookbook', 'superhero', 'flying', 'feelingsbook', 'dinokit', 'spacekit', 'oceankit', 'garden', 'activitybook', 'monthplan', 'holidayplan']]),
+        ('🎂', 'Keepsakes and kits', None, [(k, names[k]['h1']) for k in ['namebook', 'timecapsule', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'adventure', 'familynight', 'cookbook', 'superhero', 'flying', 'feelingsbook', 'dinokit', 'spacekit', 'oceankit', 'safari', 'farm', 'garden', 'detective', 'grownupbook', 'activitybook', 'monthplan', 'holidayplan']]),
     ]
     data = [{'icon': ic, 'title': ti, 'tool': tool, 'items': [{'v': v, 'name': n, 'url': '/' + names[tool or v]['slug']} for v, n in items]} for ic, ti, tool, items in groups]
     return f"""<h1>My PrintPals shelf</h1>
