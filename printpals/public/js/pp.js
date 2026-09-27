@@ -10618,6 +10618,7 @@ Object.assign(MAKERS, { easter: makeEaster, journal: makeJournal });
     const who = child || 'your child';
     const offer = m === 8 || m === 9 ? ['🎃', `A whole Halloween fun pack for ${who}`, 'Colouring, puzzles, pumpkin faces, treat bag labels and a costume award, with their name on the cover.', '/halloween-activity-pack-for-kids']
       : m >= 10 ? ['🎄', `A Christmas Advent book for ${who}`, '24 days of family moments and activities, a letter to Santa, gift tags and more, with their name on every page.', '/christmas-advent-activity-book-for-kids']
+      : m >= 1 && m <= 3 ? ['🐣', `An Easter egg hunt for ${who}`, 'Rhyming clue cards to hunt around your home, eggs to decorate, colouring and an Egg Hunt Champion award.', '/easter-activity-pack-for-kids']
       : ['📅', `A whole month planned for ${who}`, 'Four weeks of learning that gets a little harder each week, with their name on every page.', '/monthly-learning-plan'];
     const box = document.createElement('div');
     box.className = 'invite no-print';
