@@ -76,7 +76,12 @@ use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in 
 for painted pictures on every sheet.
 Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
 (colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
-fractions, colour by number, spot the difference. PLUS STAGE 1 (VERSION 36, 133 tools, tools17.js): Halloween pack (16 pages, looks pumpkin/moon/candy),
+fractions, colour by number, spot the difference. PLUS STAGE 2 (VERSION 37, 136 tools, tools18.js): birthday time capsule (9 pages, looks confetti/balloons/stars,
+yearly collectible), Diwali pack (rangoliArt makes a new symmetrical pattern each time; finish the rangoli; looks marigold/jewel/peacock),
+Thankful pack (Thanksgiving or Harvest; thankful turkey with numbered lines, gratitude leaves, place cards; looks autumn/cosy/pumpkin),
+storybooks now 8 (snow, jungle, kind added; colouringArt falls back to SEASON_ART). Plus page has an 'Everything in Plus' library grid;
+home plus-band is 'New in Plus'. Seasonal pins file 2 (diwali, timecapsule, thankful). NEXT: Easter/spring, storybook volumes with cover looks,
+monthly Plus drop, journals series. PLUS STAGE 1 (VERSION 36, 133 tools, tools17.js): Halloween pack (16 pages, looks pumpkin/moon/candy),
 Christmas activity book (cover, Advent calendar, 24 day pages with a family moment + colour/count/trace/draw, letter to Santa or Father Christmas,
 Nice List, colouring, puzzles, gift tags, bunting, thank you notes; looks classic/snowy/ginger), My Name Book (page per letter with picture,
 tracing and an affirmation; repeated letters get NAME_WORD2; poster; looks rainbow/ocean/garden/space). Owner wants every premium product in
