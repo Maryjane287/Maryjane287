@@ -340,25 +340,133 @@ export function renderPages(mag, values = {}, { palette = 'coral', portraitOpts 
 
 // The complete magazine for the finished PDF: cover, inside pages, a big
 // feature page and a back cover.
+// The complete 20 page magazine for the finished PDF. Printers bind in
+// multiples of four, so it is always exactly 20 pages.
+const WORD_DIRS = [[1, 0], [0, 1], [1, 1], [1, -1]];
+
+function seeded(str) {
+  let h = 2166136261;
+  for (const c of String(str)) h = Math.imul(h ^ c.charCodeAt(0), 16777619);
+  return () => ((h = Math.imul(h ^ (h >>> 15), 2246822507) ^ Math.imul(h ^ (h >>> 13), 3266489909)) >>> 0) / 4294967296;
+}
+
+// A 12 by 12 word search hiding their name and words from their answers.
+function wordSearch(words, seed) {
+  const N = 12, rnd = seeded(seed), grid = Array.from({ length: N }, () => Array(N).fill(''));
+  const placed = [];
+  for (const w of words) {
+    for (let t = 0; t < 200; t++) {
+      const [dx, dy] = WORD_DIRS[Math.floor(rnd() * WORD_DIRS.length)];
+      const x0 = Math.floor(rnd() * N), y0 = Math.floor(rnd() * N);
+      const cells = [...w].map((_, i) => [x0 + dx * i, y0 + dy * i]);
+      if (cells.some(([x, y]) => x < 0 || y < 0 || x >= N || y >= N)) continue;
+      if (cells.some(([x, y], i) => grid[y][x] && grid[y][x] !== w[i])) continue;
+      cells.forEach(([x, y], i) => { grid[y][x] = w[i]; });
+      placed.push({ w, cells });
+      break;
+    }
+  }
+  const abc = 'ABCDEFGHIJKLMNOPRSTUWY';
+  const letters = grid.map(r => r.map(c => c || abc[Math.floor(rnd() * abc.length)]));
+  return { letters, placed };
+}
+
+function searchWords(v, facts, who) {
+  const out = new Set();
+  String(who).toUpperCase().split(/[^A-Z]+/).filter(w => w.length >= 3 && w.length <= 10).forEach(w => out.add(w));
+  const skip = new Set(['THAT', 'WITH', 'THEY', 'THEIR', 'FROM', 'THIS', 'EVERY', 'ANYTHING', 'NEVER', 'ALWAYS', 'THREE', 'WHEN', 'WHAT', 'THEN', 'THAN', 'OBVIOUSLY']);
+  const pool = facts.flatMap(f => String(v[f.id] || '').toUpperCase().split(/[^A-Z]+/)).filter(w => w.length >= 4 && w.length <= 9 && !skip.has(w));
+  pool.sort((a, b) => b.length - a.length);
+  for (const w of pool) { if (out.size >= 8) break; out.add(w); }
+  for (const w of ['LOVE', 'SMILE', 'LEGEND', 'MAGIC', 'HAPPY', 'STAR']) { if (out.size >= 8) break; out.add(w); }
+  return [...out];
+}
+
 export function renderFullMagazine(mag, values = {}, opts = {}) {
   const p = PALETTES[opts.palette] || PALETTES.coral;
+  const photos = opts.photos || {};
+  const po = opts.portraitOpts || {};
   const v = fillValues(mag, values);
   const who = v.name || v.names || v.forWho || v.family || v.who;
   const from = v.from || v.fromWho || 'all of us';
-  const feature = mag.feature ? [mag.feature[0], v[mag.feature[1]]] : {
-    birthday: ['The moment everyone still talks about', v.moment],
-    anniversary: ['What I love most about you', v.love],
-    newspaper: ['What we miss most', v.miss],
-    kids: ['When I grow up I want to be', v.dream],
-    review: ['The moment we will laugh about forever', v.moment],
-    pet: ['Their most legendary moment', v.moment],
+  const gentle = mag.slug === 'pet-memorial-magazine';
+  const s = mag.cover ? slots(mag, v) : { lines: [], quote: '', credit: '', badge: ['', '', ''] };
+  const facts = mag.fields.filter(f => f.type !== 'photo' && f.type !== 'textarea' && !['name', 'names', 'from', 'fromWho', 'forWho', 'family'].includes(f.id));
+  const legacy = {
+    birthday: ['The moment everyone still talks about', v.moment], anniversary: ['What I love most about you', v.love],
+    newspaper: ['What we miss most', v.miss], kids: ['When I grow up I want to be', v.dream],
+    review: ['The moment we will laugh about forever', v.moment], pet: ['Their most legendary moment', v.moment],
     stars: ['What the stars say about the year ahead', v.prediction],
-  }[mag.layout] || ['A moment to remember', v.message];
+  };
+  const feature = mag.feature ? [mag.feature[0], v[mag.feature[1]]] : legacy[mag.layout] || ['A moment to remember', v.message];
   const style = `style="${vars(p)}"`;
+  const page = (cls, inner, n) => `<div class="pg pg-${cls}" ${style}><div class="pg-in">${inner}</div>${n ? `<span class="pg-num">${n}</span>` : ''}</div>`;
+  const ph = (k, cls) => photoOrPortrait(photos[k], po, p, cls);
+  const rnd = seeded(who + mag.slug);
+
+  const contents = [
+    [3, 'The editor\'s letter'], [4, 'By the numbers'], [5, 'The cover story'], [6, 'The big interview'],
+    [8, gentle ? 'In a word' : 'The fragrance'], [9, feature[0]], [10, `Ten reasons we love ${who}`], [12, gentle ? 'How well did you know them?' : `The ${who} quiz`],
+    [14, 'The pull out poster'], [15, 'Official certificate'], [18, 'Now showing: the movie'], [19, 'The collector\'s card'],
+  ];
+
+  const qa = s.lines.length ? s.lines : facts.slice(0, 3).map(f => [esc(f.label), esc(v[f.id])]);
+  const reasons = [
+    ...facts.map(f => String(v[f.id])).filter(x => x.length > 8 && !/^\d/.test(x)).slice(0, 4).map(esc),
+    'Every laugh they have ever started', 'How they make ordinary days feel special', 'The stories we will be telling for years',
+    'Being exactly, completely themselves', 'The love they give without even trying', 'All the little moments nobody else saw',
+    'Making the world a warmer place', 'Simply, wonderfully, being ours',
+  ].slice(0, 10);
+
+  const quizFacts = facts.filter(f => String(v[f.id]).length > 1).slice(0, 3);
+  const quiz = quizFacts.map((f, i) => {
+    const right = String(v[f.id]);
+    const others = [...new Set(mag.examples.map(e => e.values?.[f.id]).filter(x => x && x !== right))];
+    const picks = [right, ...others.slice(0, 2)];
+    while (picks.length < 3) picks.push(['None of the above', 'Nobody knows'][picks.length - 1]);
+    const opts3 = picks.map(x => [x, rnd()]).sort((a, b) => a[1] - b[1]).map(x => x[0]);
+    return { q: f.label, opts: opts3, a: 'ABC'[opts3.indexOf(right)], n: i + 1 };
+  });
+
+  const words = searchWords(v, facts, who);
+  const ws = wordSearch(words, who + mag.slug);
+  const solved = new Set(ws.placed.flatMap(x => x.cells.map(([a, b]) => `${a},${b}`)));
+  const gridHtml = (mark) => `<div class="ws-grid${mark ? ' ws-mini' : ''}">${ws.letters.map((r, y) => r.map((c, x) => `<i${mark && solved.has(`${x},${y}`) ? ' class="on"' : ''}>${c}</i>`).join('')).join('')}</div>`;
+
+  const notes = `Top notes of ${esc(String(s.quote || v.words || 'pure joy').replace(/&[^;]+;/g, '').split(/,\s*|\s+and\s+/).filter(Boolean).slice(0, 3).join(', ').toLowerCase())}. A heart of pure ${gentle ? 'love' : 'mischief'}.`;
+  const reviews = gentle
+    ? [['Heartwarming', 'Everyone who knew them'], ['Forever loved', 'The family'], ['A true friend', 'The sofa']]
+    : [['An absolute triumph', 'The Daily Hug'], ['I laughed, I cried', 'Family Times'], ['Iconic from start to finish', 'The Group Chat']];
+  const stats = ['Charm', 'Kindness', 'Humour', gentle ? 'Cuddles' : 'Chaos', 'Legend status'].map(k => [k, 84 + Math.floor(rnd() * 16)]);
+  stats[stats.length - 1][1] = 100;
+  const move = String(v[facts.find(f => String(v[f.id]).length > 8 && !/^\d/.test(String(v[f.id])))?.id] || mag.short);
+  const vouchers = gentle
+    ? ['Their favourite spot', v.spot, 'Their sweetest habit', v.habit, 'The silliest moment', v.silly, 'Three words', v.words]
+    : ['One enormous hug', 'Redeemable any time, forever', 'A cup of tea made just right', 'Served with biscuits', 'Film night, your choice', 'No complaints allowed', 'One favour', 'No questions asked'];
+  const vPairs = [];
+  for (let i = 0; i < vouchers.length; i += 2) vPairs.push([vouchers[i], vouchers[i + 1]]);
+
   return [
     renderCover(mag, values, opts),
-    ...renderPages(mag, values, opts),
-    `<div class="pg pg-feature" ${style}><div class="pg-in"><p class="pg-kicker">${esc(feature[0])}</p><blockquote>&ldquo;${esc(feature[1])}&rdquo;</blockquote><p class="pg-sign">About ${esc(who)}, with love</p></div></div>`,
+    page('contents', `<p class="pg-kicker">Inside this issue</p><h3>Contents</h3><ol class="toc">${contents.map(([n, t]) => `<li><b>${n}</b><span>${esc(t)}</span></li>`).join('')}</ol><p class="toc-note">A one of a kind issue, made for ${esc(who)} by ${esc(from)}.</p>`, 2),
+    ...renderPages(mag, values, opts).map((html, i) => html.replace(/<\/div>$/, `<span class="pg-num">${[3, 4, 7][i]}</span></div>`)).slice(0, 2),
+    `<div class="pg pg-opener" ${style}>${ph('photo1', 'op-photo')}<div class="op-shade"></div><div class="pg-in"><p class="pg-kicker">The cover story</p><h3>${esc(who)}</h3><p class="op-dek">${s.lines[0] ? s.lines[0][1] : esc(mag.short)}</p></div><span class="pg-num">5</span></div>`,
+    page('interview', `<p class="pg-kicker">The big interview</p><h3>We asked. The answers were iconic.</h3>${qa.map(([q, a]) => `<div class="iv"><p class="iv-q">${q}</p><p class="iv-a">${a}</p></div>`).join('')}<p class="pg-sign">Interview by ${esc(from)}</p>`, 6),
+    renderPages(mag, values, opts)[2].replace(/<\/div>$/, `<span class="pg-num">7</span></div>`),
+    gentle
+      ? page('quote', `<p class="pg-kicker">In a word</p><p class="big-quote">&ldquo;${s.quote || esc(v.words || who)}&rdquo;</p><p class="pg-sign">${s.credit}</p>`, 8)
+      : `<div class="pg pg-ad" ${style}><div class="ad-glow"></div><p class="ad-kicker">The new fragrance</p><div class="ad-bottle"><i class="ad-cap"></i><b class="ad-glass"><span>${esc(String(who).toUpperCase())}</span><small>Eau de parfum</small></b></div><h3 class="ad-name">Eau de ${esc(who)}</h3><p class="ad-line">&ldquo;${s.quote || esc(v.words || '')}&rdquo;</p><p class="ad-notes">${notes}</p><p class="ad-foot">Available nowhere. Absolutely priceless.</p><span class="pg-num">8</span></div>`,
+    `<div class="pg pg-feature" ${style}><div class="pg-in"><p class="pg-kicker">${esc(feature[0])}</p><blockquote>&ldquo;${esc(feature[1])}&rdquo;</blockquote><p class="pg-sign">About ${esc(who)}, with love</p></div><span class="pg-num">9</span></div>`,
+    page('reasons', `<p class="pg-kicker">The list</p><h3>Ten reasons we love ${esc(who)}</h3><ol class="reasons">${reasons.map(r => `<li>${r}</li>`).join('')}</ol>`, 10),
+    page('collage', `<p class="pg-kicker">The scrapbook</p>${ph('photo1', 'cl cl1')}${ph('photo2', 'cl cl2')}${ph('photo3', 'cl cl3')}<p class="cl-cap">${esc(v.words || s.quote || '')}</p>`, 11),
+    page('quiz', `<p class="pg-kicker">Test yourself</p><h3>${gentle ? `How well did you know ${esc(who)}?` : `How well do you know ${esc(who)}?`}</h3>${quiz.map(q => `<div class="qz"><p class="qz-q"><b>${q.n}</b>${esc(q.q)}</p><ul>${q.opts.map((o, i) => `<li><i>${'ABC'[i]}</i>${esc(o)}</li>`).join('')}</ul></div>`).join('')}<p class="qz-key">Answers: ${quiz.map(q => `${q.n}${q.a}`).join(' &middot; ')}</p>`, 12),
+    page('puzzle', `<p class="pg-kicker">Puzzle page</p><h3>Find the words</h3>${gridHtml(false)}<ul class="ws-words">${ws.placed.map(x => `<li>${x.w}</li>`).join('')}</ul>`, 13),
+    `<div class="pg pg-poster" ${style}>${ph('photo1', 'po-photo')}<div class="po-name" style="font-size:${fit(String(who).toUpperCase(), 88, 0.5, 30)}cqw">${esc(String(who).toUpperCase())}</div><div class="po-badge"><small>${s.badge[0]}</small>${s.badge[1]}<small>${s.badge[2]}</small></div><span class="pg-num">14</span></div>`,
+    page('cert', `<div class="cert"><p class="pg-kicker">Official certificate</p><p class="cert-small">This certifies that</p><p class="cert-name">${esc(who)}</p><p class="cert-small">is officially, undeniably and forever</p><p class="cert-title">${s.quote || 'Iconic'}</p><div class="cert-foot"><span>${esc(from)}</span><i class="cert-seal">&#9733;</i><span>${esc(mag.title)}</span></div></div>`, 15),
+    page('vouchers', `<p class="pg-kicker">${gentle ? 'Favourite things' : 'Cut out and keep'}</p><h3>${gentle ? 'The little things we will always remember' : `Vouchers for ${esc(who)}`}</h3><div class="vch${gentle ? ' vch-gentle' : ''}">${vPairs.map(([a, b]) => `<div><b>${esc(a)}</b><span>${esc(b)}</span></div>`).join('')}</div>`, 16),
+    page('notes', `<p class="pg-kicker">Notes from everyone</p><h3>Leave a little message</h3><div class="notes">${[0, 1, 2, 3].map(() => '<div><i></i><i></i><i></i></div>').join('')}</div><p class="pg-kicker ws-ans">Puzzle answers</p>${gridHtml(true)}`, 17),
+    `<div class="pg pg-movie" ${style}>${ph('photo2', 'mv-photo')}<div class="mv-shade"></div><p class="mv-presents">${esc(from)} presents</p><div class="mv-stars">${reviews.map(([q, src]) => `<p>&#9733;&#9733;&#9733;&#9733;&#9733;<b>&ldquo;${q}&rdquo;</b><small>${src}</small></p>`).join('')}</div><div class="mv-title"><h3 style="font-size:${fit(String(who).toUpperCase(), 86, 0.5, 24)}cqw">${esc(String(who).toUpperCase())}</h3><p class="mv-sub">${gentle ? 'A true story of love' : 'The movie'}</p><p class="mv-tag">&ldquo;${s.lines[0] ? s.lines[0][1] : esc(mag.short)}&rdquo;</p><p class="mv-credits">Starring ${esc(who)} &middot; Directed by ${esc(from)} &middot; Written with love &middot; Music by the whole family &middot; Filmed on location at home</p><p class="mv-soon">${gentle ? 'Forever showing in our hearts' : 'Coming soon to a living room near you'}</p></div><span class="pg-num">18</span></div>`,
+    page('card', `<p class="pg-kicker">Collector's edition</p><h3>The ${esc(who)} card</h3><div class="tc"><div class="tc-in"><div class="tc-top"><b>${esc(who)}</b><span>${s.badge[1] || '&#9733;'}</span></div>${ph('photo3', 'tc-photo')}<p class="tc-type">${s.quote || 'Legendary'}</p><div class="tc-stats">${stats.map(([k, n]) => `<p><span>${k}</span><i><em style="width:${n}%"></em></i><b>${n}</b></p>`).join('')}</div><p class="tc-move"><b>Special move</b>${esc(move)}</p><div class="tc-foot"><span>Rarity: one of a kind</span><span>No. 001 of 001</span></div></div></div>`, 19),
     `<div class="pg pg-back" ${style}><div class="pg-in"><p class="pg-kicker">That's a wrap</p><h3>The end.<br>Until the next issue.</h3><p class="pg-body">Made for ${esc(who)} by ${esc(from)}.</p>${barcode()}</div></div>`,
   ];
 }

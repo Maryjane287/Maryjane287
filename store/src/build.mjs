@@ -1,7 +1,7 @@
 // Builds the whole shop into dist/ as plain HTML. No dependencies: run `npm run build`.
 // Every page is real HTML so Pinterest can read titles, prices and images (rich pins).
 import { readFile, writeFile, mkdir, rm, cp, readdir } from 'node:fs/promises';
-import { renderCover, renderPages, esc, DESIGNS, designExamples, designsFor, baseDesign } from './covers.js';
+import { renderCover, renderPages, renderFullMagazine, esc, DESIGNS, designExamples, designsFor, baseDesign } from './covers.js';
 
 const root = new URL('..', import.meta.url);
 const dist = new URL('dist/', root);
@@ -14,7 +14,8 @@ const abs = p => site.url.replace(/\/$/, '') + p;
 const isBase = (mag, design) => !design || design === baseDesign(mag);
 const pinSrc = (mag, ex, design) => `/pins/${mag.slug}-${isBase(mag, design) ? '' : design + '-'}${ex.id}.jpg`;
 const magPath = (mag, design) => `/${mag.slug}/${isBase(mag, design) ? '' : design + '/'}`;
-const tiers = site.tiers;
+// Tiers marked "soon" (printed copies) stay hidden until printing is set up.
+const tiers = site.tiers.filter(t => !t.soon);
 const from = tiers[0];
 
 // ---------- helpers ----------
@@ -121,21 +122,22 @@ const tierCards = (magSlug = '') => `
       <p>${esc(t.blurb)}</p>
       <a class="btn ${t.popular ? '' : 'btn-ghost'}" href="/make/${magSlug ? `?m=${magSlug}&amp;t=${t.id}` : `?t=${t.id}`}">Choose</a>
     </div>`).join('')}
-  </div>`;
+  </div>
+  ${site.tiers.some(t => t.soon) ? '<p class="tiers-soon">Printed, posted copies are coming soon.</p>' : ''}`;
 
 const steps = `
   <ol class="steps">
     <li><span class="step-ico" aria-hidden="true">&#9998;</span><h3>Answer a few fun questions</h3><p>Their nickname, their secret talent, the moment you will never forget. Every question comes with an example, so nobody gets stuck.</p></li>
     <li><span class="step-ico" aria-hidden="true">&#128247;</span><h3>Add your favourite photos</h3><p>Three photos is all it takes. Watch the cover come alive as you type.</p></li>
-    <li><span class="step-ico" aria-hidden="true">&#127873;</span><h3>Give the best gift of the year</h3><p>Download it instantly, or we print a glossy copy near them and post it to their door, anywhere in the world.</p></li>
+    <li><span class="step-ico" aria-hidden="true">&#127873;</span><h3>Give the best gift of the year</h3><p>Their 20 page magazine lands in your inbox, ready to send by message, share on screen or print at home, anywhere in the world.</p></li>
   </ol>`;
 
 const faq = [
-  ['How long does it take?', 'About five minutes to fill in. A PDF is sent to your inbox, and printed magazines are usually made within 4 to 6 days, then posted.'],
-  ['Where do you deliver?', 'Worldwide. Printed copies are made in the UK, Europe, the USA or Australia, whichever is closest, so they arrive faster and without surprise customs fees in most countries.'],
+  ['How long does it take?', 'About five minutes to fill in. Your finished 20 page magazine is emailed to you as a PDF, usually within 2 working days.'],
+  ['Where do you deliver?', 'Everywhere. Your magazine arrives by email, so you can send it to anyone in the world in seconds. Printed, posted copies are coming soon.'],
   ['Can I see it before I pay?', 'Yes. You see a live preview of the cover and pages while you fill in the form.'],
   ['What happens to my photos?', 'They are used only to make your magazine and are deleted 30 days after your order. We never share or post them anywhere.'],
-  ['What if something is wrong?', 'If there is a printing mistake or it arrives damaged, we reprint it for free. Just email us a photo.'],
+  ['What if something is wrong?', 'If anything in your magazine is not right, email us and we will fix it for free.'],
 ];
 const faqHtml = `<div class="faq">${faq.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}</div>`;
 const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) };
@@ -178,7 +180,7 @@ async function home() {
   <div class="hero-text">
     <p class="kicker">Personalised keepsake magazines</p>
     <h1>Make them the <span class="hl">cover story.</span></h1>
-    <p class="lead">Answer a few fun questions, add your photos, and we turn them into a beautiful magazine all about the person you love. Instant PDF, or printed and posted anywhere in the world.</p>
+    <p class="lead">Answer a few fun questions, add your photos, and we turn them into a beautiful magazine all about the person you love. A 20 page magazine, sent to you as a PDF, ready for anyone, anywhere in the world.</p>
     <div class="hero-cta"><a class="btn btn-big" href="/make/">Make a magazine</a><a class="btn btn-ghost" href="#magazines">See the magazines</a></div>
     <p class="hero-note">Ready in 5 minutes &middot; From ${fromPrice} &middot; No design skills needed</p>
   </div>
@@ -233,8 +235,8 @@ async function magazinePage(mag, design = baseDesign(mag)) {
   }).join('');
   const lowest = Math.min(...tiers.map(t => t.gbp));
   const highest = Math.max(...tiers.map(t => t.gbp));
-  const inside = renderPages(mag, main.values, { palette: main.palette, portraitOpts: main.portrait });
-  const desc = `${name}: ${mag.short} Made in 5 minutes from your answers and photos. Instant PDF or printed and posted worldwide.`;
+  const inside = renderFullMagazine(mag, main.values, { palette: main.palette, portraitOpts: main.portrait, design });
+  const desc = `${name}: ${mag.short} Made in 5 minutes from your answers and photos. A 20 page magazine sent as an instant PDF, anywhere in the world.`;
   const body = `
 <nav class="crumbs"><a href="/">Home</a> <span>/</span> ${base ? esc(mag.occasion) : `<a href="${magPath(mag)}">${esc(mag.occasion)}</a> <span>/</span> ${esc(dLabel)}`}</nav>
 <section class="mag-hero">
@@ -259,11 +261,8 @@ async function magazinePage(mag, design = baseDesign(mag)) {
   <div class="design-grid">${designCards}</div>
 </section>
 <section class="section section-tint">
-  <div class="section-head"><p class="kicker">Peek inside</p><h2>Every page is about them</h2></div>
-  <div class="spread">
-    <div class="spread-page">${cover(main)}</div>
-    ${inside.map(p => `<div class="spread-page">${p}</div>`).join('')}
-  </div>
+  <div class="section-head"><p class="kicker">Flip through all ${inside.length} pages</p><h2>Every page is about them</h2><p>A contents page, the big interview, a pull out poster, a quiz and puzzle made from your answers, an official certificate and more. Swipe to see it all.</p></div>
+  <div class="flip">${inside.map((p, i) => `<div><div class="flip-page">${p}</div><span class="flip-n">${i ? `Page ${i + 1}` : 'Cover'}</span></div>`).join('')}</div>
 </section>
 <section class="section">
   <div class="section-head"><p class="kicker">Prices</p><h2>Choose how you give it</h2></div>
@@ -334,7 +333,7 @@ async function makerPage() {
   <aside class="maker-preview" id="preview-top" aria-label="Live preview">
     <div class="preview-tabs" role="tablist"></div>
     <div class="preview-stage"><div id="preview"></div><span class="watermark" aria-hidden="true">Preview</span></div>
-    <p class="small center">This updates as you type. Tap the pages above to flip through.</p>
+    <p class="small center">This updates as you type. Your finished magazine has 20 pages, with a poster, quiz, puzzle and certificate too.</p>
   </aside>
 </section>
 <script type="application/json" id="mags">${JSON.stringify(mags).replace(/</g, '\\u003c')}</script>
@@ -375,9 +374,9 @@ async function simplePages() {
     title: 'Delivery and FAQ', description: 'Delivery times, worldwide shipping, photos, reprints and everything else you might wonder about.', path: '/help/', jsonld: faqLd,
     body: wrap('Help', 'Delivery and questions', `
       <h2>Delivery</h2>
-      <p>PDF magazines are emailed to you as soon as your proof is approved. Printed magazines are made in the UK, Europe, the USA or Australia, whichever is closest to the person receiving it, usually within 4 to 6 days, and then posted by local mail. Delivery times after that are usually:</p>
-      <ul><li>UK, Europe, USA and Australia: 2 to 7 working days</li><li>Everywhere else: 7 to 15 working days</li></ul>
-      <p>Giving it for a special day? Order at least two weeks before, and before our Christmas last order dates each December.</p>
+      <p>Your finished 20 page magazine is emailed to you as a PDF, usually within 2 working days. You can send it to anyone, anywhere, by email or message, or print it at home or at any print shop.</p>
+      <p>Printed, posted copies are coming soon.</p>
+      <p>Giving it for a special day? Order at least three days before, just to be safe.</p>
       <h2>Questions</h2>${faqHtml}
       <h2>Still stuck?</h2><p>Email <a href="mailto:${esc(site.email)}">${esc(site.email)}</a> and a real person will help.</p>`),
   }));
