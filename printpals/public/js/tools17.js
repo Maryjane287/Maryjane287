@@ -94,7 +94,7 @@ function seasonCert(paper, title, name, line, key, colour) {
 }
 
 function seasonColour(paper, key, name) {
-  const art = SEASON_ART[key];
+  const art = SEASON_ART[key] || COLOURING[key];
   const pg = new Page(paper, '', { bare: true });
   const top = pg.m + 2;
   const label = name ? `${name} colours the ${art.name.toLowerCase()}` : `Colour the ${art.name.toLowerCase()}`;

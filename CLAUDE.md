@@ -76,7 +76,10 @@ use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in 
 for painted pictures on every sheet.
 Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
 (colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
-fractions, colour by number, spot the difference. PLUS STAGE 2 (VERSION 37, 136 tools, tools18.js): birthday time capsule (9 pages, looks confetti/balloons/stars,
+fractions, colour by number, spot the difference. PLUS STAGE 3 (VERSION 38, 138 tools, tools19.js): Easter and spring pack (egg hunt guide + 12 rhyming clue cards,
+decorate the eggs, colouring, puzzles; looks pastel/meadow/sunny), My Journal series (Volumes 1 to 4, 10 prompts each, completion page
+points to the next volume), storybook cover looks (rainbow/ocean/garden/space). Home plus-band changes title and pack links by month
+(script after the band). Journal pin CSV. Easter pin should be scheduled in February 2027 (Easter is 28 March 2027). PLUS STAGE 2 (VERSION 37, 136 tools, tools18.js): birthday time capsule (9 pages, looks confetti/balloons/stars,
 yearly collectible), Diwali pack (rangoliArt makes a new symmetrical pattern each time; finish the rangoli; looks marigold/jewel/peacock),
 Thankful pack (Thanksgiving or Harvest; thankful turkey with numbered lines, gratitude leaves, place cards; looks autumn/cosy/pumpkin),
 storybooks now 8 (snow, jungle, kind added; colouringArt falls back to SEASON_ART). Plus page has an 'Everything in Plus' library grid;

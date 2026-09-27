@@ -12,7 +12,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '37'
+VERSION = '38'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -1938,6 +1938,7 @@ TOOLS += [
         'lead': 'A real picture book where your child is the hero. Their name on the cover and every page, pictures to colour in, and a dedication from you. A gift they will keep.',
         'card': 'A picture book starring your child, with pictures to colour.',
         'form': field('Story', seg('story', [('star', 'The Lost Star'), ('party', 'Big Animal Party'), ('sea', 'Under the Sea'), ('dino', 'Sleepy Dinosaur'), ('garden', 'Magic Garden'), ('snow', 'Snowy Surprise'), ('jungle', 'Jungle Band'), ('kind', 'Kind Heart Day')], 'star'))
+        + field('Cover design', seg('look', [('rainbow', '🌈 Rainbow'), ('ocean', '🐳 Ocean'), ('garden', '🌻 Garden'), ('space', '🚀 Space')], 'rainbow'))
         + field('Child\'s name', '<input type="text" name="name" maxlength="24" placeholder="Mia" autocomplete="off">')
         + field('With love from (optional)', '<input type="text" name="from" maxlength="30" placeholder="Grandma and Grandpa" autocomplete="off">')
         + PAPER,
@@ -2255,7 +2256,7 @@ TOOLS += [
         'faq': [('Is it only for going away?', 'Not at all. It works just as well for days out and holidays at home.')],
     },
     {
-        'id': 'halloween', 'cat': 'packs', 'slug': 'halloween-activity-pack-for-kids', 'tint': '#fff6e0', 'icon': '🎃', 'new': True, 'plus': True,
+        'id': 'halloween', 'cat': 'packs', 'slug': 'halloween-activity-pack-for-kids', 'tint': '#fff6e0', 'icon': '🎃', 'new': False, 'plus': True,
         'nav': 'Halloween pack',
         'title': 'Personalised Halloween Activity Pack for Kids | Friendly, Not Scary, Printable | PrintPals',
         'desc': 'A personalised Halloween activity pack for children aged 3 to 9: a cover with their name, colouring pages, counting, tracing, a word search, a maze, pumpkin face design, treat bag labels, bunting and a best costume award. Friendly, never scary.',
@@ -2270,7 +2271,7 @@ TOOLS += [
         'faq': [('Is it scary?', 'Not at all. Every picture is friendly and smiling, made for little ones.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'christmas', 'cat': 'packs', 'slug': 'christmas-advent-activity-book-for-kids', 'tint': '#e8f8f4', 'icon': '🎄', 'new': True, 'plus': True,
+        'id': 'christmas', 'cat': 'packs', 'slug': 'christmas-advent-activity-book-for-kids', 'tint': '#e8f8f4', 'icon': '🎄', 'new': False, 'plus': True,
         'nav': 'Christmas & Advent book',
         'title': 'Personalised Christmas Activity Book and Advent Calendar for Kids | 24 Days of Printable Fun | PrintPals',
         'desc': 'A personalised Christmas activity book with a 24 day Advent calendar: a page for every day of December with a family moment and an activity, a letter to Santa or Father Christmas, a Nice List certificate, colouring, puzzles, gift tags, bunting and thank you notes.',
@@ -2287,7 +2288,7 @@ TOOLS += [
         'faq': [('When should I print it?', 'Print it at the end of November, so it is ready for 1 December. Staple the day pages together or keep them in a folder.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'namebook', 'cat': 'packs', 'slug': 'personalised-name-book-for-kids', 'tint': '#fff0f5', 'icon': '🔤', 'new': True, 'plus': True,
+        'id': 'namebook', 'cat': 'packs', 'slug': 'personalised-name-book-for-kids', 'tint': '#fff0f5', 'icon': '🔤', 'new': False, 'plus': True,
         'nav': 'My Name Book',
         'title': 'Personalised Name Book for Kids | Every Letter of Their Name, Tracing and Affirmations | PrintPals',
         'desc': 'A personalised name book: every letter of your child\'s name gets its own page with a picture, tracing, and a special word about them, like M is for Marvellous. Ends with a name poster. Four beautiful designs.',
@@ -2346,12 +2347,42 @@ TOOLS += [
         'article': """<h2>Gratitude you can see</h2><p>Stick a paper tree on the wall and add one thankful leaf each day. By the big meal, it will be full of the people and things your child loves. The place cards give every guest a kind message, written by your child.</p>""",
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
+    {
+        'id': 'easter', 'cat': 'packs', 'slug': 'easter-activity-pack-for-kids', 'tint': '#f5edff', 'icon': '🐣', 'new': True, 'plus': True,
+        'nav': 'Easter & spring pack',
+        'title': 'Personalised Easter Activity Pack for Kids | Egg Hunt Clues, Colouring and Crafts | PrintPals',
+        'desc': 'A personalised Easter or spring activity pack: an egg hunt around your home with 12 rhyming clue cards, decorate the eggs, colouring, counting, tracing, a word search, a maze, bunting and an Egg Hunt Champion award.',
+        'h1': 'Easter & spring pack',
+        'lead': 'A whole Easter morning in one print: an egg hunt around your home with rhyming clue cards, eggs to decorate, colouring, puzzles, bunting and an Egg Hunt Champion award. Choose Easter or spring, in three fresh designs.',
+        'card': 'An egg hunt with rhyming clues, colouring, crafts and more.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="20" placeholder="Mia" autocomplete="off">')
+        + field('Age', seg('age', [('3', '3'), ('4', '4'), ('5', '5'), ('6', '6'), ('7', '7'), ('8', '8+')], '5'))
+        + field('Celebrating', seg('occasion', [('easter', 'Easter'), ('spring', 'Spring')], 'easter'))
+        + field('Design', seg('look', [('pastel', '🐣 Pastel'), ('meadow', '🌼 Meadow'), ('sunny', '☀️ Sunny')], 'pastel'))
+        + check('hunt', 'Egg hunt with rhyming clue cards') + PAPER + SHUFFLE,
+        'article': """<h2>An egg hunt that teaches reading</h2><p>Each rhyming clue leads to the next hiding place: under the bed, in the fridge, by the bath. Children read (or listen to) each clue and work it out. Hide a small treasure at the end. It turns Easter morning into an adventure.</p>""",
+        'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'journal', 'cat': 'packs', 'slug': 'kids-journal-printable', 'tint': '#fff0f5', 'icon': '📓', 'new': True, 'plus': True,
+        'nav': 'My Journal series',
+        'title': 'Personalised Journal for Kids | Printable Drawing and Writing Journal, Four Volumes to Collect | PrintPals',
+        'desc': 'A personalised drawing and writing journal for kids, in four volumes to collect: All about my world, Nature explorer, Big dreams and Kind and brave. Ten prompts in each, a feelings check and a completion page.',
+        'h1': 'My Journal series',
+        'lead': 'Four beautiful journals to collect, each with its own theme, colours and ten prompts to draw and write about. When one is finished, the next adventure is waiting: All about my world, Nature explorer, Big dreams, Kind and brave.',
+        'card': 'Four journals to collect, each with ten prompts to draw and write.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="20" placeholder="Leo" autocomplete="off">')
+        + field('Volume', seg('volume', [('1', '1. My world'), ('2', '2. Nature'), ('3', '3. Big dreams'), ('4', '4. Kind and brave')], '1'))
+        + PAPER,
+        'article': """<h2>A habit worth building</h2><p>A page a day, or a page a week: drawing and writing about their own life helps children find their words and feelings. Each journal ends with a completion page that invites them to the next volume, so there is always something to look forward to.</p>""",
+        'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
 ]
 
 # The homepage sections, in learning order (easiest first). Every tool appears in exactly one section.
 ARRANGE = [
     ('packs', 'Ready-made packs', 'Packs', 'Stop searching. A week, a month or the whole holiday planned for your child, storybooks and activity books, starting school, quick packs, family far away, a learning passport and class packs.',
-     ['pack', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack']),
+     ['pack', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'journal', 'easter', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack']),
     ('handwriting', 'Handwriting', 'Handwriting', 'From first pencil lines to joined writing, with real letter shapes and stroke order.',
      ['prewriting', 'scissors', 'names', 'letters', 'mixups', 'joined', 'writingpaper', 'alphabets']),
     ('reading', 'Reading & phonics', 'Reading', 'Letter sounds, CVC words, syllables, sight words, sentences, spelling and stories where your child is the hero.',
@@ -2369,6 +2400,7 @@ ARRANGE = [
 ]
 # Ages each tool suits (first year, last year).
 AGES = {
+    'easter': (3, 9), 'journal': (4, 10),
     'timecapsule': (1, 12), 'diwali': (3, 9), 'thankful': (3, 9),
     'halloween': (3, 9), 'christmas': (3, 9), 'namebook': (3, 7),
     'papergames': (4, 12), 'scissors': (2, 6), 'tenframes': (4, 7), 'sequencing': (3, 7), 'coding': (4, 10), 'factfile': (5, 11), 'petcare': (3, 12), 'diary': (4, 11),
@@ -2420,7 +2452,7 @@ CAT_TEXT = {a[0]: a[3] for a in ARRANGE}
 NAV_LABEL = {a[0]: a[2] for a in ARRANGE}
 
 
-JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'plus', 'app']
+JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'plus', 'app']
 CONTACT = 'graceandloannesofficial@gmail.com'
 # Stripe customer portal: parents manage, switch or cancel their Plus subscription here.
 STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'
@@ -2636,7 +2668,17 @@ def home():
   }});
 }})();
 </script>
-<section class="plus-band"><div class="wrap"><div><span class="new plus">New in Plus</span><h2>Fresh packs for the season</h2><p>A Christmas Advent book with 24 days of family moments, a friendly Halloween pack, Diwali and Thanksgiving packs, a birthday time capsule and My Name Book. All personalised, all in beautiful designs. Try any Plus pack free for 7 days, no card needed.</p></div><a class="btn big" href="/plus">See everything in Plus</a></div></section>
+<section class="plus-band"><div class="wrap"><div><span class="new plus">New in Plus this month</span><h2 id="dropTitle">Fresh packs for the season</h2><p id="dropText">A Christmas Advent book with 24 days of family moments, a friendly Halloween pack, Diwali and Thanksgiving packs, a birthday time capsule, My Name Book and the My Journal series. All personalised, all in beautiful designs. Try any Plus pack free for 7 days, no card needed.</p><p class="drop-links" id="dropLinks"></p></div><a class="btn big" href="/plus">See everything in Plus</a></div></section>
+<script>
+(function () {{
+  // Each month, the band shows the packs families need next.
+  var D = {{ halloween: ['🎃 Halloween fun pack', '/halloween-activity-pack-for-kids'], christmas: ['🎄 Christmas Advent book', '/christmas-advent-activity-book-for-kids'], diwali: ['🪔 Diwali pack', '/diwali-activity-pack-for-kids'], thankful: ['🦃 Thankful pack', '/thanksgiving-activity-pack-for-kids'], easter: ['🐣 Easter and spring pack', '/easter-activity-pack-for-kids'], journal: ['📓 My Journal series', '/kids-journal-printable'], capsule: ['🎂 Birthday time capsule', '/birthday-time-capsule-for-kids'], name: ['🔤 My Name Book', '/personalised-name-book-for-kids'], month: ['🗓️ Monthly learning plan', '/monthly-learning-plan'], holiday: ['🏖️ Holiday learning plan', '/holiday-learning-plan'], story: ['📕 Personalised storybooks', '/personalised-storybook'], book: ['📚 Activity book', '/personalised-activity-book'] }};
+  var M = [['A fresh start for the new year', ['journal', 'month', 'capsule']], ['Cosy winter learning', ['journal', 'story', 'name']], ['Spring is coming', ['easter', 'journal', 'month']], ['Hop into spring', ['easter', 'story', 'capsule']], ['Growing and exploring', ['journal', 'easter', 'book']], ['Ready for summer', ['holiday', 'journal', 'book']], ['Summer adventures', ['holiday', 'book', 'story']], ['Back to school', ['name', 'month', 'journal']], ['Autumn is here', ['halloween', 'diwali', 'capsule']], ['Halloween, Diwali and more', ['halloween', 'diwali', 'thankful']], ['Getting ready for the holidays', ['christmas', 'thankful', 'diwali']], ['Christmas is coming', ['christmas', 'name', 'story']]];
+  var m = M[new Date().getMonth()];
+  document.getElementById('dropTitle').textContent = m[0];
+  document.getElementById('dropLinks').innerHTML = m[1].map(function (k) {{ return '<a href="' + D[k][1] + '">' + D[k][0] + ' →</a>'; }}).join('');
+}})();
+</script>
 <section class="band"><div class="wrap">
 <h2>Made for busy parents and teachers</h2>
 <div class="why">
@@ -2710,7 +2752,7 @@ PLUS = f'''<h1>PrintPals Plus</h1>
 <li>{sum(1 for t in TOOLS if t['cat'] != 'packs')} worksheet makers</li><li>Weekly learning pack</li><li>Siblings packs</li><li>Quick packs and family far away pack</li><li>Learning passport</li><li>Ink saver, easy-read letters, Easier and Harder</li><li>No sign up, ever</li></ul>
 <a class="btn alt" href="/">Start printing</a></div>
 <div class="plan best"><span class="ribbon">Most loved</span><h3>Plus for families</h3><div class="price">$4.99<span> a month</span></div><p class="or">or $39 a year (save 35%)</p><ul>
-<li>Everything in Free</li><li><b>Monthly learning plans</b> that grow with your child</li><li><b>Holiday learning plans</b> for 2, 4 or 6 weeks</li><li><b>Personalised storybooks</b> starring your child</li><li><b>Personalised activity books</b> up to 40 pages</li><li><b>Christmas Advent book</b>: 24 days of family moments</li><li><b>Halloween fun pack</b>, friendly not scary</li><li><b>My Name Book</b> with a special word for every letter</li><li><b>Birthday time capsule</b> for every year</li><li><b>Diwali and Thanksgiving packs</b></li><li>Every pack in several beautiful designs</li><li>New Plus packs every month</li><li>7 free days first, cancel any time</li></ul>
+<li>Everything in Free</li><li><b>Monthly learning plans</b> that grow with your child</li><li><b>Holiday learning plans</b> for 2, 4 or 6 weeks</li><li><b>Personalised storybooks</b> starring your child</li><li><b>Personalised activity books</b> up to 40 pages</li><li><b>Christmas Advent book</b>: 24 days of family moments</li><li><b>Halloween fun pack</b>, friendly not scary</li><li><b>My Name Book</b> with a special word for every letter</li><li><b>Birthday time capsule</b> for every year</li><li><b>Diwali, Thanksgiving and Easter packs</b></li><li><b>My Journal series</b>: four volumes to collect</li><li>Every pack in several beautiful designs</li><li>New Plus packs every month</li><li>7 free days first, cancel any time</li></ul>
 <a class="btn" href="https://buy.stripe.com/7sYcN43U39lV6xW1i21kA01" rel="noopener">Get Plus yearly, $39</a><a class="btn alt" href="https://buy.stripe.com/14A00igGPbu309ygcW1kA00" rel="noopener" style="margin-top:12px">Get Plus monthly, $4.99</a><a class="try" href="/monthly-learning-plan">or try it free for 7 days →</a></div>
 <div class="plan"><h3>Teachers</h3><div class="price">$59<span> a year</span></div><ul>
 <li>Everything in Plus</li><li><b>Class packs</b> for up to 40 children</li><li>Name tracing, labels, bookmarks, reward charts, stories and certificates for every child</li><li>Use it in every class you teach</li></ul>

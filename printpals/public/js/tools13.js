@@ -252,13 +252,16 @@ function makeStorybook(o, paper) {
   const title = fill(bk.title);
   const pages = [];
   // Cover
-  const cv = new Page(paper, '', { bare: true, tint: '#fffdf8' });
-  cv.add(`<rect x="${cv.left - 3}" y="${cv.m - 3}" width="${cv.width + 6}" height="${cv.bottom - cv.m + 3}" rx="12" fill="#fff" stroke="#b06cff" stroke-width="1.4"/>`);
+  // Cover design: Rainbow, Ocean, Garden or Space (the looks live in tools17.js).
+  const lk = typeof lookOf === 'function' && o.look ? lookOf('namebook', o.look) : { ring: '#b06cff', tint: '#fffdf8', corners: [] };
+  const cv = new Page(paper, '', { bare: true, tint: lk.tint });
+  cv.add(`<rect x="${cv.left - 3}" y="${cv.m - 3}" width="${cv.width + 6}" height="${cv.bottom - cv.m + 3}" rx="12" fill="#fff" stroke="${lk.ring}" stroke-width="1.4"/><rect x="${cv.left}" y="${cv.m}" width="${cv.width}" height="${cv.bottom - cv.m - 3}" rx="9" fill="none" stroke="${lk.ring}" stroke-width="0.5" stroke-dasharray="2 1.6"/>`);
+  lk.corners.forEach((e, i) => cv.add(emoji(e, i % 2 ? cv.right - 11 : cv.left + 11, i < 2 ? cv.m + 11 : cv.bottom - 12, 12)));
   let y = cv.m + 32;
   wrap(title, 18).forEach((l) => { bubbleText(cv, l, cv.w / 2, y, cv.width - 24, 20); y += 20; });
   const s = Math.min(cv.width - 30, cv.bottom - y - 34);
   cv.add(`<g transform="translate(${cv.w / 2 - s / 2} ${y + 4}) scale(${(s / 200).toFixed(4)})">${colouringArt(bk.pages[0][0])}</g>`);
-  cv.add(txt(cv.w / 2, cv.bottom - 14, `A story starring ${name}`, 6, { colour: '#8a3fd1' }));
+  cv.add(txt(cv.w / 2, cv.bottom - 14, `A story starring ${name}`, 6, { colour: lk.ring }));
   cv.footer = () => {};
   pages.push(cv.svg());
   // Dedication
@@ -285,7 +288,7 @@ function makeStorybook(o, paper) {
   // The end
   const end = new Page(paper, '', { bare: true, tint: '#fffdf8' });
   bubbleText(end, 'The End', end.w / 2, end.m + 34, end.width - 40, 24);
-  end.add(`<rect x="${end.left + 6}" y="${end.m + 48}" width="${end.width - 12}" height="${end.bottom - end.m - 70}" rx="10" fill="#fff" stroke="#b06cff" stroke-width="0.7" stroke-dasharray="3 2"/>` + txt(end.w / 2, end.m + 58, 'Draw your favourite part of the story', 5.4, { font: FONT, colour: SOFT }));
+  end.add(`<rect x="${end.left + 6}" y="${end.m + 48}" width="${end.width - 12}" height="${end.bottom - end.m - 70}" rx="10" fill="#fff" stroke="${lk.ring}" stroke-width="0.7" stroke-dasharray="3 2"/>` + txt(end.w / 2, end.m + 58, 'Draw your favourite part of the story', 5.4, { font: FONT, colour: SOFT }));
   end.add(txt(end.w / 2, end.bottom - 8, 'Made at printpals.web.app', 4, { font: FONT, colour: '#b8b3cc' }));
   end.footer = () => {};
   pages.push(end.svg());
