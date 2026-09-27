@@ -310,3 +310,10 @@ p { margin: 0 0 1em; }
   .design-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
 }
 .peek { display: none; position: fixed; right: 16px; bottom: 16px; z-index: 30; }
+.finish { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 4px 0 8px; }
+.finish .maker-label { grid-column: 1 / -1; margin: 6px 0 0; }
+.finish-opt { display: flex; gap: 10px; align-items: flex-start; background: var(--paper); border-radius: 14px; padding: 12px 14px; cursor: pointer; border: 2px solid transparent; }
+.finish-opt:has(input:checked) { border-color: var(--coral); }
+.finish-opt input { accent-color: var(--coral); margin-top: 4px; }
+.finish-opt small { display: block; color: var(--soft); font-size: 13px; }
+.order-progress { font-weight: 700; color: var(--coral); }

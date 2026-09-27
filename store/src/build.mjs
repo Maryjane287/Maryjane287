@@ -20,7 +20,8 @@ const from = tiers[0];
 
 // ---------- helpers ----------
 
-const price = t => `<span class="price" data-gbp="£${t.gbp}" data-usd="$${t.usd}">£${t.gbp}</span>`;
+const money = n => (Number.isInteger(n) ? String(n) : n.toFixed(2));
+const price = t => `<span class="price" data-gbp="£${money(t.gbp)}" data-usd="$${money(t.usd)}">£${money(t.gbp)}</span>`;
 const fromPrice = `<span class="price" data-gbp="£${from.gbp}" data-usd="$${from.usd}">£${from.gbp}</span>`;
 
 function saveImg(src, alt, desc, cls = '') {
@@ -297,8 +298,9 @@ async function magazinePage(mag, design = baseDesign(mag)) {
 }
 
 async function makerPage() {
-  const tierOpts = tiers.map((t, i) => `
-    <label class="tier-opt"><input type="radio" name="tier" value="${t.id}"${t.popular ? ' checked' : ''}><span><b>${esc(t.label)}</b> ${price(t)}<small>${esc(t.blurb)}</small></span></label>`).join('');
+  // Tiers marked "soon" are in the page but hidden; /make/?print=1 reveals them for testing.
+  const tierOpts = site.tiers.map((t, i) => `
+    <label class="tier-opt"${t.soon ? ` data-soon="${t.id}" hidden` : ''}><input type="radio" name="tier" value="${t.id}"${t.popular ? ' checked' : ''}><span><b>${esc(t.label)}</b> ${price(t)}<small>${esc(t.blurb)}</small></span></label>`).join('');
   const countries = ['United Kingdom', 'United States', 'Canada', 'Australia', 'Ireland', 'New Zealand', 'Germany', 'France', 'Netherlands', 'Spain', 'Italy', 'Sweden', 'South Africa', 'United Arab Emirates', 'Nigeria', 'Ghana', 'Kenya', 'India', 'Singapore', 'Other'];
   const body = `
 <section class="maker">
@@ -314,18 +316,20 @@ async function makerPage() {
     <div class="palette" aria-label="Choose a colour"></div>
     <form id="order" name="order" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="company" enctype="multipart/form-data">
       <input type="hidden" name="form-name" value="order">
-      <input type="hidden" name="magazine"><input type="hidden" name="design"><input type="hidden" name="palette"><input type="hidden" name="answers">
+      <input type="hidden" name="magazine"><input type="hidden" name="design"><input type="hidden" name="palette"><input type="hidden" name="answers"><input type="hidden" name="order-id"><input type="hidden" name="pdf">
       <p class="hp"><label>Leave this empty <input name="company"></label></p>
       <div id="fields"></div>
       <p class="photo-note">Your photos stay on your device while you design. They are only sent when you place your order.</p>
       <fieldset class="checkout">
         <legend>Love it? Choose your edition</legend>
         ${tierOpts}
+        <div class="finish" hidden><p class="maker-label">Cover finish</p><label class="finish-opt"><input type="radio" name="finish" value="glossy" checked><span><b>Glossy</b><small>Shiny, bright, like a newsstand magazine</small></span></label><label class="finish-opt"><input type="radio" name="finish" value="matte"><span><b>Matte</b><small>Soft touch and elegant</small></span></label></div>
         <label class="field"><span>Your email (we send the magazine here)</span><input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
         <label class="field"><span>Where is it going?</span><select name="country" required>${countries.map(c => `<option>${c}</option>`).join('')}</select></label>
         <label class="consent"><input type="checkbox" name="consent" required> I agree to the <a href="/terms/" target="_blank">terms</a> and <a href="/privacy/" target="_blank">privacy policy</a>, and have permission to use these photos.</label>
         <button class="btn btn-big" type="submit">Place my order</button>
-        <p class="small">We check every magazine by hand before it goes out, and email you a secure payment link with your final proof.</p>
+        <p class="small" id="pay-note">Next, you pay securely. Your finished 20 page magazine is emailed to you, usually within 2 working days.</p>
+        <p class="small order-progress" id="order-progress" hidden></p>
       </fieldset>
     </form>
   </div>
@@ -411,7 +415,7 @@ async function simplePages() {
   }));
   await page('/thanks/', layout({
     title: 'Thank you', description: 'Your magazine is on its way.', path: '/thanks/',
-    body: `<section class="thanks"><div class="confetti" aria-hidden="true">${Array.from({ length: 18 }, (_, i) => `<i style="--i:${i}"></i>`).join('')}</div><p class="kicker">Order received</p><h1>Stop the press! Your magazine is in the works.</h1><p class="lead">We are checking every page by hand. Look out for an email with your final proof and a secure payment link, usually within 24 hours.</p><a class="btn" href="/">Back to the front page</a></section>`,
+    body: `<section class="thanks"><div class="confetti" aria-hidden="true">${Array.from({ length: 18 }, (_, i) => `<i style="--i:${i}"></i>`).join('')}</div><p class="kicker">Order received</p><h1>Stop the press! Your magazine is in the works.</h1><p class="lead" id="thanks-lead">Your finished 20 page magazine is on its way to your inbox, usually within 2 working days. Printed copies are printed near the lucky person and posted, and our print partner emails you when it ships.</p><a class="btn" href="/">Back to the front page</a></section>`,
   }));
   await page('/404.html', layout({
     title: 'Page not found', description: 'This page has gone to print somewhere else.', path: '/404.html',
