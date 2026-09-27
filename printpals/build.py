@@ -12,7 +12,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '46'
+VERSION = '47'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -2725,7 +2725,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'safari', 'cat': 'packs', 'slug': 'safari-animals-activity-pack', 'tint': '#fff4e6', 'icon': '🦁', 'new': True, 'plus': True,
+        'id': 'safari', 'cat': 'packs', 'slug': 'safari-animals-activity-pack', 'tint': '#fff4e6', 'icon': '🦁', 'plus': True,
         'nav': 'Safari Explorer kit',
         'title': 'Safari Animal Printables for Kids | Animal Fact Cards, Height Chart, Riddles, Zoo Bingo | PrintPals',
         'desc': 'A personalised safari activity pack: 8 safari animal fact cards, a how tall are they chart, who am I riddle cards, safari spotter bingo for the zoo, counting, design an animal, safari words, colouring and a Safari Ranger award.',
@@ -2737,7 +2737,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'detective', 'cat': 'packs', 'slug': 'detective-activity-pack-for-kids', 'tint': '#eef0fb', 'icon': '🔍', 'new': True, 'plus': True,
+        'id': 'detective', 'cat': 'packs', 'slug': 'detective-activity-pack-for-kids', 'tint': '#eef0fb', 'icon': '🔍', 'plus': True,
         'nav': 'Detective Academy',
         'title': 'Detective Activities for Kids | Mystery Puzzles, Fingerprint Lab, Secret Codes, Detective ID | PrintPals',
         'desc': 'A personalised detective pack for kids: a detective ID badge, a fingerprint lab, secret code messages, two mysteries to solve with suspects and clues, a case notebook, detective training and a Master Detective award.',
@@ -2749,7 +2749,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'grownupbook', 'cat': 'packs', 'slug': 'all-about-my-mum-dad-book', 'tint': '#fff0f5', 'icon': '💝', 'new': True, 'plus': True,
+        'id': 'grownupbook', 'cat': 'packs', 'slug': 'all-about-my-mum-dad-book', 'tint': '#fff0f5', 'icon': '💝', 'plus': True,
         'nav': 'All About My Special Person',
         'title': 'All About My Mum, Dad or Grandma Printable Book | Mother\'s Day and Father\'s Day Gift From Kids | PrintPals',
         'desc': 'A personalised gift book children make for Mum, Dad, Grandma, Grandad or anyone special: a portrait page, favourite things, they always say, an interview, things we love doing together, love coupons and a World\'s Best award.',
@@ -2763,7 +2763,7 @@ TOOLS += [
         'faq': [('Can I make it for more than one person?', 'Yes. Print one for each person: type a different name in the Who is it for box each time.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'farm', 'cat': 'packs', 'slug': 'farm-animals-activity-pack', 'tint': '#fff4ec', 'icon': '🐄', 'new': True, 'plus': True,
+        'id': 'farm', 'cat': 'packs', 'slug': 'farm-animals-activity-pack', 'tint': '#fff4ec', 'icon': '🐄', 'plus': True,
         'nav': 'Farm Friends kit',
         'title': 'Farm Animal Printables for Toddlers and Preschool | Baby Animals, Animal Sounds, Farm Bingo | PrintPals',
         'desc': 'A personalised farm animal pack for little ones: 8 farm animal cards, match mummies and babies, who says what animal sounds, what the farm gives us, farm counting, farm bingo, farm words, colouring and a Little Farmer award.',
@@ -2774,12 +2774,66 @@ TOOLS += [
         'article': """<h2>Perfect for the youngest learners</h2><p>Farm animals are often among a child\'s first words. Make every animal sound together, sing Old MacDonald with the cards, and take the bingo sheet to a petting farm.</p>""",
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
+    {
+        'id': 'handmonth', 'cat': 'packs', 'slug': 'handwriting-month-workbook', 'tint': '#f1f8e6', 'icon': '✏️', 'new': True, 'plus': True,
+        'nav': 'Handwriting Month',
+        'title': 'Handwriting Month Workbook for Kids | 20 Daily Pages, Name Tracing, Progress Stars | PrintPals Plus',
+        'desc': 'The Plus edition of our free tracing sheets: a personalised 4 week handwriting workbook with 20 daily pages, a warm-up every day, a letter or word of the day, the child\'s name daily, weekly badges, a month plan and a certificate.',
+        'h1': 'Handwriting Month',
+        'lead': 'Our free tracing sheets, grown into a whole month. Twenty short daily pages, each with a warm-up, a letter or word of the day with a picture, and your child\'s name to write, plus a month plan with stars, a badge every Friday and a Handwriting Hero certificate.',
+        'card': 'A 4 week handwriting workbook: 20 daily pages with their name.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="20" placeholder="Leo" autocomplete="off">')
+        + field('Level', seg('level', [('starter', 'Starter (3 to 4)'), ('steady', 'Steady (4 to 5)'), ('confident', 'Confident (5 to 7)')], 'steady')) + field('Design', seg('look', [('meadow', '🌼 Meadow'), ('ocean', '🐳 Ocean'), ('candy', '🍭 Candy'), ('space', '🚀 Space')], 'meadow')) + PAPER,
+        'article': """<h2>Why a month works</h2><p>Handwriting improves with a little practice every day, not a big pile of sheets once a week. Each page takes about ten minutes. Keep the plan on the fridge and colour a star together after each day.</p>""",
+        'faq': [('How is this different from the free tracing sheets?', 'The free sheets give you one page. Handwriting Month is a planned 4 week workbook: 20 daily pages that build step by step, a warm-up every day, a picture for every letter, their name daily, progress stars, Friday badges and a certificate, in four designs.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'mathsday', 'cat': 'packs', 'slug': 'maths-a-day-workbook', 'tint': '#eef6ff', 'icon': '🔢', 'new': True, 'plus': True,
+        'nav': 'Maths a Day',
+        'title': 'Maths a Day Workbook for Kids | 4 Weeks of Daily Maths, Friday Checks, Answers | PrintPals Plus',
+        'desc': 'The Plus edition of our free maths sheets: a personalised 4 week daily maths workbook. Ten minutes a day with a warm-up, sums that get a little harder, a story problem with the child\'s name, Friday checks, a score tracker and answers.',
+        'h1': 'Maths a Day',
+        'lead': 'Our free maths sheets, grown into a whole month. Ten minutes a day: a warm-up, eight sums that get a little harder each day, and a story problem starring your child. Every Friday there is a check with a score, and all the answers are included for grown-ups.',
+        'card': '4 weeks of 10 minute daily maths, Friday checks and answers.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="20" placeholder="Emma" autocomplete="off">')
+        + field('Level', seg('level', [('counting', 'Counting (3 to 5)'), ('adding', 'Adding to 20 (5 to 6)'), ('bigger', 'Bigger numbers (6 to 8)')], 'adding')) + field('Design', seg('look', [('meadow', '🌼 Meadow'), ('ocean', '🐳 Ocean'), ('candy', '🍭 Candy'), ('space', '🚀 Space')], 'meadow')) + PAPER + SHUFFLE,
+        'article': """<h2>Little and often</h2><p>Ten minutes of maths every day builds confidence far better than long sessions. The sums grow slowly, so your child always feels they can do it. Use the Friday score to celebrate progress, not to test. Press Make a new set for a completely fresh month.</p>""",
+        'faq': [('How is this different from the free maths sheets?', 'The free sheets give you one page of sums. Maths a Day is a planned 4 week workbook: a warm-up, sums that grow day by day, a story problem with their name, Friday checks, a score tracker, an answer key and a certificate, in four designs.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'readmonth', 'cat': 'packs', 'slug': 'reading-month-sight-words', 'tint': '#fff0f5', 'icon': '📚', 'new': True, 'plus': True,
+        'nav': 'Reading Month',
+        'title': 'Reading Month for Kids | 16 Sight Words in 4 Weeks, Friday Stories, Word Wall | PrintPals Plus',
+        'desc': 'The Plus edition of our free sight word sheets and reading log: a personalised 4 week reading workbook. A new word each day to trace, write and find, a sentence to read, a story every Friday using the week\'s words, a word wall and a certificate.',
+        'h1': 'Reading Month',
+        'lead': 'Our free sight word sheets, grown into a whole month. A new word every day to trace, write, find and read in a sentence, then a story every Friday using that week\'s four words, starring your child. A word wall to build and a Reading Star certificate.',
+        'card': '16 sight words in 4 weeks with a story every Friday.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="20" placeholder="Sam" autocomplete="off">')
+        + field('Words', seg('set', [('1', 'First words (4 to 5)'), ('2', 'Next words (5 to 6)')], '1')) + field('Design', seg('look', [('meadow', '🌼 Meadow'), ('ocean', '🐳 Ocean'), ('candy', '🍭 Candy'), ('space', '🚀 Space')], 'meadow')) + PAPER + SHUFFLE,
+        'article': """<h2>From words to stories</h2><p>Four new words a week is the perfect pace. By Friday your child can read a whole little story, and that feeling of I did it is what makes readers. Read the story to someone they love and write their name on the page.</p>""",
+        'faq': [('How is this different from the free sight word sheets?', 'The free sheets give you single pages. Reading Month is a planned 4 week workbook: a new word every day, a sentence to read, a Friday story using the week\'s words, a word wall, progress stars and a certificate, in four designs.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'familymonth', 'cat': 'packs', 'slug': 'family-month-organiser', 'tint': '#fff6e0', 'icon': '🏡', 'new': True, 'plus': True,
+        'nav': 'Family Month Organiser',
+        'title': 'Family Month Organiser | Routine Charts, Chore Charts, Reward Charts and Calendar for Kids | PrintPals Plus',
+        'desc': 'The Plus edition of our free routine, chore and reward charts: a whole month for up to three children in one design. Month calendar, morning and bedtime routines for each child, family chore charts, star charts with weekly treats and Sunday check-ins.',
+        'h1': 'Family Month Organiser',
+        'lead': 'Our free routine, chore and reward charts, grown into one beautiful family system. A month calendar, morning and bedtime routines for each child, family chore charts, star charts with weekly treats and a Sunday check-in, for up to three children, all matching.',
+        'card': 'Routines, chores, rewards and a calendar for the whole family.',
+        'form': field('Children\'s names (up to 3)', '<input type="text" name="names" maxlength="60" placeholder="Mia, Leo" autocomplete="off">')
+        + field('Family name (optional)', '<input type="text" name="family" maxlength="20" placeholder="Taylor" autocomplete="off">')
+        + field('Month', seg('month', [('this', 'This month'), ('next', 'Next month')], 'this'))
+        + field('Chores', seg('chores', [('little', 'Little ones'), ('middle', 'Ages 5 to 7'), ('big', 'Ages 8 and up')], 'little')) + field('Design', seg('look', [('meadow', '🌼 Meadow'), ('ocean', '🐳 Ocean'), ('candy', '🍭 Candy'), ('space', '🚀 Space')], 'meadow')) + PAPER,
+        'article': """<h2>One calm system for the whole family</h2><p>Separate charts for everything get messy fast. The Family Month Organiser puts routines, chores and rewards in one matching set for every child. Print it at the start of each month and use the Sunday check-in to celebrate the week together.</p>""",
+        'faq': [('How is this different from the free charts?', 'The free charts make one chart at a time for one child. The Family Month Organiser is a whole month for up to three children: a calendar, morning and bedtime routines for each child, family chore charts, star charts with weekly treats and Sunday check-ins, all matching, in four designs.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
 ]
 
 # The homepage sections, in learning order (easiest first). Every tool appears in exactly one section.
 ARRANGE = [
     ('packs', 'Ready-made packs', 'Packs', 'Stop searching. A week, a month or the whole holiday planned for your child, storybooks and activity books, starting school, quick packs, family far away, a learning passport and class packs.',
-     ['pack', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'journal', 'easter', 'levels', 'poppy', 'handwritingbook', 'phonicsbook', 'readers', 'mathsbook', 'winter', 'lunar', 'kindness', 'grownupbook', 'dinokit', 'spacekit', 'oceankit', 'safari', 'farm', 'detective', 'garden', 'superhero', 'feelingsbook', 'flying', 'adventure', 'familynight', 'cookbook', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack', 'classseason', 'yearbook', 'displays']),
+     ['pack', 'handmonth', 'mathsday', 'readmonth', 'familymonth', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'journal', 'easter', 'levels', 'poppy', 'handwritingbook', 'phonicsbook', 'readers', 'mathsbook', 'winter', 'lunar', 'kindness', 'grownupbook', 'dinokit', 'spacekit', 'oceankit', 'safari', 'farm', 'detective', 'garden', 'superhero', 'feelingsbook', 'flying', 'adventure', 'familynight', 'cookbook', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack', 'classseason', 'yearbook', 'displays']),
     ('handwriting', 'Handwriting', 'Handwriting', 'From first pencil lines to joined writing, with real letter shapes and stroke order.',
      ['prewriting', 'scissors', 'names', 'letters', 'mixups', 'joined', 'writingpaper', 'alphabets']),
     ('reading', 'Reading & phonics', 'Reading', 'Letter sounds, CVC words, syllables, sight words, sentences, spelling and stories where your child is the hero.',
@@ -2797,6 +2851,7 @@ ARRANGE = [
 ]
 # Ages each tool suits (first year, last year).
 AGES = {
+    'handmonth': (3, 7), 'mathsday': (3, 8), 'readmonth': (4, 6), 'familymonth': (2, 10),
     'safari': (3, 9), 'detective': (5, 11), 'grownupbook': (3, 10), 'farm': (2, 6),
     'oceankit': (3, 9), 'garden': (3, 9), 'kindness': (3, 10), 'lunar': (3, 10),
     'readers': (4, 6), 'dinokit': (3, 9), 'spacekit': (4, 10), 'winter': (3, 9),
@@ -2829,6 +2884,7 @@ AGES = {
 }
 # The option that sets how hard a sheet is, ordered easiest first (drives the Easier and Harder buttons).
 LEVELS = {
+    'handmonth': 'level', 'mathsday': 'level', 'readmonth': 'set',
     'readers': 'book',
     'handwritingbook': 'book',
     'mathsbook': 'book',
@@ -2861,7 +2917,7 @@ CAT_TEXT = {a[0]: a[3] for a in ARRANGE}
 NAV_LABEL = {a[0]: a[2] for a in ARRANGE}
 
 
-JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'tools21', 'tools22', 'tools23', 'tools24', 'tools25', 'tools26', 'plus', 'app']
+JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'tools21', 'tools22', 'tools23', 'tools24', 'tools25', 'tools26', 'tools27', 'plus', 'app']
 CONTACT = 'graceandloannesofficial@gmail.com'
 # Stripe customer portal: parents manage, switch or cancel their Plus subscription here.
 STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'
@@ -2928,6 +2984,16 @@ def og_for(t):
     return f'/img/og/{t["id"]}.jpg' if os.path.exists(os.path.join(OUT, 'img', 'og', t['id'] + '.jpg')) else '/img/og.png'
 
 
+# Free tools and the Plus edition that grows each one into a whole month.
+EDITIONS = {
+    'handmonth': (['names', 'letters', 'prewriting', 'writingpaper', 'alphabets'], 'Handwriting Month', '20 daily pages with a warm-up, a letter a day, their name every day, Friday badges and a certificate.'),
+    'mathsday': (['maths', 'numbers', 'bonds', 'doubles', 'tenframes', 'numberlines', 'wordproblems', 'times', 'mathsminute'], 'Maths a Day', '4 weeks of ten-minute maths that grows day by day, story problems with their name, Friday checks and answers.'),
+    'readmonth': (['sight', 'cvc', 'readinglog', 'flashcards', 'sentences'], 'Reading Month', 'A new sight word every day, a story starring your child every Friday, a word wall and a certificate.'),
+    'familymonth': (['routine', 'chores', 'reward', 'sleep', 'screentime', 'calendar'], 'Family Month Organiser', 'Routines, chores, star charts and a calendar for up to three children, all matching, for the whole month.'),
+}
+EDITION_OF = {f: e for e, (fs, _, _) in EDITIONS.items() for f in fs}
+
+
 def tool_page(t):
     faq_html = ''.join(f'<details><summary>{html.escape(q)}</summary><p>{html.escape(a)}</p></details>' for q, a in t['faq'])
     cat_name = dict(CATS)[t['cat']]
@@ -2949,6 +3015,11 @@ def tool_page(t):
     level_attr = f' data-level="{level}"' if level else ''
     level_btns = ('<div class="levels-wrap"><span class="label">Not quite right?</span><div class="levels"><button type="button" class="btn alt small" data-action="easier">🐢 Easier</button>'
                   '<button type="button" class="btn alt small" data-action="harder">🚀 Harder</button></div></div>') if level else ''
+    ed = EDITION_OF.get(t['id'])
+    edition = ''
+    if ed:
+        et = next(x for x in TOOLS if x['id'] == ed)
+        edition = f'<a class="plus-edition" href="/{et["slug"]}"><span class="pe-ico">{et["icon"]}</span><span><b>Want a whole month of this?</b> {html.escape(EDITIONS[ed][1])}, the Plus edition: {html.escape(EDITIONS[ed][2])}</span><em>Try 7 days free →</em></a>'
     nudge = '' if t['cat'] == 'packs' else '<a class="pack-nudge" href="/weekly-learning-pack"><span>🎒</span><span><b>Not sure what to print?</b> Get a whole week planned for your child, free, with their name on every page.</span></a>'
     return head(t['title'], t['desc'], '/' + t['slug'], f'<style id="pageStyle">@page {{ size: A4 portrait; margin: 0; }}</style>\n<script type="application/ld+json">{json.dumps(ld)}</script>', og_for(t)) + f'''
 <body class="tool-page">
@@ -2967,7 +3038,7 @@ def tool_page(t):
 <p class="hint">Free. No sign up. Nothing you type leaves your device.</p>
 <p class="hint" id="remember" hidden>💛 We remember your child's name on this device only. <button type="button" class="linkish" data-action="forget">Forget it</button></p>
 </form>
-<section aria-label="Worksheet preview"><div id="plusbox" class="plusbox" hidden></div><div class="preview-head"><span>Preview</span><span id="pageCount"></span></div><div id="preview"></div></section>
+<section aria-label="Worksheet preview">{edition}<div id="plusbox" class="plusbox" hidden></div><div class="preview-head"><span>Preview</span><span id="pageCount"></span></div><div id="preview"></div></section>
 </div>
 <article class="article">
 {nudge}

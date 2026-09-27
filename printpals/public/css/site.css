@@ -307,3 +307,12 @@ footer .foot-all { color: #ffb3c7 !important; font-weight: 800; margin-top: 4px;
 .age-note { display: none; margin: 10px 0 0; padding: 10px 16px; border-radius: 14px; background: #fff6e0; color: var(--ink); font-weight: 700; font-size: 15px; }
 .age-note b { color: #e0457b; }
 .age-note button { margin-left: 8px; font: 800 14px 'Nunito', sans-serif; color: #e0457b; background: #fff; border: 1px solid #f3c2d4; border-radius: 99px; padding: 5px 12px; cursor: pointer; }
+
+/* Plus editions: a free tool points to its whole-month version. */
+.plus-edition { display: flex; align-items: center; gap: 12px; margin: 0 0 14px; padding: 12px 16px; border-radius: 18px; background: linear-gradient(135deg, #f5edff, #fff0f5); border: 1px solid #e3cff7; color: var(--ink); text-decoration: none; box-shadow: 0 4px 0 #e3cff7; transition: transform .15s; }
+.plus-edition:hover { transform: translateY(-2px); }
+.plus-edition .pe-ico { font-size: 28px; }
+.plus-edition span { font-size: 14.5px; line-height: 1.4; }
+.plus-edition b { color: #8a3fd1; }
+.plus-edition em { font-style: normal; font-weight: 800; color: #e0457b; white-space: nowrap; font-size: 14px; }
+@media (max-width: 700px) { .plus-edition { flex-wrap: wrap; } .plus-edition em { width: 100%; } }

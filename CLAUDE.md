@@ -79,7 +79,15 @@ use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in 
 for painted pictures on every sheet.
 Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
 (colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
-fractions, colour by number, spot the difference. PLUS STAGE 10 (VERSION 46, 168 tools, tools26.js): Safari Explorer kit (explorer series 4: 8 cards,
+fractions, colour by number, spot the difference. PLUS EDITIONS (owner idea 2026-09-27: grow favourite free tools into premium month versions
+that clearly beat the free ones; VERSION 47, 172 tools, tools27.js): Handwriting Month (20 daily pages: warm-up, letter or word
+of the day, name daily; levels starter/steady/confident), Maths a Day (20 days, warm-up, sums growing daily, story problem with
+the name, Friday checks, answer key; levels counting/adding/bigger), Reading Month (16 sight words in 4 weeks, Friday stories,
+word wall; sets 1 and 2), Family Month Organiser (up to 3 children: calendar, routines, chore charts, star charts, Sunday
+check-ins; this or next month). All four: looks meadow/ocean/candy/space, month plan with 20 stars, day strip, Friday badges.
+build.py EDITIONS maps free tools to their edition; free tool pages show a 'Want a whole month of this?' link above the preview.
+Ideas for more editions: colouring month, puzzles month, a teacher class edition. Their 12 pins are at the FRONT of the file 3
+queue (135 waiting). PLUS STAGE 10 (VERSION 46, 168 tools, tools26.js): Safari Explorer kit (explorer series 4: 8 cards,
 height chart vs child, who am I riddles, zoo bingo), Detective Academy (academy series with Superhero and Space: ID, fingerprint lab,
 secret codes via packRun secretcode custom, two logic mysteries CASES with upside down answers, case notebook, training),
 All About My Special Person (id grownupbook, gift book for any grown-up typed in 'who': portrait, favourites, always says,
@@ -116,7 +124,7 @@ sound-button reading, certificate to next book; Easier/Harder = book), Boredom B
 Shelf now has Phonics Books and a Keepsakes and kits group. 15 new pins added to next-file-start.json (63 waiting for file 3).
 PINTEREST FILES (owner rule): files of 100 pins, named PrintPals-pins-<n>-UPLOAD-ON-<date>.csv (max 100 scheduled, 14 days ahead,
 8 pins a day). File 1 = 55 pins (only 55 slots free), upload 4 Oct 2026, pins 12 to 18 Oct. File 2 = 100, upload 19 Oct, pins 20 Oct to 1 Nov.
-File 3 upload 2 Nov: first 100 of 123 waiting pins in printpals/pinterest/next-file-start.json (Easter held for spring), add 50 new ones.
+File 3 upload 2 Nov: first 100 of 135 waiting pins in printpals/pinterest/next-file-start.json (Easter held for spring), add 50 new ones.
 Style B pins: pins/b-<key>.jpg made by pinterest/pinB.js from jobsB.json. PLUS STAGE 4 (VERSION 40, 143 tools, tools20.js): Little Learner Levels (10 levels, journey map, 5 challenges,
 badge sheet, certificate pointing to the next level; Easier/Harder steps levels), Letters from Poppy (the logo character; letter, challenge page,
 write back page for each month), TEACHER PLAN tools ('teacher': True gates to the teacher plan): class seasonal books (Christmas/Halloween/
