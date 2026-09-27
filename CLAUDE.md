@@ -79,7 +79,12 @@ use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in 
 for painted pictures on every sheet.
 Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
 (colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
-fractions, colour by number, spot the difference. PLUS EDITIONS (owner idea 2026-09-27: grow favourite free tools into premium month versions
+fractions, colour by number, spot the difference. PLUS EDITIONS 2 (VERSION 48, 176 tools, tools28.js): Colouring Month (OWNER RULE: colouring pages
+must be busy full scenes, never one lonely picture; 40 scenes in 8 worlds via cmScene: background + big main art + 6 friends,
+a challenge on every page, 40 star plan, draw your own scene, gallery; ~45 pages), Puzzle Month (20 daily packRun puzzles with
+packBadge day labels, passport, answer keys; easy/medium/hard), Writing Month (16 prompts with word banks, sentence starters,
+draw first box, 4 Friday best story pages; starter/writer), Morning Work Month (teacher: 20 daily sheets with word, 4 sums,
+read and circle, draw; class tracker, answer key, a certificate per child; levels r/y1/y2). 147 pins waiting. PLUS EDITIONS (owner idea 2026-09-27: grow favourite free tools into premium month versions
 that clearly beat the free ones; VERSION 47, 172 tools, tools27.js): Handwriting Month (20 daily pages: warm-up, letter or word
 of the day, name daily; levels starter/steady/confident), Maths a Day (20 days, warm-up, sums growing daily, story problem with
 the name, Friday checks, answer key; levels counting/adding/bigger), Reading Month (16 sight words in 4 weeks, Friday stories,
@@ -124,7 +129,7 @@ sound-button reading, certificate to next book; Easier/Harder = book), Boredom B
 Shelf now has Phonics Books and a Keepsakes and kits group. 15 new pins added to next-file-start.json (63 waiting for file 3).
 PINTEREST FILES (owner rule): files of 100 pins, named PrintPals-pins-<n>-UPLOAD-ON-<date>.csv (max 100 scheduled, 14 days ahead,
 8 pins a day). File 1 = 55 pins (only 55 slots free), upload 4 Oct 2026, pins 12 to 18 Oct. File 2 = 100, upload 19 Oct, pins 20 Oct to 1 Nov.
-File 3 upload 2 Nov: first 100 of 135 waiting pins in printpals/pinterest/next-file-start.json (Easter held for spring), add 50 new ones.
+File 3 upload 2 Nov: first 100 of 147 waiting pins in printpals/pinterest/next-file-start.json (Easter held for spring), add 50 new ones.
 Style B pins: pins/b-<key>.jpg made by pinterest/pinB.js from jobsB.json. PLUS STAGE 4 (VERSION 40, 143 tools, tools20.js): Little Learner Levels (10 levels, journey map, 5 challenges,
 badge sheet, certificate pointing to the next level; Easier/Harder steps levels), Letters from Poppy (the logo character; letter, challenge page,
 write back page for each month), TEACHER PLAN tools ('teacher': True gates to the teacher plan): class seasonal books (Christmas/Halloween/

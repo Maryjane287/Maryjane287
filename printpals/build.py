@@ -12,7 +12,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '47'
+VERSION = '48'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -2775,7 +2775,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'handmonth', 'cat': 'packs', 'slug': 'handwriting-month-workbook', 'tint': '#f1f8e6', 'icon': '✏️', 'new': True, 'plus': True,
+        'id': 'handmonth', 'cat': 'packs', 'slug': 'handwriting-month-workbook', 'tint': '#f1f8e6', 'icon': '✏️', 'plus': True,
         'nav': 'Handwriting Month',
         'title': 'Handwriting Month Workbook for Kids | 20 Daily Pages, Name Tracing, Progress Stars | PrintPals Plus',
         'desc': 'The Plus edition of our free tracing sheets: a personalised 4 week handwriting workbook with 20 daily pages, a warm-up every day, a letter or word of the day, the child\'s name daily, weekly badges, a month plan and a certificate.',
@@ -2788,7 +2788,7 @@ TOOLS += [
         'faq': [('How is this different from the free tracing sheets?', 'The free sheets give you one page. Handwriting Month is a planned 4 week workbook: 20 daily pages that build step by step, a warm-up every day, a picture for every letter, their name daily, progress stars, Friday badges and a certificate, in four designs.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'mathsday', 'cat': 'packs', 'slug': 'maths-a-day-workbook', 'tint': '#eef6ff', 'icon': '🔢', 'new': True, 'plus': True,
+        'id': 'mathsday', 'cat': 'packs', 'slug': 'maths-a-day-workbook', 'tint': '#eef6ff', 'icon': '🔢', 'plus': True,
         'nav': 'Maths a Day',
         'title': 'Maths a Day Workbook for Kids | 4 Weeks of Daily Maths, Friday Checks, Answers | PrintPals Plus',
         'desc': 'The Plus edition of our free maths sheets: a personalised 4 week daily maths workbook. Ten minutes a day with a warm-up, sums that get a little harder, a story problem with the child\'s name, Friday checks, a score tracker and answers.',
@@ -2801,7 +2801,7 @@ TOOLS += [
         'faq': [('How is this different from the free maths sheets?', 'The free sheets give you one page of sums. Maths a Day is a planned 4 week workbook: a warm-up, sums that grow day by day, a story problem with their name, Friday checks, a score tracker, an answer key and a certificate, in four designs.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'readmonth', 'cat': 'packs', 'slug': 'reading-month-sight-words', 'tint': '#fff0f5', 'icon': '📚', 'new': True, 'plus': True,
+        'id': 'readmonth', 'cat': 'packs', 'slug': 'reading-month-sight-words', 'tint': '#fff0f5', 'icon': '📚', 'plus': True,
         'nav': 'Reading Month',
         'title': 'Reading Month for Kids | 16 Sight Words in 4 Weeks, Friday Stories, Word Wall | PrintPals Plus',
         'desc': 'The Plus edition of our free sight word sheets and reading log: a personalised 4 week reading workbook. A new word each day to trace, write and find, a sentence to read, a story every Friday using the week\'s words, a word wall and a certificate.',
@@ -2814,7 +2814,7 @@ TOOLS += [
         'faq': [('How is this different from the free sight word sheets?', 'The free sheets give you single pages. Reading Month is a planned 4 week workbook: a new word every day, a sentence to read, a Friday story using the week\'s words, a word wall, progress stars and a certificate, in four designs.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'familymonth', 'cat': 'packs', 'slug': 'family-month-organiser', 'tint': '#fff6e0', 'icon': '🏡', 'new': True, 'plus': True,
+        'id': 'familymonth', 'cat': 'packs', 'slug': 'family-month-organiser', 'tint': '#fff6e0', 'icon': '🏡', 'plus': True,
         'nav': 'Family Month Organiser',
         'title': 'Family Month Organiser | Routine Charts, Chore Charts, Reward Charts and Calendar for Kids | PrintPals Plus',
         'desc': 'The Plus edition of our free routine, chore and reward charts: a whole month for up to three children in one design. Month calendar, morning and bedtime routines for each child, family chore charts, star charts with weekly treats and Sunday check-ins.',
@@ -2828,12 +2828,65 @@ TOOLS += [
         'article': """<h2>One calm system for the whole family</h2><p>Separate charts for everything get messy fast. The Family Month Organiser puts routines, chores and rewards in one matching set for every child. Print it at the start of each month and use the Sunday check-in to celebrate the week together.</p>""",
         'faq': [('How is this different from the free charts?', 'The free charts make one chart at a time for one child. The Family Month Organiser is a whole month for up to three children: a calendar, morning and bedtime routines for each child, family chore charts, star charts with weekly treats and Sunday check-ins, all matching, in four designs.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
+    {
+        'id': 'colourmonth', 'cat': 'packs', 'slug': 'colouring-month-book', 'tint': '#fff0f5', 'icon': '🎨', 'new': True, 'plus': True,
+        'nav': 'Colouring Month',
+        'title': 'Colouring Month Book for Kids | 40 Busy Scene Colouring Pages With Daily Challenges | PrintPals Plus',
+        'desc': 'The Plus edition of our free colouring pages: 40 full scene colouring pages in 8 worlds (garden, under the sea, space, town, party, fairy tale, safari and snow), a fun challenge on every page, a 40 star plan, draw your own scene, a gallery and a certificate.',
+        'h1': 'Colouring Month',
+        'lead': 'Our free colouring pages, grown into a whole month of busy, beautiful scenes. Forty pictures packed with friends and things to colour, across eight worlds from under the sea to outer space, each with a fun challenge, plus a plan, a gallery and an Amazing Artist certificate.',
+        'card': '40 busy scene colouring pages, each with a fun challenge.',
+        'form': field('Artist\'s name', '<input type="text" name="name" maxlength="20" placeholder="Mia" autocomplete="off">') + field('Design', seg('look', [('meadow', '🌼 Meadow'), ('ocean', '🐳 Ocean'), ('candy', '🍭 Candy'), ('space', '🚀 Space')], 'meadow')) + PAPER + SHUFFLE,
+        'article': """<h2>Scenes, not single pictures</h2><p>Every page is a whole little world with lots to find and colour, so children stay busy, creative and proud for longer. Two pictures a day fills a month, and Make a new set gives you a fresh book with different scenes.</p>""",
+        'faq': [('How is this different from the free version?', 'The free colouring pages give you one picture. Colouring Month gives you 40 full scenes packed with things to colour, a challenge on every page, a plan, a gallery and a certificate, in four designs.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'puzzlemonth', 'cat': 'packs', 'slug': 'puzzle-month-book', 'tint': '#eef2ff', 'icon': '🧩', 'new': True, 'plus': True,
+        'nav': 'Puzzle Month',
+        'title': 'Puzzle Month Book for Kids | 20 Daily Puzzles: Mazes, Dot to Dot, Sudoku, Word Search | PrintPals Plus',
+        'desc': 'The Plus edition of our free puzzle makers: a personalised 4 week puzzle book with a new puzzle every day (mazes, dot to dot, spot the difference, sudoku, word search, codes and coding), a puzzle passport, answers for grown-ups and a Puzzle Master award.',
+        'h1': 'Puzzle Month',
+        'lead': 'Our free puzzle makers, grown into a whole month. A new puzzle every day for four weeks, mixing mazes, dot to dot, spot the difference, sudoku, word searches, secret codes and coding, with a puzzle passport to stamp, all the answers and a Puzzle Master award.',
+        'card': 'A new puzzle every day for 4 weeks, with a passport and answers.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="20" placeholder="Leo" autocomplete="off">')
+        + field('Level', seg('level', [('easy', 'Easy (4 to 5)'), ('medium', 'Medium (6 to 7)'), ('hard', 'Tricky (8 and up)')], 'medium')) + field('Design', seg('look', [('meadow', '🌼 Meadow'), ('ocean', '🐳 Ocean'), ('candy', '🍭 Candy'), ('space', '🚀 Space')], 'meadow')) + PAPER + SHUFFLE,
+        'article': """<h2>A little brain workout every day</h2><p>Puzzles build patience, focus and problem solving. Changing the type every day keeps it fresh and exciting. Make a new set any time for a completely new month of puzzles.</p>""",
+        'faq': [('How is this different from the free version?', 'The free makers give one kind of puzzle at a time. Puzzle Month gives a planned mix of 20 daily puzzles, a passport, answers and a certificate, in four designs.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'writemonth', 'cat': 'packs', 'slug': 'writing-month-journal', 'tint': '#fff6e0', 'icon': '✍️', 'new': True, 'plus': True,
+        'nav': 'Writing Month',
+        'title': 'Writing Month Journal for Kids | 20 Story Prompts With Word Banks and Sentence Starters | PrintPals Plus',
+        'desc': 'The Plus edition of our free story writing pages: a personalised 4 week writing journal with 16 fun story prompts, a word bank and sentence starter every day, a box to draw first, a best story page every Friday and an author certificate.',
+        'h1': 'Writing Month',
+        'lead': 'Our free story writing pages, grown into a whole month. Sixteen playful prompts, from a dragon at school to a trip to the Moon, each with a picture, a word bank and a sentence starter, then a best story page every Friday and a Brilliant Author certificate.',
+        'card': '16 story prompts with word banks, and a best story every Friday.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="20" placeholder="Emma" autocomplete="off">')
+        + field('Level', seg('level', [('starter', 'Starter (5 to 6)'), ('writer', 'Writer (7 to 9)')], 'starter')) + field('Design', seg('look', [('meadow', '🌼 Meadow'), ('ocean', '🐳 Ocean'), ('candy', '🍭 Candy'), ('space', '🚀 Space')], 'meadow')) + PAPER,
+        'article': """<h2>Draw first, then write</h2><p>Children write more when they draw their idea first. Read the prompt together, talk about it, use the word bank for tricky spellings, and let the ideas flow. On Friday, they choose their favourite and write it out beautifully.</p>""",
+        'faq': [('How is this different from the free version?', 'The free page gives one prompt. Writing Month gives 16 prompts with word banks and sentence starters, 4 best story pages, a plan and a certificate, in four designs.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'morningwork', 'cat': 'packs', 'slug': 'morning-work-month-for-teachers', 'tint': '#fff1f1', 'icon': '🍎', 'new': True, 'plus': True, 'teacher': True,
+        'nav': 'Morning Work Month',
+        'title': 'Morning Work Month for Teachers | 20 Daily Sheets, Class Tracker, Certificates | PrintPals Teacher',
+        'desc': 'A month of morning work for Reception, Year 1 or Year 2 (kindergarten to grade 1): 20 daily sheets with a word to write, maths, reading and drawing, a class tracker with every child\'s name, a maths answer key and a certificate for each child.',
+        'h1': 'Morning Work Month',
+        'lead': 'Calm, purposeful mornings for a whole month. Twenty photocopy friendly sheets, each with a word of the day, four sums, a read and circle and a drawing task, plus a class tracker with every child\'s name, an answer key and a named certificate for every child.',
+        'card': '20 morning work sheets, a class tracker and certificates.',
+        'form': field('Class name', '<input type="text" name="cls" maxlength="24" placeholder="Class 1" autocomplete="off">')
+        + field('Your name (optional)', '<input type="text" name="teacher" maxlength="30" placeholder="Miss Taylor" autocomplete="off">')
+        + field('Children\'s names (one per line)', '<textarea name="names" rows="6" placeholder="Mia\nLeo\nEmma\nSam"></textarea>')
+        + field('Level', seg('level', [('r', 'Reception / K (4 to 5)'), ('y1', 'Year 1 / Grade 1 (5 to 6)'), ('y2', 'Year 2 / Grade 2 (6 to 7)')], 'y1')) + field('Design', seg('look', [('meadow', '🌼 Meadow'), ('ocean', '🐳 Ocean'), ('candy', '🍭 Candy'), ('space', '🚀 Space')], 'meadow')) + PAPER + SHUFFLE,
+        'article': """<h2>A settled start to every day</h2><p>Morning work gives children something calm and familiar to do as they arrive. Photocopy one sheet for each child each day, tick the tracker as they finish, and hand out the certificates at the end of the month.</p>""",
+        'faq': [('Is this part of PrintPals Plus?', 'Morning Work Month is part of the teacher plan: $59 a year for a whole class. Try it free for 7 days, no card needed.')],
+    },
 ]
 
 # The homepage sections, in learning order (easiest first). Every tool appears in exactly one section.
 ARRANGE = [
     ('packs', 'Ready-made packs', 'Packs', 'Stop searching. A week, a month or the whole holiday planned for your child, storybooks and activity books, starting school, quick packs, family far away, a learning passport and class packs.',
-     ['pack', 'handmonth', 'mathsday', 'readmonth', 'familymonth', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'journal', 'easter', 'levels', 'poppy', 'handwritingbook', 'phonicsbook', 'readers', 'mathsbook', 'winter', 'lunar', 'kindness', 'grownupbook', 'dinokit', 'spacekit', 'oceankit', 'safari', 'farm', 'detective', 'garden', 'superhero', 'feelingsbook', 'flying', 'adventure', 'familynight', 'cookbook', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack', 'classseason', 'yearbook', 'displays']),
+     ['pack', 'handmonth', 'mathsday', 'readmonth', 'colourmonth', 'puzzlemonth', 'writemonth', 'familymonth', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'journal', 'easter', 'levels', 'poppy', 'handwritingbook', 'phonicsbook', 'readers', 'mathsbook', 'winter', 'lunar', 'kindness', 'grownupbook', 'dinokit', 'spacekit', 'oceankit', 'safari', 'farm', 'detective', 'garden', 'superhero', 'feelingsbook', 'flying', 'adventure', 'familynight', 'cookbook', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack', 'morningwork', 'classseason', 'yearbook', 'displays']),
     ('handwriting', 'Handwriting', 'Handwriting', 'From first pencil lines to joined writing, with real letter shapes and stroke order.',
      ['prewriting', 'scissors', 'names', 'letters', 'mixups', 'joined', 'writingpaper', 'alphabets']),
     ('reading', 'Reading & phonics', 'Reading', 'Letter sounds, CVC words, syllables, sight words, sentences, spelling and stories where your child is the hero.',
@@ -2851,6 +2904,7 @@ ARRANGE = [
 ]
 # Ages each tool suits (first year, last year).
 AGES = {
+    'colourmonth': (3, 10), 'puzzlemonth': (4, 10), 'writemonth': (5, 9), 'morningwork': (4, 7),
     'handmonth': (3, 7), 'mathsday': (3, 8), 'readmonth': (4, 6), 'familymonth': (2, 10),
     'safari': (3, 9), 'detective': (5, 11), 'grownupbook': (3, 10), 'farm': (2, 6),
     'oceankit': (3, 9), 'garden': (3, 9), 'kindness': (3, 10), 'lunar': (3, 10),
@@ -2884,6 +2938,7 @@ AGES = {
 }
 # The option that sets how hard a sheet is, ordered easiest first (drives the Easier and Harder buttons).
 LEVELS = {
+    'puzzlemonth': 'level', 'writemonth': 'level', 'morningwork': 'level',
     'handmonth': 'level', 'mathsday': 'level', 'readmonth': 'set',
     'readers': 'book',
     'handwritingbook': 'book',
@@ -2917,7 +2972,7 @@ CAT_TEXT = {a[0]: a[3] for a in ARRANGE}
 NAV_LABEL = {a[0]: a[2] for a in ARRANGE}
 
 
-JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'tools21', 'tools22', 'tools23', 'tools24', 'tools25', 'tools26', 'tools27', 'plus', 'app']
+JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'tools21', 'tools22', 'tools23', 'tools24', 'tools25', 'tools26', 'tools27', 'tools28', 'plus', 'app']
 CONTACT = 'graceandloannesofficial@gmail.com'
 # Stripe customer portal: parents manage, switch or cancel their Plus subscription here.
 STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'
@@ -2989,6 +3044,9 @@ EDITIONS = {
     'handmonth': (['names', 'letters', 'prewriting', 'writingpaper', 'alphabets'], 'Handwriting Month', '20 daily pages with a warm-up, a letter a day, their name every day, Friday badges and a certificate.'),
     'mathsday': (['maths', 'numbers', 'bonds', 'doubles', 'tenframes', 'numberlines', 'wordproblems', 'times', 'mathsminute'], 'Maths a Day', '4 weeks of ten-minute maths that grows day by day, story problems with their name, Friday checks and answers.'),
     'readmonth': (['sight', 'cvc', 'readinglog', 'flashcards', 'sentences'], 'Reading Month', 'A new sight word every day, a story starring your child every Friday, a word wall and a certificate.'),
+    'colourmonth': (['colouring', 'photo', 'colournum', 'howtodraw', 'rolldraw'], 'Colouring Month', '40 busy scene colouring pages in 8 worlds, with a fun challenge on every page and a certificate.'),
+    'puzzlemonth': (['mazes', 'dots', 'wordsearch', 'sudoku', 'spotdiff', 'oddone', 'crossword', 'secretcode', 'coding', 'matching'], 'Puzzle Month', 'a new puzzle every day for 4 weeks, a puzzle passport, answers and a Puzzle Master award.'),
+    'writemonth': (['storywriting', 'story', 'storydice', 'diary'], 'Writing Month', '16 story prompts with word banks and sentence starters, a best story every Friday and an author certificate.'),
     'familymonth': (['routine', 'chores', 'reward', 'sleep', 'screentime', 'calendar'], 'Family Month Organiser', 'Routines, chores, star charts and a calendar for up to three children, all matching, for the whole month.'),
 }
 EDITION_OF = {f: e for e, (fs, _, _) in EDITIONS.items() for f in fs}
