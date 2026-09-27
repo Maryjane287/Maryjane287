@@ -1,6 +1,6 @@
 // The magazine maker: pick a magazine, answer questions, add photos, and watch
 // the cover update live. Photos stay in the browser until the order is placed.
-import { renderCover, renderPages, PALETTES, DESIGNS, designsFor, baseDesign, esc } from './covers.js';
+import { renderCover, renderPages, renderFullMagazine, renderCardSet, PALETTES, DESIGNS, designsFor, baseDesign, esc } from './covers.js';
 import { renderAndUpload, finishOrder } from './order-pdf.js';
 
 const mags = JSON.parse(document.getElementById('mags').textContent);
@@ -222,11 +222,14 @@ form.addEventListener('submit', async e => {
   if (!window.PREVIEW) {
     try {
       say('Printing page 1 of 24...');
-      const id = await renderAndUpload({ mag: m, values: state.values, opts: coverOpts(), onProgress: (n, total) => say(`Printing page ${Math.min(n + 1, total)} of ${total}...`) });
+      const id = await renderAndUpload({ mag: m, values: state.values, opts: coverOpts(), cards: tier === 'cards', onProgress: (n, total) => say(`Printing page ${Math.min(n + 1, total)} of ${total}...`) });
       say('Binding your magazine...');
       made = { id, ...(await finishOrder({ id, kind: printed ? 'print' : 'digital', finish: form.finish.value, title: `${m.title}: ${who}` })) };
       form['order-id'].value = id;
       form.pdf.value = made.pdf;
+      if (made.cards) form.cards.value = made.cards;
+      // Remembered so the download page can find this order after payment.
+      store.set('order:last', { id, tier, title: `${m.title}: ${who}`, at: Date.now() });
     } catch (err) {
       console.error(err);
       if (printed) {
@@ -249,6 +252,8 @@ form.addEventListener('submit', async e => {
       const url = new URL(pay);
       // Lemon Squeezy and Stripe name the email prefill differently.
       url.searchParams.set(url.hostname.endsWith('lemonsqueezy.com') ? 'checkout[email]' : 'prefilled_email', form.email.value);
+      // Lets Lemon Squeezy tell us which magazine was paid for, to unlock the download.
+      if (made?.id && url.hostname.endsWith('lemonsqueezy.com')) url.searchParams.set('checkout[custom][order_id]', made.id);
       location.href = url.href;
     } else {
       location.href = new URL(form.getAttribute('action'), location.href).href;
@@ -260,3 +265,16 @@ form.addEventListener('submit', async e => {
 });
 
 choose(state.slug);
+
+// Flip through the whole finished magazine, with their answers, before paying.
+const allPages = $('#all-pages');
+$('#see-all')?.addEventListener('click', () => {
+  const m = mag();
+  const opts = coverOpts();
+  const pages = renderFullMagazine(m, state.values, opts);
+  const extra = form.tier.value === 'cards' ? renderCardSet(m, state.values, opts) : [];
+  allPages.querySelector('.all-grid').innerHTML = [...pages, ...extra].map((p, i) =>
+    `<figure class="all-page"><div class="all-sheet">${p}<span class="watermark" aria-hidden="true">Preview</span></div><figcaption>${i === 0 ? 'Cover' : i < pages.length ? `Page ${i + 1}` : `Card set ${i - pages.length + 1}`}</figcaption></figure>`).join('');
+  allPages.showModal();
+});
+allPages?.addEventListener('click', e => { if (e.target === allPages || e.target.closest('[data-close]')) allPages.close(); });

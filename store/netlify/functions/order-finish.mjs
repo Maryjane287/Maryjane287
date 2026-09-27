@@ -1,7 +1,7 @@
 // Stitches the uploaded pages into the finished PDF. For printed copies it also
 // creates the Peecho checkout the buyer is sent to.
 import { getStore } from '@netlify/blobs';
-import { buildPdf, createCheckout, json, fail, HttpError } from '../lib/orders.mjs';
+import { buildPdf, markKind, createCheckout, json, fail, HttpError } from '../lib/orders.mjs';
 import site from '../../data/site.json' with { type: 'json' };
 
 export default async req => {
@@ -11,7 +11,9 @@ export default async req => {
     const origin = process.env.URL || new URL(req.url).origin;
     const store = getStore({ name: 'orders', consistency: 'strong' });
     await buildPdf(store, id, title);
+    await markKind(store, id, kind);
     const out = { pdf: `${origin}/api/order/file?id=${id}&f=pdf` };
+    if (await store.get(`${id}/cards.pdf`, { type: 'arrayBuffer' })) out.cards = `${origin}/api/order/file?id=${id}&f=cards`;
     if (kind === 'print') out.checkout = await createCheckout({ env: process.env, origin, id, title, finish, offerings: site.peecho?.offerings });
     return json(out);
   } catch (e) { return fail(e); }
