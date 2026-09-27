@@ -124,7 +124,7 @@ const tierCards = (magSlug = '') => `
       <a class="btn ${t.popular ? '' : 'btn-ghost'}" href="/make/${magSlug ? `?m=${magSlug}&amp;t=${t.id}` : `?t=${t.id}`}">Choose</a>
     </div>`).join('')}
   </div>
-  ${site.tiers.some(t => t.soon) ? '<p class="tiers-soon">Printed, posted copies are coming soon.</p>' : ''}`;
+  ${site.tiers.some(t => t.soon && t.id === 'print') ? '<p class="tiers-soon">Printed, posted copies are coming soon.</p>' : ''}`;
 
 const steps = `
   <ol class="steps">
@@ -135,7 +135,7 @@ const steps = `
 
 const faq = [
   ['How long does it take?', 'About five minutes to fill in. Your finished 24 page magazine is emailed to you as a PDF, usually within 2 working days.'],
-  ['Where do you deliver?', 'Everywhere. Your magazine arrives by email, so you can send it to anyone in the world in seconds. Printed, posted copies are coming soon.'],
+  ['Where do you deliver?', 'Everywhere. Your magazine arrives by email, so you can send it to anyone in the world in seconds. Want it printed? Choose a printed magazine and it is printed near them and posted to their door, with shipping added at checkout.'],
   ['Can I see it before I pay?', 'Yes. You see a live preview of the cover and pages while you fill in the form.'],
   ['What happens to my photos?', 'They are used only to make your magazine and are deleted 30 days after your order. We never share or post them anywhere.'],
   ['What if something is wrong?', 'If anything in your magazine is not right, email us and we will fix it for free.'],
@@ -379,7 +379,7 @@ async function simplePages() {
     body: wrap('Help', 'Delivery and questions', `
       <h2>Delivery</h2>
       <p>Your finished 24 page magazine is emailed to you as a PDF, usually within 2 working days. You can send it to anyone, anywhere, by email or message, or print it at home or at any print shop.</p>
-      <p>Printed, posted copies are coming soon.</p>
+      <p>Printed magazines are printed on glossy or matte paper by our print partner near the lucky person, then posted. Printing takes about 4 to 5 working days, plus a few days for the post. Shipping is worked out for their country and added at checkout.</p>
       <p>Giving it for a special day? Order at least three days before, just to be safe.</p>
       <h2>Questions</h2>${faqHtml}
       <h2>Still stuck?</h2><p>Email <a href="mailto:${esc(site.email)}">${esc(site.email)}</a> and a real person will help.</p>`),
