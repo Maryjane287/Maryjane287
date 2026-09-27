@@ -12,7 +12,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '41'
+VERSION = '42'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -2454,7 +2454,7 @@ TOOLS += [
         'faq': [('Which plan includes this?', 'The teacher plan ($59 a year). You can try it free for 7 days, no card needed.')],
     },
     {
-        'id': 'toothfairy', 'cat': 'packs', 'slug': 'tooth-fairy-letter-and-kit', 'tint': '#f5edff', 'icon': '🧚', 'new': True, 'plus': True,
+        'id': 'toothfairy', 'cat': 'packs', 'slug': 'tooth-fairy-letter-and-kit', 'tint': '#f5edff', 'icon': '🧚', 'new': False, 'plus': True,
         'nav': 'Tooth Fairy kit',
         'title': 'Personalised Tooth Fairy Letter and Kit | Certificate, Lost Tooth Tracker, Tooth Envelope | PrintPals',
         'desc': 'A personalised Tooth Fairy kit: a letter from the Tooth Fairy with your child\'s name, a Brave Tooth certificate, a tracker for all 20 baby teeth, tiny tooth envelopes and a note to write to the fairy.',
@@ -2467,7 +2467,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'bigsibling', 'cat': 'packs', 'slug': 'big-sister-big-brother-kit', 'tint': '#fff0f5', 'icon': '👶', 'new': True, 'plus': True,
+        'id': 'bigsibling', 'cat': 'packs', 'slug': 'big-sister-big-brother-kit', 'tint': '#fff0f5', 'icon': '👶', 'new': False, 'plus': True,
         'nav': 'Big Sibling kit',
         'title': 'Big Sister and Big Brother Kit | New Baby Printables: Certificate, Helper Chart, All About Baby | PrintPals',
         'desc': 'A personalised big sister or big brother kit for when a new baby arrives: a big sibling certificate, all about my new baby, a helper chart, things I will teach the baby, a card for the baby and a family drawing page.',
@@ -2482,7 +2482,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'treasure', 'cat': 'packs', 'slug': 'treasure-hunt-clues-for-kids', 'tint': '#fff6e0', 'icon': '🗺️', 'new': True, 'plus': True,
+        'id': 'treasure', 'cat': 'packs', 'slug': 'treasure-hunt-clues-for-kids', 'tint': '#fff6e0', 'icon': '🗺️', 'new': False, 'plus': True,
         'nav': 'Treasure hunt',
         'title': 'Printable Treasure Hunt Clues for Kids | Indoor or Garden, Pirate, Birthday or Fairy | PrintPals',
         'desc': 'A printable treasure hunt for kids with 12 rhyming clue cards for indoors or the garden, a grown-up guide, a treasure map to draw and a Treasure Hunter award. Pirate, birthday or fairy designs.',
@@ -2496,7 +2496,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'phonicsbook', 'cat': 'packs', 'slug': 'phonics-books-for-kids', 'tint': '#fff0f0', 'icon': '🔤', 'new': True, 'plus': True,
+        'id': 'phonicsbook', 'cat': 'packs', 'slug': 'phonics-books-for-kids', 'tint': '#fff0f0', 'icon': '🔤', 'new': False, 'plus': True,
         'nav': 'My Phonics Books',
         'title': 'Personalised Phonics Books for Kids | Four Books in Teaching Order: s a t p i n and Beyond | PrintPals',
         'desc': 'A series of four personalised phonics books in the order schools teach: s a t p i n, then m d g o c k, then e u r h b f l, then sh ch th ng ck qu. A page for every sound, picture words, tracing, reading with sound buttons and a certificate.',
@@ -2509,7 +2509,7 @@ TOOLS += [
         'faq': [('What age is this for?', 'Ages 3 to 6, or whenever your child starts learning letter sounds at school.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'busters', 'cat': 'packs', 'slug': 'boredom-buster-jar-printable', 'tint': '#e8f8f4', 'icon': '🫙', 'new': True, 'plus': True,
+        'id': 'busters', 'cat': 'packs', 'slug': 'boredom-buster-jar-printable', 'tint': '#e8f8f4', 'icon': '🫙', 'new': False, 'plus': True,
         'nav': 'Boredom Buster jar',
         'title': 'Printable Boredom Buster Jar for Kids | 48 Screen-Free Activity Sticks | PrintPals',
         'desc': 'A printable boredom buster jar for kids: 48 screen-free activity sticks in four colours (get moving, make something, quiet time, be kind) and a personalised jar label.',
@@ -2520,12 +2520,63 @@ TOOLS += [
         'article': """<h2>Colours for every mood</h2><p>Full of energy? Pick from the red sticks. Need to calm down before bed? Only blue. Want to be helpful? Green. Children love the lucky dip, and you never have to think of an idea again.</p>""",
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
+    {
+        'id': 'mathsbook', 'cat': 'packs', 'slug': 'maths-books-for-kids', 'tint': '#eef2ff', 'icon': '🔢', 'new': True, 'plus': True,
+        'nav': 'My Maths Books',
+        'title': 'Personalised Maths Books for Kids | Counting, Adding, Numbers to 20, Times Tables: Four Books | PrintPals',
+        'desc': 'A series of four personalised maths books: counting to 10, adding and taking away, numbers to 20 and doubles, and times tables fun. Pictures, ten frames, number bonds, number lines and a certificate that leads to the next book.',
+        'h1': 'My Maths Books',
+        'lead': 'Maths one step at a time, in four beautiful books with your child\'s name. Count to 10, add and take away, reach 20 with doubles, then discover times tables. Every book ends with a certificate that leads to the next.',
+        'card': 'Four maths books from counting to times tables, with their name.',
+        'form': field('Child\'s name', '<input type="text" name="name" maxlength="20" placeholder="Leo" autocomplete="off">')
+        + field('Book', seg('book', [('1', '1. Counting to 10'), ('2', '2. Adding'), ('3', '3. To 20'), ('4', '4. Times tables')], '1')) + PAPER + SHUFFLE,
+        'article': """<h2>A page a day</h2><p>Each book builds on the one before, just like at school. Use toys, pasta or buttons to count along. Press "Make a new set" for fresh sums whenever you print again.</p>""",
+        'faq': [('What age is this for?', 'Book 1 suits ages 3 to 5, books 2 and 3 ages 4 to 7, and book 4 ages 6 to 8.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'adventure', 'cat': 'packs', 'slug': 'outdoor-adventure-passport-for-kids', 'tint': '#f1f8e6', 'icon': '🧭', 'new': True, 'plus': True,
+        'nav': 'Outdoor Adventure Passport',
+        'title': 'Outdoor Adventure Passport for Kids | Nature Missions, Seasonal Scavenger Hunt, Bug Hunt | PrintPals',
+        'desc': 'A printable outdoor adventure passport: 24 nature missions with stamp spaces, seasonal spotter sheets, a bug hunt log, nature bingo, cloud watching, leaf rubbing and a Nature Explorer certificate.',
+        'h1': 'Outdoor Adventure Passport',
+        'lead': 'Get them outside and exploring. Twenty-four nature missions to stamp, seasonal spotter sheets, a bug hunt log, nature bingo, cloud watching and a leaf rubbing lab. Screen-free learning in the real world.',
+        'card': '24 nature missions to stamp, seasonal spotting and a bug hunt.',
+        'form': field('Explorer\'s name', '<input type="text" name="name" maxlength="20" placeholder="Emma" autocomplete="off">')
+        + field('Season', seg('season', [('now', 'This season'), ('spring', 'Spring'), ('summer', 'Summer'), ('autumn', 'Autumn'), ('winter', 'Winter'), ('all', 'All four')], 'now')) + PAPER,
+        'article': """<h2>Outdoor learning</h2><p>Children learn so much outside: patience, curiosity, counting, colours and care for living things. Keep the passport in a bag with a pencil and a magnifying glass, and stamp a mission every time you go out.</p>""",
+        'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'familynight', 'cat': 'packs', 'slug': 'family-fun-night-kit', 'tint': '#fff0f5', 'icon': '🎲', 'new': True, 'plus': True,
+        'nav': 'Family Fun Night kit',
+        'title': 'Family Fun Night Kit | Movie Night Tickets, Charades, Family Quiz and Bucket List Printables | PrintPals',
+        'desc': 'A printable family fun night kit: a month of family nights, movie night tickets with your family name, a snack bar menu, 24 charades cards, a family quiz, a family bucket list and family awards.',
+        'h1': 'Family Fun Night kit',
+        'lead': 'Start a family tradition everyone looks forward to. A month of family nights, cinema tickets with your family name, a snack bar menu, charades, a family quiz, a bucket list and awards to hand out at the end.',
+        'card': 'Movie tickets, charades, a family quiz and a bucket list.',
+        'form': field('Family name (optional)', '<input type="text" name="family" maxlength="20" placeholder="Taylor" autocomplete="off">') + PAPER,
+        'article': """<h2>Traditions children remember</h2><p>The small things done together, week after week, become the memories children treasure most. Pick one night a week, put the phones away, and let the children hand out the tickets and the awards.</p>""",
+        'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'cookbook', 'cat': 'packs', 'slug': 'kids-cookbook-printable', 'tint': '#fff6e0', 'icon': '👩‍🍳', 'new': True, 'plus': True,
+        'nav': 'Little Chef Cookbook',
+        'title': 'Printable Cookbook for Kids | Easy Recipes With Picture Steps, Personalised | PrintPals',
+        'desc': 'A personalised printable cookbook for kids: kitchen safety rules, eight easy recipes with ingredients and numbered steps, a rating for each recipe, a page to invent their own recipe, a shopping list and a Little Chef award.',
+        'h1': 'Little Chef Cookbook',
+        'lead': 'Eight easy recipes children can really make, with a grown-up close by: fruit kebabs, funny face crackers, pizza toasts and more. Ingredients, numbered steps, a drawing box, a star rating, their own recipe page and a Little Chef award.',
+        'card': 'Eight easy recipes with steps, ratings and a Little Chef award.',
+        'form': field('Little chef\'s name', '<input type="text" name="name" maxlength="20" placeholder="Mia" autocomplete="off">')
+        + field('Recipes', seg('kind', [('all', 'All eight'), ('sweet', 'Sweet'), ('savoury', 'Savoury')], 'all')) + PAPER,
+        'article': """<h2>Children eat what they make</h2><p>Cooking builds maths, reading, fine motor skills and confidence, and children are far more likely to try foods they made themselves. Choose recipes where they can do most of the work, and let the grown-up handle knives and heat.</p>""",
+        'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
 ]
 
 # The homepage sections, in learning order (easiest first). Every tool appears in exactly one section.
 ARRANGE = [
     ('packs', 'Ready-made packs', 'Packs', 'Stop searching. A week, a month or the whole holiday planned for your child, storybooks and activity books, starting school, quick packs, family far away, a learning passport and class packs.',
-     ['pack', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'journal', 'easter', 'levels', 'poppy', 'phonicsbook', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack', 'classseason', 'yearbook', 'displays']),
+     ['pack', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'journal', 'easter', 'levels', 'poppy', 'phonicsbook', 'mathsbook', 'adventure', 'familynight', 'cookbook', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack', 'classseason', 'yearbook', 'displays']),
     ('handwriting', 'Handwriting', 'Handwriting', 'From first pencil lines to joined writing, with real letter shapes and stroke order.',
      ['prewriting', 'scissors', 'names', 'letters', 'mixups', 'joined', 'writingpaper', 'alphabets']),
     ('reading', 'Reading & phonics', 'Reading', 'Letter sounds, CVC words, syllables, sight words, sentences, spelling and stories where your child is the hero.',
@@ -2543,6 +2594,7 @@ ARRANGE = [
 ]
 # Ages each tool suits (first year, last year).
 AGES = {
+    'mathsbook': (3, 8), 'adventure': (3, 10), 'familynight': (3, 12), 'cookbook': (3, 10),
     'toothfairy': (4, 10), 'bigsibling': (2, 8), 'treasure': (3, 10), 'phonicsbook': (3, 6), 'busters': (3, 10),
     'levels': (3, 8), 'poppy': (3, 9), 'classseason': (3, 9), 'yearbook': (4, 11), 'displays': (3, 11),
     'easter': (3, 9), 'journal': (4, 10),
@@ -2570,6 +2622,7 @@ AGES = {
 }
 # The option that sets how hard a sheet is, ordered easiest first (drives the Easier and Harder buttons).
 LEVELS = {
+    'mathsbook': 'book',
     'phonicsbook': 'book',
     'levels': 'level',
     'scissors': 'level', 'tenframes': 'kind', 'coding': 'level',
@@ -2599,7 +2652,7 @@ CAT_TEXT = {a[0]: a[3] for a in ARRANGE}
 NAV_LABEL = {a[0]: a[2] for a in ARRANGE}
 
 
-JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'tools21', 'plus', 'app']
+JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'tools21', 'tools22', 'plus', 'app']
 CONTACT = 'graceandloannesofficial@gmail.com'
 # Stripe customer portal: parents manage, switch or cancel their Plus subscription here.
 STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'
@@ -2855,7 +2908,8 @@ def shelf_body():
         ('💌', 'Letters from Poppy', 'poppy', [(str(i), m) for i, m in enumerate(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'])]),
         ('🎉', 'Seasons and celebrations', None, [(k, names[k]['h1']) for k in ['halloween', 'diwali', 'thankful', 'christmas', 'easter']]),
         ('🔤', 'My Phonics Books', 'phonicsbook', [(str(i), f'Book {i}') for i in range(1, 5)]),
-        ('🎂', 'Keepsakes and kits', None, [(k, names[k]['h1']) for k in ['namebook', 'timecapsule', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'activitybook', 'monthplan', 'holidayplan']]),
+        ('🔢', 'My Maths Books', 'mathsbook', [(str(i), f'Book {i}') for i in range(1, 5)]),
+        ('🎂', 'Keepsakes and kits', None, [(k, names[k]['h1']) for k in ['namebook', 'timecapsule', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'adventure', 'familynight', 'cookbook', 'activitybook', 'monthplan', 'holidayplan']]),
     ]
     data = [{'icon': ic, 'title': ti, 'tool': tool, 'items': [{'v': v, 'name': n, 'url': '/' + names[tool or v]['slug']} for v, n in items]} for ic, ti, tool, items in groups]
     return f"""<h1>My PrintPals shelf</h1>
@@ -2931,7 +2985,7 @@ PLUS = f'''<h1>PrintPals Plus</h1>
 <li>{sum(1 for t in TOOLS if t['cat'] != 'packs')} worksheet makers</li><li>Weekly learning pack</li><li>Siblings packs</li><li>Quick packs and family far away pack</li><li>Learning passport</li><li>Ink saver, easy-read letters, Easier and Harder</li><li>No sign up, ever</li></ul>
 <a class="btn alt" href="/">Start printing</a></div>
 <div class="plan best"><span class="ribbon">Most loved</span><h3>Plus for families</h3><div class="price">$4.99<span> a month</span></div><p class="or">or $39 a year (save 35%)</p><ul>
-<li>Everything in Free</li><li><b>Monthly learning plans</b> that grow with your child</li><li><b>Holiday learning plans</b> for 2, 4 or 6 weeks</li><li><b>Personalised storybooks</b> starring your child</li><li><b>Personalised activity books</b> up to 40 pages</li><li><b>Christmas Advent book</b>: 24 days of family moments</li><li><b>Halloween fun pack</b>, friendly not scary</li><li><b>My Name Book</b> with a special word for every letter</li><li><b>Birthday time capsule</b> for every year</li><li><b>Diwali, Thanksgiving and Easter packs</b></li><li><b>My Journal series</b>: four volumes to collect</li><li><b>Little Learner Levels</b> with badges</li><li><b>A letter from Poppy</b> every month</li><li><b>My Phonics Books</b>: four books in school order</li><li><b>Tooth Fairy, Big Sibling and Treasure Hunt kits</b></li><li><b>Boredom Buster jar</b> with 48 activities</li><li>Every pack in several beautiful designs</li><li>New Plus packs every month</li><li>7 free days first, cancel any time</li></ul>
+<li>Everything in Free</li><li><b>Monthly learning plans</b> that grow with your child</li><li><b>Holiday learning plans</b> for 2, 4 or 6 weeks</li><li><b>Personalised storybooks</b> starring your child</li><li><b>Personalised activity books</b> up to 40 pages</li><li><b>Christmas Advent book</b>: 24 days of family moments</li><li><b>Halloween fun pack</b>, friendly not scary</li><li><b>My Name Book</b> with a special word for every letter</li><li><b>Birthday time capsule</b> for every year</li><li><b>Diwali, Thanksgiving and Easter packs</b></li><li><b>My Journal series</b>: four volumes to collect</li><li><b>Little Learner Levels</b> with badges</li><li><b>A letter from Poppy</b> every month</li><li><b>My Phonics Books</b> and <b>My Maths Books</b>: four books each</li><li><b>Outdoor Adventure Passport</b> and <b>Little Chef Cookbook</b></li><li><b>Family Fun Night kit</b></li><li><b>Tooth Fairy, Big Sibling and Treasure Hunt kits</b></li><li><b>Boredom Buster jar</b> with 48 activities</li><li>Every pack in several beautiful designs</li><li>New Plus packs every month</li><li>7 free days first, cancel any time</li></ul>
 <a class="btn" href="https://buy.stripe.com/7sYcN43U39lV6xW1i21kA01" rel="noopener">Get Plus yearly, $39</a><a class="btn alt" href="https://buy.stripe.com/14A00igGPbu309ygcW1kA00" rel="noopener" style="margin-top:12px">Get Plus monthly, $4.99</a><a class="try" href="/monthly-learning-plan">or try it free for 7 days →</a></div>
 <div class="plan"><h3>Teachers</h3><div class="price">$59<span> a year</span></div><ul>
 <li>Everything in Plus</li><li><b>Class packs</b> for up to 40 children</li><li><b>Class seasonal books</b>: a named book for every child</li><li><b>End of year memory books</b></li><li><b>Classroom displays</b> with every name</li><li>Name tracing, labels, bookmarks, reward charts, stories and certificates for every child</li><li>Use it in every class you teach</li></ul>

@@ -79,7 +79,11 @@ use the 48 Brainlings painted pictures (copied into public/img). `EMOJI_ART` in 
 for painted pictures on every sheet.
 Owner review 2026-09-26: she wants everything premium and full of content; colouring pages are our own vector drawings
 (colouring.js), no fading lines anywhere. 39 tools now. Batch 4 is live (38 tools, 2026-09-26): joined handwriting, world alphabets, word families, rhyming, number lines,
-fractions, colour by number, spot the difference. PLUS STAGE 5 (VERSION 41, 148 tools, tools21.js): Tooth Fairy kit (letter, Brave Tooth award, 20 tooth tracker,
+fractions, colour by number, spot the difference. PLUS STAGE 6 (VERSION 42, 152 tools, tools22.js): My Maths Books 1 to 4 (counting to 10, adding and taking away,
+numbers to 20 and doubles, times tables; Easier/Harder = book; seriesCert helper), Outdoor Adventure Passport (24 missions to stamp,
+season spotter sheets, bug hunt, nature bingo, sky and leaf lab), Family Fun Night kit (month plan, cinema tickets, snack bar, 24 charades,
+family quiz, bucket list, awards), Little Chef Cookbook (8 recipes, sweet/savoury filter, own recipe, shopping list). Names renamed to avoid
+clashes: mathsNumberPage, FAMILY_BUCKET. 75 pins now wait for file 3. PLUS STAGE 5 (VERSION 41, 148 tools, tools21.js): Tooth Fairy kit (letter, Brave Tooth award, 20 tooth tracker,
 envelopes; looks sparkle/rainbow/starry), Big Sibling kit (sister/brother/sibling, baby name), Treasure Hunt (indoor or garden clues,
 pirate/birthday/fairy, map, award), My Phonics Books 1 to 4 (s a t p i n; m d g o c k; e u r h b f l; sh ch th ng ck qu; sound pages,
 sound-button reading, certificate to next book; Easier/Harder = book), Boredom Buster jar (48 sticks in 4 colours, named label).
