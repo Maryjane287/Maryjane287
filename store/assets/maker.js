@@ -197,8 +197,8 @@ $('#fields').addEventListener('change', async e => {
 // Printed options stay hidden until printing is switched on; ?print=1 shows them for testing.
 if (params.get('print') === '1') form.querySelectorAll('[data-soon="print"]').forEach(el => { el.hidden = false; });
 const syncFinish = () => {
-  const printed = form.tier.value === 'print';
-  $('.finish').hidden = !printed;
+  const printed = form.tier.value === 'print' || form.tier.value === 'hardcover';
+  $('.finish').hidden = form.tier.value !== 'print';
   // Printed copies are posted to the address typed at the printer's checkout, so the email gift fields only apply to digital.
   $('.gift-toggle').hidden = printed;
   $('.gift-print').hidden = !printed;
@@ -228,7 +228,7 @@ form.addEventListener('submit', async e => {
   const reset = () => { btn.disabled = false; btn.textContent = 'Place my order'; progress.hidden = true; };
   btn.disabled = true; btn.textContent = 'Making your magazine...';
   const tier = form.tier.value;
-  const printed = tier === 'print';
+  const printed = tier === 'print' || tier === 'hardcover';
   const who = (state.values[m.fields[0].id] || m.fields[0].example || '').trim();
 
   // 1. Render the 24 finished pages in this browser and make the PDF.
@@ -238,7 +238,7 @@ form.addEventListener('submit', async e => {
       say('Printing page 1 of 24...');
       const id = await renderAndUpload({ mag: m, values: state.values, opts: coverOpts(), cards: tier === 'cards', onProgress: (n, total) => say(`Printing page ${Math.min(n + 1, total)} of ${total}...`) });
       say('Binding your magazine...');
-      made = { id, ...(await finishOrder({ id, kind: printed ? 'print' : 'digital', finish: form.finish.value, title: `${m.title}: ${who}`, email: form.email.value, who, mag: m.slug, tz: new Date().getTimezoneOffset(), gift: form.gift.checked ? { name: form.gift_name.value, email: form.gift_email.value, date: form.gift_date.value, from: form.gift_from.value } : null })) };
+      made = { id, ...(await finishOrder({ id, kind: printed ? 'print' : 'digital', finish: tier === 'hardcover' ? 'hardcover' : form.finish.value, title: `${m.title}: ${who}`, email: form.email.value, who, mag: m.slug, tz: new Date().getTimezoneOffset(), gift: form.gift.checked ? { name: form.gift_name.value, email: form.gift_email.value, date: form.gift_date.value, from: form.gift_from.value } : null })) };
       form['order-id'].value = id;
       form.pdf.value = made.pdf;
       if (made.cards) form.cards.value = made.cards;

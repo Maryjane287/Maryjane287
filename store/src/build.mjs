@@ -183,6 +183,7 @@ const steps = `
 
 const faq = [
   ['How long does it take?', 'About five minutes to fill in. Your finished 24 page magazine is ready to download as soon as you have paid, and we email it to you too.'],
+  ['What is the hardcover keepsake book like?', 'It is the same 24 pages as the magazine, bound as a thick A4 hardcover book with a square spine, printed on heavy glossy photo paper. It stands on a shelf like a real book, so it is perfect for grandparents, weddings, new babies and memories you want to keep forever. It is printed near them and posted, with shipping added at checkout.'],
   ['Can you send it straight to them as a surprise?', 'Yes. Tick "It\'s a gift, send it to them for me" when you order, add their name and email, and pick the day. We email the finished magazine to them with your name on it, and you get your own copy first so you can see it. For a printed copy, just type their address at the printer\'s checkout.'],
   ['Where do you deliver?', 'Everywhere. Your magazine arrives by email, so you can send it to anyone in the world in seconds. Want it printed? Choose a printed magazine and it is printed near them and posted to their door, with shipping added at checkout.'],
   ['Can I see it before I pay?', 'Yes. You see a live preview of the cover and pages while you fill in the form.'],
@@ -451,7 +452,7 @@ async function simplePages() {
     body: wrap('Help', 'Delivery and questions', `
       <h2>Delivery</h2>
       <p>Your finished 24 page magazine is ready to download as a PDF the moment you have paid, and we email it to you too. You can send it to anyone, anywhere, by email or message, or print it at home or at any print shop.</p>
-      <p>Printed magazines are printed on glossy or matte paper by our print partner near the lucky person, then posted. Printing takes about 4 to 5 working days, plus a few days for the post. Shipping is worked out for their country and added at checkout.</p>
+      <p>Printed magazines are printed on glossy or matte paper, and hardcover keepsake books on heavy glossy photo paper, by our print partner near the lucky person, then posted. Printing takes about 4 to 5 working days, plus a few days for the post. Shipping is worked out for their country and added at checkout.</p>
       <p>Giving it for a special day? Order at least three days before, just to be safe.</p>
       <h2>Questions</h2>${faqHtml}
       <h2>Still stuck?</h2><p>Email <a href="mailto:${esc(site.email)}">${esc(site.email)}</a> and a real person will help.</p>`),

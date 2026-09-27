@@ -12,8 +12,8 @@
     { "id": "pdf", "label": "Instant PDF", "blurb": "Their 24 page magazine, ready to download, print or send by message", "gbp": 5, "usd": 7 },
     { "id": "cards", "label": "PDF plus card set", "blurb": "The 24 page magazine plus a matching printable card set: message cards, gift tags and bookmarks", "gbp": 7, "usd": 9, "popular": true },
     { "id": "print", "label": "Printed magazine", "blurb": "Glossy or matte A4 magazine, printed near them and posted. Shipping is added at checkout", "gbp": 14.99, "usd": 19.99 },
-    { "id": "premium", "label": "Premium gift edition", "blurb": "Extra pages, thicker cover and a handwritten style gift note", "gbp": 39, "usd": 49, "soon": true }
+    { "id": "hardcover", "label": "Hardcover keepsake book", "blurb": "All 24 pages bound as a thick A4 hardcover book on glossy photo paper, made to keep forever. Printed near them and posted. Shipping is added at checkout", "gbp": 18.99, "usd": 24.99 }
   ],
-  "peecho": { "offerings": { "glossy": 7380360, "matte": 7380353 } },
+  "peecho": { "offerings": { "glossy": 7380360, "matte": 7380353, "hardcover": 7380323 } },
   "checkout": { "pdf": "https://coverstorymagazines.lemonsqueezy.com/checkout/buy/0250373e-9962-40d1-96ba-51271f19a005", "cards": "https://coverstorymagazines.lemonsqueezy.com/checkout/buy/e6590a4e-8901-40f8-9923-a536d4128141", "print": "", "premium": "" }
 }
