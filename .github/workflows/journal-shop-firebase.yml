@@ -1,0 +1,28 @@
+# Publishes the Heirloom Hands journal shop (journal-shop/) to Firebase Hosting (<project>.web.app).
+# Needs one repository secret: FIREBASE_SERVICE_ACCOUNT (the JSON key from Firebase project settings).
+name: Journal shop to Firebase
+
+on:
+  push:
+    branches: [journal-shop]
+    paths: ['journal-shop/**', '.github/workflows/journal-shop-firebase.yml']
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read project id from the key
+        env:
+          SA: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: |
+          if [ -z "$SA" ]; then echo "::error::Add the FIREBASE_SERVICE_ACCOUNT secret in repo settings first"; exit 1; fi
+          echo "PROJECT_ID=$(echo "$SA" | jq -r .project_id)" >> "$GITHUB_ENV"
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          projectId: ${{ env.PROJECT_ID }}
+          channelId: live
+          entryPoint: journal-shop
