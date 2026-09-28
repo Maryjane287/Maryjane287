@@ -103,9 +103,8 @@ Cards (who: Mum/Dad/Grandma/Special Person; card + 4 page mini book per child, c
 held at the end of the queue (summer and spring). 219 pins waiting. PLUS BATCH 35 (VERSION 55, 204 tools, tools35.js): Autumn Explorer kit (autumn cmScene added to CM_SCENES via cmBackground
 wrapper, nature hunt, leaf lab, pumpkin maths), Little Shop kit (shop sign, tags, play money in CURRENCIES, lists, receipts,
 sums; Easier/Harder = level), Pet Vet Clinic (vet ID, patient cards, check-up, prescription pad), Road Trip Adventure Book (2
-bingo cards, journey map, games, plate hunt, maze, diary). Helper scenePage. 231 pins waiting. AUTO CYCLE (owner 2026-09-28): owner wants continuous work without saying "next batch". Routine
-trig_011KFPDntG6PjvXMkuVPvTAY fires into this session every 2 hours: build 4 paid products, bug check, polish the site, publish,
-short summary. HOME PAGE: new premium purple 'plus-show' section after the hero with tabs For families / For teachers
+bingo cards, journey map, games, plate hunt, maze, diary). Helper scenePage. 231 pins waiting. AUTO CYCLE (owner 2026-09-28): owner wants continuous work without saying "next batch". The 2 hour routine was DELETED at the owner's request: work turn by
+turn instead. After each batch, ask 'Shall I check for bugs?', then 'Shall I start the next batch?'. HOME PAGE: new premium purple 'plus-show' section after the hero with tabs For families / For teachers
 (SHOW_FAMILY, SHOW_TEACHER lists in build.py; keep them updated with the best products) and a hero button to it. Card sets
 (xmascards, classawards, classspecial) now start with a seriesCover so thumbnails look good. PLUS EDITIONS 4 (VERSION 50, 184 tools, tools30.js): Science Month (16 kitchen experiments SCI_EXP:
 you need, what to do, I think, I saw, draw, why; Friday reports), Spelling Month (3 levels of 4 weekly lists or the child's own
