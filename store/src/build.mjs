@@ -536,6 +536,23 @@ async function simplePages() {
     </section>`,
     scripts: '<script type="module" src="/assets/review.js"></script>',
   }));
+  await page('/note/', layout({
+    title: 'Write a little note', description: 'Add your own note to a magazine made for someone you love.', path: '/note/',
+    body: `<section class="section note-page"><div class="section-head"><p class="kicker">A little note from you</p><h1 id="note-title">Someone special is getting a magazine</h1><p class="lead" id="note-intro">And it would not be complete without a few words from you. Your note is printed inside, signed with your name.</p></div>
+      <form id="note-form" class="note-card">
+        <label class="field"><span>Your name, as you would sign a card</span><input name="from" maxlength="30" required autocomplete="given-name" placeholder="Grandma"></label>
+        <label class="field"><span>Your note</span><textarea name="msg" maxlength="110" required placeholder="You light up every room you walk into. Love you always."></textarea></label>
+        <small class="note-count" id="note-count">0 / 110</small>
+        <p class="small">How it will look in the magazine:</p>
+        <p class="note-preview" id="note-preview">You light up every room you walk into. Love you always.<b>Grandma</b></p>
+        <p class="rev-msg" id="note-msg" hidden></p>
+        <button class="btn btn-big" type="submit">Add my note</button>
+        <p class="small">Only the person making the magazine sees your note, and it is printed in their magazine. We delete it after 60 days.</p>
+      </form>
+      <div id="note-done" class="thanks" hidden><p class="kicker">Thank you</p><h2>Your note is in.</h2><p class="lead" id="note-done-lead">It will be printed in the magazine, signed with your name.</p><p class="small">Want to make one for someone you love?</p><a class="btn" href="/">See the magazines</a></div>
+    </section>`,
+    scripts: '<script type="module" src="/assets/note.js"></script>',
+  }));
   await page('/thanks/', layout({
     title: 'Thank you', description: 'Your magazine is on its way.', path: '/thanks/',
     body: `<section class="thanks"><div class="confetti" aria-hidden="true">${Array.from({ length: 18 }, (_, i) => `<i style="--i:${i}"></i>`).join('')}</div><p class="kicker">Order received</p><h1>Stop the press! Your magazine is in the works.</h1><p class="lead" id="thanks-lead">Digital magazines are ready to download straight after payment, and we email them to you too. Printed copies are printed near the lucky person and posted, and our print partner emails you when it ships.</p><a class="btn" href="/">Back to the front page</a></section>`,
@@ -549,7 +566,7 @@ async function simplePages() {
 async function feeds() {
   const urls = ['/', ...mags.flatMap(m => designsFor(m).map(d => magPath(m, d))), '/make/', '/ideas/', ...ideas.map(i => `/ideas/${i.slug}/`), '/help/', '/about/', '/privacy/', '/terms/'];
   await page('/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${abs(u)}</loc></url>`).join('\n')}\n</urlset>\n`);
-  await page('/robots.txt', `User-agent: *\nAllow: /\nSitemap: ${abs('/sitemap.xml')}\n`);
+  await page('/robots.txt', `User-agent: *\nAllow: /\nDisallow: /note/\nSitemap: ${abs('/sitemap.xml')}\n`);
   // Pinterest catalog feed: one row per magazine and edition, so each shows up as a shoppable product.
   const csvCell = s => `"${String(s).replace(/"/g, '""')}"`;
   const rows = [['id', 'title', 'description', 'link', 'image_link', 'additional_image_link', 'price', 'availability', 'condition', 'brand', 'item_group_id', 'google_product_category', 'product_type']];

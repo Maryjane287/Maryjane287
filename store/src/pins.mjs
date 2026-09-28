@@ -20,7 +20,7 @@ const pinHtml = (mag, ex, design) => {
   const p = PALETTES[ex.palette];
   const cover = renderCover(mag, ex.values, { palette: ex.palette, portraitOpts: ex.portrait, design });
   const back = ex.palette === 'paper' ? '#8b1e1e' : p.bg;
-  const light = ['rose', 'butter', 'mint', 'sky'].includes(ex.palette);
+  const light = ['rose', 'butter', 'mint', 'sky', 'snow'].includes(ex.palette);
   const size = mag.pinTitle.length > 30 ? 60 : 68;
   return `<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="assets/fonts.css">
   <style>${coversCss}

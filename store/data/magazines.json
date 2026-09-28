@@ -1,5 +1,271 @@
 [
   {
+    "slug": "christmas-magazine",
+    "title": "Our Family Christmas",
+    "searchTitle": "Personalised Family Christmas Magazine",
+    "pinTitle": "Personalised Christmas Magazine",
+    "occasion": "Christmas",
+    "short": "A cosy Christmas magazine all about your family, your traditions and your year.",
+    "description": "Turn your family Christmas into a real magazine. The funniest traditions, who is heading for the naughty list, the wish list sent to Santa and the best moment of the year, all written up like a glossy Christmas special with your photo on the cover. A keepsake for the whole family, perfect under the tree, in a Christmas Eve box or posted to Grandma far away.",
+    "keywords": [
+      "personalised christmas gift",
+      "family christmas gift",
+      "christmas gift for grandparents",
+      "christmas eve box ideas",
+      "christmas keepsake",
+      "unique christmas present"
+    ],
+    "inside": [
+      "24 full pages, all about your family",
+      "A Christmas cover starring all of you",
+      "A Christmas letter for the whole family",
+      "Dear Santa: your family wish list",
+      "Your funniest Christmas traditions",
+      "The Christmas awards and the naughty list",
+      "An official Nice List certificate",
+      "A quiz and word search made from your answers",
+      "Vouchers, a North Pole passport and a notes page for Grandma"
+    ],
+    "letterTitle": "A Christmas letter",
+    "feature": [
+      "Dear Santa, here is our wish list",
+      "wishes"
+    ],
+    "designPalettes": {
+      "fashion": [
+        "cranberry",
+        "festive"
+      ],
+      "retro": [
+        "cranberry",
+        "snow"
+      ],
+      "scrapbook": [
+        "snow",
+        "festive"
+      ],
+      "minimal": [
+        "snow",
+        "cranberry"
+      ],
+      "comic": [
+        "festive",
+        "cranberry"
+      ]
+    },
+    "festive": true,
+    "fields": [
+      {
+        "id": "family",
+        "label": "Your family name",
+        "example": "The Taylors",
+        "max": 18
+      },
+      {
+        "id": "year",
+        "label": "Which Christmas?",
+        "example": "2026",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Grandma and Grandpa",
+        "max": 30
+      },
+      {
+        "id": "tradition",
+        "label": "Your funniest Christmas tradition",
+        "example": "Matching pyjamas, even the dog",
+        "max": 45
+      },
+      {
+        "id": "naughty",
+        "label": "Most likely to be on the naughty list",
+        "example": "Dad, for eating the chocolate coins",
+        "max": 45
+      },
+      {
+        "id": "dinner",
+        "label": "The best bit of Christmas dinner",
+        "example": "Roast potatoes, fought over every year",
+        "max": 45
+      },
+      {
+        "id": "jumper",
+        "label": "The best Christmas jumper goes to",
+        "example": "Grandpa, the one that lights up",
+        "max": 40
+      },
+      {
+        "id": "words",
+        "label": "Three words for your Christmas",
+        "example": "Cosy, chaotic, magical",
+        "max": 28
+      },
+      {
+        "id": "wishes",
+        "label": "Everyone's Christmas wishes, for the letter to Santa",
+        "example": "Mia would like a puppy (again). Leo wants a snowball that never melts. Mum wishes for one quiet cup of tea, and Dad just wants everyone home.",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "moment",
+        "label": "The best moment of your year",
+        "example": "The day we all got caught in the rain at the seaside and laughed so hard we forgot to run",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your Christmas message to them",
+        "example": "Every Christmas with you is the best one yet. Thank you for the laughter, the chaos and all the love. Here is to many more years of paper hats and terrible jokes.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the family",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite Christmas moment",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "the-taylors",
+        "palette": "festive",
+        "portrait": {
+          "family": [
+            {
+              "skin": 1,
+              "hair": "long",
+              "hairColor": "#6b3a1f",
+              "hat": true
+            },
+            {
+              "skin": 1,
+              "hair": "short",
+              "hairColor": "#3a2a1a"
+            },
+            {
+              "skin": 1,
+              "hair": "bun",
+              "hairColor": "#8a5a2b",
+              "hat": true
+            }
+          ]
+        },
+        "values": {
+          "family": "The Taylors",
+          "year": "2026",
+          "tradition": "Matching pyjamas, even the dog",
+          "naughty": "Dad, for eating the chocolate coins",
+          "dinner": "Roast potatoes, fought over every year",
+          "jumper": "Grandpa, the one that lights up",
+          "words": "Cosy, chaotic, magical"
+        }
+      },
+      {
+        "id": "the-carters",
+        "palette": "cranberry",
+        "portrait": {
+          "family": [
+            {
+              "skin": 3,
+              "hair": "short",
+              "hairColor": "#141010"
+            },
+            {
+              "skin": 3,
+              "hair": "curly",
+              "hairColor": "#141010",
+              "hat": true
+            },
+            {
+              "skin": 3,
+              "hair": "curly",
+              "hairColor": "#2b1a12",
+              "hat": true
+            }
+          ]
+        },
+        "values": {
+          "family": "The Carters",
+          "year": "2026",
+          "tradition": "A snowball fight, snow or no snow",
+          "naughty": "Leo, for peeking at every present",
+          "dinner": "Grandma's famous trifle",
+          "jumper": "Mum, covered in tiny reindeer",
+          "words": "Loud, loving, sparkly"
+        }
+      },
+      {
+        "id": "mia-sam",
+        "palette": "snow",
+        "portrait": {
+          "family": [
+            {
+              "skin": 0,
+              "hair": "short",
+              "hairColor": "#c98b4f",
+              "hat": true
+            },
+            {
+              "skin": 2,
+              "hair": "long",
+              "hairColor": "#2b1a12"
+            }
+          ]
+        },
+        "values": {
+          "family": "Mia & Sam",
+          "year": "2026",
+          "tradition": "Opening one present on Christmas Eve",
+          "naughty": "Sam, for hiding the last mince pie",
+          "dinner": "Pudding set on fire (on purpose)",
+          "jumper": "Mia, the one with a bobble nose",
+          "words": "Snug, silly, together"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{family}",
+      "issue": "The Christmas issue",
+      "edition": "Christmas {year}",
+      "lines": [
+        [
+          "Exclusive",
+          "The naughty list: {naughty}"
+        ],
+        [
+          "Tradition",
+          "{tradition}"
+        ],
+        [
+          "Dinner",
+          "{dinner}"
+        ]
+      ],
+      "badge": [
+        "Christmas",
+        "{year}",
+        "special"
+      ],
+      "quote": "{words}",
+      "credit": "The North Pole reports, page 9"
+    }
+  },
+  {
     "slug": "birthday-magazine",
     "layout": "birthday",
     "title": "Birthday Cover Story",

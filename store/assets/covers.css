@@ -364,7 +364,7 @@
 .pg-last { background: color-mix(in srgb, var(--bg) 18%, #fffaf2); }
 
 /* Showstopper pages: the fragrance ad, the movie poster and the collector's card */
-.pg-ad { background: radial-gradient(circle at 50% 38%, color-mix(in srgb, var(--accent) 55%, #fff) 0, var(--bg) 42%, color-mix(in srgb, var(--bg) 55%, #000) 100%); color: #fff; text-align: center; }
+.pg-ad { background: radial-gradient(circle at 50% 38%, color-mix(in srgb, var(--accent) 55%, #fff) 0, color-mix(in srgb, var(--bg) 62%, #14111f) 42%, color-mix(in srgb, var(--bg) 40%, #000) 100%); color: #fff; text-align: center; }
 .pg-ad::before { display: none; }
 .ad-glow { position: absolute; left: 50%; top: 40%; width: 90cqw; height: 90cqw; translate: -50% -50%; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,.35), transparent 60%); }
 .ad-kicker { position: relative; margin: 9cqw 0 0; font-size: 2.8cqw; font-weight: 800; letter-spacing: .4em; text-transform: uppercase; }
@@ -552,7 +552,7 @@
 .cs-tag { position: relative; height: 40cqw; border-radius: 2cqw; clip-path: polygon(20% 0, 80% 0, 100% 12%, 100% 100%, 0 100%, 0 12%); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 8cqw 2.4cqw 3cqw; border: .4cqw dashed rgba(0,0,0,.18); }
 .cs-tag0 { background: var(--bg); color: var(--ink); }
 .cs-tag1 { background: var(--accent); color: var(--ink); }
-.cs-tag2 { background: var(--ink); color: var(--pop); }
+.cs-tag2 { background: var(--ink); color: var(--bg); }
 .cs-hole { position: absolute; top: 4cqw; left: 50%; width: 3.6cqw; height: 3.6cqw; margin-left: -1.8cqw; border-radius: 50%; background: #fff; box-shadow: inset 0 0 0 .5cqw rgba(0,0,0,.15); }
 .cs-tag small { font-family: 'Caveat', cursive; font-size: 5cqw; line-height: 1; }
 .cs-tag b { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 5.4cqw; line-height: 1.02; margin-top: 1cqw; overflow-wrap: break-word; hyphens: manual; }
@@ -563,3 +563,9 @@
 .cs-mark-name { font-family: 'Anton', Impact, sans-serif; line-height: 1; white-space: nowrap; }
 .cs-mark-q { font-family: 'Caveat', cursive; font-size: 3.8cqw; line-height: 1; text-align: center; overflow: hidden; max-height: 8cqw; }
 .cs-mark-foot { font-size: 1.9cqw; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; opacity: .75; white-space: nowrap; }
+
+/* Christmas: soft snowflakes drifting over the cover */
+.cv-snow { position: absolute; inset: 0; pointer-events: none; z-index: 1; color: #fff; }
+.cv-snow i { position: absolute; display: block; aspect-ratio: 1; filter: drop-shadow(0 0 0.4cqw rgba(0,0,0,.15)); }
+.cv-snow svg { display: block; width: 100%; height: 100%; }
+.cv-minimal .cv-snow, .cv-scrapbook .cv-snow { color: #c8102e; }
