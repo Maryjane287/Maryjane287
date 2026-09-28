@@ -316,3 +316,30 @@ footer .foot-all { color: #ffb3c7 !important; font-weight: 800; margin-top: 4px;
 .plus-edition b { color: #8a3fd1; }
 .plus-edition em { font-style: normal; font-weight: 800; color: #e0457b; white-space: nowrap; font-size: 14px; }
 @media (max-width: 700px) { .plus-edition { flex-wrap: wrap; } .plus-edition em { width: 100%; } }
+
+/* ---- Plus showcase (premium band on the home page) ---- */
+.btn.plusbtn { background: linear-gradient(135deg, #8a3fd1, #e0457b); color: #fff; box-shadow: 0 5px 0 #6a2aa8; }
+.plus-show { background: radial-gradient(1200px 400px at 10% 0%, #5b2bb5 0%, transparent 60%), linear-gradient(135deg, #2d1b69 0%, #4a1f7a 55%, #7a2462 100%); color: #fff; padding: 56px 0 60px; margin: 10px 0 30px; }
+.plus-show .ps-head { text-align: center; max-width: 760px; margin: 0 auto 22px; }
+.plus-show h2 { color: #fff; }
+.plus-show .ps-head p { color: #e7defa; font-size: 18px; }
+.ps-badge { display: inline-block; background: linear-gradient(135deg, #ffc93c, #ff8fb1); color: #2d1b69; font-weight: 900; border-radius: 99px; padding: 6px 16px; margin-bottom: 12px; font-size: 15px; }
+.ps-tabs { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 22px; }
+.ps-tabs button { font: 800 16px 'Nunito', sans-serif; color: #e7defa; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); border-radius: 99px; padding: 10px 20px; cursor: pointer; }
+.ps-tabs button b { color: #ffc93c; margin-left: 6px; }
+.ps-tabs button.on { background: #fff; color: #2d1b69; }
+.ps-tabs button.on b { color: #e0457b; }
+.ps-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.ps-row[hidden] { display: none; }
+.show-card { display: flex; flex-direction: column; background: #fff; color: var(--ink); border-radius: 20px; overflow: hidden; text-decoration: none; box-shadow: 0 10px 30px rgba(0,0,0,.25); transition: transform .2s; }
+.show-card:hover { transform: translateY(-4px) rotate(-.4deg); }
+.show-thumb { background: var(--tint); padding: 14px 18px 0; height: 190px; overflow: hidden; }
+.show-thumb img { width: 100%; height: auto; border-radius: 8px 8px 0 0; box-shadow: 0 6px 18px rgba(45,35,80,.18); }
+.show-body { padding: 14px 16px 16px; }
+.show-body h3 { font-size: 19px; margin-bottom: 4px; }
+.show-body p { font-size: 14.5px; color: var(--soft); margin-bottom: 8px; line-height: 1.4; }
+.show-body .go { font-weight: 800; color: #8a3fd1; font-size: 14.5px; }
+.ps-cta { display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 26px; }
+.ps-cta span { color: #e7defa; font-weight: 700; }
+@media (max-width: 1000px) { .ps-row { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .ps-row { grid-template-columns: 1fr 1fr; gap: 12px; } .show-thumb { height: 130px; padding: 10px 10px 0; } .show-body p { display: none; } .show-body h3 { font-size: 16px; } .plus-show { padding: 40px 0; } }

@@ -127,7 +127,7 @@ function makeMovingUp(o, paper) {
 function makeClassSpecial(o, paper) {
   const kids = classNames(o), lk = edLook(o.look), { cls } = teacherBits(o);
   const who = String(o.who || '').trim().replace(/[<>]/g, '').slice(0, 20) || 'Mum';
-  const pages = [];
+  const pages = [seriesCover(paper, 'PRINTPALS PLUS FOR TEACHERS', `Cards for ${who}`, cls || 'A gift from every child', ['💐', '💌', '🌷', '💛', '🎁', '⭐'], lk.ring, lk.tint, 'card set', ['A card from every child', 'Signed with their name', '4 page mini book', `All about my ${who}`, 'Class checklist', 'Kind for every family'])];
   kids.forEach((n, i) => {
     const c = PALETTE[i % PALETTE.length];
     pages.push(...foldedCard(paper, (pg, x, y, w, h) => {

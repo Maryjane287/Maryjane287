@@ -91,7 +91,7 @@ function makeClassAwards(o, paper) {
   const kids = classNames(o), lk = edLook(o.look);
   const cls = String(o.cls || '').trim().slice(0, 24), teacher = String(o.teacher || '').trim().slice(0, 30);
   const awards = shuffle(CLASS_AWARDS, rand);
-  const pages = [];
+  const pages = [seriesCover(paper, 'PRINTPALS PLUS FOR TEACHERS', cls ? `${cls} Awards` : 'Class Awards', 'A different award for every child', awards.slice(0, 6).map((a) => a[0]), lk.ring, lk.tint, 'award set', ['40 different awards', 'Every child named', 'Never the same twice', 'Ceremony plan list', 'Star of the Week', 'Shuffle until perfect'])];
   // Overview for the teacher: who gets which award.
   {
     const pg = new Page(paper, `${cls || 'Class'} awards list`, { subtitle: 'Every child has their own award. Press Make a new set to shuffle them, or keep this list to plan the ceremony!', noName: true });

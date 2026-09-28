@@ -100,7 +100,11 @@ card via foldedCard with backEmoji, certificate, balloon display, badges), Class
 team, 4 teams points, 10 coupons, golden time tracker, Star of the Week poster), Moving Up Kit (All about me for new teacher,
 handover notes, class summary grid, worries and wishes, welcome letter, certificate each; 'next' class name), Class Special Person
 Cards (who: Mum/Dad/Grandma/Special Person; card + 4 page mini book per child, checklist). Moving Up and Special Person pins are
-held at the end of the queue (summer and spring). 219 pins waiting. PLUS EDITIONS 4 (VERSION 50, 184 tools, tools30.js): Science Month (16 kitchen experiments SCI_EXP:
+held at the end of the queue (summer and spring). 219 pins waiting. AUTO CYCLE (owner 2026-09-28): owner wants continuous work without saying "next batch". Routine
+trig_011KFPDntG6PjvXMkuVPvTAY fires into this session every 2 hours: build 4 paid products, bug check, polish the site, publish,
+short summary. HOME PAGE: new premium purple 'plus-show' section after the hero with tabs For families / For teachers
+(SHOW_FAMILY, SHOW_TEACHER lists in build.py; keep them updated with the best products) and a hero button to it. Card sets
+(xmascards, classawards, classspecial) now start with a seriesCover so thumbnails look good. PLUS EDITIONS 4 (VERSION 50, 184 tools, tools30.js): Science Month (16 kitchen experiments SCI_EXP:
 you need, what to do, I think, I saw, draw, why; Friday reports), Spelling Month (3 levels of 4 weekly lists or the child's own
 school words; Mon look say cover write check, Tue word hunt via packRun wordsearch, Wed missing letters, Thu sentences, Fri test),
 Calm and Happy Month (feelings check-in, breathing game, calm activity, thank you; Friday my week), Reading Adventure Month (map

@@ -13640,7 +13640,7 @@ function makeClassAwards(o, paper) {
   const kids = classNames(o), lk = edLook(o.look);
   const cls = String(o.cls || '').trim().slice(0, 24), teacher = String(o.teacher || '').trim().slice(0, 30);
   const awards = shuffle(CLASS_AWARDS, rand);
-  const pages = [];
+  const pages = [seriesCover(paper, 'PRINTPALS PLUS FOR TEACHERS', cls ? `${cls} Awards` : 'Class Awards', 'A different award for every child', awards.slice(0, 6).map((a) => a[0]), lk.ring, lk.tint, 'award set', ['40 different awards', 'Every child named', 'Never the same twice', 'Ceremony plan list', 'Star of the Week', 'Shuffle until perfect'])];
   // Overview for the teacher: who gets which award.
   {
     const pg = new Page(paper, `${cls || 'Class'} awards list`, { subtitle: 'Every child has their own award. Press Make a new set to shuffle them, or keep this list to plan the ceremony!', noName: true });
@@ -13971,7 +13971,7 @@ function foldedCard(paper, front, inside, backNote, backEmoji) {
 // ================================================================ Class Christmas Cards (teachers)
 function makeXmasCards(o, paper) {
   const kids = classNames(o), lk = xLook(o.look), { cls, teacher } = teacherBits(o);
-  const pages = [];
+  const pages = [seriesCover(paper, 'PRINTPALS PLUS FOR TEACHERS', cls ? `${cls} Christmas Cards` : 'Class Christmas Cards', 'A card for every child, and one they make', ['💌', '🎄', '⭐', '🎁', '⛄', '🔔'], lk.ring, lk.tint, 'card set', ['A card from you to each child', 'Warm message inside', 'A card each child makes', 'Signed with their name', 'Named gift tags', `${kids.length} children, all named`])];
   kids.forEach((n, i) => {
     const art = XART[i % XART.length], c = i % 2 ? lk.ring : lk.accent;
     // Card from the teacher (colour-in front, message inside).
@@ -14248,7 +14248,7 @@ function makeMovingUp(o, paper) {
 function makeClassSpecial(o, paper) {
   const kids = classNames(o), lk = edLook(o.look), { cls } = teacherBits(o);
   const who = String(o.who || '').trim().replace(/[<>]/g, '').slice(0, 20) || 'Mum';
-  const pages = [];
+  const pages = [seriesCover(paper, 'PRINTPALS PLUS FOR TEACHERS', `Cards for ${who}`, cls || 'A gift from every child', ['💐', '💌', '🌷', '💛', '🎁', '⭐'], lk.ring, lk.tint, 'card set', ['A card from every child', 'Signed with their name', '4 page mini book', `All about my ${who}`, 'Class checklist', 'Kind for every family'])];
   kids.forEach((n, i) => {
     const c = PALETTE[i % PALETTE.length];
     pages.push(...foldedCard(paper, (pg, x, y, w, h) => {

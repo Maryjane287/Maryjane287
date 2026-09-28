@@ -3435,6 +3435,10 @@ ONLY = [
 ]
 
 
+SHOW_FAMILY = ['handmonth', 'mathsday', 'readmonth', 'colourmonth', 'timesclub', 'sciencemonth', 'phonicsmonth', 'dinokit']
+SHOW_TEACHER = ['classwelcome', 'xmascards', 'xmasshow', 'classawards', 'readingrecords', 'classrewards', 'parentsevening', 'reporthelper']
+
+
 def home():
     def card(t, i=0):
         a, b = AGES[t['id']]
@@ -3454,6 +3458,21 @@ def home():
     only = ''.join(f'<a class="only-card" href="{u}"><span class="only-ico">{i}</span><b>{html.escape(h)}</b><span>{html.escape(d)}</span><em>{html.escape(c)} →</em></a>' for i, h, d, u, c in ONLY)
     pressed = ' aria-pressed="true"'
     ages = ''.join(f'<button type="button" data-age="{a}"{pressed if a == "all" else ""}>{lab}</button>' for a, lab in [('all', 'All ages'), ('3', 'Age 3'), ('4', 'Age 4'), ('5', 'Age 5'), ('6', 'Age 6'), ('7', 'Age 7'), ('8', 'Age 8+')])
+    tmap = {t['id']: t for t in TOOLS}
+    def show_card(t):
+        return f'''<a class="show-card" href="/{t['slug']}" style="--tint:{t['tint']}"><div class="show-thumb"><img src="/img/thumb-{t['id']}.webp" alt="{html.escape(t['h1'])} example" loading="lazy" width="400" height="566"></div><div class="show-body"><h3>{t['icon']} {html.escape(t['h1'])}</h3><p>{html.escape(t['card'])}</p><span class="go">Try 7 days free →</span></div></a>'''
+    fam = [tmap[i] for i in SHOW_FAMILY if i in tmap]
+    tea = [tmap[i] for i in SHOW_TEACHER if i in tmap]
+    n_plus = sum(1 for t in TOOLS if t.get('plus') and not t.get('teacher'))
+    n_teach = sum(1 for t in TOOLS if t.get('teacher'))
+    showcase = f'''<section class="plus-show" id="plus-show"><div class="wrap">
+<div class="ps-head"><span class="ps-badge">✨ PrintPals Plus</span><h2>Premium learning, planned for you</h2><p>Whole months of learning, series to collect and class packs with every child's name. {n_plus} family packs and {n_teach} teacher packs, with new ones every month.</p></div>
+<div class="ps-tabs" role="tablist"><button type="button" class="on" data-ps="fam">👨‍👩‍👧 For families <b>$4.99/month</b></button><button type="button" data-ps="tea">🍎 For teachers <b>$59/year</b></button></div>
+<div class="ps-row" data-ps-row="fam">{''.join(show_card(t) for t in fam)}</div>
+<div class="ps-row" data-ps-row="tea" hidden>{''.join(show_card(t) for t in tea)}</div>
+<div class="ps-cta"><a class="btn big" href="/plus">Try Plus free for 7 days</a><span>No card needed. Cancel any time.</span></div>
+</div></section>
+<script>document.querySelectorAll('.ps-tabs button').forEach(function (b) {{ b.addEventListener('click', function () {{ document.querySelectorAll('.ps-tabs button').forEach(function (x) {{ x.classList.toggle('on', x === b); }}); document.querySelectorAll('.ps-row').forEach(function (r) {{ r.hidden = r.dataset.psRow !== b.dataset.ps; }}); }}); }});</script>'''
     jumps = ''.join(f'<a href="#{k}">{NAV_LABEL[k]} <b>{sum(1 for t in TOOLS if t["cat"] == k)}</b></a>' for k, v in CATS)
     return head('PrintPals | Free Printable Worksheets and Ready-Made Learning Packs for Kids',
                 'Free printable worksheets for kids, and a whole personalised learning week in one click. Tracing, reading, maths, puzzles, crafts, charts, quick packs for busy moments and activities for family far away. No sign up.',
@@ -3464,9 +3483,10 @@ def home():
 <section class="hero"><div class="shapes" aria-hidden="true">{shapes}</div><div class="wrap" style="position:relative">
 <h1>Stop searching.<br><span class="hl">Start learning.</span></h1>
 <p class="lead">A whole week of learning planned for your child in one click, with their name on every page. Plus {sum(1 for t in TOOLS if t['cat'] != 'packs')} free worksheet makers for ages 2 to 10. No sign up, ever.</p>
-<div class="cta"><a class="btn big" href="/weekly-learning-pack">🎒 Plan my child's week, free</a><a class="btn alt big" href="#packs">Browse everything</a></div>
+<div class="cta"><a class="btn big" href="/weekly-learning-pack">🎒 Plan my child's week, free</a><a class="btn plusbtn big" href="#plus-show">✨ Explore PrintPals Plus</a></div>
 <div class="chips"><span class="chip">✓ 100% free</span><span class="chip">✓ No sign up</span><span class="chip">✓ Private on your device</span><span class="chip">✓ A4 and US Letter</span><span class="chip">✓ Ink saver</span></div>
 </div></section>
+{showcase}
 <section class="only"><div class="wrap"><h2>What only PrintPals does</h2><p class="cat-lead">Other sites give you ten thousand worksheets and leave you to work it out. We built PrintPals around the real problems parents tell us about.</p><div class="only-grid">{only}</div></div></section>
 <div class="wrap">
 <div class="finder">

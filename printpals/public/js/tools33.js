@@ -20,7 +20,7 @@ function foldedCard(paper, front, inside, backNote, backEmoji) {
 // ================================================================ Class Christmas Cards (teachers)
 function makeXmasCards(o, paper) {
   const kids = classNames(o), lk = xLook(o.look), { cls, teacher } = teacherBits(o);
-  const pages = [];
+  const pages = [seriesCover(paper, 'PRINTPALS PLUS FOR TEACHERS', cls ? `${cls} Christmas Cards` : 'Class Christmas Cards', 'A card for every child, and one they make', ['💌', '🎄', '⭐', '🎁', '⛄', '🔔'], lk.ring, lk.tint, 'card set', ['A card from you to each child', 'Warm message inside', 'A card each child makes', 'Signed with their name', 'Named gift tags', `${kids.length} children, all named`])];
   kids.forEach((n, i) => {
     const art = XART[i % XART.length], c = i % 2 ? lk.ring : lk.accent;
     // Card from the teacher (colour-in front, message inside).
