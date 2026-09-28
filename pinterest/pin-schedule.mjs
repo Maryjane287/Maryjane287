@@ -49,7 +49,7 @@ const rows = pins.map((p, i) => {
   const title = uniqueTitle(p, base);
   const desc = `${p.mag.short} Answer a few fun questions, add photos, and get a finished 24 page magazine about them. Instant PDF from 5 pounds, or printed and posted worldwide. A one of a kind gift from Cover Story.`.slice(0, 500);
   const file = `${p.mag.slug}-${base ? '' : p.design + '-'}${p.ex.id}.jpg`;
-  return { title, date: d.toISOString().slice(0, 19), csv: [title, `${url}/pins/${file}`, boardOf(p.mag.slug), '', desc, `${url}/${p.mag.slug}/${base ? '' : p.design + '/'}`, d.toISOString().slice(0, 19), p.mag.keywords.slice(0, 5).join(', ')].map(cell).join(',') };
+  return { title, date: d.toISOString().slice(0, 19), csv: [title, `${url}/pins/${file}`, boardOf(p.mag.slug), '', desc, `${url}/${p.mag.slug}/${base ? '' : p.design + '/'}?utm_source=pinterest&utm_content=${file.replace(/\.jpg$/, '')}`, d.toISOString().slice(0, 19), p.mag.keywords.slice(0, 5).join(', ')].map(cell).join(',') };
 });
 await mkdir(out, { recursive: true });
 const head = ['Title', 'Media URL', 'Pinterest board', 'Thumbnail', 'Description', 'Link', 'Publish date', 'Keywords'].join(',');
@@ -66,5 +66,14 @@ if (process.env.DONE) {
   await writeFile(`${out}/cover-story-pins-batch-1-missing.csv`, '\ufeff' + head + '\r\n' + retry.map(r => r.csv).join('\r\n') + '\r\n');
   console.log('batch 1 missing pins:', retry.length);
 }
+// The retry of those pins then lost 29 more to "Duplicate Pin link": every pin
+// now has its own link (a tag on the end), and this file holds just those 29.
+if (process.env.FAILED) {
+  const failed = new Set((await readFile(process.env.FAILED, 'utf8')).split(/\r?\n/).map(x => x.trim().toLowerCase()).filter(Boolean));
+  const retry = rows.slice(0, PER_BATCH).filter(r => failed.has(r.title.toLowerCase()));
+  await writeFile(`${out}/cover-story-pins-batch-1-last-29.csv`, '\ufeff' + head + '\r\n' + retry.map(r => r.csv).join('\r\n') + '\r\n');
+  console.log('batch 1 last pins:', retry.length);
+}
+console.log('unique links', new Set(rows.map(r => r.csv.split(',').find(c => c.includes('utm_source')))).size);
 console.log('unique titles', new Set(rows.map(r => r.title.toLowerCase())).size, 'of', rows.length);
 console.log('missing boards', pins.filter(p => !boardOf(p.mag.slug)).length, 'total', pins.length);
