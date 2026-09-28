@@ -39,3 +39,28 @@ if (window.PIN_TAG_ID) {
     document.body.append(bar);
   }
 }
+
+// Older phone browsers can't size things by the cover's own width (cqw) or
+// keep a page's shape (aspect-ratio). Where that is missing, measure each
+// cover and page here instead, including the ones the maker draws later.
+(() => {
+  const ok = p => window.CSS && CSS.supports && CSS.supports(p);
+  const noCq = !ok('width: 1cqw'), noRatio = !ok('aspect-ratio: 1');
+  if (!noCq && !noRatio) return;
+  const size = el => {
+    // cqw measures the inside of the box, ignoring padding and any animation scale.
+    const cs = getComputedStyle(el);
+    const w = parseFloat(cs.width) - (cs.boxSizing === 'border-box' ? parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight) + parseFloat(cs.borderLeftWidth) + parseFloat(cs.borderRightWidth) : 0);
+    if (noCq) el.style.setProperty('--cq', w / 100 + 'px');
+    if (noRatio) el.style.height = el.offsetWidth * 297 / 210 + 'px';
+  };
+  const ro = window.ResizeObserver ? new ResizeObserver(list => list.forEach(e => size(e.target))) : null;
+  const seen = new WeakSet();
+  const scan = root => {
+    const els = [...(root.matches && root.matches('.cv, .pg') ? [root] : []), ...root.querySelectorAll('.cv, .pg')];
+    els.forEach(el => { size(el); if (!seen.has(el)) { seen.add(el); if (ro) ro.observe(el); } });
+  };
+  scan(document);
+  new MutationObserver(ms => ms.forEach(m => m.addedNodes.forEach(n => { if (n.nodeType === 1) scan(n); }))).observe(document.body, { childList: true, subtree: true });
+  if (!ro) addEventListener('resize', () => scan(document));
+})();
