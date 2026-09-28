@@ -116,7 +116,7 @@ function makeGarden(o, paper) {
   }
   // What plants need.
   pages.push(tagsPage(paper, 'What plants need', 'Every plant needs these four things to grow. Colour them, cut them out and stick them by your plant!', 4, 2, (pg, x, y, w, h, i) => {
-    const [e, t, d] = [['☀️', 'Sunlight', 'Plants make their food from light.'], ['💧', 'Water', 'A little drink, not too much!'], ['🟫', 'Soil', 'Roots hold on and find food here.'], ['🌬️', 'Air', 'Leaves breathe in the air.']][i], c = PALETTE[i];
+    const [e, t, d] = [['☀️', 'Sunlight', 'Plants make their food from light.'], ['💧', 'Water', 'A little drink, not too much!'], ['🟫', 'Soil', 'Roots hold on tight and drink up water here.'], ['🌬️', 'Air', 'Leaves take in air.']][i], c = PALETTE[i];
     pg.add(`<rect x="${x + 4}" y="${y + 4}" width="${w - 8}" height="${h - 8}" rx="10" fill="${TINTS[i]}" stroke="${c}" stroke-width="1.1"/>` + emoji(e, x + w / 2, y + h * 0.36, h * 0.3) + txt(x + w / 2, y + h * 0.7, t, 11, { colour: c }) + txt(x + w / 2, y + h * 0.7 + 10, d, fitFont(d, 5.4, w - 16, 0.5), { font: FONT, weight: 700, colour: INK }));
   }));
   pages.push(picGridPage(paper, 'Garden bug hunt', 'Tiptoe round the garden or park. Cross off each little creature you find, then let it go!', [['🐞', 'Ladybird'], ['🐝', 'Bee'], ['🦋', 'Butterfly'], ['🐛', 'Caterpillar'], ['🐌', 'Snail'], ['🐜', 'Ant'], ['🕷️', 'Spider'], ['🪱', 'Worm'], ['🦗', 'Grasshopper'], ['🪲', 'Beetle'], ['🐦', 'Bird'], ['🕸️', 'Web'], ['🪰', 'Fly'], ['🌸', 'Flower visitor'], ['🍃', 'Nibbled leaf'], ['🦔', 'Hedgehog signs']]));
@@ -166,7 +166,7 @@ function makeKindness(o, paper) {
     wrap(t, 18).forEach((l, k, all) => pg.add(txt(x + w / 2, y + h / 2 + 8 - (all.length - 1) * 5 + k * 10, l, fitFont(l, 9, w - 24, 0.56), { colour: c })));
     pg.add(txt(x + w / 2, y + h - 12, 'From ______________', 5, { font: FONT, colour: SOFT }));
   }));
-  pages.push(picGridPage(paper, 'Kindness bingo', 'Cross off each kind thing you do. Can you get four in a row?', [['🤗', 'Give a hug'], ['😊', 'Smile at someone'], ['🧸', 'Share a toy'], ['🙏', 'Say thank you'], ['📞', 'Call family'], ['🍪', 'Share a snack'], ['🧹', 'Help tidy'], ['💌', 'Write a note'], ['🌷', 'Give a flower'], ['🎨', 'Draw for someone'], ['👋', 'Say hello'], ['🐦', 'Feed the birds'], ['😂', 'Make someone laugh'], ['🙋', 'Offer help'], ['📖', 'Read together'], ['💗', 'Be kind to you']]));
+  pages.push(picGridPage(paper, 'Kindness bingo', 'Cross off each kind thing you do. Can you get four in a row?', [['🤗', 'Give a hug'], ['😊', 'Smile at someone'], ['🧸', 'Share a toy'], ['🙏', 'Say thank you'], ['📞', 'Call family'], ['🍪', 'Share a snack'], ['🧹', 'Help tidy'], ['💌', 'Write a note'], ['🌷', 'Give a flower'], ['🎨', 'Draw for someone'], ['👋', 'Say hello'], ['🐦', 'Feed the birds'], ['😂', 'Make someone laugh'], ['🙋', 'Offer help'], ['📖', 'Read together'], ['💗', 'Be kind to yourself']]));
   pages.push(countRowsPage(paper, 'Count the love', ['💗', '🌷', '💌', '🧸', '🌈', '😊'], rand));
   pages.push(traceWordsPage(paper, 'Trace the kind words', [['love', '💗'], ['kind', '🌈'], ['hug', '🤗'], ['care', '🌷']]));
   pages.push(seasonColour(paper, 'hearts', name));
@@ -177,7 +177,7 @@ function makeKindness(o, paper) {
 
 // ================================================================ Lunar New Year pack (Plus)
 const ZODIAC = [
-  ['🐭', 'Rat', 'clever and quick'], ['🐮', 'Ox', 'strong and hard working'], ['🐯', 'Tiger', 'brave and bold'], ['🐰', 'Rabbit', 'gentle and kind'],
+  ['🐭', 'Rat', 'clever and quick'], ['🐮', 'Ox', 'strong and hardworking'], ['🐯', 'Tiger', 'brave and bold'], ['🐰', 'Rabbit', 'gentle and kind'],
   ['🐲', 'Dragon', 'powerful and lucky'], ['🐍', 'Snake', 'wise and calm'], ['🐴', 'Horse', 'full of energy'], ['🐐', 'Goat', 'caring and creative'],
   ['🐵', 'Monkey', 'playful and funny'], ['🐔', 'Rooster', 'honest and an early riser'], ['🐶', 'Dog', 'loyal and friendly'], ['🐷', 'Pig', 'generous and cheerful'],
 ];
@@ -190,7 +190,7 @@ function makeLunar(o, paper) {
   const ring = '#d62f2f', tint = '#fff3e6';
   const pages = [seriesCover(paper, 'HAPPY LUNAR NEW YEAR', name ? `${possessive(name)} Lunar New Year` : 'My Lunar New Year', `The Year of the ${yn}, ${yr}`, ['🏮', ye, '🧧', '🍊', '🥟', '🎆'], ring, tint, 'book', ['The Great Race', 'Find my animal', 'Red envelope to fold', 'Paper lantern craft', 'New year wishes', 'Lucky counting'])];
   // The Great Race: 12 animal cards.
-  for (let p = 0; p < 12; p += 6) pages.push(tagsPage(paper, p ? 'The Great Race (part 2)' : 'The Great Race', p ? 'Keep going! Can you remember who came first?' : 'Long ago, twelve animals raced across a river. The order they finished gave each year its animal! Read the cards in order.', 6, 2, (pg, x, y, w, h, i) => {
+  for (let p = 0; p < 12; p += 6) pages.push(tagsPage(paper, p ? 'The Great Race (part 2)' : 'The Great Race', p ? 'Keep going! Can you remember who came first?' : 'Long ago, twelve animals raced across a river. The order they finished in gave each year its animal! Read the cards in order.', 6, 2, (pg, x, y, w, h, i) => {
     const [e, nm, trait] = ZODIAC[p + i];
     pg.add(`<rect x="${x + 4}" y="${y + 4}" width="${w - 8}" height="${h - 8}" rx="9" fill="${tint}" stroke="${ring}" stroke-width="1"/><circle cx="${x + 16}" cy="${y + 16}" r="7" fill="${ring}"/>` + txt(x + 16, y + 18.6, `${p + i + 1}`, 7, { colour: '#fff' }));
     pg.add(emoji(e, x + w * 0.25, y + h * 0.58, Math.min(h * 0.4, w * 0.34)) + txt(x + w * 0.48, y + h * 0.5, nm, fitFont(nm, 11, w * 0.46, 0.58), { anchor: 'start', colour: ring }));
@@ -198,7 +198,7 @@ function makeLunar(o, paper) {
   }));
   // Find my animal.
   {
-    const pg = new Page(paper, 'Find my animal', { subtitle: 'Find the year you were born. That is your animal! Born in January or early February? Ask a grown-up, you might be the animal before.' });
+    const pg = new Page(paper, 'Find my animal', { subtitle: 'Find the year you were born. That is your animal! Born in January or early February? Ask a grown-up, because you might be the animal before.' });
     const years = []; for (let y = yr - 13; y <= yr; y++) years.push(y);
     const cols = 2, rows = Math.ceil(years.length / cols), cw = pg.width / cols, rh = Math.min(20, (pg.room - 70) / rows);
     years.forEach((y, i) => { const x = pg.left + Math.floor(i / rows) * cw, yy = pg.y + (i % rows) * rh, [e, nm] = zodiacOf(y), c = PALETTE[i % PALETTE.length]; pg.add(panel(x + 2, yy + 1, cw - 4, rh - 2, y === yr ? '#ffe0e0' : TINTS[i % TINTS.length], y === yr ? ring : c, 6) + txt(x + 10, yy + rh / 2 + 2.4, `${y}`, 7, { anchor: 'start', colour: c }) + emoji(e, x + cw * 0.45, yy + rh / 2, rh * 0.6) + txt(x + cw * 0.55, yy + rh / 2 + 2.4, nm, 7, { anchor: 'start', colour: INK })); });

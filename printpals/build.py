@@ -12,7 +12,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '56'
+VERSION = '57'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -68,7 +68,7 @@ TOOLS = [
 <h2>Tips for teachers and parents</h2>
 <ul><li>Laminate the sheet or slip it into a plastic sleeve and use a whiteboard pen, so it can be used every day.</li>
 <li>Put the whole class list in the box to print one sheet per child in one go.</li>
-<li>Talk about each letter while tracing: "E starts at the top, down, then three lines across."</li></ul>''',
+<li>Talk about each letter while tracing: "E starts at the top and goes down, then three lines go across."</li></ul>''',
         'faq': [
             ('Are these name tracing worksheets really free?', 'Yes. Every worksheet on PrintPals is free to make, print and share, with no sign up.'),
             ('Can I make sheets for a whole class?', 'Yes. Type each name on a new line (or separate them with commas) and you get one page per child, ready to print together.'),
@@ -178,7 +178,7 @@ TOOLS = [
         'faq': [
             ('Is the word search maker free?', 'Yes, completely free, with no sign up and no limit on how many puzzles you make.'),
             ('Can I get the answers?', 'Yes. Every puzzle comes with an answer page where each word is highlighted.'),
-            ('Why did some words not fit?', 'A word must be shorter than the grid. If the grid is too crowded, try a bigger grid or fewer words.'),
+            ('Why did some words not fit?', 'Each word must fit inside the grid. If the grid is too crowded, try a bigger grid or fewer words.'),
         ],
     },
     {
@@ -213,10 +213,10 @@ TOOLS += [
         'id': 'routine', 'cat': 'charts', 'slug': 'visual-routine-chart', 'tint': '#eef2ff', 'icon': '🌅',
         'nav': 'Routine charts',
         'title': 'Free Visual Routine Chart Maker for Kids | Morning & Bedtime | PrintPals',
-        'desc': 'Make a free printable visual routine chart for your child: morning, bedtime or after school, with pictures for every step. Weekly tick chart or cut-out picture cards. Great for autism and ADHD.',
+        'desc': 'Make a free printable visual routine chart for your child: morning, bedtime or after school, with pictures for every step. Weekly tick chart or cut-out picture cards. Great for autistic children and children with ADHD.',
         'h1': 'Visual routine charts',
         'lead': 'Pictures make routines easy, even for children who cannot read yet. Choose a morning, bedtime or after school routine, change any step, and print a weekly tick chart or big picture cards to cut out.',
-        'card': 'Morning, bedtime and after school routines with pictures. Perfect for little ones, autism and ADHD.',
+        'card': 'Morning, bedtime and after school routines with pictures. Great for little ones, and for autistic children and children with ADHD.',
         'form': field("Child's name", '<input type="text" name="name" value="Mia" maxlength="30">')
         + field('Routine', '<select name="routine"><option value="morning">Morning</option><option value="bedtime">Bedtime</option><option value="school">After school</option><option value="weekend">Weekend</option><option value="custom">My own routine</option></select>')
         + field('Steps', '<textarea name="steps" rows="8" spellcheck="false"></textarea>', 'One step per line. Pictures are added for you, or start a line with your own emoji.')
@@ -1107,7 +1107,7 @@ TOOLS += [
         + field('Age', '<select name="age"><option value="0">No age</option>' + ''.join(f'<option{" selected" if a == 5 else ""}>{a}</option>' for a in range(1, 13)) + '</select>')
         + field('Mask', '<select name="animal"><option value="all">All five animals</option><option value="cat">Cat</option><option value="bear">Bear</option><option value="lion">Lion</option><option value="bunny">Bunny</option><option value="frog">Frog</option></select>')
         + PAPER,
-        'article': """<h2>How to make them</h2><ul><li><b>Crown:</b> colour both strips, cut them out, and glue the short strip to the end of the long one so it fits around your child's head.</li><li><b>Mask:</b> colour it, then a grown-up cuts it out with the eye holes. Tie elastic or string through the little holes.</li></ul>""",
+        'article': """<h2>How to make them</h2><ul><li><b>Crown:</b> colour both strips, cut them out, and glue the short strip to the end of the long one so it fits around your child's head.</li><li><b>Mask:</b> colour it, then a grown-up cuts it out and cuts the eye holes. Tie elastic or string through the little holes.</li></ul>""",
         'faq': [('Do the crowns fit children and adults?', 'The two strips together fit most children. Add a strip of paper for bigger heads.')],
     },
     {
@@ -1116,7 +1116,7 @@ TOOLS += [
         'title': 'Free Printable Weather Chart for Kids | Weekly and Monthly | PrintPals',
         'desc': 'Free printable weather chart for kids: circle the weather each day of the week, then draw the weather for a whole month and count sunny, cloudy, rainy, windy, snowy and stormy days.',
         'h1': 'Weather chart',
-        'lead': 'Look out of the window every morning. Circle the weather for the week, draw it for the whole month, then count up which weather you had most.',
+        'lead': 'Look out of the window every morning. Circle the weather for the week, draw it for the whole month, then count which weather you had the most.',
         'card': 'A weekly weather diary and a whole month to draw and count.',
         'form': field("Child's name (optional)", '<input type="text" name="name" value="" maxlength="24" placeholder="Mia">')
         + '<div class="field"><span class="label">Pages</span>' + check('week', 'My weather week') + check('month', 'Weather this month') + '</div>'
@@ -1386,7 +1386,7 @@ TOOLS += [
         'desc': 'Free printable roll and draw game: roll the dice to pick the body, eyes, mouth, arms, legs and extras, then draw a silly monster or robot. Every drawing is different.',
         'h1': 'Roll and draw',
         'lead': 'Roll the dice six times and draw whatever it says. Every monster and robot is one of a kind, and every one is funny.',
-        'card': 'Roll the dice, then draw a one of a kind monster or robot.',
+        'card': 'Roll the dice, then draw a monster or robot like no other.',
         'form': field('Draw a', seg('theme', [('monster', 'Monster'), ('robot', 'Robot')], 'monster'))
         + field('Child\'s name (optional)', '<input type="text" name="name" maxlength="24" placeholder="Leo" autocomplete="off">')
         + PAPER,
@@ -1906,14 +1906,14 @@ TOOLS += [
         'id': 'gratitude', 'cat': 'charts', 'slug': 'gratitude-journal-for-kids', 'tint': '#fff6e0', 'icon': '🙏', 'new': False,
         'nav': 'Gratitude journal',
         'title': 'Free Printable Gratitude Journal for Kids | Three Good Things | PrintPals',
-        'desc': 'A free printable gratitude and happy journal for kids: three good things, a kind moment, something they are proud of and a picture every day, or a one page thankful week.',
+        'desc': 'A free printable gratitude and happy journal for kids: three good things, a kind moment, something they are proud of and a picture every day, or a thankful week on one page.',
         'h1': 'Gratitude journal',
-        'lead': 'Three good things a day builds a happier, kinder child. A week of journal pages, or a one page thankful week for younger children.',
+        'lead': 'Three good things a day builds a happier, kinder child. A week of journal pages, or a thankful week on one page for younger children.',
         'card': 'Three good things, kindness and pride, one page a day.',
-        'form': field('Journal', seg('kind', [('daily', '7 daily pages'), ('week', 'One page week')], 'daily'))
+        'form': field('Journal', seg('kind', [('daily', '7 daily pages'), ('week', 'A week on one page')], 'daily'))
         + field('Child\'s name (optional)', '<input type="text" name="name" maxlength="24" placeholder="Emma" autocomplete="off">') + PAPER,
         'article': """<h2>A happy habit</h2><p>Fill it in together at bedtime. Noticing good things, big or tiny, helps children feel calmer and more positive. Share your own three good things too.</p>""",
-        'faq': [('What if my child cannot write yet?', 'They can draw, and you can write their words for them. Choose the one page week for younger children.')],
+        'faq': [('What if my child cannot write yet?', 'They can draw, and you can write their words for them. Choose a week on one page for younger children.')],
     },
     {
         'id': 'potty', 'cat': 'charts', 'slug': 'potty-training-chart', 'tint': '#e8f8f4', 'icon': '🚽', 'new': False,
@@ -1961,7 +1961,7 @@ TOOLS += [
         + field('Please reply to', '<input type="text" name="rsvp" maxlength="34" placeholder="Emma, 07700 900123" autocomplete="off">', 'Leave any line empty to write it by hand.')
         + field('Theme', seg('theme', [('balloons', 'Balloons'), ('animals', 'Animals'), ('sweet', 'Sweet treats')], 'balloons'))
         + field('Style', seg('style', [('bright', 'Bright'), ('colour', 'Colour in')], 'bright')) + PAPER,
-        'article': """<h2>Let them help</h2><p>Choose the colour in style and let your child decorate each invitation for their friends. It keeps them busy, builds excitement, and every guest gets a one of a kind card. For privacy, write your phone number by hand rather than typing it.</p>""",
+        'article': """<h2>Let them help</h2><p>Choose the colour in style and let your child decorate each invitation for their friends. It keeps them busy, builds excitement, and every guest gets a card like no other. For privacy, write your phone number by hand rather than typing it.</p>""",
         'faq': [('Can I print on card?', 'Yes. Thin card (160 to 200 gsm) makes lovely sturdy invitations and works in most home printers.')],
     },
     {
@@ -1989,8 +1989,8 @@ TOOLS += [
         'card': 'Colour a tooth morning and night, plus how to brush.',
         'form': field('Child\'s name (optional)', '<input type="text" name="name" maxlength="24" placeholder="Sam" autocomplete="off">')
         + check('guide', 'How to brush picture guide') + PAPER,
-        'article': """<h2>Two minutes, twice a day</h2><p>Brush for two minutes, morning and night, with a pea sized blob of fluoride toothpaste. Spit, but do not rinse, so the toothpaste keeps working. Young children need a grown-up to help or check until they are about 7.</p>""",
-        'faq': [('How much toothpaste should my child use?', 'A smear for babies and toddlers under 3, and a pea sized amount from age 3. Always check local dental advice.')],
+        'article': """<h2>Two minutes, twice a day</h2><p>Brush for two minutes, morning and night, with a blob of fluoride toothpaste the size of a pea. Spit, but do not rinse, so the toothpaste keeps working. Young children need a grown-up to help or check until they are about 7.</p>""",
+        'faq': [('How much toothpaste should my child use?', 'A smear for babies and toddlers under 3, and an amount the size of a pea from age 3. Always check local dental advice.')],
     },
     {
         'id': 'familyrules', 'cat': 'world', 'slug': 'family-rules-poster', 'tint': '#fff0f5', 'icon': '🏡', 'new': False,
@@ -2172,8 +2172,8 @@ TOOLS += [
         'lead': 'Cutting builds the hand strength children need for writing. Start with straight lines, then zigzags, waves, shapes and spirals.',
         'card': 'Straight, zigzag and wavy lines, shapes and spirals to cut.',
         'form': field('Lines', seg('level', [('straight', 'Straight'), ('zigzag', 'Zigzag'), ('wavy', 'Wavy'), ('shapes', 'Shapes'), ('spiral', 'Spirals')], 'straight')) + PAPER,
-        'article': """<h2>Thumbs up!</h2><p>Teach "thumbs up": the thumb goes in the small hole, on top, and the other hand holds the paper and turns it. Use child safe scissors, and cut slowly. Snipping playdough or straws is great practice too.</p>""",
-        'faq': [('When can children use scissors?', 'Most children can start snipping with child safe scissors, and a grown-up close by, at around 2 and a half to 3.')],
+        'article': """<h2>Thumbs up!</h2><p>Teach "thumbs up": the thumb goes in the small hole, on top, and the other hand holds the paper and turns it. Use safety scissors, and cut slowly. Snipping playdough or straws is great practice too.</p>""",
+        'faq': [('When can children use scissors?', 'Most children can start snipping with safety scissors, and a grown-up close by, at around 2 and a half to 3.')],
     },
     {
         'id': 'tenframes', 'cat': 'maths', 'slug': 'ten-frame-worksheets', 'tint': '#fff6e0', 'icon': '🔟', 'new': False,
@@ -2298,14 +2298,14 @@ TOOLS += [
         'form': field('Child\'s name', '<input type="text" name="name" maxlength="12" placeholder="Mia" autocomplete="off">', 'Up to 12 letters.')
         + field('Design', seg('look', [('rainbow', '🌈 Rainbow'), ('ocean', '🐳 Ocean'), ('garden', '🌻 Garden'), ('space', '🚀 Space')], 'rainbow'))
         + PAPER,
-        'article': """<h2>Words that grow confidence</h2><p>Children love seeing their own name. Read the book together and say each special word out loud: "Mia is Marvellous, Imaginative and Amazing." It builds letter knowledge and self belief at the same time. It makes a lovely gift for a new sibling, cousin or friend too.</p>""",
+        'article': """<h2>Words that grow confidence</h2><p>Children love seeing their own name. Read the book together and say each special word out loud: "Mia is Marvellous, Imaginative and Amazing." It builds letter knowledge and belief in themselves at the same time. It makes a lovely gift for a new sibling, cousin or friend too.</p>""",
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
         'id': 'timecapsule', 'cat': 'packs', 'slug': 'birthday-time-capsule-for-kids', 'tint': '#fff0f5', 'icon': '🎂', 'new': False, 'plus': True,
         'nav': 'Birthday time capsule',
         'title': 'Birthday Time Capsule for Kids | Printable Yearly Keepsake Book, All About Me and Interview | PrintPals',
-        'desc': 'A personalised birthday time capsule for every year: all about me, favourite things, height and handprint, a self portrait, a birthday interview, the best bits of the year, predictions for next year and a letter from you to read when they are grown up.',
+        'desc': 'A personalised birthday time capsule for every year: all about me, favourite things, height and handprint, a drawing of themselves, a birthday interview, the best bits of the year, predictions for next year and a letter from you to read when they are grown up.',
         'h1': 'Birthday time capsule',
         'lead': 'A keepsake book to fill in on every birthday. Their favourite things, how big they are, a handprint, a funny birthday interview, their proudest moments and a letter from you. Seal it, and open it again next year. Collect one for every age.',
         'card': 'A keepsake to fill in every birthday: favourites, handprint, interview.',
@@ -2759,7 +2759,7 @@ TOOLS += [
         'form': field('Who is it for?', '<input type="text" name="who" maxlength="20" placeholder="Mum" autocomplete="off">')
         + field('Made by (child\'s name)', '<input type="text" name="name" maxlength="20" placeholder="Mia" autocomplete="off">')
         + field('Design', seg('look', [('rose', 'Rose pink'), ('sky', 'Sky blue'), ('sunny', 'Sunny yellow')], 'rose')) + PAPER,
-        'article': """<h2>For Mother\'s Day, Father\'s Day and every birthday</h2><p>Type Mum, Mummy, Dad, Grandma, Nana, Auntie or any name, and the whole book changes. Let your child answer on their own, the funny guesses are the best part. Staple it together and wrap it with a ribbon.</p>""",
+        'article': """<h2>For Mother\'s Day, Father\'s Day and every birthday</h2><p>Type Mum, Mummy, Dad, Grandma, Nana, Auntie or any name, and the whole book changes. Let your child answer on their own. The funny guesses are the best part. Staple it together and wrap it with a ribbon.</p>""",
         'faq': [('Can I make it for more than one person?', 'Yes. Print one for each person: type a different name in the Who is it for box each time.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
@@ -2810,7 +2810,7 @@ TOOLS += [
         'card': '16 sight words in 4 weeks with a story every Friday.',
         'form': field('Child\'s name', '<input type="text" name="name" maxlength="20" placeholder="Sam" autocomplete="off">')
         + field('Words', seg('set', [('1', 'First words (4 to 5)'), ('2', 'Next words (5 to 6)')], '1')) + field('Design', seg('look', [('meadow', '🌼 Meadow'), ('ocean', '🐳 Ocean'), ('candy', '🍭 Candy'), ('space', '🚀 Space')], 'meadow')) + PAPER + SHUFFLE,
-        'article': """<h2>From words to stories</h2><p>Four new words a week is the perfect pace. By Friday your child can read a whole little story, and that feeling of I did it is what makes readers. Read the story to someone they love and write their name on the page.</p>""",
+        'article': """<h2>From words to stories</h2><p>Four new words a week is the perfect pace. By Friday your child can read a whole little story, and that "I did it!" feeling is what makes readers. Read the story to someone they love and write their name on the page.</p>""",
         'faq': [('How is this different from the free sight word sheets?', 'The free sheets give you single pages. Reading Month is a planned 4 week workbook: a new word every day, a sentence to read, a Friday story using the week\'s words, a word wall, progress stars and a certificate, in four designs.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
@@ -2870,14 +2870,14 @@ TOOLS += [
         'id': 'morningwork', 'cat': 'packs', 'slug': 'morning-work-month-for-teachers', 'tint': '#fff1f1', 'icon': '🍎', 'plus': True, 'teacher': True,
         'nav': 'Morning Work Month',
         'title': 'Morning Work Month for Teachers | 20 Daily Sheets, Class Tracker, Certificates | PrintPals Teacher',
-        'desc': 'A month of morning work for Reception, Year 1 or Year 2 (kindergarten to grade 1): 20 daily sheets with a word to write, maths, reading and drawing, a class tracker with every child\'s name, a maths answer key and a certificate for each child.',
+        'desc': 'A month of morning work for Reception, Year 1 or Year 2 (pre-K to grade 1): 20 daily sheets with a word to write, maths, reading and drawing, a class tracker with every child\'s name, a maths answer key and a certificate for each child.',
         'h1': 'Morning Work Month',
-        'lead': 'Calm, purposeful mornings for a whole month. Twenty photocopy friendly sheets, each with a word of the day, four sums, a read and circle and a drawing task, plus a class tracker with every child\'s name, an answer key and a named certificate for every child.',
+        'lead': 'Calm, purposeful mornings for a whole month. Twenty sheets that are easy to photocopy, each with a word of the day, four sums, a read and circle and a drawing task, plus a class tracker with every child\'s name, an answer key and a named certificate for every child.',
         'card': '20 morning work sheets, a class tracker and certificates.',
         'form': field('Class name', '<input type="text" name="cls" maxlength="24" placeholder="Class 1" autocomplete="off">')
         + field('Your name (optional)', '<input type="text" name="teacher" maxlength="30" placeholder="Miss Taylor" autocomplete="off">')
         + field('Children\'s names (one per line)', '<textarea name="names" rows="6" placeholder="Mia\nLeo\nEmma\nSam"></textarea>')
-        + field('Level', seg('level', [('r', 'Reception / K (4 to 5)'), ('y1', 'Year 1 / Grade 1 (5 to 6)'), ('y2', 'Year 2 / Grade 2 (6 to 7)')], 'y1')) + field('Design', seg('look', [('meadow', '🌼 Meadow'), ('ocean', '🐳 Ocean'), ('candy', '🍭 Candy'), ('space', '🚀 Space')], 'meadow')) + PAPER + SHUFFLE,
+        + field('Level', seg('level', [('r', 'Reception / Pre-K (4 to 5)'), ('y1', 'Year 1 / Kindergarten (5 to 6)'), ('y2', 'Year 2 / Grade 1 (6 to 7)')], 'y1')) + field('Design', seg('look', [('meadow', '🌼 Meadow'), ('ocean', '🐳 Ocean'), ('candy', '🍭 Candy'), ('space', '🚀 Space')], 'meadow')) + PAPER + SHUFFLE,
         'article': """<h2>A settled start to every day</h2><p>Morning work gives children something calm and familiar to do as they arrive. Photocopy one sheet for each child each day, tick the tracker as they finish, and hand out the certificates at the end of the month.</p>""",
         'faq': [('Is this part of PrintPals Plus?', 'Morning Work Month is part of the teacher plan: $59 a year for a whole class. Try it free for 7 days, no card needed.')],
     },
@@ -2966,7 +2966,7 @@ TOOLS += [
         'lead': 'Our free feelings and calm sheets, grown into a gentle daily habit. Five minutes a day: how do I feel, a breathing game like bumblebee breath, a small calm activity and a thank you, then a Friday look back at the week together.',
         'card': 'A daily feelings check-in, breathing games and gratitude.',
         'form': field('Child\'s name', '<input type="text" name="name" maxlength="20" placeholder="Mia" autocomplete="off">') + field('Design', seg('look', [('meadow', '🌼 Meadow'), ('ocean', '🐳 Ocean'), ('candy', '🍭 Candy'), ('space', '🚀 Space')], 'meadow')) + PAPER,
-        'article': """<h2>Small calm moments add up</h2><p>Children who practise calming down when they are already calm find it much easier when big feelings arrive. Keep the journal by the bed or use it after school. Do the breathing games together, grown-ups need them too.</p>""",
+        'article': """<h2>Small calm moments add up</h2><p>Children who practise calming down when they are already calm find it much easier when big feelings arrive. Keep the journal by the bed or use it after school. Do the breathing games together. Grown-ups need them too!</p>""",
         'faq': [('How is this different from the free version?', 'The free sheets cover single ideas. Calm and Happy Month is a daily journal with 16 check-ins, breathing games, calm activities, thank yous, 4 weekly reflections and a certificate.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
@@ -3009,11 +3009,11 @@ TOOLS += [
         'id': 'homeworkmonth', 'cat': 'packs', 'slug': 'homework-month-for-teachers', 'tint': '#eef6ff', 'icon': '📝', 'plus': True, 'teacher': True,
         'nav': 'Homework Month',
         'title': 'Homework Sheets for Teachers | 4 Weekly Homework Sheets, Parent Note, Class Tracker | PrintPals Teacher',
-        'desc': 'A month of weekly homework for Year 1 to Year 3 (grades 1 to 3): maths, spellings, a reading log and a fun family task on each sheet, a grown-up comment box, a note for families, a class homework tracker and an answer key.',
+        'desc': 'A month of weekly homework for Year 1 to Year 3 (kindergarten to grade 2): maths, spellings, a reading log and a fun family task on each sheet, a grown-up comment box, a note for families, a class homework tracker and an answer key.',
         'h1': 'Homework Month',
         'lead': 'A whole month of homework in one click. Each weekly sheet has a little maths, spellings, a reading log and a fun family task, with a comment box for grown-ups. Plus a friendly note for families, a class tracker with every name and an answer key.',
         'card': '4 weekly homework sheets, a family note and a class tracker.',
-        'form': field('Class name', '<input type="text" name="cls" maxlength="24" placeholder="Class 1" autocomplete="off">') + field('Your name (optional)', '<input type="text" name="teacher" maxlength="30" placeholder="Miss Taylor" autocomplete="off">') + field('Class list', '<textarea name="names" rows="6" spellcheck="false" placeholder="Mia&#10;Leo&#10;Emma&#10;Sam&#10;Chris"></textarea>', 'One name per line, up to 40 children.').replace("'Class list'", "'Class list (optional, for the tracker)'") + field('Level', seg('level', [('y1', 'Year 1 / Grade 1'), ('y2', 'Year 2 / Grade 2'), ('y3', 'Year 3 / Grade 3')], 'y1')) + field('Design', seg('look', [('meadow', '🌼 Meadow'), ('ocean', '🐳 Ocean'), ('candy', '🍭 Candy'), ('space', '🚀 Space')], 'meadow')) + PAPER + SHUFFLE,
+        'form': field('Class name', '<input type="text" name="cls" maxlength="24" placeholder="Class 1" autocomplete="off">') + field('Your name (optional)', '<input type="text" name="teacher" maxlength="30" placeholder="Miss Taylor" autocomplete="off">') + field('Class list', '<textarea name="names" rows="6" spellcheck="false" placeholder="Mia&#10;Leo&#10;Emma&#10;Sam&#10;Chris"></textarea>', 'One name per line, up to 40 children.').replace("'Class list'", "'Class list (optional, for the tracker)'") + field('Level', seg('level', [('y1', 'Year 1 / Kindergarten'), ('y2', 'Year 2 / Grade 1'), ('y3', 'Year 3 / Grade 2')], 'y1')) + field('Design', seg('look', [('meadow', '🌼 Meadow'), ('ocean', '🐳 Ocean'), ('candy', '🍭 Candy'), ('space', '🚀 Space')], 'meadow')) + PAPER + SHUFFLE,
         'article': """<h2>Twenty happy minutes a week</h2><p>Good homework is short, varied and something families can enjoy together. The family task gets children talking about their learning at home, and the comment box keeps you connected with every family.</p>""",
         'faq': [('Is this part of PrintPals Plus?', 'This is part of the teacher plan: $59 a year for your whole class, with every class pack included. Try it free for 7 days, no card needed.')],
     },
@@ -3169,7 +3169,7 @@ TOOLS += [
         'h1': 'Class Special Person Cards',
         'lead': "Mother's Day, Father's Day and Grandparents' Day, ready for the whole class. Type Mum, Dad, Grandma or any name and every child gets a card with their name inside, a four page mini book about their special person and a checklist so no one is missed.",
         'card': 'A named card and mini book for every child to give.',
-        'form': field('Class name', '<input type="text" name="cls" maxlength="24" placeholder="Class 1" autocomplete="off">') + field('Your name (optional)', '<input type="text" name="teacher" maxlength="30" placeholder="Miss Taylor" autocomplete="off">') + field('Class list', '<textarea name="names" rows="6" spellcheck="false" placeholder="Mia&#10;Leo&#10;Emma&#10;Sam&#10;Chris"></textarea>', 'One name per line, up to 40 children.') + field('Who is it for?', '<input type="text" name="who" maxlength="20" placeholder="Mum" autocomplete="off">', 'Type Mum, Dad, Grandma or leave as Mum. For families where this is tender, try Special Person.') + field('Design', seg('look', [('meadow', '🌼 Meadow'), ('ocean', '🐳 Ocean'), ('candy', '🍭 Candy'), ('space', '🚀 Space')], 'meadow')) + PAPER,
+        'form': field('Class name', '<input type="text" name="cls" maxlength="24" placeholder="Class 1" autocomplete="off">') + field('Your name (optional)', '<input type="text" name="teacher" maxlength="30" placeholder="Miss Taylor" autocomplete="off">') + field('Class list', '<textarea name="names" rows="6" spellcheck="false" placeholder="Mia&#10;Leo&#10;Emma&#10;Sam&#10;Chris"></textarea>', 'One name per line, up to 40 children.') + field('Who is it for?', '<input type="text" name="who" maxlength="20" placeholder="Mum" autocomplete="off">', 'Type Mum, Dad, Grandma or leave as Mum. If this day is hard for some families, try Special Person.') + field('Design', seg('look', [('meadow', '🌼 Meadow'), ('ocean', '🐳 Ocean'), ('candy', '🍭 Candy'), ('space', '🚀 Space')], 'meadow')) + PAPER,
         'article': '<h2>Thoughtful for every family</h2><p>Families look different, so you can type any word: Mum, Dad, Grandma, Nana, Auntie or Special Person. Print a few different versions so every child makes a card for someone they love.</p>',
         'faq': [('Is this part of PrintPals Plus?', 'This is part of the teacher plan: $59 a year for your whole class, with every class pack included. Try it free for 7 days, no card needed.')],
     },
@@ -3248,11 +3248,11 @@ TOOLS += [
     {
         'id': 'pocketmoney', 'cat': 'packs', 'slug': 'pocket-money-chart-for-kids', 'tint': '#fff6e0', 'icon': '💰', 'new': True, 'plus': True,
         'nav': 'Pocket Money Month',
-        'title': 'Pocket Money Chart for Kids | Jobs That Earn, Spend Save Share Jars, Savings Goal Tracker | PrintPals Plus',
-        'desc': 'A personalised pocket money month: four weekly job charts with pay per job in your currency, spend, save and share jars, a savings goal thermometer, money worksheets, money wise talking points and a Money Wizard award.',
+        'title': 'Pocket Money Chart for Kids | Jobs That Pay, Spend, Save and Share Jars, Savings Goal Tracker | PrintPals Plus',
+        'desc': 'A personalised pocket money month: four weekly job charts with pay per job in your currency, spend, save and share jars, a savings goal thermometer, money worksheets, talking points about money and a Money Wizard award.',
         'h1': 'Pocket Money Month',
         'lead': 'Teach children the value of money, gently. Four weeks of job charts that show what each job earns, spend, save and share jars to colour, a savings thermometer for the thing they really want, money practice and a Money Wizard award.',
-        'card': 'Job charts that earn, spend save share jars and a savings goal.',
+        'card': 'Job charts that pay, spend, save and share jars, and a savings goal.',
         'form': field('Child\'s name', '<input type="text" name="name" maxlength="20" placeholder="Leo" autocomplete="off">') + field('Saving up for (optional)', '<input type="text" name="goal" maxlength="30" placeholder="a new football" autocomplete="off">') + field('Money', seg('currency', [('GBP', '£ Pounds'), ('USD', '$ Dollars'), ('EUR', '€ Euros'), ('NGN', '₦ Naira'), ('CAD', 'C$ Canada'), ('AUD', 'A$ Australia')], 'GBP')) + field('Design', seg('look', [('meadow', '🌼 Meadow'), ('ocean', '🐳 Ocean'), ('candy', '🍭 Candy'), ('space', '🚀 Space')], 'meadow')) + PAPER + SHUFFLE,
         'article': '<h2>Money habits for life</h2><p>Children who earn, save and share early grow up confident with money. Agree the pay together, pay out every Sunday and let them colour the jars. Change the prices with Make a new set.</p>',
         'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
@@ -3442,14 +3442,14 @@ def og_for(t):
 EDITIONS = {
     'handmonth': (['names', 'letters', 'writingpaper', 'alphabets'], 'Handwriting Month', '20 daily pages with a warm-up, a letter a day, their name every day, Friday badges and a certificate.'),
     'mathsday': (['maths', 'numbers', 'bonds', 'doubles', 'tenframes', 'numberlines', 'wordproblems', 'mathsminute'], 'Maths a Day', '4 weeks of ten-minute maths that grows day by day, story problems with their name, Friday checks and answers.'),
-    'readmonth': (['sight', 'cvc', 'flashcards', 'sentences'], 'Reading Month', 'A new sight word every day, a story starring your child every Friday, a word wall and a certificate.'),
+    'readmonth': (['sight', 'cvc', 'flashcards', 'sentences'], 'Reading Month', 'a new sight word every day, a story starring your child every Friday, a word wall and a certificate.'),
     'colourmonth': (['colouring', 'photo', 'colournum', 'howtodraw', 'rolldraw'], 'Colouring Month', '40 busy scene colouring pages in 8 worlds, with a fun challenge on every page and a certificate.'),
     'puzzlemonth': (['mazes', 'dots', 'wordsearch', 'sudoku', 'spotdiff', 'oddone', 'crossword', 'secretcode', 'coding', 'matching'], 'Puzzle Month', 'a new puzzle every day for 4 weeks, a puzzle passport, answers and a Puzzle Master award.'),
     'writemonth': (['storywriting', 'story', 'storydice', 'diary'], 'Writing Month', '16 story prompts with word banks and sentence starters, a best story every Friday and an author certificate.'),
     'timesclub': (['times'], 'Times Tables Club', 'a membership card, a new table each week, Friday speed tests, badges and a champion certificate.'),
     'timemonth': (['clocks', 'clockcraft'], 'Time Month', '4 weeks from o\'clock to five minutes: read the clocks, draw the hands, my day, Friday checks and answers.'),
     'petdiary': (['petcare'], 'My Pet Diary', 'a pet profile, four weeks of care charts, a vet log and a Best Pet Carer award.'),
-    'pocketmoney': (['savings', 'chores'], 'Pocket Money Month', 'job charts that earn, spend save share jars and a savings goal tracker in your currency.'),
+    'pocketmoney': (['savings', 'chores'], 'Pocket Money Month', 'job charts that pay, spend, save and share jars, and a savings goal tracker in your currency.'),
     'shopkit': (['money'], 'Little Shop kit', 'a pretend shop with price tags, play money in your currency, shopping lists, receipts and shop sums.'),
     'roadtrip': (['travel'], 'Road Trip Adventure Book', 'two car bingo cards, a journey map, car games, a travel diary and a Super Traveller award.'),
     'phonicsmonth': (['sounds', 'abcorder'], 'Phonics Month', '16 letter sounds in 4 weeks with picture hunts, tracing and blending real words every Friday.'),
@@ -3458,7 +3458,7 @@ EDITIONS = {
     'spellmonth': (['spelling'], 'Spelling Month', '4 weeks of spellings (or your school words) with a different activity every day and a Friday test.'),
     'calmmonth': (['feelings', 'calmkit', 'gratitude'], 'Calm and Happy Month', 'a daily feelings check-in, breathing games, calm activities and a thank you, with Friday reflections.'),
     'readadventure': (['readinglog', 'comprehension'], 'Reading Adventure Month', 'a reading treasure map, a mini book task every day, bookmarks and Friday book reviews.'),
-    'familymonth': (['routine', 'reward', 'sleep', 'screentime', 'calendar'], 'Family Month Organiser', 'Routines, chores, star charts and a calendar for up to three children, all matching, for the whole month.'),
+    'familymonth': (['routine', 'reward', 'sleep', 'screentime', 'calendar'], 'Family Month Organiser', 'routines, chores, star charts and a calendar for up to three children, all matching, for the whole month.'),
 }
 EDITION_OF = {f: e for e, (fs, _, _) in EDITIONS.items() for f in fs}
 
@@ -3750,7 +3750,7 @@ def simple_page(title, desc, path, body):
 ABOUT = f'''<h1>About PrintPals</h1>
 <p class="lead-p">Every child deserves beautiful learning at home, whatever the budget, the printer or the distance from the people who love them.</p>
 <h2>Why we made it</h2>
-<p>There are thousands of worksheet websites. Many hide the good pages behind a subscription, ask for your email, fill the screen with adverts, and then leave you to work out which of ten thousand sheets is right for your child. We kept hearing the same things from parents: <b>I do not know what to print. I am not a teacher. My printer is black and white. Grandma lives in another country.</b></p>
+<p>There are thousands of worksheet websites. Many ask for your email before you can print anything, fill the screen with adverts, and then leave you to work out which of ten thousand sheets is right for your child. We kept hearing the same things from parents: <b>I do not know what to print. I am not a teacher. My printer is black and white. Grandma lives in another country.</b></p>
 <p>So we built PrintPals around those problems. Plan a whole week in one click. Get a simple guide that tells you what to say. Make packs for brothers and sisters of different ages. Save ink. Send a postcard to someone far away.</p>
 <h2>Our promises</h2>
 <ul>

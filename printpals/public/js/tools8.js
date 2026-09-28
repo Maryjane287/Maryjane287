@@ -150,7 +150,7 @@ function makeCompare(o, paper) {
     if (!answers) {
       pg.add(`<rect x="${pg.left}" y="${pg.y}" width="${pg.width}" height="20" rx="6" fill="#effaf0"/>`);
       pg.add(croc(pg.left + 22, pg.y + 11, 16, 'right'));
-      pg.add(`<text x="${pg.left + 42}" y="${pg.y + 8.5}" font-family="${FONT}" font-weight="800" font-size="4" fill="${INK}">&gt; means bigger than: 7 &gt; 3</text><text x="${pg.left + 42}" y="${pg.y + 15}" font-family="${FONT}" font-weight="800" font-size="4" fill="${INK}">&lt; means smaller than: 2 &lt; 5</text>`);
+      pg.add(`<text x="${pg.left + 42}" y="${pg.y + 8.5}" font-family="${FONT}" font-weight="800" font-size="4" fill="${INK}">&gt; means greater than: 7 &gt; 3</text><text x="${pg.left + 42}" y="${pg.y + 15}" font-family="${FONT}" font-weight="800" font-size="4" fill="${INK}">&lt; means less than: 2 &lt; 5</text>`);
       pg.add(`<text x="${pg.right - 4}" y="${pg.y + 12}" text-anchor="end" font-family="${FONT}" font-weight="800" font-size="4" fill="${INK}">= means the same: 4 = 4</text>`);
       pg.y += 26;
     }

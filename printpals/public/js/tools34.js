@@ -106,11 +106,11 @@ function makeMovingUp(o, paper) {
   });
   kids.forEach((n, i) => {
     const pg = new Page(paper, `Handover notes: ${n}`, { subtitle: `Teacher copy for ${next || 'the next teacher'}. Confidential. Keep it kind, useful and brief.`, noName: true });
-    const boxes = [['📖', 'Reading level and notes'], ['🔢', 'Maths'], ['✏️', 'Writing'], ['🏥', 'Medical, allergies, needs'], ['🤝', 'Friendships (sit well with, apart from)'], ['💛', 'What helps them thrive'], ['🏠', 'Family notes'], ['🌟', 'Something wonderful about them']], bw = pg.width / 2, bh = pg.room / 4;
+    const boxes = [['📖', 'Reading level and notes'], ['🔢', 'Maths'], ['✏️', 'Writing'], ['🏥', 'Medical needs and allergies'], ['🤝', 'Friendships (works well with, best kept apart from)'], ['💛', 'What helps them thrive'], ['🏠', 'Family notes'], ['🌟', 'Something wonderful about them']], bw = pg.width / 2, bh = pg.room / 4;
     boxes.forEach(([e, t], k) => linedBox(pg, pg.left + (k % 2) * bw + 1.5, pg.y + Math.floor(k / 2) * bh + 1.5, bw - 3, bh - 4, t, PALETTE[k % PALETTE.length], e));
     pages.push(pg.svg());
   });
-  pages.push(...classGrid(paper, `${cls || 'Class'} summary for next year`, 'A one page picture of the class. R, W, M = reading, writing, maths: B below, E expected, G greater depth.', kids, ['R', 'W', 'M', 'SEN', 'EAL', 'Medical', 'Pupil premium', 'Notes'], lk));
+  pages.push(...classGrid(paper, `${cls || 'Class'} summary for next year`, 'The whole class on one page. R, W, M = reading, writing, maths. W working towards, E expected, G greater depth.', kids, ['R', 'W', 'M', 'SEN', 'EAL', 'Medical', 'Pupil premium', 'Notes'], lk));
   pages.push(tagsPage(paper, 'Worries and wishes', 'Each child writes or draws one worry and one wish about moving up. Pop them in a box for the new teacher!', 6, 2, (pg, x, y, w, h, i) => { pg.add(`<rect x="${x + 4}" y="${y + 4}" width="${w - 8}" height="${h - 8}" rx="9" fill="#fff" stroke="${PALETTE[i]}" stroke-width="1"/>` + txt(x + 12, y + 15, 'Name:', 6, { anchor: 'start', colour: PALETTE[i] }) + emoji('☁️', x + 16, y + 30, 9) + txt(x + 26, y + 32, 'My worry', 6, { anchor: 'start', colour: INK }) + emoji('🌈', x + 16, y + h / 2 + 18, 9) + txt(x + 26, y + h / 2 + 20, 'My wish', 6, { anchor: 'start', colour: INK })); }));
   {
     const pg = new Page(paper, next ? `Welcome to ${next}!` : 'Welcome to your new class!', { subtitle: 'A letter from your new teacher, to read over the summer.', noName: true });
@@ -127,7 +127,7 @@ function makeMovingUp(o, paper) {
 function makeClassSpecial(o, paper) {
   const kids = classNames(o), lk = edLook(o.look), { cls } = teacherBits(o);
   const who = String(o.who || '').trim().replace(/[<>]/g, '').slice(0, 20) || 'Mum';
-  const pages = [seriesCover(paper, 'PRINTPALS PLUS FOR TEACHERS', `Cards for ${who}`, cls || 'A gift from every child', ['💐', '💌', '🌷', '💛', '🎁', '⭐'], lk.ring, lk.tint, 'card set', ['A card from every child', 'Signed with their name', '4 page mini book', `All about my ${who}`, 'Class checklist', 'Kind for every family'])];
+  const pages = [seriesCover(paper, 'PRINTPALS PLUS FOR TEACHERS', `Cards for ${who}`, cls || 'A gift from every child', ['💐', '💌', '🌷', '💛', '🎁', '⭐'], lk.ring, lk.tint, 'card set', ['A card from every child', 'Signed with their name', 'A 4 page mini book', `All about my ${who}`, 'Class checklist', 'Works for every family'])];
   kids.forEach((n, i) => {
     const c = PALETTE[i % PALETTE.length];
     pages.push(...foldedCard(paper, (pg, x, y, w, h) => {

@@ -30,7 +30,7 @@ const EGG_HUNT = [
   ['It is cold inside and keeps food cool.', 'Open the door, that is the rule!'],
   ['Splish, splash, bubbles galore!', 'Look where you wash, and find some more!'],
   ['Before you go out, they go on your feet.', 'Look inside for a little treat!'],
-  ['Stories live here, row by row.', 'Pick a book, where next to go?'],
+  ['Stories live here, row by row.', 'Look behind the books, and off you go!'],
   ['Where the family sits to watch TV,', 'look under a cushion and you will see!'],
   ['It is green and it grows, it drinks water too.', 'Look near a plant for your next clue!'],
   ['Where your toys go at the end of the day,', 'look inside where the toys all stay!'],

@@ -91,7 +91,7 @@ function makeTimeMonth(o, paper) {
   const rand = rng(+o.seed || 1);
   const name = nameOf(o.name, '') || '';
   const lk = edLook(o.look), level = TM_WEEKS[o.level] ? o.level : 'easy', plan = TM_WEEKS[level];
-  const pages = [seriesCover(paper, 'PRINTPALS PLUS EDITION', name ? `${possessive(name)} Time Month` : 'My Time Month', level === 'easy' ? 'O\'clock and half past, 4 weeks' : 'Quarter past to five minutes, 4 weeks', ['🕐', '🕜', '⏰', lk.corner, '🌞', '🏆'], lk.ring, lk.tint, 'workbook', ['Read the clocks', 'Draw the hands', 'My day in times', 'Friday time check', 'Make a paper clock', 'Answers for grown-ups'])];
+  const pages = [seriesCover(paper, 'PRINTPALS PLUS EDITION', name ? `${possessive(name)} Time Month` : 'My Time Month', level === 'easy' ? 'O\'clock and half past, 4 weeks' : 'Quarter hours and five minutes, 4 weeks', ['🕐', '🕜', '⏰', lk.corner, '🌞', '🏆'], lk.ring, lk.tint, 'workbook', ['Read the clocks', 'Draw the hands', 'My day in times', 'Friday time check', 'Make a paper clock', 'Answers for grown-ups'])];
   pages.push(monthPlanPage(paper, lk, 'My time month plan', 'A little time telling every day. Keep a real clock nearby to check!', plan.flatMap((k) => ['Read it', 'Draw it', 'Read it', 'My day', 'Time check']), 'My time reward'));
   const answers = [];
   plan.forEach((kinds, wi) => {

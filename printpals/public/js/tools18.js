@@ -290,7 +290,7 @@ Object.assign(STORYBOOKS, {
     ['bee', '{name} arrived with a drum. "Let\'s play together!" Boom, boom, boom!'],
     ['snail', 'Snail was shy and very slow. "I can only go shhh," she whispered.'],
     ['snail', '"Shhh is perfect," said {name}. "Every band needs a quiet part."'],
-    ['octopus', 'The band played so beautifully that even an octopus came up from the river to dance.'],
+    ['octopus', 'The band played so beautifully that even a crocodile came up from the river to dance.'],
     ['rainbow', 'And every evening after that, the jungle band played, with {name} on the drum.']] },
   kind: { title: '{name}\'s Kind Heart Day', pages: [
     ['house', 'When {name} woke up, {name} had an idea: "Today I will be kind to everyone I meet."'],

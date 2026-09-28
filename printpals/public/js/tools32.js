@@ -110,7 +110,7 @@ function makeParentsEvening(o, paper) {
     const pg = new Page(paper, '', { bare: true });
     pg.add(`<rect x="${pg.left}" y="${pg.m}" width="${pg.width}" height="${pg.bottom - pg.m}" rx="16" fill="${lk.tint}" stroke="${lk.ring}" stroke-width="2.4"/>` + emoji('☕', pg.w / 2, pg.m + 60, 50));
     bubbleText(pg, 'Welcome!', pg.w / 2, pg.m + 130, pg.width - 40, 34);
-    pg.add(txt(pg.w / 2, pg.m + 156, "Parents' evening", 12, { colour: lk.ring }) + txt(pg.w / 2, pg.m + 174, cls || 'Our class', 10, { colour: INK }) + (teacher ? txt(pg.w / 2, pg.m + 190, teacher, 9, { colour: SOFT }) : '') + txt(pg.w / 2, pg.bottom - 30, 'Please take a seat, we will be with you soon', 8, { colour: INK }));
+    pg.add(txt(pg.w / 2, pg.m + 156, "Parents' evening", 12, { colour: lk.ring }) + txt(pg.w / 2, pg.m + 174, cls || 'Our class', 10, { colour: INK }) + (teacher ? txt(pg.w / 2, pg.m + 190, teacher, 9, { colour: SOFT }) : '') + txt(pg.w / 2, pg.bottom - 30, 'Please take a seat. We will be with you soon', 8, { colour: INK }));
     pg.footer = () => {}; pages.push(pg.svg());
   }
   return pages;
@@ -118,12 +118,12 @@ function makeParentsEvening(o, paper) {
 
 // ================================================================ Report Writing Helper (teachers)
 const REPORT_BANK = {
-  'Attitude and effort': ['{n} is a kind and thoughtful member of our class.', '{n} works hard and always tries their best.', '{n} is enthusiastic and brings great energy to our lessons.', '{n} is growing in confidence every week.', '{n} listens carefully and follows instructions well.', '{n} has shown wonderful resilience when things are tricky.'],
+  'Attitude and effort': ['{n} is a kind and thoughtful member of our class.', '{n} works hard and always tries their best.', '{n} is enthusiastic and brings great energy to our lessons.', '{n} is growing in confidence every week.', '{n} listens carefully and follows instructions well.', '{n} keeps trying, even when things are tricky.'],
   'Reading': ['{n} reads with growing fluency and expression.', '{n} loves sharing books and talking about stories.', '{n} uses phonics well to work out new words.', '{n} would benefit from reading aloud at home every day.', '{n} can answer questions about what they have read.'],
   'Writing': ['{n} writes with imagination and interesting ideas.', '{n} is using capital letters and full stops more consistently.', '{n} forms letters carefully and neatly.', '{n} is beginning to use describing words to add detail.', '{n} could now focus on writing longer sentences.'],
   'Maths': ['{n} is confident with numbers and counting.', '{n} enjoys solving problems and explaining their thinking.', '{n} is becoming quicker at adding and taking away.', '{n} would benefit from practising number bonds at home.', '{n} uses practical equipment well to help them.'],
   'Friendships': ['{n} is a caring friend and plays well with others.', '{n} includes others in games and is a great team player.', '{n} is learning to share and take turns.', '{n} is always ready to help a friend.'],
-  'Next steps': ['Next, {n} will work on reading longer books with confidence.', 'Next, {n} will practise writing sentences independently.', 'Next, {n} will learn number bonds to 10 by heart.', 'Next, {n} will build confidence sharing ideas with the class.', 'Next, {n} will focus on presenting work neatly.'],
+  'Next steps': ['Next, {n} will work on reading longer books with confidence.', 'Next, {n} will practise writing sentences independently.', 'Next, {n} will learn number bonds to 10 by heart.', 'Next, {n} will build confidence in sharing ideas with the class.', 'Next, {n} will focus on presenting work neatly.'],
 };
 
 function makeReportHelper(o, paper) {

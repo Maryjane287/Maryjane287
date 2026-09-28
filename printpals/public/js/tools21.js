@@ -138,8 +138,8 @@ function makeBigSibling(o, paper) {
 const HUNT_CLUES = {
   indoor: EGG_HUNT,
   garden: [
-    ['Where the flowers like to grow,', 'look beneath them, down below!'], ['It sits outside and holds the rain.', 'Look inside the pot again!'],
-    ['Where the birds all stop to eat,', 'look nearby for your next treat!'], ['It has a handle, and wheels that go round,', 'look by the wheelbarrow on the ground!'],
+    ['Where the flowers like to grow,', 'look beneath them, down below!'], ['It sits outside and fills with rain.', 'Peek inside, then look again!'],
+    ['Where the birds all stop to eat,', 'look nearby for your next treat!'], ['It has handles and a wheel that goes round,', 'look by the wheelbarrow on the ground!'],
     ['A tree stands tall, so strong and wide.', 'Walk around it, look behind!'], ['It opens and closes, it keeps things in,', 'look by the gate, and you will win!'],
     ['Where you sit when the sun is high,', 'look under the chair, and do not be shy!'], ['It is round and it bounces, you kick it too.', 'Find the ball for your next clue!'],
     ['Where the washing blows in the breeze,', 'look near the line, if you please!'], ['Buckets and spades, a trowel as well,', 'look in the shed, and ring the bell!'],
@@ -282,10 +282,10 @@ function makePhonicsBook(o, paper) {
 
 // ================================================================ Boredom Buster jar (Plus)
 const BUSTERS = [
-  ['Get moving', '#ff6b6b', '🏃', ['Have a 5 song dance party', 'Hop like a frog to the door and back', 'Build an obstacle course', 'Play musical statues', 'Do 10 star jumps', 'Walk like 5 different animals', 'Play hopscotch', 'Throw and catch 20 times', 'Have a balloon keepy-uppy game', 'Do a yoga pose for each colour', 'Race to touch something red', 'Make up a new dance']],
-  ['Make something', '#ffb938', '✂️', ['Build a den with blankets', 'Make a paper aeroplane', 'Draw a comic about your day', 'Build the tallest tower', 'Make a puppet from a sock', 'Create a crown for yourself', 'Design a new animal', 'Make a card for someone', 'Build a boat that floats', 'Make a paper chain', 'Draw your dream bedroom', 'Invent a board game']],
+  ['Get moving', '#ff6b6b', '🏃', ['Dance to 5 songs in a row', 'Hop like a frog to the door and back', 'Build an obstacle course', 'Play musical statues', 'Do 10 star jumps', 'Walk like 5 different animals', 'Play hopscotch', 'Throw and catch 20 times', 'Have a balloon keepy-uppy game', 'Do a yoga pose for each colour', 'Race to touch something red', 'Make up a new dance']],
+  ['Make something', '#ffb938', '✂️', ['Build a den with blankets', 'Make a paper aeroplane', 'Draw a comic about your day', 'Build the tallest tower', 'Make a puppet from a sock', 'Make yourself a crown', 'Design a new animal', 'Make a card for someone', 'Build a boat that floats', 'Make a paper chain', 'Draw your dream bedroom', 'Invent a board game']],
   ['Quiet time', '#6c8cff', '📚', ['Read a book in a cosy spot', 'Do a jigsaw puzzle', 'Look at clouds and find shapes', 'Listen to calm music and draw', 'Make up a story about a toy', 'Count all the circles in a room', 'Play I spy', 'Look through old photos', 'Sort your pencils by colour', 'Write a list of 10 happy things', 'Do a dot to dot', 'Do some colouring']],
-  ['Be kind', '#3fbfa8', '💛', ['Draw a picture for a neighbour', 'Help lay the table', 'Tidy one shelf as a surprise', 'Call someone you love', 'Give three compliments', 'Water the plants', 'Make someone a cup of water', 'Write a thank you note', 'Share a toy with someone', 'Help sort the washing', 'Make someone laugh', 'Give a big hug']],
+  ['Be kind', '#3fbfa8', '💛', ['Draw a picture for a neighbour', 'Help lay the table', 'Tidy one shelf as a surprise', 'Call someone you love', 'Give three compliments', 'Water the plants', 'Get someone a glass of water', 'Write a thank you note', 'Share a toy with someone', 'Help sort the washing', 'Make someone laugh', 'Give a big hug']],
 ];
 
 function makeBusters(o, paper) {
@@ -301,7 +301,7 @@ function makeBusters(o, paper) {
     BUSTERS.forEach(([t, c, e], i) => pg.add(`<circle cx="${x + 40 + i * (w - 80) / 3}" cy="${y + 76}" r="7" fill="${c}"/>` + emoji(e, x + 40 + i * (w - 80) / 3, y + 76, 8)));
     pg.y = y + h + 14;
     pg.add(txt(pg.left, pg.y + 6, 'How to play', 7, { anchor: 'start', colour: '#e0457b' }));
-    ['When someone says "I\'m bored!", pull out one stick.', 'Do the activity on it, no swapping!', 'Colour-coded: red to move, yellow to make, blue for quiet, green to be kind.', 'Need to calm down? Only pick blue. Full of energy? Pick red!'].forEach((t, i) => pg.add(`<circle cx="${pg.left + 4}" cy="${pg.y + 17 + i * 11}" r="2.2" fill="${PALETTE[i]}"/>` + txt(pg.left + 10, pg.y + 18.6 + i * 11, t, fitFont(t, 5.6, pg.width - 12, 0.5), { anchor: 'start', font: FONT, weight: 700 })));
+    ['When someone says "I\'m bored!", pull out one stick.', 'Do the activity on it. No swapping!', 'Colour-coded: red to move, yellow to make, blue for quiet, green to be kind.', 'Need to calm down? Only pick blue. Full of energy? Pick red!'].forEach((t, i) => pg.add(`<circle cx="${pg.left + 4}" cy="${pg.y + 17 + i * 11}" r="2.2" fill="${PALETTE[i]}"/>` + txt(pg.left + 10, pg.y + 18.6 + i * 11, t, fitFont(t, 5.6, pg.width - 12, 0.5), { anchor: 'start', font: FONT, weight: 700 })));
     pages.push(pg.svg());
   }
   BUSTERS.forEach(([t, c, e, ideas]) => {

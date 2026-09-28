@@ -8,7 +8,7 @@ const blankBox = (x, y, w, h) => `<rect x="${x}" y="${y}" width="${w}" height="$
 const CODE_PICS = ['apple', 'balloon', 'banana', 'bear', 'cake', 'cat', 'chick', 'cookie', 'cupcake', 'daisy', 'dog', 'donut', 'egg', 'envelope', 'fish',
   'gorilla', 'hat', 'heart', 'ladybird', 'lion', 'lolly', 'medal', 'monkey', 'mushroom', 'nest', 'octopus', 'orange', 'pig', 'present', 'rainbow',
   'star', 'strawberry', 'sun', 'tulip', 'turtle', 'zebra', 'ant', 'blueberry', 'popper'];
-const CODE_MESSAGES = ['YOU ARE AMAZING', 'I LOVE YOU', 'BE KIND TODAY', 'READ A BOOK', 'LETS GO PLAY', 'YOU CAN DO IT', 'GIVE ME A HUG', 'SMILE A LOT',
+const CODE_MESSAGES = ['YOU ARE AMAZING', 'I LOVE YOU', 'BE KIND TODAY', 'READ A BOOK', 'TIME TO PLAY', 'YOU CAN DO IT', 'GIVE ME A HUG', 'SMILE A LOT',
   'YOU ARE MY STAR', 'TIME FOR A SNACK', 'KEEP TRYING', 'WELL DONE'];
 const ALPHA26 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
@@ -485,7 +485,7 @@ function makeDominoes(o, paper) {
   const kind = o.kind || 'add';
   const pages = [];
   if (kind === 'set') {
-    const pg = new Page(paper, 'Domino set', { subtitle: 'A full double six set of 28 dominoes. Colour the backs, cut them out and play!', noName: true });
+    const pg = new Page(paper, 'Domino set', { subtitle: 'A full set of 28 dominoes, from double blank to double six. Colour the backs, cut them out and play!', noName: true });
     const cols = 4, rows = 7, cw = pg.width / cols, ch = (pg.room - 2) / rows, s = Math.min(cw / 2.3, ch * 0.8);
     let i = 0;
     for (let a = 0; a <= 6; a++) for (let b = a; b <= 6; b++) {

@@ -34,7 +34,7 @@ function makeAutumnKit(o, paper) {
     const cw = pg.width / 3, ch = (pg.room - 60) / 2;
     for (let k = 0; k < 6; k++) { const x = pg.left + (k % 3) * cw, y = pg.y + Math.floor(k / 3) * ch; pg.add(panel(x + 2, y + 2, cw - 4, ch - 4, '#fff', PALETTE[k], 10) + txt(x + cw / 2, y + ch - 8, `Leaf ${k + 1}`, 6, { colour: PALETTE[k] })); }
     pg.y += 2 * ch + 8;
-    pg.add(panel(pg.left, pg.y, pg.width, pg.room - 4, tint, ring, 10) + txt(pg.left + 10, pg.y + 12, 'My biggest leaf was number ______', 6.4, { anchor: 'start', colour: INK }) + txt(pg.left + 10, pg.y + 24, 'My favourite colour leaf was ______________', 6.4, { anchor: 'start', colour: INK }) + txt(pg.left + 10, pg.y + 36, 'The tree it fell from: __________________', 6.4, { anchor: 'start', colour: INK }));
+    pg.add(panel(pg.left, pg.y, pg.width, pg.room - 4, tint, ring, 10) + txt(pg.left + 10, pg.y + 12, 'My biggest leaf was number ______', 6.4, { anchor: 'start', colour: INK }) + txt(pg.left + 10, pg.y + 24, 'My favourite leaf colour was ______________', 6.4, { anchor: 'start', colour: INK }) + txt(pg.left + 10, pg.y + 36, 'The tree it fell from: __________________', 6.4, { anchor: 'start', colour: INK }));
     pages.push(pg.svg());
   }
   // Pumpkin maths.
@@ -124,7 +124,7 @@ function makeRoadTrip(o, paper) {
   const dest = String(o.dest || '').trim().slice(0, 22);
   const ring = '#e0602b', tint = '#fff3ea';
   const pages = [seriesCover(paper, 'ROAD TRIP ADVENTURE', name ? `${possessive(name)} road trip` : 'My road trip', dest ? `Off to ${dest}!` : 'Are we there yet?', ['🚗', '🗺️', '⛽', '🌳', '🏖️', '⭐'], ring, tint, 'travel book', ['Car bingo', 'Journey map', 'Are we there yet? games', 'Number plate hunt', 'Travel diary', 'Super Traveller award'])];
-  for (let b = 0; b < 2; b++) pages.push(picGridPage(paper, b ? 'Car bingo: card 2' : 'Car bingo', 'Cross off everything you see from the window. Four in a row shouts BINGO!', shuffle([['🚗', 'Red car'], ['🚌', 'Bus'], ['🚚', 'Lorry'], ['🏍️', 'Motorbike'], ['🐄', 'Cow'], ['🐑', 'Sheep'], ['🌉', 'Bridge'], ['⛽', 'Petrol station'], ['🚦', 'Traffic lights'], ['🌳', 'Big tree'], ['🏠', 'Blue door'], ['🚜', 'Tractor'], ['🚲', 'Bicycle'], ['🐴', 'Horse'], ['🌊', 'River'], ['⛪', 'Tall tower'], ['🚓', 'Police car'], ['🚑', 'Ambulance'], ['🏔️', 'Hill'], ['🌈', 'Rainbow']], rand).slice(0, 16)));
+  for (let b = 0; b < 2; b++) pages.push(picGridPage(paper, b ? 'Car bingo: card 2' : 'Car bingo', 'Cross off everything you see from the window. Get four in a row and shout BINGO!', shuffle([['🚗', 'Red car'], ['🚌', 'Bus'], ['🚚', 'Lorry'], ['🏍️', 'Motorbike'], ['🐄', 'Cow'], ['🐑', 'Sheep'], ['🌉', 'Bridge'], ['⛽', 'Petrol station'], ['🚦', 'Traffic lights'], ['🌳', 'Big tree'], ['🏠', 'Blue door'], ['🚜', 'Tractor'], ['🚲', 'Bicycle'], ['🐴', 'Horse'], ['🌊', 'River'], ['⛪', 'Tall tower'], ['🚓', 'Police car'], ['🚑', 'Ambulance'], ['🏔️', 'Hill'], ['🌈', 'Rainbow']], rand).slice(0, 16)));
   // Journey map.
   {
     const pg = new Page(paper, 'My journey map', { subtitle: 'Draw the road from home to where you are going. Add what you see on the way!' });
@@ -132,7 +132,7 @@ function makeRoadTrip(o, paper) {
     pages.push(pg.svg());
   }
   // Games.
-  pages.push(checklistPage(paper, 'Are we there yet? games', 'Games to play in the car with no paper at all. Tick the ones you played!', [['🔤', 'I spy with my little eye'], ['🎵', 'Name that tune: hum a song'], ['🐄', 'Count the cows'], ['🔢', 'Find the numbers 1 to 10 on signs'], ['🅰️', 'Alphabet game: find A to Z on signs'], ['🤫', 'Quiet mouse: who can stay silent longest?'], ['❓', 'Twenty questions'], ['📖', 'Make up a story, one sentence each']], name));
+  pages.push(checklistPage(paper, 'Are we there yet? games', 'Games to play in the car with no paper at all. Tick the ones you played!', [['🔤', 'I spy with my little eye'], ['🎵', 'Name that tune: hum a song'], ['🐄', 'Count the cows'], ['🔢', 'Find the numbers 1 to 10 on signs'], ['🅰️', 'Alphabet game: find A to Z on signs'], ['🤫', 'Quiet mouse: who can stay silent the longest?'], ['❓', 'Twenty questions'], ['📖', 'Make up a story, one sentence each']], name));
   {
     const pg = new Page(paper, 'Number plate hunt', { subtitle: 'Spot letters and numbers on car number plates. Colour each one when you find it!' });
     const all = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'.split(''), cols = 6, cw = pg.width / cols, ch = pg.room / 6;

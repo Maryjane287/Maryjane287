@@ -20,7 +20,7 @@ function makeClassHalloween(o, paper) {
   // Bingo: 4 different cards.
   const bingo = [['🎃', 'Pumpkin'], ['👻', 'Ghost'], ['🦇', 'Bat'], ['🕷️', 'Spider'], ['🧙', 'Witch hat'], ['🍬', 'Sweet'], ['🌙', 'Moon'], ['⭐', 'Star'], ['🐈‍⬛', 'Black cat'], ['🦉', 'Owl'], ['🕸️', 'Web'], ['🍭', 'Lolly'], ['🧹', 'Broom'], ['🍎', 'Apple'], ['🏰', 'Castle'], ['🔮', 'Magic ball'], ['🍂', 'Leaf'], ['🕯️', 'Candle'], ['🎭', 'Mask'], ['🧛', 'Vampire']];
   const rand = rng(+o.seed || 1);
-  for (let b = 1; b <= 4; b++) pages.push(picGridPage(paper, `Halloween bingo: card ${b}`, 'The teacher calls out a picture. Cover it with a sweet or a counter. Four in a row shouts BOO!', shuffle(bingo, rand).slice(0, 16)));
+  for (let b = 1; b <= 4; b++) pages.push(picGridPage(paper, `Halloween bingo: card ${b}`, 'The teacher calls out a picture. Cover it with a sweet or a counter. Get four in a row and shout BOO!', shuffle(bingo, rand).slice(0, 16)));
   // Treat bag toppers.
   for (let s = 0; s < kids.length; s += 6) pages.push(tagsPage(paper, 'Treat bag toppers', 'Fold along the middle and staple over a little paper bag.', 6, 2, (pg, x, y, w, h, i) => { const n = kids[s + i]; if (!n) return; pg.add(`<rect x="${x + 4}" y="${y + 4}" width="${w - 8}" height="${h - 8}" rx="8" fill="#fff" stroke="${i % 2 ? lk.accent : lk.ring}" stroke-width="1"/><line x1="${x + 6}" x2="${x + w - 6}" y1="${y + h / 2}" y2="${y + h / 2}" stroke="#b9b3d6" stroke-width="0.5" stroke-dasharray="3 2"/>` + emoji(['🎃', '👻', '🦇', '🍬', '🌙', '🐈‍⬛'][i], x + 20, y + h * 0.75, h * 0.24) + txt(x + w / 2 + 10, y + h * 0.7, 'Happy Halloween', 6.4, { colour: i % 2 ? lk.accent : lk.ring }) + txt(x + w / 2 + 10, y + h * 0.86, n, fitFont(n, 10, w - 50, 0.58), { colour: INK })); }));
   pages.push(seasonColour(paper, 'pumpkin', ''));
@@ -129,7 +129,7 @@ function makePetDiary(o, paper) {
   }
   pages.push(drawAndTellPage(paper, `A day in the life of ${Pet}`, `Draw ${pet} doing their favourite thing, then tell the story of their day!`, ['In the morning', 'In the afternoon', 'At night', `${Pet} loves`], lk.ring, 0.5));
   pages.push(drawAndTellPage(paper, `If ${Pet} could talk`, `What would ${pet} say? Draw a speech bubble and write it in!`, [`${Pet} would say`, `${Pet} thinks I am`, 'Our best adventure was'], lk.ring, 0.55));
-  pages.push(checklistPage(paper, 'Good pet owner promise', 'Read each promise with a grown-up and colour a star when you keep it.', [['💧', 'Fresh water every day'], ['🥣', 'The right food, not too much'], ['🤲', 'Gentle hands, always'], ['🧼', 'Wash my hands after'], ['🏠', 'A clean, cosy home'], ['🩺', 'Tell a grown-up if my pet seems poorly'], ['💛', 'Love and attention every day']], name));
+  pages.push(checklistPage(paper, 'Good pet owner promise', 'Read each promise with a grown-up and colour a star when you keep it.', [['💧', 'Fresh water every day'], ['🥣', 'The right food, not too much'], ['🤲', 'Gentle hands, always'], ['🧼', 'Wash my hands after touching my pet'], ['🏠', 'A clean, cosy home'], ['🩺', 'Tell a grown-up if my pet seems poorly'], ['💛', 'Love and attention every day']], name));
   pages.push(seriesCert(paper, 'MY PET DIARY', 'Best Pet Carer', name, `for looking after ${pet} with love every single day!`, 'Next: play vets with the Pet Vet Clinic!', lk.ring));
   return pages;
 }

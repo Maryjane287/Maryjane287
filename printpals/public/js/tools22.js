@@ -173,8 +173,8 @@ function makeMathsBook(o, paper) {
   if (n === 2) {
     pages.push(pictureSumsPage(paper, 'Adding pictures', 'Count both groups, then count them all together. How many altogether?', rand, '+', 6, c));
     pages.push(pictureSumsPage(paper, 'More adding', 'Count on from the first group to find how many altogether.', rand, '+', 10, c));
-    pages.push(pictureSumsPage(paper, 'Taking away', 'Some have gone away! The crossed out ones are gone. How many are left?', rand, '−', 8, c));
-    pages.push(pictureSumsPage(paper, 'More taking away', 'Count what is left when the crossed out ones go away.', rand, '−', 10, c));
+    pages.push(pictureSumsPage(paper, 'Taking away', 'Some have gone away! The ones with a cross are gone. How many are left?', rand, '−', 8, c));
+    pages.push(pictureSumsPage(paper, 'More taking away', 'Cover the ones with a cross. How many are left?', rand, '−', 10, c));
     pages.push(bondsPage(paper, 5, c), bondsPage(paper, 10, c));
     pages.push(numberLinePage(paper, 'Hop on the number line', 'Start at the dot and hop forwards to add.', 0, 10, rand, '+', c));
     pages.push(numberLinePage(paper, 'Hop back on the number line', 'Start at the dot and hop backwards to take away.', 0, 10, rand, '−', c));
@@ -274,7 +274,7 @@ function makeAdventure(o, paper) {
 // ================================================================ Family Fun Night kit (Plus)
 const CHARADES = ['A sleepy cat', 'Brushing your teeth', 'A dinosaur', 'Riding a bike', 'A robot', 'Making a pizza', 'A monkey', 'Swimming', 'A superhero', 'Eating spaghetti', 'A penguin', 'Flying a kite', 'A ballerina', 'Building a snowman', 'An elephant', 'Playing football', 'A rocket', 'Washing a car', 'A frog', 'Blowing bubbles', 'A pirate', 'Baking a cake', 'A kangaroo', 'Painting a picture'];
 const FAMILY_QUIZ = ['What is my favourite food?', 'What makes me laugh the most?', 'What am I scared of?', 'Where would I love to go on holiday?', 'What is my favourite animal?', 'What would I do with a magic wand?', 'What is my favourite colour?', 'Which song do I sing the most?', 'What job would I love?', 'What is my best memory?'];
-const FAMILY_BUCKET = ['Watch the sunrise together', 'Have a breakfast picnic', 'Build the biggest pillow fort', 'Go on a bike ride', 'Camp in the living room', 'Bake a cake from scratch', 'Have a no-screens day', 'Plant something and watch it grow', 'Visit a new park', 'Make up a family song', 'Have a talent show', 'Write letters to each other', 'Try a food none of us have tried', 'Go stargazing', 'Have a water fight', 'Make a family time capsule', 'Do a jigsaw together', 'Volunteer or help a neighbour', 'Have a pyjama day', 'Take a family photo in a silly place'];
+const FAMILY_BUCKET = ['Watch the sunrise together', 'Have a breakfast picnic', 'Build the biggest pillow fort', 'Go on a bike ride', 'Camp in the living room', 'Bake a cake from scratch', 'Have a no-screens day', 'Plant something and watch it grow', 'Visit a new park', 'Make up a family song', 'Have a talent show', 'Write letters to each other', 'Try a food that is new to all of us', 'Go stargazing', 'Have a water fight', 'Make a family time capsule', 'Do a jigsaw together', 'Volunteer or help a neighbour', 'Have a pyjama day', 'Take a family photo in a silly place'];
 
 function makeFamilyNight(o, paper) {
   const fam = String(o.family || '').trim().slice(0, 20);
@@ -324,7 +324,7 @@ function makeFamilyNight(o, paper) {
   }
   // Family quiz.
   {
-    const pg = new Page(paper, 'How well do we know each other?', { subtitle: 'One person answers secretly, everyone else guesses. A point for every right guess!', noName: true });
+    const pg = new Page(paper, 'How well do we know each other?', { subtitle: 'One person answers in secret. Everyone else guesses. A point for every right guess!', noName: true });
     const rh = pg.room / FAMILY_QUIZ.length;
     FAMILY_QUIZ.forEach((q, i) => { const y = pg.y + i * rh, c = PALETTE[i % PALETTE.length]; pg.add(panel(pg.left, y + 1.5, pg.width, rh - 3, TINTS[i % TINTS.length], c, 7) + txt(pg.left + 8, y + rh / 2 + 2, `${i + 1}. ${q}`, 5.8, { anchor: 'start', colour: INK }) + `<line x1="${pg.left + pg.width * 0.6}" x2="${pg.right - 8}" y1="${y + rh / 2 + 2.6}" y2="${y + rh / 2 + 2.6}" stroke="#c9c3e3" stroke-width="0.45"/>`); });
     pages.push(pg.svg());
@@ -346,7 +346,7 @@ const RECIPES = [
   ['Yoghurt parfait cup', ['🥣', 'Yoghurt'], [['🍓', 'Berries'], ['🥣', 'Granola'], ['🍯', 'A little honey']], ['Spoon yoghurt into a clear cup', 'Add a layer of berries', 'Add a layer of granola', 'Repeat, then drizzle honey on top'], 'sweet'],
   ['Funny face crackers', ['🍘', 'Crackers'], [['🧀', 'Cheese spread'], ['🥒', 'Cucumber slices'], ['🥕', 'Carrot sticks'], ['🍅', 'Cherry tomatoes']], ['Spread cheese on a cracker', 'Add cucumber eyes', 'Make a tomato nose', 'Give it carrot hair and a smile!'], 'savoury'],
   ['Sandwich shapes', ['🍞', 'Bread'], [['🧈', 'Butter'], ['🧀', 'Cheese'], ['⭐', 'Cookie cutters']], ['Butter two slices of bread', 'Add your filling', 'Press a cookie cutter into the sandwich', 'Eat the shapes, and the edges too!'], 'savoury'],
-  ['Banana boats', ['🍌', 'A banana'], [['🥜', 'Peanut or seed butter'], ['🍇', 'Raisins'], ['🫐', 'Blueberries']], ['Peel the banana', 'A grown-up cuts it in half the long way', 'Spread on the butter', 'Add raisin and blueberry passengers!'], 'sweet'],
+  ['Banana boats', ['🍌', 'A banana'], [['🥜', 'Peanut or seed butter'], ['🍇', 'Raisins'], ['🫐', 'Blueberries']], ['Peel the banana', 'A grown-up cuts it in half the long way', 'Spread on the nut or seed butter', 'Add raisin and blueberry passengers!'], 'sweet'],
   ['Mini pizza toasts', ['🍞', 'Toast or muffins'], [['🍅', 'Tomato sauce'], ['🧀', 'Grated cheese'], ['🫑', 'Pepper pieces']], ['Spread sauce on the toast', 'Sprinkle on cheese', 'Add your toppings', 'A grown-up grills it until bubbly'], 'savoury'],
   ['Fruity smoothie', ['🍌', 'A banana'], [['🍓', 'Frozen berries'], ['🥛', 'Milk or yoghurt'], ['🍯', 'A little honey']], ['Put everything in the blender', 'A grown-up holds the lid', 'Blend until smooth', 'Pour and enjoy with a straw!'], 'sweet'],
   ['Crunchy veggie dippers', ['🥕', 'Carrots'], [['🥒', 'Cucumber'], ['🫑', 'Pepper'], ['🥣', 'Hummus or yoghurt dip']], ['Wash the vegetables', 'A grown-up cuts them into sticks', 'Spoon dip into a little bowl', 'Dip, crunch and munch!'], 'savoury'],

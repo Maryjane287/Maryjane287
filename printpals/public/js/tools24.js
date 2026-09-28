@@ -91,10 +91,10 @@ const DINOS = [
   ['Tyrannosaurus rex', 'tie-RAN-oh-SORE-us', 'meat', 12, 'Its teeth were as long as bananas!'],
   ['Triceratops', 'try-SER-a-tops', 'plants', 9, 'It had three horns and a giant frill.'],
   ['Stegosaurus', 'STEG-oh-SORE-us', 'plants', 9, 'It had big plates all along its back.'],
-  ['Brachiosaurus', 'BRAK-ee-oh-SORE-us', 'plants', 26, 'It was as tall as a four storey house.'],
+  ['Brachiosaurus', 'BRAK-ee-oh-SORE-us', 'plants', 26, 'It was as tall as a house with four floors.'],
   ['Velociraptor', 'vel-OSS-ee-rap-tor', 'meat', 2, 'It was about the size of a turkey, with feathers!'],
   ['Ankylosaurus', 'an-KY-loh-SORE-us', 'plants', 8, 'It had a tail like a big club.'],
-  ['Pteranodon', 'ter-AN-oh-don', 'fish', 7, 'It flew over the sea. Its wings were 7 metres wide!'],
+  ['Pteranodon', 'ter-AN-oh-don', 'fish', 2, 'Not a dinosaur, but a flying reptile. Its wings were 7 metres wide!'],
   ['Diplodocus', 'dih-PLOD-oh-kus', 'plants', 27, 'Its long tail cracked like a whip.'],
 ];
 

@@ -110,7 +110,7 @@ function makeSleep(o, paper) {
     pages.push(pg.svg());
   }
   if (want('chart')) {
-    const pg = new Page(paper, name ? `${possessive(name)} stay in bed chart` : 'My stay in bed chart', { subtitle: 'Colour a moon every morning after a night of staying in bed. 14 moons earns a special treat!', noName: !!name });
+    const pg = new Page(paper, name ? `${possessive(name)} stay in bed chart` : 'My stay in bed chart', { subtitle: 'Colour a moon every morning after a night of staying in bed. 14 moons earn a special treat!', noName: !!name });
     const { cw, ch } = cardGrid({ width: pg.width, room: pg.room - 30 }, 14, 4);
     for (let i = 0; i < 14; i++) {
       const x = pg.left + (i % 4) * cw, y = pg.y + Math.floor(i / 4) * ch, r = Math.min(cw, ch) * 0.32;
@@ -298,7 +298,7 @@ function makeStorybook(o, paper) {
 // ================================================================ conversation cards
 const TALK = {
   dinner: ['If you could have any superpower, what would it be?', 'What made you laugh today?', 'If animals could talk, which one would be the funniest?', 'What was the best thing that happened today?', 'If you could eat only one food forever, what would it be?', 'Who was kind to you today?',
-    'What would you do if you were invisible for a day?', 'If you had a magic wand, what would you change?', 'What is something new you learned today?', 'Where in the world would you like to visit?', 'What would you name a brand new colour?', 'Which animal would you invite to dinner?'],
+    'What would you do if you were invisible for a day?', 'If you had a magic wand, what would you change?', 'What is something new you learned today?', 'Where in the world would you like to go?', 'What would you name a brand new colour?', 'Which animal would you invite to dinner?'],
   car: ['I spy with my little eye... you choose!', 'Would you rather fly like a bird or swim like a fish?', 'Make up a song about where we are going.', 'Name 5 things that are red.', 'Would you rather have wheels or wings?', 'Which animal would be the silliest driver?',
     'Count all the blue cars you can see.', 'If this car could talk, what would it say?', 'What would you build with a million blocks?', 'Tell a story that starts: One day a giant...', 'Would you rather live in a treehouse or a castle?', 'What is your favourite sound?'],
   bedtime: ['What was the best part of your day?', 'What was a tricky part of your day?', 'What are you looking forward to tomorrow?', 'Who made you smile today?', 'What is one thing you are proud of?', 'If you could dream about anything, what would it be?',

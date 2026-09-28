@@ -148,7 +148,7 @@ function mathsDayProblem(level, day, rand) {
 const MD_WARM = { counting: 'Count and write', adding: 'Number bonds', bigger: 'Skip counting' };
 const MD_STORY = [
   ['{n} has {a} apples and gets {b} more. How many now?', '+'], ['There are {a} birds. {b} fly away. How many are left?', '−'],
-  ['{n} builds a tower of {a} blocks, then adds {b}. How tall is it?', '+'], ['{a} balloons, then {b} pop! How many are left?', '−'],
+  ['{n} builds a tower of {a} blocks, then adds {b}. How many blocks tall is it now?', '+'], ['{a} balloons, then {b} pop! How many are left?', '−'],
   ['{n} has {a} stickers and Sam gives {b} more. How many now?', '+'],
 ];
 
@@ -290,7 +290,7 @@ function makeReadMonth(o, paper) {
     pg.add(txt(pg.left, pg.y + 6, 'I read this story to:', 6.4, { anchor: 'start', colour: lk.ring }) + `<line x1="${pg.left + 60}" x2="${pg.right}" y1="${pg.y + 6.6}" y2="${pg.y + 6.6}" stroke="#c9c3e3" stroke-width="0.5"/>`);
     pages.push(pg.svg());
   }
-  pages.push(seriesCert(paper, 'READING MONTH COMPLETE', 'Reading Star', name, 'for learning 16 new words and reading 4 stories!', set === 1 ? 'Next month: Reading Month, Next words!' : 'Next: the My Sight Word Readers series!', lk.ring));
+  pages.push(seriesCert(paper, 'READING MONTH COMPLETE', 'Reading Star', name, 'for learning 16 new words and reading 4 stories!', set === 1 ? 'Next month: the Next Words level of Reading Month!' : 'Next: the My Sight Word Readers series!', lk.ring));
   return pages;
 }
 

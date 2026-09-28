@@ -245,7 +245,7 @@ const ADVENT = [
   ['Make a paper snowflake', 'draw', 'Draw the snowflake you made'], ['Sing your favourite Christmas song', 'colour', 'tree'], ['Write a card for a neighbour', 'trace', 'card'], ['Count the lights on a tree', 'count', '💡'],
   ['Make a paper chain', 'colour', 'presents'], ['Read a Christmas story together', 'draw', 'Draw your favourite part of the story'], ['Call someone you love', 'trace', 'love'], ['Give a toy to someone who needs it', 'colour', 'gingerbread'],
   ['Make hot chocolate together', 'count', '☕'], ['Go on a walk to spot Christmas lights', 'draw', 'Draw the best lights you saw'], ['Help wrap a present', 'colour', 'presents'], ['Make a thank you card for a helper', 'trace', 'thank you'],
-  ['Have a Christmas dance party', 'count', '⭐'], ['Bake something yummy', 'draw', 'Draw what you baked'], ['Tell three things you love about your family', 'colour', 'bauble'], ['Build a blanket fort and read', 'trace', 'snow'],
+  ['Have a Christmas dance party', 'count', '⭐'], ['Bake something yummy', 'draw', 'Draw what you baked'], ['Say three things you love about your family', 'colour', 'bauble'], ['Build a blanket fort and read', 'trace', 'snow'],
   ['Make a Christmas decoration', 'count', '🎄'], ['Watch a cosy film together', 'colour', 'stocking'], ['Draw your dream present', 'draw', 'Draw your dream present'], ['Do something kind for someone', 'trace', 'kind'],
   ['Leave a kind note for someone to find', 'count', '🎁'], ['Make a card for Grandma or Grandpa', 'colour', 'snowman'], ['Look at the stars with a grown-up', 'trace', 'star'], ['Christmas Eve: get ready for the big day!', 'colour', 'tree'],
 ];

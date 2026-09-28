@@ -86,10 +86,10 @@ function makeLearnerLevels(o, paper) {
 
 // ================================================================ Letters from Poppy, one for every month (Plus)
 const POPPY_LETTERS = [
-  ['A brand new year!', 'A new year is like a fresh, clean page. I wonder what you will learn, make and discover this year?', 'Draw three things you want to learn this year.', 'draw'],
+  ['A brand new year!', 'A new year is like a fresh, clean page. I wonder what you will learn, make and discover this year.', 'Draw three things you want to learn this year.', 'draw'],
   ['The month of kindness', 'Kindness is like glitter: once you share it, it gets everywhere! This month, let\'s fill the world with it.', 'Do five kind things and tick each one off.', 'list'],
   ['Spring is waking up', 'Can you feel it? The days are getting longer and tiny shoots are pushing out of the ground.', 'Plant a seed and draw it every week to see it grow.', 'grow'],
-  ['Puddles and rainbows', 'April brings showers, and showers bring puddles! Pull on your boots, it is time to splash.', 'Go on a puddle walk. Draw the biggest puddle you found.', 'draw'],
+  ['Puddles and rainbows', 'April brings showers, and showers bring puddles! Pull on your boots. It is time to splash!', 'Go on a puddle walk. Draw the biggest puddle you found.', 'draw'],
   ['Tiny creatures', 'The garden is full of busy little friends: ladybirds, snails, worms and bees.', 'Find five minibeasts and tick them off.', 'list'],
   ['Sunshine days', 'The sun is shining and picnics are calling! Let\'s eat outside and look up at the clouds.', 'Have a picnic. Draw what you ate and the shapes in the clouds.', 'draw'],
   ['Summer adventures', 'Every summer day can be an adventure, even at home. Are you ready, explorer?', 'Make a treasure map of your home or garden.', 'draw'],

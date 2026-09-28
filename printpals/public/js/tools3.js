@@ -965,7 +965,7 @@ function makeSudoku(o, paper) {
     const symbols = pictures ? shuffle(PAINTED, rand).slice(0, n).map(([name, src]) => ({ name, src })) : [...Array(n)].map((_, k) => ({ name: String(k + 1) }));
     puzzles.push({ ...sudokuPuzzle(n, bw, bh, givens, rand), symbols });
   }
-  const rule = n === 4 ? 'Each row, column and box of 4 has every picture once.' : 'Each row, column and box of 6 has every one once.';
+  const rule = n === 4 ? 'Each row, column and box of 4 has every picture once.' : 'Each row, column and box of 6 has each picture once.';
   for (let p = 0; p < puzzles.length; p += perPage) {
     const pg = new Page(paper, n === 4 ? 'Picture sudoku' : 'Sudoku 6 by 6', { subtitle: pictures ? `${rule} Draw it, or write its number.` : rule.replace('picture', 'number') });
     const cols = n === 4 ? 2 : 1;

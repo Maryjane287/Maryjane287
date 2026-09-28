@@ -47,7 +47,7 @@ function makeSavings(o, paper) {
   }
   pages.push(pg.svg());
   if (o.jars !== false) {
-    const p2 = new Page(paper, 'Spend, save, share', { subtitle: 'Cut out the labels and stick them on three jars. Share your money out each time you get some.', noName: true });
+    const p2 = new Page(paper, 'Spend, save, share', { subtitle: 'Cut out the labels and stick them on three jars. Each time you get money, split it between the jars.', noName: true });
     const jars = [['Spend', '🛍️', 'For little things I want now', '#6c8cff', '#eef2ff'], ['Save', '🐷', 'For something big I am saving for', '#ffb938', '#fff6e0'], ['Share', '💝', 'To help someone or give a gift', '#ff7eb6', '#fff0f5']];
     const h = (p2.room - 8) / 3;
     jars.forEach(([t, e, s, c, tint], i) => {

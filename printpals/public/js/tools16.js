@@ -66,7 +66,7 @@ function makeScissors(o, paper) {
   const ends = ['🐶', '🐱', '🐰', '🐸', '🐵', '🐼', '🦊', '🐷'];
   const foods = ['🦴', '🐟', '🥕', '🪰', '🍌', '🎋', '🍇', '🍎'];
   const names = { straight: 'Straight lines', zigzag: 'Zigzag lines', wavy: 'Wavy lines', shapes: 'Cut out the shapes', spiral: 'Spirals' };
-  const pg = new Page(paper, `Scissor skills: ${names[level] ? names[level].toLowerCase() : 'straight lines'}`, { subtitle: 'Cut along the dashed lines. Help each animal reach its food! Always use child safe scissors with a grown-up.' });
+  const pg = new Page(paper, `Scissor skills: ${names[level] ? names[level].toLowerCase() : 'straight lines'}`, { subtitle: 'Cut along the dashed lines. Help each animal reach its food! Always use safety scissors, with a grown-up nearby.' });
   const dash = (d, c) => `<path d="${d}" fill="none" stroke="${c}" stroke-width="1" stroke-dasharray="3 2" stroke-linecap="round" stroke-linejoin="round"/>`;
   if (level === 'shapes') {
     const cols = 2, rows = 3, cw = pg.width / cols, ch = pg.room / rows, r = Math.min(cw, ch) * 0.36;

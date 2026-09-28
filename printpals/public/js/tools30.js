@@ -10,20 +10,20 @@ function linedBox(pg, x, y, w, h, label, c, emo) {
 const SCI_EXP = [
   ['🥚', 'Sink or float?', ['A bowl of water', 'An apple, a coin, a spoon, a cork, a crayon'], 'Guess if each thing will sink or float, then drop them in one at a time.', 'Things float when they are light for their size.'],
   ['🌈', 'Walking water rainbow', ['3 cups', 'Paper towels', 'Water and food colouring'], 'Put coloured water in two cups with an empty cup between. Bridge them with folded paper towels. Wait an hour!', 'Water climbs up tiny gaps in the paper.'],
-  ['🌋', 'Fizzy volcano', ['Bicarbonate of soda', 'Vinegar', 'A tray and a cup'], 'Put 2 spoons of bicarbonate in the cup on a tray, then pour in vinegar. Stand back!', 'The two mix and make a gas full of bubbles.'],
+  ['🌋', 'Fizzy volcano', ['Bicarbonate of soda', 'Vinegar', 'A tray and a cup'], 'Put 2 spoons of bicarbonate in the cup on a tray, then pour in vinegar. Stand back!', 'Together they make a gas, and the gas makes the bubbles.'],
   ['🧲', 'Magnet hunt', ['A magnet', 'Things around the house'], 'Test 10 things. Does the magnet stick or not?', 'Magnets pull on some metals, like iron.'],
   ['🧊', 'Ice melt race', ['3 ice cubes', '3 plates', 'Salt, sugar, nothing'], 'Sprinkle salt on one cube, sugar on one, nothing on the last. Which melts first?', 'Salt makes ice melt faster.'],
   ['🌱', 'Bean in a jar', ['A jar', 'Kitchen paper', 'A dried bean'], 'Push the bean between damp paper and the jar. Check it every day.', 'Seeds need water and warmth to grow.'],
-  ['🎈', 'Balloon rocket', ['A balloon', 'String', 'A straw and tape'], 'Thread the straw on a long string. Tape a blown up balloon to it, then let go!', 'Air rushing out pushes the balloon forward.'],
+  ['🎈', 'Balloon rocket', ['A balloon', 'String', 'A straw and tape'], 'Thread the straw on a long string. Blow up a balloon, tape it to the straw, then let go!', 'Air rushing out pushes the balloon forward.'],
   ['🥛', 'Magic milk', ['A plate of milk', 'Food colouring', 'Washing up liquid', 'A cotton bud'], 'Drop colours in the milk, then touch it with a soapy cotton bud.', 'Soap makes the milk move and swirl.'],
-  ['🌞', 'Shadow tracker', ['Chalk', 'A sunny day'], 'Stand in the same spot at breakfast, lunch and tea. Draw round your shadow.', 'Shadows move as the Sun moves across the sky.'],
+  ['🌞', 'Shadow tracker', ['Chalk', 'A sunny day'], 'Stand in the same spot at breakfast, lunch and tea. Draw round your shadow.', 'Shadows move because the Sun seems to move across the sky.'],
   ['🥕', 'Coloured celery', ['A celery stick', 'A glass of coloured water'], 'Stand the celery in the water overnight. Look at the leaves in the morning.', 'Plants drink water up their stems.'],
   ['🔊', 'String telephone', ['2 paper cups', 'A long string'], 'Poke the string through both cups. Pull it tight and talk!', 'Sound travels along the string.'],
   ['🍋', 'Invisible ink', ['Lemon juice', 'A cotton bud', 'Paper', 'A grown-up with a lamp'], 'Write a secret message in lemon juice. Let it dry, then a grown-up warms it.', 'Heat turns the lemon juice brown.'],
-  ['🧽', 'Which soaks up most?', ['A sponge, a sock, paper, foil', 'A cup of water'], 'Dip each one in water and squeeze it into a cup. Which held the most?', 'Some materials have tiny holes that hold water.'],
+  ['🧽', 'Which soaks up the most?', ['A sponge, a sock, paper, foil', 'A cup of water'], 'Dip each one in water and squeeze it into a cup. Which held the most?', 'Some materials have tiny holes that hold water.'],
   ['🪞', 'Mirror writing', ['A small mirror', 'Paper and pencil'], 'Write your name, then look at it in the mirror. Can you write it backwards?', 'Mirrors flip things the other way round.'],
   ['🥤', 'Straw pan pipes', ['6 straws', 'Tape and scissors'], 'Cut the straws to different lengths, tape them in a row and blow across the tops.', 'Short straws make high sounds, long ones make low sounds.'],
-  ['🍪', 'Melting chocolate', ['3 chocolate buttons', 'Sunny window, hand, fridge'], 'Put one in the sun, hold one in your hand, one in the fridge. Which melts first?', 'Heat melts chocolate from solid to liquid.'],
+  ['🍪', 'Melting chocolate', ['3 chocolate buttons', 'Sunny window, hand, fridge'], 'Put one piece in the sun, hold one in your hand and put one in the fridge. Which melts first?', 'Heat turns chocolate from a solid into a liquid.'],
 ];
 
 function makeScienceMonth(o, paper) {

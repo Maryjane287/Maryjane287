@@ -70,7 +70,7 @@ const CURRICULUM = {
   },
   5: {
     words: [
-      (c) => ['sight', { list: 'dolch-primer', count: '8', order: 'mix', size: 'big' }, 'Sight words', 'These words appear in every book. Spot them together at bedtime story time.'],
+      (c) => ['sight', { list: 'dolch-primer', count: '8', order: 'mix', size: 'big' }, 'Sight words', 'These words appear in every book. Spot them together at story time.'],
       (c) => ['cvc', { vowel: 'mix', activity: ['build', 'middle', 'first'][c.day % 3] }, 'Build the word', 'Say the word slowly and stretch it like chewing gum: c-a-t.'],
       (c) => ['families', { family: ['at', 'an', 'ig', 'op', 'ug', 'en'][c.day % 6] }, 'Word families', 'Change the first letter and read the new word. It feels like magic!'],
       (c) => ['sentences', { kind: 'fix' }, 'Fix the sentence', 'Every sentence starts with a capital letter and ends with a full stop.'],
@@ -80,8 +80,8 @@ const CURRICULUM = {
     numbers: [
       (c) => ['maths', { op: 'add', within: '10', count: '10', layout: 'horizontal', pictures: true }, 'Adding to 10', 'Use fingers or small toys. Counting on from the bigger number is quicker.'],
       (c) => ['bonds', { to: '10', missing: 'part', pictures: true }, 'Number bonds to 10', 'Pairs that make 10 are a maths superpower. Try them with 10 fingers.'],
-      (c) => ['clocks', { level: 'oclock', mode: 'read', style: 'words' }, 'O\'clock', 'Look at a real clock together at each o\'clock today.'],
-      (c) => ['hundred', { kind: 'missing', level: 'easy' }, 'Hundred square', 'Numbers going down go up by 10 each time. Can they spot it?'],
+      (c) => ['clocks', { level: 'oclock', mode: 'read', style: 'words' }, 'O\'clock', 'Look at a real clock together every time it strikes the hour today.'],
+      (c) => ['hundred', { kind: 'missing', level: 'easy' }, 'Hundred square', 'Each number is 10 more than the one above it. Can they spot the pattern?'],
       (c) => ['doubles', { kind: 'facts', max: '5' }, 'Doubles and halves', 'Halving is sharing fairly between two. Use snacks to check!'],
       (c) => ['numberlines', { kind: 'missing', range: '20' }, 'Number lines', 'Hop along the line with a finger, saying each number.'],
     ],
@@ -117,7 +117,7 @@ const CURRICULUM = {
       (c) => ['sudoku', { size: '4', symbols: 'numbers', level: 'medium', pages: '1' }, 'Sudoku', 'Every row, column and box needs 1, 2, 3 and 4.'],
       (c) => ['mazes', { level: 'hard', per: '1', theme: 'mix' }, 'Maze', 'Hard mazes: it is fine to start from the end and work backwards!'],
       (c) => ['gridcopy', { kind: 'copy' }, 'Copy the picture', 'Use the letters and numbers like a map to find each square.'],
-      (c) => ['rolldraw', { theme: 'robot', name: c.name }, 'Roll and draw', 'Everyone rolls and draws, then give your robots names!'],
+      (c) => ['rolldraw', { theme: 'robot', name: c.name }, 'Roll and draw', 'Everyone rolls and draws. Then give your robots names!'],
     ],
   },
 };

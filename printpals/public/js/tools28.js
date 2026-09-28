@@ -59,7 +59,7 @@ function cmScene(scene, rand, W, H) {
 
 const CM_CHALLENGES = [
   ['🖍️', 'Use only 3 colours today!'], ['🌈', 'Make something rainbow coloured'], ['🔵', 'Colour the sky using dots'], ['〰️', 'Fill the ground with stripes and zigzags'], ['❤️', 'Hide 5 little hearts in the picture'],
-  ['🌙', 'Make it a night time picture'], ['🎨', 'Use a colour you never use'], ['☀️', 'Make it bright and sunny'], ['🧊', 'Only cool colours: blue, green, purple'], ['🔥', 'Only warm colours: red, orange, yellow'],
+  ['🌙', 'Colour it as if it is night time'], ['🎨', 'Use a colour you never use'], ['☀️', 'Make it bright and sunny'], ['🧊', 'Only cool colours: blue, green, purple'], ['🔥', 'Only warm colours: red, orange, yellow'],
   ['✨', 'Add sparkles and stars'], ['🤝', 'Colour it with someone else'], ['🎵', 'Colour while listening to music'], ['🌸', 'Add three more flowers'], ['🖊️', 'Go slowly and stay inside the lines'],
   ['🎁', 'Give it to someone when you finish'], ['🦄', 'Make it magical'], ['🐾', 'Draw one more animal friend'], ['💭', 'Add a speech bubble: what are they saying?'], ['🏆', 'Your best colouring yet!'],
   ['👀', 'Give everyone the same colour eyes'], ['🌧️', 'Draw rain or snow falling'], ['🟢', 'Colour something green in every corner'], ['🎭', 'Give one friend a funny hat'], ['🪄', 'Use light colours first, then dark'],

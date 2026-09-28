@@ -356,7 +356,7 @@ function makeFractions(o, paper) {
     items.push({ n, d, shape: kind === 'fair' ? (rand() < 0.5 ? 'square' : 'bar') : shape, equal, set: [4, 6, 8, 12].filter((m) => m % d === 0)[Math.floor(rand() * 2)] || d * 2, art: ['apple', 'strawberry', 'star', 'cupcake', 'orange', 'heart', 'chick', 'cookie'][i % 8] });
   }
   const titles = { colour: 'Colour the fraction', name: 'What fraction is shaded?', fair: 'Equal parts or not?', set: 'Fractions of a group' };
-  const subs = { colour: 'Colour in the fraction shown under each shape.', name: 'Count the shaded parts and the parts in all. Write the fraction.', fair: 'Is each shape cut into equal parts? Tick yes or no.', set: 'Colour or ring the right number of pictures.' };
+  const subs = { colour: 'Colour in the fraction shown under each shape.', name: 'Count the shaded parts, then count all the parts. Write the fraction.', fair: 'Is each shape cut into equal parts? Tick yes or no.', set: 'Colour or ring the right number of pictures.' };
   const pages = [];
   for (const answers of [false, true]) {
     if (answers && o.key === false) break;

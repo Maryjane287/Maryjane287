@@ -159,7 +159,7 @@ function makeSchoolReady(o, paper) {
 }
 
 // ================================================================ holiday learning plan (Plus)
-const BUCKET = ['Have a picnic', 'Build a den', 'Go on a nature walk', 'Make a paper boat', 'Bake something yummy', 'Visit the library', 'Have a teddy bears party', 'Paint a big picture',
+const BUCKET = ['Have a picnic', 'Build a den', 'Go on a nature walk', 'Make a paper boat', 'Bake something yummy', 'Visit the library', 'Have a teddy bear party', 'Paint a big picture',
   'Play a board game', 'Look at the stars', 'Make a card for someone', 'Plant a seed', 'Have a pyjama day', 'Do a puzzle', 'Put on a puppet show', 'Make a fort from cushions',
   'Go on a bike or scooter ride', 'Have a water play day', 'Learn a new song', 'Make a scrapbook of the holiday', 'Play hide and seek', 'Do a treasure hunt', 'Make a paper crown', 'Watch the sunset'];
 
@@ -265,7 +265,7 @@ function makeStoryDice(o, paper) {
   const set = DICE_SETS[o.set] || DICE_SETS.adventure;
   const pages = [];
   for (let d = 0; d < 3; d += 2) {
-    const pg = new Page(paper, d ? 'Story dice (page 2)' : 'Story dice', { subtitle: 'Cut out each dice, fold on the lines and glue the grey tabs inside. Roll all three and tell a story!', noName: true });
+    const pg = new Page(paper, d ? 'Story dice (page 2)' : 'Story dice', { subtitle: 'Cut out each cube, fold on the lines and glue the grey tabs inside. Roll all three and tell a story!', noName: true });
     const s = Math.min(34, (pg.room - 46) / 6);
     set.slice(d, d + 2).forEach(([label, faces], k) => dieNet(pg, pg.left + 12, pg.y + 12 + k * (s * 3 + 24), s, faces, PALETTE[(d + k) * 2 % PALETTE.length], label));
     pages.push(pg.svg());
@@ -372,7 +372,7 @@ function makeScreenTime(o, paper) {
     earn.forEach((t, i) => { const y = p2.y + i * rh; p2.add(panel(p2.left, y + 1, p2.width, rh - 3, TINTS[i % TINTS.length], PALETTE[i % PALETTE.length], 6) + pic(ART('star'), p2.left + 9, y + rh / 2, 9) + txt(p2.left + 18, y + rh / 2 + 2, t, fitFont(t, 5.6, p2.width - 24, 0.5), { anchor: 'start', font: FONT })); });
     const ry = p2.y + earn.length * rh + 8;
     p2.add(panel(p2.left, ry, p2.width, 52, '#fff6e0', '#ffb938', 8) + txt(p2.left + 8, ry + 11, 'Our screen time rules', 6, { anchor: 'start', colour: '#e08a00' }));
-    ['Tickets can be used after jobs and homework are done.', `One ticket = ${mins} minutes.`, 'No screens at meal times or an hour before bed.'].forEach((t, i) => p2.add(txt(p2.left + 8, ry + 22 + i * 9, `• ${t}`, 4.8, { anchor: 'start', font: FONT })));
+    ['Tickets can be used after jobs and homework are done.', `One ticket = ${mins} minutes.`, 'No screens at meal times or in the hour before bed.'].forEach((t, i) => p2.add(txt(p2.left + 8, ry + 22 + i * 9, `• ${t}`, 4.8, { anchor: 'start', font: FONT })));
     pages.push(p2.svg());
   }
   return pages;

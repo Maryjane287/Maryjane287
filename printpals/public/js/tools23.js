@@ -144,7 +144,7 @@ function makeSuperhero(o, paper) {
   // Training chart.
   {
     const pg = new Page(paper, 'Hero training week', { subtitle: 'Heroes train every day! Tick each exercise when you do it.' });
-    const ex = [['🦘', '10 hero jumps'], ['🏃', 'Run on the spot for 30 seconds'], ['🧘', 'Balance on one leg for 10'], ['💨', '5 slow hero breaths'], ['🤸', 'Touch your toes 10 times'], ['⭐', 'One kind act']];
+    const ex = [['🦘', '10 hero jumps'], ['🏃', 'Run on the spot for 30 seconds'], ['🧘', 'Balance on one leg and count to 10'], ['💨', '5 slow hero breaths'], ['🤸', 'Touch your toes 10 times'], ['⭐', 'One kind act']];
     const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'], lw = 64, cw = (pg.width - lw) / 7, hh = 12, rh = Math.min(28, (pg.room - hh - 4) / ex.length);
     days.forEach((d, i) => pg.add(`<rect x="${pg.left + lw + i * cw}" y="${pg.y}" width="${cw}" height="${hh}" fill="${lk.tint}" stroke="#d9d4ec" stroke-width="0.4"/>` + txt(pg.left + lw + i * cw + cw / 2, pg.y + 8, d, 5, { colour: lk.ring })));
     ex.forEach(([e, t], j) => { const y = pg.y + hh + j * rh; pg.add(`<rect x="${pg.left}" y="${y}" width="${lw}" height="${rh}" fill="#fff" stroke="#d9d4ec" stroke-width="0.4"/>` + emoji(e, pg.left + 8, y + rh / 2, 8)); textLines(pg, wrap(t, 16), pg.left + 15, y + rh / 2 + 1.6 - (wrap(t, 16).length - 1) * 2.4, 4.4, { weight: 800, lh: 1.1 }); for (let i = 0; i < 7; i++) pg.add(`<rect x="${pg.left + lw + i * cw}" y="${y}" width="${cw}" height="${rh}" fill="#fff" stroke="#d9d4ec" stroke-width="0.4"/><path d="${starPath(pg.left + lw + i * cw + cw / 2, y + rh / 2, 5, 0.46)}" fill="#fff" stroke="${lk.cols[j % 3]}" stroke-width="0.7"/>`); });
@@ -152,7 +152,7 @@ function makeSuperhero(o, paper) {
   }
   // Mask and badges to cut out.
   {
-    const pg = new Page(paper, 'Hero mask and badges', { subtitle: 'Colour the mask and cut it out, with eye holes cut by a grown-up. Stick a badge on your top!', noName: true });
+    const pg = new Page(paper, 'Hero mask and badges', { subtitle: 'Colour the mask and cut it out. Ask a grown-up to cut the eye holes. Stick a badge on your top!', noName: true });
     const cx = pg.w / 2, y = pg.y + 10, W = pg.width * 0.8, H = 60;
     pg.add(`<path d="M${cx - W / 2} ${y + H * 0.35} Q${cx - W / 2} ${y} ${cx - W * 0.2} ${y + 4} Q${cx} ${y + 12} ${cx + W * 0.2} ${y + 4} Q${cx + W / 2} ${y} ${cx + W / 2} ${y + H * 0.35} Q${cx + W / 2} ${y + H} ${cx + W * 0.18} ${y + H * 0.8} Q${cx} ${y + H * 0.6} ${cx - W * 0.18} ${y + H * 0.8} Q${cx - W / 2} ${y + H} ${cx - W / 2} ${y + H * 0.35} Z" fill="#fff" stroke="#1f1b2e" stroke-width="1"/>`);
     [-1, 1].forEach((s) => pg.add(`<ellipse cx="${cx + s * W * 0.2}" cy="${y + H * 0.42}" rx="${W * 0.11}" ry="${H * 0.17}" fill="#fff" stroke="#1f1b2e" stroke-width="0.8" stroke-dasharray="2.5 1.6"/><circle cx="${cx + s * W * 0.47}" cy="${y + H * 0.36}" r="2" fill="#fff" stroke="#1f1b2e" stroke-width="0.6"/>`));
@@ -210,7 +210,7 @@ function makeFlying(o, paper) {
     rows.forEach(([e, l], i) => pg.add(emoji(e, pg.left + 5, pg.y + i * rh + rh / 2, 7) + txt(pg.left + 13, pg.y + i * rh + rh / 2 + 2, l, 5.6, { anchor: 'start', colour: PALETTE[i % PALETTE.length] }) + `<line x1="${pg.left + 16 + l.length * 2.8}" x2="${pg.right}" y1="${pg.y + i * rh + rh / 2 + 2.6}" y2="${pg.y + i * rh + rh / 2 + 2.6}" stroke="#d9d4ec" stroke-width="0.45"/>`));
     pages.push(pg.svg());
   }
-  pages.push(checklistPage(paper, 'My hand luggage', 'Pack your own little bag for the plane. Colour the star for each thing you pack!', [['🎧', 'Headphones'], ['📚', 'A book or two'], ['🖍️', 'Crayons and this activity book'], ['🧸', 'My cuddly toy'], ['🍎', 'Snacks'], ['💧', 'An empty water bottle'], ['🧦', 'Cosy socks'], ['🧥', 'A jumper for the cold plane'], ['🍭', 'A sweet for take off (for popping ears!)']], name));
+  pages.push(checklistPage(paper, 'My hand luggage', 'Pack your own little bag for the plane. Colour the star for each thing you pack!', [['🎧', 'Headphones'], ['📚', 'A book or two'], ['🖍️', 'Crayons and this activity book'], ['🧸', 'My cuddly toy'], ['🍎', 'Snacks'], ['💧', 'An empty water bottle'], ['🧦', 'Cosy socks'], ['🧥', 'A jumper for the cold plane'], ['🍭', 'A sweet to suck as the plane takes off (it helps your ears!)']], name));
   pages.push(seasonColour(paper, 'plane', name));
   pages.push(...packRun('mazes', { level: 'easy' }, paper, +o.seed || 1).sheets);
   pages.push(seriesCert(paper, 'FLIGHT COMPLETE', 'Brave Flyer Award', name, dest ? `for flying all the way to ${dest} like a superstar!` : 'for flying like a superstar!', 'Next: tell someone all about your trip!', ring));

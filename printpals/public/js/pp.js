@@ -2401,7 +2401,7 @@ function makeSudoku(o, paper) {
     const symbols = pictures ? shuffle(PAINTED, rand).slice(0, n).map(([name, src]) => ({ name, src })) : [...Array(n)].map((_, k) => ({ name: String(k + 1) }));
     puzzles.push({ ...sudokuPuzzle(n, bw, bh, givens, rand), symbols });
   }
-  const rule = n === 4 ? 'Each row, column and box of 4 has every picture once.' : 'Each row, column and box of 6 has every one once.';
+  const rule = n === 4 ? 'Each row, column and box of 4 has every picture once.' : 'Each row, column and box of 6 has each picture once.';
   for (let p = 0; p < puzzles.length; p += perPage) {
     const pg = new Page(paper, n === 4 ? 'Picture sudoku' : 'Sudoku 6 by 6', { subtitle: pictures ? `${rule} Draw it, or write its number.` : rule.replace('picture', 'number') });
     const cols = n === 4 ? 2 : 1;
@@ -3563,7 +3563,7 @@ function makeFractions(o, paper) {
     items.push({ n, d, shape: kind === 'fair' ? (rand() < 0.5 ? 'square' : 'bar') : shape, equal, set: [4, 6, 8, 12].filter((m) => m % d === 0)[Math.floor(rand() * 2)] || d * 2, art: ['apple', 'strawberry', 'star', 'cupcake', 'orange', 'heart', 'chick', 'cookie'][i % 8] });
   }
   const titles = { colour: 'Colour the fraction', name: 'What fraction is shaded?', fair: 'Equal parts or not?', set: 'Fractions of a group' };
-  const subs = { colour: 'Colour in the fraction shown under each shape.', name: 'Count the shaded parts and the parts in all. Write the fraction.', fair: 'Is each shape cut into equal parts? Tick yes or no.', set: 'Colour or ring the right number of pictures.' };
+  const subs = { colour: 'Colour in the fraction shown under each shape.', name: 'Count the shaded parts, then count all the parts. Write the fraction.', fair: 'Is each shape cut into equal parts? Tick yes or no.', set: 'Colour or ring the right number of pictures.' };
   const pages = [];
   for (const answers of [false, true]) {
     if (answers && o.key === false) break;
@@ -5008,7 +5008,7 @@ function makeCrafts(o, paper) {
     const keys = MASKS[o.animal] ? [o.animal] : Object.keys(MASKS);
     return keys.map((k) => {
       const m = MASKS[k];
-      const pg = new Page(paper, `${m.name[0].toUpperCase()}${m.name.slice(1)} mask`, { subtitle: 'Colour it in. A grown-up cuts it out and the eye holes, then ties string through the little holes.', noName: true });
+      const pg = new Page(paper, `${m.name[0].toUpperCase()}${m.name.slice(1)} mask`, { subtitle: 'Colour it in. A grown-up cuts it out, cuts the eye holes and ties string through the little holes.', noName: true });
       const size = Math.min(pg.width, pg.room - 10);
       const s = size / 200;
       pg.add(`<g transform="translate(${pg.left + (pg.width - size) / 2} ${pg.y + 6}) scale(${s.toFixed(4)})">${m.draw().join('')}${maskFace(k, m.nose)}</g>`);
@@ -5318,7 +5318,7 @@ function makeCompare(o, paper) {
     if (!answers) {
       pg.add(`<rect x="${pg.left}" y="${pg.y}" width="${pg.width}" height="20" rx="6" fill="#effaf0"/>`);
       pg.add(croc(pg.left + 22, pg.y + 11, 16, 'right'));
-      pg.add(`<text x="${pg.left + 42}" y="${pg.y + 8.5}" font-family="${FONT}" font-weight="800" font-size="4" fill="${INK}">&gt; means bigger than: 7 &gt; 3</text><text x="${pg.left + 42}" y="${pg.y + 15}" font-family="${FONT}" font-weight="800" font-size="4" fill="${INK}">&lt; means smaller than: 2 &lt; 5</text>`);
+      pg.add(`<text x="${pg.left + 42}" y="${pg.y + 8.5}" font-family="${FONT}" font-weight="800" font-size="4" fill="${INK}">&gt; means greater than: 7 &gt; 3</text><text x="${pg.left + 42}" y="${pg.y + 15}" font-family="${FONT}" font-weight="800" font-size="4" fill="${INK}">&lt; means less than: 2 &lt; 5</text>`);
       pg.add(`<text x="${pg.right - 4}" y="${pg.y + 12}" text-anchor="end" font-family="${FONT}" font-weight="800" font-size="4" fill="${INK}">= means the same: 4 = 4</text>`);
       pg.y += 26;
     }
@@ -6641,7 +6641,7 @@ const blankBox = (x, y, w, h) => `<rect x="${x}" y="${y}" width="${w}" height="$
 const CODE_PICS = ['apple', 'balloon', 'banana', 'bear', 'cake', 'cat', 'chick', 'cookie', 'cupcake', 'daisy', 'dog', 'donut', 'egg', 'envelope', 'fish',
   'gorilla', 'hat', 'heart', 'ladybird', 'lion', 'lolly', 'medal', 'monkey', 'mushroom', 'nest', 'octopus', 'orange', 'pig', 'present', 'rainbow',
   'star', 'strawberry', 'sun', 'tulip', 'turtle', 'zebra', 'ant', 'blueberry', 'popper'];
-const CODE_MESSAGES = ['YOU ARE AMAZING', 'I LOVE YOU', 'BE KIND TODAY', 'READ A BOOK', 'LETS GO PLAY', 'YOU CAN DO IT', 'GIVE ME A HUG', 'SMILE A LOT',
+const CODE_MESSAGES = ['YOU ARE AMAZING', 'I LOVE YOU', 'BE KIND TODAY', 'READ A BOOK', 'TIME TO PLAY', 'YOU CAN DO IT', 'GIVE ME A HUG', 'SMILE A LOT',
   'YOU ARE MY STAR', 'TIME FOR A SNACK', 'KEEP TRYING', 'WELL DONE'];
 const ALPHA26 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
@@ -7118,7 +7118,7 @@ function makeDominoes(o, paper) {
   const kind = o.kind || 'add';
   const pages = [];
   if (kind === 'set') {
-    const pg = new Page(paper, 'Domino set', { subtitle: 'A full double six set of 28 dominoes. Colour the backs, cut them out and play!', noName: true });
+    const pg = new Page(paper, 'Domino set', { subtitle: 'A full set of 28 dominoes, from double blank to double six. Colour the backs, cut them out and play!', noName: true });
     const cols = 4, rows = 7, cw = pg.width / cols, ch = (pg.room - 2) / rows, s = Math.min(cw / 2.3, ch * 0.8);
     let i = 0;
     for (let a = 0; a <= 6; a++) for (let b = a; b <= 6; b++) {
@@ -7236,7 +7236,7 @@ const CURRICULUM = {
   },
   5: {
     words: [
-      (c) => ['sight', { list: 'dolch-primer', count: '8', order: 'mix', size: 'big' }, 'Sight words', 'These words appear in every book. Spot them together at bedtime story time.'],
+      (c) => ['sight', { list: 'dolch-primer', count: '8', order: 'mix', size: 'big' }, 'Sight words', 'These words appear in every book. Spot them together at story time.'],
       (c) => ['cvc', { vowel: 'mix', activity: ['build', 'middle', 'first'][c.day % 3] }, 'Build the word', 'Say the word slowly and stretch it like chewing gum: c-a-t.'],
       (c) => ['families', { family: ['at', 'an', 'ig', 'op', 'ug', 'en'][c.day % 6] }, 'Word families', 'Change the first letter and read the new word. It feels like magic!'],
       (c) => ['sentences', { kind: 'fix' }, 'Fix the sentence', 'Every sentence starts with a capital letter and ends with a full stop.'],
@@ -7246,8 +7246,8 @@ const CURRICULUM = {
     numbers: [
       (c) => ['maths', { op: 'add', within: '10', count: '10', layout: 'horizontal', pictures: true }, 'Adding to 10', 'Use fingers or small toys. Counting on from the bigger number is quicker.'],
       (c) => ['bonds', { to: '10', missing: 'part', pictures: true }, 'Number bonds to 10', 'Pairs that make 10 are a maths superpower. Try them with 10 fingers.'],
-      (c) => ['clocks', { level: 'oclock', mode: 'read', style: 'words' }, 'O\'clock', 'Look at a real clock together at each o\'clock today.'],
-      (c) => ['hundred', { kind: 'missing', level: 'easy' }, 'Hundred square', 'Numbers going down go up by 10 each time. Can they spot it?'],
+      (c) => ['clocks', { level: 'oclock', mode: 'read', style: 'words' }, 'O\'clock', 'Look at a real clock together every time it strikes the hour today.'],
+      (c) => ['hundred', { kind: 'missing', level: 'easy' }, 'Hundred square', 'Each number is 10 more than the one above it. Can they spot the pattern?'],
       (c) => ['doubles', { kind: 'facts', max: '5' }, 'Doubles and halves', 'Halving is sharing fairly between two. Use snacks to check!'],
       (c) => ['numberlines', { kind: 'missing', range: '20' }, 'Number lines', 'Hop along the line with a finger, saying each number.'],
     ],
@@ -7283,7 +7283,7 @@ const CURRICULUM = {
       (c) => ['sudoku', { size: '4', symbols: 'numbers', level: 'medium', pages: '1' }, 'Sudoku', 'Every row, column and box needs 1, 2, 3 and 4.'],
       (c) => ['mazes', { level: 'hard', per: '1', theme: 'mix' }, 'Maze', 'Hard mazes: it is fine to start from the end and work backwards!'],
       (c) => ['gridcopy', { kind: 'copy' }, 'Copy the picture', 'Use the letters and numbers like a map to find each square.'],
-      (c) => ['rolldraw', { theme: 'robot', name: c.name }, 'Roll and draw', 'Everyone rolls and draws, then give your robots names!'],
+      (c) => ['rolldraw', { theme: 'robot', name: c.name }, 'Roll and draw', 'Everyone rolls and draws. Then give your robots names!'],
     ],
   },
 };
@@ -7945,7 +7945,7 @@ function makeSchoolReady(o, paper) {
 }
 
 // ================================================================ holiday learning plan (Plus)
-const BUCKET = ['Have a picnic', 'Build a den', 'Go on a nature walk', 'Make a paper boat', 'Bake something yummy', 'Visit the library', 'Have a teddy bears party', 'Paint a big picture',
+const BUCKET = ['Have a picnic', 'Build a den', 'Go on a nature walk', 'Make a paper boat', 'Bake something yummy', 'Visit the library', 'Have a teddy bear party', 'Paint a big picture',
   'Play a board game', 'Look at the stars', 'Make a card for someone', 'Plant a seed', 'Have a pyjama day', 'Do a puzzle', 'Put on a puppet show', 'Make a fort from cushions',
   'Go on a bike or scooter ride', 'Have a water play day', 'Learn a new song', 'Make a scrapbook of the holiday', 'Play hide and seek', 'Do a treasure hunt', 'Make a paper crown', 'Watch the sunset'];
 
@@ -8051,7 +8051,7 @@ function makeStoryDice(o, paper) {
   const set = DICE_SETS[o.set] || DICE_SETS.adventure;
   const pages = [];
   for (let d = 0; d < 3; d += 2) {
-    const pg = new Page(paper, d ? 'Story dice (page 2)' : 'Story dice', { subtitle: 'Cut out each dice, fold on the lines and glue the grey tabs inside. Roll all three and tell a story!', noName: true });
+    const pg = new Page(paper, d ? 'Story dice (page 2)' : 'Story dice', { subtitle: 'Cut out each cube, fold on the lines and glue the grey tabs inside. Roll all three and tell a story!', noName: true });
     const s = Math.min(34, (pg.room - 46) / 6);
     set.slice(d, d + 2).forEach(([label, faces], k) => dieNet(pg, pg.left + 12, pg.y + 12 + k * (s * 3 + 24), s, faces, PALETTE[(d + k) * 2 % PALETTE.length], label));
     pages.push(pg.svg());
@@ -8158,7 +8158,7 @@ function makeScreenTime(o, paper) {
     earn.forEach((t, i) => { const y = p2.y + i * rh; p2.add(panel(p2.left, y + 1, p2.width, rh - 3, TINTS[i % TINTS.length], PALETTE[i % PALETTE.length], 6) + pic(ART('star'), p2.left + 9, y + rh / 2, 9) + txt(p2.left + 18, y + rh / 2 + 2, t, fitFont(t, 5.6, p2.width - 24, 0.5), { anchor: 'start', font: FONT })); });
     const ry = p2.y + earn.length * rh + 8;
     p2.add(panel(p2.left, ry, p2.width, 52, '#fff6e0', '#ffb938', 8) + txt(p2.left + 8, ry + 11, 'Our screen time rules', 6, { anchor: 'start', colour: '#e08a00' }));
-    ['Tickets can be used after jobs and homework are done.', `One ticket = ${mins} minutes.`, 'No screens at meal times or an hour before bed.'].forEach((t, i) => p2.add(txt(p2.left + 8, ry + 22 + i * 9, `• ${t}`, 4.8, { anchor: 'start', font: FONT })));
+    ['Tickets can be used after jobs and homework are done.', `One ticket = ${mins} minutes.`, 'No screens at meal times or in the hour before bed.'].forEach((t, i) => p2.add(txt(p2.left + 8, ry + 22 + i * 9, `• ${t}`, 4.8, { anchor: 'start', font: FONT })));
     pages.push(p2.svg());
   }
   return pages;
@@ -8323,7 +8323,7 @@ function makeSleep(o, paper) {
     pages.push(pg.svg());
   }
   if (want('chart')) {
-    const pg = new Page(paper, name ? `${possessive(name)} stay in bed chart` : 'My stay in bed chart', { subtitle: 'Colour a moon every morning after a night of staying in bed. 14 moons earns a special treat!', noName: !!name });
+    const pg = new Page(paper, name ? `${possessive(name)} stay in bed chart` : 'My stay in bed chart', { subtitle: 'Colour a moon every morning after a night of staying in bed. 14 moons earn a special treat!', noName: !!name });
     const { cw, ch } = cardGrid({ width: pg.width, room: pg.room - 30 }, 14, 4);
     for (let i = 0; i < 14; i++) {
       const x = pg.left + (i % 4) * cw, y = pg.y + Math.floor(i / 4) * ch, r = Math.min(cw, ch) * 0.32;
@@ -8511,7 +8511,7 @@ function makeStorybook(o, paper) {
 // ================================================================ conversation cards
 const TALK = {
   dinner: ['If you could have any superpower, what would it be?', 'What made you laugh today?', 'If animals could talk, which one would be the funniest?', 'What was the best thing that happened today?', 'If you could eat only one food forever, what would it be?', 'Who was kind to you today?',
-    'What would you do if you were invisible for a day?', 'If you had a magic wand, what would you change?', 'What is something new you learned today?', 'Where in the world would you like to visit?', 'What would you name a brand new colour?', 'Which animal would you invite to dinner?'],
+    'What would you do if you were invisible for a day?', 'If you had a magic wand, what would you change?', 'What is something new you learned today?', 'Where in the world would you like to go?', 'What would you name a brand new colour?', 'Which animal would you invite to dinner?'],
   car: ['I spy with my little eye... you choose!', 'Would you rather fly like a bird or swim like a fish?', 'Make up a song about where we are going.', 'Name 5 things that are red.', 'Would you rather have wheels or wings?', 'Which animal would be the silliest driver?',
     'Count all the blue cars you can see.', 'If this car could talk, what would it say?', 'What would you build with a million blocks?', 'Tell a story that starts: One day a giant...', 'Would you rather live in a treehouse or a castle?', 'What is your favourite sound?'],
   bedtime: ['What was the best part of your day?', 'What was a tricky part of your day?', 'What are you looking forward to tomorrow?', 'Who made you smile today?', 'What is one thing you are proud of?', 'If you could dream about anything, what would it be?',
@@ -8684,7 +8684,7 @@ function makeTeeth(o, paper) {
   pages.push(pg.svg());
   if (o.guide !== false) {
     const p2 = new Page(paper, 'How to brush my teeth', { subtitle: 'Sing a song or count slowly while you brush. Two minutes makes a super smile!' });
-    const steps = [['🪥', 'A pea sized blob of toothpaste'], ['⬆️', 'Brush the top teeth in little circles'], ['⬇️', 'Brush the bottom teeth in little circles'], ['😁', 'Brush the fronts, the backs and the chewing tops'], ['👅', 'Give your tongue a gentle brush'], ['💦', 'Spit out the toothpaste. Do not rinse!'], ['⭐', 'Colour your chart. Super smile!']];
+    const steps = [['🪥', 'A blob of toothpaste the size of a pea'], ['⬆️', 'Brush the top teeth in little circles'], ['⬇️', 'Brush the bottom teeth in little circles'], ['😁', 'Brush the fronts, the backs and the chewing tops'], ['👅', 'Give your tongue a gentle brush'], ['💦', 'Spit out the toothpaste. Do not rinse!'], ['⭐', 'Colour your chart. Super smile!']];
     const rh = (p2.room - 2) / steps.length;
     steps.forEach(([e2, t], i) => { const y = p2.y + i * rh, c = PALETTE[i % PALETTE.length]; p2.add(panel(p2.left, y + 1, p2.width, rh - 2, TINTS[i % TINTS.length], c, 8) + `<circle cx="${p2.left + 10}" cy="${y + rh / 2}" r="5.5" fill="${c}"/>` + txt(p2.left + 10, y + rh / 2 + 2.2, i + 1, 6, { colour: '#fff' }) + emoji(e2, p2.left + 30, y + rh / 2, rh * 0.55) + txt(p2.left + 46, y + rh / 2 + 2.4, t, fitFont(t, 7, p2.width - 52, 0.5), { anchor: 'start', colour: INK })); });
     pages.push(p2.svg());
@@ -8742,7 +8742,7 @@ function makeSitter(o, paper) {
 
 // ================================================================ kitchen science
 const SCIENCE = {
-  float: { title: 'Sink or float?', need: [['🥣', 'A big bowl of water'], ['🍎', 'An apple'], ['🥄', 'A spoon'], ['🍃', 'A leaf'], ['🪙', 'A coin'], ['🧸', 'A small toy']], steps: ['Fill the bowl with water.', 'Before each one, guess: will it sink or float?', 'Gently put it in the water and watch.', 'Tick what really happened.'], why: 'Heavy things for their size sink. Things with lots of air inside, like an apple, float.', table: ['An apple', 'A spoon', 'A leaf', 'A coin', 'A small toy', 'Something you choose'] },
+  float: { title: 'Sink or float?', need: [['🥣', 'A big bowl of water'], ['🍎', 'An apple'], ['🥄', 'A spoon'], ['🍃', 'A leaf'], ['🪙', 'A coin'], ['🧸', 'A small toy']], steps: ['Fill the bowl with water.', 'Before each one, guess: will it sink or float?', 'Gently put it in the water and watch.', 'Tick what really happened.'], why: 'Things that are heavy for their size sink. Things with lots of air inside, like an apple, float.', table: ['An apple', 'A spoon', 'A leaf', 'A coin', 'A small toy', 'Something you choose'] },
   raisins: { title: 'Dancing raisins', need: [['🥛', 'A clear glass'], ['🫧', 'Fizzy water'], ['🍇', 'A few raisins']], steps: ['Fill the glass with fizzy water.', 'Drop in six raisins.', 'Watch closely for one minute.', 'Count how many raisins dance up and down!'], why: 'Bubbles stick to the wrinkly raisins and lift them up. At the top the bubbles pop, and the raisins sink again.' },
   walking: { title: 'Walking water', need: [['🥛', 'Three clear cups'], ['💧', 'Water'], ['🎨', 'Red and blue food colouring'], ['🧻', 'Kitchen roll']], steps: ['Put the cups in a row. Half fill the two end cups with water.', 'Add red colouring to one end cup and blue to the other.', 'Fold two strips of kitchen roll. Make bridges from each end cup to the middle cup.', 'Wait and watch. Check again after an hour!'], why: 'Water climbs up the tiny gaps in the paper. The colours meet in the middle cup and mix to make purple.' },
   volcano: { title: 'Fizzing volcano', need: [['🥛', 'A cup on a tray'], ['🧂', '2 spoons of bicarbonate of soda'], ['🍶', 'Some vinegar'], ['🧴', 'A squirt of washing up liquid'], ['🎨', 'Red food colouring']], steps: ['Put the cup on a tray. A grown-up helps with this one!', 'Add the bicarbonate of soda, washing up liquid and colouring.', 'Pour in the vinegar.', 'Stand back and watch it fizz!'], why: 'Vinegar and bicarbonate of soda make a gas called carbon dioxide. The bubbles push the foam up and over, like a volcano.' },
@@ -8893,7 +8893,7 @@ function makeSavings(o, paper) {
   }
   pages.push(pg.svg());
   if (o.jars !== false) {
-    const p2 = new Page(paper, 'Spend, save, share', { subtitle: 'Cut out the labels and stick them on three jars. Share your money out each time you get some.', noName: true });
+    const p2 = new Page(paper, 'Spend, save, share', { subtitle: 'Cut out the labels and stick them on three jars. Each time you get money, split it between the jars.', noName: true });
     const jars = [['Spend', '🛍️', 'For little things I want now', '#6c8cff', '#eef2ff'], ['Save', '🐷', 'For something big I am saving for', '#ffb938', '#fff6e0'], ['Share', '💝', 'To help someone or give a gift', '#ff7eb6', '#fff0f5']];
     const h = (p2.room - 8) / 3;
     jars.forEach(([t, e, s, c, tint], i) => {
@@ -9197,7 +9197,7 @@ function makeScissors(o, paper) {
   const ends = ['🐶', '🐱', '🐰', '🐸', '🐵', '🐼', '🦊', '🐷'];
   const foods = ['🦴', '🐟', '🥕', '🪰', '🍌', '🎋', '🍇', '🍎'];
   const names = { straight: 'Straight lines', zigzag: 'Zigzag lines', wavy: 'Wavy lines', shapes: 'Cut out the shapes', spiral: 'Spirals' };
-  const pg = new Page(paper, `Scissor skills: ${names[level] ? names[level].toLowerCase() : 'straight lines'}`, { subtitle: 'Cut along the dashed lines. Help each animal reach its food! Always use child safe scissors with a grown-up.' });
+  const pg = new Page(paper, `Scissor skills: ${names[level] ? names[level].toLowerCase() : 'straight lines'}`, { subtitle: 'Cut along the dashed lines. Help each animal reach its food! Always use safety scissors, with a grown-up nearby.' });
   const dash = (d, c) => `<path d="${d}" fill="none" stroke="${c}" stroke-width="1" stroke-dasharray="3 2" stroke-linecap="round" stroke-linejoin="round"/>`;
   if (level === 'shapes') {
     const cols = 2, rows = 3, cw = pg.width / cols, ch = pg.room / rows, r = Math.min(cw, ch) * 0.36;
@@ -9749,7 +9749,7 @@ const ADVENT = [
   ['Make a paper snowflake', 'draw', 'Draw the snowflake you made'], ['Sing your favourite Christmas song', 'colour', 'tree'], ['Write a card for a neighbour', 'trace', 'card'], ['Count the lights on a tree', 'count', '💡'],
   ['Make a paper chain', 'colour', 'presents'], ['Read a Christmas story together', 'draw', 'Draw your favourite part of the story'], ['Call someone you love', 'trace', 'love'], ['Give a toy to someone who needs it', 'colour', 'gingerbread'],
   ['Make hot chocolate together', 'count', '☕'], ['Go on a walk to spot Christmas lights', 'draw', 'Draw the best lights you saw'], ['Help wrap a present', 'colour', 'presents'], ['Make a thank you card for a helper', 'trace', 'thank you'],
-  ['Have a Christmas dance party', 'count', '⭐'], ['Bake something yummy', 'draw', 'Draw what you baked'], ['Tell three things you love about your family', 'colour', 'bauble'], ['Build a blanket fort and read', 'trace', 'snow'],
+  ['Have a Christmas dance party', 'count', '⭐'], ['Bake something yummy', 'draw', 'Draw what you baked'], ['Say three things you love about your family', 'colour', 'bauble'], ['Build a blanket fort and read', 'trace', 'snow'],
   ['Make a Christmas decoration', 'count', '🎄'], ['Watch a cosy film together', 'colour', 'stocking'], ['Draw your dream present', 'draw', 'Draw your dream present'], ['Do something kind for someone', 'trace', 'kind'],
   ['Leave a kind note for someone to find', 'count', '🎁'], ['Make a card for Grandma or Grandpa', 'colour', 'snowman'], ['Look at the stars with a grown-up', 'trace', 'star'], ['Christmas Eve: get ready for the big day!', 'colour', 'tree'],
 ];
@@ -10215,7 +10215,7 @@ Object.assign(STORYBOOKS, {
     ['bee', '{name} arrived with a drum. "Let\'s play together!" Boom, boom, boom!'],
     ['snail', 'Snail was shy and very slow. "I can only go shhh," she whispered.'],
     ['snail', '"Shhh is perfect," said {name}. "Every band needs a quiet part."'],
-    ['octopus', 'The band played so beautifully that even an octopus came up from the river to dance.'],
+    ['octopus', 'The band played so beautifully that even a crocodile came up from the river to dance.'],
     ['rainbow', 'And every evening after that, the jungle band played, with {name} on the drum.']] },
   kind: { title: '{name}\'s Kind Heart Day', pages: [
     ['house', 'When {name} woke up, {name} had an idea: "Today I will be kind to everyone I meet."'],
@@ -10263,7 +10263,7 @@ const EGG_HUNT = [
   ['It is cold inside and keeps food cool.', 'Open the door, that is the rule!'],
   ['Splish, splash, bubbles galore!', 'Look where you wash, and find some more!'],
   ['Before you go out, they go on your feet.', 'Look inside for a little treat!'],
-  ['Stories live here, row by row.', 'Pick a book, where next to go?'],
+  ['Stories live here, row by row.', 'Look behind the books, and off you go!'],
   ['Where the family sits to watch TV,', 'look under a cushion and you will see!'],
   ['It is green and it grows, it drinks water too.', 'Look near a plant for your next clue!'],
   ['Where your toys go at the end of the day,', 'look inside where the toys all stay!'],
@@ -10465,10 +10465,10 @@ function makeLearnerLevels(o, paper) {
 
 // ================================================================ Letters from Poppy, one for every month (Plus)
 const POPPY_LETTERS = [
-  ['A brand new year!', 'A new year is like a fresh, clean page. I wonder what you will learn, make and discover this year?', 'Draw three things you want to learn this year.', 'draw'],
+  ['A brand new year!', 'A new year is like a fresh, clean page. I wonder what you will learn, make and discover this year.', 'Draw three things you want to learn this year.', 'draw'],
   ['The month of kindness', 'Kindness is like glitter: once you share it, it gets everywhere! This month, let\'s fill the world with it.', 'Do five kind things and tick each one off.', 'list'],
   ['Spring is waking up', 'Can you feel it? The days are getting longer and tiny shoots are pushing out of the ground.', 'Plant a seed and draw it every week to see it grow.', 'grow'],
-  ['Puddles and rainbows', 'April brings showers, and showers bring puddles! Pull on your boots, it is time to splash.', 'Go on a puddle walk. Draw the biggest puddle you found.', 'draw'],
+  ['Puddles and rainbows', 'April brings showers, and showers bring puddles! Pull on your boots. It is time to splash!', 'Go on a puddle walk. Draw the biggest puddle you found.', 'draw'],
   ['Tiny creatures', 'The garden is full of busy little friends: ladybirds, snails, worms and bees.', 'Find five minibeasts and tick them off.', 'list'],
   ['Sunshine days', 'The sun is shining and picnics are calling! Let\'s eat outside and look up at the clouds.', 'Have a picnic. Draw what you ate and the shapes in the clouds.', 'draw'],
   ['Summer adventures', 'Every summer day can be an adventure, even at home. Are you ready, explorer?', 'Make a treasure map of your home or garden.', 'draw'],
@@ -10788,8 +10788,8 @@ function makeBigSibling(o, paper) {
 const HUNT_CLUES = {
   indoor: EGG_HUNT,
   garden: [
-    ['Where the flowers like to grow,', 'look beneath them, down below!'], ['It sits outside and holds the rain.', 'Look inside the pot again!'],
-    ['Where the birds all stop to eat,', 'look nearby for your next treat!'], ['It has a handle, and wheels that go round,', 'look by the wheelbarrow on the ground!'],
+    ['Where the flowers like to grow,', 'look beneath them, down below!'], ['It sits outside and fills with rain.', 'Peek inside, then look again!'],
+    ['Where the birds all stop to eat,', 'look nearby for your next treat!'], ['It has handles and a wheel that goes round,', 'look by the wheelbarrow on the ground!'],
     ['A tree stands tall, so strong and wide.', 'Walk around it, look behind!'], ['It opens and closes, it keeps things in,', 'look by the gate, and you will win!'],
     ['Where you sit when the sun is high,', 'look under the chair, and do not be shy!'], ['It is round and it bounces, you kick it too.', 'Find the ball for your next clue!'],
     ['Where the washing blows in the breeze,', 'look near the line, if you please!'], ['Buckets and spades, a trowel as well,', 'look in the shed, and ring the bell!'],
@@ -10932,10 +10932,10 @@ function makePhonicsBook(o, paper) {
 
 // ================================================================ Boredom Buster jar (Plus)
 const BUSTERS = [
-  ['Get moving', '#ff6b6b', '🏃', ['Have a 5 song dance party', 'Hop like a frog to the door and back', 'Build an obstacle course', 'Play musical statues', 'Do 10 star jumps', 'Walk like 5 different animals', 'Play hopscotch', 'Throw and catch 20 times', 'Have a balloon keepy-uppy game', 'Do a yoga pose for each colour', 'Race to touch something red', 'Make up a new dance']],
-  ['Make something', '#ffb938', '✂️', ['Build a den with blankets', 'Make a paper aeroplane', 'Draw a comic about your day', 'Build the tallest tower', 'Make a puppet from a sock', 'Create a crown for yourself', 'Design a new animal', 'Make a card for someone', 'Build a boat that floats', 'Make a paper chain', 'Draw your dream bedroom', 'Invent a board game']],
+  ['Get moving', '#ff6b6b', '🏃', ['Dance to 5 songs in a row', 'Hop like a frog to the door and back', 'Build an obstacle course', 'Play musical statues', 'Do 10 star jumps', 'Walk like 5 different animals', 'Play hopscotch', 'Throw and catch 20 times', 'Have a balloon keepy-uppy game', 'Do a yoga pose for each colour', 'Race to touch something red', 'Make up a new dance']],
+  ['Make something', '#ffb938', '✂️', ['Build a den with blankets', 'Make a paper aeroplane', 'Draw a comic about your day', 'Build the tallest tower', 'Make a puppet from a sock', 'Make yourself a crown', 'Design a new animal', 'Make a card for someone', 'Build a boat that floats', 'Make a paper chain', 'Draw your dream bedroom', 'Invent a board game']],
   ['Quiet time', '#6c8cff', '📚', ['Read a book in a cosy spot', 'Do a jigsaw puzzle', 'Look at clouds and find shapes', 'Listen to calm music and draw', 'Make up a story about a toy', 'Count all the circles in a room', 'Play I spy', 'Look through old photos', 'Sort your pencils by colour', 'Write a list of 10 happy things', 'Do a dot to dot', 'Do some colouring']],
-  ['Be kind', '#3fbfa8', '💛', ['Draw a picture for a neighbour', 'Help lay the table', 'Tidy one shelf as a surprise', 'Call someone you love', 'Give three compliments', 'Water the plants', 'Make someone a cup of water', 'Write a thank you note', 'Share a toy with someone', 'Help sort the washing', 'Make someone laugh', 'Give a big hug']],
+  ['Be kind', '#3fbfa8', '💛', ['Draw a picture for a neighbour', 'Help lay the table', 'Tidy one shelf as a surprise', 'Call someone you love', 'Give three compliments', 'Water the plants', 'Get someone a glass of water', 'Write a thank you note', 'Share a toy with someone', 'Help sort the washing', 'Make someone laugh', 'Give a big hug']],
 ];
 
 function makeBusters(o, paper) {
@@ -10951,7 +10951,7 @@ function makeBusters(o, paper) {
     BUSTERS.forEach(([t, c, e], i) => pg.add(`<circle cx="${x + 40 + i * (w - 80) / 3}" cy="${y + 76}" r="7" fill="${c}"/>` + emoji(e, x + 40 + i * (w - 80) / 3, y + 76, 8)));
     pg.y = y + h + 14;
     pg.add(txt(pg.left, pg.y + 6, 'How to play', 7, { anchor: 'start', colour: '#e0457b' }));
-    ['When someone says "I\'m bored!", pull out one stick.', 'Do the activity on it, no swapping!', 'Colour-coded: red to move, yellow to make, blue for quiet, green to be kind.', 'Need to calm down? Only pick blue. Full of energy? Pick red!'].forEach((t, i) => pg.add(`<circle cx="${pg.left + 4}" cy="${pg.y + 17 + i * 11}" r="2.2" fill="${PALETTE[i]}"/>` + txt(pg.left + 10, pg.y + 18.6 + i * 11, t, fitFont(t, 5.6, pg.width - 12, 0.5), { anchor: 'start', font: FONT, weight: 700 })));
+    ['When someone says "I\'m bored!", pull out one stick.', 'Do the activity on it. No swapping!', 'Colour-coded: red to move, yellow to make, blue for quiet, green to be kind.', 'Need to calm down? Only pick blue. Full of energy? Pick red!'].forEach((t, i) => pg.add(`<circle cx="${pg.left + 4}" cy="${pg.y + 17 + i * 11}" r="2.2" fill="${PALETTE[i]}"/>` + txt(pg.left + 10, pg.y + 18.6 + i * 11, t, fitFont(t, 5.6, pg.width - 12, 0.5), { anchor: 'start', font: FONT, weight: 700 })));
     pages.push(pg.svg());
   }
   BUSTERS.forEach(([t, c, e, ideas]) => {
@@ -11142,8 +11142,8 @@ function makeMathsBook(o, paper) {
   if (n === 2) {
     pages.push(pictureSumsPage(paper, 'Adding pictures', 'Count both groups, then count them all together. How many altogether?', rand, '+', 6, c));
     pages.push(pictureSumsPage(paper, 'More adding', 'Count on from the first group to find how many altogether.', rand, '+', 10, c));
-    pages.push(pictureSumsPage(paper, 'Taking away', 'Some have gone away! The crossed out ones are gone. How many are left?', rand, '−', 8, c));
-    pages.push(pictureSumsPage(paper, 'More taking away', 'Count what is left when the crossed out ones go away.', rand, '−', 10, c));
+    pages.push(pictureSumsPage(paper, 'Taking away', 'Some have gone away! The ones with a cross are gone. How many are left?', rand, '−', 8, c));
+    pages.push(pictureSumsPage(paper, 'More taking away', 'Cover the ones with a cross. How many are left?', rand, '−', 10, c));
     pages.push(bondsPage(paper, 5, c), bondsPage(paper, 10, c));
     pages.push(numberLinePage(paper, 'Hop on the number line', 'Start at the dot and hop forwards to add.', 0, 10, rand, '+', c));
     pages.push(numberLinePage(paper, 'Hop back on the number line', 'Start at the dot and hop backwards to take away.', 0, 10, rand, '−', c));
@@ -11243,7 +11243,7 @@ function makeAdventure(o, paper) {
 // ================================================================ Family Fun Night kit (Plus)
 const CHARADES = ['A sleepy cat', 'Brushing your teeth', 'A dinosaur', 'Riding a bike', 'A robot', 'Making a pizza', 'A monkey', 'Swimming', 'A superhero', 'Eating spaghetti', 'A penguin', 'Flying a kite', 'A ballerina', 'Building a snowman', 'An elephant', 'Playing football', 'A rocket', 'Washing a car', 'A frog', 'Blowing bubbles', 'A pirate', 'Baking a cake', 'A kangaroo', 'Painting a picture'];
 const FAMILY_QUIZ = ['What is my favourite food?', 'What makes me laugh the most?', 'What am I scared of?', 'Where would I love to go on holiday?', 'What is my favourite animal?', 'What would I do with a magic wand?', 'What is my favourite colour?', 'Which song do I sing the most?', 'What job would I love?', 'What is my best memory?'];
-const FAMILY_BUCKET = ['Watch the sunrise together', 'Have a breakfast picnic', 'Build the biggest pillow fort', 'Go on a bike ride', 'Camp in the living room', 'Bake a cake from scratch', 'Have a no-screens day', 'Plant something and watch it grow', 'Visit a new park', 'Make up a family song', 'Have a talent show', 'Write letters to each other', 'Try a food none of us have tried', 'Go stargazing', 'Have a water fight', 'Make a family time capsule', 'Do a jigsaw together', 'Volunteer or help a neighbour', 'Have a pyjama day', 'Take a family photo in a silly place'];
+const FAMILY_BUCKET = ['Watch the sunrise together', 'Have a breakfast picnic', 'Build the biggest pillow fort', 'Go on a bike ride', 'Camp in the living room', 'Bake a cake from scratch', 'Have a no-screens day', 'Plant something and watch it grow', 'Visit a new park', 'Make up a family song', 'Have a talent show', 'Write letters to each other', 'Try a food that is new to all of us', 'Go stargazing', 'Have a water fight', 'Make a family time capsule', 'Do a jigsaw together', 'Volunteer or help a neighbour', 'Have a pyjama day', 'Take a family photo in a silly place'];
 
 function makeFamilyNight(o, paper) {
   const fam = String(o.family || '').trim().slice(0, 20);
@@ -11293,7 +11293,7 @@ function makeFamilyNight(o, paper) {
   }
   // Family quiz.
   {
-    const pg = new Page(paper, 'How well do we know each other?', { subtitle: 'One person answers secretly, everyone else guesses. A point for every right guess!', noName: true });
+    const pg = new Page(paper, 'How well do we know each other?', { subtitle: 'One person answers in secret. Everyone else guesses. A point for every right guess!', noName: true });
     const rh = pg.room / FAMILY_QUIZ.length;
     FAMILY_QUIZ.forEach((q, i) => { const y = pg.y + i * rh, c = PALETTE[i % PALETTE.length]; pg.add(panel(pg.left, y + 1.5, pg.width, rh - 3, TINTS[i % TINTS.length], c, 7) + txt(pg.left + 8, y + rh / 2 + 2, `${i + 1}. ${q}`, 5.8, { anchor: 'start', colour: INK }) + `<line x1="${pg.left + pg.width * 0.6}" x2="${pg.right - 8}" y1="${y + rh / 2 + 2.6}" y2="${y + rh / 2 + 2.6}" stroke="#c9c3e3" stroke-width="0.45"/>`); });
     pages.push(pg.svg());
@@ -11315,7 +11315,7 @@ const RECIPES = [
   ['Yoghurt parfait cup', ['🥣', 'Yoghurt'], [['🍓', 'Berries'], ['🥣', 'Granola'], ['🍯', 'A little honey']], ['Spoon yoghurt into a clear cup', 'Add a layer of berries', 'Add a layer of granola', 'Repeat, then drizzle honey on top'], 'sweet'],
   ['Funny face crackers', ['🍘', 'Crackers'], [['🧀', 'Cheese spread'], ['🥒', 'Cucumber slices'], ['🥕', 'Carrot sticks'], ['🍅', 'Cherry tomatoes']], ['Spread cheese on a cracker', 'Add cucumber eyes', 'Make a tomato nose', 'Give it carrot hair and a smile!'], 'savoury'],
   ['Sandwich shapes', ['🍞', 'Bread'], [['🧈', 'Butter'], ['🧀', 'Cheese'], ['⭐', 'Cookie cutters']], ['Butter two slices of bread', 'Add your filling', 'Press a cookie cutter into the sandwich', 'Eat the shapes, and the edges too!'], 'savoury'],
-  ['Banana boats', ['🍌', 'A banana'], [['🥜', 'Peanut or seed butter'], ['🍇', 'Raisins'], ['🫐', 'Blueberries']], ['Peel the banana', 'A grown-up cuts it in half the long way', 'Spread on the butter', 'Add raisin and blueberry passengers!'], 'sweet'],
+  ['Banana boats', ['🍌', 'A banana'], [['🥜', 'Peanut or seed butter'], ['🍇', 'Raisins'], ['🫐', 'Blueberries']], ['Peel the banana', 'A grown-up cuts it in half the long way', 'Spread on the nut or seed butter', 'Add raisin and blueberry passengers!'], 'sweet'],
   ['Mini pizza toasts', ['🍞', 'Toast or muffins'], [['🍅', 'Tomato sauce'], ['🧀', 'Grated cheese'], ['🫑', 'Pepper pieces']], ['Spread sauce on the toast', 'Sprinkle on cheese', 'Add your toppings', 'A grown-up grills it until bubbly'], 'savoury'],
   ['Fruity smoothie', ['🍌', 'A banana'], [['🍓', 'Frozen berries'], ['🥛', 'Milk or yoghurt'], ['🍯', 'A little honey']], ['Put everything in the blender', 'A grown-up holds the lid', 'Blend until smooth', 'Pour and enjoy with a straw!'], 'sweet'],
   ['Crunchy veggie dippers', ['🥕', 'Carrots'], [['🥒', 'Cucumber'], ['🫑', 'Pepper'], ['🥣', 'Hummus or yoghurt dip']], ['Wash the vegetables', 'A grown-up cuts them into sticks', 'Spoon dip into a little bowl', 'Dip, crunch and munch!'], 'savoury'],
@@ -11517,7 +11517,7 @@ function makeSuperhero(o, paper) {
   // Training chart.
   {
     const pg = new Page(paper, 'Hero training week', { subtitle: 'Heroes train every day! Tick each exercise when you do it.' });
-    const ex = [['🦘', '10 hero jumps'], ['🏃', 'Run on the spot for 30 seconds'], ['🧘', 'Balance on one leg for 10'], ['💨', '5 slow hero breaths'], ['🤸', 'Touch your toes 10 times'], ['⭐', 'One kind act']];
+    const ex = [['🦘', '10 hero jumps'], ['🏃', 'Run on the spot for 30 seconds'], ['🧘', 'Balance on one leg and count to 10'], ['💨', '5 slow hero breaths'], ['🤸', 'Touch your toes 10 times'], ['⭐', 'One kind act']];
     const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'], lw = 64, cw = (pg.width - lw) / 7, hh = 12, rh = Math.min(28, (pg.room - hh - 4) / ex.length);
     days.forEach((d, i) => pg.add(`<rect x="${pg.left + lw + i * cw}" y="${pg.y}" width="${cw}" height="${hh}" fill="${lk.tint}" stroke="#d9d4ec" stroke-width="0.4"/>` + txt(pg.left + lw + i * cw + cw / 2, pg.y + 8, d, 5, { colour: lk.ring })));
     ex.forEach(([e, t], j) => { const y = pg.y + hh + j * rh; pg.add(`<rect x="${pg.left}" y="${y}" width="${lw}" height="${rh}" fill="#fff" stroke="#d9d4ec" stroke-width="0.4"/>` + emoji(e, pg.left + 8, y + rh / 2, 8)); textLines(pg, wrap(t, 16), pg.left + 15, y + rh / 2 + 1.6 - (wrap(t, 16).length - 1) * 2.4, 4.4, { weight: 800, lh: 1.1 }); for (let i = 0; i < 7; i++) pg.add(`<rect x="${pg.left + lw + i * cw}" y="${y}" width="${cw}" height="${rh}" fill="#fff" stroke="#d9d4ec" stroke-width="0.4"/><path d="${starPath(pg.left + lw + i * cw + cw / 2, y + rh / 2, 5, 0.46)}" fill="#fff" stroke="${lk.cols[j % 3]}" stroke-width="0.7"/>`); });
@@ -11525,7 +11525,7 @@ function makeSuperhero(o, paper) {
   }
   // Mask and badges to cut out.
   {
-    const pg = new Page(paper, 'Hero mask and badges', { subtitle: 'Colour the mask and cut it out, with eye holes cut by a grown-up. Stick a badge on your top!', noName: true });
+    const pg = new Page(paper, 'Hero mask and badges', { subtitle: 'Colour the mask and cut it out. Ask a grown-up to cut the eye holes. Stick a badge on your top!', noName: true });
     const cx = pg.w / 2, y = pg.y + 10, W = pg.width * 0.8, H = 60;
     pg.add(`<path d="M${cx - W / 2} ${y + H * 0.35} Q${cx - W / 2} ${y} ${cx - W * 0.2} ${y + 4} Q${cx} ${y + 12} ${cx + W * 0.2} ${y + 4} Q${cx + W / 2} ${y} ${cx + W / 2} ${y + H * 0.35} Q${cx + W / 2} ${y + H} ${cx + W * 0.18} ${y + H * 0.8} Q${cx} ${y + H * 0.6} ${cx - W * 0.18} ${y + H * 0.8} Q${cx - W / 2} ${y + H} ${cx - W / 2} ${y + H * 0.35} Z" fill="#fff" stroke="#1f1b2e" stroke-width="1"/>`);
     [-1, 1].forEach((s) => pg.add(`<ellipse cx="${cx + s * W * 0.2}" cy="${y + H * 0.42}" rx="${W * 0.11}" ry="${H * 0.17}" fill="#fff" stroke="#1f1b2e" stroke-width="0.8" stroke-dasharray="2.5 1.6"/><circle cx="${cx + s * W * 0.47}" cy="${y + H * 0.36}" r="2" fill="#fff" stroke="#1f1b2e" stroke-width="0.6"/>`));
@@ -11583,7 +11583,7 @@ function makeFlying(o, paper) {
     rows.forEach(([e, l], i) => pg.add(emoji(e, pg.left + 5, pg.y + i * rh + rh / 2, 7) + txt(pg.left + 13, pg.y + i * rh + rh / 2 + 2, l, 5.6, { anchor: 'start', colour: PALETTE[i % PALETTE.length] }) + `<line x1="${pg.left + 16 + l.length * 2.8}" x2="${pg.right}" y1="${pg.y + i * rh + rh / 2 + 2.6}" y2="${pg.y + i * rh + rh / 2 + 2.6}" stroke="#d9d4ec" stroke-width="0.45"/>`));
     pages.push(pg.svg());
   }
-  pages.push(checklistPage(paper, 'My hand luggage', 'Pack your own little bag for the plane. Colour the star for each thing you pack!', [['🎧', 'Headphones'], ['📚', 'A book or two'], ['🖍️', 'Crayons and this activity book'], ['🧸', 'My cuddly toy'], ['🍎', 'Snacks'], ['💧', 'An empty water bottle'], ['🧦', 'Cosy socks'], ['🧥', 'A jumper for the cold plane'], ['🍭', 'A sweet for take off (for popping ears!)']], name));
+  pages.push(checklistPage(paper, 'My hand luggage', 'Pack your own little bag for the plane. Colour the star for each thing you pack!', [['🎧', 'Headphones'], ['📚', 'A book or two'], ['🖍️', 'Crayons and this activity book'], ['🧸', 'My cuddly toy'], ['🍎', 'Snacks'], ['💧', 'An empty water bottle'], ['🧦', 'Cosy socks'], ['🧥', 'A jumper for the cold plane'], ['🍭', 'A sweet to suck as the plane takes off (it helps your ears!)']], name));
   pages.push(seasonColour(paper, 'plane', name));
   pages.push(...packRun('mazes', { level: 'easy' }, paper, +o.seed || 1).sheets);
   pages.push(seriesCert(paper, 'FLIGHT COMPLETE', 'Brave Flyer Award', name, dest ? `for flying all the way to ${dest} like a superstar!` : 'for flying like a superstar!', 'Next: tell someone all about your trip!', ring));
@@ -11732,10 +11732,10 @@ const DINOS = [
   ['Tyrannosaurus rex', 'tie-RAN-oh-SORE-us', 'meat', 12, 'Its teeth were as long as bananas!'],
   ['Triceratops', 'try-SER-a-tops', 'plants', 9, 'It had three horns and a giant frill.'],
   ['Stegosaurus', 'STEG-oh-SORE-us', 'plants', 9, 'It had big plates all along its back.'],
-  ['Brachiosaurus', 'BRAK-ee-oh-SORE-us', 'plants', 26, 'It was as tall as a four storey house.'],
+  ['Brachiosaurus', 'BRAK-ee-oh-SORE-us', 'plants', 26, 'It was as tall as a house with four floors.'],
   ['Velociraptor', 'vel-OSS-ee-rap-tor', 'meat', 2, 'It was about the size of a turkey, with feathers!'],
   ['Ankylosaurus', 'an-KY-loh-SORE-us', 'plants', 8, 'It had a tail like a big club.'],
-  ['Pteranodon', 'ter-AN-oh-don', 'fish', 7, 'It flew over the sea. Its wings were 7 metres wide!'],
+  ['Pteranodon', 'ter-AN-oh-don', 'fish', 2, 'Not a dinosaur, but a flying reptile. Its wings were 7 metres wide!'],
   ['Diplodocus', 'dih-PLOD-oh-kus', 'plants', 27, 'Its long tail cracked like a whip.'],
 ];
 
@@ -12027,7 +12027,7 @@ function makeGarden(o, paper) {
   }
   // What plants need.
   pages.push(tagsPage(paper, 'What plants need', 'Every plant needs these four things to grow. Colour them, cut them out and stick them by your plant!', 4, 2, (pg, x, y, w, h, i) => {
-    const [e, t, d] = [['☀️', 'Sunlight', 'Plants make their food from light.'], ['💧', 'Water', 'A little drink, not too much!'], ['🟫', 'Soil', 'Roots hold on and find food here.'], ['🌬️', 'Air', 'Leaves breathe in the air.']][i], c = PALETTE[i];
+    const [e, t, d] = [['☀️', 'Sunlight', 'Plants make their food from light.'], ['💧', 'Water', 'A little drink, not too much!'], ['🟫', 'Soil', 'Roots hold on tight and drink up water here.'], ['🌬️', 'Air', 'Leaves take in air.']][i], c = PALETTE[i];
     pg.add(`<rect x="${x + 4}" y="${y + 4}" width="${w - 8}" height="${h - 8}" rx="10" fill="${TINTS[i]}" stroke="${c}" stroke-width="1.1"/>` + emoji(e, x + w / 2, y + h * 0.36, h * 0.3) + txt(x + w / 2, y + h * 0.7, t, 11, { colour: c }) + txt(x + w / 2, y + h * 0.7 + 10, d, fitFont(d, 5.4, w - 16, 0.5), { font: FONT, weight: 700, colour: INK }));
   }));
   pages.push(picGridPage(paper, 'Garden bug hunt', 'Tiptoe round the garden or park. Cross off each little creature you find, then let it go!', [['🐞', 'Ladybird'], ['🐝', 'Bee'], ['🦋', 'Butterfly'], ['🐛', 'Caterpillar'], ['🐌', 'Snail'], ['🐜', 'Ant'], ['🕷️', 'Spider'], ['🪱', 'Worm'], ['🦗', 'Grasshopper'], ['🪲', 'Beetle'], ['🐦', 'Bird'], ['🕸️', 'Web'], ['🪰', 'Fly'], ['🌸', 'Flower visitor'], ['🍃', 'Nibbled leaf'], ['🦔', 'Hedgehog signs']]));
@@ -12077,7 +12077,7 @@ function makeKindness(o, paper) {
     wrap(t, 18).forEach((l, k, all) => pg.add(txt(x + w / 2, y + h / 2 + 8 - (all.length - 1) * 5 + k * 10, l, fitFont(l, 9, w - 24, 0.56), { colour: c })));
     pg.add(txt(x + w / 2, y + h - 12, 'From ______________', 5, { font: FONT, colour: SOFT }));
   }));
-  pages.push(picGridPage(paper, 'Kindness bingo', 'Cross off each kind thing you do. Can you get four in a row?', [['🤗', 'Give a hug'], ['😊', 'Smile at someone'], ['🧸', 'Share a toy'], ['🙏', 'Say thank you'], ['📞', 'Call family'], ['🍪', 'Share a snack'], ['🧹', 'Help tidy'], ['💌', 'Write a note'], ['🌷', 'Give a flower'], ['🎨', 'Draw for someone'], ['👋', 'Say hello'], ['🐦', 'Feed the birds'], ['😂', 'Make someone laugh'], ['🙋', 'Offer help'], ['📖', 'Read together'], ['💗', 'Be kind to you']]));
+  pages.push(picGridPage(paper, 'Kindness bingo', 'Cross off each kind thing you do. Can you get four in a row?', [['🤗', 'Give a hug'], ['😊', 'Smile at someone'], ['🧸', 'Share a toy'], ['🙏', 'Say thank you'], ['📞', 'Call family'], ['🍪', 'Share a snack'], ['🧹', 'Help tidy'], ['💌', 'Write a note'], ['🌷', 'Give a flower'], ['🎨', 'Draw for someone'], ['👋', 'Say hello'], ['🐦', 'Feed the birds'], ['😂', 'Make someone laugh'], ['🙋', 'Offer help'], ['📖', 'Read together'], ['💗', 'Be kind to yourself']]));
   pages.push(countRowsPage(paper, 'Count the love', ['💗', '🌷', '💌', '🧸', '🌈', '😊'], rand));
   pages.push(traceWordsPage(paper, 'Trace the kind words', [['love', '💗'], ['kind', '🌈'], ['hug', '🤗'], ['care', '🌷']]));
   pages.push(seasonColour(paper, 'hearts', name));
@@ -12088,7 +12088,7 @@ function makeKindness(o, paper) {
 
 // ================================================================ Lunar New Year pack (Plus)
 const ZODIAC = [
-  ['🐭', 'Rat', 'clever and quick'], ['🐮', 'Ox', 'strong and hard working'], ['🐯', 'Tiger', 'brave and bold'], ['🐰', 'Rabbit', 'gentle and kind'],
+  ['🐭', 'Rat', 'clever and quick'], ['🐮', 'Ox', 'strong and hardworking'], ['🐯', 'Tiger', 'brave and bold'], ['🐰', 'Rabbit', 'gentle and kind'],
   ['🐲', 'Dragon', 'powerful and lucky'], ['🐍', 'Snake', 'wise and calm'], ['🐴', 'Horse', 'full of energy'], ['🐐', 'Goat', 'caring and creative'],
   ['🐵', 'Monkey', 'playful and funny'], ['🐔', 'Rooster', 'honest and an early riser'], ['🐶', 'Dog', 'loyal and friendly'], ['🐷', 'Pig', 'generous and cheerful'],
 ];
@@ -12101,7 +12101,7 @@ function makeLunar(o, paper) {
   const ring = '#d62f2f', tint = '#fff3e6';
   const pages = [seriesCover(paper, 'HAPPY LUNAR NEW YEAR', name ? `${possessive(name)} Lunar New Year` : 'My Lunar New Year', `The Year of the ${yn}, ${yr}`, ['🏮', ye, '🧧', '🍊', '🥟', '🎆'], ring, tint, 'book', ['The Great Race', 'Find my animal', 'Red envelope to fold', 'Paper lantern craft', 'New year wishes', 'Lucky counting'])];
   // The Great Race: 12 animal cards.
-  for (let p = 0; p < 12; p += 6) pages.push(tagsPage(paper, p ? 'The Great Race (part 2)' : 'The Great Race', p ? 'Keep going! Can you remember who came first?' : 'Long ago, twelve animals raced across a river. The order they finished gave each year its animal! Read the cards in order.', 6, 2, (pg, x, y, w, h, i) => {
+  for (let p = 0; p < 12; p += 6) pages.push(tagsPage(paper, p ? 'The Great Race (part 2)' : 'The Great Race', p ? 'Keep going! Can you remember who came first?' : 'Long ago, twelve animals raced across a river. The order they finished in gave each year its animal! Read the cards in order.', 6, 2, (pg, x, y, w, h, i) => {
     const [e, nm, trait] = ZODIAC[p + i];
     pg.add(`<rect x="${x + 4}" y="${y + 4}" width="${w - 8}" height="${h - 8}" rx="9" fill="${tint}" stroke="${ring}" stroke-width="1"/><circle cx="${x + 16}" cy="${y + 16}" r="7" fill="${ring}"/>` + txt(x + 16, y + 18.6, `${p + i + 1}`, 7, { colour: '#fff' }));
     pg.add(emoji(e, x + w * 0.25, y + h * 0.58, Math.min(h * 0.4, w * 0.34)) + txt(x + w * 0.48, y + h * 0.5, nm, fitFont(nm, 11, w * 0.46, 0.58), { anchor: 'start', colour: ring }));
@@ -12109,7 +12109,7 @@ function makeLunar(o, paper) {
   }));
   // Find my animal.
   {
-    const pg = new Page(paper, 'Find my animal', { subtitle: 'Find the year you were born. That is your animal! Born in January or early February? Ask a grown-up, you might be the animal before.' });
+    const pg = new Page(paper, 'Find my animal', { subtitle: 'Find the year you were born. That is your animal! Born in January or early February? Ask a grown-up, because you might be the animal before.' });
     const years = []; for (let y = yr - 13; y <= yr; y++) years.push(y);
     const cols = 2, rows = Math.ceil(years.length / cols), cw = pg.width / cols, rh = Math.min(20, (pg.room - 70) / rows);
     years.forEach((y, i) => { const x = pg.left + Math.floor(i / rows) * cw, yy = pg.y + (i % rows) * rh, [e, nm] = zodiacOf(y), c = PALETTE[i % PALETTE.length]; pg.add(panel(x + 2, yy + 1, cw - 4, rh - 2, y === yr ? '#ffe0e0' : TINTS[i % TINTS.length], y === yr ? ring : c, 6) + txt(x + 10, yy + rh / 2 + 2.4, `${y}`, 7, { anchor: 'start', colour: c }) + emoji(e, x + cw * 0.45, yy + rh / 2, rh * 0.6) + txt(x + cw * 0.55, yy + rh / 2 + 2.4, nm, 7, { anchor: 'start', colour: INK })); });
@@ -12241,7 +12241,7 @@ function makeSafari(o, paper) {
 const CASES = [
   { title: 'The Case of the Missing Cookie', intro: 'Someone took the last cookie from the jar in the kitchen! Four friends were at home. Read the clues and cross out the suspects one by one.',
     suspects: [['🐱', 'Cat', 'Was in the kitchen. Loves fish. Has big paws.'], ['🐶', 'Dog', 'Was in the garden all day. Loves bones.'], ['🐭', 'Mouse', 'Was in the kitchen. Loves crumbs. Has tiny feet.'], ['🐰', 'Rabbit', 'Was in the kitchen. Loves carrots. Very long ears.']],
-    clues: ['The cookie jar is in the kitchen. The thief was in the kitchen.', 'The cookie was taken from a tiny hole in the lid. No long ears fit!', 'There were tiny footprints in the cookie crumbs.'], answer: 'Mouse' },
+    clues: ['The cookie jar is in the kitchen. The thief was in the kitchen.', 'The cookie was taken through a tiny hole in the lid. Long ears would never fit!', 'There were tiny footprints in the cookie crumbs.'], answer: 'Mouse' },
   { title: 'The Case of the Muddy Footprints', intro: 'Muddy footprints appeared on the clean farmhouse floor! Four farm friends were nearby. Use the clues to find who made them.',
     suspects: [['🐷', 'Pig', 'Was in the farmyard. Loves mud. Has four legs.'], ['🦆', 'Duck', 'Was in the farmyard. Loves the pond. Has two legs.'], ['🐴', 'Horse', 'Was out in the far field. Has four legs.'], ['🐔', 'Hen', 'Was in the farmyard. Loves seeds. Has two legs.']],
     clues: ['The footprints came from the farmyard, not the far field.', 'The footprints were made by an animal with four legs.', 'The mud smelled just like the big muddy puddle.'], answer: 'Pig' },
@@ -12542,7 +12542,7 @@ function mathsDayProblem(level, day, rand) {
 const MD_WARM = { counting: 'Count and write', adding: 'Number bonds', bigger: 'Skip counting' };
 const MD_STORY = [
   ['{n} has {a} apples and gets {b} more. How many now?', '+'], ['There are {a} birds. {b} fly away. How many are left?', '−'],
-  ['{n} builds a tower of {a} blocks, then adds {b}. How tall is it?', '+'], ['{a} balloons, then {b} pop! How many are left?', '−'],
+  ['{n} builds a tower of {a} blocks, then adds {b}. How many blocks tall is it now?', '+'], ['{a} balloons, then {b} pop! How many are left?', '−'],
   ['{n} has {a} stickers and Sam gives {b} more. How many now?', '+'],
 ];
 
@@ -12684,7 +12684,7 @@ function makeReadMonth(o, paper) {
     pg.add(txt(pg.left, pg.y + 6, 'I read this story to:', 6.4, { anchor: 'start', colour: lk.ring }) + `<line x1="${pg.left + 60}" x2="${pg.right}" y1="${pg.y + 6.6}" y2="${pg.y + 6.6}" stroke="#c9c3e3" stroke-width="0.5"/>`);
     pages.push(pg.svg());
   }
-  pages.push(seriesCert(paper, 'READING MONTH COMPLETE', 'Reading Star', name, 'for learning 16 new words and reading 4 stories!', set === 1 ? 'Next month: Reading Month, Next words!' : 'Next: the My Sight Word Readers series!', lk.ring));
+  pages.push(seriesCert(paper, 'READING MONTH COMPLETE', 'Reading Star', name, 'for learning 16 new words and reading 4 stories!', set === 1 ? 'Next month: the Next Words level of Reading Month!' : 'Next: the My Sight Word Readers series!', lk.ring));
   return pages;
 }
 
@@ -12816,7 +12816,7 @@ function cmScene(scene, rand, W, H) {
 
 const CM_CHALLENGES = [
   ['🖍️', 'Use only 3 colours today!'], ['🌈', 'Make something rainbow coloured'], ['🔵', 'Colour the sky using dots'], ['〰️', 'Fill the ground with stripes and zigzags'], ['❤️', 'Hide 5 little hearts in the picture'],
-  ['🌙', 'Make it a night time picture'], ['🎨', 'Use a colour you never use'], ['☀️', 'Make it bright and sunny'], ['🧊', 'Only cool colours: blue, green, purple'], ['🔥', 'Only warm colours: red, orange, yellow'],
+  ['🌙', 'Colour it as if it is night time'], ['🎨', 'Use a colour you never use'], ['☀️', 'Make it bright and sunny'], ['🧊', 'Only cool colours: blue, green, purple'], ['🔥', 'Only warm colours: red, orange, yellow'],
   ['✨', 'Add sparkles and stars'], ['🤝', 'Colour it with someone else'], ['🎵', 'Colour while listening to music'], ['🌸', 'Add three more flowers'], ['🖊️', 'Go slowly and stay inside the lines'],
   ['🎁', 'Give it to someone when you finish'], ['🦄', 'Make it magical'], ['🐾', 'Draw one more animal friend'], ['💭', 'Add a speech bubble: what are they saying?'], ['🏆', 'Your best colouring yet!'],
   ['👀', 'Give everyone the same colour eyes'], ['🌧️', 'Draw rain or snow falling'], ['🟢', 'Colour something green in every corner'], ['🎭', 'Give one friend a funny hat'], ['🪄', 'Use light colours first, then dark'],
@@ -13124,7 +13124,7 @@ function makeTimeMonth(o, paper) {
   const rand = rng(+o.seed || 1);
   const name = nameOf(o.name, '') || '';
   const lk = edLook(o.look), level = TM_WEEKS[o.level] ? o.level : 'easy', plan = TM_WEEKS[level];
-  const pages = [seriesCover(paper, 'PRINTPALS PLUS EDITION', name ? `${possessive(name)} Time Month` : 'My Time Month', level === 'easy' ? 'O\'clock and half past, 4 weeks' : 'Quarter past to five minutes, 4 weeks', ['🕐', '🕜', '⏰', lk.corner, '🌞', '🏆'], lk.ring, lk.tint, 'workbook', ['Read the clocks', 'Draw the hands', 'My day in times', 'Friday time check', 'Make a paper clock', 'Answers for grown-ups'])];
+  const pages = [seriesCover(paper, 'PRINTPALS PLUS EDITION', name ? `${possessive(name)} Time Month` : 'My Time Month', level === 'easy' ? 'O\'clock and half past, 4 weeks' : 'Quarter hours and five minutes, 4 weeks', ['🕐', '🕜', '⏰', lk.corner, '🌞', '🏆'], lk.ring, lk.tint, 'workbook', ['Read the clocks', 'Draw the hands', 'My day in times', 'Friday time check', 'Make a paper clock', 'Answers for grown-ups'])];
   pages.push(monthPlanPage(paper, lk, 'My time month plan', 'A little time telling every day. Keep a real clock nearby to check!', plan.flatMap((k) => ['Read it', 'Draw it', 'Read it', 'My day', 'Time check']), 'My time reward'));
   const answers = [];
   plan.forEach((kinds, wi) => {
@@ -13314,20 +13314,20 @@ function linedBox(pg, x, y, w, h, label, c, emo) {
 const SCI_EXP = [
   ['🥚', 'Sink or float?', ['A bowl of water', 'An apple, a coin, a spoon, a cork, a crayon'], 'Guess if each thing will sink or float, then drop them in one at a time.', 'Things float when they are light for their size.'],
   ['🌈', 'Walking water rainbow', ['3 cups', 'Paper towels', 'Water and food colouring'], 'Put coloured water in two cups with an empty cup between. Bridge them with folded paper towels. Wait an hour!', 'Water climbs up tiny gaps in the paper.'],
-  ['🌋', 'Fizzy volcano', ['Bicarbonate of soda', 'Vinegar', 'A tray and a cup'], 'Put 2 spoons of bicarbonate in the cup on a tray, then pour in vinegar. Stand back!', 'The two mix and make a gas full of bubbles.'],
+  ['🌋', 'Fizzy volcano', ['Bicarbonate of soda', 'Vinegar', 'A tray and a cup'], 'Put 2 spoons of bicarbonate in the cup on a tray, then pour in vinegar. Stand back!', 'Together they make a gas, and the gas makes the bubbles.'],
   ['🧲', 'Magnet hunt', ['A magnet', 'Things around the house'], 'Test 10 things. Does the magnet stick or not?', 'Magnets pull on some metals, like iron.'],
   ['🧊', 'Ice melt race', ['3 ice cubes', '3 plates', 'Salt, sugar, nothing'], 'Sprinkle salt on one cube, sugar on one, nothing on the last. Which melts first?', 'Salt makes ice melt faster.'],
   ['🌱', 'Bean in a jar', ['A jar', 'Kitchen paper', 'A dried bean'], 'Push the bean between damp paper and the jar. Check it every day.', 'Seeds need water and warmth to grow.'],
-  ['🎈', 'Balloon rocket', ['A balloon', 'String', 'A straw and tape'], 'Thread the straw on a long string. Tape a blown up balloon to it, then let go!', 'Air rushing out pushes the balloon forward.'],
+  ['🎈', 'Balloon rocket', ['A balloon', 'String', 'A straw and tape'], 'Thread the straw on a long string. Blow up a balloon, tape it to the straw, then let go!', 'Air rushing out pushes the balloon forward.'],
   ['🥛', 'Magic milk', ['A plate of milk', 'Food colouring', 'Washing up liquid', 'A cotton bud'], 'Drop colours in the milk, then touch it with a soapy cotton bud.', 'Soap makes the milk move and swirl.'],
-  ['🌞', 'Shadow tracker', ['Chalk', 'A sunny day'], 'Stand in the same spot at breakfast, lunch and tea. Draw round your shadow.', 'Shadows move as the Sun moves across the sky.'],
+  ['🌞', 'Shadow tracker', ['Chalk', 'A sunny day'], 'Stand in the same spot at breakfast, lunch and tea. Draw round your shadow.', 'Shadows move because the Sun seems to move across the sky.'],
   ['🥕', 'Coloured celery', ['A celery stick', 'A glass of coloured water'], 'Stand the celery in the water overnight. Look at the leaves in the morning.', 'Plants drink water up their stems.'],
   ['🔊', 'String telephone', ['2 paper cups', 'A long string'], 'Poke the string through both cups. Pull it tight and talk!', 'Sound travels along the string.'],
   ['🍋', 'Invisible ink', ['Lemon juice', 'A cotton bud', 'Paper', 'A grown-up with a lamp'], 'Write a secret message in lemon juice. Let it dry, then a grown-up warms it.', 'Heat turns the lemon juice brown.'],
-  ['🧽', 'Which soaks up most?', ['A sponge, a sock, paper, foil', 'A cup of water'], 'Dip each one in water and squeeze it into a cup. Which held the most?', 'Some materials have tiny holes that hold water.'],
+  ['🧽', 'Which soaks up the most?', ['A sponge, a sock, paper, foil', 'A cup of water'], 'Dip each one in water and squeeze it into a cup. Which held the most?', 'Some materials have tiny holes that hold water.'],
   ['🪞', 'Mirror writing', ['A small mirror', 'Paper and pencil'], 'Write your name, then look at it in the mirror. Can you write it backwards?', 'Mirrors flip things the other way round.'],
   ['🥤', 'Straw pan pipes', ['6 straws', 'Tape and scissors'], 'Cut the straws to different lengths, tape them in a row and blow across the tops.', 'Short straws make high sounds, long ones make low sounds.'],
-  ['🍪', 'Melting chocolate', ['3 chocolate buttons', 'Sunny window, hand, fridge'], 'Put one in the sun, hold one in your hand, one in the fridge. Which melts first?', 'Heat melts chocolate from solid to liquid.'],
+  ['🍪', 'Melting chocolate', ['3 chocolate buttons', 'Sunny window, hand, fridge'], 'Put one piece in the sun, hold one in your hand and put one in the fridge. Which melts first?', 'Heat turns chocolate from a solid into a liquid.'],
 ];
 
 function makeScienceMonth(o, paper) {
@@ -13663,7 +13663,7 @@ function makeHomeworkMonth(o, paper) {
   const lk = edLook(o.look), level = HW_WORDS[o.level] ? o.level : 'y1';
   const kids = classNames(o, false), cls = String(o.cls || '').trim().slice(0, 24), teacher = String(o.teacher || '').trim().slice(0, 30);
   const mlev = level === 'y1' ? 'counting' : level === 'y2' ? 'adding' : 'bigger';
-  const pages = [seriesCover(paper, 'PRINTPALS PLUS FOR TEACHERS', cls ? `${cls}: Homework Month` : 'Homework Month', `${{ y1: 'Year 1 / Grade 1', y2: 'Year 2 / Grade 2', y3: 'Year 3 / Grade 3' }[level]}: 4 weekly sheets`, ['📝', '🔢', '📚', lk.corner, '🏠', '⭐'], lk.ring, lk.tint, 'homework set', ['4 weekly sheets', 'Maths, spelling, reading', 'A fun family task', 'Parent comment box', 'Class tracker', 'Answers for teachers'])];
+  const pages = [seriesCover(paper, 'PRINTPALS PLUS FOR TEACHERS', cls ? `${cls}: Homework Month` : 'Homework Month', `${{ y1: 'Year 1 / Kindergarten', y2: 'Year 2 / Grade 1', y3: 'Year 3 / Grade 2' }[level]}: 4 weekly sheets`, ['📝', '🔢', '📚', lk.corner, '🏠', '⭐'], lk.ring, lk.tint, 'homework set', ['4 weekly sheets', 'Maths, spelling, reading', 'A fun family task', 'Parent comment box', 'Class tracker', 'Answers for teachers'])];
   const answers = [];
   for (let w = 1; w <= 4; w++) {
     const pg = new Page(paper, `Homework: week ${w}`, { subtitle: `Please return by: ____________   ${teacher ? 'From ' + teacher + '.' : ''} About 20 minutes across the week.` });
@@ -13721,7 +13721,7 @@ function makeHomeworkMonth(o, paper) {
 }
 
 // ================================================================ Cover Teacher Kit (teachers)
-const COVER_GAMES = [['🙊', 'Silent ball: pass a soft ball in silence. Talk or drop it and you sit down.'], ['🗣️', 'Simon says, with a twist: act like animals.'], ['🔤', 'Alphabet hunt: name something in the room for each letter.'], ['🧠', 'Kim\'s game: 10 things on a tray, cover them, remove one.'], ['🎨', 'Draw and guess: one child draws, the class guesses.'], ['🔢', 'Buzz: count round the class, say buzz on every 5.'], ['🦘', 'Heads down thumbs up.'], ['📖', 'Story chain: each child adds one sentence.'], ['🎵', 'Freeze dance: freeze when the music stops.'], ['❓', 'Twenty questions: guess what the teacher is thinking of.']];
+const COVER_GAMES = [['🙊', 'Silent ball: pass a soft ball in silence. Talk or drop it and you sit down.'], ['🗣️', 'Simon says, with a twist: act like animals.'], ['🔤', 'Alphabet hunt: name something in the room for each letter.'], ['🧠', 'Kim\'s game: 10 things on a tray, cover them, remove one.'], ['🎨', 'Draw and guess: one child draws, the class guesses.'], ['🔢', 'Buzz: count round the class and say buzz instead of any number in the 5 times table.'], ['🦘', 'Heads down thumbs up.'], ['📖', 'Story chain: each child adds one sentence.'], ['🎵', 'Freeze dance: freeze when the music stops.'], ['❓', 'Twenty questions: guess what the teacher is thinking of.']];
 
 function makeCoverKit(o, paper) {
   const rand = rng(+o.seed || 1);
@@ -13896,7 +13896,7 @@ function makeParentsEvening(o, paper) {
     const pg = new Page(paper, '', { bare: true });
     pg.add(`<rect x="${pg.left}" y="${pg.m}" width="${pg.width}" height="${pg.bottom - pg.m}" rx="16" fill="${lk.tint}" stroke="${lk.ring}" stroke-width="2.4"/>` + emoji('☕', pg.w / 2, pg.m + 60, 50));
     bubbleText(pg, 'Welcome!', pg.w / 2, pg.m + 130, pg.width - 40, 34);
-    pg.add(txt(pg.w / 2, pg.m + 156, "Parents' evening", 12, { colour: lk.ring }) + txt(pg.w / 2, pg.m + 174, cls || 'Our class', 10, { colour: INK }) + (teacher ? txt(pg.w / 2, pg.m + 190, teacher, 9, { colour: SOFT }) : '') + txt(pg.w / 2, pg.bottom - 30, 'Please take a seat, we will be with you soon', 8, { colour: INK }));
+    pg.add(txt(pg.w / 2, pg.m + 156, "Parents' evening", 12, { colour: lk.ring }) + txt(pg.w / 2, pg.m + 174, cls || 'Our class', 10, { colour: INK }) + (teacher ? txt(pg.w / 2, pg.m + 190, teacher, 9, { colour: SOFT }) : '') + txt(pg.w / 2, pg.bottom - 30, 'Please take a seat. We will be with you soon', 8, { colour: INK }));
     pg.footer = () => {}; pages.push(pg.svg());
   }
   return pages;
@@ -13904,12 +13904,12 @@ function makeParentsEvening(o, paper) {
 
 // ================================================================ Report Writing Helper (teachers)
 const REPORT_BANK = {
-  'Attitude and effort': ['{n} is a kind and thoughtful member of our class.', '{n} works hard and always tries their best.', '{n} is enthusiastic and brings great energy to our lessons.', '{n} is growing in confidence every week.', '{n} listens carefully and follows instructions well.', '{n} has shown wonderful resilience when things are tricky.'],
+  'Attitude and effort': ['{n} is a kind and thoughtful member of our class.', '{n} works hard and always tries their best.', '{n} is enthusiastic and brings great energy to our lessons.', '{n} is growing in confidence every week.', '{n} listens carefully and follows instructions well.', '{n} keeps trying, even when things are tricky.'],
   'Reading': ['{n} reads with growing fluency and expression.', '{n} loves sharing books and talking about stories.', '{n} uses phonics well to work out new words.', '{n} would benefit from reading aloud at home every day.', '{n} can answer questions about what they have read.'],
   'Writing': ['{n} writes with imagination and interesting ideas.', '{n} is using capital letters and full stops more consistently.', '{n} forms letters carefully and neatly.', '{n} is beginning to use describing words to add detail.', '{n} could now focus on writing longer sentences.'],
   'Maths': ['{n} is confident with numbers and counting.', '{n} enjoys solving problems and explaining their thinking.', '{n} is becoming quicker at adding and taking away.', '{n} would benefit from practising number bonds at home.', '{n} uses practical equipment well to help them.'],
   'Friendships': ['{n} is a caring friend and plays well with others.', '{n} includes others in games and is a great team player.', '{n} is learning to share and take turns.', '{n} is always ready to help a friend.'],
-  'Next steps': ['Next, {n} will work on reading longer books with confidence.', 'Next, {n} will practise writing sentences independently.', 'Next, {n} will learn number bonds to 10 by heart.', 'Next, {n} will build confidence sharing ideas with the class.', 'Next, {n} will focus on presenting work neatly.'],
+  'Next steps': ['Next, {n} will work on reading longer books with confidence.', 'Next, {n} will practise writing sentences independently.', 'Next, {n} will learn number bonds to 10 by heart.', 'Next, {n} will build confidence in sharing ideas with the class.', 'Next, {n} will focus on presenting work neatly.'],
 };
 
 function makeReportHelper(o, paper) {
@@ -14019,7 +14019,7 @@ function makeClassCalendar(o, paper) {
   };
   // Teacher planning page.
   {
-    const pg = new Page(paper, `Class calendar gift ${yr}`, { subtitle: 'How to use: each child gets a cover and 12 month pages. They draw a picture in each box (one a day in December!). Staple at the top and punch a hole to hang.', noName: true });
+    const pg = new Page(paper, `Class calendar gift ${yr}`, { subtitle: 'How to use: each child gets a cover and 12 month pages. They draw a picture for each month (one a day in December!). Staple at the top and punch a hole to hang.', noName: true });
     const ideas = ['January: me in the snow', 'February: someone I love', 'March: spring flowers', 'April: my favourite animal', 'May: playing outside', 'June: a sunny day', 'July: summer fun', 'August: the seaside', 'September: my school', 'October: autumn leaves', 'November: fireworks and stars', 'December: Christmas'];
     ideas.forEach((l, k) => pg.add(`<circle cx="${pg.left + 6}" cy="${pg.y + 8 + k * 12}" r="3" fill="${PALETTE[k % PALETTE.length]}"/>` + txt(pg.left + 14, pg.y + 10 + k * 12, l, 7, { anchor: 'start', colour: INK })));
     pages.push(pg.svg());
@@ -14227,11 +14227,11 @@ function makeMovingUp(o, paper) {
   });
   kids.forEach((n, i) => {
     const pg = new Page(paper, `Handover notes: ${n}`, { subtitle: `Teacher copy for ${next || 'the next teacher'}. Confidential. Keep it kind, useful and brief.`, noName: true });
-    const boxes = [['📖', 'Reading level and notes'], ['🔢', 'Maths'], ['✏️', 'Writing'], ['🏥', 'Medical, allergies, needs'], ['🤝', 'Friendships (sit well with, apart from)'], ['💛', 'What helps them thrive'], ['🏠', 'Family notes'], ['🌟', 'Something wonderful about them']], bw = pg.width / 2, bh = pg.room / 4;
+    const boxes = [['📖', 'Reading level and notes'], ['🔢', 'Maths'], ['✏️', 'Writing'], ['🏥', 'Medical needs and allergies'], ['🤝', 'Friendships (works well with, best kept apart from)'], ['💛', 'What helps them thrive'], ['🏠', 'Family notes'], ['🌟', 'Something wonderful about them']], bw = pg.width / 2, bh = pg.room / 4;
     boxes.forEach(([e, t], k) => linedBox(pg, pg.left + (k % 2) * bw + 1.5, pg.y + Math.floor(k / 2) * bh + 1.5, bw - 3, bh - 4, t, PALETTE[k % PALETTE.length], e));
     pages.push(pg.svg());
   });
-  pages.push(...classGrid(paper, `${cls || 'Class'} summary for next year`, 'A one page picture of the class. R, W, M = reading, writing, maths: B below, E expected, G greater depth.', kids, ['R', 'W', 'M', 'SEN', 'EAL', 'Medical', 'Pupil premium', 'Notes'], lk));
+  pages.push(...classGrid(paper, `${cls || 'Class'} summary for next year`, 'The whole class on one page. R, W, M = reading, writing, maths. W working towards, E expected, G greater depth.', kids, ['R', 'W', 'M', 'SEN', 'EAL', 'Medical', 'Pupil premium', 'Notes'], lk));
   pages.push(tagsPage(paper, 'Worries and wishes', 'Each child writes or draws one worry and one wish about moving up. Pop them in a box for the new teacher!', 6, 2, (pg, x, y, w, h, i) => { pg.add(`<rect x="${x + 4}" y="${y + 4}" width="${w - 8}" height="${h - 8}" rx="9" fill="#fff" stroke="${PALETTE[i]}" stroke-width="1"/>` + txt(x + 12, y + 15, 'Name:', 6, { anchor: 'start', colour: PALETTE[i] }) + emoji('☁️', x + 16, y + 30, 9) + txt(x + 26, y + 32, 'My worry', 6, { anchor: 'start', colour: INK }) + emoji('🌈', x + 16, y + h / 2 + 18, 9) + txt(x + 26, y + h / 2 + 20, 'My wish', 6, { anchor: 'start', colour: INK })); }));
   {
     const pg = new Page(paper, next ? `Welcome to ${next}!` : 'Welcome to your new class!', { subtitle: 'A letter from your new teacher, to read over the summer.', noName: true });
@@ -14248,7 +14248,7 @@ function makeMovingUp(o, paper) {
 function makeClassSpecial(o, paper) {
   const kids = classNames(o), lk = edLook(o.look), { cls } = teacherBits(o);
   const who = String(o.who || '').trim().replace(/[<>]/g, '').slice(0, 20) || 'Mum';
-  const pages = [seriesCover(paper, 'PRINTPALS PLUS FOR TEACHERS', `Cards for ${who}`, cls || 'A gift from every child', ['💐', '💌', '🌷', '💛', '🎁', '⭐'], lk.ring, lk.tint, 'card set', ['A card from every child', 'Signed with their name', '4 page mini book', `All about my ${who}`, 'Class checklist', 'Kind for every family'])];
+  const pages = [seriesCover(paper, 'PRINTPALS PLUS FOR TEACHERS', `Cards for ${who}`, cls || 'A gift from every child', ['💐', '💌', '🌷', '💛', '🎁', '⭐'], lk.ring, lk.tint, 'card set', ['A card from every child', 'Signed with their name', 'A 4 page mini book', `All about my ${who}`, 'Class checklist', 'Works for every family'])];
   kids.forEach((n, i) => {
     const c = PALETTE[i % PALETTE.length];
     pages.push(...foldedCard(paper, (pg, x, y, w, h) => {
@@ -14314,7 +14314,7 @@ function makeAutumnKit(o, paper) {
     const cw = pg.width / 3, ch = (pg.room - 60) / 2;
     for (let k = 0; k < 6; k++) { const x = pg.left + (k % 3) * cw, y = pg.y + Math.floor(k / 3) * ch; pg.add(panel(x + 2, y + 2, cw - 4, ch - 4, '#fff', PALETTE[k], 10) + txt(x + cw / 2, y + ch - 8, `Leaf ${k + 1}`, 6, { colour: PALETTE[k] })); }
     pg.y += 2 * ch + 8;
-    pg.add(panel(pg.left, pg.y, pg.width, pg.room - 4, tint, ring, 10) + txt(pg.left + 10, pg.y + 12, 'My biggest leaf was number ______', 6.4, { anchor: 'start', colour: INK }) + txt(pg.left + 10, pg.y + 24, 'My favourite colour leaf was ______________', 6.4, { anchor: 'start', colour: INK }) + txt(pg.left + 10, pg.y + 36, 'The tree it fell from: __________________', 6.4, { anchor: 'start', colour: INK }));
+    pg.add(panel(pg.left, pg.y, pg.width, pg.room - 4, tint, ring, 10) + txt(pg.left + 10, pg.y + 12, 'My biggest leaf was number ______', 6.4, { anchor: 'start', colour: INK }) + txt(pg.left + 10, pg.y + 24, 'My favourite leaf colour was ______________', 6.4, { anchor: 'start', colour: INK }) + txt(pg.left + 10, pg.y + 36, 'The tree it fell from: __________________', 6.4, { anchor: 'start', colour: INK }));
     pages.push(pg.svg());
   }
   // Pumpkin maths.
@@ -14404,7 +14404,7 @@ function makeRoadTrip(o, paper) {
   const dest = String(o.dest || '').trim().slice(0, 22);
   const ring = '#e0602b', tint = '#fff3ea';
   const pages = [seriesCover(paper, 'ROAD TRIP ADVENTURE', name ? `${possessive(name)} road trip` : 'My road trip', dest ? `Off to ${dest}!` : 'Are we there yet?', ['🚗', '🗺️', '⛽', '🌳', '🏖️', '⭐'], ring, tint, 'travel book', ['Car bingo', 'Journey map', 'Are we there yet? games', 'Number plate hunt', 'Travel diary', 'Super Traveller award'])];
-  for (let b = 0; b < 2; b++) pages.push(picGridPage(paper, b ? 'Car bingo: card 2' : 'Car bingo', 'Cross off everything you see from the window. Four in a row shouts BINGO!', shuffle([['🚗', 'Red car'], ['🚌', 'Bus'], ['🚚', 'Lorry'], ['🏍️', 'Motorbike'], ['🐄', 'Cow'], ['🐑', 'Sheep'], ['🌉', 'Bridge'], ['⛽', 'Petrol station'], ['🚦', 'Traffic lights'], ['🌳', 'Big tree'], ['🏠', 'Blue door'], ['🚜', 'Tractor'], ['🚲', 'Bicycle'], ['🐴', 'Horse'], ['🌊', 'River'], ['⛪', 'Tall tower'], ['🚓', 'Police car'], ['🚑', 'Ambulance'], ['🏔️', 'Hill'], ['🌈', 'Rainbow']], rand).slice(0, 16)));
+  for (let b = 0; b < 2; b++) pages.push(picGridPage(paper, b ? 'Car bingo: card 2' : 'Car bingo', 'Cross off everything you see from the window. Get four in a row and shout BINGO!', shuffle([['🚗', 'Red car'], ['🚌', 'Bus'], ['🚚', 'Lorry'], ['🏍️', 'Motorbike'], ['🐄', 'Cow'], ['🐑', 'Sheep'], ['🌉', 'Bridge'], ['⛽', 'Petrol station'], ['🚦', 'Traffic lights'], ['🌳', 'Big tree'], ['🏠', 'Blue door'], ['🚜', 'Tractor'], ['🚲', 'Bicycle'], ['🐴', 'Horse'], ['🌊', 'River'], ['⛪', 'Tall tower'], ['🚓', 'Police car'], ['🚑', 'Ambulance'], ['🏔️', 'Hill'], ['🌈', 'Rainbow']], rand).slice(0, 16)));
   // Journey map.
   {
     const pg = new Page(paper, 'My journey map', { subtitle: 'Draw the road from home to where you are going. Add what you see on the way!' });
@@ -14412,7 +14412,7 @@ function makeRoadTrip(o, paper) {
     pages.push(pg.svg());
   }
   // Games.
-  pages.push(checklistPage(paper, 'Are we there yet? games', 'Games to play in the car with no paper at all. Tick the ones you played!', [['🔤', 'I spy with my little eye'], ['🎵', 'Name that tune: hum a song'], ['🐄', 'Count the cows'], ['🔢', 'Find the numbers 1 to 10 on signs'], ['🅰️', 'Alphabet game: find A to Z on signs'], ['🤫', 'Quiet mouse: who can stay silent longest?'], ['❓', 'Twenty questions'], ['📖', 'Make up a story, one sentence each']], name));
+  pages.push(checklistPage(paper, 'Are we there yet? games', 'Games to play in the car with no paper at all. Tick the ones you played!', [['🔤', 'I spy with my little eye'], ['🎵', 'Name that tune: hum a song'], ['🐄', 'Count the cows'], ['🔢', 'Find the numbers 1 to 10 on signs'], ['🅰️', 'Alphabet game: find A to Z on signs'], ['🤫', 'Quiet mouse: who can stay silent the longest?'], ['❓', 'Twenty questions'], ['📖', 'Make up a story, one sentence each']], name));
   {
     const pg = new Page(paper, 'Number plate hunt', { subtitle: 'Spot letters and numbers on car number plates. Colour each one when you find it!' });
     const all = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'.split(''), cols = 6, cw = pg.width / cols, ch = pg.room / 6;
@@ -14451,7 +14451,7 @@ function makeClassHalloween(o, paper) {
   // Bingo: 4 different cards.
   const bingo = [['🎃', 'Pumpkin'], ['👻', 'Ghost'], ['🦇', 'Bat'], ['🕷️', 'Spider'], ['🧙', 'Witch hat'], ['🍬', 'Sweet'], ['🌙', 'Moon'], ['⭐', 'Star'], ['🐈‍⬛', 'Black cat'], ['🦉', 'Owl'], ['🕸️', 'Web'], ['🍭', 'Lolly'], ['🧹', 'Broom'], ['🍎', 'Apple'], ['🏰', 'Castle'], ['🔮', 'Magic ball'], ['🍂', 'Leaf'], ['🕯️', 'Candle'], ['🎭', 'Mask'], ['🧛', 'Vampire']];
   const rand = rng(+o.seed || 1);
-  for (let b = 1; b <= 4; b++) pages.push(picGridPage(paper, `Halloween bingo: card ${b}`, 'The teacher calls out a picture. Cover it with a sweet or a counter. Four in a row shouts BOO!', shuffle(bingo, rand).slice(0, 16)));
+  for (let b = 1; b <= 4; b++) pages.push(picGridPage(paper, `Halloween bingo: card ${b}`, 'The teacher calls out a picture. Cover it with a sweet or a counter. Get four in a row and shout BOO!', shuffle(bingo, rand).slice(0, 16)));
   // Treat bag toppers.
   for (let s = 0; s < kids.length; s += 6) pages.push(tagsPage(paper, 'Treat bag toppers', 'Fold along the middle and staple over a little paper bag.', 6, 2, (pg, x, y, w, h, i) => { const n = kids[s + i]; if (!n) return; pg.add(`<rect x="${x + 4}" y="${y + 4}" width="${w - 8}" height="${h - 8}" rx="8" fill="#fff" stroke="${i % 2 ? lk.accent : lk.ring}" stroke-width="1"/><line x1="${x + 6}" x2="${x + w - 6}" y1="${y + h / 2}" y2="${y + h / 2}" stroke="#b9b3d6" stroke-width="0.5" stroke-dasharray="3 2"/>` + emoji(['🎃', '👻', '🦇', '🍬', '🌙', '🐈‍⬛'][i], x + 20, y + h * 0.75, h * 0.24) + txt(x + w / 2 + 10, y + h * 0.7, 'Happy Halloween', 6.4, { colour: i % 2 ? lk.accent : lk.ring }) + txt(x + w / 2 + 10, y + h * 0.86, n, fitFont(n, 10, w - 50, 0.58), { colour: INK })); }));
   pages.push(seasonColour(paper, 'pumpkin', ''));
@@ -14560,7 +14560,7 @@ function makePetDiary(o, paper) {
   }
   pages.push(drawAndTellPage(paper, `A day in the life of ${Pet}`, `Draw ${pet} doing their favourite thing, then tell the story of their day!`, ['In the morning', 'In the afternoon', 'At night', `${Pet} loves`], lk.ring, 0.5));
   pages.push(drawAndTellPage(paper, `If ${Pet} could talk`, `What would ${pet} say? Draw a speech bubble and write it in!`, [`${Pet} would say`, `${Pet} thinks I am`, 'Our best adventure was'], lk.ring, 0.55));
-  pages.push(checklistPage(paper, 'Good pet owner promise', 'Read each promise with a grown-up and colour a star when you keep it.', [['💧', 'Fresh water every day'], ['🥣', 'The right food, not too much'], ['🤲', 'Gentle hands, always'], ['🧼', 'Wash my hands after'], ['🏠', 'A clean, cosy home'], ['🩺', 'Tell a grown-up if my pet seems poorly'], ['💛', 'Love and attention every day']], name));
+  pages.push(checklistPage(paper, 'Good pet owner promise', 'Read each promise with a grown-up and colour a star when you keep it.', [['💧', 'Fresh water every day'], ['🥣', 'The right food, not too much'], ['🤲', 'Gentle hands, always'], ['🧼', 'Wash my hands after touching my pet'], ['🏠', 'A clean, cosy home'], ['🩺', 'Tell a grown-up if my pet seems poorly'], ['💛', 'Love and attention every day']], name));
   pages.push(seriesCert(paper, 'MY PET DIARY', 'Best Pet Carer', name, `for looking after ${pet} with love every single day!`, 'Next: play vets with the Pet Vet Clinic!', lk.ring));
   return pages;
 }

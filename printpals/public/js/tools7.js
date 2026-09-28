@@ -259,7 +259,7 @@ function makeCrafts(o, paper) {
     const keys = MASKS[o.animal] ? [o.animal] : Object.keys(MASKS);
     return keys.map((k) => {
       const m = MASKS[k];
-      const pg = new Page(paper, `${m.name[0].toUpperCase()}${m.name.slice(1)} mask`, { subtitle: 'Colour it in. A grown-up cuts it out and the eye holes, then ties string through the little holes.', noName: true });
+      const pg = new Page(paper, `${m.name[0].toUpperCase()}${m.name.slice(1)} mask`, { subtitle: 'Colour it in. A grown-up cuts it out, cuts the eye holes and ties string through the little holes.', noName: true });
       const size = Math.min(pg.width, pg.room - 10);
       const s = size / 200;
       pg.add(`<g transform="translate(${pg.left + (pg.width - size) / 2} ${pg.y + 6}) scale(${s.toFixed(4)})">${m.draw().join('')}${maskFace(k, m.nose)}</g>`);

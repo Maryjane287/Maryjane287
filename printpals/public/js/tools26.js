@@ -79,7 +79,7 @@ function makeSafari(o, paper) {
 const CASES = [
   { title: 'The Case of the Missing Cookie', intro: 'Someone took the last cookie from the jar in the kitchen! Four friends were at home. Read the clues and cross out the suspects one by one.',
     suspects: [['🐱', 'Cat', 'Was in the kitchen. Loves fish. Has big paws.'], ['🐶', 'Dog', 'Was in the garden all day. Loves bones.'], ['🐭', 'Mouse', 'Was in the kitchen. Loves crumbs. Has tiny feet.'], ['🐰', 'Rabbit', 'Was in the kitchen. Loves carrots. Very long ears.']],
-    clues: ['The cookie jar is in the kitchen. The thief was in the kitchen.', 'The cookie was taken from a tiny hole in the lid. No long ears fit!', 'There were tiny footprints in the cookie crumbs.'], answer: 'Mouse' },
+    clues: ['The cookie jar is in the kitchen. The thief was in the kitchen.', 'The cookie was taken through a tiny hole in the lid. Long ears would never fit!', 'There were tiny footprints in the cookie crumbs.'], answer: 'Mouse' },
   { title: 'The Case of the Muddy Footprints', intro: 'Muddy footprints appeared on the clean farmhouse floor! Four farm friends were nearby. Use the clues to find who made them.',
     suspects: [['🐷', 'Pig', 'Was in the farmyard. Loves mud. Has four legs.'], ['🦆', 'Duck', 'Was in the farmyard. Loves the pond. Has two legs.'], ['🐴', 'Horse', 'Was out in the far field. Has four legs.'], ['🐔', 'Hen', 'Was in the farmyard. Loves seeds. Has two legs.']],
     clues: ['The footprints came from the farmyard, not the far field.', 'The footprints were made by an animal with four legs.', 'The mud smelled just like the big muddy puddle.'], answer: 'Pig' },

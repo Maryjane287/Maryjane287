@@ -114,7 +114,7 @@ function makeHomeworkMonth(o, paper) {
   const lk = edLook(o.look), level = HW_WORDS[o.level] ? o.level : 'y1';
   const kids = classNames(o, false), cls = String(o.cls || '').trim().slice(0, 24), teacher = String(o.teacher || '').trim().slice(0, 30);
   const mlev = level === 'y1' ? 'counting' : level === 'y2' ? 'adding' : 'bigger';
-  const pages = [seriesCover(paper, 'PRINTPALS PLUS FOR TEACHERS', cls ? `${cls}: Homework Month` : 'Homework Month', `${{ y1: 'Year 1 / Grade 1', y2: 'Year 2 / Grade 2', y3: 'Year 3 / Grade 3' }[level]}: 4 weekly sheets`, ['📝', '🔢', '📚', lk.corner, '🏠', '⭐'], lk.ring, lk.tint, 'homework set', ['4 weekly sheets', 'Maths, spelling, reading', 'A fun family task', 'Parent comment box', 'Class tracker', 'Answers for teachers'])];
+  const pages = [seriesCover(paper, 'PRINTPALS PLUS FOR TEACHERS', cls ? `${cls}: Homework Month` : 'Homework Month', `${{ y1: 'Year 1 / Kindergarten', y2: 'Year 2 / Grade 1', y3: 'Year 3 / Grade 2' }[level]}: 4 weekly sheets`, ['📝', '🔢', '📚', lk.corner, '🏠', '⭐'], lk.ring, lk.tint, 'homework set', ['4 weekly sheets', 'Maths, spelling, reading', 'A fun family task', 'Parent comment box', 'Class tracker', 'Answers for teachers'])];
   const answers = [];
   for (let w = 1; w <= 4; w++) {
     const pg = new Page(paper, `Homework: week ${w}`, { subtitle: `Please return by: ____________   ${teacher ? 'From ' + teacher + '.' : ''} About 20 minutes across the week.` });
@@ -172,7 +172,7 @@ function makeHomeworkMonth(o, paper) {
 }
 
 // ================================================================ Cover Teacher Kit (teachers)
-const COVER_GAMES = [['🙊', 'Silent ball: pass a soft ball in silence. Talk or drop it and you sit down.'], ['🗣️', 'Simon says, with a twist: act like animals.'], ['🔤', 'Alphabet hunt: name something in the room for each letter.'], ['🧠', 'Kim\'s game: 10 things on a tray, cover them, remove one.'], ['🎨', 'Draw and guess: one child draws, the class guesses.'], ['🔢', 'Buzz: count round the class, say buzz on every 5.'], ['🦘', 'Heads down thumbs up.'], ['📖', 'Story chain: each child adds one sentence.'], ['🎵', 'Freeze dance: freeze when the music stops.'], ['❓', 'Twenty questions: guess what the teacher is thinking of.']];
+const COVER_GAMES = [['🙊', 'Silent ball: pass a soft ball in silence. Talk or drop it and you sit down.'], ['🗣️', 'Simon says, with a twist: act like animals.'], ['🔤', 'Alphabet hunt: name something in the room for each letter.'], ['🧠', 'Kim\'s game: 10 things on a tray, cover them, remove one.'], ['🎨', 'Draw and guess: one child draws, the class guesses.'], ['🔢', 'Buzz: count round the class and say buzz instead of any number in the 5 times table.'], ['🦘', 'Heads down thumbs up.'], ['📖', 'Story chain: each child adds one sentence.'], ['🎵', 'Freeze dance: freeze when the music stops.'], ['❓', 'Twenty questions: guess what the teacher is thinking of.']];
 
 function makeCoverKit(o, paper) {
   const rand = rng(+o.seed || 1);
