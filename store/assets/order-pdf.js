@@ -4,7 +4,12 @@ import { renderFullMagazine, renderCardSet } from './covers.js';
 
 const LIB = 'https://cdn.jsdelivr.net/npm/modern-screenshot@4.6.0/+esm';
 const WIDTH = 794;      // A4 width in CSS pixels
-const SCALE = 3;        // about 290 dpi, sharp enough for print
+// About 290 dpi on computers. Phones have far less memory for pictures, so
+// they use a little less (about 240 dpi, still sharp in print).
+const SCALE = matchMedia('(pointer: coarse)').matches ? 2.5 : 3;
+
+// Older phones lack crypto.randomUUID, so make the same kind of id by hand.
+const newId = () => crypto.randomUUID ? crypto.randomUUID() : '10000000-1000-4000-8000-100000000000'.replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));
 
 async function upload(id, n, blob, tries = 3) {
   for (let i = 1; ; i++) {
@@ -21,7 +26,7 @@ async function upload(id, n, blob, tries = 3) {
 
 export async function renderAndUpload({ mag, values, opts, cards = false, onProgress = () => {} }) {
   const { domToBlob } = await import(LIB);
-  const id = crypto.randomUUID();
+  const id = newId();
   const pages = [...renderFullMagazine(mag, values, opts), ...(cards ? renderCardSet(mag, values, opts) : [])];
   const host = document.createElement('div');
   host.setAttribute('aria-hidden', 'true');

@@ -201,12 +201,24 @@ $('#fields').addEventListener('change', async e => {
   const id = e.target.dataset.photo;
   if (!id || !e.target.files[0]) return;
   const input = e.target;
-  const { blob, dataUrl } = await shrink(input.files[0]);
-  state.photos[id] = dataUrl;
-  const dt = new DataTransfer();
-  dt.items.add(new File([blob], `${id}.jpg`, { type: 'image/jpeg' }));
-  input.files = dt.files;
   const drop = input.closest('.photo-drop');
+  let shrunk;
+  try { shrunk = await shrink(input.files[0]); } catch {
+    // Some phones save photos in a format browsers cannot open (like HEIC).
+    input.value = '';
+    drop.querySelector('.photo-err')?.remove();
+    drop.insertAdjacentHTML('beforeend', '<small class="photo-err">That photo would not open. Try a JPG or PNG.</small>');
+    return;
+  }
+  drop.querySelector('.photo-err')?.remove();
+  const { blob, dataUrl } = shrunk;
+  state.photos[id] = dataUrl;
+  // Swap in the smaller photo for upload where the browser allows it.
+  try {
+    const dt = new DataTransfer();
+    dt.items.add(new File([blob], `${id}.jpg`, { type: 'image/jpeg' }));
+    input.files = dt.files;
+  } catch {}
   drop.querySelector('img')?.remove();
   drop.insertAdjacentHTML('afterbegin', `<img src="${dataUrl}" alt="">`);
   state.tab = id === 'photo1' ? 0 : 3;
@@ -315,6 +327,7 @@ $('#see-all')?.addEventListener('click', () => {
   const extra = form.tier.value === 'cards' ? renderCardSet(m, state.values, opts) : [];
   allPages.querySelector('.all-grid').innerHTML = [...pages, ...extra].map((p, i) =>
     `<figure class="all-page"><div class="all-sheet">${p}<span class="watermark" aria-hidden="true">Preview</span></div><figcaption>${i === 0 ? 'Cover' : i < pages.length ? `Page ${i + 1}` : `Card set ${i - pages.length + 1}`}</figcaption></figure>`).join('');
-  allPages.showModal();
+  // Very old phones have no pop-up windows built in, so just show it in place.
+  if (allPages.showModal) allPages.showModal(); else allPages.setAttribute('open', '');
 });
-allPages?.addEventListener('click', e => { if (e.target === allPages || e.target.closest('[data-close]')) allPages.close(); });
+allPages?.addEventListener('click', e => { if (e.target === allPages || e.target.closest('[data-close]')) allPages.close ? allPages.close() : allPages.removeAttribute('open'); });
