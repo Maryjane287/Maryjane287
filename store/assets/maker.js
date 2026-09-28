@@ -46,6 +46,7 @@ function choose(slug) {
   renderPalette();
   renderDesigns();
   renderFields();
+  checkNotes(true);
   renderTabs();
   update();
 }
@@ -98,10 +99,83 @@ function renderFields() {
     const common = `name="q_${f.id}" data-f="${f.id}" maxlength="${f.max || 200}" placeholder="${esc(f.example)}" required`;
     const input = f.type === 'textarea' ? `<textarea ${common}>${val}</textarea>` : `<input type="text" ${common} value="${val}">`;
     return `<label class="field${f.type === 'textarea' || (f.max || 0) > 60 ? ' wide' : ''}"><span>${esc(f.label)}</span>${input}${f.type === 'textarea' ? `<small class="count" data-count="${f.id}"></small>` : ''}</label>`;
-  }).join('') + funPages(m) + `<fieldset class="friend-notes wide"><legend>Little notes from family and friends <small>(optional)</small></legend><p class="small">Ask a few people who love them for one sweet line each. They all appear together on a special page in the magazine, each one signed with their name.</p>${[1, 2, 3, 4].map(i => `<div class="friend-note"><input type="text" data-f="note${i}_from" maxlength="30" placeholder="${['Grandma', 'Uncle Sam', 'Emma', 'Leo'][i - 1]}" aria-label="Note ${i}: who it is from" value="${esc(state.values[`note${i}_from`] || '')}"><input type="text" data-f="note${i}_msg" maxlength="110" placeholder="${['You make every room brighter.', 'Still the best dancer I know!', 'Here is to many more adventures together.', 'Love you to the moon and back.'][i - 1]}" aria-label="Note ${i}: their message" value="${esc(state.values[`note${i}_msg`] || '')}"></div>`).join('')}</fieldset><div class="photos">${photos.map(f => `
+  }).join('') + funPages(m) + `<fieldset class="friend-notes wide"><legend>Little notes from family and friends <small>(optional)</small></legend><p class="small">Ask a few people who love them for one sweet line each. They all appear together on a special page in the magazine, each one signed with their name.</p>${familyInvite()}${[1, 2, 3, 4].map(i => `<div class="friend-note"><input type="text" data-f="note${i}_from" maxlength="30" placeholder="${['Grandma', 'Uncle Sam', 'Emma', 'Leo'][i - 1]}" aria-label="Note ${i}: who it is from" value="${esc(state.values[`note${i}_from`] || '')}"><input type="text" data-f="note${i}_msg" maxlength="110" placeholder="${['You make every room brighter.', 'Still the best dancer I know!', 'Here is to many more adventures together.', 'Love you to the moon and back.'][i - 1]}" aria-label="Note ${i}: their message" value="${esc(state.values[`note${i}_msg`] || '')}"></div>`).join('')}</fieldset><div class="photos">${photos.map(f => `
     <label class="photo-drop"><span><b>+</b>${esc(f.label)}</span><input type="file" name="${f.id}" data-photo="${f.id}" accept="image/*"></label>`).join('')}</div>`;
   updateCounts();
 }
+
+// Family notes: a private link the buyer sends on WhatsApp or by email. Each
+// person writes their own line from their phone, and it drops into a free
+// note space above. Nobody without the link can see or add notes.
+function familyInvite() {
+  const board = state.values.notesBoard;
+  return `<div class="fam-invite"><p class="fam-head"><b>Let them write it themselves</b>Send a link to Grandma, an aunt or a friend. They type their note on their own phone and it appears here, signed with their name.</p>${board
+    ? `<div class="fam-link"><input type="text" readonly value="${esc(inviteLink())}" aria-label="Link for family"><button type="button" class="btn btn-small" data-fam="copy">Copy link</button><a class="btn btn-small btn-ghost" data-fam="wa" href="${esc(waLink())}" target="_blank" rel="noopener">Send on WhatsApp</a></div><p class="fam-status" id="fam-status" aria-live="polite">Waiting for notes. They drop into an empty space below as they arrive.</p><button type="button" class="link-btn" data-fam="check">Check for new notes</button>`
+    : '<button type="button" class="btn btn-small" data-fam="make">Get a link for family</button>'}</div>`;
+}
+const whoFor = () => { const m = mag(); return String(state.values[m.fields[0].id] || '').trim() || 'someone special'; };
+function inviteLink() {
+  const q = new URLSearchParams({ b: state.values.notesBoard, w: whoFor(), f: String(state.values.from || state.values.fromWho || '').trim(), m: mag().title });
+  return `${location.origin}/note/?${q}`;
+}
+const waLink = () => `https://wa.me/?text=${encodeURIComponent(`We're making a magazine for ${whoFor()} and it wouldn't be complete without you. Could you write one little line for them? It only takes a minute: ${inviteLink()}`)}`;
+function newBoard() {
+  const a = new Uint8Array(12);
+  (window.crypto || window.msCrypto).getRandomValues(a);
+  return Array.from(a, x => x.toString(36).padStart(2, '0')).join('').slice(0, 24);
+}
+var famBusy = false;
+async function checkNotes(quiet) {
+  const board = state.values.notesBoard;
+  const status = $('#fam-status');
+  if (!board || famBusy) return;
+  famBusy = true;
+  try {
+    const { notes = [] } = await (await fetch(`/api/notes?b=${board}`)).json();
+    const used = new Set(state.values.notesUsed || []);
+    let added = 0;
+    for (const n of notes.filter(n => !used.has(n.id))) {
+      const i = [1, 2, 3, 4].find(k => !String(state.values[`note${k}_msg`] || '').trim());
+      if (!i) break;
+      state.values[`note${i}_from`] = n.from; state.values[`note${i}_msg`] = n.msg;
+      const a = $(`[data-f="note${i}_from"]`), b = $(`[data-f="note${i}_msg"]`);
+      if (a) a.value = n.from; if (b) b.value = n.msg;
+      used.add(n.id); added++;
+    }
+    state.values.notesUsed = [...used];
+    store.set(`maker:${state.slug}`, state.values);
+    const waiting = notes.filter(n => !used.has(n.id)).length;
+    if (status) status.textContent = !notes.length
+      ? (quiet ? 'Waiting for notes. They drop into an empty space below as they arrive.' : 'No notes yet. Once someone writes one, it appears here.')
+      : `${notes.length} ${notes.length === 1 ? 'note has' : 'notes have'} arrived, from ${notes.map(n => n.from).join(', ')}.${added ? ` ${added} just added below.` : ''}${waiting ? ` ${waiting} more ${waiting === 1 ? 'is' : 'are'} waiting: clear a space below and tap Check for new notes.` : ''}`;
+  } catch { if (status && !quiet) status.textContent = 'Could not check just now. Please try again in a moment.'; }
+  famBusy = false;
+}
+$('#fields').addEventListener('click', async e => {
+  const b = e.target.closest('[data-fam]');
+  if (!b) return;
+  const act = b.dataset.fam;
+  if (act === 'make') {
+    state.values.notesBoard = newBoard();
+    store.set(`maker:${state.slug}`, state.values);
+    b.closest('.fam-invite').outerHTML = familyInvite();
+  } else if (act === 'copy') {
+    const input = b.parentElement.querySelector('input');
+    try { await navigator.clipboard.writeText(input.value); b.textContent = 'Copied'; } catch { input.select(); document.execCommand && document.execCommand('copy'); b.textContent = 'Copied'; }
+    setTimeout(() => { b.textContent = 'Copy link'; }, 2000);
+  } else if (act === 'check') checkNotes(false);
+});
+// The link carries the names, so refresh it when those answers change.
+function refreshInvite() {
+  const box = $('.fam-invite');
+  if (!box || !state.values.notesBoard) return;
+  const input = box.querySelector('input'), wa = box.querySelector('[data-fam="wa"]');
+  if (input) input.value = inviteLink();
+  if (wa) wa.href = waLink();
+}
+// Pick up new notes whenever the buyer comes back to the page.
+document.addEventListener('visibilitychange', () => { if (!document.hidden) checkNotes(true); });
+setInterval(() => { if (!document.hidden) checkNotes(true); }, 60000);
 
 function renderTabs() {
   const labels = ['Cover', 'Page 2', 'Page 3', 'Page 4'];
@@ -186,6 +260,7 @@ $('#fields').addEventListener('input', e => {
   state.values[f] = e.target.value;
   store.set(`maker:${state.slug}`, state.values);
   updateCounts();
+  refreshInvite();
   update();
 });
 

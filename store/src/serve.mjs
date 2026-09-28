@@ -5,6 +5,7 @@ import { readFile } from 'node:fs/promises';
 import { extname, normalize } from 'node:path';
 import { addReview, listReviews, canReview } from '../netlify/lib/reviews.mjs';
 import { saveOrderInfo } from '../netlify/lib/mail.mjs';
+import { addNote, listNotes } from '../netlify/lib/notes.mjs';
 import { savePage, buildPdf, getFile, createCheckout, markKind, orderStatus, isLocked, handleLemonSqueezy, verifyLemonSqueezy } from '../netlify/lib/orders.mjs';
 
 // In-memory stand-in for Netlify Blobs, so /api/* works locally too.
@@ -21,6 +22,7 @@ const memStore = () => {
 };
 const store = memStore();
 const reviews = memStore();
+const notes = memStore();
 const site = JSON.parse(await readFile(new URL('../data/site.json', import.meta.url), 'utf8'));
 const body = req => new Promise(ok => { const c = []; req.on('data', d => c.push(d)); req.on('end', () => ok(Buffer.concat(c))); });
 const send = (res, status, data, type = 'application/json') => { res.writeHead(status, { 'content-type': type }); res.end(type === 'application/json' ? JSON.stringify(data) : data); };
@@ -45,6 +47,10 @@ async function api(req, res, url) {
       if (req.method === 'GET') return send(res, 200, await listReviews(reviews, { mag: url.searchParams.get('mag') || '' }));
       await addReview(store, reviews, JSON.parse(await body(req)));
       return send(res, 200, { ok: true });
+    }
+    if (url.pathname === '/api/notes') {
+      if (req.method === 'GET') return send(res, 200, { notes: await listNotes(notes, url.searchParams.get('b')) });
+      return send(res, 200, await addNote(notes, JSON.parse(await body(req))));
     }
     if (url.pathname === '/api/reviews/photo') {
       const buf = await reviews.get(`photo/${url.searchParams.get('p')}`);
