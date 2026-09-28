@@ -12,7 +12,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '54'
+VERSION = '55'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -3126,7 +3126,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'This is part of the teacher plan: $59 a year for your whole class, with every class pack included. Try it free for 7 days, no card needed.')],
     },
     {
-        'id': 'classbirthday', 'cat': 'packs', 'slug': 'class-birthday-kit', 'tint': '#fff0f5', 'icon': '🎂', 'new': True, 'plus': True, 'teacher': True,
+        'id': 'classbirthday', 'cat': 'packs', 'slug': 'class-birthday-kit', 'tint': '#fff0f5', 'icon': '🎂', 'plus': True, 'teacher': True,
         'nav': 'Class Birthday Kit',
         'title': 'Class Birthday Kit for Teachers | Named Birthday Crowns, Cards and Certificates for Every Child | PrintPals Teacher',
         'desc': 'Celebrate every birthday in your class all year: a named birthday crown, a card from the class and a birthday certificate for every child, a birthday balloon display and birthday star badges.',
@@ -3138,7 +3138,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'This is part of the teacher plan: $59 a year for your whole class, with every class pack included. Try it free for 7 days, no card needed.')],
     },
     {
-        'id': 'classrewards', 'cat': 'packs', 'slug': 'class-reward-system', 'tint': '#fff6e0', 'icon': '⭐', 'new': True, 'plus': True, 'teacher': True,
+        'id': 'classrewards', 'cat': 'packs', 'slug': 'class-reward-system', 'tint': '#fff6e0', 'icon': '⭐', 'plus': True, 'teacher': True,
         'nav': 'Class Reward System',
         'title': 'Classroom Reward System | Named Sticker Charts, Team Points, Reward Coupons, Star of the Week | PrintPals Teacher',
         'desc': 'A complete positive behaviour system for your class: a named sticker chart for every child, four class teams with a points chart, reward coupons, a golden time tracker and a Star of the Week display.',
@@ -3150,7 +3150,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'This is part of the teacher plan: $59 a year for your whole class, with every class pack included. Try it free for 7 days, no card needed.')],
     },
     {
-        'id': 'movingup', 'cat': 'packs', 'slug': 'moving-up-transition-kit', 'tint': '#e8f8f4', 'icon': '🎒', 'new': True, 'plus': True, 'teacher': True,
+        'id': 'movingup', 'cat': 'packs', 'slug': 'moving-up-transition-kit', 'tint': '#e8f8f4', 'icon': '🎒', 'plus': True, 'teacher': True,
         'nav': 'Moving Up Kit',
         'title': 'Moving Up Day Transition Kit for Teachers | All About Me for My New Teacher, Handover Notes | PrintPals Teacher',
         'desc': 'Everything for moving up to a new class: an All about me for my new teacher page for every child, handover notes per child, a class summary for next year, worries and wishes, a welcome letter and a Ready to Move Up certificate for every child.',
@@ -3162,7 +3162,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'This is part of the teacher plan: $59 a year for your whole class, with every class pack included. Try it free for 7 days, no card needed.')],
     },
     {
-        'id': 'classspecial', 'cat': 'packs', 'slug': 'class-mothers-day-fathers-day-cards', 'tint': '#fff0f0', 'icon': '💐', 'new': True, 'plus': True, 'teacher': True,
+        'id': 'classspecial', 'cat': 'packs', 'slug': 'class-mothers-day-fathers-day-cards', 'tint': '#fff0f0', 'icon': '💐', 'plus': True, 'teacher': True,
         'nav': 'Class Special Person Cards',
         'title': "Mother's Day and Father's Day Class Kit | A Card and Mini Book for Every Child | PrintPals Teacher",
         'desc': "Mother's Day, Father's Day or Grandparents' Day for the whole class: a named card each child makes with their name inside, a mini gift book about their special person and a class checklist so every family gets their gift.",
@@ -3173,12 +3173,60 @@ TOOLS += [
         'article': '<h2>Thoughtful for every family</h2><p>Families look different, so you can type any word: Mum, Dad, Grandma, Nana, Auntie or Special Person. Print a few different versions so every child makes a card for someone they love.</p>',
         'faq': [('Is this part of PrintPals Plus?', 'This is part of the teacher plan: $59 a year for your whole class, with every class pack included. Try it free for 7 days, no card needed.')],
     },
+    {
+        'id': 'autumnkit', 'cat': 'packs', 'slug': 'autumn-activity-pack-for-kids', 'tint': '#fff4e6', 'icon': '🍂', 'new': True, 'plus': True,
+        'nav': 'Autumn Explorer kit',
+        'title': 'Autumn Activities for Kids | Nature Hunt, Busy Autumn Colouring Scenes, Pumpkin Maths | PrintPals Plus',
+        'desc': 'A personalised autumn pack for October and November: an autumn nature hunt, busy autumn colouring scenes, a leaf lab, pumpkin maths, conker counting, autumn words, an autumn diary and an Autumn Explorer award.',
+        'h1': 'Autumn Explorer kit',
+        'lead': 'Crunchy leaves and cosy days. An autumn nature hunt for your walks, busy colouring scenes full of falling leaves and friends, a leaf lab for leaf rubbing, pumpkin maths, conker counting, an autumn diary and an Autumn Explorer award.',
+        'card': 'Nature hunt, busy autumn scenes, pumpkin maths and more.',
+        'form': field('Explorer\'s name', '<input type="text" name="name" maxlength="20" placeholder="Mia" autocomplete="off">') + PAPER + SHUFFLE,
+        'article': "<h2>This season's drop</h2><p>Every season brings a new Plus pack. Take the nature hunt on your next walk, collect leaves for the leaf lab and save the colouring scenes for rainy afternoons.</p>",
+        'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'shopkit', 'cat': 'packs', 'slug': 'pretend-play-shop-printables', 'tint': '#f1f8e6', 'icon': '🛒', 'new': True, 'plus': True,
+        'nav': 'Little Shop kit',
+        'title': 'Pretend Play Shop Printables for Kids | Price Tags, Play Money, Shopping Lists, Receipts | PrintPals Plus',
+        'desc': "A personalised pretend shop kit: a shop sign with your child's shop name, 16 price tags, play coins and notes in your currency, shopping lists, receipts, money sums and shopkeeper badges.",
+        'h1': 'Little Shop kit',
+        'lead': 'Open your own little shop at home. A big shop sign with their shop name, sixteen price tags, play money in your own currency, shopping lists, receipts, shop sums and badges. Real maths through pretend play.',
+        'card': 'A pretend shop: price tags, play money, lists and receipts.',
+        'form': field('Shopkeeper\'s name', '<input type="text" name="name" maxlength="20" placeholder="Leo" autocomplete="off">') + field('Shop name (optional)', '<input type="text" name="shop" maxlength="22" placeholder="Corner Shop" autocomplete="off">') + field('Money', seg('currency', [('GBP', '£ Pounds'), ('USD', '$ Dollars'), ('EUR', '€ Euros'), ('NGN', '₦ Naira'), ('CAD', 'C$ Canada'), ('AUD', 'A$ Australia')], 'GBP')) + field('Prices', seg('level', [('easy', 'Easy prices'), ('harder', 'Harder prices')], 'easy')) + PAPER + SHUFFLE,
+        'article': '<h2>Maths they will ask to play</h2><p>Children learn money fastest when they handle it. Stick the price tags on toys or real snacks, fill the till with play money and take turns as shopkeeper and customer.</p>',
+        'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'vetkit', 'cat': 'packs', 'slug': 'pet-vet-pretend-play-kit', 'tint': '#eef6ff', 'icon': '🩺', 'new': True, 'plus': True,
+        'nav': 'Pet Vet Clinic',
+        'title': 'Pet Vet Pretend Play Printables | Vet ID Badge, Patient Cards, Check-up Forms, Prescription Pad | PrintPals Plus',
+        'desc': "A personalised pet vet pretend play kit: a vet ID badge with your child's name, patient cards, check-up forms, a prescription pad, pet care checklist, a busy colouring scene and a Super Vet certificate.",
+        'h1': 'Pet Vet Clinic',
+        'lead': "Dr Mia will see you now! A vet ID badge with your child's name, patient cards for soft toys, check-up forms to tick, a prescription pad, a pet care checklist and a Super Vet certificate. Hours of kind, caring pretend play.",
+        'card': 'Vet ID, patient cards, check-up forms and a prescription pad.',
+        'form': field('Vet\'s name', '<input type="text" name="name" maxlength="20" placeholder="Mia" autocomplete="off">') + PAPER,
+        'article': '<h2>Kindness through play</h2><p>Line up the soft toys in the waiting room. Children practise caring, talking about feelings and even a little writing and science, all while playing vets.</p>',
+        'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
+    {
+        'id': 'roadtrip', 'cat': 'packs', 'slug': 'road-trip-activity-book-for-kids', 'tint': '#fff3ea', 'icon': '🚗', 'new': True, 'plus': True,
+        'nav': 'Road Trip Adventure Book',
+        'title': 'Road Trip Activity Book for Kids | Car Bingo, Journey Map, Travel Games, Travel Diary | PrintPals Plus',
+        'desc': 'A personalised road trip book: two car bingo cards, a journey map, are we there yet? games, a number plate hunt, a maze, a travel diary, a busy colouring scene and a Super Traveller award.',
+        'h1': 'Road Trip Adventure Book',
+        'lead': 'Happy car journeys, even long ones. Two car bingo cards, a journey map to draw, games that need no paper, a number plate hunt, a maze, a travel diary and a Super Traveller award. Clip it to a board and set off!',
+        'card': 'Car bingo, a journey map, games and a travel diary.',
+        'form': field('Traveller\'s name', '<input type="text" name="name" maxlength="20" placeholder="Sam" autocomplete="off">') + field('Going to (optional)', '<input type="text" name="dest" maxlength="22" placeholder="the seaside" autocomplete="off">') + PAPER + SHUFFLE,
+        'article': '<h2>The premium version of our travel sheets</h2><p>Print it the night before, clip it to a clipboard with a pencil on a string, and hand it over when the questions start. Press Make a new set for different bingo cards.</p>',
+        'faq': [('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
+    },
 ]
 
 # The homepage sections, in learning order (easiest first). Every tool appears in exactly one section.
 ARRANGE = [
     ('packs', 'Ready-made packs', 'Packs', 'Stop searching. A week, a month or the whole holiday planned for your child, storybooks and activity books, starting school, quick packs, family far away, a learning passport and class packs.',
-     ['pack', 'tinyhands', 'handmonth', 'phonicsmonth', 'mathsday', 'timesclub', 'timemonth', 'readmonth', 'readadventure', 'spellmonth', 'sciencemonth', 'calmmonth', 'colourmonth', 'puzzlemonth', 'writemonth', 'familymonth', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'journal', 'easter', 'levels', 'poppy', 'handwritingbook', 'phonicsbook', 'readers', 'mathsbook', 'winter', 'lunar', 'kindness', 'grownupbook', 'dinokit', 'spacekit', 'oceankit', 'safari', 'farm', 'detective', 'garden', 'superhero', 'feelingsbook', 'flying', 'adventure', 'familynight', 'cookbook', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack', 'classrewards', 'classbirthday', 'xmascards', 'classadvent', 'xmasshow', 'classcalendar', 'classwelcome', 'readingrecords', 'phonicscheck', 'parentsevening', 'reporthelper', 'movingup', 'classspecial', 'morningwork', 'homeworkmonth', 'classawards', 'coverkit', 'classseason', 'yearbook', 'displays']),
+     ['pack', 'tinyhands', 'handmonth', 'phonicsmonth', 'mathsday', 'timesclub', 'timemonth', 'readmonth', 'readadventure', 'spellmonth', 'sciencemonth', 'calmmonth', 'colourmonth', 'puzzlemonth', 'writemonth', 'familymonth', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'journal', 'easter', 'levels', 'poppy', 'handwritingbook', 'phonicsbook', 'readers', 'mathsbook', 'autumnkit', 'winter', 'lunar', 'kindness', 'grownupbook', 'dinokit', 'spacekit', 'oceankit', 'safari', 'farm', 'shopkit', 'vetkit', 'roadtrip', 'detective', 'garden', 'superhero', 'feelingsbook', 'flying', 'adventure', 'familynight', 'cookbook', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack', 'classrewards', 'classbirthday', 'xmascards', 'classadvent', 'xmasshow', 'classcalendar', 'classwelcome', 'readingrecords', 'phonicscheck', 'parentsevening', 'reporthelper', 'movingup', 'classspecial', 'morningwork', 'homeworkmonth', 'classawards', 'coverkit', 'classseason', 'yearbook', 'displays']),
     ('handwriting', 'Handwriting', 'Handwriting', 'From first pencil lines to joined writing, with real letter shapes and stroke order.',
      ['prewriting', 'scissors', 'names', 'letters', 'mixups', 'joined', 'writingpaper', 'alphabets']),
     ('reading', 'Reading & phonics', 'Reading', 'Letter sounds, CVC words, syllables, sight words, sentences, spelling and stories where your child is the hero.',
@@ -3196,6 +3244,7 @@ ARRANGE = [
 ]
 # Ages each tool suits (first year, last year).
 AGES = {
+    'autumnkit': (3, 9), 'shopkit': (3, 8), 'vetkit': (3, 8), 'roadtrip': (4, 10),
     'classbirthday': (3, 11), 'classrewards': (3, 11), 'movingup': (3, 11), 'classspecial': (3, 11),
     'xmascards': (3, 11), 'classcalendar': (3, 11), 'xmasshow': (3, 9), 'classadvent': (3, 11),
     'readingrecords': (4, 9), 'phonicscheck': (4, 7), 'parentsevening': (3, 11), 'reporthelper': (3, 11),
@@ -3236,6 +3285,7 @@ AGES = {
 }
 # The option that sets how hard a sheet is, ordered easiest first (drives the Easier and Harder buttons).
 LEVELS = {
+    'shopkit': 'level',
     'spellmonth': 'level',
     'timesclub': 'level', 'timemonth': 'level',
     'puzzlemonth': 'level', 'writemonth': 'level', 'morningwork': 'level',
@@ -3272,7 +3322,7 @@ CAT_TEXT = {a[0]: a[3] for a in ARRANGE}
 NAV_LABEL = {a[0]: a[2] for a in ARRANGE}
 
 
-JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'tools21', 'tools22', 'tools23', 'tools24', 'tools25', 'tools26', 'tools27', 'tools28', 'tools29', 'tools30', 'tools31', 'tools32', 'tools33', 'tools34', 'plus', 'app']
+JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'tools21', 'tools22', 'tools23', 'tools24', 'tools25', 'tools26', 'tools27', 'tools28', 'tools29', 'tools30', 'tools31', 'tools32', 'tools33', 'tools34', 'tools35', 'plus', 'app']
 CONTACT = 'graceandloannesofficial@gmail.com'
 # Stripe customer portal: parents manage, switch or cancel their Plus subscription here.
 STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'
@@ -3349,6 +3399,8 @@ EDITIONS = {
     'writemonth': (['storywriting', 'story', 'storydice', 'diary'], 'Writing Month', '16 story prompts with word banks and sentence starters, a best story every Friday and an author certificate.'),
     'timesclub': (['times'], 'Times Tables Club', 'a membership card, a new table each week, Friday speed tests, badges and a champion certificate.'),
     'timemonth': (['clocks', 'clockcraft'], 'Time Month', '4 weeks from o\'clock to five minutes: read the clocks, draw the hands, my day, Friday checks and answers.'),
+    'shopkit': (['money', 'savings'], 'Little Shop kit', 'a pretend shop with price tags, play money in your currency, shopping lists, receipts and shop sums.'),
+    'roadtrip': (['travel'], 'Road Trip Adventure Book', 'two car bingo cards, a journey map, car games, a travel diary and a Super Traveller award.'),
     'phonicsmonth': (['sounds', 'abcorder'], 'Phonics Month', '16 letter sounds in 4 weeks with picture hunts, tracing and blending real words every Friday.'),
     'tinyhands': (['prewriting', 'scissors', 'matching'], 'Tiny Hands Month', 'a month of tracing paths, dot stickers, first snipping, find the same and busy colouring for ages 2 to 3.'),
     'sciencemonth': (['science', 'lifecycle', 'weather'], 'Science Month', '16 easy kitchen experiments with predict and observe pages, Friday reports and a Young Scientist award.'),
@@ -3435,7 +3487,7 @@ ONLY = [
 ]
 
 
-SHOW_FAMILY = ['handmonth', 'mathsday', 'readmonth', 'colourmonth', 'timesclub', 'sciencemonth', 'phonicsmonth', 'dinokit']
+SHOW_FAMILY = ['handmonth', 'mathsday', 'readmonth', 'colourmonth', 'autumnkit', 'shopkit', 'timesclub', 'vetkit']
 SHOW_TEACHER = ['classwelcome', 'xmascards', 'xmasshow', 'classawards', 'readingrecords', 'classrewards', 'parentsevening', 'reporthelper']
 
 
