@@ -10,7 +10,7 @@ export const BOARDS = {
   'Personalised Birthday Gift Ideas': ['birthday-magazine', 'milestone-birthday-magazine', 'star-sign-birthday-magazine', 'kids-magazine'],
   'Anniversary and Valentine Gift Ideas': ['anniversary-magazine', 'valentines-magazine'],
   'Wedding and Engagement Gifts': ['wedding-magazine', 'engagement-magazine'],
-  'Gifts for Grandparents and Family': ['grandparents-newspaper', 'year-in-review-magazine'],
+  'Gifts for Grandparents and Family': ['grandparents-newspaper', 'year-in-review-magazine', 'christmas-magazine'],
   'Gifts for Mum and Dad': ['mothers-day-magazine', 'fathers-day-magazine'],
   'New Baby and First Birthday Gifts': ['new-baby-magazine', 'first-birthday-magazine'],
   'Gifts for Pet Lovers': ['pet-magazine', 'pet-memorial-magazine'],
@@ -20,10 +20,15 @@ export const BOARDS = {
 const boardOf = slug => Object.keys(BOARDS).find(b => BOARDS[b].includes(slug));
 // Christmas and birthday searches first, then everything else.
 const priority = ['year-in-review-magazine', 'grandparents-newspaper', 'birthday-magazine', 'best-friend-magazine', 'mothers-day-magazine', 'fathers-day-magazine', 'kids-magazine', 'pet-magazine', 'anniversary-magazine', 'milestone-birthday-magazine'];
-const ordered = [...mags].sort((a, b) => (priority.indexOf(a.slug) + 1 || 99) - (priority.indexOf(b.slug) + 1 || 99));
+// The Christmas magazine arrived after batch 1 was uploaded, so it is left out
+// of the main order and slotted in below, one Christmas pin a day from batch 2.
+const LATE = ['christmas-magazine'];
+const ordered = mags.filter(m => !LATE.includes(m.slug)).sort((a, b) => (priority.indexOf(a.slug) + 1 || 99) - (priority.indexOf(b.slug) + 1 || 99));
 const queues = ordered.map(mag => designsFor(mag).flatMap(design => designExamples(mag, design).map(ex => ({ mag, design, ex }))));
 const pins = [];
 while (queues.some(q => q.length)) for (const q of queues) if (q.length) pins.push(q.shift());
+const late = mags.filter(m => LATE.includes(m.slug)).flatMap(mag => designsFor(mag).flatMap(design => designExamples(mag, design).map(ex => ({ mag, design, ex }))));
+for (let i = 0; i < late.length; i++) pins.splice(91 + i * 7, 0, late[i]);
 // Pinterest refuses two pins with the same title, so repeats get one of the
 // magazine's search keywords (then the example's name) added to the title.
 const used = new Set();
