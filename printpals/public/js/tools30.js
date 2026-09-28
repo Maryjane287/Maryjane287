@@ -2,7 +2,7 @@
 
 // Lined boxes with a label, used by several monthly pages.
 function linedBox(pg, x, y, w, h, label, c, emo) {
-  pg.add(panel(x, y, w, h, '#fff', c, 9) + (emo ? emoji(emo, x + 9, y + 9, 8) : '') + txt(x + (emo ? 17 : 7), y + 11, label, 6, { anchor: 'start', colour: c }));
+  pg.add(panel(x, y, w, h, '#fff', c, 9) + (emo ? emoji(emo, x + 9, y + 9, 8) : '') + txt(x + (emo ? 17 : 7), y + 11, label, fitFont(label, 6, w - (emo ? 24 : 14), 0.52), { anchor: 'start', colour: c }));
   for (let ly = y + 20; ly < y + h - 4; ly += 9) pg.add(`<line x1="${x + 7}" x2="${x + w - 7}" y1="${ly}" y2="${ly}" stroke="#d9d4ec" stroke-width="0.45"/>`);
 }
 
