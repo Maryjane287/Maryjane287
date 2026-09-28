@@ -43,18 +43,23 @@ function uniqueTitle(p, base) {
 }
 const cell = s => (/[",\r\n]/.test(String(s)) ? `"${String(s).replace(/"/g, '""')}"` : String(s));
 const PER_DAY = 7, HOURS = [7, 10, 13, 15, 18, 20, 22], PER_BATCH = 91;
+// chioma fills Pinterest's 100 scheduled pins on 28 Sep: 62 went through, so the
+// 29 refused pins go with the first 9 non-Christmas pins of batch 2 (Christmas
+// pages go live later, and Pinterest checks the image when it is uploaded).
+const EARLY = 9;
+const early = new Set(pins.map((p, i) => [p, i]).filter(([p, i]) => i >= 91 && !LATE.includes(p.mag.slug)).slice(0, EARLY).map(([, i]) => i));
 const rows = pins.map((p, i) => {
   const base = p.design === baseDesign(p.mag);
   const d = new Date(start + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate() + Math.floor(i / PER_DAY)); d.setUTCHours(HOURS[i % PER_DAY]);
   const title = uniqueTitle(p, base);
   const desc = `${p.mag.short} Answer a few fun questions, add photos, and get a finished 24 page magazine about them. Instant PDF from 5 pounds, or printed and posted worldwide. A one of a kind gift from Cover Story.`.slice(0, 500);
   const file = `${p.mag.slug}-${base ? '' : p.design + '-'}${p.ex.id}.jpg`;
-  return { title, date: d.toISOString().slice(0, 19), csv: [title, `${url}/pins/${file}`, boardOf(p.mag.slug), '', desc, `${url}/${p.mag.slug}/${base ? '' : p.design + '/'}?utm_source=pinterest&utm_content=${file.replace(/\.jpg$/, '')}`, d.toISOString().slice(0, 19), p.mag.keywords.slice(0, 5).join(', ')].map(cell).join(',') };
+  return { i, title, date: d.toISOString().slice(0, 19), csv: [title, `${url}/pins/${file}`, boardOf(p.mag.slug), '', desc, `${url}/${p.mag.slug}/${base ? '' : p.design + '/'}?utm_source=pinterest&utm_content=${file.replace(/\.jpg$/, '')}`, d.toISOString().slice(0, 19), p.mag.keywords.slice(0, 5).join(', ')].map(cell).join(',') };
 });
 await mkdir(out, { recursive: true });
 const head = ['Title', 'Media URL', 'Pinterest board', 'Thumbnail', 'Description', 'Link', 'Publish date', 'Keywords'].join(',');
 for (let b = 0; b * PER_BATCH < rows.length; b++) {
-  const part = rows.slice(b * PER_BATCH, (b + 1) * PER_BATCH);
+  const part = rows.slice(b * PER_BATCH, (b + 1) * PER_BATCH).filter(r => !early.has(r.i));
   await writeFile(`${out}/cover-story-pins-batch-${b + 1}.csv`, '\ufeff' + head + '\r\n' + part.map(r => r.csv).join('\r\n') + '\r\n');
   console.log(`batch ${b + 1}: ${part.length} pins, ${part[0].date} to ${part.at(-1).date}`);
 }
@@ -70,8 +75,8 @@ if (process.env.DONE) {
 // now has its own link (a tag on the end), and this file holds just those 29.
 if (process.env.FAILED) {
   const failed = new Set((await readFile(process.env.FAILED, 'utf8')).split(/\r?\n/).map(x => x.trim().toLowerCase()).filter(Boolean));
-  const retry = rows.slice(0, PER_BATCH).filter(r => failed.has(r.title.toLowerCase()));
-  await writeFile(`${out}/cover-story-pins-batch-1-last-29.csv`, '\ufeff' + head + '\r\n' + retry.map(r => r.csv).join('\r\n') + '\r\n');
+  const retry = [...rows.slice(0, PER_BATCH).filter(r => failed.has(r.title.toLowerCase())), ...rows.filter(r => early.has(r.i))];
+  await writeFile(`${out}/cover-story-pins-batch-1-last-38.csv`, '\ufeff' + head + '\r\n' + retry.map(r => r.csv).join('\r\n') + '\r\n');
   console.log('batch 1 last pins:', retry.length);
 }
 console.log('unique links', new Set(rows.map(r => r.csv.split(',').find(c => c.includes('utm_source')))).size);
