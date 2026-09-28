@@ -106,7 +106,7 @@ const LAYOUTS = {
     return `
       ${photo}
       <div class="cv-top"><span>The birthday issue</span><span>Special collector's edition</span></div>
-      <h2 class="cv-mast cv-anton" style="font-size:${fit(name, 92, 0.46, 40)}cqw">${esc(name)}</h2>
+      <h2 class="cv-mast cv-anton" style="font-size:calc(${fit(name, 92, 0.46, 40)} * var(--cq))">${esc(name)}</h2>
       <div class="cv-lines">
         <p><b class="cv-tag">Exclusive</b>${esc(v.name)} on turning ${esc(v.age)} and looking this good</p>
         <p><b>Secret talent</b>${esc(v.talent)}</p>
@@ -148,7 +148,7 @@ const LAYOUTS = {
     const mast = `${v.name.toUpperCase()}`;
     return `
       <div class="kd-dots" aria-hidden="true"></div>
-      <h2 class="cv-mast kd-mast" style="font-size:${fit(mast, 58, 0.7, 22)}cqw">${esc(mast)}<span>Weekly</span></h2>
+      <h2 class="cv-mast kd-mast" style="font-size:calc(${fit(mast, 58, 0.7, 22)} * var(--cq))">${esc(mast)}<span>Weekly</span></h2>
       ${photo}
       <div class="kd-burst"><small>Age</small>${esc(v.age)}</div>
       <div class="kd-lines">
@@ -176,7 +176,7 @@ const LAYOUTS = {
     return `
       ${photo}
       <div class="cv-top"><span>The pet issue</span><span>Most wanted edition</span></div>
-      <h2 class="cv-mast cv-anton pt-mast" style="font-size:${fit(name, 92, 0.46, 38)}cqw">${esc(name)}</h2>
+      <h2 class="cv-mast cv-anton pt-mast" style="font-size:calc(${fit(name, 92, 0.46, 38)} * var(--cq))">${esc(name)}</h2>
       <div class="pt-paws" aria-hidden="true"><i></i><i></i><i></i></div>
       <div class="cv-lines pt-lines">
         <p><b>Secret talent</b>${esc(v.talent)}</p>
@@ -192,7 +192,7 @@ const LAYOUTS = {
       <div class="st-sky" aria-hidden="true"></div>
       <div class="st-moon" aria-hidden="true"></div>
       <div class="cv-top"><span>The birthday stars issue</span><span>Cosmic edition</span></div>
-      <h2 class="cv-mast st-mast" style="font-size:${fit(sign, 90, 0.8, 26)}cqw">${esc(sign)}<em>season</em></h2>
+      <h2 class="cv-mast st-mast" style="font-size:calc(${fit(sign, 90, 0.8, 26)} * var(--cq))">${esc(sign)}<em>season</em></h2>
       ${photo}
       <div class="st-lines">
         <p><b>Lucky crystal</b>${esc(v.crystal)}</p>
@@ -248,36 +248,36 @@ const DESIGN_LAYOUTS = {
     return `
       ${photo}
       <div class="cv-top"><span>${s.issue}</span><span>${s.edition}</span></div>
-      <h2 class="cv-mast cv-anton" style="font-size:${fit(s.raw, 90, 0.52, 40)}cqw">${s.up}</h2>
+      <h2 class="cv-mast cv-anton" style="font-size:calc(${fit(s.raw, 90, 0.52, 40)} * var(--cq))">${s.up}</h2>
       <div class="cv-lines">${s.lines.map(([l, t], i) => `<p><b${i ? '' : ' class="cv-tag"'}>${l}</b>${t}</p>`).join('')}</div>
-      <div class="cv-sticker" style="font-size:${fit(s.big, 20, 0.5, 10)}cqw"><small>${s.badge[0]}</small>${s.badge[1]}<small>${s.badge[2]}</small></div>
+      <div class="cv-sticker" style="font-size:calc(${fit(s.big, 20, 0.5, 10)} * var(--cq))"><small>${s.badge[0]}</small>${s.badge[1]}<small>${s.badge[2]}</small></div>
       <div class="cv-bottom"><p>&ldquo;${s.quote}&rdquo;<span>${s.credit}</span></p>${barcode()}</div>`;
   },
   fashion(s, photo) {
     return `
       ${photo}
       <div class="fs-top">${s.issue} &middot; ${s.edition}</div>
-      <h2 class="fs-mast" style="font-size:${fit(s.raw, 94, 0.8, 30)}cqw">${s.up}</h2>
+      <h2 class="fs-mast" style="font-size:calc(${fit(s.raw, 94, 0.8, 30)} * var(--cq))">${s.up}</h2>
       <div class="fs-left">${s.lines.slice(0, 2).map(([l, t]) => `<p><b>${l}</b>${t}</p>`).join('')}</div>
-      <div class="fs-right"><p class="fs-num" style="font-size:${fit(s.big, 30, 0.62, 16)}cqw">${s.badge[1]}</p><small>${s.badge[0]} ${s.badge[2]}</small><p><b>${s.lines[2][0]}</b>${s.lines[2][1]}</p></div>
+      <div class="fs-right"><p class="fs-num" style="font-size:calc(${fit(s.big, 30, 0.62, 16)} * var(--cq))">${s.badge[1]}</p><small>${s.badge[0]} ${s.badge[2]}</small><p><b>${s.lines[2][0]}</b>${s.lines[2][1]}</p></div>
       <div class="fs-quote"><em>&ldquo;${s.quote}&rdquo;</em><span>${s.credit}</span></div>`;
   },
   retro(s, photo) {
     return `
       <div class="rt-rays" aria-hidden="true"></div>
       <div class="rt-top"><span>${s.issue}</span><span>${s.edition}</span></div>
-      <h2 class="rt-mast" style="font-size:${fit(s.raw, 90, 0.6, 22)}cqw">${s.mast}</h2>
+      <h2 class="rt-mast" style="font-size:calc(${fit(s.raw, 90, 0.6, 22)} * var(--cq))">${s.mast}</h2>
       <div class="rt-arch">${photo}</div>
       <div class="rt-stripes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
       <div class="rt-lines">${s.lines.map(([l, t]) => `<p><b>${l}</b>${t}</p>`).join('')}</div>
-      <div class="rt-flower"><span style="font-size:${fit(s.big, 18, 0.62, 9)}cqw"><small>${s.badge[0]}</small>${s.badge[1]}<small>${s.badge[2]}</small></span></div>
+      <div class="rt-flower"><span style="font-size:calc(${fit(s.big, 18, 0.62, 9)} * var(--cq))"><small>${s.badge[0]}</small>${s.badge[1]}<small>${s.badge[2]}</small></span></div>
       <div class="rt-quote">&ldquo;${s.quote}&rdquo;</div>`;
   },
   scrapbook(s, photo) {
     return `
       <div class="sb-paper" aria-hidden="true"></div>
       <div class="sb-top">${s.issue}</div>
-      <h2 class="sb-mast" style="font-size:${fit(s.raw, 86, 0.42, 26)}cqw">${s.mast}</h2>
+      <h2 class="sb-mast" style="font-size:calc(${fit(s.raw, 86, 0.42, 26)} * var(--cq))">${s.mast}</h2>
       <div class="sb-polaroid"><i class="sb-tape"></i><i class="sb-tape sb-tape2"></i>${photo}<span>${s.edition}</span></div>
       <div class="sb-notes">${s.lines.map(([l, t]) => `<p><b>${l}</b>${t}</p>`).join('')}</div>
       <div class="sb-sticker"><small>${s.badge[0]}</small>${s.badge[1]}<small>${s.badge[2]}</small></div>
@@ -288,16 +288,16 @@ const DESIGN_LAYOUTS = {
     return `
       <div class="mn-top"><span>${s.issue}</span><span>No. ${s.badge[1]}</span></div>
       <div class="mn-frame">${photo}</div>
-      <h2 class="mn-mast" style="font-size:${fit(s.raw, 88, 0.6, 22)}cqw">${s.mast}</h2>
+      <h2 class="mn-mast" style="font-size:calc(${fit(s.raw, 88, 0.6, 22)} * var(--cq))">${s.mast}</h2>
       <ol class="mn-lines">${s.lines.map(([l, t], i) => `<li><i>0${i + 1}</i><b>${l}</b>${t}</li>`).join('')}</ol>
       <div class="mn-foot"><span>${s.edition}</span><span>&ldquo;${s.quote}&rdquo;</span></div>`;
   },
   comic(s, photo) {
     return `
       <div class="cm-dots" aria-hidden="true"></div>
-      <div class="cm-box"><small>No.</small><span style="font-size:${fit(s.big, 12, 0.5, 7)}cqw">${s.badge[1]}</span></div>
+      <div class="cm-box"><small>No.</small><span style="font-size:calc(${fit(s.big, 12, 0.5, 7)} * var(--cq))">${s.badge[1]}</span></div>
       <div class="cm-top">${s.issue}</div>
-      <h2 class="cm-mast" style="font-size:${fit(s.raw, 72, 0.5, 26)}cqw">${s.up}</h2>
+      <h2 class="cm-mast" style="font-size:calc(${fit(s.raw, 72, 0.5, 26)} * var(--cq))">${s.up}</h2>
       <div class="cm-panel">${photo}</div>
       <div class="cm-bubble">${s.quote}!</div>
       <div class="cm-pow"><span>Wow!</span></div>
@@ -490,19 +490,19 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
       ? page('quote', `<p class="pg-kicker">In a word</p><p class="big-quote">&ldquo;${s.quote || esc(v.words || who)}&rdquo;</p><p class="pg-sign">${s.credit}</p>`, 8)
       : `<div class="pg pg-ad" ${style}><div class="ad-glow"></div><p class="ad-kicker">The new fragrance</p><div class="ad-bottle"><i class="ad-cap"></i><b class="ad-glass"><span>${esc(String(who).toUpperCase())}</span><small>Eau de parfum</small></b></div><h3 class="ad-name">Eau de ${esc(who)}</h3><p class="ad-line">&ldquo;${s.quote || esc(v.words || '')}&rdquo;</p><p class="ad-notes">${notes}</p><p class="ad-foot">Available nowhere. Absolutely priceless.</p><span class="pg-num">8</span></div>`,
     `<div class="pg pg-feature" ${style}><div class="pg-in"><p class="pg-kicker">${esc(feature[0])}</p><blockquote>&ldquo;${esc(feature[1])}&rdquo;</blockquote><p class="pg-sign">About ${esc(who)}, with love</p></div><span class="pg-num">9</span></div>`,
-    `<div class="pg pg-news" ${style}><div class="pg-in"><div class="nw-mast"><span>Special edition</span><b style="font-size:${fit(paper, 48, 0.52, 9)}cqw">${esc(paper)}</b><span>Priceless</span></div><p class="nw-date">${gentle ? 'Remembering, with love' : 'Extra! Extra! Read all about it'}</p><h3 class="nw-head" style="font-size:${fit(headline, 84, 0.5, 9.6)}cqw">${esc(headline)}</h3><div class="nw-grid">${ph('photo2', 'nw-photo')}<div class="nw-lead${String(feature[1] || '').length > 150 ? ' nw-long' : ''}"><p class="nw-by">By ${esc(from)}</p><p>${esc(feature[1])}</p></div></div><div class="nw-briefs">${briefs.map(([l, x]) => `<div><b>${esc(l)}</b><p>${esc(x)}</p></div>`).join('')}</div><p class="nw-weather">${gentle ? 'Forecast: warm memories, all day long' : 'Weather: 100% chance of hugs'}</p></div><span class="pg-num">10</span></div>`,
+    `<div class="pg pg-news" ${style}><div class="pg-in"><div class="nw-mast"><span>Special edition</span><b style="font-size:calc(${fit(paper, 48, 0.52, 9)} * var(--cq))">${esc(paper)}</b><span>Priceless</span></div><p class="nw-date">${gentle ? 'Remembering, with love' : 'Extra! Extra! Read all about it'}</p><h3 class="nw-head" style="font-size:calc(${fit(headline, 84, 0.5, 9.6)} * var(--cq))">${esc(headline)}</h3><div class="nw-grid">${ph('photo2', 'nw-photo')}<div class="nw-lead${String(feature[1] || '').length > 150 ? ' nw-long' : ''}"><p class="nw-by">By ${esc(from)}</p><p>${esc(feature[1])}</p></div></div><div class="nw-briefs">${briefs.map(([l, x]) => `<div><b>${esc(l)}</b><p>${esc(x)}</p></div>`).join('')}</div><p class="nw-weather">${gentle ? 'Forecast: warm memories, all day long' : 'Weather: 100% chance of hugs'}</p></div><span class="pg-num">10</span></div>`,
     page('reasons', `<p class="pg-kicker">The list</p><h3>Ten reasons we love ${esc(who)}</h3><ol class="reasons">${reasons.map(r => `<li>${r}</li>`).join('')}</ol>`, 11),
     page('collage', `<p class="pg-kicker">The scrapbook</p>${ph('photo1', 'cl cl1')}${ph('photo2', 'cl cl2')}${ph('photo3', 'cl cl3')}<p class="cl-cap">${esc(v.words || s.quote || '')}</p>`, 12),
     page('recipe', `<div class="rc"><p class="pg-kicker">From the family kitchen</p><h3>The recipe for ${esc(who)}</h3><p class="rc-serves">Serves: everyone lucky enough to know them &middot; Prep time: a lifetime</p><div class="rc-cols"><div><p class="rc-sub">Ingredients</p><ul>${ingredients.map(([a, x]) => `<li><i>${a}</i>${esc(x)}</li>`).join('')}</ul></div><div><p class="rc-sub">Method</p><ol>${method.map(x => `<li>${x}</li>`).join('')}</ol></div></div><p class="rc-tip">Chef's tip: there is only one ${esc(who)}. This recipe cannot be copied.</p></div>`, 13),
     page('quiz', `<p class="pg-kicker">Test yourself</p><h3>${gentle ? `How well did you know ${esc(who)}?` : `How well do you know ${esc(who)}?`}</h3>${quiz.map(q => `<div class="qz"><p class="qz-q"><b>${q.n}</b>${esc(q.q)}</p><ul>${q.opts.map((o, i) => `<li><i>${'ABC'[i]}</i>${esc(o)}</li>`).join('')}</ul></div>`).join('')}<p class="qz-key">Answers: ${quiz.map(q => `${q.n}${q.a}`).join(' &middot; ')}</p>`, 14),
     page('puzzle', `<p class="pg-kicker">Puzzle page</p><h3>Find the words</h3>${gridHtml(false)}<ul class="ws-words">${ws.placed.map(x => `<li>${x.w}</li>`).join('')}</ul>`, 15),
-    `<div class="pg pg-poster" ${style}>${ph('photo1', 'po-photo')}<div class="po-name" style="font-size:${fit(String(who).toUpperCase(), 88, 0.5, 30)}cqw">${esc(String(who).toUpperCase())}</div><div class="po-badge"><small>${s.badge[0]}</small>${s.badge[1]}<small>${s.badge[2]}</small></div><span class="pg-num">16</span></div>`,
+    `<div class="pg pg-poster" ${style}>${ph('photo1', 'po-photo')}<div class="po-name" style="font-size:calc(${fit(String(who).toUpperCase(), 88, 0.5, 30)} * var(--cq))">${esc(String(who).toUpperCase())}</div><div class="po-badge"><small>${s.badge[0]}</small>${s.badge[1]}<small>${s.badge[2]}</small></div><span class="pg-num">16</span></div>`,
     page('awards', `<p class="pg-kicker">Live from the red carpet</p><h3>The ${esc(first)} Awards</h3><div class="aw">${awards.map(([t, n]) => `<div class="aw-item"><svg class="aw-cup" viewBox="0 0 24 24" aria-hidden="true"><path fill="#f3d67a" d="M7 3h10v2h3a1 1 0 0 1 1 1c0 3.2-2 5.6-4.8 6A5 5 0 0 1 13 14.9V18h3v3H8v-3h3v-3.1A5 5 0 0 1 7.8 12C5 11.6 3 9.2 3 6a1 1 0 0 1 1-1h3V3zm10 4v3.8c1.3-.5 2.1-1.8 2.3-3.8H17zM7 7H4.7c.2 2 1 3.3 2.3 3.8V7z"/></svg><p class="aw-cat">${t}</p><p class="aw-win">Winner: ${esc(who)}</p><p class="aw-note">${n}</p></div>`).join('')}</div><p class="aw-foot">The envelope, please. It was never in doubt.</p>`, 17),
     page('cert', `<div class="cert"><p class="pg-kicker">Official certificate</p><p class="cert-small">This certifies that</p><p class="cert-name">${esc(who)}</p><p class="cert-small">is officially, undeniably and forever</p><p class="cert-title">${s.quote || 'Iconic'}</p><div class="cert-foot"><span>${esc(from)}</span><i class="cert-seal">&#9733;</i><span>${esc(mag.title)}</span></div></div>`, 18),
     page('vouchers', `<p class="pg-kicker">${gentle ? 'Favourite things' : 'Cut out and keep'}</p><h3>${gentle ? 'The little things we will always remember' : `Vouchers for ${esc(who)}`}</h3><div class="vch${gentle ? ' vch-gentle' : ''}">${vPairs.map(([a, b]) => `<div><b>${esc(a)}</b><span>${esc(b)}</span></div>`).join('')}</div>`, 19),
     page('passport', `<p class="pg-kicker">Official documents</p><h3>The ${esc(first)} passport</h3><div class="pp"><div class="pp-head"><span>${gentle ? 'Passport to our hearts' : 'Passport to everywhere fun'}</span><span>No. 001</span></div><div class="pp-body">${ph('photo1', 'pp-photo')}<dl class="pp-data"><dt>Name</dt><dd>${esc(who)}</dd><dt>Nationality</dt><dd>${gentle ? 'Loved, everywhere' : 'Citizen of the world'}</dd><dt>Occupation</dt><dd>${values.x_job ? esc(String(values.x_job).trim()) : s.quote || 'Professional legend'}</dd><dt>Issued by</dt><dd>${esc(from)}</dd><dt>Valid until</dt><dd>Forever</dd></dl></div><div class="pp-stamps">${pad(mine('x_places', 3).map(esc), ['Adored', 'Approved', 'One of a kind'], 3).map(x => `<span>${x}</span>`).join('')}</div><div class="pp-mrz"><p>${esc(mrzLine1)}</p><p>${esc(mrzLine2)}</p></div></div>`, 20),
     page('notes', `<p class="pg-kicker">Notes from everyone</p><h3>${friendNotes.length ? `Messages for ${esc(who)}` : 'Leave a little message'}</h3><div class="notes">${notesHtml}</div><p class="pg-kicker ws-ans">Puzzle answers</p>${gridHtml(true)}`, 21),
-    `<div class="pg pg-movie" ${style}>${ph('photo2', 'mv-photo')}<div class="mv-shade"></div><p class="mv-presents">${esc(from)} presents</p><div class="mv-stars">${reviews.map(([q, src]) => `<p>&#9733;&#9733;&#9733;&#9733;&#9733;<b>&ldquo;${q}&rdquo;</b><small>${src}</small></p>`).join('')}</div><div class="mv-title"><h3 style="font-size:${fit(String(who).toUpperCase(), 86, 0.5, 24)}cqw">${esc(String(who).toUpperCase())}</h3><p class="mv-sub">${gentle ? 'A true story of love' : 'The movie'}</p><p class="mv-tag">&ldquo;${s.lines[0] ? s.lines[0][1] : esc(mag.short)}&rdquo;</p><p class="mv-credits">Starring ${esc(who)} &middot; Directed by ${esc(from)} &middot; Written with love &middot; Music by the whole family &middot; Filmed on location at home</p><p class="mv-soon">${gentle ? 'Forever showing in our hearts' : 'Coming soon to a living room near you'}</p></div><span class="pg-num">22</span></div>`,
+    `<div class="pg pg-movie" ${style}>${ph('photo2', 'mv-photo')}<div class="mv-shade"></div><p class="mv-presents">${esc(from)} presents</p><div class="mv-stars">${reviews.map(([q, src]) => `<p>&#9733;&#9733;&#9733;&#9733;&#9733;<b>&ldquo;${q}&rdquo;</b><small>${src}</small></p>`).join('')}</div><div class="mv-title"><h3 style="font-size:calc(${fit(String(who).toUpperCase(), 86, 0.5, 24)} * var(--cq))">${esc(String(who).toUpperCase())}</h3><p class="mv-sub">${gentle ? 'A true story of love' : 'The movie'}</p><p class="mv-tag">&ldquo;${s.lines[0] ? s.lines[0][1] : esc(mag.short)}&rdquo;</p><p class="mv-credits">Starring ${esc(who)} &middot; Directed by ${esc(from)} &middot; Written with love &middot; Music by the whole family &middot; Filmed on location at home</p><p class="mv-soon">${gentle ? 'Forever showing in our hearts' : 'Coming soon to a living room near you'}</p></div><span class="pg-num">22</span></div>`,
     page('card', `<p class="pg-kicker">Collector's edition</p><h3>The ${esc(who)} card</h3><div class="tc"><div class="tc-in"><div class="tc-top"><b>${esc(who)}</b><span>${s.badge[1] || '&#9733;'}</span></div>${ph('photo3', 'tc-photo')}<p class="tc-type">${s.quote || 'Legendary'}</p><div class="tc-stats">${stats.map(([k, n]) => `<p><span>${k}</span><i><em style="width:${n}%"></em></i><b>${n}</b></p>`).join('')}</div><p class="tc-move"><b>Special move</b>${esc(move)}</p><div class="tc-foot"><span>Rarity: one of a kind</span><span>No. 001 of 001</span></div></div></div>`, 23),
     `<div class="pg pg-back" ${style}><div class="pg-in"><p class="pg-kicker">That's a wrap</p><h3>The end.<br>Until the next issue.</h3><p class="pg-body">Made for ${esc(who)} by ${esc(from)}.</p>${barcode()}</div></div>`,
   ];
@@ -529,15 +529,15 @@ export function renderCardSet(mag, values = {}, opts = {}) {
   const up = esc(String(who).toUpperCase());
   return [
     `<div class="pg pg-cards" ${style}>
-      <div class="cs-half cs-front">${cover}<div class="cs-front-txt"><p class="cs-kicker">${gentle ? 'Forever in our hearts' : 'Stop the press!'}</p><h3 style="font-size:${fit(String(who), 46, 0.5, 11)}cqw">${esc(who)}</h3><p class="cs-sub">${gentle ? 'A little keepsake, made with love' : /&| and /i.test(String(who)) ? 'are on the front page' : 'is on the front page'}</p><p class="cs-quote">&ldquo;${quote}&rdquo;</p></div></div>
+      <div class="cs-half cs-front">${cover}<div class="cs-front-txt"><p class="cs-kicker">${gentle ? 'Forever in our hearts' : 'Stop the press!'}</p><h3 style="font-size:calc(${fit(String(who), 46, 0.5, 11)} * var(--cq))">${esc(who)}</h3><p class="cs-sub">${gentle ? 'A little keepsake, made with love' : /&| and /i.test(String(who)) ? 'are on the front page' : 'is on the front page'}</p><p class="cs-quote">&ldquo;${quote}&rdquo;</p></div></div>
       <div class="cs-cut" aria-hidden="true"><span>&#9986; cut here</span></div>
-      <div class="cs-half cs-inside"><p class="cs-kicker">A little message</p><p class="cs-dear">Dear ${esc(who)},</p><p class="cs-msg" style="font-size:${short.length > 150 ? 4.3 : 5.2}cqw">${esc(short)}</p><p class="cs-sign" style="font-size:${String(from).length > 18 ? 4.4 : 5.6}cqw">With love, ${esc(from)}</p><i class="cs-heart" aria-hidden="true">&hearts;</i></div>
+      <div class="cs-half cs-inside"><p class="cs-kicker">A little message</p><p class="cs-dear">Dear ${esc(who)},</p><p class="cs-msg" style="font-size:calc(${short.length > 150 ? 4.3 : 5.2} * var(--cq))">${esc(short)}</p><p class="cs-sign" style="font-size:calc(${String(from).length > 18 ? 4.4 : 5.6} * var(--cq))">With love, ${esc(from)}</p><i class="cs-heart" aria-hidden="true">&hearts;</i></div>
       <p class="cs-note">Print on card, cut along the line, and pop them in an envelope with the magazine.</p>
     </div>`,
     `<div class="pg pg-cards pg-tags" ${style}>
       <p class="cs-kicker cs-head">Gift tags and bookmarks</p>
-      <div class="cs-tags">${tags.map(([a, b], i) => `<div class="cs-tag cs-tag${i % 3}"><i class="cs-hole" aria-hidden="true"></i><small>${esc(a)}</small><b style="font-size:${String(b).length > 16 ? 4 : 5.4}cqw">${esc(b)}</b></div>`).join('')}</div>
-      <div class="cs-marks">${[0, 1].map(i => `<div class="cs-mark cs-mark${i}"><span class="cs-mark-name" style="font-size:${fit(String(who).toUpperCase(), 40, 0.55, 7)}cqw">${up}</span><span class="cs-mark-q">${String(who).length > 10 ? '' : `&ldquo;${quote}&rdquo;`}</span><span class="cs-mark-foot">${esc(mag.title)} &middot; ${i ? 'No. 002' : 'No. 001'}</span></div>`).join('')}</div>
+      <div class="cs-tags">${tags.map(([a, b], i) => `<div class="cs-tag cs-tag${i % 3}"><i class="cs-hole" aria-hidden="true"></i><small>${esc(a)}</small><b style="font-size:calc(${String(b).length > 16 ? 4 : 5.4} * var(--cq))">${esc(b)}</b></div>`).join('')}</div>
+      <div class="cs-marks">${[0, 1].map(i => `<div class="cs-mark cs-mark${i}"><span class="cs-mark-name" style="font-size:calc(${fit(String(who).toUpperCase(), 40, 0.55, 7)} * var(--cq))">${up}</span><span class="cs-mark-q">${String(who).length > 10 ? '' : `&ldquo;${quote}&rdquo;`}</span><span class="cs-mark-foot">${esc(mag.title)} &middot; ${i ? 'No. 002' : 'No. 001'}</span></div>`).join('')}</div>
       <p class="cs-note">Cut out the tags and bookmarks. A ribbon through the little hole finishes the tags.</p>
     </div>`,
   ];

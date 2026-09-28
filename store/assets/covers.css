@@ -8,6 +8,7 @@
   aspect-ratio: 210 / 297;
   width: 100%;
   container-type: inline-size;
+  --cq: 1cqw; /* one percent of the cover's width; site.js sets it on phones without cqw */
   overflow: hidden;
   background: var(--bg);
   color: var(--ink);

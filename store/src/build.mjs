@@ -574,8 +574,24 @@ await makerPage();
 await ideasPages();
 await simplePages();
 await feeds();
+await oldPhones();
 await fingerprint();
 console.log(`Built ${site.name} into dist/`);
+
+// Older phones (and the browser inside some chat apps) run older browsers.
+// Scripts are rewritten into older JavaScript, and cover sizes use
+// calc(N * var(--cq)) so site.js can size covers where cqw units don't exist.
+async function oldPhones() {
+  const { transform } = await import('esbuild');
+  const dir = new URL('assets/', dist);
+  for (const f of (await readdir(dir)).filter(f => f.endsWith('.js'))) {
+    const file = new URL(f, dir);
+    const { code } = await transform(await readFile(file, 'utf8'), { loader: 'js', format: 'esm', target: ['chrome64', 'safari12', 'firefox67'], supported: { 'dynamic-import': true } });
+    await writeFile(file, code);
+  }
+  const css = new URL('covers.css', dir);
+  await writeFile(css, (await readFile(css, 'utf8')).replace(/(--cq:\s*)?(-?\d*\.?\d+)cqw\b/g, (m, own, n) => (own ? m : `calc(${n} * var(--cq))`)));
+}
 
 // Browsers keep /assets/ files for a week, so every link to a script or
 // stylesheet gets ?v=<content hash>. A changed file then gets a new address
