@@ -50,6 +50,7 @@ function layout({ title, description, path, body, og = {}, jsonld, bodyClass = '
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="p:domain_verify" content="c34b640fddc5572ca6d8e32b76436aef">
 <title>${esc(fullTitle)}</title>
 <meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${abs(path)}">
