@@ -12,7 +12,7 @@ import os
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '51'
+VERSION = '52'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -2982,7 +2982,7 @@ TOOLS += [
         'faq': [('How is this different from the free version?', 'The free reading log tracks books. Reading Adventure Month adds a treasure map, a new task every day, bookmarks, book reviews and a certificate, in four designs.'), ('Is this part of PrintPals Plus?', 'Yes. Try it free for 7 days, no card needed. After that, Plus is $4.99 a month or $39 a year.')],
     },
     {
-        'id': 'classwelcome', 'cat': 'packs', 'slug': 'class-welcome-kit-for-teachers', 'tint': '#fff6e0', 'icon': '🏷️', 'new': True, 'plus': True, 'teacher': True,
+        'id': 'classwelcome', 'cat': 'packs', 'slug': 'class-welcome-kit-for-teachers', 'tint': '#fff6e0', 'icon': '🏷️', 'plus': True, 'teacher': True,
         'nav': 'Class Welcome Kit',
         'title': 'Class Welcome Kit for Teachers | Desk Name Tags, Peg Labels, Class Jobs, Birthday Chart, All About Me | PrintPals Teacher',
         'desc': 'Back to school in one click: desk name tags with alphabet and number lines, peg and drawer labels with an animal for every child, a class birthday chart, a class jobs chart with name cards, and an All about me page for every child, all named from your class list.',
@@ -2994,7 +2994,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'This is part of the teacher plan: $59 a year for your whole class, with every class pack included. Try it free for 7 days, no card needed.')],
     },
     {
-        'id': 'classawards', 'cat': 'packs', 'slug': 'class-awards-for-every-child', 'tint': '#f5edff', 'icon': '🏆', 'new': True, 'plus': True, 'teacher': True,
+        'id': 'classawards', 'cat': 'packs', 'slug': 'class-awards-for-every-child', 'tint': '#f5edff', 'icon': '🏆', 'plus': True, 'teacher': True,
         'nav': 'Class Awards Pack',
         'title': 'End of Year Class Awards | A Different Award for Every Child, Named | PrintPals Teacher',
         'desc': 'A personalised award for every child in your class, and no two the same: Kindest Friend, Super Reader, Maths Wizard, Brilliant Builder and 36 more. Includes an awards list for planning the ceremony and a Star of the Week certificate.',
@@ -3006,7 +3006,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'This is part of the teacher plan: $59 a year for your whole class, with every class pack included. Try it free for 7 days, no card needed.')],
     },
     {
-        'id': 'homeworkmonth', 'cat': 'packs', 'slug': 'homework-month-for-teachers', 'tint': '#eef6ff', 'icon': '📝', 'new': True, 'plus': True, 'teacher': True,
+        'id': 'homeworkmonth', 'cat': 'packs', 'slug': 'homework-month-for-teachers', 'tint': '#eef6ff', 'icon': '📝', 'plus': True, 'teacher': True,
         'nav': 'Homework Month',
         'title': 'Homework Sheets for Teachers | 4 Weekly Homework Sheets, Parent Note, Class Tracker | PrintPals Teacher',
         'desc': 'A month of weekly homework for Year 1 to Year 3 (grades 1 to 3): maths, spellings, a reading log and a fun family task on each sheet, a grown-up comment box, a note for families, a class homework tracker and an answer key.',
@@ -3018,7 +3018,7 @@ TOOLS += [
         'faq': [('Is this part of PrintPals Plus?', 'This is part of the teacher plan: $59 a year for your whole class, with every class pack included. Try it free for 7 days, no card needed.')],
     },
     {
-        'id': 'coverkit', 'cat': 'packs', 'slug': 'cover-teacher-kit', 'tint': '#e8f8f4', 'icon': '🧑‍🏫', 'new': True, 'plus': True, 'teacher': True,
+        'id': 'coverkit', 'cat': 'packs', 'slug': 'cover-teacher-kit', 'tint': '#e8f8f4', 'icon': '🧑‍🏫', 'plus': True, 'teacher': True,
         'nav': 'Cover Teacher Kit',
         'title': 'Cover Teacher Kit | Supply and Substitute Teacher Plans and Activities, Ready in Minutes | PrintPals Teacher',
         'desc': 'Everything a cover or substitute teacher needs for a whole day: class notes, a plan for the day, a seating plan with your class names, maths, writing, a puzzle, a calm colouring scene, games with no equipment, fast finisher challenges and a How did it go? note.',
@@ -3029,12 +3029,60 @@ TOOLS += [
         'article': """<h2>Keep one ready in your drawer</h2><p>Print a cover folder at the start of each term and fill in the class notes. When you are unexpectedly away, everything is ready. Press Make a new set for fresh activities each time.</p>""",
         'faq': [('Is this part of PrintPals Plus?', 'This is part of the teacher plan: $59 a year for your whole class, with every class pack included. Try it free for 7 days, no card needed.')],
     },
+    {
+        'id': 'readingrecords', 'cat': 'packs', 'slug': 'class-reading-records', 'tint': '#eef6ff', 'icon': '📖', 'new': True, 'plus': True, 'teacher': True,
+        'nav': 'Class Reading Records',
+        'title': 'Class Reading Records | A Named Reading Record Book for Every Child, Class Tracker, Reading Awards | PrintPals Teacher',
+        'desc': 'A reading record book for every child in your class: a named cover with their own animal, 8 weeks of reading logs, a class home reading tracker, 25, 50 and 100 nights of reading awards and a note for families.',
+        'h1': 'Class Reading Records',
+        'lead': 'Type your class list and every child gets their own reading record book with their name and animal on the cover and 8 weeks of reading logs. Plus a class home reading tracker, milestone awards for 25, 50 and 100 nights, and a friendly note for families.',
+        'card': 'A named reading record book for every child, plus a class tracker.',
+        'form': field('Class name', '<input type="text" name="cls" maxlength="24" placeholder="Class 1" autocomplete="off">') + field('Your name (optional)', '<input type="text" name="teacher" maxlength="30" placeholder="Miss Taylor" autocomplete="off">') + field('Class list', '<textarea name="names" rows="6" spellcheck="false" placeholder="Mia&#10;Leo&#10;Emma&#10;Sam&#10;Chris"></textarea>', 'One name per line, up to 40 children.') + field('Design', seg('look', [('meadow', '🌼 Meadow'), ('ocean', '🐳 Ocean'), ('candy', '🍭 Candy'), ('space', '🚀 Space')], 'meadow')) + PAPER,
+        'article': '<h2>Reading at home, celebrated</h2><p>Children read more when it is noticed. Check the records on Fridays, tick the class tracker and hand out the milestone awards in assembly. Families love the personal covers.</p>',
+        'faq': [('Is this part of PrintPals Plus?', 'This is part of the teacher plan: $59 a year for your whole class, with every class pack included. Try it free for 7 days, no card needed.')],
+    },
+    {
+        'id': 'phonicscheck', 'cat': 'packs', 'slug': 'phonics-assessment-kit', 'tint': '#fff0f0', 'icon': '🔤', 'new': True, 'plus': True, 'teacher': True,
+        'nav': 'Phonics Check Kit',
+        'title': 'Phonics Assessment Kit for Teachers | Sound Check Sheets for Every Child, Class Results Grid | PrintPals Teacher',
+        'desc': 'A phonics assessment kit for Phase 2 or Phase 3: a sound card and tricky word card for the child, a named record sheet for every child with termly tick boxes, a class results grid and a Sounds Superstar award for every child.',
+        'h1': 'Phonics Check Kit',
+        'lead': "Assess every child's sounds three times a year in minutes. A big sound card and tricky word card for the child to read from, a named record sheet per child with autumn, spring and summer tick boxes, a class results grid and a Sounds Superstar award for everyone.",
+        'card': 'Sound checks for every child, a class grid and awards.',
+        'form': field('Class name', '<input type="text" name="cls" maxlength="24" placeholder="Class 1" autocomplete="off">') + field('Your name (optional)', '<input type="text" name="teacher" maxlength="30" placeholder="Miss Taylor" autocomplete="off">') + field('Class list', '<textarea name="names" rows="6" spellcheck="false" placeholder="Mia&#10;Leo&#10;Emma&#10;Sam&#10;Chris"></textarea>', 'One name per line, up to 40 children.') + field('Sounds', seg('level', [('p2', 'Phase 2'), ('p3', 'Phase 3')], 'p2')) + field('Design', seg('look', [('meadow', '🌼 Meadow'), ('ocean', '🐳 Ocean'), ('candy', '🍭 Candy'), ('space', '🚀 Space')], 'meadow')) + PAPER,
+        'article': "<h2>One sheet, all year</h2><p>Use a different coloured pen each term on the same record sheet, so progress is easy to see at a glance and to share at parents' evening.</p>",
+        'faq': [('Is this part of PrintPals Plus?', 'This is part of the teacher plan: $59 a year for your whole class, with every class pack included. Try it free for 7 days, no card needed.')],
+    },
+    {
+        'id': 'parentsevening', 'cat': 'packs', 'slug': 'parents-evening-kit', 'tint': '#fff6e0', 'icon': '🗓️', 'new': True, 'plus': True, 'teacher': True,
+        'nav': "Parents' Evening Kit",
+        'title': "Parents' Evening Kit for Teachers | Invitations, Booking Slots, Meeting Notes for Every Child | PrintPals Teacher",
+        'desc': "Everything for a calm, organised parents' evening: an invitation letter, booking slots, a questions from home form, a meeting notes sheet for every child, next steps slips to take home and a welcome sign for your door.",
+        'h1': "Parents' Evening Kit",
+        'lead': "Walk into parents' evening calm and ready. An invitation to send home, booking slots, a questions from home form, a named meeting sheet for every child covering reading, maths, writing and wellbeing, next steps slips and a welcome door sign.",
+        'card': 'Invitations, booking slots and a meeting sheet for every child.',
+        'form': field('Class name', '<input type="text" name="cls" maxlength="24" placeholder="Class 1" autocomplete="off">') + field('Your name (optional)', '<input type="text" name="teacher" maxlength="30" placeholder="Miss Taylor" autocomplete="off">') + field('Class list', '<textarea name="names" rows="6" spellcheck="false" placeholder="Mia&#10;Leo&#10;Emma&#10;Sam&#10;Chris"></textarea>', 'One name per line, up to 40 children.') + field('Design', seg('look', [('meadow', '🌼 Meadow'), ('ocean', '🐳 Ocean'), ('candy', '🍭 Candy'), ('space', '🚀 Space')], 'meadow')) + PAPER,
+        'article': '<h2>Every family feels heard</h2><p>The questions from home form means you know what families want to talk about before they sit down. Start with a strength, share one next step and send them home with a slip.</p>',
+        'faq': [('Is this part of PrintPals Plus?', 'This is part of the teacher plan: $59 a year for your whole class, with every class pack included. Try it free for 7 days, no card needed.')],
+    },
+    {
+        'id': 'reporthelper', 'cat': 'packs', 'slug': 'report-writing-helper', 'tint': '#f5edff', 'icon': '📋', 'new': True, 'plus': True, 'teacher': True,
+        'nav': 'Report Writing Helper',
+        'title': 'School Report Writing Helper | Comment Bank, Report Notes for Every Child, Pupil Voice | PrintPals Teacher',
+        'desc': 'Write warm, personal school reports faster: a positive comment bank for attitude, reading, writing, maths, friendships and next steps, a report notes page for every child with suggested openings, a pupil voice page and a class progress overview.',
+        'h1': 'Report Writing Helper',
+        'lead': 'Report season, made kinder. A warm comment bank for every subject, a notes page for every child with suggested openings already written in their name, a pupil voice page where children share their pride, and a class progress overview.',
+        'card': 'A comment bank and a report page for every child.',
+        'form': field('Class name', '<input type="text" name="cls" maxlength="24" placeholder="Class 1" autocomplete="off">') + field('Your name (optional)', '<input type="text" name="teacher" maxlength="30" placeholder="Miss Taylor" autocomplete="off">') + field('Class list', '<textarea name="names" rows="6" spellcheck="false" placeholder="Mia&#10;Leo&#10;Emma&#10;Sam&#10;Chris"></textarea>', 'One name per line, up to 40 children.') + field('Design', seg('look', [('meadow', '🌼 Meadow'), ('ocean', '🐳 Ocean'), ('candy', '🍭 Candy'), ('space', '🚀 Space')], 'meadow')) + PAPER,
+        'article': "<h2>Personal, never robotic</h2><p>Each child gets different suggested openings, so reports never sound copied. Pair them with the child's own pupil voice page to add a lovely personal touch.</p>",
+        'faq': [('Is this part of PrintPals Plus?', 'This is part of the teacher plan: $59 a year for your whole class, with every class pack included. Try it free for 7 days, no card needed.')],
+    },
 ]
 
 # The homepage sections, in learning order (easiest first). Every tool appears in exactly one section.
 ARRANGE = [
     ('packs', 'Ready-made packs', 'Packs', 'Stop searching. A week, a month or the whole holiday planned for your child, storybooks and activity books, starting school, quick packs, family far away, a learning passport and class packs.',
-     ['pack', 'tinyhands', 'handmonth', 'phonicsmonth', 'mathsday', 'timesclub', 'timemonth', 'readmonth', 'readadventure', 'spellmonth', 'sciencemonth', 'calmmonth', 'colourmonth', 'puzzlemonth', 'writemonth', 'familymonth', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'journal', 'easter', 'levels', 'poppy', 'handwritingbook', 'phonicsbook', 'readers', 'mathsbook', 'winter', 'lunar', 'kindness', 'grownupbook', 'dinokit', 'spacekit', 'oceankit', 'safari', 'farm', 'detective', 'garden', 'superhero', 'feelingsbook', 'flying', 'adventure', 'familynight', 'cookbook', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack', 'classwelcome', 'morningwork', 'homeworkmonth', 'classawards', 'coverkit', 'classseason', 'yearbook', 'displays']),
+     ['pack', 'tinyhands', 'handmonth', 'phonicsmonth', 'mathsday', 'timesclub', 'timemonth', 'readmonth', 'readadventure', 'spellmonth', 'sciencemonth', 'calmmonth', 'colourmonth', 'puzzlemonth', 'writemonth', 'familymonth', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'journal', 'easter', 'levels', 'poppy', 'handwritingbook', 'phonicsbook', 'readers', 'mathsbook', 'winter', 'lunar', 'kindness', 'grownupbook', 'dinokit', 'spacekit', 'oceankit', 'safari', 'farm', 'detective', 'garden', 'superhero', 'feelingsbook', 'flying', 'adventure', 'familynight', 'cookbook', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack', 'classwelcome', 'readingrecords', 'phonicscheck', 'parentsevening', 'reporthelper', 'morningwork', 'homeworkmonth', 'classawards', 'coverkit', 'classseason', 'yearbook', 'displays']),
     ('handwriting', 'Handwriting', 'Handwriting', 'From first pencil lines to joined writing, with real letter shapes and stroke order.',
      ['prewriting', 'scissors', 'names', 'letters', 'mixups', 'joined', 'writingpaper', 'alphabets']),
     ('reading', 'Reading & phonics', 'Reading', 'Letter sounds, CVC words, syllables, sight words, sentences, spelling and stories where your child is the hero.',
@@ -3052,6 +3100,7 @@ ARRANGE = [
 ]
 # Ages each tool suits (first year, last year).
 AGES = {
+    'readingrecords': (4, 9), 'phonicscheck': (4, 7), 'parentsevening': (3, 11), 'reporthelper': (3, 11),
     'classwelcome': (4, 9), 'classawards': (4, 11), 'homeworkmonth': (5, 8), 'coverkit': (5, 9),
     'sciencemonth': (4, 10), 'spellmonth': (5, 9), 'calmmonth': (3, 10), 'readadventure': (4, 10),
     'timesclub': (6, 10), 'timemonth': (5, 8), 'phonicsmonth': (3, 6), 'tinyhands': (2, 3),
@@ -3125,7 +3174,7 @@ CAT_TEXT = {a[0]: a[3] for a in ARRANGE}
 NAV_LABEL = {a[0]: a[2] for a in ARRANGE}
 
 
-JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'tools21', 'tools22', 'tools23', 'tools24', 'tools25', 'tools26', 'tools27', 'tools28', 'tools29', 'tools30', 'tools31', 'plus', 'app']
+JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'tools21', 'tools22', 'tools23', 'tools24', 'tools25', 'tools26', 'tools27', 'tools28', 'tools29', 'tools30', 'tools31', 'tools32', 'plus', 'app']
 CONTACT = 'graceandloannesofficial@gmail.com'
 # Stripe customer portal: parents manage, switch or cancel their Plus subscription here.
 STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'
