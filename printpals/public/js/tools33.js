@@ -5,11 +5,11 @@ const xLook = (k) => XMAS[k] || XMAS.red;
 const XART = ['tree', 'snowman', 'stocking', 'gingerbread', 'presents', 'bauble'];
 
 // A folded card: landscape page split in half. Left half is the back, right half is the front.
-function foldedCard(paper, front, inside, backNote) {
+function foldedCard(paper, front, inside, backNote, backEmoji) {
   const pg = new Page(paper, '', { bare: true, landscape: true });
   const mid = pg.w / 2;
   pg.add(`<line x1="${mid}" x2="${mid}" y1="${pg.m}" y2="${pg.h - pg.m}" stroke="#b9b3d6" stroke-width="0.5" stroke-dasharray="3 2"/>` + txt(mid, pg.m - 2, 'fold', 4.4, { font: FONT, colour: SOFT }));
-  pg.add(txt(mid / 2, pg.h - pg.m - 10, backNote || 'Made with love at school', 5.4, { font: FONT, colour: SOFT }) + emoji('🎄', mid / 2, pg.h - pg.m - 24, 12));
+  pg.add(txt(mid / 2, pg.h - pg.m - 10, backNote || 'Made with love at school', 5.4, { font: FONT, colour: SOFT }) + emoji(backEmoji || '🎄', mid / 2, pg.h - pg.m - 24, 12));
   front(pg, mid, pg.m, pg.w - mid - pg.m, pg.h - pg.m * 2);
   pg.footer = () => {};
   const pages = [pg.svg()];

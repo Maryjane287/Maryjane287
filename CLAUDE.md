@@ -95,7 +95,12 @@ named card from the teacher per child with message inside and class photo box, a
 Class Calendar Gift (named cover + 12 month pages with drawing boxes per child, next year, planning page), Christmas Show Kit
 (nativity or winter roles shared round the list, cast list, role cards, tickets, programme, poster, rehearsal tracker, Star
 Performer per child), Class Advent Countdown (24 cards, chart with daily helper, badges, Christmas Star per child). Looks
-red/green/frosty. Their 12 pins are at the FRONT of file 3 (2 Nov, good for December). 207 pins waiting. PLUS EDITIONS 4 (VERSION 50, 184 tools, tools30.js): Science Month (16 kitchen experiments SCI_EXP:
+red/green/frosty. Their 12 pins are at the FRONT of file 3 (2 Nov, good for December). 207 pins waiting. TEACHER TOOLKIT 3 (VERSION 54, 200 tools, tools34.js): Class Birthday Kit (crownStrip named crown, class
+card via foldedCard with backEmoji, certificate, balloon display, badges), Class Reward System (named star chart per child with
+team, 4 teams points, 10 coupons, golden time tracker, Star of the Week poster), Moving Up Kit (All about me for new teacher,
+handover notes, class summary grid, worries and wishes, welcome letter, certificate each; 'next' class name), Class Special Person
+Cards (who: Mum/Dad/Grandma/Special Person; card + 4 page mini book per child, checklist). Moving Up and Special Person pins are
+held at the end of the queue (summer and spring). 219 pins waiting. PLUS EDITIONS 4 (VERSION 50, 184 tools, tools30.js): Science Month (16 kitchen experiments SCI_EXP:
 you need, what to do, I think, I saw, draw, why; Friday reports), Spelling Month (3 levels of 4 weekly lists or the child's own
 school words; Mon look say cover write check, Tue word hunt via packRun wordsearch, Wed missing letters, Thu sentences, Fri test),
 Calm and Happy Month (feelings check-in, breathing game, calm activity, thank you; Friday my week), Reading Adventure Month (map
@@ -154,7 +159,7 @@ sound-button reading, certificate to next book; Easier/Harder = book), Boredom B
 Shelf now has Phonics Books and a Keepsakes and kits group. 15 new pins added to next-file-start.json (63 waiting for file 3).
 PINTEREST FILES (owner rule): files of 100 pins, named PrintPals-pins-<n>-UPLOAD-ON-<date>.csv (max 100 scheduled, 14 days ahead,
 8 pins a day). File 1 = 55 pins (only 55 slots free), upload 4 Oct 2026, pins 12 to 18 Oct. File 2 = 100, upload 19 Oct, pins 20 Oct to 1 Nov.
-File 3 upload 2 Nov: first 100 of 207 waiting pins (Christmas teacher pins first) in printpals/pinterest/next-file-start.json (Easter held for spring), add 50 new ones.
+File 3 upload 2 Nov: first 100 of 219 waiting pins (Christmas teacher pins first) in printpals/pinterest/next-file-start.json (Easter held for spring), add 50 new ones.
 Style B pins: pins/b-<key>.jpg made by pinterest/pinB.js from jobsB.json. PLUS STAGE 4 (VERSION 40, 143 tools, tools20.js): Little Learner Levels (10 levels, journey map, 5 challenges,
 badge sheet, certificate pointing to the next level; Easier/Harder steps levels), Letters from Poppy (the logo character; letter, challenge page,
 write back page for each month), TEACHER PLAN tools ('teacher': True gates to the teacher plan): class seasonal books (Christmas/Halloween/
