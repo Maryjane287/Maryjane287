@@ -452,7 +452,7 @@
 .pg-awards h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-style: italic; color: #ffe8a3; font-size: 10cqw; }
 .aw { display: grid; grid-template-columns: 1fr 1fr; gap: 4cqw; }
 .aw-item { text-align: center; border: .3cqw solid rgba(243,214,122,.55); border-radius: 2cqw; padding: 4cqw 3cqw; background: rgba(255,255,255,.04); }
-.aw-cup { display: block; font-style: normal; font-size: 11cqw; line-height: 1; margin-bottom: 2cqw; filter: drop-shadow(0 .8cqw 1.6cqw rgba(243,214,122,.45)); }
+.aw-cup { display: block; width: 11cqw; height: 11cqw; margin: 0 auto 2cqw; filter: drop-shadow(0 .8cqw 1.6cqw rgba(243,214,122,.45)); }
 .aw-cat { margin: 0 0 1.6cqw; font-family: 'DM Serif Display', serif; font-size: 4.6cqw; line-height: 1.08; color: #ffe8a3; }
 .aw-win { margin: 0 0 1cqw; font-size: 2.8cqw; font-weight: 700; overflow-wrap: anywhere; }
 .aw-note { margin: 0; font-size: 2.2cqw; letter-spacing: .1em; text-transform: uppercase; opacity: .65; }
@@ -514,7 +514,7 @@
 .rc ul li { font-size: 4.3cqw; }
 .aw { gap: 3cqw; }
 .aw-item { padding: 3.4cqw 2.6cqw; }
-.aw-cup { font-size: 9cqw; margin-bottom: 1.4cqw; }
+.aw-cup { width: 9cqw; height: 9cqw; margin-bottom: 1.4cqw; }
 .aw-foot { margin-top: 4.5cqw; }
 .nw-mast b { min-width: 0; overflow: hidden; }
 .notes .note-full { min-height: 0; }

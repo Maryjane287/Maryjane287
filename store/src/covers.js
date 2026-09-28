@@ -403,6 +403,9 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
   const page = (cls, inner, n) => `<div class="pg pg-${cls}" ${style}><div class="pg-in">${inner}</div>${n ? `<span class="pg-num">${n}</span>` : ''}</div>`;
   const ph = (k, cls) => photoOrPortrait(photos[k], po, p, cls);
   const rnd = seeded(who + mag.slug);
+  // The buyer's own answers for the fun pages (optional; warm defaults fill any gaps).
+  const mine = (k, n) => String(values[k] || '').split(/\n|,|;/).map(x => x.trim()).filter(Boolean).slice(0, n);
+  const pad = (own, fallback, n) => [...own, ...fallback.slice(own.length)].slice(0, n);
 
   const contents = [
     [3, 'The editor\'s letter'], [5, 'The cover story'], [6, 'The big interview'],
@@ -413,6 +416,7 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
 
   const qa = s.lines.length ? s.lines : facts.slice(0, 3).map(f => [esc(f.label), esc(v[f.id])]);
   const reasons = [
+    ...mine('x_reasons', 10).map(esc),
     ...facts.map(f => String(v[f.id])).filter(x => x.length > 8 && !/^\d/.test(x)).slice(0, 4).map(esc),
     'Every laugh they have ever started', 'How they make ordinary days feel special', 'The stories we will be telling for years',
     'Being exactly, completely themselves', 'The love they give without even trying', 'All the little moments nobody else saw',
@@ -441,9 +445,10 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
   const stats = ['Charm', 'Kindness', 'Humour', gentle ? 'Cuddles' : 'Chaos', 'Legend status'].map(k => [k, 84 + Math.floor(rnd() * 16)]);
   stats[stats.length - 1][1] = 100;
   const move = String(v[facts.find(f => String(v[f.id]).length > 8 && !/^\d/.test(String(v[f.id])))?.id] || mag.short);
+  const treatNotes = ['Redeemable any time, forever', 'No questions asked', 'Valid on any day you like', 'Just show this voucher'];
   const vouchers = gentle
     ? ['Their favourite spot', v.spot, 'Their sweetest habit', v.habit, 'The silliest moment', v.silly, 'Three words', v.words]
-    : ['One enormous hug', 'Redeemable any time, forever', 'A cup of tea made just right', 'Served with biscuits', 'Film night, your choice', 'No complaints allowed', 'One favour', 'No questions asked'];
+    : pad(mine('x_treats', 4).map((t, i) => [t, treatNotes[i]]), [['One enormous hug', 'Redeemable any time, forever'], ['A cup of tea made just right', 'Served with biscuits'], ['Film night, your choice', 'No complaints allowed'], ['One favour', 'No questions asked']], 4).flat();
   const vPairs = [];
   for (let i = 0; i < vouchers.length; i += 2) vPairs.push([vouchers[i], vouchers[i + 1]]);
 
@@ -454,16 +459,19 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
   const headline = gentle ? `A life full of love` : `${who} ${plural ? 'do' : 'does'} it again`;
   const paper = plural ? 'The Daily News' : `The Daily ${first}`;
   const amounts = ['A big cup of', 'Two spoons of', 'A generous pinch of', 'A sprinkle of', 'A splash of'];
-  const ingredients = [
-    ...short.reduce((acc, [, x]) => (acc.length < 3 && acc.join('').length + x.length <= 62 ? [...acc, x] : acc), []).map((x, i) => [amounts[i], x]),
-    [amounts[3], gentle ? 'the softest cuddles' : 'pure mischief'], [amounts[4], 'love, straight from the heart'],
-  ];
+  const ownRecipe = mine('x_recipe', 5);
+  const recipeTail = [gentle ? 'the softest cuddles' : 'pure mischief', 'love, straight from the heart'];
+  const ingredients = (ownRecipe.length
+    ? [...ownRecipe, ...recipeTail].slice(0, Math.max(ownRecipe.length, 4))
+    : [...short.reduce((acc, [, x]) => (acc.length < 3 && acc.join('').length + x.length <= 62 ? [...acc, x] : acc), []), ...recipeTail]
+  ).slice(0, 5).map((x, i) => [amounts[i], x]);
   const method = gentle
     ? ['Gather everyone who loved them.', 'Mix in every walk, cuddle and silly moment.', 'Let it rest in your heart forever.', 'Share the stories often.']
     : ['Mix everything together with a big smile.', 'Add a laugh whenever it looks too serious.', 'Bake slowly with lots of love.', 'Serve warm, with hugs on the side.'];
-  const awards = gentle
+  const awardNotes = ['By a landslide', 'Unanimous', 'Ten years running', 'No contest'];
+  const awards = pad(mine('x_awards', 4).map((t, i) => [esc(t), awardNotes[i]]), gentle
     ? [['Best cuddles', 'Every single day'], ['Most loyal friend', 'Undefeated'], ['Best at making us smile', 'Year after year'], ['Lifetime achievement', 'In being loved']]
-    : [['Best smile', 'By a landslide'], ['Funniest person in the room', 'Unanimous'], ['World\'s best hugs', 'Ten years running'], ['Lifetime achievement', 'In being wonderful']];
+    : [['Best smile', 'By a landslide'], ['Funniest person in the room', 'Unanimous'], ['World\'s best hugs', 'Ten years running'], ['Lifetime achievement', 'In being wonderful']], 4);
   const friendNotes = [1, 2, 3, 4].map(i => [String(values[`note${i}_from`] || '').trim(), String(values[`note${i}_msg`] || '').trim()]).filter(([, m]) => m);
   const noteBox = ([f, m]) => `<div class="note-full"><p>${esc(m)}</p><b>${f ? esc(f) : 'With love'}</b></div>`;
   const notesHtml = [...friendNotes.map(noteBox), ...Array(4 - friendNotes.length).fill('<div><i></i><i></i><i></i></div>')].join('');
@@ -489,10 +497,10 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
     page('quiz', `<p class="pg-kicker">Test yourself</p><h3>${gentle ? `How well did you know ${esc(who)}?` : `How well do you know ${esc(who)}?`}</h3>${quiz.map(q => `<div class="qz"><p class="qz-q"><b>${q.n}</b>${esc(q.q)}</p><ul>${q.opts.map((o, i) => `<li><i>${'ABC'[i]}</i>${esc(o)}</li>`).join('')}</ul></div>`).join('')}<p class="qz-key">Answers: ${quiz.map(q => `${q.n}${q.a}`).join(' &middot; ')}</p>`, 14),
     page('puzzle', `<p class="pg-kicker">Puzzle page</p><h3>Find the words</h3>${gridHtml(false)}<ul class="ws-words">${ws.placed.map(x => `<li>${x.w}</li>`).join('')}</ul>`, 15),
     `<div class="pg pg-poster" ${style}>${ph('photo1', 'po-photo')}<div class="po-name" style="font-size:${fit(String(who).toUpperCase(), 88, 0.5, 30)}cqw">${esc(String(who).toUpperCase())}</div><div class="po-badge"><small>${s.badge[0]}</small>${s.badge[1]}<small>${s.badge[2]}</small></div><span class="pg-num">16</span></div>`,
-    page('awards', `<p class="pg-kicker">Live from the red carpet</p><h3>The ${esc(first)} Awards</h3><div class="aw">${awards.map(([t, n]) => `<div class="aw-item"><i class="aw-cup" aria-hidden="true">&#127942;</i><p class="aw-cat">${t}</p><p class="aw-win">Winner: ${esc(who)}</p><p class="aw-note">${n}</p></div>`).join('')}</div><p class="aw-foot">The envelope, please. It was never in doubt.</p>`, 17),
+    page('awards', `<p class="pg-kicker">Live from the red carpet</p><h3>The ${esc(first)} Awards</h3><div class="aw">${awards.map(([t, n]) => `<div class="aw-item"><svg class="aw-cup" viewBox="0 0 24 24" aria-hidden="true"><path fill="#f3d67a" d="M7 3h10v2h3a1 1 0 0 1 1 1c0 3.2-2 5.6-4.8 6A5 5 0 0 1 13 14.9V18h3v3H8v-3h3v-3.1A5 5 0 0 1 7.8 12C5 11.6 3 9.2 3 6a1 1 0 0 1 1-1h3V3zm10 4v3.8c1.3-.5 2.1-1.8 2.3-3.8H17zM7 7H4.7c.2 2 1 3.3 2.3 3.8V7z"/></svg><p class="aw-cat">${t}</p><p class="aw-win">Winner: ${esc(who)}</p><p class="aw-note">${n}</p></div>`).join('')}</div><p class="aw-foot">The envelope, please. It was never in doubt.</p>`, 17),
     page('cert', `<div class="cert"><p class="pg-kicker">Official certificate</p><p class="cert-small">This certifies that</p><p class="cert-name">${esc(who)}</p><p class="cert-small">is officially, undeniably and forever</p><p class="cert-title">${s.quote || 'Iconic'}</p><div class="cert-foot"><span>${esc(from)}</span><i class="cert-seal">&#9733;</i><span>${esc(mag.title)}</span></div></div>`, 18),
     page('vouchers', `<p class="pg-kicker">${gentle ? 'Favourite things' : 'Cut out and keep'}</p><h3>${gentle ? 'The little things we will always remember' : `Vouchers for ${esc(who)}`}</h3><div class="vch${gentle ? ' vch-gentle' : ''}">${vPairs.map(([a, b]) => `<div><b>${esc(a)}</b><span>${esc(b)}</span></div>`).join('')}</div>`, 19),
-    page('passport', `<p class="pg-kicker">Official documents</p><h3>The ${esc(first)} passport</h3><div class="pp"><div class="pp-head"><span>${gentle ? 'Passport to our hearts' : 'Passport to everywhere fun'}</span><span>No. 001</span></div><div class="pp-body">${ph('photo1', 'pp-photo')}<dl class="pp-data"><dt>Name</dt><dd>${esc(who)}</dd><dt>Nationality</dt><dd>${gentle ? 'Loved, everywhere' : 'Citizen of the world'}</dd><dt>Occupation</dt><dd>${s.quote || 'Professional legend'}</dd><dt>Issued by</dt><dd>${esc(from)}</dd><dt>Valid until</dt><dd>Forever</dd></dl></div><div class="pp-stamps"><span>Adored</span><span>Approved</span><span>One of a kind</span></div><div class="pp-mrz"><p>${esc(mrzLine1)}</p><p>${esc(mrzLine2)}</p></div></div>`, 20),
+    page('passport', `<p class="pg-kicker">Official documents</p><h3>The ${esc(first)} passport</h3><div class="pp"><div class="pp-head"><span>${gentle ? 'Passport to our hearts' : 'Passport to everywhere fun'}</span><span>No. 001</span></div><div class="pp-body">${ph('photo1', 'pp-photo')}<dl class="pp-data"><dt>Name</dt><dd>${esc(who)}</dd><dt>Nationality</dt><dd>${gentle ? 'Loved, everywhere' : 'Citizen of the world'}</dd><dt>Occupation</dt><dd>${values.x_job ? esc(String(values.x_job).trim()) : s.quote || 'Professional legend'}</dd><dt>Issued by</dt><dd>${esc(from)}</dd><dt>Valid until</dt><dd>Forever</dd></dl></div><div class="pp-stamps">${pad(mine('x_places', 3).map(esc), ['Adored', 'Approved', 'One of a kind'], 3).map(x => `<span>${x}</span>`).join('')}</div><div class="pp-mrz"><p>${esc(mrzLine1)}</p><p>${esc(mrzLine2)}</p></div></div>`, 20),
     page('notes', `<p class="pg-kicker">Notes from everyone</p><h3>${friendNotes.length ? `Messages for ${esc(who)}` : 'Leave a little message'}</h3><div class="notes">${notesHtml}</div><p class="pg-kicker ws-ans">Puzzle answers</p>${gridHtml(true)}`, 21),
     `<div class="pg pg-movie" ${style}>${ph('photo2', 'mv-photo')}<div class="mv-shade"></div><p class="mv-presents">${esc(from)} presents</p><div class="mv-stars">${reviews.map(([q, src]) => `<p>&#9733;&#9733;&#9733;&#9733;&#9733;<b>&ldquo;${q}&rdquo;</b><small>${src}</small></p>`).join('')}</div><div class="mv-title"><h3 style="font-size:${fit(String(who).toUpperCase(), 86, 0.5, 24)}cqw">${esc(String(who).toUpperCase())}</h3><p class="mv-sub">${gentle ? 'A true story of love' : 'The movie'}</p><p class="mv-tag">&ldquo;${s.lines[0] ? s.lines[0][1] : esc(mag.short)}&rdquo;</p><p class="mv-credits">Starring ${esc(who)} &middot; Directed by ${esc(from)} &middot; Written with love &middot; Music by the whole family &middot; Filmed on location at home</p><p class="mv-soon">${gentle ? 'Forever showing in our hearts' : 'Coming soon to a living room near you'}</p></div><span class="pg-num">22</span></div>`,
     page('card', `<p class="pg-kicker">Collector's edition</p><h3>The ${esc(who)} card</h3><div class="tc"><div class="tc-in"><div class="tc-top"><b>${esc(who)}</b><span>${s.badge[1] || '&#9733;'}</span></div>${ph('photo3', 'tc-photo')}<p class="tc-type">${s.quote || 'Legendary'}</p><div class="tc-stats">${stats.map(([k, n]) => `<p><span>${k}</span><i><em style="width:${n}%"></em></i><b>${n}</b></p>`).join('')}</div><p class="tc-move"><b>Special move</b>${esc(move)}</p><div class="tc-foot"><span>Rarity: one of a kind</span><span>No. 001 of 001</span></div></div></div>`, 23),
