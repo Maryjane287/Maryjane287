@@ -169,7 +169,7 @@ function makeClassSeason(o, paper) {
   const cls = String(o.cls || '').trim().slice(0, 24);
   const pages = [];
   list.forEach((n) => {
-    pages.push(seasonCover(paper, `${possessive(n)} ${word} book`, cls ? `Made in ${cls}` : `A ${word.toLowerCase()} book of my own`, art, tint, ring, corners, 'book'));
+    pages.push(seasonCover(paper, `${possessive(n)} ${word} book`, cls ? `Made in ${cls}` : `${/^[AEIOU]/.test(word) ? 'An' : 'A'} ${word === 'Spring' ? 'spring' : word} book of my own`, art, tint, ring, corners, 'book'));
     if (o.colouring !== false) colours.forEach((k) => pages.push(seasonColour(paper, k, n)));
     if (o.certificate !== false) pages.push(seasonCert(paper, award, n, line, art, ring));
   });

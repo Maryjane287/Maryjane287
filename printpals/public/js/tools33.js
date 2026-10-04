@@ -68,7 +68,7 @@ function makeClassCalendar(o, paper) {
   };
   // Teacher planning page.
   {
-    const pg = new Page(paper, `Class calendar gift ${yr}`, { subtitle: 'How to use: each child gets a cover and 12 month pages. They draw a picture for each month (one a day in December!). Staple at the top and punch a hole to hang.', noName: true });
+    const pg = new Page(paper, `Class calendar gift ${yr}`, { subtitle: 'How to use: each child gets a cover and 12 month pages. They draw on each month (one a day in December!). Staple at the top and punch a hole to hang.', noName: true });
     const ideas = ['January: me in the snow', 'February: someone I love', 'March: spring flowers', 'April: my favourite animal', 'May: playing outside', 'June: a sunny day', 'July: summer fun', 'August: the seaside', 'September: my school', 'October: autumn leaves', 'November: fireworks and stars', 'December: Christmas'];
     ideas.forEach((l, k) => pg.add(`<circle cx="${pg.left + 6}" cy="${pg.y + 8 + k * 12}" r="3" fill="${PALETTE[k % PALETTE.length]}"/>` + txt(pg.left + 14, pg.y + 10 + k * 12, l, 7, { anchor: 'start', colour: INK })));
     pages.push(pg.svg());

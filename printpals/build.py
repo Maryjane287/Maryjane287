@@ -9,10 +9,11 @@ import html
 import re
 import json
 import os
+from usenglish import us_text, us_js, us_html, us_fix_js
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '57'
+VERSION = '58'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -3371,7 +3372,7 @@ CAT_TEXT = {a[0]: a[3] for a in ARRANGE}
 NAV_LABEL = {a[0]: a[2] for a in ARRANGE}
 
 
-JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'tools21', 'tools22', 'tools23', 'tools24', 'tools25', 'tools26', 'tools27', 'tools28', 'tools29', 'tools30', 'tools31', 'tools32', 'tools33', 'tools34', 'tools35', 'tools36', 'plus', 'app']
+JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'tools21', 'tools22', 'tools23', 'tools24', 'tools25', 'tools26', 'tools27', 'tools28', 'tools29', 'tools30', 'tools31', 'tools32', 'tools33', 'tools34', 'tools35', 'tools36', 'tools37', 'plus', 'app']
 CONTACT = 'graceandloannesofficial@gmail.com'
 # Stripe customer portal: parents manage, switch or cancel their Plus subscription here.
 STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'
@@ -3391,13 +3392,17 @@ def pin_btn(t):
 def head(title, desc, path, extra='', image='/img/og.png'):
     url = SITE + path
     return f'''<!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc)}">{f'<meta name="p:domain_verify" content="{PINTEREST_VERIFY}">' if PINTEREST_VERIFY else ''}
 <link rel="canonical" href="{url}">
+<link rel="alternate" hreflang="en-GB" href="{url}">
+<link rel="alternate" hreflang="en-US" href="{SITE}/us{'' if path == '/' else path}">
+<link rel="alternate" hreflang="x-default" href="{url}">
+<script>(function(){{try{{var L=localStorage.getItem('pp-lang'),p=location.pathname,us=p==='/us'||p.indexOf('/us/')===0,t=location.search+location.hash;if(L==='us'&&!us)location.replace('/us'+(p==='/'?'':p)+t);else if(L==='uk'&&us)location.replace((p.slice(3)||'/')+t)}}catch(e){{}}}})()</script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PrintPals">
 <meta property="og:title" content="{html.escape(title)}">
@@ -3587,7 +3592,7 @@ def home():
 <h1>Stop searching.<br><span class="hl">Start learning.</span></h1>
 <p class="lead">A whole week of learning planned for your child in one click, with their name on every page. Plus {sum(1 for t in TOOLS if t['cat'] != 'packs')} free worksheet makers for ages 2 to 10. No sign up, ever.</p>
 <div class="cta"><a class="btn big" href="/weekly-learning-pack">🎒 Plan my child's week, free</a><a class="btn plusbtn big" href="#plus-show">✨ Explore PrintPals Plus</a></div>
-<div class="chips"><span class="chip">✓ 100% free</span><span class="chip">✓ No sign up</span><span class="chip">✓ Private on your device</span><span class="chip">✓ A4 and US Letter</span><span class="chip">✓ Ink saver</span></div>
+<div class="chips"><span class="chip">✓ 100% free</span><span class="chip">✓ No sign up</span><span class="chip">✓ Private on your device</span><span class="chip">✓ A4 and US Letter</span><span class="chip">✓ UK or US English</span><span class="chip">✓ Ink saver</span></div>
 </div></section>
 {showcase}
 <section class="only"><div class="wrap"><h2>What only PrintPals does</h2><p class="cat-lead">Other sites give you ten thousand worksheets and leave you to work it out. We built PrintPals around the real problems parents tell us about.</p><div class="only-grid">{only}</div></div></section>
@@ -3756,7 +3761,7 @@ ABOUT = f'''<h1>About PrintPals</h1>
 <ul>
 <li><b>Free forever.</b> Every worksheet maker, the weekly pack, quick packs, the family pack and the passport. No sign up and no email needed. PrintPals Plus adds bigger extras for families who want more, and helps keep everything else free.</li>
 <li><b>Private.</b> Worksheets are made inside your own browser. Names you type stay on your device.</li>
-<li><b>For every family.</b> A4 and US Letter paper, money in many currencies, alphabets in 15 languages, and an ink saver for black and white printers.</li>
+<li><b>For every family.</b> British or American English (choose at the top of any page, and every worksheet changes too), A4 and US Letter paper, money in many currencies, alphabets in 15 languages, and an ink saver for black and white printers.</li>
 <li><b>Made with care.</b> Real letter shapes with stroke order, answer keys, and pictures children love.</li>
 </ul>
 <h2>Who we are</h2>
@@ -3850,6 +3855,7 @@ HELP = f'''<h1>Help and support</h1>
 <details><summary>How do I change from monthly to yearly?</summary><p>Open <a href="{STRIPE_PORTAL}" rel="noopener">manage my subscription</a> and choose Update plan. Yearly saves you 35%.</p></details>
 <details><summary>I paid on my phone. How do I use Plus on my computer?</summary><p>Open any Plus pack on your computer and choose "Already paid on another phone or computer?", then type the receipt number from your payment email. It looks like 1234-5678.</p></details>
 <details><summary>How does the free week work?</summary><p>Open any Plus pack and your 7 free days start on that phone or computer. No card and no sign up. After the week you can choose a plan, or keep using everything that is free.</p></details>
+<details><summary>Can I have American or British English?</summary><p>Yes. Choose 🇬🇧 UK or 🇺🇸 US at the top of any page. The website and every worksheet switch to that spelling and those words, and your choice is remembered on this device.</p></details>
 <h2>Printing</h2>
 <details><summary>How do I print or save a worksheet?</summary><p>Press "Print or save as PDF". On a computer, choose your printer, or choose "Save as PDF" to keep it. On a phone, choose Print, then Save as PDF, and print it later at home or at any print shop.</p></details>
 <details><summary>The page comes out too small or cut off.</summary><p>Pick your paper size on the worksheet page (A4 or US Letter), and in the print window choose "Actual size" or 100% scale, not "Fit to page".</p></details>
@@ -3862,12 +3868,48 @@ NOT_FOUND = '''<h1>Oops, this page got lost!</h1>
 <p><a href="/">See all the free worksheets →</a></p>'''
 
 
+LANG_JS = """<script>(function(){var us=document.documentElement.lang==='en-US',L=null;try{L=localStorage.getItem('pp-lang')}catch(e){}
+document.querySelectorAll('[data-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('pp-lang',a.dataset.lang)}catch(e){}})});
+if(L||us===/^en-US/i.test(navigator.language))return;var o=document.querySelector('.langsw a:not(.on)');if(!o)return;
+var b=document.createElement('div');b.className='lang-offer no-print';b.innerHTML=us?'🇬🇧 Hello! Would you prefer British English? Every worksheet changes too. <a class="btn" data-lang="uk" href="'+o.getAttribute('href')+'">Switch to UK English</a> <button type="button" class="linkish">Keep US English</button>':'🇺🇸 Hi there! PrintPals speaks American English too, and every worksheet changes with it. <a class="btn" data-lang="us" href="'+o.getAttribute('href')+'">Switch to US English</a> <button type="button" class="linkish">Keep UK English</button>';
+var h=document.querySelector('header.top');h.parentNode.insertBefore(b,h.nextSibling);
+b.querySelector('a').addEventListener('click',function(){try{localStorage.setItem('pp-lang',us?'uk':'us')}catch(e){}});
+b.querySelector('button').addEventListener('click',function(){try{localStorage.setItem('pp-lang',us?'us':'uk')}catch(e){}b.remove()})})()</script>"""
+
+
+def lang_bits(page, path, us):
+    """Add the UK/US switch, the note by the print button and the offer banner."""
+    uk_href, us_href = path, '/us' + ('' if path == '/' else path)
+    on = ' class="on" aria-current="true"'
+    sw = (f'<div class="langsw" role="group" aria-label="English spelling"><a href="{uk_href}" data-lang="uk"{"" if us else on}>🇬🇧 UK</a>'
+          f'<a href="{us_href}" data-lang="us"{on if us else ""}>🇺🇸 US</a></div>')
+    page = page.replace('</nav></div></header>', '</nav>' + sw + '</div></header>', 1)
+    note = (f'<p class="hint lang-hint">🇬🇧 Prefer British spelling (colour, maths, Mum)? <a data-lang="uk" href="{uk_href}">Switch to UK English</a></p>' if us
+            else f'<p class="hint lang-hint">🇺🇸 Want American spelling (color, math, Mom)? <a data-lang="us" href="{us_href}">Switch to US English</a></p>')
+    page = page.replace('<p class="hint" id="remember"', note + '\n<p class="hint" id="remember"', 1)
+    return page.replace('</body>', LANG_JS + '\n</body>', 1)
+
+
+def write_pair(name, page, path):
+    """Write the British page and its American twin at /us/..."""
+    us = us_html(page, path)
+    us_path = '/us' + ('' if path == '/' else path)
+    us = us.replace(f'<link rel="canonical" href="{SITE}{path}">', f'<link rel="canonical" href="{SITE}{us_path}">')
+    us = us.replace(f'<meta property="og:url" content="{SITE}{path}">', f'<meta property="og:url" content="{SITE}{us_path}">')
+    us = us.replace('/js/pp.js?v=', '/js/pp-us.js?v=').replace('/js/plus.js?v=', '/js/plus-us.js?v=').replace('<option value="USD">', '<option value="USD" selected>')
+    with open(os.path.join(OUT, name + '.html'), 'w', encoding='utf-8') as f:
+        f.write(lang_bits(page, path, False))
+    os.makedirs(os.path.join(OUT, 'us'), exist_ok=True)
+    targets = [os.path.join(OUT, 'us.html'), os.path.join(OUT, 'us', 'index.html')] if name == 'index' else [os.path.join(OUT, 'us', name + '.html')]
+    for fn in targets:
+        with open(fn, 'w', encoding='utf-8') as f:
+            f.write(lang_bits(us, path, True))
+
+
 def main():
-    with open(os.path.join(OUT, 'index.html'), 'w', encoding='utf-8') as f:
-        f.write(home())
+    write_pair('index', home(), '/')
     for t in TOOLS:
-        with open(os.path.join(OUT, t['slug'] + '.html'), 'w', encoding='utf-8') as f:
-            f.write(tool_page(t))
+        write_pair(t['slug'], tool_page(t), '/' + t['slug'])
     pages = [('about', 'About PrintPals | Free Worksheets Made for Real Families', 'Why we made PrintPals: free, private worksheets and ready-made learning packs built around the real problems parents face.', ABOUT),
              ('privacy', 'Privacy | PrintPals', 'PrintPals does not collect what you type. Worksheets are made inside your own browser.', PRIVACY),
              ('help', 'Help and Support | PrintPals', 'Help with PrintPals: cancelling or changing your Plus subscription, refunds, receipts, the free week and printing tips.', HELP),
@@ -3875,15 +3917,26 @@ def main():
              ('my-shelf', 'My PrintPals Shelf | Your Collection', 'Everything your family has made with PrintPals Plus, and what to collect next.', shelf_body()),
              ('plus', 'PrintPals Plus | Monthly Learning Plans, Activity Books and Class Packs', 'Everything on PrintPals stays free. Plus adds seasonal packs, storybooks, journals, monthly plans and more for families, and class sets for teachers. Try it free for 7 days.', PLUS)]
     for slug, title, desc, body in pages:
-        with open(os.path.join(OUT, slug + '.html'), 'w', encoding='utf-8') as f:
-            f.write(simple_page(title, desc, '/' + slug, body))
+        write_pair(slug, simple_page(title, desc, '/' + slug, body), '/' + slug)
     with open(os.path.join(OUT, '404.html'), 'w', encoding='utf-8') as f:
         f.write(simple_page('Page not found | PrintPals', 'This page could not be found.', '/404', NOT_FOUND).replace('<head>', '<head>\n<meta name="robots" content="noindex">', 1))
     # One script file for every tool page: fewer downloads, faster pages.
     with open(os.path.join(OUT, 'js', 'pp.js'), 'w', encoding='utf-8') as f:
-        f.write('\n;\n'.join(open(os.path.join(OUT, 'js', n + '.js'), encoding='utf-8').read() for n in JS_FILES))
+        f.write(pp_src := '\n;\n'.join(open(os.path.join(OUT, 'js', n + '.js'), encoding='utf-8').read() for n in JS_FILES))
+    # The American worksheet code: every word converted, US Letter paper and dollars first.
+    form_values = set(re.findall(r'value="([^"]*)"', ''.join(open(os.path.join(OUT, n), encoding='utf-8').read() for n in os.listdir(OUT) if n.endswith('.html'))))
+    us_src = us_js(pp_src, form_values).replace("else if (/^en-(US|CA)|es-(US|MX)/.test(navigator.language)) sel.value = 'letter';", "else sel.value = 'letter';")
+    fix = "preview.innerHTML = pages.map((svg) => `<div class=\"sheet-wrap\">${svg}</div>`).join('');"
+    assert fix in us_src
+    us_src = us_fix_js() + us_src.replace(fix, fix + ' window.usFix(preview);')
+    us_src = us_src.replace('CURRENCIES.GBP', 'CURRENCIES.USD').replace("o.currency || 'GBP'", "o.currency || 'USD'")
+    with open(os.path.join(OUT, 'js', 'pp-us.js'), 'w', encoding='utf-8') as f:
+        f.write(us_src)
+    with open(os.path.join(OUT, 'js', 'plus-us.js'), 'w', encoding='utf-8') as f:
+        f.write(us_js(open(os.path.join(OUT, 'js', 'plus.js'), encoding='utf-8').read()))
     today = datetime.date.today().isoformat()
     urls = ['/'] + ['/' + t['slug'] for t in TOOLS] + ['/plus', '/help', '/about', '/privacy', '/terms']
+    urls += ['/us'] + ['/us' + u for u in urls[1:]]
     with open(os.path.join(OUT, 'sitemap.xml'), 'w', encoding='utf-8') as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                 + ''.join(f'  <url><loc>{SITE}{u}</loc><lastmod>{today}</lastmod></url>\n' for u in urls) + '</urlset>\n')

@@ -237,3 +237,14 @@ Higgsfield credits are nearly gone (0.66), so new art needs the owner's say.
 - "Nearly" (working name): app for long-distance couples/families (photo drops on home screen,
   thinking-of-you tap, same sky, open-when letters, memory book, printed books). Second app, later.
 - Domain playsamesies.com was left in the Namecheap cart, not bought.
+
+BATCH 37 (VERSION 58): UK/US ENGLISH. Every page exists twice: British at /slug, American at /us/slug (us.html and us/index.html for the home).
+build.py write_pair() writes both; usenglish.py converts: us_text (PHRASES then WORDS then -ise to -ize, Mr. Dr.), us_html (text, title, meta,
+JSON-LD, links to /us/), us_js (string literals of pp.js into js/pp-us.js and plus.js into plus-us.js; lone lowercase words are skipped because
+they are picture or option keys, and us_fix_js() changes visible lone words on screen after each render, never UPPERCASE so word searches match).
+US pages default to US Letter and US dollars. Header switch .langsw (choice saved in localStorage pp-lang, early redirect script in head),
+an offer banner for US browsers on UK pages and the reverse, a note under the print button, hreflang en-GB/en-US/x-default, both sets in the sitemap.
+To add a word: put it in WORDS or PHRASES in usenglish.py (PROTECT keeps names like Biscuit the puppy). tools37.js: seasonColour() now draws a busy
+scene (SEASON_FAMILIES: Halloween night with moon, bats, web and fence; harvest; Christmas/snow; Diwali/Lunar festival of lights; Easter; love; tooth;
+everything else uses its Colouring Month world). PINTEREST: on 4 Oct the owner got PrintPals-UPLOAD-TODAY-4-October.csv (55 pins: 25 Halloween 5 to 11 Oct,
+then 30 more 12 to 15 Oct). Old 25 pin and File 1 files moved to pinterest/old (they had past dates). 256 pins waiting. File 2 (19 Oct) unchanged.
