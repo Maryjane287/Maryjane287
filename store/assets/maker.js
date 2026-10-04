@@ -381,6 +381,8 @@ form.addEventListener('submit', async e => {
       url.searchParams.set(url.hostname.endsWith('lemonsqueezy.com') ? 'checkout[email]' : 'prefilled_email', form.email.value);
       // Lets Lemon Squeezy tell us which magazine was paid for, to unlock the download.
       if (made?.id && url.hostname.endsWith('lemonsqueezy.com')) url.searchParams.set('checkout[custom][order_id]', made.id);
+      // A discount code in the maker link (?code=...) is filled in at checkout; Lemon Squeezy checks it.
+      if (params.get('code') && url.hostname.endsWith('lemonsqueezy.com')) url.searchParams.set('checkout[discount_code]', params.get('code').trim().slice(0, 40));
       location.href = url.href;
     } else {
       location.href = new URL(form.getAttribute('action'), location.href).href;
