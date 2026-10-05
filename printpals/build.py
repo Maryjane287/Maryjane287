@@ -3435,7 +3435,7 @@ def top(active=''):
 FOOT = '''<footer><div class="wrap"><div class="foot-brand"><div class="brand" style="font-size:24px;color:#fff;gap:0">Print<b style="color:#ff8a8a">Pals</b></div>
 <p style="max-width:420px;margin-top:8px">Free printable worksheets and ready-made packs for children, made in seconds. Everything is made inside your own browser: nothing you type is sent to us or stored.</p>
 <p class="foot-links"><a href="/plus">PrintPals Plus</a><a href="/my-shelf">My shelf</a><a href="/help">Help</a><a href="/refunds">Refunds and delivery</a><a href="/about">About us</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a>''' + ('<a href="#" data-action="cookies">Cookie choices</a>' if PINTEREST_TAG else '') + '''<a href="mailto:''' + CONTACT + '''">Contact</a></p>
-<p style="margin-top:14px">© PrintPals. Free for home and classroom use.</p></div>
+<p style="margin-top:14px">© PrintPals, by Grace and Loannes Ltd. For home and classroom use.</p></div>
 <div class="foot-cols">''' + ''.join(f'<div><h4>{v}</h4>' + ''.join(f'<a href="/{t["slug"]}">{t["nav"]}</a>' for t in [x for x in TOOLS if x['cat'] == k][:6]) + f'<a class="foot-all" href="/#{k}">See all {sum(1 for x in TOOLS if x["cat"] == k)} →</a></div>' for k, v in CATS) + '''</div></div></footer>'''
 
 SCRIPTS = f'<script src="/js/pp.js?v={VERSION}"></script>'
@@ -3575,8 +3575,11 @@ def home():
         more = f'<div class="more-row"><button type="button" class="more-btn" data-more="{len(ts)}">Show all <b>{len(ts)}</b> in {html.escape(NAV_LABEL[k])} ▾</button></div>' if len(ts) > 4 else ''
         return f'''<section class="cat{' cat-packs' if k == 'packs' else ''}" id="{k}"><h2>{v} <span class="count">{len(ts)}</span></h2><p class="cat-lead">{CAT_TEXT[k]}</p><div class="tools">{''.join(card(t, i) for i, t in enumerate(ts))}</div>{more}</section>'''
     sections = ''.join(section(k, v) for k, v in CATS)
-    ld = {'@context': 'https://schema.org', '@type': 'WebSite', 'name': 'PrintPals', 'url': SITE + '/',
-          'description': 'Free printable worksheets and ready-made learning packs for children aged 2 to 10: a personalised week in one click, tracing, reading, maths, puzzles, crafts and charts.'}
+    ld = {'@context': 'https://schema.org', '@graph': [
+          {'@type': 'WebSite', 'name': 'PrintPals', 'url': SITE + '/',
+           'description': 'Free printable worksheets and ready-made learning packs for children aged 2 to 10: a personalised week in one click, tracing, reading, maths, puzzles, crafts and charts.'},
+          {'@type': 'Organization', 'name': 'PrintPals', 'legalName': 'Grace and Loannes Ltd', 'url': SITE + '/', 'logo': SITE + '/img/icon-512.png', 'email': CONTACT,
+           'contactPoint': {'@type': 'ContactPoint', 'contactType': 'customer support', 'email': CONTACT}}]}
     shapes = ''.join(f'<span style="width:{s}px;height:{s}px;left:{x}%;top:{y}%;background:{c};animation-delay:{d}s"></span>'
                      for s, x, y, c, d in [(90, 6, 18, '#ffe08a', 0), (60, 88, 12, '#bfe8ff', 1.5), (46, 80, 70, '#ffc6d9', 3), (70, 12, 72, '#c9f2e6', 4.5)])
     only = ''.join(f'<a class="only-card" href="{u}"><span class="only-ico">{i}</span><b>{html.escape(h)}</b><span>{html.escape(d)}</span><em>{html.escape(c)} →</em></a>' for i, h, d, u, c in ONLY)
@@ -3608,7 +3611,7 @@ def home():
 <h1>Stop searching.<br><span class="hl">Start learning.</span></h1>
 <p class="lead">A whole week of learning planned for your child in one click, with their name on every page. Plus {sum(1 for t in TOOLS if t['cat'] != 'packs')} free worksheet makers for ages 2 to 10. No sign up, ever.</p>
 <div class="cta"><a class="btn big" href="/weekly-learning-pack">🎒 Plan my child's week, free</a><a class="btn plusbtn big" href="#plus-show">✨ Explore PrintPals Plus</a></div>
-<div class="chips"><span class="chip">✓ 100% free</span><span class="chip">✓ No sign up</span><span class="chip">✓ Private on your device</span><span class="chip">✓ A4 and US Letter</span><span class="chip">✓ UK or US English</span><span class="chip">✓ Ink saver</span></div>
+<div class="chips"><span class="chip">✓ 120 free makers</span><span class="chip">✓ No sign up</span><span class="chip">✓ Private on your device</span><span class="chip">✓ A4 and US Letter</span><span class="chip">✓ UK or US English</span><span class="chip">✓ Ink saver</span></div>
 </div></section>
 {showcase}
 <section class="only"><div class="wrap"><h2>What only PrintPals does</h2><p class="cat-lead">Other sites give you ten thousand worksheets and leave you to work it out. We built PrintPals around the real problems parents tell us about.</p><div class="only-grid">{only}</div></div></section>
@@ -3967,7 +3970,7 @@ def write_catalog():
             continue
         teacher = bool(t.get('teacher') or t['id'] == 'classpack')
         parts = re.split(r'\s*\|\s*', re.split(r'\s*\|\s*PrintPals', t['title'])[0])
-        title = us_text(parts[0] + ((', ' if ':' in ' '.join(parts[1:]) else ': ') + ', '.join(parts[1:]) if len(parts) > 1 else ''))[:150]
+        title = us_text(parts[0] + (': ' + ', '.join(parts[1:]).replace(': ', ', ') if len(parts) > 1 else ''))[:150]
         plan = ('Part of the PrintPals teacher plan: try it free for 7 days, no card needed. Then $59 a year for every class pack.' if teacher
                 else 'Part of PrintPals Plus: try it free for 7 days, no card needed. Then $4.99 a month or $39 a year for every Plus pack.')
         desc = us_text(t['desc'].rstrip('.')) + '. ' + plan + ' Personalized with a name, printed at home or school on US Letter or A4.'
@@ -4002,6 +4005,8 @@ def main():
     fix = "preview.innerHTML = pages.map((svg) => `<div class=\"sheet-wrap\">${svg}</div>`).join('');"
     assert fix in us_src
     us_src = us_fix_js() + us_src.replace(fix, fix + ' window.usFix(preview);')
+    # Pictures are linked as img/..., which on /us/ pages would look in /us/img/: point them at /img/.
+    us_src = re.sub(r'(["\'`])img/', r'\1/img/', us_src)
     us_src = us_src.replace('CURRENCIES.GBP', 'CURRENCIES.USD').replace("o.currency || 'GBP'", "o.currency || 'USD'")
     with open(os.path.join(OUT, 'js', 'pp-us.js'), 'w', encoding='utf-8') as f:
         f.write(us_src)

@@ -1,4 +1,4 @@
-window.usFix=function(root){var M={"colour": "color", "colours": "colors", "coloured": "colored", "colouring": "coloring", "colourful": "colorful", "colourings": "colorings", "favourite": "favorite", "favourites": "favorites", "behaviour": "behavior", "behaviours": "behaviors", "neighbour": "neighbor", "neighbours": "neighbors", "harbour": "harbor", "flavour": "flavor", "flavours": "flavors", "honour": "honor", "humour": "humor", "centre": "center", "centres": "centers", "metre": "meter", "metres": "meters", "centimetre": "centimeter", "centimetres": "centimeters", "kilometre": "kilometer", "kilometres": "kilometers", "litre": "liter", "litres": "liters", "theatre": "theater", "grey": "gray", "cosy": "cozy", "cosier": "cozier", "practise": "practice", "practised": "practiced", "practising": "practicing", "practises": "practices", "traveller": "traveler", "travellers": "travelers", "travelled": "traveled", "travelling": "traveling", "cancelled": "canceled", "cancelling": "canceling", "labelled": "labeled", "labelling": "labeling", "marvellous": "marvelous", "jewellery": "jewelry", "modelling": "modeling", "pyjamas": "pajamas", "pyjama": "pajama", "aeroplane": "airplane", "aeroplanes": "airplanes", "programme": "program", "programmes": "programs", "yoghurt": "yogurt", "maths": "math", "mum": "mom", "mums": "moms", "nappy": "diaper", "nappies": "diapers", "jumper": "sweater", "jumpers": "sweaters", "rubbish": "trash", "torch": "flashlight", "torchlight": "flashlight", "torches": "flashlights", "queue": "line", "queues": "lines", "tick": "check", "ticks": "checks", "ticked": "checked", "ticking": "checking", "untick": "uncheck", "timetable": "schedule", "learnt": "learned", "spelt": "spelled", "whilst": "while", "amongst": "among", "sums": "problems", "minibeast": "bug", "minibeasts": "bugs", "conker": "buckeye", "conkers": "buckeyes", "pupil": "student", "pupils": "students", "organiser": "organizer", "organisers": "organizers", "analyse": "analyze", "catalogue": "catalog", "skilful": "skillful", "licence": "license", "lolly": "lollipop", "sledge": "sled", "holiday": "vacation", "nursery": "preschool", "ladybird": "ladybug", "ladybirds": "ladybugs", "lorry": "truck", "lorries": "trucks", "pudding": "dessert", "aubergine": "eggplant", "aubergines": "eggplants", "trolley": "cart", "motorbike": "motorcycle", "motorbikes": "motorcycles"};var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),n,list=[];while((n=w.nextNode()))if(n.parentNode&&n.parentNode.closest&&n.parentNode.closest("svg"))list.push(n);list.forEach(function(t){var s=t.nodeValue,o=s.replace(/[A-Za-z]+/g,function(x){if(x.length>1&&x===x.toUpperCase())return x;var l=x.toLowerCase(),r=M[l];if(!r)return x;if(x[0]!==l[0])return r[0].toUpperCase()+r.slice(1);return x===l?r:x});if(o!==s)t.nodeValue=o})};
+window.usFix=function(root){var M={"colour": "color", "colours": "colors", "coloured": "colored", "colouring": "coloring", "colourful": "colorful", "colourings": "colorings", "favourite": "favorite", "favourites": "favorites", "behaviour": "behavior", "behaviours": "behaviors", "neighbour": "neighbor", "neighbours": "neighbors", "harbour": "harbor", "flavour": "flavor", "flavours": "flavors", "honour": "honor", "humour": "humor", "centre": "center", "centres": "centers", "metre": "meter", "metres": "meters", "centimetre": "centimeter", "centimetres": "centimeters", "kilometre": "kilometer", "kilometres": "kilometers", "litre": "liter", "litres": "liters", "theatre": "theater", "grey": "gray", "cosy": "cozy", "cosier": "cozier", "practise": "practice", "practised": "practiced", "practising": "practicing", "practises": "practices", "traveller": "traveler", "travellers": "travelers", "travelled": "traveled", "travelling": "traveling", "cancelled": "canceled", "cancelling": "canceling", "labelled": "labeled", "labelling": "labeling", "marvellous": "marvelous", "jewellery": "jewelry", "modelling": "modeling", "pyjamas": "pajamas", "pyjama": "pajama", "aeroplane": "airplane", "aeroplanes": "airplanes", "programme": "program", "programmes": "programs", "yoghurt": "yogurt", "maths": "math", "mum": "mom", "mums": "moms", "nappy": "diaper", "nappies": "diapers", "jumper": "sweater", "jumpers": "sweaters", "rubbish": "trash", "torch": "flashlight", "torchlight": "flashlight", "torches": "flashlights", "queue": "line", "queues": "lines", "tick": "check", "ticks": "checks", "ticked": "checked", "ticking": "checking", "untick": "uncheck", "timetable": "schedule", "learnt": "learned", "spelt": "spelled", "whilst": "while", "amongst": "among", "sums": "problems", "minibeast": "bug", "minibeasts": "bugs", "conker": "buckeye", "conkers": "buckeyes", "pupil": "student", "pupils": "students", "organiser": "organizer", "organisers": "organizers", "analyse": "analyze", "catalogue": "catalog", "skilful": "skillful", "licence": "license", "lolly": "lollipop", "sledge": "sled", "holiday": "vacation", "nursery": "preschool", "palaeontologist": "paleontologist", "palaeontologists": "paleontologists", "grandad": "grandpa", "savoury": "savory", "wellbeing": "well-being", "ladybird": "ladybug", "ladybirds": "ladybugs", "lorry": "truck", "lorries": "trucks", "pudding": "dessert", "aubergine": "eggplant", "aubergines": "eggplants", "trolley": "cart", "motorbike": "motorcycle", "motorbikes": "motorcycles"};var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),n,list=[];while((n=w.nextNode()))if(n.parentNode&&n.parentNode.closest&&n.parentNode.closest("svg"))list.push(n);list.forEach(function(t){var s=t.nodeValue,o=s.replace(/[A-Za-z]+/g,function(x){if(x.length>1&&x===x.toUpperCase())return x;var l=x.toLowerCase(),r=M[l];if(!r)return x;if(x[0]!==l[0])return r[0].toUpperCase()+r.slice(1);return x===l?r:x});if(o!==s)t.nodeValue=o})};
 // PrintPals handwriting letters.
 // Every letter is drawn stroke by stroke, the way a teacher writes it, in the
 // order a child should write it. Units: the top line is y=0, the middle
@@ -210,7 +210,7 @@ class Page {
   }
 
   footer() {
-    this.add(`<text x="${this.w / 2}" y="${this.h - this.m + 1}" text-anchor="middle" font-family="${FONT}" font-weight="700" font-size="3" fill="#b8b3cc">Free printable worksheets at printpals.web.app</text>`);
+    this.add(`<text x="${this.w / 2}" y="${this.h - this.m + 1}" text-anchor="middle" font-family="${FONT}" font-weight="700" font-size="3" fill="#b8b3cc">Made with love at printpals.web.app</text>`);
   }
 
   /** Handwriting guide lines for one row. size = top line to baseline. */
@@ -273,21 +273,21 @@ function rng(seed) {
 // PrintPals worksheet makers. Each one returns a list of pages (SVG).
 
 const ABC = {
-  A: ['Apple', 'img/apple.webp'], B: ['Balloon', 'img/balloon.webp'], C: ['Cat', 'img/cat.webp'],
-  D: ['Dog', 'img/dog.webp'], E: ['Egg', 'img/egg.webp'], F: ['Fish', 'img/fish.webp'],
-  G: ['Gorilla', 'img/gorilla.webp'], H: ['Hat', 'img/hat.webp'], I: ['Ice cream', '🍦'],
-  J: ['Juice', '🧃'], K: ['Kite', '🪁'], L: ['Lion', 'img/lion.webp'], M: ['Monkey', 'img/monkey.webp'],
-  N: ['Nest', 'img/nest.webp'], O: ['Octopus', 'img/octopus.webp'], P: ['Pig', 'img/pig.webp'],
-  Q: ['Queen', '👸'], R: ['Rainbow', 'img/rainbow.webp'], S: ['Sun', 'img/sun.webp'],
-  T: ['Turtle', 'img/turtle.webp'], U: ['Umbrella', '☂️'], V: ['Violin', '🎻'], W: ['Whale', '🐳'],
-  X: ['Fox', '🦊'], Y: ['Yo-yo', '🪀'], Z: ['Zebra', 'img/zebra.webp'],
+  A: ['Apple', '/img/apple.webp'], B: ['Balloon', '/img/balloon.webp'], C: ['Cat', '/img/cat.webp'],
+  D: ['Dog', '/img/dog.webp'], E: ['Egg', '/img/egg.webp'], F: ['Fish', '/img/fish.webp'],
+  G: ['Gorilla', '/img/gorilla.webp'], H: ['Hat', '/img/hat.webp'], I: ['Ice cream', '🍦'],
+  J: ['Juice', '🧃'], K: ['Kite', '🪁'], L: ['Lion', '/img/lion.webp'], M: ['Monkey', '/img/monkey.webp'],
+  N: ['Nest', '/img/nest.webp'], O: ['Octopus', '/img/octopus.webp'], P: ['Pig', '/img/pig.webp'],
+  Q: ['Queen', '👸'], R: ['Rainbow', '/img/rainbow.webp'], S: ['Sun', '/img/sun.webp'],
+  T: ['Turtle', '/img/turtle.webp'], U: ['Umbrella', '☂️'], V: ['Violin', '🎻'], W: ['Whale', '🐳'],
+  X: ['Fox', '🦊'], Y: ['Yo-yo', '🪀'], Z: ['Zebra', '/img/zebra.webp'],
 };
 
 const NUMBER_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
   'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'];
 
 function picture(src, x, y, size) {
-  if (src.startsWith('img/')) {
+  if (src.startsWith('/img/')) {
     return `<image href="${src}" x="${x}" y="${y}" width="${size}" height="${size}" preserveAspectRatio="xMidYMid meet"/>`;
   }
   return `<text x="${x + size / 2}" y="${y + size * 0.82}" font-size="${size * 0.85}" text-anchor="middle">${src}</text>`;
@@ -309,7 +309,7 @@ const CHEER_ROOM = 26;
 function cheer(pg, k) {
   const friend = CHEER_FRIENDS[Math.abs(k) % CHEER_FRIENDS.length], words = CHEER_WORDS[Math.abs(k) % CHEER_WORDS.length];
   const y = pg.bottom + 2, size = 23;
-  pg.add(`<image href="img/${friend}.webp" x="${pg.right - size}" y="${y}" width="${size}" height="${size}" preserveAspectRatio="xMidYMid meet"/>`);
+  pg.add(`<image href="/img/${friend}.webp" x="${pg.right - size}" y="${y}" width="${size}" height="${size}" preserveAspectRatio="xMidYMid meet"/>`);
   const bw = words.length * 2.7 + 10, bx = pg.right - size - bw - 3, by = y + 4;
   pg.add(`<rect x="${bx}" y="${by}" width="${bw}" height="11" rx="5.5" fill="#fff6e0" stroke="#ffb938" stroke-width="0.5"/>`);
   pg.add(`<path d="M${bx + bw - 0.4} ${by + 4} L${bx + bw + 3.5} ${by + 6.5} L${bx + bw - 0.4} ${by + 8}" fill="#fff6e0" stroke="#ffb938" stroke-width="0.5" stroke-linejoin="round"/>`);
@@ -431,7 +431,7 @@ function numberPage(n, paper, o) {
       pg.add(`<text x="${pg.left}" y="${pg.y + 2}" font-family="${FONT}" font-weight="800" font-size="4.5" fill="${INK}">Count the ${n === 1 ? art : plural}:</text>`);
       for (let i = 0; i < n; i++) {
         const x = pg.left + (i % 10) * ps, y = pg.y + 5 + Math.floor(i / 10) * ps;
-        pg.add(`<image href="img/${art}.webp" x="${x + ps * 0.06}" y="${y}" width="${ps * 0.88}" height="${ps * 0.88}" preserveAspectRatio="xMidYMid meet"/>`);
+        pg.add(`<image href="/img/${art}.webp" x="${x + ps * 0.06}" y="${y}" width="${ps * 0.88}" height="${ps * 0.88}" preserveAspectRatio="xMidYMid meet"/>`);
       }
       pg.y += rows * ps + 10;
     }
@@ -688,7 +688,7 @@ const EMOJI_ART = {
   '⭐': 'star', '🌟': 'star', '🍓': 'strawberry', '☀️': 'sun', '🌞': 'sun', '🌻': 'sunflower', '🌷': 'tulip', '🐢': 'turtle', '🦓': 'zebra',
   '🧸': 'bear',
 };
-function artFor(ch) { return EMOJI_ART[ch] ? `img/${EMOJI_ART[ch]}.webp` : ''; }
+function artFor(ch) { return EMOJI_ART[ch] ? `/img/${EMOJI_ART[ch]}.webp` : ''; }
 
 function emoji(ch, x, y, size) {
   const art = artFor(ch);
@@ -1440,7 +1440,7 @@ Object.assign(MAKERS, {
 
 /** A picture centred on (cx, cy): one of our painted pictures or an emoji. */
 function pic(src, cx, cy, size) {
-  if (src.startsWith('img/')) return `<image href="${src}" x="${(cx - size / 2).toFixed(2)}" y="${(cy - size / 2).toFixed(2)}" width="${size.toFixed(2)}" height="${size.toFixed(2)}" preserveAspectRatio="xMidYMid meet"/>`;
+  if (src.startsWith('/img/')) return `<image href="${src}" x="${(cx - size / 2).toFixed(2)}" y="${(cy - size / 2).toFixed(2)}" width="${size.toFixed(2)}" height="${size.toFixed(2)}" preserveAspectRatio="xMidYMid meet"/>`;
   return emoji(src, cx, cy, size * 0.84);
 }
 
@@ -1485,23 +1485,23 @@ function scissors(pg, y) {
 
 // ================================================================ pictures
 const SETS = {
-  animals: [['Cat', 'img/cat.webp'], ['Dog', 'img/dog.webp'], ['Fish', 'img/fish.webp'], ['Gorilla', 'img/gorilla.webp'], ['Lion', 'img/lion.webp'],
-    ['Monkey', 'img/monkey.webp'], ['Octopus', 'img/octopus.webp'], ['Pig', 'img/pig.webp'], ['Turtle', 'img/turtle.webp'], ['Zebra', 'img/zebra.webp'],
+  animals: [['Cat', '/img/cat.webp'], ['Dog', '/img/dog.webp'], ['Fish', '/img/fish.webp'], ['Gorilla', '/img/gorilla.webp'], ['Lion', '/img/lion.webp'],
+    ['Monkey', '/img/monkey.webp'], ['Octopus', '/img/octopus.webp'], ['Pig', '/img/pig.webp'], ['Turtle', '/img/turtle.webp'], ['Zebra', '/img/zebra.webp'],
     ['Rabbit', '🐰'], ['Frog', '🐸'], ['Owl', '🦉'], ['Elephant', '🐘'], ['Giraffe', '🦒'], ['Bee', '🐝'], ['Duck', '🦆'], ['Penguin', '🐧'],
     ['Butterfly', '🦋'], ['Snail', '🐌'], ['Bear', '🐻'], ['Chick', '🐥'], ['Ladybug', '🐞'], ['Ant', '🐜']],
-  food: [['Apple', 'img/apple.webp'], ['Egg', 'img/egg.webp'], ['Banana', '🍌'], ['Strawberry', '🍓'], ['Carrot', '🥕'], ['Cake', '🎂'],
+  food: [['Apple', '/img/apple.webp'], ['Egg', '/img/egg.webp'], ['Banana', '🍌'], ['Strawberry', '🍓'], ['Carrot', '🥕'], ['Cake', '🎂'],
     ['Cookie', '🍪'], ['Pizza', '🍕'], ['Ice cream', '🍦'], ['Grapes', '🍇'], ['Pear', '🍐'], ['Cheese', '🧀'], ['Bread', '🍞'],
     ['Watermelon', '🍉'], ['Cupcake', '🧁'], ['Lemon', '🍋'], ['Corn', '🌽'], ['Cherries', '🍒'], ['Orange', '🍊'], ['Blueberries', '🫐'], ['Doughnut', '🍩'], ['Mushroom', '🍄']],
-  things: [['Balloon', 'img/balloon.webp'], ['Hat', 'img/hat.webp'], ['Rainbow', 'img/rainbow.webp'], ['Star', 'img/star.webp'], ['Sun', 'img/sun.webp'],
-    ['Nest', 'img/nest.webp'], ['Kite', '🪁'], ['Ball', '⚽'], ['Car', '🚗'], ['Rocket', '🚀'], ['Umbrella', '☂️'], ['Book', '📚'], ['Teddy', '🧸'],
-    ['Crayon', '🖍️'], ['Bike', '🚲'], ['Boat', '⛵'], ['Moon', '🌙'], ['Tree', '🌳'], ['Sunflower', '🌻'], ['Tulip', '🌷'], ['Drum', '🥁'], ['Blocks', 'img/blocks.webp'], ['Heart', '❤️'], ['Medal', '🏅']],
-  party: [['Cake', '🎂'], ['Balloon', 'img/balloon.webp'], ['Present', '🎁'], ['Popper', '🎉'], ['Cupcake', '🧁'], ['Party hat', 'img/hat.webp'],
-    ['Sweets', '🍬'], ['Lollipop', '🍭'], ['Star', 'img/star.webp'], ['Crown', '👑'], ['Music', '🎵'], ['Juice', '🧃'], ['Ice cream', '🍦'],
-    ['Teddy', '🧸'], ['Confetti', '🎊'], ['Doughnut', '🍩'], ['Rainbow', 'img/rainbow.webp'], ['Games', '🎲']],
+  things: [['Balloon', '/img/balloon.webp'], ['Hat', '/img/hat.webp'], ['Rainbow', '/img/rainbow.webp'], ['Star', '/img/star.webp'], ['Sun', '/img/sun.webp'],
+    ['Nest', '/img/nest.webp'], ['Kite', '🪁'], ['Ball', '⚽'], ['Car', '🚗'], ['Rocket', '🚀'], ['Umbrella', '☂️'], ['Book', '📚'], ['Teddy', '🧸'],
+    ['Crayon', '🖍️'], ['Bike', '🚲'], ['Boat', '⛵'], ['Moon', '🌙'], ['Tree', '🌳'], ['Sunflower', '🌻'], ['Tulip', '🌷'], ['Drum', '🥁'], ['Blocks', '/img/blocks.webp'], ['Heart', '❤️'], ['Medal', '🏅']],
+  party: [['Cake', '🎂'], ['Balloon', '/img/balloon.webp'], ['Present', '🎁'], ['Popper', '🎉'], ['Cupcake', '🧁'], ['Party hat', '/img/hat.webp'],
+    ['Sweets', '🍬'], ['Lollipop', '🍭'], ['Star', '/img/star.webp'], ['Crown', '👑'], ['Music', '🎵'], ['Juice', '🧃'], ['Ice cream', '🍦'],
+    ['Teddy', '🧸'], ['Confetti', '🎊'], ['Doughnut', '🍩'], ['Rainbow', '/img/rainbow.webp'], ['Games', '🎲']],
 };
 // Use our painted pictures wherever we have one.
 for (const k in SETS) SETS[k] = SETS[k].map(([n, src]) => [n, artFor(src) || src]);
-const PAINTED = [...SETS.animals, ...SETS.food, ...SETS.things].filter(([, s]) => s.startsWith('img/'));
+const PAINTED = [...SETS.animals, ...SETS.food, ...SETS.things].filter(([, s]) => s.startsWith('/img/'));
 const SIGHT_WORDS = ['the', 'and', 'is', 'it', 'in', 'to', 'my', 'you', 'we', 'see', 'look', 'can', 'go', 'said', 'was', 'play', 'like', 'come', 'here', 'big', 'little', 'up', 'down', 'said', 'yes', 'no', 'for', 'at'];
 
 // ================================================================ photo colouring page
@@ -1617,7 +1617,7 @@ function lineArt(img, detail) {
 }
 
 function makePhoto(o, paper) {
-  if (!PHOTO.img && !PHOTO.loading && !PHOTO.error) loadPhoto('img/lion.webp', true);
+  if (!PHOTO.img && !PHOTO.loading && !PHOTO.error) loadPhoto('/img/lion.webp', true);
   const name = String(o.name || '').trim();
   const title = (o.title || '').trim() || (name ? `${possessive(nameOf(name))} Coloring Page` : 'My Coloring Page');
   if (!PHOTO.img) {
@@ -1651,21 +1651,21 @@ function makePhoto(o, paper) {
 // ================================================================ story sheets
 const STORIES = {
   balloon: {
-    title: '{name} and the Big Red Balloon', pic: 'img/balloon.webp', words: ['balloon', 'wind', 'tree'],
+    title: '{name} and the Big Red Balloon', pic: '/img/balloon.webp', words: ['balloon', 'wind', 'tree'],
     text: ['{name} has a big red balloon.', 'Whoosh! The wind blows it away.', '{name} and {friend} run and run.', 'The balloon is stuck in a tall tree.',
       '{friend} climbs up and gets it down.', '{name} gives {friend} a big hug and says, "Thank you!"'],
     q: [['What color is the balloon?', '🔴 red', '🔵 blue', '🟢 green'], ['Where does the balloon get stuck?', '🌳 in a tree', '🏠 on a roof', '🌊 in the sea'],
       ['What does {name} say?', '"Thank you!"', '"Good night!"', '"Go away!"']],
   },
   kitten: {
-    title: '{name} Finds a Kitten', pic: 'img/cat.webp', words: ['kitten', 'lost', 'door'],
+    title: '{name} Finds a Kitten', pic: '/img/cat.webp', words: ['kitten', 'lost', 'door'],
     text: ['{name} hears a little sound. Meow!', 'It is a small gray kitten.', 'The kitten is lost and sad.', '{name} and {friend} look for its home.',
       'They find a house with a blue door.', 'A man opens the door and smiles. "My kitten!"', 'The kitten purrs and purrs.'],
     q: [['What animal does {name} find?', '🐱 a kitten', '🐶 a puppy', '🦆 a duck'], ['How does the kitten feel at first?', '😢 sad', '😄 happy', '😴 sleepy'],
       ['What color is the door?', '🔵 blue', '🔴 red', '🟡 yellow']],
   },
   picnic: {
-    title: "{name}'s Picnic in the Park", pic: 'img/apple.webp', words: ['picnic', 'park', 'sandwich'],
+    title: "{name}'s Picnic in the Park", pic: '/img/apple.webp', words: ['picnic', 'park', 'sandwich'],
     text: ['{name} and {friend} go to the park.', 'They have a picnic on a big rug.', 'They have apples, sandwiches and juice.', 'A cheeky dog runs up to the rug.',
       'Snap! The dog takes a sandwich!', 'Everyone laughs, and the dog wags its tail.'],
     q: [['Where do they have the picnic?', '🌳 at the park', '🏖️ at the beach', '🏫 at school'], ['What does the dog take?', '🥪 a sandwich', '🍎 an apple', '⚽ a ball'],
@@ -1679,14 +1679,14 @@ const STORIES = {
       ['What can {name} do on the moon?', '🦘 jump high', '🏊 swim', '🎂 bake a cake']],
   },
   rain: {
-    title: '{name} and the Rainy Day', pic: 'img/rainbow.webp', words: ['rain', 'puddle', 'rainbow'],
+    title: '{name} and the Rainy Day', pic: '/img/rainbow.webp', words: ['rain', 'puddle', 'rainbow'],
     text: ['Drip, drop! It is raining.', '{name} puts on boots and a coat.', '{name} and {friend} go outside.', 'They jump in big puddles. Splash!',
       'Then the sun comes out.', 'They see a rainbow in the sky.'],
     q: [['What is the weather at the start?', '🌧️ rainy', '❄️ snowy', '☀️ sunny'], ['What do they jump in?', '💦 puddles', '🍂 leaves', '🏖️ sand'],
       ['What do they see at the end?', '🌈 a rainbow', '✈️ a plane', '🐦 a bird']],
   },
   turtle: {
-    title: "{name}'s Turtle Wins the Race", pic: 'img/turtle.webp', words: ['turtle', 'race', 'slow'],
+    title: "{name}'s Turtle Wins the Race", pic: '/img/turtle.webp', words: ['turtle', 'race', 'slow'],
     text: ['{name} has a pet turtle called Speedy.', 'Speedy is very, very slow.', 'One day there is a race in the park.', 'The rabbit runs fast, then stops for a nap.',
       'Speedy keeps going, step by step.', 'Speedy wins the race! {name} and {friend} cheer.'],
     q: [['What is the turtle called?', 'Speedy', 'Sleepy', 'Spot'], ['Who stops for a nap?', '🐰 the rabbit', '🐢 Speedy', '🐶 the dog'],
@@ -1706,13 +1706,13 @@ const STORIES = {
       ['What does the snowman get?', '🧣 a scarf', '👟 shoes', '🎒 a bag']],
   },
   teddy: {
-    title: '{name} and the Lost Teddy', pic: 'img/bear.webp', words: ['teddy', 'under', 'garden'],
+    title: '{name} and the Lost Teddy', pic: '/img/bear.webp', words: ['teddy', 'under', 'garden'],
     text: ['{name} cannot find Teddy.', '{name} looks under the bed. No Teddy!', '{name} looks in the toy box. No Teddy!', '{friend} looks in the garden.', 'Teddy is sitting under a tree!', '{name} gives Teddy a big squeeze.'],
     q: [['Who is lost?', '🧸 Teddy', '🐱 the cat', '🐶 the dog'], ['Where is Teddy?', '🌳 under a tree', '🛏️ under the bed', '📦 in the toy box'],
       ['What does {name} do at the end?', '🤗 gives Teddy a squeeze', '😴 goes to sleep', '🏃 runs away']],
   },
   baking: {
-    title: '{name} Bakes a Cake', pic: 'img/cake.webp', words: ['bake', 'oven', 'share'],
+    title: '{name} Bakes a Cake', pic: '/img/cake.webp', words: ['bake', 'oven', 'share'],
     text: ['{name} wants to bake a cake.', 'In go the eggs, the flour and the sugar.', '{name} and {friend} mix and mix.', 'The cake goes in the hot oven.', 'Ding! The cake is ready.', 'They share it with everyone. Yum!'],
     q: [['What do they make?', '🎂 a cake', '🍕 a pizza', '🥪 a sandwich'], ['Where does the cake go?', '🔥 in the oven', '🧊 in the fridge', '🛁 in the bath'],
       ['What do they do with the cake?', '🤝 share it', '🗑️ throw it away', '🎁 hide it']],
@@ -2442,9 +2442,9 @@ function makeSudoku(o, paper) {
 
 // ================================================================ b d p q letter mix-ups
 const MIXUP_WORDS = {
-  b: [['balloon', 'img/balloon.webp'], ['ball', '⚽'], ['bee', '🐝'], ['bus', '🚌'], ['book', '📚'], ['banana', '🍌'], ['bear', '🐻'], ['bed', '🛏️'], ['bike', '🚲'], ['boat', '⛵']],
-  d: [['dog', 'img/dog.webp'], ['duck', '🦆'], ['drum', '🥁'], ['door', '🚪'], ['dice', '🎲'], ['dinosaur', '🦕'], ['deer', '🦌'], ['dolphin', '🐬']],
-  p: [['pig', 'img/pig.webp'], ['pen', '🖊️'], ['pizza', '🍕'], ['pear', '🍐'], ['panda', '🐼'], ['penguin', '🐧'], ['pumpkin', '🎃'], ['parrot', '🦜']],
+  b: [['balloon', '/img/balloon.webp'], ['ball', '⚽'], ['bee', '🐝'], ['bus', '🚌'], ['book', '📚'], ['banana', '🍌'], ['bear', '🐻'], ['bed', '🛏️'], ['bike', '🚲'], ['boat', '⛵']],
+  d: [['dog', '/img/dog.webp'], ['duck', '🦆'], ['drum', '🥁'], ['door', '🚪'], ['dice', '🎲'], ['dinosaur', '🦕'], ['deer', '🦌'], ['dolphin', '🐬']],
+  p: [['pig', '/img/pig.webp'], ['pen', '🖊️'], ['pizza', '🍕'], ['pear', '🍐'], ['panda', '🐼'], ['penguin', '🐧'], ['pumpkin', '🎃'], ['parrot', '🦜']],
   q: [['queen', '👸'], ['question', '❓']],
 };
 const PAPER_TINTS = { white: '#fff', cream: '#fdf6e3', blue: '#eaf3fb', green: '#eef7ea' };
@@ -2467,7 +2467,7 @@ function mixupLearn(pg, pair, top) {
     pg.add(`<text x="${x0 + w + 12}" y="${y + 16}" font-family="${TITLE_FONT}" font-weight="800" font-size="7" fill="${INK}">The bed trick</text>`);
     textLines(pg, ['Write the word bed. It looks like a bed!', 'b is the headboard at the start,', 'd is the footboard at the end.', 'Thumbs up 👍👍 and make a bed with your hands.'], x0 + w + 12, y + 25, 4.6, { weight: 700, lh: 1.5 });
   } else {
-    pg.add(pic('img/pig.webp', pg.left + 22, y + 30, 34));
+    pg.add(pic('/img/pig.webp', pg.left + 22, y + 30, 34));
     pg.add(`<text x="${pg.left + 46}" y="${y + 16}" font-family="${TITLE_FONT}" font-weight="800" font-size="7" fill="${INK}">p and q tips</text>`);
     textLines(pg, ['p is for pig. Its tail goes down on the left side.', 'q almost always has u after it: qu, like queen.', 'Say the sound as you write: p p p, qu qu qu.', 'Trace them slowly with your finger first.'], pg.left + 46, y + 25, 4.6, { weight: 700, lh: 1.5 });
   }
@@ -2578,7 +2578,7 @@ Object.assign(MAKERS, { photo: makePhoto, story: makeStory, bingo: makeBingo, pa
 // PrintPals batch 3: sight words, CVC phonics, number bonds, flashcards,
 // chore charts, feelings charts, scavenger hunts and matching.
 
-const ART = (name) => `img/${name}.webp`;
+const ART = (name) => `/img/${name}.webp`;
 const P = (ch) => artFor(ch) || ch; // painted picture when we have one
 
 // ================================================================ sight words
@@ -2770,7 +2770,7 @@ function makeBonds(o, paper) {
 // ================================================================ flashcards
 const FLASH_SETS = {
   animals: () => SETS.animals, food: () => SETS.food, things: () => SETS.things,
-  abc: () => Object.entries(ABC).map(([L, [w, src]]) => [`${L} ${L.toLowerCase()}`, src.startsWith('img/') ? src : P(src), w]),
+  abc: () => Object.entries(ABC).map(([L, [w, src]]) => [`${L} ${L.toLowerCase()}`, src.startsWith('/img/') ? src : P(src), w]),
   numbers: () => [...Array(21)].map((_, n) => [String(n), '', NUMBER_WORDS[n]]),
 };
 
@@ -3046,7 +3046,7 @@ function makeMatching(o, paper) {
   const rand = rng(+o.seed || 1);
   const n = Math.max(4, Math.min(6, +o.pairs || 5));
   const kind = o.kind || 'word';
-  const painted = shuffle([...SETS.animals, ...SETS.food, ...SETS.things].filter(([, s]) => s.startsWith('img/')), rand);
+  const painted = shuffle([...SETS.animals, ...SETS.food, ...SETS.things].filter(([, s]) => s.startsWith('/img/')), rand);
   let pairs;
   if (kind === 'case') pairs = shuffle('ABDEFGHLMNQRT'.split(''), rand).slice(0, n).map((L) => [{ t: L }, { t: L.toLowerCase() }]);
   else if (kind === 'count') pairs = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], rand).slice(0, n).map((k, i) => [{ count: k, src: painted[i][1] }, { t: String(k) }]);
@@ -3342,15 +3342,15 @@ function makeAlphabets(o, paper) {
 
 // ================================================================ word families
 const FAMILIES = {
-  at: [['cat', 'img/cat.webp'], ['hat', 'img/hat.webp'], ['bat', '🦇'], ['rat', '🐀'], ['mat', ''], ['sat', '']],
+  at: [['cat', '/img/cat.webp'], ['hat', '/img/hat.webp'], ['bat', '🦇'], ['rat', '🐀'], ['mat', ''], ['sat', '']],
   an: [['fan', '🪭'], ['van', '🚐'], ['pan', '🍳'], ['man', '👨'], ['can', '🥫'], ['ran', '']],
-  ig: [['pig', 'img/pig.webp'], ['wig', ''], ['dig', '⛏️'], ['big', ''], ['fig', ''], ['jig', '']],
-  op: [['mop', '🧹'], ['top', ''], ['hop', '🐇'], ['pop', 'img/popper.webp'], ['shop', '🏪'], ['stop', '🛑']],
+  ig: [['pig', '/img/pig.webp'], ['wig', ''], ['dig', '⛏️'], ['big', ''], ['fig', ''], ['jig', '']],
+  op: [['mop', '🧹'], ['top', ''], ['hop', '🐇'], ['pop', '/img/popper.webp'], ['shop', '🏪'], ['stop', '🛑']],
   ug: [['bug', '🐛'], ['mug', '☕'], ['rug', ''], ['hug', '🤗'], ['jug', '🏺'], ['slug', '🐌']],
   en: [['hen', '🐔'], ['pen', '🖊️'], ['ten', '🔟'], ['men', ''], ['den', ''], ['Ben', '']],
   ot: [['pot', '🍲'], ['dot', ''], ['hot', '🔥'], ['cot', '🛏️'], ['not', ''], ['lot', '']],
   ing: [['king', '🤴'], ['ring', '💍'], ['sing', '🎤'], ['wing', '🪽'], ['swing', ''], ['thing', '']],
-  ake: [['cake', 'img/cake.webp'], ['snake', '🐍'], ['lake', '🏞️'], ['rake', ''], ['bake', ''], ['make', '']],
+  ake: [['cake', '/img/cake.webp'], ['snake', '🐍'], ['lake', '🏞️'], ['rake', ''], ['bake', ''], ['make', '']],
   ell: [['bell', '🔔'], ['shell', '🐚'], ['well', ''], ['smell', '👃'], ['yell', ''], ['spell', '']],
 };
 
@@ -3400,11 +3400,11 @@ function makeFamilies(o, paper) {
 
 // ================================================================ rhyming
 const RHYMES = [
-  [['cat', 'img/cat.webp'], ['hat', 'img/hat.webp']], [['dog', 'img/dog.webp'], ['log', '🪵']], [['bee', '🐝'], ['tree', '🌳']],
-  [['star', 'img/star.webp'], ['car', '🚗']], [['cake', 'img/cake.webp'], ['snake', '🐍']], [['moon', '🌙'], ['spoon', '🥄']],
-  [['fish', 'img/fish.webp'], ['dish', '🍽️']], [['goat', '🐐'], ['boat', '⛵']], [['bear', 'img/bear.webp'], ['chair', '🪑']],
+  [['cat', '/img/cat.webp'], ['hat', '/img/hat.webp']], [['dog', '/img/dog.webp'], ['log', '🪵']], [['bee', '🐝'], ['tree', '🌳']],
+  [['star', '/img/star.webp'], ['car', '🚗']], [['cake', '/img/cake.webp'], ['snake', '🐍']], [['moon', '🌙'], ['spoon', '🥄']],
+  [['fish', '/img/fish.webp'], ['dish', '🍽️']], [['goat', '🐐'], ['boat', '⛵']], [['bear', '/img/bear.webp'], ['chair', '🪑']],
   [['mouse', '🐭'], ['house', '🏠']], [['king', '🤴'], ['ring', '💍']], [['sock', '🧦'], ['clock', '⏰']],
-  [['pen', '🖊️'], ['hen', '🐔']], [['fox', '🦊'], ['box', '📦']], [['nose', '👃'], ['rose', 'img/rose.webp']],
+  [['pen', '🖊️'], ['hen', '🐔']], [['fox', '🦊'], ['box', '📦']], [['nose', '👃'], ['rose', '/img/rose.webp']],
   [['bell', '🔔'], ['shell', '🐚']], [['whale', '🐋'], ['snail', '🐌']], [['kite', '🪁'], ['light', '💡']],
   [['ball', '⚽'], ['wall', '🧱']], [['tie', '👔'], ['pie', '🥧']],
 ];
@@ -3695,9 +3695,9 @@ function drawScene(pg, x, y, w, h, sc, id) {
   pg.add(`<defs><clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="6"/></clipPath></defs>`);
   let s = `<g clip-path="url(#${id})"><rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#dff1ff"/>`;
   s += `<path d="M${x} ${y + h * 0.42} Q${x + w * 0.3} ${y + h * 0.34} ${x + w * 0.6} ${y + h * 0.42} T${x + w} ${y + h * 0.4} L${x + w} ${y + h} L${x} ${y + h} Z" fill="#c8ecb4"/>`;
-  if (sc.sun) s += `<image href="img/sun.webp" x="${x + w * 0.8}" y="${y + h * 0.03}" width="${h * 0.24}" height="${h * 0.24}"/>`;
+  if (sc.sun) s += `<image href="/img/sun.webp" x="${x + w * 0.8}" y="${y + h * 0.03}" width="${h * 0.24}" height="${h * 0.24}"/>`;
   sc.clouds.forEach(([cx, cy]) => { s += `<g fill="#fff"><ellipse cx="${x + cx * w}" cy="${y + cy * h}" rx="${w * 0.06}" ry="${h * 0.045}"/><ellipse cx="${x + cx * w + w * 0.04}" cy="${y + cy * h - h * 0.03}" rx="${w * 0.045}" ry="${h * 0.045}"/></g>`; });
-  if (sc.rainbow) s += `<image href="img/rainbow.webp" x="${x + w * 0.03}" y="${y + h * 0.02}" width="${h * 0.3}" height="${h * 0.3}"/>`;
+  if (sc.rainbow) s += `<image href="/img/rainbow.webp" x="${x + w * 0.03}" y="${y + h * 0.02}" width="${h * 0.3}" height="${h * 0.3}"/>`;
   sc.items.forEach((it) => {
     const size = it.s * w, ix = x + it.x * w - size / 2, iy = y + it.y * h - size / 2;
     s += it.flip ? `<image href="${it.src}" x="${-(ix + size)}" y="${iy}" width="${size}" height="${size}" transform="scale(-1 1)"/>` : `<image href="${it.src}" x="${ix}" y="${iy}" width="${size}" height="${size}"/>`;
@@ -4541,9 +4541,9 @@ function makeGraphs(o, paper) {
 }
 
 // ================================================================ reading log
-const READ_CHALLENGES = [['img/dog.webp', 'Read to a pet or a teddy'], ['🏕️', 'Read in a den'], ['🔦', 'Read with a flashlight'], ['img/star.webp', 'Read a book about space'],
+const READ_CHALLENGES = [['/img/dog.webp', 'Read to a pet or a teddy'], ['🏕️', 'Read in a den'], ['🔦', 'Read with a flashlight'], ['/img/star.webp', 'Read a book about space'],
   ['🌳', 'Read outside'], ['😂', 'Read a funny book'], ['👵', 'Read to a grandparent'], ['📜', 'Read a poem'],
-  ['img/lion.webp', 'Read about animals'], ['💬', 'Read a comic'], ['🔁', 'Read a book twice'], ['🧁', 'Read a recipe'],
+  ['/img/lion.webp', 'Read about animals'], ['💬', 'Read a comic'], ['🔁', 'Read a book twice'], ['🧁', 'Read a recipe'],
   ['🛏️', 'Read before bed'], ['🤝', 'Read with a friend'], ['🎨', 'Draw your favorite part'], ['📚', 'Choose a new library book']];
 
 function makeReadingLog(o, paper) {
@@ -4643,10 +4643,10 @@ const STORY_PROMPTS = {
   dragon: { title: 'The Dragon at the Door', pic: '🐉', starter: 'One morning there was a knock at the door. It was a dragon!', words: ['dragon', 'door', 'fire', 'friend', 'fly'] },
   seed: { title: 'The Magic Seed', pic: '🌱', starter: 'I planted a tiny seed, and in the night it grew and grew...', words: ['seed', 'magic', 'tall', 'climb', 'giant'] },
   moon: { title: 'My Trip to the Moon', pic: '🚀', starter: 'I climbed into my rocket and counted: 3, 2, 1, blast off!', words: ['rocket', 'moon', 'stars', 'float', 'planet'] },
-  cat: { title: 'The Talking Cat', pic: 'img/cat.webp', starter: 'My cat looked up at me and said...', words: ['cat', 'talk', 'secret', 'whisper', 'surprise'] },
-  sea: { title: 'Under the Sea', pic: 'img/octopus.webp', starter: 'I put on my flippers and dived into the blue sea.', words: ['fish', 'shell', 'octopus', 'bubbles', 'swim'] },
-  birthday: { title: 'The Best Birthday', pic: 'img/cake.webp', starter: 'When I woke up on my birthday, I could not believe my eyes!', words: ['cake', 'party', 'present', 'balloon', 'friends'] },
-  puppy: { title: 'The Lost Puppy', pic: 'img/dog.webp', starter: 'I found a little puppy all alone in the park.', words: ['puppy', 'lost', 'home', 'help', 'happy'] },
+  cat: { title: 'The Talking Cat', pic: '/img/cat.webp', starter: 'My cat looked up at me and said...', words: ['cat', 'talk', 'secret', 'whisper', 'surprise'] },
+  sea: { title: 'Under the Sea', pic: '/img/octopus.webp', starter: 'I put on my flippers and dived into the blue sea.', words: ['fish', 'shell', 'octopus', 'bubbles', 'swim'] },
+  birthday: { title: 'The Best Birthday', pic: '/img/cake.webp', starter: 'When I woke up on my birthday, I could not believe my eyes!', words: ['cake', 'party', 'present', 'balloon', 'friends'] },
+  puppy: { title: 'The Lost Puppy', pic: '/img/dog.webp', starter: 'I found a little puppy all alone in the park.', words: ['puppy', 'lost', 'home', 'help', 'happy'] },
   power: { title: 'If I Had a Superpower', pic: '🦸', starter: 'If I could have one superpower, I would choose...', words: ['fly', 'strong', 'invisible', 'fast', 'help'] },
 };
 
@@ -5662,9 +5662,9 @@ function makeHundred(o, paper) {
 }
 
 // ================================================================ alphabet order
-const ABC_WORDS = [['apple', 'img/apple.webp'], ['balloon', 'img/balloon.webp'], ['cat', 'img/cat.webp'], ['dog', 'img/dog.webp'], ['egg', 'img/egg.webp'],
-  ['fish', 'img/fish.webp'], ['hat', 'img/hat.webp'], ['lion', 'img/lion.webp'], ['monkey', 'img/monkey.webp'], ['nest', 'img/nest.webp'],
-  ['octopus', 'img/octopus.webp'], ['pig', 'img/pig.webp'], ['rainbow', 'img/rainbow.webp'], ['sun', 'img/sun.webp'], ['turtle', 'img/turtle.webp'], ['zebra', 'img/zebra.webp']];
+const ABC_WORDS = [['apple', '/img/apple.webp'], ['balloon', '/img/balloon.webp'], ['cat', '/img/cat.webp'], ['dog', '/img/dog.webp'], ['egg', '/img/egg.webp'],
+  ['fish', '/img/fish.webp'], ['hat', '/img/hat.webp'], ['lion', '/img/lion.webp'], ['monkey', '/img/monkey.webp'], ['nest', '/img/nest.webp'],
+  ['octopus', '/img/octopus.webp'], ['pig', '/img/pig.webp'], ['rainbow', '/img/rainbow.webp'], ['sun', '/img/sun.webp'], ['turtle', '/img/turtle.webp'], ['zebra', '/img/zebra.webp']];
 
 function makeAbcOrder(o, paper) {
   const rand = rng(+o.seed || 1);
@@ -7512,7 +7512,7 @@ const BOOK_ACTS = {
   5: [['mazes', { level: 'medium', per: '1', theme: 'mix' }], ['dots', { dots: '30', count: '1', puzzles: '1', layout: 'one' }], ['spotdiff', { level: 'medium' }], ['oddone', { level: 'medium' }], ['secretcode', { code: 'pictures' }], ['wordsearch', { size: '8', level: 'easy' }], ['sudoku', { size: '4', symbols: 'pictures', level: 'easy', pages: '1' }], ['colournum', { mode: 'add' }], ['gridcopy', { kind: 'half' }], ['howtodraw', {}], ['rolldraw', { theme: 'monster' }]],
   6: [['mazes', { level: 'hard', per: '1', theme: 'mix' }], ['dots', { dots: '50', count: '1', puzzles: '1', layout: 'one' }], ['spotdiff', { level: 'hard' }], ['oddone', { level: 'hard' }], ['secretcode', { code: 'numbers' }], ['wordsearch', { size: '10', level: 'medium' }], ['sudoku', { size: '4', symbols: 'numbers', level: 'medium', pages: '1' }], ['colournum', { mode: 'sub' }], ['gridcopy', { kind: 'copy' }], ['howtodraw', {}], ['rolldraw', { theme: 'robot' }], ['crossword', { bank: true }]],
 };
-const FOOTER_RE = /<text[^>]*>Free printable worksheets at printpals\.web\.app<\/text>/;
+const FOOTER_RE = /<text[^>]*>Made with love at printpals\.web\.app<\/text>/;
 
 /** Puts a page number at the bottom of a finished page (and keeps or drops our web address). */
 function pageNumber(svg, n, credit) {
@@ -8909,7 +8909,7 @@ function makeSavings(o, paper) {
 
 // ================================================================ packing lists
 const TRIPS = {
-  holiday: ['Holiday packing list', [['👕', 'T-shirts and tops'], ['👖', 'Pants and shorts'], ['🩲', 'Underwear and socks'], ['👗', 'Something smart'], ['🩳', 'Pajamas'], ['👟', 'Comfy shoes'], ['🧥', 'A sweater or coat'], ['🪥', 'Toothbrush and toothpaste'], ['🧸', 'My cuddly toy'], ['📚', 'A book'], ['🎧', 'Something for the journey'], ['💊', 'Any medicine']]],
+  holiday: ['Vacation packing list', [['👕', 'T-shirts and tops'], ['👖', 'Pants and shorts'], ['🩲', 'Underwear and socks'], ['👗', 'Something smart'], ['🩳', 'Pajamas'], ['👟', 'Comfy shoes'], ['🧥', 'A sweater or coat'], ['🪥', 'Toothbrush and toothpaste'], ['🧸', 'My cuddly toy'], ['📚', 'A book'], ['🎧', 'Something for the journey'], ['💊', 'Any medicine']]],
   beach: ['Beach bag list', [['🩱', 'Swimming costume'], ['🏖️', 'Towel'], ['🧴', 'Sun cream'], ['👒', 'Sun hat'], ['🕶️', 'Sunglasses'], ['🩴', 'Flip flops'], ['🪣', 'Bucket and spade'], ['💧', 'Water bottle'], ['🍎', 'Snacks'], ['👕', 'Dry clothes for later'], ['🛍️', 'A bag for wet things'], ['🐚', 'A pot for shells']]],
   sleepover: ['Sleepover packing list', [['🩳', 'Pajamas'], ['🪥', 'Toothbrush and toothpaste'], ['🧸', 'My cuddly toy'], ['👕', 'Clothes for tomorrow'], ['🩲', 'Underwear and socks'], ['🛏️', 'Sleeping bag or pillow'], ['🔦', 'A flashlight'], ['📚', 'A bedtime story'], ['🧴', 'Hairbrush'], ['💊', 'Any medicine'], ['💌', 'A thank you card']]],
   camping: ['Camping packing list', [['⛺', 'Tent'], ['🛏️', 'Sleeping bag'], ['🔦', 'Flashlight'], ['🧥', 'Warm sweater and coat'], ['🥾', 'Rain boots'], ['🧦', 'Lots of socks'], ['🩳', 'Pajamas'], ['🧢', 'Hat'], ['💧', 'Water bottle'], ['🍫', 'Snacks'], ['🔍', 'Magnifying glass'], ['📓', 'Nature notebook']]],
@@ -10381,7 +10381,7 @@ Object.assign(MAKERS, { easter: makeEaster, journal: makeJournal });
 // PrintPals batch 20 (Plus stage 4): Little Learner Levels, monthly letters from Poppy, and three teacher tools:
 // a whole class seasonal set, an end of year memory book for every child, and classroom displays.
 
-const POPPY = 'img/logo.svg';
+const POPPY = '/img/logo.svg';
 
 // ================================================================ Little Learner Levels (Plus)
 const LEVELS_PATH = [
@@ -10952,7 +10952,7 @@ function makeBusters(o, paper) {
     BUSTERS.forEach(([t, c, e], i) => pg.add(`<circle cx="${x + 40 + i * (w - 80) / 3}" cy="${y + 76}" r="7" fill="${c}"/>` + emoji(e, x + 40 + i * (w - 80) / 3, y + 76, 8)));
     pg.y = y + h + 14;
     pg.add(txt(pg.left, pg.y + 6, 'How to play', 7, { anchor: 'start', colour: '#e0457b' }));
-    ['When someone says "I\'m bored!", pull out one stick.', 'Do the activity on it. No swapping!', 'Colour-coded: red to move, yellow to make, blue for quiet, green to be kind.', 'Need to calm down? Only pick blue. Full of energy? Pick red!'].forEach((t, i) => pg.add(`<circle cx="${pg.left + 4}" cy="${pg.y + 17 + i * 11}" r="2.2" fill="${PALETTE[i]}"/>` + txt(pg.left + 10, pg.y + 18.6 + i * 11, t, fitFont(t, 5.6, pg.width - 12, 0.5), { anchor: 'start', font: FONT, weight: 700 })));
+    ['When someone says "I\'m bored!", pull out one stick.', 'Do the activity on it. No swapping!', 'Color-coded: red to move, yellow to make, blue for quiet, green to be kind.', 'Need to calm down? Only pick blue. Full of energy? Pick red!'].forEach((t, i) => pg.add(`<circle cx="${pg.left + 4}" cy="${pg.y + 17 + i * 11}" r="2.2" fill="${PALETTE[i]}"/>` + txt(pg.left + 10, pg.y + 18.6 + i * 11, t, fitFont(t, 5.6, pg.width - 12, 0.5), { anchor: 'start', font: FONT, weight: 700 })));
     pages.push(pg.svg());
   }
   BUSTERS.forEach(([t, c, e, ideas]) => {
@@ -11744,7 +11744,7 @@ function makeDinoKit(o, paper) {
   const rand = rng(+o.seed || 1);
   const name = nameOf(o.name, '') || '';
   const lk = { jungle: { ring: '#2e9d62', tint: '#f1f8e6' }, volcano: { ring: '#e0602b', tint: '#fff3ea' } }[o.look] || { ring: '#2e9d62', tint: '#f1f8e6' };
-  const pages = [seriesCover(paper, 'DINOSAUR EXPLORER', name ? `${possessive(name)} dinosaur book` : 'My dinosaur book', 'Roar into the past!', ['🦖', '🦕', '🦴', '🥚', '🌋', '🌿'], lk.ring, lk.tint, 'explorer book', ['8 dinosaur cards', 'How long was it?', 'Dig site counting', 'Design a dinosaur', 'Dino words and maze', 'Palaeontologist award'])];
+  const pages = [seriesCover(paper, 'DINOSAUR EXPLORER', name ? `${possessive(name)} dinosaur book` : 'My dinosaur book', 'Roar into the past!', ['🦖', '🦕', '🦴', '🥚', '🌋', '🌿'], lk.ring, lk.tint, 'explorer book', ['8 dinosaur cards', 'How long was it?', 'Dig site counting', 'Design a dinosaur', 'Dino words and maze', 'Paleontologist award'])];
   for (let p = 0; p < 8; p += 4) pages.push(tagsPage(paper, p ? 'Dinosaur cards (more)' : 'Dinosaur cards', 'Read each card together, say the name out loud, then cut them out and play!', 4, 2, (pg, x, y, w, h, i) => {
     const [nm, say, eats, len, fact] = DINOS[p + i], c = PALETTE[(p + i) % PALETTE.length];
     pg.add(`<rect x="${x + 4}" y="${y + 4}" width="${w - 8}" height="${h - 8}" rx="9" fill="${TINTS[(p + i) % TINTS.length]}" stroke="${c}" stroke-width="1.1"/>`);
@@ -11784,7 +11784,7 @@ function makeDinoKit(o, paper) {
   pages.push(traceWordsPage(paper, 'Trace the dinosaur words', [['dinosaur', '🦖'], ['fossil', '🦴'], ['egg', '🥚'], ['roar', '🦕']]));
   pages.push(seasonColour(paper, 'dino', name));
   pages.push(...packRun('mazes', { level: 'easy' }, paper, +o.seed || 1).sheets);
-  pages.push(seriesCert(paper, 'DINOSAUR EXPLORER', 'Junior Palaeontologist', name, 'for discovering amazing dinosaurs!', 'Next: find a real dinosaur at a museum!', lk.ring));
+  pages.push(seriesCert(paper, 'DINOSAUR EXPLORER', 'Junior Paleontologist', name, 'for discovering amazing dinosaurs!', 'Next: find a real dinosaur at a museum!', lk.ring));
   return pages;
 }
 
@@ -11998,7 +11998,7 @@ function makeGarden(o, paper) {
   const name = nameOf(o.name, '') || '';
   const plant = String(o.plant || '').trim().slice(0, 18) || 'bean';
   const ring = '#2e9d62', tint = '#f1f8e6';
-  const pages = [seriesCover(paper, 'LITTLE GARDENER', name ? `${possessive(name)} garden book` : 'My garden book', 'Plant it, water it, watch it grow!', ['🌱', '🌻', '🐝', '🐛', '🌷', '💧'], ring, tint, 'garden book', [`My ${plant} diary`, 'Growth chart', 'Parts of a plant', 'What plants need', 'Garden bug hunt', 'Green Fingers award'])];
+  const pages = [seriesCover(paper, 'LITTLE GARDENER', name ? `${possessive(name)} garden book` : 'My garden book', 'Plant it, water it, watch it grow!', ['🌱', '🌻', '🐝', '🐛', '🌷', '💧'], ring, tint, 'garden book', [`My ${plant} diary`, 'Growth chart', 'Parts of a plant', 'What plants need', 'Garden bug hunt', 'Green Thumb award'])];
   // Seed diary.
   {
     const pg = new Page(paper, `My ${plant} diary`, { subtitle: 'Look at your plant every few days. Draw what you see and write one word about it.' });
@@ -12036,7 +12036,7 @@ function makeGarden(o, paper) {
   pages.push(traceWordsPage(paper, 'Trace the garden words', [['seed', '🌱'], ['root', '🥕'], ['leaf', '🍃'], ['grow', '🌻']]));
   pages.push(seasonColour(paper, 'sunflower', name));
   pages.push(seasonColour(paper, 'butterfly', name));
-  pages.push(seriesCert(paper, 'LITTLE GARDENER', 'Green Fingers Award', name, `for growing a ${plant} and caring for living things!`, 'Next: plant something new each season!', ring));
+  pages.push(seriesCert(paper, 'LITTLE GARDENER', 'Green Thumb Award', name, `for growing a ${plant} and caring for living things!`, 'Next: plant something new each season!', ring));
   return pages;
 }
 
@@ -13867,8 +13867,8 @@ function makeParentsEvening(o, paper) {
   const kids = classNames(o), lk = edLook(o.look), { cls, teacher } = teacherBits(o);
   const pages = [seriesCover(paper, 'PRINTPALS PLUS FOR TEACHERS', cls ? `${cls} Parent-Teacher Conference` : "Parent-Teacher Conference Kit", 'Calm, organized, personal', ['🗓️', '☕', '💬', lk.corner, '⭐', '🤝'], lk.ring, lk.tint, 'meeting kit', ['Invitation letter', 'Booking slots', 'Questions from families', 'A meeting sheet per child', 'Next steps slips', 'Door sign'])];
   {
-    const pg = new Page(paper, "You're invited to parent-teacher conferences!", { subtitle: 'Send one home with every child.', noName: true });
-    const lines = ['Dear families,', '', `We would love to see you at parent-teacher conferences to talk about how your child is getting on${cls ? ' in ' + cls : ''}.`, '', 'Date: ____________________     Times: ____________________', '', 'Please choose a time on the booking sheet or write your preferred time below, and fill in the questions page if there is anything you would like to talk about.', '', 'Preferred time: ______________________________', '', 'Child\'s name: _______________________________', '', teacher ? `See you soon! ${teacher}` : 'See you soon!'];
+    const pg = new Page(paper, "You're invited to our parent-teacher conference!", { subtitle: 'Send one home with every child.', noName: true });
+    const lines = ['Dear families,', '', `We would love to see you at our parent-teacher conference to talk about how your child is getting on${cls ? ' in ' + cls : ''}.`, '', 'Date: ____________________     Times: ____________________', '', 'Please choose a time on the booking sheet or write your preferred time below, and fill in the questions page if there is anything you would like to talk about.', '', 'Preferred time: ______________________________', '', 'Child\'s name: _______________________________', '', teacher ? `See you soon! ${teacher}` : 'See you soon!'];
     pg.add(panel(pg.left, pg.y, pg.width, pg.room - 4, lk.tint, lk.ring, 12));
     let y = pg.y + 16; lines.forEach((l) => { if (!l) { y += 5; return; } wrap(l, 52).forEach((ll) => { pg.add(txt(pg.left + 12, y, ll, 7, { anchor: 'start', colour: INK })); y += 9; }); });
     pages.push(pg.svg());
@@ -13888,7 +13888,7 @@ function makeParentsEvening(o, paper) {
   }
   kids.forEach((n, i) => {
     const pg = new Page(paper, `Meeting notes: ${n}`, { subtitle: 'Teacher copy. Start with a strength, share one next step, and end with something to celebrate.', noName: true });
-    const boxes = [['🌟', 'Strengths and lovely moments'], ['📚', 'Reading'], ['🔢', 'Math'], ['✏️', 'Writing'], ['💛', 'Friendships and wellbeing'], ['🎯', 'Next steps'], ['🏠', 'How families can help'], ['💬', 'Family comments']], bw = pg.width / 2, bh = pg.room / 4;
+    const boxes = [['🌟', 'Strengths and lovely moments'], ['📚', 'Reading'], ['🔢', 'Math'], ['✏️', 'Writing'], ['💛', 'Friendships and well-being'], ['🎯', 'Next steps'], ['🏠', 'How families can help'], ['💬', 'Family comments']], bw = pg.width / 2, bh = pg.room / 4;
     boxes.forEach(([e, t], k) => linedBox(pg, pg.left + (k % 2) * bw + 1.5, pg.y + Math.floor(k / 2) * bh + 1.5, bw - 3, bh - 4, t, PALETTE[k % PALETTE.length], e));
     pages.push(pg.svg());
   });
@@ -13897,7 +13897,7 @@ function makeParentsEvening(o, paper) {
     const pg = new Page(paper, '', { bare: true });
     pg.add(`<rect x="${pg.left}" y="${pg.m}" width="${pg.width}" height="${pg.bottom - pg.m}" rx="16" fill="${lk.tint}" stroke="${lk.ring}" stroke-width="2.4"/>` + emoji('☕', pg.w / 2, pg.m + 60, 50));
     bubbleText(pg, 'Welcome!', pg.w / 2, pg.m + 130, pg.width - 40, 34);
-    pg.add(txt(pg.w / 2, pg.m + 156, "Parent-teacher conferences", 12, { colour: lk.ring }) + txt(pg.w / 2, pg.m + 174, cls || 'Our class', 10, { colour: INK }) + (teacher ? txt(pg.w / 2, pg.m + 190, teacher, 9, { colour: SOFT }) : '') + txt(pg.w / 2, pg.bottom - 30, 'Please take a seat. We will be with you soon', 8, { colour: INK }));
+    pg.add(txt(pg.w / 2, pg.m + 156, "Parent-teacher conference", 12, { colour: lk.ring }) + txt(pg.w / 2, pg.m + 174, cls || 'Our class', 10, { colour: INK }) + (teacher ? txt(pg.w / 2, pg.m + 190, teacher, 9, { colour: SOFT }) : '') + txt(pg.w / 2, pg.bottom - 30, 'Please take a seat. We will be with you soon', 8, { colour: INK }));
     pg.footer = () => {}; pages.push(pg.svg());
   }
   return pages;
@@ -14488,7 +14488,7 @@ function makePocketMoney(o, paper) {
   const goal = String(o.goal || '').trim().slice(0, 30) || 'something special';
   const small = cur.whole ? [5, 10, 20] : [5, 10, 20, 50];
   const jobs = [['🛏️', 'Make my bed'], ['🧸', 'Tidy my toys'], ['🍽️', 'Set the table'], ['🌱', 'Water the plants'], ['🧺', 'Sort the laundry'], ['🐶', 'Feed the pet'], ['🧽', 'Wipe the table'], ['🗑️', 'Help with recycling']].map(([e, t]) => [e, t, small[Math.floor(rand() * small.length)]]);
-  const pages = [seriesCover(paper, 'PRINTPALS PLUS', `${possessive(nm)} Pocket Money Month`, `Saving up for ${goal}`, ['💰', '🐷', '🪙', lk.corner, '🎯', '⭐'], lk.ring, lk.tint, 'money book', ['Jobs that earn', 'Weekly money chart', 'Spend, save, share', 'Savings goal tracker', 'Money problems', 'Money Wizard award'])];
+  const pages = [seriesCover(paper, 'PRINTPALS PLUS', `${possessive(nm)} Allowance Month`, `Saving up for ${goal}`, ['💰', '🐷', '🪙', lk.corner, '🎯', '⭐'], lk.ring, lk.tint, 'money book', ['Jobs that earn', 'Weekly money chart', 'Spend, save, share', 'Savings goal tracker', 'Money problems', 'Money Wizard award'])];
   // Jobs chart for 4 weeks.
   for (let w = 1; w <= 4; w++) {
     const pg = new Page(paper, `${possessive(nm)} jobs: week ${w}`, { subtitle: 'Check each job when it is done. Add up what you earned on Sunday!', noName: true });
@@ -14520,7 +14520,7 @@ function makePocketMoney(o, paper) {
   }
   pages.push(...packRun('money', { currency: o.currency || 'USD', level: 'easy' }, paper, +o.seed || 1).sheets);
   pages.push(checklistPage(paper, 'Money wise', 'Talk about these with a grown-up. Color a star when you understand!', [['🪙', 'I can name all the coins'], ['🐷', 'Saving means waiting for something bigger'], ['🤔', 'Needs come before wants'], ['🏷️', 'I check the price before I choose'], ['💛', 'Sharing money can help others'], ['🧾', 'I keep track of what I spend']], nm));
-  pages.push(seriesCert(paper, 'POCKET MONEY MONTH', 'Money Wizard', name, `for working hard, saving well and planning for ${goal}!`, 'Next: open your own shop with the Little Shop kit!', lk.ring));
+  pages.push(seriesCert(paper, 'ALLOWANCE MONTH', 'Money Wizard', name, `for working hard, saving well and planning for ${goal}!`, 'Next: open your own shop with the Little Shop kit!', lk.ring));
   return pages;
 }
 

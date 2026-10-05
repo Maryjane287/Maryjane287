@@ -62,7 +62,7 @@ class Page {
   }
 
   footer() {
-    this.add(`<text x="${this.w / 2}" y="${this.h - this.m + 1}" text-anchor="middle" font-family="${FONT}" font-weight="700" font-size="3" fill="#b8b3cc">Free printable worksheets at printpals.web.app</text>`);
+    this.add(`<text x="${this.w / 2}" y="${this.h - this.m + 1}" text-anchor="middle" font-family="${FONT}" font-weight="700" font-size="3" fill="#b8b3cc">Made with love at printpals.web.app</text>`);
   }
 
   /** Handwriting guide lines for one row. size = top line to baseline. */

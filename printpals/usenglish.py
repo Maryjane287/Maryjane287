@@ -27,7 +27,12 @@ PHRASES = [
     ('kitchen roll', 'paper towel'), ('cotton buds', 'cotton swabs'), ('cotton bud', 'cotton swab'), ('cotton wool', 'cotton balls'),
     ('sticky-back plastic', 'contact paper'), ('number plates', 'license plates'), ('number plate', 'license plate'),
     ('full stops', 'periods'), ('full stop', 'period'), ('hundred squares', 'hundred charts'), ('hundred square', 'hundred chart'),
-    ("parents' evening", 'parent-teacher conferences'), ("Parents' Evening", 'Parent-Teacher Conference'),
+    ("You're invited to parents' evening", "You're invited to our parent-teacher conference"), ("at parents' evening", "at our parent-teacher conference"),
+    ("a calm, organised parents' evening", 'calm, organized parent-teacher conferences'), ("Walk into parents' evening", 'Walk into parent-teacher conferences'),
+    ("parents' evening", 'parent-teacher conference'), ("Parents' evening", 'Parent-teacher conference'), ("Parents' Evening", 'Parent-Teacher Conference'),
+    ('Supply and Substitute Teacher', 'Substitute Teacher'), ('a cover or substitute teacher', 'a substitute teacher'),
+    ('Green Fingers', 'Green Thumb'), ('green fingers', 'green thumb'), ('Pocket Money', 'Allowance'), ('pocket money', 'allowance'),
+    ('working days', 'business days'), ('colour-in', 'color-in'), ('Colour-coded', 'Color-coded'), ('colour-coded', 'color-coded'), ('photo-to-colouring', 'photo-to-coloring'), ('Colour-in', 'Color-in'), ('Holiday Learning Plan', 'Vacation Learning Plan'), ('Holiday learning plan', 'Vacation learning plan'),
     ('Cover Teacher', 'Substitute Teacher'), ('cover teacher', 'substitute teacher'), ('Cover day', 'Sub day'), ('cover day', 'sub day'),
     ('a cover folder', 'a sub folder'), ('Off sick or on a course?', 'Out sick or at training?'),
     ('wet play', 'indoor recess'), ('Register, break, lunch and home times', 'Attendance, recess, lunch and home times'),
@@ -83,13 +88,13 @@ WORDS = {
     'sums': 'problems', 'minibeast': 'bug', 'minibeasts': 'bugs', 'conker': 'buckeye', 'conkers': 'buckeyes', 'pupil': 'student', 'pupils': 'students',
     'organiser': 'organizer', 'organisers': 'organizers', 'analyse': 'analyze', 'catalogue': 'catalog', 'skilful': 'skillful', 'licence': 'license',
     'storey': 'story', 'lolly': 'lollipop', 'sledge': 'sled', 'fortnight': 'two weeks', 'biscuit': 'cookie', 'biscuits': 'cookies',
-    'holiday': 'vacation', 'nursery': 'preschool', 'ladybird': 'ladybug', 'ladybirds': 'ladybugs', 'lorry': 'truck', 'lorries': 'trucks',
+    'holiday': 'vacation', 'nursery': 'preschool', 'palaeontologist': 'paleontologist', 'palaeontologists': 'paleontologists', 'grandad': 'grandpa', 'savoury': 'savory', 'wellbeing': 'well-being', 'ladybird': 'ladybug', 'ladybirds': 'ladybugs', 'lorry': 'truck', 'lorries': 'trucks',
     'pudding': 'dessert', 'aubergine': 'eggplant', 'aubergines': 'eggplants', 'trolley': 'cart', 'motorbike': 'motorcycle', 'motorbikes': 'motorcycles',
 }
 # -ise / -isation verbs that Americans write with z.
 IZE = r'\b(organ|personal|recogn|real|memor|categor|apolog|visual|summar|final|custom|priorit|critic|familiar|special|maxim|minim|optim|util|symbol|harmon|author|energ|standard)is(e|es|ed|ing|ation|ations|er|ers)\b'
 
-LOWER_ONLY = {'biscuit', 'biscuits', 'holiday'}
+LOWER_ONLY = {'biscuit', 'biscuits'}
 
 
 def _case(src, rep):

@@ -345,7 +345,7 @@ const BOOK_ACTS = {
   5: [['mazes', { level: 'medium', per: '1', theme: 'mix' }], ['dots', { dots: '30', count: '1', puzzles: '1', layout: 'one' }], ['spotdiff', { level: 'medium' }], ['oddone', { level: 'medium' }], ['secretcode', { code: 'pictures' }], ['wordsearch', { size: '8', level: 'easy' }], ['sudoku', { size: '4', symbols: 'pictures', level: 'easy', pages: '1' }], ['colournum', { mode: 'add' }], ['gridcopy', { kind: 'half' }], ['howtodraw', {}], ['rolldraw', { theme: 'monster' }]],
   6: [['mazes', { level: 'hard', per: '1', theme: 'mix' }], ['dots', { dots: '50', count: '1', puzzles: '1', layout: 'one' }], ['spotdiff', { level: 'hard' }], ['oddone', { level: 'hard' }], ['secretcode', { code: 'numbers' }], ['wordsearch', { size: '10', level: 'medium' }], ['sudoku', { size: '4', symbols: 'numbers', level: 'medium', pages: '1' }], ['colournum', { mode: 'sub' }], ['gridcopy', { kind: 'copy' }], ['howtodraw', {}], ['rolldraw', { theme: 'robot' }], ['crossword', { bank: true }]],
 };
-const FOOTER_RE = /<text[^>]*>Free printable worksheets at printpals\.web\.app<\/text>/;
+const FOOTER_RE = /<text[^>]*>Made with love at printpals\.web\.app<\/text>/;
 
 /** Puts a page number at the bottom of a finished page (and keeps or drops our web address). */
 function pageNumber(svg, n, credit) {
