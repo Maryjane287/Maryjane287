@@ -3906,6 +3906,29 @@ def write_pair(name, page, path):
             f.write(lang_bits(us, path, True))
 
 
+def write_catalog():
+    """Pinterest product catalog: one row per Plus or teacher pack, in American English
+    (USD prices, links to the /us/ pages). Pinterest reads it from the link every day."""
+    import csv, io
+    cols = ['id', 'title', 'description', 'link', 'image_link', 'additional_image_link', 'price', 'availability', 'condition',
+            'brand', 'product_type', 'custom_label_0', 'custom_label_1']
+    buf = io.StringIO(); w = csv.writer(buf); w.writerow(cols)
+    for t in TOOLS:
+        if not t.get('plus'):
+            continue
+        teacher = bool(t.get('teacher') or t['id'] == 'classpack')
+        parts = re.split(r'\s*\|\s*', re.split(r'\s*\|\s*PrintPals', t['title'])[0])
+        title = us_text(parts[0] + ((', ' if ':' in ' '.join(parts[1:]) else ': ') + ', '.join(parts[1:]) if len(parts) > 1 else ''))[:150]
+        plan = ('Part of the PrintPals teacher plan: try it free for 7 days, no card needed. Then $59 a year for every class pack.' if teacher
+                else 'Part of PrintPals Plus: try it free for 7 days, no card needed. Then $4.99 a month or $39 a year for every Plus pack.')
+        desc = us_text(t['desc'].rstrip('.')) + '. ' + plan + ' Personalized with a name, printed at home or school on US Letter or A4.'
+        w.writerow([t['id'], title, desc, f"{SITE}/us/{t['slug']}", f"{SITE}/pins/{t['id']}.jpg", f"{SITE}/pins/b-{t['id']}.jpg",
+                    '59.00 USD' if teacher else '4.99 USD', 'in stock', 'new', 'PrintPals',
+                    'Teacher class packs' if teacher else 'Printable learning packs for kids', 'Teacher plan' if teacher else 'Plus', t['id']])
+    with open(os.path.join(OUT, 'pinterest-catalog.csv'), 'w', encoding='utf-8', newline='') as f:
+        f.write(buf.getvalue())
+
+
 def main():
     write_pair('index', home(), '/')
     for t in TOOLS:
@@ -3934,6 +3957,7 @@ def main():
         f.write(us_src)
     with open(os.path.join(OUT, 'js', 'plus-us.js'), 'w', encoding='utf-8') as f:
         f.write(us_js(open(os.path.join(OUT, 'js', 'plus.js'), encoding='utf-8').read()))
+    write_catalog()
     today = datetime.date.today().isoformat()
     urls = ['/'] + ['/' + t['slug'] for t in TOOLS] + ['/plus', '/help', '/about', '/privacy', '/terms']
     urls += ['/us'] + ['/us' + u for u in urls[1:]]
