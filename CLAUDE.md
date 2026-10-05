@@ -250,3 +250,5 @@ everything else uses its Colouring Month world). PINTEREST: on 4 Oct the owner g
 then 30 more 12 to 15 Oct). Old 25 pin and File 1 files moved to pinterest/old (they had past dates). 256 pins waiting. File 2 (19 Oct) unchanged.
 
 PINTEREST CATALOG (5 Oct): build.py write_catalog() makes public/pinterest-catalog.csv, one row per Plus/teacher pack (83), US English, USD (4.99 families, 59.00 teacher), links to /us/ pages, images pins/<id>.jpg + b-<id>.jpg. Owner adds it in Pinterest as a data source: https://printpals.web.app/pinterest-catalog.csv (CSV, USD, United States, English). Updates itself when new packs are built.
+
+PINTEREST TAG: build.py PINTEREST_TAG (empty = off). When set, every page asks for cookie consent (.cookie-ask, localStorage pp-consent), then loads the tag, tracks pagevisit and checkout clicks on buy.stripe.com links; privacy page and a "Cookie choices" footer link switch on automatically. Waiting for the owner to send the Tag ID.

@@ -3375,6 +3375,8 @@ NAV_LABEL = {a[0]: a[2] for a in ARRANGE}
 JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'tools21', 'tools22', 'tools23', 'tools24', 'tools25', 'tools26', 'tools27', 'tools28', 'tools29', 'tools30', 'tools31', 'tools32', 'tools33', 'tools34', 'tools35', 'tools36', 'tools37', 'plus', 'app']
 CONTACT = 'graceandloannesofficial@gmail.com'
 # Stripe customer portal: parents manage, switch or cancel their Plus subscription here.
+# The owner's Pinterest Tag ID (Pinterest Ads > Conversions > Pinterest Tag). Empty = no tag, no cookie banner.
+PINTEREST_TAG = ''
 STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'
 
 
@@ -3432,7 +3434,7 @@ def top(active=''):
 
 FOOT = '''<footer><div class="wrap"><div class="foot-brand"><div class="brand" style="font-size:24px;color:#fff;gap:0">Print<b style="color:#ff8a8a">Pals</b></div>
 <p style="max-width:420px;margin-top:8px">Free printable worksheets and ready-made packs for children, made in seconds. Everything is made inside your own browser: nothing you type is sent to us or stored.</p>
-<p class="foot-links"><a href="/plus">PrintPals Plus</a><a href="/my-shelf">My shelf</a><a href="/help">Help</a><a href="/refunds">Refunds and delivery</a><a href="/about">About us</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:''' + CONTACT + '''">Contact</a></p>
+<p class="foot-links"><a href="/plus">PrintPals Plus</a><a href="/my-shelf">My shelf</a><a href="/help">Help</a><a href="/refunds">Refunds and delivery</a><a href="/about">About us</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a>''' + ('<a href="#" data-action="cookies">Cookie choices</a>' if PINTEREST_TAG else '') + '''<a href="mailto:''' + CONTACT + '''">Contact</a></p>
 <p style="margin-top:14px">© PrintPals. Free for home and classroom use.</p></div>
 <div class="foot-cols">''' + ''.join(f'<div><h4>{v}</h4>' + ''.join(f'<a href="/{t["slug"]}">{t["nav"]}</a>' for t in [x for x in TOOLS if x['cat'] == k][:6]) + f'<a class="foot-all" href="/#{k}">See all {sum(1 for x in TOOLS if x["cat"] == k)} →</a></div>' for k, v in CATS) + '''</div></div></footer>'''
 
@@ -3783,10 +3785,12 @@ ABOUT = f'''<h1>About PrintPals</h1>
 <h2>Say hello</h2>
 <p>We read every message, and ideas for new worksheets are very welcome: <a href="mailto:{CONTACT}">{CONTACT}</a></p>'''
 
+PIN_PRIVACY = ('''<h2>The Pinterest tag (only if you say yes)</h2>
+<p>When you first visit, we ask whether you are happy for us to use the Pinterest tag. If you say yes, Pinterest sets a cookie that tells us which of our pins bring families to PrintPals and when someone starts a free week or a plan. It never includes anything you type into a worksheet. If you say no, nothing is loaded. You can change your mind at any time with the "Cookie choices" link at the bottom of every page. Please see Pinterest's privacy policy for how they use this information.</p>''' if PINTEREST_TAG else '<p>There are no advertising trackers.</p>')
 PRIVACY = f'''<h1>Privacy</h1>
 <p class="lead-p">Short version: we do not collect what you type. Worksheets are made on your own device. If you buy PrintPals Plus, we keep only what we need to give you your subscription.</p>
 <h2>What we collect</h2>
-<p>Nothing that you type. Names, word lists, messages and photos you use in a worksheet are processed inside your web browser and are never sent to us. There are no accounts, no sign up forms and no advertising trackers.</p>
+<p>Nothing that you type. Names, word lists, messages and photos you use in a worksheet are processed inside your web browser and are never sent to us. There are no accounts and no sign up forms.</p>{PIN_PRIVACY}
 <h2>What stays on your device</h2>
 <p>To make PrintPals easier to use, your browser remembers a few settings in its own local storage: your paper size, whether Ink saver is on, and your child's first name if you typed one, so the next sheet is ready for you. This never leaves your device. Press "Forget it" under the print button, or clear your browser data, to remove it.</p>
 <h2>If you buy PrintPals Plus</h2>
@@ -3908,6 +3912,20 @@ b.querySelector('a').addEventListener('click',function(){try{localStorage.setIte
 b.querySelector('button').addEventListener('click',function(){try{localStorage.setItem('pp-lang',us?'us':'uk')}catch(e){}b.remove()})})()</script>"""
 
 
+def pin_tag_js():
+    """Pinterest tag, loaded only after the visitor says yes. Tracks page visits and checkout clicks."""
+    if not PINTEREST_TAG:
+        return ''
+    return ("""<script>(function(){var K='pp-consent',c=null;try{c=localStorage.getItem(K)}catch(e){}
+function load(){!function(e){if(!window.pintrk){window.pintrk=function(){window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var n=window.pintrk;n.queue=[],n.version="3.0";var t=document.createElement("script");t.async=!0,t.src=e;var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
+pintrk('load','""" + PINTEREST_TAG + """');pintrk('page');pintrk('track','pagevisit');
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="buy.stripe.com"]');if(a)pintrk('track','checkout',{value:/aFa28/.test(a.href)?59:(/7sYcN/.test(a.href)?39:4.99),currency:'USD'})},true);}
+function ask(){var b=document.createElement('div');b.className='cookie-ask no-print';b.innerHTML='🍪 May we use one Pinterest cookie to see which of our pins bring families here? It never sees anything you type. <button type="button" class="btn">Yes, that is fine</button> <button type="button" class="linkish">No thanks</button>';document.body.appendChild(b);
+var bs=b.querySelectorAll('button');bs[0].onclick=function(){try{localStorage.setItem(K,'yes')}catch(e){}b.remove();load()};bs[1].onclick=function(){try{localStorage.setItem(K,'no')}catch(e){}b.remove()}}
+if(c==='yes')load();else if(c!=='no')ask();
+document.querySelectorAll('[data-action="cookies"]').forEach(function(x){x.addEventListener('click',function(e){e.preventDefault();try{localStorage.removeItem(K)}catch(e){}location.reload()})});})()</script>""")
+
+
 def lang_bits(page, path, us):
     """Add the UK/US switch, the note by the print button and the offer banner."""
     uk_href, us_href = path, '/us' + ('' if path == '/' else path)
@@ -3918,7 +3936,7 @@ def lang_bits(page, path, us):
     note = (f'<p class="hint lang-hint">🇬🇧 Prefer British spelling (colour, maths, Mum)? <a data-lang="uk" href="{uk_href}">Switch to UK English</a></p>' if us
             else f'<p class="hint lang-hint">🇺🇸 Want American spelling (color, math, Mom)? <a data-lang="us" href="{us_href}">Switch to US English</a></p>')
     page = page.replace('<p class="hint" id="remember"', note + '\n<p class="hint" id="remember"', 1)
-    return page.replace('</body>', LANG_JS + '\n</body>', 1)
+    return page.replace('</body>', LANG_JS + pin_tag_js() + '\n</body>', 1)
 
 
 def write_pair(name, page, path):
