@@ -246,7 +246,8 @@ def us_html(page, path):
     head = re.sub(r'(<title>)(.*?)(</title>)', meta, head)
     head = re.sub(r'(<meta (?:name="description"|property="og:(?:title|description)") content=")([^"]*)(")', meta, head)
     head = head.replace('<html lang="en-GB">', '<html lang="en-US">')
-    body = re.sub(r'(<script type="application/ld\+json">)(.*?)(</script>)', lambda m: m.group(1) + us_text(m.group(2)) + m.group(3), body, flags=re.S)
+    body = re.sub(r'(<script type="application/ld\+json">)(.*?)(</script>)', lambda m: m.group(1) + re.sub(r'(https://printpals\.web\.app)/(?!us\b|pins/|img/)', r'\1/us/', us_text(m.group(2))) + m.group(3), body, flags=re.S)
+    head = re.sub(r'(<script type="application/ld\+json">)(.*?)(</script>)', lambda m: m.group(1) + re.sub(r'(https://printpals\.web\.app)/(?!us\b|pins/|img/)', r'\1/us/', us_text(m.group(2))) + m.group(3), head, flags=re.S)
     # Convert visible text (not scripts or styles) and a few visible attributes.
     def seg(m):
         if m.group(1):

@@ -3432,7 +3432,7 @@ def top(active=''):
 
 FOOT = '''<footer><div class="wrap"><div class="foot-brand"><div class="brand" style="font-size:24px;color:#fff;gap:0">Print<b style="color:#ff8a8a">Pals</b></div>
 <p style="max-width:420px;margin-top:8px">Free printable worksheets and ready-made packs for children, made in seconds. Everything is made inside your own browser: nothing you type is sent to us or stored.</p>
-<p class="foot-links"><a href="/plus">PrintPals Plus</a><a href="/my-shelf">My shelf</a><a href="/help">Help</a><a href="/about">About us</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:''' + CONTACT + '''">Contact</a></p>
+<p class="foot-links"><a href="/plus">PrintPals Plus</a><a href="/my-shelf">My shelf</a><a href="/help">Help</a><a href="/refunds">Refunds and delivery</a><a href="/about">About us</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:''' + CONTACT + '''">Contact</a></p>
 <p style="margin-top:14px">© PrintPals. Free for home and classroom use.</p></div>
 <div class="foot-cols">''' + ''.join(f'<div><h4>{v}</h4>' + ''.join(f'<a href="/{t["slug"]}">{t["nav"]}</a>' for t in [x for x in TOOLS if x['cat'] == k][:6]) + f'<a class="foot-all" href="/#{k}">See all {sum(1 for x in TOOLS if x["cat"] == k)} →</a></div>' for k, v in CATS) + '''</div></div></footer>'''
 
@@ -3468,19 +3468,29 @@ EDITIONS = {
 EDITION_OF = {f: e for e, (fs, _, _) in EDITIONS.items() for f in fs}
 
 
+def plus_price(t):
+    """What a paid pack costs (one plan unlocks every pack), or None for free tools."""
+    if not t.get('plus'):
+        return None
+    return '59.00' if (t.get('teacher') or t['id'] == 'classpack') else '4.99'
+
+
 def tool_page(t):
+    price = plus_price(t)
     faq_html = ''.join(f'<details><summary>{html.escape(q)}</summary><p>{html.escape(a)}</p></details>' for q, a in t['faq'])
     cat_name = dict(CATS)[t['cat']]
     ld = {
         '@context': 'https://schema.org',
         '@graph': [
             {'@type': 'WebApplication', 'name': t['h1'] + ' | PrintPals', 'url': f'{SITE}/{t["slug"]}', 'applicationCategory': 'EducationalApplication',
-             'operatingSystem': 'Any', 'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'USD'}, 'description': t['desc'],
+             'operatingSystem': 'Any', 'offers': {'@type': 'Offer', 'price': price or '0', 'priceCurrency': 'USD'}, 'description': t['desc'],
              'audience': {'@type': 'EducationalAudience', 'educationalRole': 'parent'}, 'typicalAgeRange': '{}-{}'.format(*AGES[t['id']])},
             {'@type': 'BreadcrumbList', 'itemListElement': [
                 {'@type': 'ListItem', 'position': 1, 'name': 'PrintPals', 'item': SITE + '/'},
                 {'@type': 'ListItem', 'position': 2, 'name': cat_name, 'item': f'{SITE}/#{t["cat"]}'},
                 {'@type': 'ListItem', 'position': 3, 'name': t['h1'], 'item': f'{SITE}/{t["slug"]}'}]},
+            *([{'@type': 'Product', 'name': t['h1'], 'sku': t['id'], 'image': f"{SITE}/pins/{t['id']}.jpg", 'description': t['desc'], 'brand': {'@type': 'Brand', 'name': 'PrintPals'},
+                'offers': {'@type': 'Offer', 'price': price, 'priceCurrency': 'USD', 'availability': 'https://schema.org/InStock', 'url': f'{SITE}/{t["slug"]}'}}] if price else []),
             {'@type': 'FAQPage', 'mainEntity': [{'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in t['faq']]},
         ],
     }
@@ -3495,13 +3505,17 @@ def tool_page(t):
         et = next(x for x in TOOLS if x['id'] == ed)
         edition = f'<a class="plus-edition" href="/{et["slug"]}"><span class="pe-ico">{et["icon"]}</span><span><b>Want a whole month of this?</b> {html.escape(EDITIONS[ed][1])}, the Plus edition: {html.escape(EDITIONS[ed][2])}</span><em>Try 7 days free →</em></a>'
     nudge = '' if t['cat'] == 'packs' else '<a class="pack-nudge" href="/weekly-learning-pack"><span>🎒</span><span><b>Not sure what to print?</b> Get a whole week planned for your child, free, with their name on every page.</span></a>'
-    return head(t['title'], t['desc'], '/' + t['slug'], f'<style id="pageStyle">@page {{ size: A4 portrait; margin: 0; }}</style>\n<script type="application/ld+json">{json.dumps(ld)}</script>', og_for(t)) + f'''
+    product_meta = (f'<meta property="product:price:amount" content="{price}">\n<meta property="product:price:currency" content="USD">\n<meta property="og:price:amount" content="{price}">\n<meta property="og:price:currency" content="USD">\n<meta property="product:availability" content="in stock">\n<meta property="product:brand" content="PrintPals">\n' if price else '')
+    page_head = head(t['title'], t['desc'], '/' + t['slug'], product_meta + f'<style id="pageStyle">@page {{ size: A4 portrait; margin: 0; }}</style>\n<script type="application/ld+json">{json.dumps(ld)}</script>', og_for(t))
+    if price:
+        page_head = page_head.replace('<meta property="og:type" content="website">', '<meta property="og:type" content="product">')
+    return page_head + f'''
 <body class="tool-page">
 {top(t['id'])}
 <main id="main">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><a href="/">PrintPals</a> › <a href="/#{t['cat']}">{html.escape(cat_name)}</a> › {html.escape(t['h1'])}</nav>
-<div class="tool-head"><h1>{html.escape(t['h1'])}</h1><p>{html.escape(t['lead'])}</p><div class="tags">{'<a class="tag plus" href="/plus">✨ PrintPals Plus: try 7 days free</a>' if t.get('plus') else ''}<span class="tag">👧 {ages_text(t['id'])}</span><span class="tag">{'✓ 7 days free, no card' if t.get('plus') else '✓ Free, no sign up'}</span><span class="tag">✓ A4 and US Letter</span>{pin_btn(t)}</div><a class="jump" href="#preview">See your worksheet ↓</a></div>
+<div class="tool-head"><h1>{html.escape(t['h1'])}</h1><p>{html.escape(t['lead'])}</p><div class="tags">{(f'<a class="tag plus" href="/plus">🍎 Teacher plan: $59 a year, 7 days free</a>' if price == '59.00' else '<a class="tag plus" href="/plus">✨ PrintPals Plus: $4.99 a month or $39 a year, 7 days free</a>') if price else ''}<span class="tag">👧 {ages_text(t['id'])}</span><span class="tag">{'✓ 7 days free, no card' if t.get('plus') else '✓ Free, no sign up'}</span><span class="tag">✓ A4 and US Letter</span>{pin_btn(t)}</div><a class="jump" href="#preview">See your worksheet ↓</a></div>
 <div class="maker">
 <form class="panel" id="maker" data-tool="{t['id']}"{level_attr}{(' data-plus="teacher"' if t['id'] == 'classpack' or t.get('teacher') else ' data-plus="plus"') if t.get('plus') else ''} autocomplete="off">
 {level_btns}
@@ -3862,6 +3876,23 @@ HELP = f'''<h1>Help and support</h1>
 <details><summary>My printer is black and white.</summary><p>Tick "Ink saver" on any worksheet for white backgrounds and light grey pictures that use much less ink.</p></details>
 <p>More about us on the <a href="/about">About page</a>. Read our <a href="/terms">Terms</a> and <a href="/privacy">Privacy</a> pages.</p>'''
 
+REFUNDS = f'''<h1>Refunds, delivery and contact</h1>
+<p class="lead-p">The short version: everything is digital and ready straight away, and if you are not happy you get your money back.</p>
+<h2>Refunds and returns</h2>
+<p>PrintPals Plus and the teacher plan are digital subscriptions, so there is nothing to post back. If you are not happy for any reason, email us within 14 days of any payment and we will refund that payment in full. You do not need to give a reason.</p>
+<ul><li><b>How:</b> email <a href="mailto:{CONTACT}">{CONTACT}</a> and tell us the email address you paid with.</li>
+<li><b>How long:</b> we reply within 2 working days and send the refund the same day. Your bank usually shows it within 5 to 10 working days.</li>
+<li><b>After 14 days:</b> payments are not refunded, but you can cancel at any time so you are not charged again.</li></ul>
+<h2>Cancelling</h2>
+<p>Cancel any time in two taps: <a href="{STRIPE_PORTAL}" rel="noopener">manage or cancel my subscription</a>. Plus stays open until the end of the time you have paid for.</p>
+<h2>Delivery</h2>
+<p>There is no shipping and no delivery charge. Every pack is made instantly inside your web browser, anywhere in the world. Print it at home or at school, or save it as a PDF. Paid packs open on the phone or computer you subscribe on, and you can open them on another device with the receipt number from your payment email.</p>
+<h2>Prices</h2>
+<p>PrintPals Plus for families is $4.99 a month or $39 a year and opens every Plus pack. The teacher plan is $59 a year and opens every Plus pack and every class pack. Every plan starts with 7 free days, and no card is needed for the free week. Prices are in US dollars and include any tax.</p>
+<h2>Contact us</h2>
+<p>Email <a href="mailto:{CONTACT}">{CONTACT}</a>. We are a small family company and we reply within 2 working days.</p>
+<p>PrintPals is run by Grace and Loannes Ltd, a company registered in Scotland (company number SC899696).</p>'''
+
 NOT_FOUND = '''<h1>Oops, this page got lost!</h1>
 <p class="lead-p">It may have wandered off to play. Let us help you find something lovely instead.</p>
 <p><a class="btn big" href="/weekly-learning-pack" style="max-width:420px">🎒 Plan my child's week</a></p>
@@ -3936,6 +3967,7 @@ def main():
     pages = [('about', 'About PrintPals | Free Worksheets Made for Real Families', 'Why we made PrintPals: free, private worksheets and ready-made learning packs built around the real problems parents face.', ABOUT),
              ('privacy', 'Privacy | PrintPals', 'PrintPals does not collect what you type. Worksheets are made inside your own browser.', PRIVACY),
              ('help', 'Help and Support | PrintPals', 'Help with PrintPals: cancelling or changing your Plus subscription, refunds, receipts, the free week and printing tips.', HELP),
+             ('refunds', 'Refunds, Delivery and Contact | PrintPals', 'Our refund policy (a full refund within 14 days), instant digital delivery with no shipping, prices and how to contact us.', REFUNDS),
              ('terms', 'Terms of Use | PrintPals', 'The terms for using PrintPals and PrintPals Plus subscriptions, including prices, cancelling and refunds.', TERMS),
              ('my-shelf', 'My PrintPals Shelf | Your Collection', 'Everything your family has made with PrintPals Plus, and what to collect next.', shelf_body()),
              ('plus', 'PrintPals Plus | Monthly Learning Plans, Activity Books and Class Packs', 'Everything on PrintPals stays free. Plus adds seasonal packs, storybooks, journals, monthly plans and more for families, and class sets for teachers. Try it free for 7 days.', PLUS)]
@@ -3959,7 +3991,7 @@ def main():
         f.write(us_js(open(os.path.join(OUT, 'js', 'plus.js'), encoding='utf-8').read()))
     write_catalog()
     today = datetime.date.today().isoformat()
-    urls = ['/'] + ['/' + t['slug'] for t in TOOLS] + ['/plus', '/help', '/about', '/privacy', '/terms']
+    urls = ['/'] + ['/' + t['slug'] for t in TOOLS] + ['/plus', '/help', '/refunds', '/about', '/privacy', '/terms']
     urls += ['/us'] + ['/us' + u for u in urls[1:]]
     with open(os.path.join(OUT, 'sitemap.xml'), 'w', encoding='utf-8') as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
