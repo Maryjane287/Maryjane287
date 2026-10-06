@@ -2,7 +2,7 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { designsFor, designExamples, baseDesign, DESIGNS } from '/home/user/Maryjane287/store/src/covers.js';
 const root = '/home/user/Maryjane287/store/';
-const mags = JSON.parse(await readFile(root + 'data/magazines.json'));
+const mags = JSON.parse(await readFile(root + 'data/magazines.json')).filter(m => !m.hidden);
 const site = JSON.parse(await readFile(root + 'data/site.json'));
 const url = site.url.replace(/\/$/, '');
 const [start, out] = process.argv.slice(2);

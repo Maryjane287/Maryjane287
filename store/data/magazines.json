@@ -455,6 +455,230 @@
     }
   },
   {
+    "slug": "birthday-love-magazine",
+    "title": "Happy Birthday, My Love",
+    "searchTitle": "Personalised Birthday Magazine for Your Wife",
+    "pinTitle": "Birthday Magazine for Your Wife",
+    "occasion": "Her birthday",
+    "short": "A beautiful birthday magazine that tells her how deeply she is loved.",
+    "description": "A birthday magazine for the love of your life. Answer five quick questions, add three photos, and we fill 24 beautiful pages with her name, her face and your love story, from famous love letters to why the world is better because she was born.",
+    "hidden": true,
+    "love": true,
+    "keywords": [
+      "birthday gift for wife",
+      "birthday gift for her",
+      "romantic birthday gift",
+      "personalised gift for wife"
+    ],
+    "inside": [
+      "24 full pages, all about her",
+      "A cover starring her",
+      "Your letter to her",
+      "Ten things you love about her",
+      "The Science of Falling in Love",
+      "Famous Love Stories and Love Letters Through History",
+      "Why the World Is Better Because You Were Born",
+      "A perfume ad, movie poster, awards, vouchers and her passport",
+      "A closing note about love, just for her"
+    ],
+    "letterTitle": "A letter for you",
+    "fields": [
+      {
+        "id": "name",
+        "label": "Her name",
+        "example": "Emma",
+        "max": 14
+      },
+      {
+        "id": "age",
+        "label": "Her age this birthday",
+        "example": "30",
+        "max": 3
+      },
+      {
+        "id": "nick",
+        "label": "What you call her",
+        "example": "My sunshine",
+        "max": 24
+      },
+      {
+        "id": "from",
+        "label": "Your name",
+        "example": "Chris",
+        "max": 20
+      },
+      {
+        "id": "message",
+        "label": "Your letter to her (even two lines is perfect)",
+        "example": "Happy birthday, my love. Every year with you is my favourite year. Thank you for your laugh, your patience and the way you make our house a home. I love you more than I could ever write.",
+        "type": "textarea",
+        "max": 420
+      },
+      {
+        "id": "met",
+        "label": "Where you met",
+        "example": "At a friend's wedding",
+        "max": 40,
+        "optional": true
+      },
+      {
+        "id": "first",
+        "label": "The first thing you noticed about her",
+        "example": "Her laugh, from across the room",
+        "max": 50,
+        "optional": true
+      },
+      {
+        "id": "date",
+        "label": "Your first date",
+        "example": "Dinner, then a walk that lasted four hours",
+        "max": 60,
+        "optional": true
+      },
+      {
+        "id": "song",
+        "label": "Your song",
+        "example": "The one from our first dance",
+        "max": 40,
+        "optional": true
+      },
+      {
+        "id": "trip",
+        "label": "A place you dream of going together",
+        "example": "Paris in the spring",
+        "max": 40,
+        "optional": true
+      },
+      {
+        "id": "promise",
+        "label": "One promise for her new year",
+        "example": "More slow Sunday mornings together",
+        "max": 70,
+        "optional": true
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of her",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite photo of you both",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma",
+        "palette": "plum",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Emma",
+          "age": "30",
+          "nick": "My sunshine",
+          "from": "Chris",
+          "met": "At a friend's wedding",
+          "first": "Her laugh, from across the room",
+          "date": "Dinner, then a walk that lasted four hours",
+          "song": "The one from our first dance",
+          "trip": "Paris in the spring",
+          "promise": "More slow Sunday mornings together"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "lagoon",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Mia",
+          "age": "34",
+          "nick": "My queen",
+          "from": "Leo"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "sunset",
+        "portrait": {
+          "skin": 2,
+          "hair": "bun",
+          "hairColor": "#2a1a12"
+        },
+        "values": {
+          "name": "Sam",
+          "age": "41",
+          "nick": "Beautiful",
+          "from": "Daniel"
+        }
+      }
+    ],
+    "designPalettes": {
+      "glossy": [
+        "plum",
+        "lagoon"
+      ],
+      "fashion": [
+        "plum",
+        "midnight"
+      ],
+      "retro": [
+        "sunset",
+        "butter"
+      ],
+      "scrapbook": [
+        "lagoon",
+        "mint"
+      ],
+      "minimal": [
+        "champagne",
+        "sky"
+      ],
+      "comic": [
+        "butter",
+        "sunset"
+      ]
+    },
+    "cover": {
+      "mast": "{name}",
+      "issue": "The birthday issue",
+      "edition": "Love edition",
+      "lines": [
+        [
+          "Exclusive",
+          "Why {name} is his whole world"
+        ],
+        [
+          "Happy birthday",
+          "Turning {age} and more beautiful than ever"
+        ],
+        [
+          "He calls her",
+          "{nick}"
+        ]
+      ],
+      "badge": [
+        "Now",
+        "{age}",
+        "and adored"
+      ],
+      "quote": "My favourite person in the world",
+      "credit": "With love, {from}"
+    }
+  },
+  {
     "slug": "anniversary-magazine",
     "layout": "anniversary",
     "title": "A Year of Us",

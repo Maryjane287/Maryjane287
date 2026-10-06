@@ -7,7 +7,10 @@ const root = new URL('..', import.meta.url);
 const dist = new URL('dist/', root);
 const read = async p => readFile(new URL(p, root), 'utf8');
 const site = JSON.parse(await read('data/site.json'));
-const mags = JSON.parse(await read('data/magazines.json'));
+// Hidden magazines (made for one person, like the birthday love magazine) skip the
+// shop pages, sitemap and feeds; only the maker and their private page know them.
+const allMags = JSON.parse(await read('data/magazines.json'));
+const mags = allMags.filter(m => !m.hidden);
 const ideas = await loadIdeas();
 const abs = p => site.url.replace(/\/$/, '') + p;
 // The first design of each magazine is its main product and keeps the plain URLs.
@@ -32,7 +35,7 @@ function coverFor(mag, ex, design = baseDesign(mag)) {
   return renderCover(mag, ex.values, { palette: ex.palette, portraitOpts: ex.portrait, design });
 }
 
-function layout({ title, description, path, body, og = {}, jsonld, bodyClass = '', scripts = '' }) {
+function layout({ title, description, path, body, og = {}, jsonld, bodyClass = '', scripts = '', noindex = false }) {
   const fullTitle = path === '/' ? `${site.name}: ${site.tagline}` : `${title} | ${site.name}`;
   const image = og.image || abs('/pins/birthday-magazine-mia.jpg');
   const ogTags = {
@@ -53,7 +56,7 @@ function layout({ title, description, path, body, og = {}, jsonld, bodyClass = '
 <meta name="p:domain_verify" content="c34b640fddc5572ca6d8e32b76436aef">
 <title>${esc(fullTitle)}</title>
 <meta name="description" content="${esc(description)}">
-<link rel="canonical" href="${abs(path)}">
+${noindex ? '<meta name="robots" content="noindex, nofollow">\n' : ''}<link rel="canonical" href="${abs(path)}">
 ${Object.entries(ogTags).map(([k, v]) => `<meta property="${k}" content="${esc(v)}">`).join('\n')}
 <meta name="twitter:card" content="summary_large_image">
 ${site.pinterestDomainVerify ? `<meta name="p:domain_verify" content="${esc(site.pinterestDomainVerify)}">` : ''}
@@ -428,8 +431,9 @@ async function makerPage() {
   </aside>
   <dialog class="all-pages" id="all-pages" aria-label="All pages of your magazine"><div class="all-head"><h2>Their magazine, page by page</h2><button type="button" class="btn btn-small" data-close>Back to editing</button></div><div class="all-grid"></div></dialog>
 </section>
-<script type="application/json" id="mags">${JSON.stringify(mags).replace(/</g, '\\u003c')}</script>
-<script type="application/json" id="site-checkout">${JSON.stringify(site.checkout)}</script>`;
+<script type="application/json" id="mags">${JSON.stringify(allMags).replace(/</g, '\\u003c')}</script>
+<script type="application/json" id="site-checkout">${JSON.stringify(site.checkout)}</script>
+<script type="application/json" id="gift-expires">${JSON.stringify(site.giftExpires || '')}</script>`;
   await page('/make/', layout({
     title: 'Make your magazine', description: 'Answer a few fun questions, add photos and watch your personalised magazine come to life.', path: '/make/', body, bodyClass: 'is-maker',
     scripts: '<script type="module" src="/assets/maker.js"></script>',
@@ -553,6 +557,18 @@ async function simplePages() {
     </section>`,
     scripts: '<script type="module" src="/assets/note.js"></script>',
   }));
+  // A private gift page: every birthday magazine in every design, each opening
+  // the maker with the gift code filled in. Not linked anywhere, not indexed.
+  const giftMags = ['birthday-love-magazine', 'birthday-magazine', 'star-sign-birthday-magazine', 'milestone-birthday-magazine'].map(s => allMags.find(m => m.slug === s)).filter(Boolean);
+  const giftLink = (m, d) => `/make/?m=${m.slug}&d=${d}&t=cards${site.giftCode ? `&code=${encodeURIComponent(site.giftCode)}` : ''}`;
+  await page('/gift/her-birthday/', layout({
+    title: 'A birthday gift for her', description: 'Make a beautiful birthday magazine for the love of your life.', path: '/gift/her-birthday/', noindex: true,
+    body: `<section class="section gift-page" data-expires="${esc(site.giftExpires || '')}"><div class="gift-expired" hidden><p class="kicker">Sorry</p><h1>This gift link has expired</h1><p class="lead">It was a private link, open for a short time only. You can still make a magazine for someone you love.</p><a class="btn" href="/">See the magazines</a></div><div class="gift-live"><div class="section-head"><p class="kicker">A gift, just for you</p><h1>Make her birthday unforgettable</h1><p class="lead">Choose a magazine and a design you love. Answer five quick questions, add three photos, and we fill all 24 pages for her. It is completely free.</p></div>
+      <ol class="gift-steps"><li><b>Pick a magazine and design</b>Tap any cover below. You can flip through all 24 pages before you finish.</li><li><b>Answer a few questions</b>Her name, her age, what you call her, a short letter and three photos. Everything else is optional.</li><li><b>Choose her day</b>Tick "It's a gift" and pick the date. You get your own copy straight away to check, and she gets hers on her day.</li></ol>
+      ${giftMags.map((m, i) => `<div class="gift-mag"><div class="gift-mag-head"><h2>${esc(m.title)}</h2>${i === 0 ? '<span class="gift-tag">Made for her</span>' : ''}<p>${esc(m.short)}</p></div><div class="gift-designs">${designsFor(m).map(d => `<a class="gift-design" href="${giftLink(m, d)}">${renderCover(m, designExamples(m, d)[0].values, { palette: designExamples(m, d)[0].palette, portraitOpts: designExamples(m, d)[0].portrait, design: d })}<span>${esc(DESIGNS[d].label)}</span></a>`).join('')}</div></div>`).join('')}
+    </div></section>
+    <script>(function(){var g=document.querySelector('.gift-page'),e=Date.parse(g.dataset.expires);if(e&&Date.now()>e){g.querySelector('.gift-live').hidden=true;g.querySelector('.gift-expired').hidden=false;}})();</script>`,
+  }));
   await page('/thanks/', layout({
     title: 'Thank you', description: 'Your magazine is on its way.', path: '/thanks/',
     body: `<section class="thanks"><div class="confetti" aria-hidden="true">${Array.from({ length: 18 }, (_, i) => `<i style="--i:${i}"></i>`).join('')}</div><p class="kicker">Order received</p><h1>Stop the press! Your magazine is in the works.</h1><p class="lead" id="thanks-lead">Digital magazines are ready to download straight after payment, and we email them to you too. Printed copies are printed near the lucky person and posted, and our print partner emails you when it ships.</p><a class="btn" href="/">Back to the front page</a></section>`,
@@ -566,7 +582,7 @@ async function simplePages() {
 async function feeds() {
   const urls = ['/', ...mags.flatMap(m => designsFor(m).map(d => magPath(m, d))), '/make/', '/ideas/', ...ideas.map(i => `/ideas/${i.slug}/`), '/help/', '/about/', '/privacy/', '/terms/'];
   await page('/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${abs(u)}</loc></url>`).join('\n')}\n</urlset>\n`);
-  await page('/robots.txt', `User-agent: *\nAllow: /\nDisallow: /note/\nSitemap: ${abs('/sitemap.xml')}\n`);
+  await page('/robots.txt', `User-agent: *\nAllow: /\nDisallow: /note/\nDisallow: /gift/\nSitemap: ${abs('/sitemap.xml')}\n`);
   // Pinterest catalog feed: one row per magazine and edition, so each shows up as a shoppable product.
   const csvCell = s => `"${String(s).replace(/"/g, '""')}"`;
   const rows = [['id', 'title', 'description', 'link', 'image_link', 'additional_image_link', 'price', 'availability', 'condition', 'brand', 'item_group_id', 'google_product_category', 'product_type']];
@@ -585,6 +601,7 @@ await mkdir(dist, { recursive: true });
 await cp(new URL('assets/', root), new URL('assets/', dist), { recursive: true });
 await cp(new URL('pins/', root), new URL('pins/', dist), { recursive: true });
 await cp(new URL('src/covers.js', root), new URL('assets/covers.js', dist));
+await cp(new URL('src/love.js', root), new URL('assets/love.js', dist));
 await home();
 for (const m of mags) for (const d of designsFor(m)) await magazinePage(m, d);
 await makerPage();

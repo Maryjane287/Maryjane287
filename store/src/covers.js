@@ -1,3 +1,5 @@
+import { lovePages, LOVE_PICKS } from './love.js';
+
 // Magazine cover and page renderer. Shared by the static build (Node) and the
 // magazine maker in the browser, so every cover looks the same everywhere.
 
@@ -13,6 +15,10 @@ export const PALETTES = {
   festive:  { bg: '#0f5c4a', ink: '#fffaf0', accent: '#ff4f5e', pop: '#ffd23f' },
   cranberry:{ bg: '#9e1b32', ink: '#fffaf0', accent: '#ffd23f', pop: '#f6e7c8' },
   snow:     { bg: '#eef4f7', ink: '#16324a', accent: '#c8102e', pop: '#0f5c4a' },
+  plum:     { bg: '#4a1d4f', ink: '#fff6ec', accent: '#e8b54a', pop: '#ffd7a8' },
+  lagoon:   { bg: '#0e5a63', ink: '#fffaf0', accent: '#ffb547', pop: '#ffe3c4' },
+  sunset:   { bg: '#f08a4b', ink: '#2a1030', accent: '#6b2a7a', pop: '#fff1d6' },
+  champagne:{ bg: '#f3e3c3', ink: '#2b1d14', accent: '#9a5b1c', pop: '#4a1d4f' },
 };
 
 const SKIN = ['#f6d5c0', '#e8b48f', '#b97a56', '#7a4a32'];
@@ -28,7 +34,8 @@ export function fillValues(mag, values = {}) {
   for (const f of mag.fields) {
     if (f.type === 'photo') continue;
     const v = (values[f.id] ?? '').toString().trim();
-    out[f.id] = v || f.example;
+    // Optional questions stay empty, so our example words never print in someone's magazine.
+    out[f.id] = v || (f.optional ? '' : f.example);
   }
   return out;
 }
@@ -361,7 +368,7 @@ export function renderPages(mag, values = {}, { palette = 'coral', portraitOpts 
   const pg = (cls, inner) => `<div class="pg pg-${cls}" style="${vars(p)}"><div class="pg-in">${inner}</div></div>`;
   return [
     pg('letter', `<p class="pg-kicker">${esc(letterTitle)}</p><h3>${mag.layout === 'review' ? 'To' : 'Dear'} ${esc(String(who).replace(/^the\s+/i, ''))},</h3><p class="pg-body">${esc(v.message)}</p><p class="pg-sign">With love, ${esc(from)}</p>`),
-    pg('facts', `<p class="pg-kicker">By the numbers</p><h3>All about ${esc(who)}</h3><dl>${facts.map(f => `<dt>${esc(f.label)}</dt><dd>${esc(v[f.id])}</dd>`).join('')}</dl>`),
+    pg('facts', `<p class="pg-kicker">By the numbers</p><h3>All about ${esc(who)}</h3><dl>${facts.filter(f => v[f.id]).map(f => `<dt>${esc(f.label)}</dt><dd>${esc(v[f.id])}</dd>`).join('')}</dl>`),
     pg('photos', `<p class="pg-kicker">The photo spread</p>${photoOrPortrait(photos.photo2, { ...portraitOpts, hair: portraitOpts.hair }, p, 'pg-ph pg-ph1')}${photoOrPortrait(photos.photo3, portraitOpts, p, 'pg-ph pg-ph2')}<p class="pg-cap">${esc(v.moment || v.trip || v.miss || v.fact || v.prediction || '')}</p>`),
   ];
 }
@@ -516,6 +523,67 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
   const mrz = s => String(s).toUpperCase().replace(/[^A-Z]+/g, '<').replace(/^<|<$/g, '');
   const mrzLine1 = (`P<CVS${mrz(who)}<<${mrz(from)}`.slice(0, 40)).padEnd(40, '<');
   const mrzLine2 = (`${mrz(mag.title)}<<ONE<OF<A<KIND<<001`.slice(0, 40)).padEnd(40, '<');
+
+  if (mag.love) {
+    // "Happy Birthday, My Love": a birthday magazine for a wife, with the love
+    // pages we write ourselves, so five quick answers fill all 24 pages.
+    const num = (html, n) => html.replace(/<\/div>$/, `<span class="pg-num">${n}</span></div>`);
+    const L = lovePages({ who, from, age: v.age, page, style });
+    const her = esc(who), him = esc(from), nick = String(v.nick || '');
+    const story = [['Where we met', v.met], ['The first thing I noticed', v.first], ['Our first date', v.date], ['Our song', v.song]].filter(([, x]) => x);
+    const picked = mine('x_loves', 10);
+    const loves = [...picked, ...LOVE_PICKS.filter(x => !picked.includes(x))].slice(0, 10);
+    const opener = (n) => `<div class="pg pg-opener" ${style}>${ph('photo1', 'op-photo')}<div class="op-shade"></div><div class="pg-in"><p class="pg-kicker">The cover story</p><h3>${her}</h3><p class="op-dek">Why ${her} is ${him}'s whole world</p></div><span class="pg-num">${n}</span></div>`;
+    const first4 = story.length >= 2
+      ? page('lv lv-story', `<p class="pg-kicker">Our love story</p><h3>The Day We Met</h3><div class="lv-chapters">${story.map(([l, x], i) => `<div><span>Chapter ${i + 1}</span><b>${l}</b><p>${esc(x)}</p></div>`).join('')}</div><p class="lv-hand">And ${him} has been falling for ${her} ever since.</p>`, 4)
+      : page('lv lv-ahead', `<p class="pg-kicker">Her birthday forecast</p><h3>Your year ahead</h3><div class="lv-forecast">${[['Love', 'Off the charts, every single day'], ['Laughter', `Expected daily, sometimes even at ${him}'s jokes`], ['Adventure', 'A lovely surprise or two is on its way'], ['Rest', 'More slow mornings than last year'], ['Luck', 'Shining on everything you touch'], ['Hugs', 'Unlimited, and always free']].map(([k, x]) => `<div><b>${k}</b><p>${x}</p></div>`).join('')}</div><p class="lv-hand">Forecast by ${him}. Guaranteed accurate.</p>`, 4);
+    const lead = story.length
+      ? `${him} met ${her} ${v.met ? esc(/^(at|in|on|through|via|during)\s/i.test(v.met) ? v.met.replace(/^\w+/, m => m.toLowerCase()) : `at ${v.met}`) : 'one lucky day'}, and${v.first ? ` the first thing he noticed was ${esc(String(v.first).replace(/^./, c => c.toLowerCase()))}` : ' he has never looked back'}. Today, as ${her} turns ${esc(v.age)}, he told us she is still his favourite person in the world.`
+      : `Sources close to the couple confirm that ${him} is, once again, completely in love with ${her}. As she turns ${esc(v.age)}, he told us she is his favourite person in the whole world, and he would choose her again every single day.`;
+    const headline = `${from} still can't believe how lucky he is`;
+    const paperName = `The Daily ${first}`;
+    const lbriefs = [['Turning', v.age], ['He calls her', nick], ['Our song', v.song]].filter(([, x]) => x);
+    const lquiz = [
+      { q: 'How long does the brain need to feel the first spark of attraction?', opts: ['A fifth of a second', 'Ten minutes', 'A whole week'], a: 'A' },
+      { q: 'Which feel good hormone does a long hug release?', opts: ['Adrenaline', 'Oxytocin', 'Caffeine'], a: 'B' },
+      { q: `What does ${from} call ${who}?`, opts: ['The boss', nick, 'Trouble'], a: 'B' },
+    ].map((x, i) => ({ ...x, n: i + 1 }));
+    const lwords = [...new Set([bare.toUpperCase().replace(/[^A-Z]/g, ''), 'LOVE', 'HEART', 'FOREVER', 'SMILE', 'HUGS', 'KISS', 'BIRTHDAY'])].filter(w => w.length >= 3 && w.length <= 10).slice(0, 8);
+    const lws = wordSearch(lwords, who + mag.slug);
+    const lsolved = new Set(lws.placed.flatMap(x => x.cells.map(([a, b]) => `${a},${b}`)));
+    const lgrid = (mark) => `<div class="ws-grid${mark ? ' ws-mini' : ''}">${lws.letters.map((r, y) => r.map((c, x) => `<i${mark && lsolved.has(`${x},${y}`) ? ' class="on"' : ''}>${c}</i>`).join('')).join('')}</div>`;
+    const lawards = pad(mine('x_awards', 4).map((t, i) => [esc(t), awardNotes[i]]), [['Most beautiful smile', 'By a landslide'], ['Best hugs in the world', 'Unanimous'], ['The laugh everyone loves', 'Year after year'], ['Lifetime achievement', 'In being deeply loved']], 4);
+    const lvouch = pad(mine('x_treats', 4).map((t, i) => [t, treatNotes[i]]), [['Breakfast in bed', 'Served with a kiss'], ['A whole day off', 'Everything done for you'], ['Date night, your choice', 'Dress up or stay in'], ['One long foot rub', 'Redeemable any evening']], 4);
+    const promises = [v.promise, 'To hold your hand on the good days and the hard ones.', 'To make you laugh every single day.', 'To keep choosing you, again and again.', 'To celebrate you, and not only on your birthday.'].filter(Boolean).slice(0, 5);
+    const lmrz = (`P<CVS${mrz(who)}<<${mrz(from)}`.slice(0, 40)).padEnd(40, '<');
+    const lcontents = [[3, 'A letter for you'], [4, story.length >= 2 ? 'The day we met' : 'Your year ahead'], [6, 'Ten things I love about you'], [8, 'The fragrance'], [9, 'Famous love stories'], [10, 'Front page news'], [11, 'Love letters through history'], [12, 'The science of falling in love'], [13, 'The quiz'], [16, 'The awards'], [17, 'Why the world is better because you were born'], [19, 'Love vouchers'], [21, 'My promises to you'], [23, 'Now showing: the movie'], [24, 'A note for you']];
+    return [
+      renderCover(mag, values, opts),
+      page('contents', `<p class="pg-kicker">Inside this issue</p><h3>Contents</h3><ol class="toc">${lcontents.map(([n, t]) => `<li><b>${n}</b><span>${esc(t)}</span></li>`).join('')}</ol><p class="toc-note">A one of a kind birthday issue, made for ${her} with all of ${him}'s love.</p>`, 2),
+      num(renderPages(mag, values, opts)[0], 3),
+      first4,
+      opener(5),
+      page('reasons', `<p class="pg-kicker">From ${him}, with love</p><h3>Ten things I love about you</h3><ol class="reasons">${loves.map(r => `<li>${esc(r)}</li>`).join('')}</ol>`, 6),
+      page('photos', `<p class="pg-kicker">The photo spread</p>${ph('photo2', 'pg-ph pg-ph1')}${ph('photo3', 'pg-ph pg-ph2')}<p class="pg-cap">${esc(nick)}</p>`, 7),
+      `<div class="pg pg-ad" ${style}><div class="ad-glow"></div><p class="ad-kicker">The new fragrance</p><div class="ad-bottle"><i class="ad-cap"></i><b class="ad-glass"><span>${esc(bare.toUpperCase())}</span><small>Eau de parfum</small></b></div><h3 class="ad-name">Eau de ${esc(bare)}</h3><p class="ad-line">&ldquo;${esc(nick)}&rdquo;</p><p class="ad-notes">Top notes of kindness, laughter and warm summer evenings. A heart of pure gold.</p><p class="ad-foot">Available nowhere. Absolutely priceless.</p><span class="pg-num">8</span></div>`,
+      num(L.stories, 9),
+      `<div class="pg pg-news" ${style}><div class="pg-in"><div class="nw-mast"><span>Birthday edition</span><b style="font-size:calc(${fit(paperName, 48, 0.52, 9)} * var(--cq))">${esc(paperName)}</b><span>Priceless</span></div><p class="nw-date">Extra! Extra! Read all about it</p><h3 class="nw-head" style="font-size:calc(${fit(headline, 84, 0.5, 9.6)} * var(--cq))">${esc(headline)}</h3><div class="nw-grid">${ph('photo2', 'nw-photo')}<div class="nw-lead${lead.length > 150 ? ' nw-long' : ''}"><p class="nw-by">By our love correspondent</p><p>${lead}</p></div></div><div class="nw-briefs">${lbriefs.map(([l, x]) => `<div><b>${esc(l)}</b><p>${esc(x)}</p></div>`).join('')}</div><p class="nw-weather">Weather: 100% chance of hugs and kisses</p></div><span class="pg-num">10</span></div>`,
+      num(L.letters, 11),
+      num(L.science, 12),
+      page('quiz', `<p class="pg-kicker">Test yourself</p><h3>The love quiz</h3>${lquiz.map(q => `<div class="qz"><p class="qz-q"><b>${q.n}</b>${esc(q.q)}</p><ul>${q.opts.map((o, i) => `<li><i>${'ABC'[i]}</i>${esc(o)}</li>`).join('')}</ul></div>`).join('')}<p class="qz-key">Answers: ${lquiz.map(q => `${q.n}${q.a}`).join(' &middot; ')}</p>`, 13),
+      page('puzzle', `<p class="pg-kicker">Puzzle page</p><h3>Find the words</h3>${lgrid(false)}<ul class="ws-words">${lws.placed.map(x => `<li>${x.w}</li>`).join('')}</ul>`, 14),
+      `<div class="pg pg-poster" ${style}>${ph('photo1', 'po-photo')}<div class="po-name" style="font-size:calc(${fit(String(who).toUpperCase(), 88, 0.5, 30)} * var(--cq))">${esc(String(who).toUpperCase())}</div><div class="po-badge"><small>${s.badge[0]}</small>${s.badge[1]}<small>${s.badge[2]}</small></div><span class="pg-num">15</span></div>`,
+      page('awards', `<p class="pg-kicker">Live from the red carpet</p><h3>The ${esc(first)} Awards</h3><div class="aw">${lawards.map(([t, n]) => `<div class="aw-item"><svg class="aw-cup" viewBox="0 0 24 24" aria-hidden="true"><path fill="#f3d67a" d="M7 3h10v2h3a1 1 0 0 1 1 1c0 3.2-2 5.6-4.8 6A5 5 0 0 1 13 14.9V18h3v3H8v-3h3v-3.1A5 5 0 0 1 7.8 12C5 11.6 3 9.2 3 6a1 1 0 0 1 1-1h3V3zm10 4v3.8c1.3-.5 2.1-1.8 2.3-3.8H17zM7 7H4.7c.2 2 1 3.3 2.3 3.8V7z"/></svg><p class="aw-cat">${t}</p><p class="aw-win">Winner: ${her}</p><p class="aw-note">${n}</p></div>`).join('')}</div><p class="aw-foot">The envelope, please. It was never in doubt.</p>`, 16),
+      num(L.world, 17),
+      page('cert', `<div class="cert"><p class="pg-kicker">Official certificate</p><p class="cert-small">This certifies that</p><p class="cert-name">${her}</p><p class="cert-small">is officially, undeniably and forever</p><p class="cert-title">The Best Wife in the World</p><div class="cert-foot"><span>${him}</span><i class="cert-seal">&#9733;</i><span>${esc(mag.title)}</span></div></div>`, 18),
+      page('vouchers', `<p class="pg-kicker">Cut out and keep</p><h3>Love vouchers for ${her}</h3><div class="vch">${lvouch.map(([a, b]) => `<div><b>${esc(a)}</b><span>${esc(b)}</span></div>`).join('')}</div>`, 19),
+      page('passport', `<p class="pg-kicker">Our next adventures</p><h3>The ${esc(first)} passport</h3><div class="pp"><div class="pp-head"><span>Passport to everywhere, together</span><span>No. 001</span></div><div class="pp-body">${ph('photo1', 'pp-photo')}<dl class="pp-data"><dt>Name</dt><dd>${her}</dd><dt>Nationality</dt><dd>Loved, everywhere</dd><dt>Occupation</dt><dd>${values.x_job ? esc(String(values.x_job).trim()) : 'Queen of his heart'}</dd><dt>Travelling with</dt><dd>${him}</dd><dt>Valid until</dt><dd>Forever</dd></dl></div><div class="pp-stamps">${pad([...(v.trip ? [esc(v.trip)] : []), ...mine('x_places', 3).map(esc)], ['Somewhere sunny', 'Home', 'Anywhere with you'], 3).map(x => `<span>${x}</span>`).join('')}</div><div class="pp-mrz"><p>${esc(lmrz)}</p><p>${esc(mrzLine2)}</p></div></div>`, 20),
+      page('lv lv-promise', `<p class="pg-kicker">For your new year</p><h3>My promises to you</h3><ol class="lv-promises">${promises.map(x => `<li>${esc(x)}</li>`).join('')}</ol><p class="lv-hand">Signed, sealed and meant with all my heart. ${him}</p>`, 21),
+      page('notes', `<p class="pg-kicker">Notes from everyone</p><h3>${friendNotes.length ? `Messages for ${her}` : 'Leave a little message'}</h3><div class="notes">${notesHtml}</div><p class="pg-kicker ws-ans">Puzzle answers</p>${lgrid(true)}`, 22),
+      `<div class="pg pg-movie" ${style}>${ph('photo2', 'mv-photo')}<div class="mv-shade"></div><p class="mv-presents">${him} presents</p><div class="mv-stars">${[['A love story for the ages', 'The Daily Hug'], ['I laughed, I cried', 'Everyone who knows them'], ['Pure magic', 'The Group Chat']].map(([q, src]) => `<p>&#9733;&#9733;&#9733;&#9733;&#9733;<b>&ldquo;${q}&rdquo;</b><small>${src}</small></p>`).join('')}</div><div class="mv-title"><h3 style="font-size:calc(${fit(String(who).toUpperCase(), 86, 0.5, 24)} * var(--cq))">${esc(String(who).toUpperCase())}</h3><p class="mv-sub">A love story</p><p class="mv-tag">&ldquo;${esc(nick)}&rdquo;</p><p class="mv-credits">Starring ${her} &middot; Directed by ${him} &middot; Written with love &middot; Filmed on location at home</p><p class="mv-soon">Showing forever, in his heart</p></div><span class="pg-num">23</span></div>`,
+      num(L.note, 24),
+    ];
+  }
 
   return [
     renderCover(mag, values, opts),

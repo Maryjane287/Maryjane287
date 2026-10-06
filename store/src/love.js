@@ -1,7 +1,8 @@
 // The love pages for "Happy Birthday, My Love": pages we write ourselves, so
 // the magazine feels rich even when the husband only answers a few questions.
 // Every page is about her by name, and the last one is a note from us.
-import { esc } from './covers.js';
+// Kept here (not imported from covers.js) so the two files never import each other.
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 const ICON = {
   spark: '<path d="M12 2l2.2 6.6L21 11l-6.8 2.4L12 20l-2.2-6.6L3 11l6.8-2.4z"/>',
@@ -15,6 +16,15 @@ const icon = k => `<svg viewBox="0 0 24 24" aria-hidden="true">${ICON[k]}</svg>`
 const heart = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6-8 11-8 11z"/></svg>';
 // A small sprig of leaves and a bud, for the corners of the note from us.
 const sprig = '<svg class="lv-sprig" viewBox="0 0 100 100" aria-hidden="true"><path d="M8 92C30 70 52 52 92 8" fill="none"/><path d="M30 70c-8-10-6-20 2-24 4 10 4 18-2 24zM46 54c-2-12 4-20 12-20 0 10-4 16-12 20zM62 38c0-10 6-16 14-14-2 8-6 12-14 14zM34 66c10-6 20-4 24 4-10 4-18 3-24-4zM50 50c10-4 18 0 20 8-10 2-16 0-20-8z"/><circle cx="92" cy="8" r="5"/></svg>';
+
+// Things he can tap instead of typing, for "Ten things I love about you".
+export const LOVE_PICKS = [
+  'Her beautiful smile', 'Her laugh', 'How kind she is to everyone', 'The way she cares for our family',
+  'How she makes our house a home', 'Her hugs', 'How strong she is', 'The way she believes in me',
+  'How funny she is', 'Her beautiful eyes', 'Her cooking', 'How clever she is', 'Her patience with me',
+  'The way she looks at me', 'Her style', 'How hard she works', 'Our late night talks', 'Her good heart',
+  'How she remembers the little things', 'How she makes every day better',
+];
 
 export function lovePages({ who, from, age, page, style }) {
   const her = esc(who);
@@ -57,7 +67,7 @@ export function lovePages({ who, from, age, page, style }) {
   return {
     science: page('lv lv-sci', `<p class="pg-kicker">Fun facts</p><h3>The Science of Falling in Love</h3><div class="lv-facts">${science.map(([k, t, d]) => `<div class="lv-fact"><i>${icon(k)}</i><b>${t}</b><p>${d}</p></div>`).join('')}</div><p class="lv-hand">Science can measure all of this. It still cannot explain how ${him} looked at ${her} and just knew.</p>`),
     stories: page('lv lv-fame', `<p class="pg-kicker">Love through the ages</p><h3>Famous Love Stories</h3><ol class="lv-line">${stories.map(([y, t, d]) => `<li><span class="lv-year">${y}</span><b>${t}</b><p>${d}</p></li>`).join('')}<li class="lv-us"><span class="lv-year">Today</span><b>${him} and ${her}</b><p>Not in any history book yet. But ask ${him}, and he will tell you it is the greatest love story he knows.</p></li></ol>`),
-    letters: page('lv lv-letters', `<p class="pg-kicker">From the archives</p><h3>Love Letters Through History</h3><div class="lv-notes">${letters.map(([q, s], i) => `<figure class="lv-note lv-n${i + 1}"><blockquote>&ldquo;${q}&rdquo;</blockquote><figcaption>${s}</figcaption><i class="lv-seal">${heart}</i></figure>`).join('')}</div><p class="lv-hand">The greatest love letters were never written for the world. They were written for one person. ${her}, yours is on page 3.</p>`),
+    letters: page('lv lv-letters', `<p class="pg-kicker">From the archives</p><h3>Love Letters Through History</h3><div class="lv-notes">${letters.map(([q, s], i) => `<figure class="lv-note lv-n${i + 1}"><blockquote>&ldquo;${q}&rdquo;</blockquote><figcaption>${s}</figcaption><i class="lv-seal">${heart}</i></figure>`).join('')}</div><p class="lv-hand">The greatest love letters were written for just one person. ${her}, yours is on page 3.</p>`),
     world: page('lv lv-world', `<div class="lv-sun" aria-hidden="true"></div><p class="pg-kicker">On this day, ${years}</p><h3>Why the World Is Better Because You Were Born</h3><p class="lv-lead">The world got a little brighter. Here is what it gained:</p><ul class="lv-gifts">${gifts.map(g => `<li>${g}</li>`).join('')}</ul><p class="lv-close">The world is better because you were born, ${her}. ${him}'s world most of all.</p>`),
     note: `<div class="pg pg-lv lv-us-note" ${style}>${sprig}${sprig}<div class="pg-in"><p class="pg-kicker">A note from all of us at Cover Story</p><h3>What we believe love is</h3><div class="lv-letter"><p>We make magazines for a living, but some feel different. This was one of them.</p><p>We believe love is not only the big moments. It is the cup of tea made just right. The hand reached for in a crowd. The person who remembers how you like things, and the one who chooses you again and again, on ordinary days.</p><p>${her}, someone came to us wanting something special for you. Not a card anyone could buy, but pages full of you: your name, your face, your story. He wanted you to hold something in your hands and know, without any doubt, how deeply you are loved.</p><p>That someone is ${him}. And from everything he told us, you are his favourite person in the whole world.</p><p class="lv-wish">Happy birthday, ${her}. You are loved more than any magazine could ever hold.</p></div><p class="lv-sign">With warm wishes,<b>everyone at Cover Story</b></p></div></div>`,
   };

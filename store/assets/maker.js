@@ -2,10 +2,14 @@
 // the cover update live. Photos stay in the browser until the order is placed.
 import { renderCover, renderPages, renderFullMagazine, renderCardSet, PALETTES, DESIGNS, designsFor, baseDesign, esc } from './covers.js';
 import { renderAndUpload, finishOrder } from './order-pdf.js';
+import { LOVE_PICKS } from './love.js';
 
 const mags = JSON.parse(document.getElementById('mags').textContent);
 const checkout = JSON.parse(document.getElementById('site-checkout').textContent);
 const params = new URLSearchParams(location.search);
+// Private gift links (a code in the link) stop working after their end date.
+const giftEnds = Date.parse(JSON.parse(document.getElementById('gift-expires')?.textContent || '""'));
+if (params.get('code') && giftEnds && Date.now() > giftEnds) { params.delete('code'); params.delete('m'); }
 const $ = s => document.querySelector(s);
 const form = $('#order');
 
@@ -23,6 +27,8 @@ const state = {
   tab: 0,
 };
 if (!mags.some(m => m.slug === state.slug)) state.slug = mags[0].slug;
+// A private magazine (like the birthday love magazine) only opens from its own link.
+if (mags.find(m => m.slug === state.slug).hidden && (params.get('m') !== state.slug || !params.get('code'))) state.slug = mags.find(m => !m.hidden).slug;
 const mag = () => mags.find(m => m.slug === state.slug);
 
 if (params.get('t')) {
@@ -80,9 +86,15 @@ const FUN = [
   ['x_places', 'Places they love', 'Stamps for their passport, up to three', 'Paris, the seaside, Grandma\'s kitchen', 100],
   ['x_job', 'Their job title, the fun version', 'Printed on their passport', 'Chief hug officer', 40],
 ];
+// "Ten things I love about you": he taps the ones that are true instead of typing.
+function lovePicks() {
+  const on = String(state.values.x_loves || '').split('\n').filter(Boolean);
+  return `<fieldset class="love-picks wide"><legend>Ten things you love about her <small>(tap up to ten)</small></legend><p class="small">Tap the ones that are true. Any you leave out, we fill with lovely ones for you.</p><div class="pick-chips">${LOVE_PICKS.map(x => `<button type="button" class="chip" data-love="${esc(x)}" aria-pressed="${on.includes(x)}">${esc(x)}</button>`).join('')}</div><small class="pick-count">${on.length} of 10 chosen</small></fieldset>`;
+}
+
 function funPages(m) {
   const gentle = m.slug === 'pet-memorial-magazine';
-  const rows = FUN.filter(r => !(gentle && r[6])).map(([id, label, hint, eg, max, area]) => {
+  const rows = FUN.filter(r => !(gentle && r[6]) && !(m.love && r[0] === 'x_reasons')).map(([id, label, hint, eg, max, area]) => {
     const val = esc(state.values[id] || '');
     const common = `data-f="${id}" maxlength="${max}" placeholder="${esc(eg)}"`;
     return `<label class="field${area || max > 60 ? ' wide' : ''}"><span>${esc(label)} <small>${esc(hint)}</small></span>${area ? `<textarea rows="4" ${common}>${val}</textarea>` : `<input type="text" ${common} value="${val}">`}</label>`;
@@ -94,12 +106,16 @@ function renderFields() {
   const m = mag();
   const text = m.fields.filter(f => f.type !== 'photo');
   const photos = m.fields.filter(f => f.type === 'photo');
-  $('#fields').innerHTML = text.map((f, i) => {
+  const field = f => {
     const val = esc(state.values[f.id] || '');
-    const common = `name="q_${f.id}" data-f="${f.id}" maxlength="${f.max || 200}" placeholder="${esc(f.example)}" required`;
+    const common = `name="q_${f.id}" data-f="${f.id}" maxlength="${f.max || 200}" placeholder="${esc(f.example)}"${f.optional ? '' : ' required'}`;
     const input = f.type === 'textarea' ? `<textarea ${common}>${val}</textarea>` : `<input type="text" ${common} value="${val}">`;
     return `<label class="field${f.type === 'textarea' || (f.max || 0) > 60 ? ' wide' : ''}"><span>${esc(f.label)}</span>${input}${f.type === 'textarea' ? `<small class="count" data-count="${f.id}"></small>` : ''}</label>`;
-  }).join('') + funPages(m) + `<fieldset class="friend-notes wide"><legend>Little notes from family and friends <small>(optional)</small></legend><p class="small">Ask a few people who love them for one sweet line each. They all appear together on a special page in the magazine, each one signed with their name.</p>${familyInvite()}${[1, 2, 3, 4].map(i => `<div class="friend-note"><input type="text" data-f="note${i}_from" maxlength="30" placeholder="${['Grandma', 'Uncle Sam', 'Emma', 'Leo'][i - 1]}" aria-label="Note ${i}: who it is from" value="${esc(state.values[`note${i}_from`] || '')}"><input type="text" data-f="note${i}_msg" maxlength="110" placeholder="${['You make every room brighter.', 'Still the best dancer I know!', 'Here is to many more adventures together.', 'Love you to the moon and back.'][i - 1]}" aria-label="Note ${i}: their message" value="${esc(state.values[`note${i}_msg`] || '')}"></div>`).join('')}</fieldset><div class="photos">${photos.map(f => `
+  };
+  const extra = text.filter(f => f.optional);
+  // Optional questions sit in their own box: skip any, and that page swaps to one we write.
+  const story = extra.length ? `<fieldset class="fun-pages wide"><legend>Your love story <small>(optional)</small></legend><p class="small">Only if you have a minute. Skip any of these and we fill those pages with beautiful ones we have written for her.</p><div class="fun-grid">${extra.map(field).join('')}</div></fieldset>` : '';
+  $('#fields').innerHTML = text.filter(f => !f.optional).map(field).join('') + (m.love ? lovePicks() : '') + story + funPages(m) + `<fieldset class="friend-notes wide"><legend>Little notes from family and friends <small>(optional)</small></legend><p class="small">Ask a few people who love them for one sweet line each. They all appear together on a special page in the magazine, each one signed with their name.</p>${familyInvite()}${[1, 2, 3, 4].map(i => `<div class="friend-note"><input type="text" data-f="note${i}_from" maxlength="30" placeholder="${['Grandma', 'Uncle Sam', 'Emma', 'Leo'][i - 1]}" aria-label="Note ${i}: who it is from" value="${esc(state.values[`note${i}_from`] || '')}"><input type="text" data-f="note${i}_msg" maxlength="110" placeholder="${['You make every room brighter.', 'Still the best dancer I know!', 'Here is to many more adventures together.', 'Love you to the moon and back.'][i - 1]}" aria-label="Note ${i}: their message" value="${esc(state.values[`note${i}_msg`] || '')}"></div>`).join('')}</fieldset><div class="photos">${photos.map(f => `
     <label class="photo-drop"><span><b>+</b>${esc(f.label)}</span><input type="file" name="${f.id}" data-photo="${f.id}" accept="image/*"></label>`).join('')}</div>`;
   updateCounts();
 }
@@ -264,6 +280,18 @@ $('#fields').addEventListener('input', e => {
   update();
 });
 
+$('#fields').addEventListener('click', e => {
+  const b = e.target.closest('[data-love]');
+  if (!b) return;
+  let on = String(state.values.x_loves || '').split('\n').filter(Boolean);
+  if (on.includes(b.dataset.love)) on = on.filter(x => x !== b.dataset.love);
+  else if (on.length < 10) on.push(b.dataset.love);
+  state.values.x_loves = on.join('\n');
+  store.set(`maker:${state.slug}`, state.values);
+  document.querySelectorAll('[data-love]').forEach(x => x.setAttribute('aria-pressed', String(on.includes(x.dataset.love))));
+  $('.pick-count').textContent = `${on.length} of 10 chosen`;
+});
+
 // Typing in a field jumps the preview to the page that shows it.
 $('#fields').addEventListener('focusin', e => {
   const f = e.target.dataset.f;
@@ -394,6 +422,9 @@ form.addEventListener('submit', async e => {
 });
 
 choose(state.slug);
+
+// A gift link carries a code: say so, so the price shown never worries anyone.
+if (params.get('code')) $('#pay-note')?.insertAdjacentHTML('afterend', `<p class="small code-note">Your gift code <b>${esc(params.get('code').trim().slice(0, 40))}</b> is added at checkout, so the total comes to nothing.</p>`);
 
 // Flip through the whole finished magazine, with their answers, before paying.
 const allPages = $('#all-pages');

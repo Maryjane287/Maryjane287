@@ -6,7 +6,7 @@ import { chromium } from 'playwright-core';
 import { renderCover, PALETTES, DESIGNS, designExamples, designsFor, baseDesign, esc } from './covers.js';
 
 const root = new URL('..', import.meta.url);
-const mags = JSON.parse(await readFile(new URL('data/magazines.json', root)));
+const mags = JSON.parse(await readFile(new URL('data/magazines.json', root))).filter(m => !m.hidden);
 const site = JSON.parse(await readFile(new URL('data/site.json', root)));
 const coversCss = await readFile(new URL('assets/covers.css', root), 'utf8');
 
