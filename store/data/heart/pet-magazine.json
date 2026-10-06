@@ -1,0 +1,95 @@
+{
+  "theme": "garden",
+  "fields": [
+    { "id": "s_hello", "chapter": "The welcome home", "label": "How they greet you when you come home", "example": "Three happy spins, then a toy dropped at your feet", "max": 70 },
+    { "id": "s_nap", "chapter": "Favourite place to nap", "label": "Their favourite place to nap", "example": "Exactly where you were about to sit", "max": 60 },
+    { "id": "s_taught", "chapter": "What they taught us", "label": "Something they have taught you", "example": "That a nap and a snack fix almost anything", "max": 70 },
+    { "id": "s_promise", "label": "A promise to them", "example": "Extra treats on Fridays, forever", "max": 60 }
+  ],
+  "labels": { "award": "Their official title", "age": "Age, and still iconic", "talent": "Secret talent", "crime": "Most wanted for", "snack": "Favourite snack" },
+  "story": {
+    "legend": "A few more things about them",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely ones we have written for them.",
+    "kicker": "The inside story",
+    "title": "The Legend of {who}",
+    "hand": "Small paws or big ones, {who} fills the whole house."
+  },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we love about you",
+    "items": ["The welcome at the door", "Those big pleading eyes", "The way you take up the whole bed", "Your terrible sense of personal space", "How you always know when we are sad", "The happy little noises you make", "Your total dedication to snacks", "How you follow us from room to room", "The warm weight of you on our lap", "Your very serious nap schedule", "How you make every day funnier", "The way you say good morning", "Your soft ears", "How you guard the house from leaves", "Your face when you hear the treat tin", "The way you forgive us instantly", "Your zoomies at midnight", "How you make a house a home", "The way you look at us", "Simply being you"]
+  },
+  "timeline": {
+    "kicker": "Pets through the ages",
+    "title": "A Short History of Pets Being in Charge",
+    "items": [
+      ["7500 BC", "Friends from the start", "In Cyprus, a cat was buried beside a person. It is one of the oldest signs of a much loved pet."],
+      ["Ancient Egypt", "Pets in high places", "Egyptians adored their cats and dogs, gave them names and treated them as part of the family."],
+      ["Ancient Rome", "Beware of the dog", "Romans set Cave Canem mosaics at their front doors. Pets have been running the house ever since."],
+      ["1824", "A promise to protect", "The world's first animal welfare charity was founded in London, so pets everywhere would be cared for."]
+    ],
+    "today": ["Today", "{who}", "Not in the history books yet. But to us, the most famous pet who ever lived."]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Pets",
+    "items": [
+      ["Animals are such agreeable friends: they ask no questions, they pass no criticisms.", "George Eliot, Scenes of Clerical Life"],
+      ["Happiness is a warm puppy.", "Charles M. Schulz, Peanuts"],
+      ["The love for all living creatures is the most noble attribute of man.", "Charles Darwin, The Descent of Man, 1871"],
+      ["Love me, love my dog.", "An old English proverb"]
+    ],
+    "hand": "They all say it beautifully. We just say: who is a good one? You are, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of How Pets Love Us",
+    "items": [
+      ["heart", "The love hormone", "When a dog and its human gaze at each other, oxytocin, the bonding hormone, rises in both."],
+      ["eye", "The slow blink", "A slow blink from a cat is a sign of trust. Blink slowly back and they often return it."],
+      ["paw", "Your smell is special", "In brain scans, the scent of their own human lit up the reward centre of a dog's brain."],
+      ["music", "They know your voice", "Cats and dogs can pick out their own human's voice from the voices of strangers."],
+      ["pulse", "Instant calm", "Stroking a calm, much loved pet can lower stress and help a racing heart slow down."],
+      ["home", "The waiting game", "Many pets learn our routines and wait by the door around the time we usually come home."]
+    ],
+    "hand": "Science can explain a lot. It still cannot explain how {who} hears a snack open from upstairs."
+  },
+  "world": {
+    "kicker": "A thank you from all of us",
+    "title": "Why the World Is Better With You in It",
+    "lead": "Because of you, the world got:",
+    "items": ["The happiest welcome home, every single time.", "A warm little heater for cold nights.", "Someone who thinks we are the best people alive.", "A reason to laugh before breakfast.", "A cuddle that asks for nothing back.", "A furry alarm clock, sadly with no snooze.", "And the best friend we never knew we needed."],
+    "close": "The world is better because of you, {who}. Our sofa most of all."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises to you",
+    "items": ["To always share the comfy spot.", "To say yes to one more cuddle.", "To pretend we did not see the crime.", "To come home to you as fast as we can.", "To love you, always, every single day."],
+    "hand": "Signed with love (and treats), {from}"
+  },
+  "awards": [["Best welcome home", "Every single day"], ["Professional napper", "Gold medal standard"], ["Snack detective", "Unbeaten record"], ["Lifetime achievement", "In being adorable"]],
+  "vouchers": [["One extra treat", "No questions asked"], ["The whole sofa", "For one entire afternoon"], ["Belly rubs on demand", "Valid at 3am"], ["A brand new toy", "To destroy at leisure"]],
+  "vouchersTitle": "Vouchers for {who}",
+  "awardsFoot": "The envelope, please. Someone has already chewed it.",
+  "cert": "A Very Good Pet",
+  "perfume": "Top notes of warm fur, sunny windowsills and stolen snacks. A heart of pure mischief.",
+  "news": { "edition": "Most wanted edition", "headline": "{who} does it again", "lead": "Sources close to the family confirm that {who} has, once again, been caught looking innocent next to the evidence.", "weather": "Weather: sunny spells, perfect for napping" },
+  "passport": { "kicker": "Official documents", "head": "Passport to everywhere fun", "nationality": "Loved, everywhere", "job": "Head of security (snacks)", "stamps": ["The comfy sofa", "The kitchen floor", "Always home"] },
+  "movie": { "sub": "The pet who stole our hearts (and our socks)", "soon": "Coming soon to a sofa near you", "reviews": [["We laughed, we cried, we gave them a treat", "The Daily Wag"], ["A total scene stealer", "Everyone who has met them"], ["Iconic from nose to tail", "The Family Group Chat"]] },
+  "quiz": [["What can a slow blink from a cat mean?", ["I trust you", "I am hungry", "I am angry"], 0], ["Where did Romans put Cave Canem, beware of the dog?", ["At their front doors", "On coins", "On their shoes"], 0]],
+  "quizTitle": "How well do you know {who}?",
+  "words": ["TREATS", "CUDDLE", "NAPS", "SOFA", "LOYAL", "SNACK"],
+  "note": {
+    "title": "What we believe a pet is",
+    "contents": "A note for you",
+    "paras": [
+      "We make magazines for a living, and we will admit it: this is one of our favourites.",
+      "We believe a pet is not just an animal in the house. A pet is the welcome at the door, the warm weight at your feet, the face that says you are the best person in the world, even on your worst day.",
+      "{who}, someone thinks you deserve to be a cover star. Not a card anyone could buy, but pages full of you: your crimes, your talents, your very serious naps.",
+      "That someone is {from}. And from everything they told us, you are loved more than all the treats in the world."
+    ],
+    "wish": "Thank you, {who}. Good pet. The very best."
+  }
+}

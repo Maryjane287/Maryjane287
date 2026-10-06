@@ -1,0 +1,309 @@
+{
+  "theme": "garden",
+  "fields": [
+    {
+      "id": "s_detail",
+      "chapter": "The little detail that sold it",
+      "label": "The little detail that made them fall for it",
+      "example": "The crooked old door handle",
+      "max": 60
+    },
+    {
+      "id": "s_guest",
+      "chapter": "The first guest through the door",
+      "label": "The first guest through the door",
+      "example": "Mia, with a plant and a bottle of bubbles",
+      "max": 60
+    },
+    {
+      "id": "s_morning",
+      "chapter": "The first morning",
+      "label": "The first morning there",
+      "example": "Coffee on the doorstep in pyjamas",
+      "max": 60
+    },
+    {
+      "id": "s_wish",
+      "label": "A wish for their new home",
+      "example": "Long dinners with friends who never want to leave",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "year": "Keys in hand",
+    "room": "The favourite room",
+    "first": "First night dinner",
+    "dream": "The big dream",
+    "words": "In three words"
+  },
+  "toc": "A one of a kind housewarming issue, made for {who} with love from {from}.",
+  "story": {
+    "legend": "A few more things about the new place",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely ones we have written for them.",
+    "kicker": "The new home",
+    "title": "Welcome Home",
+    "hand": "And this is only the first chapter in the story of this home."
+  },
+  "picks": {
+    "legend": "Ten things you love about their new home",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we love about your new home",
+    "items": [
+      "Your very own front door",
+      "The jingle of brand new keys",
+      "Lazy Sunday mornings in pyjamas",
+      "A kettle that is always on",
+      "Room for everyone at the table",
+      "The light through the windows",
+      "Walls painted any colour you like",
+      "Your mugs on your own shelves",
+      "The first dinner party",
+      "A sofa made for long films",
+      "Plants on every windowsill",
+      "How quiet it is at night",
+      "Space for all your books",
+      "A view that is all yours",
+      "Nobody telling you what to do",
+      "Friends who never want to leave",
+      "Fairy lights in every room",
+      "The smell of your own cooking",
+      "Coming home after a long day",
+      "Simply having a place to call yours"
+    ]
+  },
+  "timeline": {
+    "kicker": "Home through the ages",
+    "title": "A Short History of Home Sweet Home",
+    "items": [
+      [
+        "Long ago",
+        "A warm welcome",
+        "The story goes that guests brought firewood to a new home to light every hearth. Hence: housewarming."
+      ],
+      [
+        "1604",
+        "A home is a castle",
+        "An English court declared that a person's house is their castle, a safe place that is theirs alone."
+      ],
+      [
+        "1823",
+        "Home! Sweet Home!",
+        "A song gave the world the line: be it ever so humble, there's no place like home. It became a hit."
+      ],
+      [
+        "1939",
+        "No place like home",
+        "Dorothy clicked her ruby slippers in The Wizard of Oz, and a whole world agreed with her."
+      ]
+    ],
+    "today": [
+      "{year}",
+      "{who}",
+      "Keys in hand, boxes everywhere and a brand new chapter. The best one yet."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Home",
+    "items": [
+      [
+        "Where we love is home, home that our feet may leave, but not our hearts.",
+        "Oliver Wendell Holmes Sr."
+      ],
+      [
+        "The ache for home lives in all of us.",
+        "Maya Angelou"
+      ],
+      [
+        "Home is where the heart is.",
+        "An old saying"
+      ],
+      [
+        "East or west, home is best.",
+        "An old proverb"
+      ]
+    ],
+    "hand": "They all say it beautifully. We just say: welcome home, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Feeling at Home",
+    "items": [
+      [
+        "home",
+        "A map in your head",
+        "The brain has place cells that map where you are. Their discovery won a Nobel Prize in 2014."
+      ],
+      [
+        "leaf",
+        "Home smells like you",
+        "Most people cannot smell their own home. The brain gets used to familiar scents and tunes them out."
+      ],
+      [
+        "moon",
+        "The first night",
+        "In a new place, part of the brain stays a little more alert on night one. It is called the first night effect."
+      ],
+      [
+        "key",
+        "Why did I come in here?",
+        "Walking through a doorway can make you forget what you came for. Scientists call it the doorway effect."
+      ],
+      [
+        "sun",
+        "Sunny rooms",
+        "Morning light helps set the body clock, which is one reason a bright room feels so good."
+      ],
+      [
+        "heart",
+        "You did it anyway",
+        "Moving house is often ranked among life's most stressful events. And look at you now."
+      ]
+    ],
+    "hand": "Science can explain a lot. It cannot explain why your own sofa is the comfiest in the world."
+  },
+  "world": {
+    "kicker": "A toast from all of us",
+    "title": "Why the World Is Better With This Home in It",
+    "lead": "Because you found this place, the world got:",
+    "items": [
+      "A new door that is always open to friends.",
+      "One more kitchen full of laughter.",
+      "Another table for long, happy dinners.",
+      "A window with someone happy behind it.",
+      "A place to celebrate every small win.",
+      "A safe, warm place to come home to.",
+      "And one more place that feels like home to us."
+    ],
+    "close": "The world is a little warmer with you in it, {who}. And now it has your address."
+  },
+  "promises": {
+    "field": "s_wish",
+    "kicker": "From us to you",
+    "title": "Our wishes for your new home",
+    "items": [
+      "May the kettle always be on.",
+      "May your door be open to friends.",
+      "May every room fill with laughter.",
+      "May the boiler never break in winter.",
+      "May you be happy here for years."
+    ],
+    "hand": "Signed with love, {from}"
+  },
+  "awardsKicker": "Live from the housewarming",
+  "awards": [
+    [
+      "Best moving day spirit",
+      "Against all odds"
+    ],
+    [
+      "Most improved address",
+      "By a mile"
+    ],
+    [
+      "Best taste in cushions",
+      "Unanimous"
+    ],
+    [
+      "Hosts of the year",
+      "Already, somehow"
+    ]
+  ],
+  "awardsFoot": "The envelope, please. It was delivered to the new address.",
+  "vouchers": [
+    [
+      "One housewarming dinner",
+      "We bring the food"
+    ],
+    [
+      "A day of DIY help",
+      "Tools and tea included"
+    ],
+    [
+      "Plant sitting",
+      "Whenever you go away"
+    ],
+    [
+      "A night in with snacks",
+      "Your sofa, our treat"
+    ]
+  ],
+  "vouchersTitle": "Housewarming vouchers for {who}",
+  "certLine": "got the keys to",
+  "cert": "A Very Happy Home",
+  "perfume": "Top notes of fresh paint and new keys. A heart of cosy evenings and good coffee.",
+  "news": {
+    "edition": "Housewarming edition",
+    "headline": "Keys handed to {who}",
+    "lead": "Neighbours report boxes, laughter and pizza at the new home of {who}. Unpacking is expected to take years.",
+    "weather": "Weather: warm inside, with a 100% chance of visitors"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to home",
+    "nationality": "Proud new neighbours",
+    "job": "Chief of unpacking",
+    "stamps": [
+      "Moving day",
+      "First night",
+      "Home at last"
+    ]
+  },
+  "movie": {
+    "sub": "A story of keys, boxes and love",
+    "soon": "Now showing at the new place",
+    "reviews": [
+      [
+        "We laughed, we cried, we carried boxes",
+        "The Daily Doorstep"
+      ],
+      [
+        "The flat pack scene is unforgettable",
+        "Everyone who helped"
+      ],
+      [
+        "Feels like home from the first scene",
+        "The Neighbourhood News"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "What do scientists call forgetting why you walked into a room?",
+      [
+        "The doorway effect",
+        "The kitchen effect",
+        "The sofa effect"
+      ],
+      0
+    ],
+    [
+      "Which 1939 film made the line \"There's no place like home\" famous?",
+      [
+        "Mary Poppins",
+        "The Wizard of Oz",
+        "Peter Pan"
+      ],
+      1
+    ]
+  ],
+  "words": [
+    "HOME",
+    "KEYS",
+    "COSY",
+    "DOOR",
+    "GARDEN",
+    "KETTLE"
+  ],
+  "note": {
+    "title": "What we believe a home is",
+    "contents": "A note for your new home",
+    "paras": [
+      "Some magazines make us put the kettle on and smile. This was one of them.",
+      "We believe a home is not the walls or the postcode. It is the mug by the sink, the shoes by the door, the light you can see from the street that means someone is in.",
+      "{who}, someone wanted to mark this moment properly. Not a card that gets lost in a box, but pages full of you, your new front door and the life you will build behind it.",
+      "That someone is {from}. And from everything they told us, this home is going to be full of love."
+    ],
+    "wish": "Welcome home, {who}. May every day here be a happy one."
+  }
+}

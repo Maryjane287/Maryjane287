@@ -8,12 +8,13 @@ import { readFile, writeFile, unlink } from 'node:fs/promises';
 import { extname, resolve } from 'node:path';
 import { chromium } from 'playwright-core';
 import { renderFullMagazine } from './covers.js';
+import { loadMags } from './mags.mjs';
 
 const [orderPath, outArg] = process.argv.slice(2);
 if (!orderPath) { console.error('Usage: npm run make-pdf -- order.json [out.pdf]'); process.exit(1); }
 
 const root = new URL('..', import.meta.url);
-const mags = JSON.parse(await readFile(new URL('data/magazines.json', root)));
+const mags = await loadMags(root);
 const order = JSON.parse(await readFile(orderPath, 'utf8'));
 const mag = mags.find(m => m.slug === order.magazine);
 if (!mag) { console.error(`Unknown magazine "${order.magazine}"`); process.exit(1); }

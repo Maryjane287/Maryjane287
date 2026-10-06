@@ -89,19 +89,22 @@ const FUN = [
   ['x_job', 'Their job title, the fun version', 'Printed on their passport', 'Chief hug officer', 40],
 ];
 // "Ten things I love about you": he taps the ones that are true instead of typing.
-function lovePicks() {
+function lovePicks(m) {
   const on = String(state.values.x_loves || '').split('\n').filter(Boolean);
-  return `<fieldset class="love-picks wide"><legend>Ten things you love about her <small>(tap up to ten)</small></legend><p class="small">Tap the ones that are true. Any you leave out, we fill with lovely ones for you.</p><div class="pick-chips">${LOVE_PICKS.map(x => `<button type="button" class="chip" data-love="${esc(x)}" aria-pressed="${on.includes(x)}">${esc(x)}</button>`).join('')}</div><small class="pick-count">${on.length} of 10 chosen</small></fieldset>`;
+  const P = m.heart?.picks;
+  const items = m.love ? LOVE_PICKS : P.items.map(x => x.replace(/\{who\}/g, state.values.name || m.fields[0].example));
+  const legend = m.love ? 'Ten things you love about her' : P.legend;
+  return `<fieldset class="love-picks wide"><legend>${esc(legend)} <small>(tap up to ten)</small></legend><p class="small">Tap the ones that are true. Any you leave out, we fill with lovely ones for you.</p><div class="pick-chips">${items.map(x => `<button type="button" class="chip" data-love="${esc(x)}" aria-pressed="${on.includes(x)}">${esc(x)}</button>`).join('')}</div><small class="pick-count">${on.length} of 10 chosen</small></fieldset>`;
 }
 
 function funPages(m) {
   const gentle = m.slug === 'pet-memorial-magazine';
-  const rows = FUN.filter(r => !(gentle && r[6]) && !(m.love && r[0] === 'x_reasons')).map(([id, label, hint, eg, max, area]) => {
+  const rows = FUN.filter(r => !(gentle && r[6]) && !((m.love || m.heart?.picks) && r[0] === 'x_reasons') && !(m.heart && r[0] === 'x_recipe')).map(([id, label, hint, eg, max, area]) => {
     const val = esc(state.values[id] || '');
     const common = `data-f="${id}" maxlength="${max}" placeholder="${esc(eg)}"`;
     return `<label class="field${area || max > 60 ? ' wide' : ''}"><span>${esc(label)} <small>${esc(hint)}</small></span>${area ? `<textarea rows="4" ${common}>${val}</textarea>` : `<input type="text" ${common} value="${val}">`}</label>`;
   }).join('');
-  return `<fieldset class="fun-pages wide"><legend>Make the fun pages about them too <small>(optional)</small></legend><p class="small">These fill the list of reasons we love them, the awards night, ${gentle ? '' : 'the vouchers, '}the recipe and the passport. Leave any blank and we will write something warm for that page.</p><div class="fun-grid">${rows}</div></fieldset>`;
+  return `<fieldset class="fun-pages wide"><legend>Make the fun pages about them too <small>(optional)</small></legend><p class="small">These fill ${[m.heart ? '' : 'the list of reasons we love them', 'the awards night', gentle ? '' : 'the vouchers', m.heart ? '' : 'the recipe'].filter(Boolean).join(', ')} and the passport. Leave any blank and we will write something warm for that page.</p><div class="fun-grid">${rows}</div></fieldset>`;
 }
 
 function renderFields() {
@@ -116,8 +119,8 @@ function renderFields() {
   };
   const extra = text.filter(f => f.optional);
   // Optional questions sit in their own box: skip any, and that page swaps to one we write.
-  const story = extra.length ? `<fieldset class="fun-pages wide"><legend>Your love story <small>(optional)</small></legend><p class="small">Only if you have a minute. Skip any of these and we fill those pages with beautiful ones we have written for her.</p><div class="fun-grid">${extra.map(field).join('')}</div></fieldset>` : '';
-  $('#fields').innerHTML = text.filter(f => !f.optional).map(field).join('') + (m.love ? lovePicks() : '') + story + funPages(m) + `<fieldset class="friend-notes wide"><legend>Little notes from family and friends <small>(optional)</small></legend><p class="small">Ask a few people who love them for one sweet line each. They all appear together on a special page in the magazine, each one signed with their name.</p>${familyInvite()}${[1, 2, 3, 4].map(i => `<div class="friend-note"><input type="text" data-f="note${i}_from" maxlength="30" placeholder="${['Grandma', 'Uncle Sam', 'Emma', 'Leo'][i - 1]}" aria-label="Note ${i}: who it is from" value="${esc(state.values[`note${i}_from`] || '')}"><input type="text" data-f="note${i}_msg" maxlength="110" placeholder="${['You make every room brighter.', 'Still the best dancer I know!', 'Here is to many more adventures together.', 'Love you to the moon and back.'][i - 1]}" aria-label="Note ${i}: their message" value="${esc(state.values[`note${i}_msg`] || '')}"></div>`).join('')}</fieldset><div class="photos">${photos.map(f => `
+  const story = extra.length ? `<fieldset class="fun-pages wide"><legend>${esc(m.heart?.story?.legend || 'Your love story')} <small>(optional)</small></legend><p class="small">${esc(m.heart?.story?.hint || 'Only if you have a minute. Skip any of these and we fill those pages with beautiful ones we have written for her.')}</p><div class="fun-grid">${extra.map(field).join('')}</div></fieldset>` : '';
+  $('#fields').innerHTML = text.filter(f => !f.optional).map(field).join('') + (m.love || m.heart?.picks ? lovePicks(m) : '') + story + funPages(m) + `<fieldset class="friend-notes wide"><legend>Little notes from family and friends <small>(optional)</small></legend><p class="small">Ask a few people who love them for one sweet line each. They all appear together on a special page in the magazine, each one signed with their name.</p>${familyInvite()}${[1, 2, 3, 4].map(i => `<div class="friend-note"><input type="text" data-f="note${i}_from" maxlength="30" placeholder="${['Grandma', 'Uncle Sam', 'Emma', 'Leo'][i - 1]}" aria-label="Note ${i}: who it is from" value="${esc(state.values[`note${i}_from`] || '')}"><input type="text" data-f="note${i}_msg" maxlength="110" placeholder="${['You make every room brighter.', 'Still the best dancer I know!', 'Here is to many more adventures together.', 'Love you to the moon and back.'][i - 1]}" aria-label="Note ${i}: their message" value="${esc(state.values[`note${i}_msg`] || '')}"></div>`).join('')}</fieldset><div class="photos">${photos.map(f => `
     <label class="photo-drop"><span><b>+</b>${esc(f.label)}</span><input type="file" name="${f.id}" data-photo="${f.id}" accept="image/*"></label>`).join('')}</div>`;
   updateCounts();
 }

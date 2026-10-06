@@ -1,0 +1,98 @@
+{
+  "theme": "ruby",
+  "fields": [
+    { "id": "s_eve", "chapter": "Christmas Eve at ours", "label": "What Christmas Eve looks like at yours", "example": "Carols, a film and far too many mince pies", "max": 70 },
+    { "id": "s_bauble", "chapter": "The decoration with a story", "label": "The decoration with a story", "example": "A wonky star Leo made when he was four", "max": 60 },
+    { "id": "s_hero", "chapter": "The one who makes Christmas happen", "label": "Who makes Christmas happen, and how", "example": "Mum, with a list, a timer and a lot of patience", "max": 70 },
+    { "id": "s_promise", "label": "A wish or promise for next Christmas", "example": "Fewer arguments about the rules of board games", "max": 60 }
+  ],
+  "labels": { "year": "The Christmas of", "tradition": "Our funniest tradition", "naughty": "Heading for the naughty list", "dinner": "The best bit of dinner", "jumper": "Best jumper goes to", "words": "Christmas in three words" },
+  "story": {
+    "legend": "A few more things about your Christmas",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with festive ones we have written for you.",
+    "kicker": "Our story",
+    "title": "This Is Our Christmas",
+    "hand": "Every family does Christmas differently. {who} do it best."
+  },
+  "picks": {
+    "legend": "Ten things you love about Christmas together",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we love about Christmas with you",
+    "items": ["Everyone home at last", "The tree going up", "Terrible cracker jokes", "Paper hats at the table", "The smell of dinner cooking", "Matching pyjamas", "Christmas films on the sofa", "The first mince pie of the year", "Wrapping presents in secret", "Board games that get competitive", "Fairy lights in the window", "Hot chocolate after a cold walk", "Waking up on Christmas morning", "Leftovers for days", "Singing carols badly together", "The faces when presents are opened", "Falling asleep after dinner", "Stockings at the end of the bed", "Phone calls with family far away", "Simply being together"]
+  },
+  "timeline": {
+    "kicker": "Christmas through the ages",
+    "title": "How Our Favourite Traditions Began",
+    "items": [
+      ["1605", "The first trees", "In Strasbourg, fir trees were set up indoors and hung with paper roses, apples and sweets."],
+      ["1843", "The first Christmas card", "Henry Cole sent the first printed Christmas card. That same year, Dickens wrote A Christmas Carol."],
+      ["1847", "Pop goes the cracker", "London sweet maker Tom Smith wrapped sweets in twists of paper. Later he added the famous bang."],
+      ["1914", "The Christmas truce", "On the Western Front, soldiers sang carols, swapped gifts and played football in no man's land."]
+    ],
+    "today": ["{year}", "{who}", "Not in the history books yet. But the best Christmas tradition we know is you."]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Christmas",
+    "items": [
+      ["I will honour Christmas in my heart, and try to keep it all the year.", "Charles Dickens, A Christmas Carol, 1843"],
+      ["Christmas won't be Christmas without any presents.", "Louisa May Alcott, Little Women"],
+      ["Maybe Christmas, he thought, doesn't come from a store.", "Dr. Seuss, How the Grinch Stole Christmas!"],
+      ["At Christmas play and make good cheer, for Christmas comes but once a year.", "Thomas Tusser, 1557"]
+    ],
+    "hand": "They all say it beautifully. We just say: Merry Christmas, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Secret History of Christmas",
+    "items": [
+      ["star", "Real silver", "The very first tinsel was made in Germany from thin strips of real silver."],
+      ["music", "Sung in space", "In 1965, astronauts played Jingle Bells on a harmonica, the first song performed in space."],
+      ["book", "Rudolph's start", "Rudolph was created in 1939 for a free colouring book handed out by a department store."],
+      ["globe", "Tracking Santa", "A misprinted phone number in a 1955 advert led to the famous tradition of tracking Santa."],
+      ["cake", "A meaty past", "Mince pies once really were filled with meat, mixed with dried fruit and spices."],
+      ["tree", "A royal tree", "A picture of Queen Victoria's family round a tree in 1848 made Christmas trees hugely popular."]
+    ],
+    "hand": "History can explain a lot. It still cannot explain who ate the last chocolate."
+  },
+  "world": {
+    "kicker": "A thank you from all of us",
+    "title": "Why Christmas Is Better With You",
+    "lead": "Because of you, Christmas got:",
+    "items": ["A table full of laughter and second helpings.", "The best worst jokes, read out loud.", "Someone to share the last roast potato with.", "Presents chosen with real love.", "Board games we will argue about for years.", "Hugs warm enough to melt the snow.", "And a home we always want to come back to."],
+    "close": "Christmas is better because of you, {who}. Ours most of all."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "For next Christmas",
+    "title": "Our Christmas promises",
+    "items": ["To wear the paper hat, every year.", "To leave one mince pie for Santa.", "To laugh at every single cracker joke.", "To be home for Christmas, whatever it takes.", "To love you, always, all year round."],
+    "hand": "Signed with love and tinsel, {from}"
+  },
+  "awards": [["Loudest cracker pull", "The whole street heard"], ["Champion present wrapper", "Mostly sellotape"], ["Best Christmas dance", "Unanimous"], ["Lifetime achievement", "In Christmas spirit"]],
+  "awardsKicker": "Live from the North Pole",
+  "awardsFoot": "The envelope, please. Santa checked it twice.",
+  "vouchers": [["A Boxing Day lie in", "No questions asked"], ["First pick of the chocolates", "Even the good ones"], ["One movie of your choice", "Nobody may complain"], ["Out of washing up", "Just this once"]],
+  "vouchersTitle": "Christmas vouchers for {who}",
+  "cert": "The Nice List",
+  "certLine": "have been checked twice and are officially on",
+  "perfume": "Top notes of pine, cinnamon and fresh wrapping paper. A heart of chocolate coins.",
+  "news": { "edition": "Christmas special", "date": "Christmas special. Read all about it", "headline": "{who} save Christmas again", "lead": "Sources at the North Pole confirm that {who} have, once again, made Christmas cosy, chaotic and completely magical.", "weather": "Weather: 100% chance of snow and hugs" },
+  "passport": { "kicker": "Official documents", "head": "Passport to the North Pole", "nationality": "Honorary elves", "job": "Professional present wrappers", "stamps": ["North Pole", "Nice List", "Home for Christmas"] },
+  "movie": { "sub": "A Christmas movie", "soon": "Showing this Christmas in a living room near you", "reviews": [["We laughed, we cried, we ate all the chocolates", "The Daily Elf"], ["Better than the one with the snowman", "Everyone at the North Pole"], ["A festive classic", "The Family Group Chat"]] },
+  "quiz": [["What was the very first tinsel made from?", ["Real silver", "Gold paper", "Glass beads"], 0], ["In which year was the first Christmas card sent?", ["1643", "1843", "1943"], 1]],
+  "quizTitle": "How well do you know {who}?",
+  "toc": "A one of a kind Christmas issue, made for {who} with love from {from}.",
+  "words": ["SNOW", "TINSEL", "CRACKER", "SANTA", "STAR", "COSY"],
+  "note": {
+    "title": "What we believe Christmas is",
+    "contents": "A note for you",
+    "paras": [
+      "We make magazines for a living, and every December we get a little giddy. This one made us smile.",
+      "We believe Christmas is not the presents or the perfect table. It is the paper hats, the burnt bits, the jokes nobody laughs at, and everyone you love squeezed into one warm room.",
+      "{who}, someone wanted your Christmas kept forever. Not a card that ends up in a drawer, but pages full of you: your traditions, your chaos, your love.",
+      "That someone is {from}. And from everything they told us, your Christmas is the best one going."
+    ],
+    "wish": "Merry Christmas, {who}. Here is to many more."
+  }
+}

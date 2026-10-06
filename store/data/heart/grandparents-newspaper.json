@@ -1,0 +1,305 @@
+{
+  "theme": "garden",
+  "fields": [
+    {
+      "id": "s_taught",
+      "chapter": "The best thing you taught us",
+      "label": "The best thing they taught the family",
+      "example": "That there is always room for one more at the table",
+      "max": 80
+    },
+    {
+      "id": "s_visit",
+      "chapter": "The first thing we will do together",
+      "label": "The first thing you will do when you see them",
+      "example": "A huge hug at the door, then pancakes",
+      "max": 70
+    },
+    {
+      "id": "s_house",
+      "chapter": "Your house smells like",
+      "label": "Their house smells like...",
+      "example": "Toast, roses and the good biscuits",
+      "max": 60
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To send a drawing every single week",
+      "max": 70
+    }
+  ],
+  "story": {
+    "legend": "A few more things about them",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely ones we have written for them.",
+    "kicker": "News from home",
+    "title": "Everything You Mean to Us",
+    "hand": "Miles away, {who}, but never far from our hearts."
+  },
+  "labels": {
+    "headline": "The biggest news from home",
+    "miss": "What we miss most about you",
+    "quote": "Overheard in our house",
+    "weather": "Today's family forecast"
+  },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we love about you",
+    "items": [
+      "Your warm hugs at the door",
+      "The stories from long ago",
+      "Your famous cooking",
+      "How you always have treats",
+      "The way you listen to us",
+      "Your terrible jokes",
+      "How you never rush us",
+      "Your cosy house",
+      "The phone calls on Sundays",
+      "How you remember everything",
+      "The games you let us win",
+      "The way you say our names",
+      "Your old photo albums",
+      "How proud you are of us",
+      "The secrets you keep for us",
+      "Your gentle patience",
+      "How you make us feel special",
+      "The little parcels in the post",
+      "Your laugh down the phone",
+      "Simply being you"
+    ]
+  },
+  "timeline": {
+    "kicker": "Love across the miles",
+    "title": "A Short History of Staying Close",
+    "items": [
+      [
+        "1840",
+        "The first stamp",
+        "The Penny Black, the world's first sticky postage stamp, made it easy to post a letter to someone far away."
+      ],
+      [
+        "1876",
+        "A voice down a wire",
+        "Alexander Graham Bell made the first telephone call, and distance suddenly felt a lot smaller."
+      ],
+      [
+        "1971",
+        "The first email",
+        "Ray Tomlinson sent the first email between two computers. Love letters would never be the same."
+      ],
+      [
+        "1978",
+        "A day for grandparents",
+        "The United States named a National Grandparents Day, thanks to the hard work of Marian McQuade."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who}",
+      "A whole newspaper, posted with love, because some news is too special for a text."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Love Across the Miles",
+    "items": [
+      [
+        "The distance is nothing when one has a motive.",
+        "Elizabeth Bennet, in Pride and Prejudice by Jane Austen"
+      ],
+      [
+        "Children's children are a crown to the aged.",
+        "The Book of Proverbs"
+      ],
+      [
+        "Grandparents sort of sprinkle stardust over the lives of little children.",
+        "Alex Haley"
+      ],
+      [
+        "Absence makes the heart grow fonder.",
+        "An old saying"
+      ]
+    ],
+    "hand": "They all say it beautifully. We just say: we miss you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Missing Someone",
+    "items": [
+      [
+        "moon",
+        "The same Moon",
+        "Wherever we are, we all see the same face of the Moon. Look up tonight and we are looking too."
+      ],
+      [
+        "heart",
+        "A hug down the phone",
+        "One study found a loved one's voice on the phone calmed children almost as much as a hug."
+      ],
+      [
+        "home",
+        "Smells like home",
+        "Smell is wired close to the brain's memory centres, so one sniff can take you right back."
+      ],
+      [
+        "globe",
+        "Orca grandmothers",
+        "Killer whale grandmothers lead their pods to food and help their grandchildren survive."
+      ],
+      [
+        "paw",
+        "Elephants remember",
+        "Elephant herds are led by older females whose memory guides the family to water in hard times."
+      ],
+      [
+        "tree",
+        "The grandparent effect",
+        "Some scientists think grandparents helping with children is one reason humans live so long."
+      ]
+    ],
+    "hand": "So far away, and still so close to our hearts."
+  },
+  "world": {
+    "kicker": "A thank you from all of us",
+    "title": "Why the World Is Better With You in It",
+    "lead": "Because of you, the world got:",
+    "items": [
+      "The warmest hug at the end of a long journey.",
+      "Stories that keep our family history alive.",
+      "A kitchen where the biscuit tin is never empty.",
+      "Someone who thinks every drawing is a masterpiece.",
+      "Patience that could outlast any rainy day.",
+      "A love that travels further than any post.",
+      "And the best {who} we could ever have asked for."
+    ],
+    "close": "The world is better because of you, {who}. Ours most of all."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises to you",
+    "items": [
+      "To call you, even when nothing happened.",
+      "To save our best hugs for your visit.",
+      "To send drawings, photos and news.",
+      "To keep your stories and pass them on.",
+      "To love you, always, however far away."
+    ],
+    "hand": "Signed with love, {from}"
+  },
+  "awards": [
+    [
+      "Best hugs in the family",
+      "Worth every mile"
+    ],
+    [
+      "Keeper of the biscuit tin",
+      "Ten years running"
+    ],
+    [
+      "Best storyteller alive",
+      "By a landslide"
+    ],
+    [
+      "Lifetime achievement",
+      "In being {who}"
+    ]
+  ],
+  "vouchers": [
+    [
+      "A long video call",
+      "No rushing, just talking"
+    ],
+    [
+      "One bear hug, on arrival",
+      "Valid at any door"
+    ],
+    [
+      "A homemade drawing",
+      "Posted with love"
+    ],
+    [
+      "A whole day together",
+      "Your choice, our treat"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "The Most Missed Person in the World",
+  "certLine": "is officially, undeniably and forever",
+  "perfume": "Top notes of warm toast, old photo albums and garden roses. A heart of pure gold.",
+  "news": {
+    "edition": "The family edition",
+    "headline": "Family misses {who}, more than ever",
+    "lead": "Sources close to the family confirm that {who} is missed every single day, talked about at dinner and expected back as soon as possible.",
+    "weather": "Weather: warm spells of missing you, clearing to hugs"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to everywhere, with love",
+    "nationality": "Loved, everywhere",
+    "job": "Keeper of family stories",
+    "stamps": [
+      "Our front door",
+      "Every phone call",
+      "Always home"
+    ]
+  },
+  "movie": {
+    "sub": "Love that travels any distance",
+    "soon": "Showing forever, in our hearts",
+    "reviews": [
+      [
+        "We laughed, we cried, we picked up the phone",
+        "The Daily Hug"
+      ],
+      [
+        "Worth every single mile",
+        "The whole family"
+      ],
+      [
+        "A heart bigger than the map",
+        "The Family Group Chat"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Wherever you are on Earth, which side of the Moon do you see?",
+      [
+        "Always the same side",
+        "A different side each night",
+        "Only the dark side"
+      ],
+      0
+    ],
+    [
+      "What was the Penny Black, first used in 1840?",
+      [
+        "A famous teapot",
+        "The first sticky postage stamp",
+        "A type of biscuit"
+      ],
+      1
+    ]
+  ],
+  "words": [
+    "LETTER",
+    "HUGS",
+    "FAMILY",
+    "STAMP",
+    "MOON",
+    "SMILES"
+  ],
+  "note": {
+    "title": "What we believe family is",
+    "contents": "A note for you",
+    "paras": [
+      "We make newspapers for a living, but some feel different. This was one of them.",
+      "We believe distance is just a number. Love finds its way through phone calls, parcels and paper, and it arrives every time, a little warmer than it left.",
+      "{who}, someone wanted you to have something special. Not a quick message on a screen, but real pages you can hold, full of news, faces and little voices from home.",
+      "That someone is {from}. And from everything they told us, you are missed more than you could ever know."
+    ],
+    "wish": "Until the next big hug, {who}. We love you."
+  }
+}
