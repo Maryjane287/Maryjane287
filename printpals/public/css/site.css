@@ -358,3 +358,20 @@ footer .foot-all { color: #ffb3c7 !important; font-weight: 800; margin-top: 4px;
 .cookie-ask { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 60; max-width: 620px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 14px 16px; background: #fff; border: 1.5px solid var(--line); border-radius: 16px; box-shadow: 0 10px 30px rgba(45, 42, 74, .18); font-weight: 700; }
 .cookie-ask .btn { display: inline-block; width: auto; margin: 0; padding: 8px 16px; font-size: 14px; }
 @media print { .cookie-ask { display: none !important; } }
+
+/* PrintPals Kids Club sign-up (batch 38) */
+.club { background: linear-gradient(135deg, #fff0f6, #f3ecff); border-top: 1px solid #f3d3e3; border-bottom: 1px solid #e6dcfb; padding: 28px 0; margin-top: 30px; }
+.club-in { display: grid; grid-template-columns: 1fr 1.2fr; gap: 20px; align-items: center; }
+.club-text b { display: block; font-family: 'Baloo 2', 'Nunito', sans-serif; font-size: 26px; line-height: 1.15; color: var(--ink); margin-bottom: 6px; }
+.club-text span { color: var(--soft); font-weight: 600; }
+.club-row { display: flex; gap: 8px; }
+.club-row input { flex: 1; min-width: 0; padding: 12px 14px; border: 2px solid #e6dcfb; border-radius: 14px; font: inherit; font-weight: 700; background: #fff; }
+.club-row .btn { display: inline-block; width: auto; margin: 0; padding: 12px 20px; white-space: nowrap; }
+.club-ok { display: block; margin-top: 10px; font-size: 13.5px; color: var(--soft); font-weight: 600; }
+.club-ok input { margin-right: 6px; vertical-align: -2px; }
+.club-msg { margin: 8px 0 0; font-weight: 800; color: #b0306a; min-height: 1em; }
+.club-done .club-row, .club-done .club-ok { display: none; }
+.tool .club, main > .club, .club:first-child { margin-top: 0; }
+.club-in > * { min-width: 0; }
+@media (max-width: 760px) { .club-in { grid-template-columns: 1fr; } .club-text b { font-size: 22px; } .club-row { flex-direction: column; } .club-row .btn { width: 100%; } }
+@media print { .club { display: none !important; } }

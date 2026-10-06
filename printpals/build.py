@@ -13,7 +13,7 @@ from usenglish import us_text, us_js, us_html, us_fix_js
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '59'
+VERSION = '60'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -1609,6 +1609,23 @@ TOOLS += [
         'faq': [('Is it really free?', 'Yes. No sign up, no email, no payment. The whole pack is made inside your own browser.'),
                 ('Can I make packs for more than one child?', 'Yes. Add brothers and sisters with their ages. Each child gets their own pack at their own level, with the same theme so they can work side by side.'),
                 ('What if it is too hard or too easy?', 'Change the age and press "Make a new set". Every single sheet on PrintPals also has Easier and Harder buttons.')],
+    },
+    {
+        'id': 'kidsclub', 'cat': 'packs', 'slug': 'kids-club', 'tint': '#fff0f6', 'icon': '💌', 'new': True,
+        'nav': 'Kids Club',
+        'title': 'Join the PrintPals Kids Club | Free Welcome Pack and a Free Printable Pack Every Month | PrintPals',
+        'desc': 'Join the free PrintPals Kids Club: a personalised welcome pack to print straight away (colouring scene, maze, dot to dot, spot the difference, roll and draw, certificate) and a new free pack by email every month.',
+        'h1': 'Join the PrintPals Kids Club',
+        'lead': 'A free welcome pack with your child\'s name, ready to print the moment you join, and a brand new free pack in your inbox every month. For grown-ups. Leave any time.',
+        'card': 'A free welcome pack now and a new free pack every month by email.',
+        'form': field('Child\'s name (optional)', '<input type="text" name="name" maxlength="24" placeholder="Leo" autocomplete="off">')
+        + field('Age', seg('age', [('3', '3'), ('4', '4'), ('5', '5'), ('6', '6'), ('7', '7+')], '5'))
+        + SHUFFLE + PAPER,
+        'article': """<h2>What is the Kids Club?</h2><p>It is our way of saying thank you. Join with your email and you can print the welcome pack straight away: a cover with your child's name, a busy colouring scene for the season, a maze, a dot to dot, spot the difference, roll and draw and a Club Member certificate. Then, once a month, we send a brand new free pack, plus news about new packs.</p>
+<h2>Your email is safe with us</h2><p>We only use your email for the club emails. We never sell it or share it, and every email has a link to leave the club. You can also ask us to delete it at any time.</p>""",
+        'faq': [('Is the Kids Club really free?', 'Yes, always. No card and no payment. The welcome pack and the monthly packs are free.'),
+                ('How often will you email me?', 'About once a month, with a new free pack. Sometimes a little extra before a big holiday. You can leave with one click.'),
+                ('Can my child join?', 'The club is for grown-ups: parents, carers and teachers. Please join with your own email address.')],
     },
     {
         'id': 'quickpack', 'cat': 'packs', 'slug': 'quick-activity-packs', 'tint': '#e8f8f4', 'icon': '⚡', 'new': False,
@@ -3275,7 +3292,7 @@ TOOLS += [
 # The homepage sections, in learning order (easiest first). Every tool appears in exactly one section.
 ARRANGE = [
     ('packs', 'Ready-made packs', 'Packs', 'Stop searching. A week, a month or the whole holiday planned for your child, storybooks and activity books, starting school, quick packs, family far away, a learning passport and class packs.',
-     ['pack', 'tinyhands', 'handmonth', 'phonicsmonth', 'mathsday', 'timesclub', 'timemonth', 'readmonth', 'readadventure', 'spellmonth', 'sciencemonth', 'calmmonth', 'colourmonth', 'puzzlemonth', 'writemonth', 'familymonth', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'journal', 'easter', 'levels', 'poppy', 'handwritingbook', 'phonicsbook', 'readers', 'mathsbook', 'autumnkit', 'winter', 'lunar', 'kindness', 'grownupbook', 'dinokit', 'spacekit', 'oceankit', 'safari', 'farm', 'shopkit', 'pocketmoney', 'vetkit', 'petdiary', 'roadtrip', 'detective', 'garden', 'superhero', 'feelingsbook', 'flying', 'adventure', 'familynight', 'cookbook', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack', 'halloweenclass', 'bookweek', 'classrewards', 'classbirthday', 'xmascards', 'classadvent', 'xmasshow', 'classcalendar', 'classwelcome', 'readingrecords', 'phonicscheck', 'parentsevening', 'reporthelper', 'movingup', 'classspecial', 'morningwork', 'homeworkmonth', 'classawards', 'coverkit', 'classseason', 'yearbook', 'displays']),
+     ['pack', 'kidsclub', 'tinyhands', 'handmonth', 'phonicsmonth', 'mathsday', 'timesclub', 'timemonth', 'readmonth', 'readadventure', 'spellmonth', 'sciencemonth', 'calmmonth', 'colourmonth', 'puzzlemonth', 'writemonth', 'familymonth', 'christmas', 'halloween', 'namebook', 'timecapsule', 'diwali', 'thankful', 'journal', 'easter', 'levels', 'poppy', 'handwritingbook', 'phonicsbook', 'readers', 'mathsbook', 'autumnkit', 'winter', 'lunar', 'kindness', 'grownupbook', 'dinokit', 'spacekit', 'oceankit', 'safari', 'farm', 'shopkit', 'pocketmoney', 'vetkit', 'petdiary', 'roadtrip', 'detective', 'garden', 'superhero', 'feelingsbook', 'flying', 'adventure', 'familynight', 'cookbook', 'toothfairy', 'bigsibling', 'treasure', 'busters', 'monthplan', 'holidayplan', 'activitybook', 'storybook', 'schoolready', 'quickpack', 'faraway', 'passport', 'classpack', 'halloweenclass', 'bookweek', 'classrewards', 'classbirthday', 'xmascards', 'classadvent', 'xmasshow', 'classcalendar', 'classwelcome', 'readingrecords', 'phonicscheck', 'parentsevening', 'reporthelper', 'movingup', 'classspecial', 'morningwork', 'homeworkmonth', 'classawards', 'coverkit', 'classseason', 'yearbook', 'displays']),
     ('handwriting', 'Handwriting', 'Handwriting', 'From first pencil lines to joined writing, with real letter shapes and stroke order.',
      ['prewriting', 'scissors', 'names', 'letters', 'mixups', 'joined', 'writingpaper', 'alphabets']),
     ('reading', 'Reading & phonics', 'Reading', 'Letter sounds, CVC words, syllables, sight words, sentences, spelling and stories where your child is the hero.',
@@ -3316,7 +3333,7 @@ AGES = {
     'papergames': (4, 12), 'scissors': (2, 6), 'tenframes': (4, 7), 'sequencing': (3, 7), 'coding': (4, 10), 'factfile': (5, 11), 'petcare': (3, 12), 'diary': (4, 11),
     'comprehension': (5, 9), 'mathsminute': (5, 10), 'savings': (4, 12), 'coupons': (3, 12), 'packing': (3, 10), 'mealplan': (3, 12), 'habits': (2, 7),
     'invites': (3, 12), 'countdown': (3, 10), 'teeth': (2, 8), 'familyrules': (3, 12), 'sitter': (1, 10), 'science': (4, 10), 'letterkit': (5, 11),
-    'pack': (3, 8), 'quickpack': (3, 8), 'faraway': (3, 10), 'monthplan': (3, 8), 'activitybook': (3, 9), 'passport': (3, 8), 'classpack': (3, 8),
+    'pack': (3, 8), 'kidsclub': (3, 8), 'quickpack': (3, 8), 'faraway': (3, 10), 'monthplan': (3, 8), 'activitybook': (3, 9), 'passport': (3, 8), 'classpack': (3, 8),
     'homelang': (2, 8), 'schoolready': (3, 6), 'holidayplan': (3, 8), 'signs': (3, 11), 'storydice': (4, 9), 'siblings': (3, 10), 'screentime': (4, 12), 'lunchnotes': (3, 10),
     'calmkit': (3, 10), 'sleep': (2, 7), 'foods': (2, 8), 'socialstory': (2, 8), 'storybook': (2, 8), 'talkcards': (3, 12), 'gratitude': (4, 12), 'potty': (1, 4),
     'prewriting': (2, 4), 'names': (3, 6), 'letters': (3, 6), 'mixups': (5, 7), 'joined': (6, 9), 'writingpaper': (4, 9), 'alphabets': (4, 9),
@@ -3372,7 +3389,7 @@ CAT_TEXT = {a[0]: a[3] for a in ARRANGE}
 NAV_LABEL = {a[0]: a[2] for a in ARRANGE}
 
 
-JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'tools21', 'tools22', 'tools23', 'tools24', 'tools25', 'tools26', 'tools27', 'tools28', 'tools29', 'tools30', 'tools31', 'tools32', 'tools33', 'tools34', 'tools35', 'tools36', 'tools37', 'plus', 'app']
+JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive', 'tools5', 'colouring', 'tools6', 'tools7', 'tools8', 'tools9', 'tools10', 'tools11', 'pack', 'tools12', 'tools13', 'tools14', 'tools15', 'tools16', 'tools17', 'tools18', 'tools19', 'tools20', 'tools21', 'tools22', 'tools23', 'tools24', 'tools25', 'tools26', 'tools27', 'tools28', 'tools29', 'tools30', 'tools31', 'tools32', 'tools33', 'tools34', 'tools35', 'tools36', 'tools37', 'tools38', 'plus', 'app']
 CONTACT = 'graceandloannesofficial@gmail.com'
 # Stripe customer portal: parents manage, switch or cancel their Plus subscription here.
 # The owner's Pinterest Tag ID (Pinterest Ads > Conversions > Pinterest Tag). Empty = no tag, no cookie banner.
@@ -3517,7 +3534,7 @@ def tool_page(t):
 <main id="main">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><a href="/">PrintPals</a> › <a href="/#{t['cat']}">{html.escape(cat_name)}</a> › {html.escape(t['h1'])}</nav>
-<div class="tool-head"><h1>{html.escape(t['h1'])}</h1><p>{html.escape(t['lead'])}</p><div class="tags">{(f'<a class="tag plus" href="/plus">🍎 Teacher plan: $59 a year, 7 days free</a>' if price == '59.00' else '<a class="tag plus" href="/plus">✨ PrintPals Plus: $4.99 a month or $39 a year, 7 days free</a>') if price else ''}<span class="tag">👧 {ages_text(t['id'])}</span><span class="tag">{'✓ 7 days free, no card' if t.get('plus') else '✓ Free, no sign up'}</span><span class="tag">✓ A4 and US Letter</span>{pin_btn(t)}</div><a class="jump" href="#preview">See your worksheet ↓</a></div>
+<div class="tool-head"><h1>{html.escape(t['h1'])}</h1><p>{html.escape(t['lead'])}</p><div class="tags">{(f'<a class="tag plus" href="/plus">🍎 Teacher plan: $59 a year, 7 days free</a>' if price == '59.00' else '<a class="tag plus" href="/plus">✨ PrintPals Plus: $4.99 a month or $39 a year, 7 days free</a>') if price else ''}<span class="tag">👧 {ages_text(t['id'])}</span><span class="tag">{'✓ 7 days free, no card' if t.get('plus') else '✓ Free, no sign up'}</span><span class="tag">✓ A4 and US Letter</span>{pin_btn(t)}</div><a class="jump" href="#preview">See your worksheet ↓</a></div>{'<!--CLUB-->' if t['id'] == 'kidsclub' else ''}
 <div class="maker">
 <form class="panel" id="maker" data-tool="{t['id']}"{level_attr}{(' data-plus="teacher"' if t['id'] == 'classpack' or t.get('teacher') else ' data-plus="plus"') if t.get('plus') else ''} autocomplete="off">
 {level_btns}
@@ -3794,6 +3811,8 @@ PRIVACY = f'''<h1>Privacy</h1>
 <p class="lead-p">Short version: we do not collect what you type. Worksheets are made on your own device. If you buy PrintPals Plus, we keep only what we need to give you your subscription.</p>
 <h2>What we collect</h2>
 <p>Nothing that you type. Names, word lists, messages and photos you use in a worksheet are processed inside your web browser and are never sent to us. There are no accounts and no sign up forms.</p>{PIN_PRIVACY}
+<h2>If you join the Kids Club</h2>
+<p>When you join the PrintPals Kids Club, we keep your email address so we can send the club emails: a free pack each month and news about new packs. We also note whether you chose UK or US English and which page you joined from. Your email is stored securely in Google Firebase, and in the email service we use to send the club emails. We never sell it or share it with anyone else. Every email has a link to leave the club, or email us at {CONTACT} and we will delete it.</p>
 <h2>What stays on your device</h2>
 <p>To make PrintPals easier to use, your browser remembers a few settings in its own local storage: your paper size, whether Ink saver is on, and your child's first name if you typed one, so the next sheet is ready for you. This never leaves your device. Press "Forget it" under the print button, or clear your browser data, to remove it.</p>
 <h2>If you buy PrintPals Plus</h2>
@@ -3929,6 +3948,16 @@ if(c==='yes')load();else if(c!=='no')ask();
 document.querySelectorAll('[data-action="cookies"]').forEach(function(x){x.addEventListener('click',function(e){e.preventDefault();try{localStorage.removeItem(K)}catch(e){}location.reload()})});})()</script>""")
 
 
+def club_box(us):
+    privacy = '/us/privacy' if us else '/privacy'
+    return (f'<section class="club no-print" aria-label="PrintPals Kids Club"><div class="wrap club-in"><div class="club-text"><b>💌 Join the PrintPals Kids Club</b>'
+            f'<span>A free welcome pack right now, then a new free pack every month by email. For grown-ups. Leave any time.</span></div>'
+            f'<form class="club-form" novalidate><div class="club-row"><input type="email" name="clubemail" placeholder="Your email address" autocomplete="email" aria-label="Your email address" maxlength="254">'
+            f'<button type="submit" class="btn">Join free</button></div>'
+            f'<label class="club-ok"><input type="checkbox" name="clubconsent"> Yes, email me the free monthly pack and news about new packs. I can leave any time. <a href="{privacy}">Privacy</a></label>'
+            f'<p class="club-msg" aria-live="polite"></p></form></div></section>')
+
+
 def lang_bits(page, path, us):
     """Add the UK/US switch, the note by the print button and the offer banner."""
     uk_href, us_href = path, '/us' + ('' if path == '/' else path)
@@ -3939,7 +3968,11 @@ def lang_bits(page, path, us):
     note = (f'<p class="hint lang-hint">🇬🇧 Prefer British spelling (colour, maths, Mum)? <a data-lang="uk" href="{uk_href}">Switch to UK English</a></p>' if us
             else f'<p class="hint lang-hint">🇺🇸 Want American spelling (color, math, Mom)? <a data-lang="us" href="{us_href}">Switch to US English</a></p>')
     page = page.replace('<p class="hint" id="remember"', note + '\n<p class="hint" id="remember"', 1)
-    return page.replace('</body>', LANG_JS + pin_tag_js() + '\n</body>', 1)
+    if '<!--CLUB-->' in page:
+        page = page.replace('<!--CLUB-->', club_box(us), 1)
+    elif '<footer>' in page:
+        page = page.replace('<footer>', club_box(us) + '\n<footer>', 1)
+    return page.replace('</body>', LANG_JS + f'<script src="/js/club.js?v={VERSION}"></script>' + pin_tag_js() + '\n</body>', 1)
 
 
 def write_pair(name, page, path):
