@@ -1,0 +1,93 @@
+{
+  "theme": "ocean",
+  "fields": [
+    { "id": "s_met", "chapter": "How we met", "label": "How you met (or your first memory of them)", "example": "Sharing the last umbrella at a bus stop in the pouring rain", "max": 80 },
+    { "id": "s_laugh", "chapter": "Guaranteed to make us laugh", "label": "The thing that always makes you both laugh", "example": "That holiday photo. You know the one.", "max": 80 },
+    { "id": "s_best", "chapter": "Best day together", "label": "Your best day together so far", "example": "Pancakes at midnight after Mia's surprise party", "max": 70 },
+    { "id": "s_promise", "label": "A birthday promise to them", "example": "To plan the next adventure, and actually book it", "max": 70 }
+  ],
+  "labels": { "age": "This year's big number", "talent": "A secret talent", "obsession": "Currently obsessed with", "words": "In three words" },
+  "story": {
+    "legend": "A few more things about them",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely ones we have written for them.",
+    "kicker": "The story so far",
+    "title": "The Making of a Legend",
+    "hand": "And this is only the trailer. The best scenes are still to come, {who}."
+  },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we love about you",
+    "items": ["Your laugh across a crowded room", "The way you make everyone welcome", "Your terrible jokes", "How you remember the little things", "Your brilliant ideas at midnight", "The way you light up a room", "How you always pick up the phone", "Your dance moves", "Your excellent taste in snacks", "How kind you are to strangers", "The way you tell a story", "How brave you are", "Your loyalty", "The way you say our names", "How you make ordinary days fun", "Your enormous heart", "Your honest advice", "How you never give up", "Your famous hugs", "Simply being you"]
+  },
+  "timeline": {
+    "kicker": "Birthdays through the ages",
+    "title": "A Short History of Birthdays",
+    "items": [
+      ["Ancient Rome", "A day worth a feast", "Romans marked the birthdays of friends and family with feasts, gifts and wishes for good luck."],
+      ["1700s", "Cake and candles", "In Germany, children's birthday parties called Kinderfeste had a cake with a candle for every year."],
+      ["1893", "The tune we all know", "Sisters Mildred and Patty Hill published Good Morning to All. Its melody became Happy Birthday to You."],
+      ["2015", "A song for everyone", "A judge ruled the old copyright claim on Happy Birthday invalid. Now it belongs to all of us."]
+    ],
+    "today": ["Today", "{who} turns {age}", "The most important birthday in the history books. Well, in ours."]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words for Your Birthday",
+    "items": [
+      ["There is no one alive who is Youer than You.", "Dr. Seuss, Happy Birthday to You!, 1959"],
+      ["We do not remember days, we remember moments.", "Cesare Pavese"],
+      ["Wrinkles should merely indicate where the smiles have been.", "Mark Twain, Following the Equator, 1897"],
+      ["A joy that is shared is a joy made double.", "An old English proverb"]
+    ],
+    "hand": "Every one of them is true. Especially the bit about smiles, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Birthdays",
+    "items": [
+      ["sun", "A lap of the Sun", "Every birthday marks one more trip around the Sun, about 940 million kilometres. Well travelled."],
+      ["globe", "Birthday twins", "Around twenty million people share your birthday. None of them are quite as good at it as you."],
+      ["smile", "The party trick", "In a room of just 23 people, there is a better than even chance two of them share a birthday."],
+      ["music", "The famous song", "Happy Birthday to You is often called the most recognised song in the English language."],
+      ["clock", "Leap day babies", "People born on 29 February only get a true birthday once every four years."],
+      ["spark", "Brand new you", "Your skin renews its outer layer every few weeks, so you are always a slightly fresher edition."]
+    ],
+    "hand": "Science says you are {age}. We say you are timeless, {who}."
+  },
+  "world": {
+    "kicker": "A thank you from all of us",
+    "title": "Why the World Is Better Because You Were Born",
+    "lead": "Because you were born, the world got:",
+    "items": ["A laugh that makes everybody else laugh too.", "Someone who turns up when it really matters.", "Stories we will be telling for years.", "Better parties, and better dancing.", "A friend who makes people feel seen.", "Kindness, in very generous portions.", "And the one and only {who}."],
+    "close": "The world is better because you are in it, {who}. Ours most of all."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "For your new year",
+    "title": "Our birthday promises",
+    "items": ["To celebrate you more than once a year.", "To laugh at your jokes, even the old ones.", "To say yes to more adventures with you.", "To always save you the biggest slice.", "To be there, whatever the year brings."],
+    "hand": "Signed, sealed and meant. {from}"
+  },
+  "awards": [["Best laugh in the business", "By a landslide"], ["Most likely to start the dancing", "Every single time"], ["Outstanding friendship", "A lifetime achievement"], ["Star of the year", "Voted {age} years running"]],
+  "vouchers": [["Breakfast in bed", "Coffee included, obviously"], ["A day of your choosing", "Anywhere, anything"], ["One night out", "Our treat, your playlist"], ["A lie in", "Nobody says a word"]],
+  "vouchersTitle": "Birthday vouchers for {who}",
+  "cert": "Officially Iconic",
+  "perfume": "Top notes of birthday candles, fizz and laughter. A heart of pure sunshine.",
+  "news": { "edition": "Birthday edition", "headline": "{who} turns {age} and the world celebrates", "lead": "Reports are coming in from everywhere: {who} is {age} today and looking better than ever. Cake has been confirmed.", "weather": "Weather: sunny, with scattered confetti" },
+  "passport": { "kicker": "Official documents", "head": "Passport to every party", "nationality": "Celebrated, everywhere", "job": "Professional legend", "stamps": ["Birthday city", "Party central", "Adored"] },
+  "movie": { "sub": "The birthday blockbuster", "soon": "Now showing, all year long", "reviews": [["Funny, warm and totally unmissable", "The Daily Cake"], ["An instant classic", "Everyone who knows them"], ["We want a sequel every year", "The Group Chat"]] },
+  "quiz": [["About how far does Earth travel around the Sun in one year?", ["940 kilometres", "940 thousand kilometres", "940 million kilometres"], 2], ["Which tune became Happy Birthday to You?", ["Good Morning to All", "Twinkle Twinkle", "Jingle Bells"], 0]],
+  "words": ["CAKE", "PARTY", "CANDLES", "WISH", "LEGEND", "CHEERS"],
+  "note": {
+    "title": "What we believe a birthday is for",
+    "contents": "A note for you",
+    "paras": [
+      "We make magazines for a living, and birthdays are our favourite kind.",
+      "We believe a birthday is not really about getting older. It is the one day a year when everyone who loves you is allowed to say so, out loud, without it being strange.",
+      "{who}, someone wanted to do exactly that. Not with a card anyone could buy, but with pages full of you: your face, your stories, the little things that make you, you.",
+      "That someone is {from}. And from everything they told us, the world got very lucky the day you arrived."
+    ],
+    "wish": "Happy birthday, {who}. Here is to you."
+  }
+}

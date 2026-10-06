@@ -1,0 +1,94 @@
+{
+  "theme": "ruby",
+  "fields": [
+    { "id": "s_young", "chapter": "Back in the day", "label": "What they were like when they were younger", "example": "Big hair, bigger dreams and a bike that went everywhere", "max": 80 },
+    { "id": "s_proud", "chapter": "Proudest moment", "label": "Their proudest moment (that you know of)", "example": "Running the whole race in the rain, and finishing with a grin", "max": 80 },
+    { "id": "s_lesson", "chapter": "Life lesson", "label": "Something they taught you about life", "example": "Always take the scenic route", "max": 60 },
+    { "id": "s_promise", "label": "A promise for the next chapter", "example": "To dance with you at every party from now on", "max": 70 }
+  ],
+  "labels": { "age": "The big number", "born": "Born in", "famous": "Famous for", "decade": "Best decade so far", "still": "Still can't" },
+  "story": {
+    "legend": "A few more things about them",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely ones we have written for them.",
+    "kicker": "The story so far",
+    "title": "A Life Well Lived (So Far)",
+    "hand": "{age} years of stories, and somehow the best ones are still being written."
+  },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we love about you",
+    "items": ["Your stories (yes even the long ones)", "The wisdom you hand out for free", "Your laugh", "How you never really grew up", "Your loyalty", "The way you make us feel safe", "Your excellent taste in music", "How you always know a shortcut", "Your famous advice", "How generous you are", "The way you light up a party", "Your patience with all of us", "How young at heart you are", "Your sense of adventure", "The way you remember birthdays", "Your kindness to everyone", "How you make any place feel like home", "Your courage", "The way you still surprise us", "Simply being you"]
+  },
+  "timeline": {
+    "kicker": "Marking the years",
+    "title": "A Short History of Milestones",
+    "items": [
+      ["Ancient Rome", "The first milestones", "Romans set stone markers along their roads, one every Roman mile, so travellers knew how far they had come."],
+      ["Ancient times", "The first jubilee", "In ancient Hebrew tradition, every fiftieth year was a jubilee: a time of freedom, rest and celebration."],
+      ["1900 to now", "More birthdays for all", "Average life expectancy around the world has more than doubled, so there are more big birthdays to enjoy."],
+      ["1997", "The record holder", "Jeanne Calment of France died aged 122, the oldest person whose age has ever been verified."]
+    ],
+    "today": ["Born {born}", "{who} turns {age}", "Not a record breaker yet. But already a legend to everyone here."]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words on Growing Older",
+    "items": [
+      ["Grow old along with me! The best is yet to be.", "Robert Browning, Rabbi Ben Ezra, 1864"],
+      ["For age is opportunity no less than youth itself, though in another dress.", "Henry Wadsworth Longfellow, 1875"],
+      ["Old friends and old wine are best.", "An old English proverb"],
+      ["The older the fiddle, the sweeter the tune.", "An old saying"]
+    ],
+    "hand": "They knew what they were talking about. Just look at {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Getting Better",
+    "items": [
+      ["sun", "Seasoned traveller", "{age} trips around the Sun, each one about 940 million kilometres. That is a lot of air miles."],
+      ["pulse", "A hard working heart", "Your heart beats around 35 million times a year, without ever asking for a day off."],
+      ["smile", "Happier with age", "Many studies find people grow happier and calmer from middle age onwards. The best really is ahead."],
+      ["book", "A growing vocabulary", "Your vocabulary can keep growing for decades, and often peaks later in life."],
+      ["spark", "Still learning", "The brain keeps making new connections at every age. Old dogs, new tricks: confirmed."],
+      ["moon", "Sweet dreams", "We spend roughly a third of our lives asleep, so some of your best years were spent dreaming."]
+    ],
+    "hand": "Science agrees: {who} is not getting older, just getting better."
+  },
+  "world": {
+    "kicker": "A thank you from all of us",
+    "title": "Why the World Is Better Because You Were Born",
+    "lead": "Since {born}, the world has had:",
+    "items": ["Stories that get better every time they are told.", "Advice that turned out to be right. Annoyingly.", "A laugh you can hear from the next room.", "Someone who shows us how to live well.", "Parties that would have been much quieter.", "Kindness that has reached further than you know.", "And {age} glorious years of {who}."],
+    "close": "Here is to every year so far, {who}, and every one still to come."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "For the next chapter",
+    "title": "Our promises to you",
+    "items": ["To keep asking for your stories.", "To make the next decade the best one yet.", "To celebrate you far more often.", "To follow your advice. Most of the time.", "To be by your side for every milestone."],
+    "hand": "Signed with love, {from}"
+  },
+  "awards": [["Lifetime achievement", "{age} years in the making"], ["Best storyteller", "Again and again"], ["Aged to perfection", "Like a fine wine"], ["Most loved", "A unanimous decision"]],
+  "vouchers": [["A long lunch", "No clock watching"], ["A trip down memory lane", "Old photos and good tea"], ["One day of adventure", "Your pick, our treat"], ["Your favourite meal", "Cooked with love"]],
+  "vouchersTitle": "Milestone vouchers for {who}",
+  "cert": "Vintage, Classic and One of a Kind",
+  "certLine": "having reached {age} in magnificent style, is officially",
+  "perfume": "Top notes of vinyl records, old photographs and good stories. A heart of pure gold.",
+  "news": { "edition": "Collector's edition", "headline": "{who} hits {age} in style", "lead": "In news that surprised absolutely no one, {who} has reached {age} looking fabulous. Celebrations are expected to go on for some time.", "weather": "Weather: golden, with a warm glow all day" },
+  "passport": { "kicker": "Official documents", "head": "Passport through the decades", "nationality": "Vintage, and proud", "job": "Keeper of the best stories", "stamps": ["Born {born}", "Every decade", "Still going strong"] },
+  "movie": { "sub": "The life and times", "soon": "Still showing after {age} glorious years", "reviews": [["A classic that only gets better", "The Vintage Times"], ["We laughed until we cried", "The whole family"], ["Simply legendary", "Everyone who was there"]] },
+  "quiz": [["How old was Jeanne Calment, the oldest verified person ever?", ["101", "115", "122"], 2], ["What did the Romans place along their roads every mile?", ["Milestones", "Fountains", "Statues"], 0]],
+  "words": ["VINTAGE", "CLASSIC", "LEGEND", "CHEERS", "DECADE", "GOLDEN"],
+  "note": {
+    "title": "What we believe a milestone is",
+    "contents": "A note for you",
+    "paras": [
+      "We make magazines for a living, and the big birthdays are the ones we love most.",
+      "We believe a milestone is a little stone by the road that says: look how far you have come. Look at everyone who walked part of the way with you.",
+      "{who}, someone wanted to stop and mark this one properly. Not with a card anyone could buy, but with pages full of you: your stories, your face, the years that made you.",
+      "That someone is {from}. And from everything they told us, the road ahead is full of people who adore you."
+    ],
+    "wish": "Happy birthday, {who}. Here is to {age}, and the best is yet to be."
+  }
+}

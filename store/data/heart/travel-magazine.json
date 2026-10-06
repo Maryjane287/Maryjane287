@@ -1,0 +1,98 @@
+{
+  "theme": "ocean",
+  "fields": [
+    { "id": "s_song", "chapter": "The soundtrack of the trip", "label": "The song of the trip", "example": "The same song on repeat in every taxi", "max": 60 },
+    { "id": "s_word", "chapter": "A word we picked up", "label": "A word or phrase you picked up", "example": "Thank you, in three new languages", "max": 60 },
+    { "id": "s_again", "chapter": "Do it all again", "label": "What you would do again in a heartbeat", "example": "The sunrise walk on the last morning", "max": 60 },
+    { "id": "s_next", "label": "A promise for the next trip", "example": "To finally see the northern lights together", "max": 70 }
+  ],
+  "labels": { "place": "Where we went", "days": "Days away", "who": "The travellers", "meal": "The best meal", "view": "The best view", "lost": "We got lost finding" },
+  "toc": "A one of a kind travel issue: {days} days in {place}, made with love by {from}.",
+  "quizTitle": "How well do you remember {place}?",
+  "story": {
+    "legend": "A few more memories from the trip",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely ones we have written for you.",
+    "kicker": "The trip",
+    "title": "The Story of Our Trip",
+    "hand": "Some trips you take. Some trips stay with you forever."
+  },
+  "picks": {
+    "legend": "Ten things you loved about the trip",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we loved about the trip",
+    "items": ["Waking up somewhere new", "Getting lost on purpose", "Street food on a bench", "Long lunches with no plans", "Taking turns at the window seat", "Sunsets we stopped to watch", "Thank you in a new language", "Postcards we never sent", "Laughing at our terrible maps", "Too many photos of the food", "Swimming before breakfast", "Little cafés on every corner", "Walking until our feet gave up", "Ice cream every single day", "Train rides and sleepy heads", "Markets full of colour", "No alarms all week", "Finding the best view in town", "Holding hands in a new city", "Simply being there together"]
+  },
+  "timeline": {
+    "kicker": "Travel through the ages",
+    "title": "A Short History of Going Away",
+    "items": [
+      ["1271", "The great journey", "Marco Polo set out from Venice for Asia. He did not get home for about 24 years. Some holiday."],
+      ["1700s", "The Grand Tour", "Young travellers crossed Europe for months, chasing art, music, ruins and sunshine."],
+      ["1841", "The first package trip", "Thomas Cook took hundreds of people on a day trip by train, and the group holiday was born."],
+      ["1970", "The jumbo jet", "The first Boeing 747 passenger flight took off, and flying abroad began to open up for millions."]
+    ],
+    "today": ["Today", "{who}", "{days} days in {place}. Not in the history books yet, but the best trip ever taken, if you ask us."]
+  },
+  "letters": {
+    "kicker": "Words for the road",
+    "title": "What the World Has Said About Travel",
+    "items": [
+      ["Not all those who wander are lost.", "J. R. R. Tolkien, The Fellowship of the Ring"],
+      ["A journey is best measured in friends, rather than miles.", "Tim Cahill"],
+      ["A journey of a thousand miles begins with a single step.", "Laozi, Tao Te Ching"],
+      ["A good companion shortens the longest road.", "An old proverb"]
+    ],
+    "hand": "They all say it beautifully. We just say: where to next?"
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Adventure",
+    "items": [
+      ["spark", "New is good for you", "New places light up the brain's reward system, the same one that makes good news feel so good."],
+      ["clock", "The joy of waiting", "Studies suggest just looking forward to a trip can make people happier for weeks before they go."],
+      ["gift", "Better than things", "Research shows experiences bring longer lasting happiness than things. Memories never go out of style."],
+      ["eye", "That view", "A breathtaking view sparks awe, which studies link to feeling kinder and more connected."],
+      ["plane", "Short but sweet", "The first powered aeroplane flight, in 1903, lasted just 12 seconds."],
+      ["moon", "Catching up", "After a long flight, the body clock catches up at roughly one time zone a day."]
+    ],
+    "hand": "Science can explain a lot. It cannot explain why holiday food always tastes better."
+  },
+  "world": {
+    "kicker": "A thank you from all of us",
+    "title": "Why the World Is Better When You Explore It",
+    "lead": "Because you went, the world got:",
+    "items": ["A few more strangers who smiled back.", "A café that will remember your order.", "More footprints on a beach somewhere.", "A sunset that finally had the right audience.", "A thousand new photos, mostly of food.", "Proof that getting lost is the best part.", "And a story you will be telling for years."],
+    "close": "{who}: the world is better when you explore it together. Come back soon, it says."
+  },
+  "promises": {
+    "field": "s_next",
+    "kicker": "For the next adventure",
+    "title": "Our travel promises",
+    "items": ["To take turns at the window seat.", "To get lost together, on purpose.", "To try the strange thing on the menu.", "To pack less. Probably.", "To keep saying yes to the next trip."],
+    "hand": "Signed, with sand still in our shoes, {from}"
+  },
+  "awardsKicker": "Live from the departure lounge",
+  "awards": [["Best travel buddies", "No contest"], ["Most photos of breakfast", "A new record"], ["Chief map holder", "Upside down, mostly"], ["Adventurers of the year", "Unanimous"]],
+  "awardsFoot": "The envelope, please. It came with a postcard stamp.",
+  "vouchers": [["The window seat", "Valid on any journey"], ["A day with no plans", "Wander wherever you like"], ["One more holiday breakfast", "Recreated at home"], ["Planning the next trip", "Maps and snacks included"]],
+  "vouchersTitle": "Travel vouchers for {who}",
+  "certLine": "officially and forever qualify as",
+  "cert": "World Class Travellers",
+  "perfume": "Top notes of sea air, sun cream and strong coffee. A heart of pure wanderlust.",
+  "news": { "edition": "Travel edition", "headline": "{who} back from {place}", "lead": "Sources close to the travellers confirm {days} days in {place}, far too many photos and not one single regret.", "weather": "Weather: sunny, wherever you go together" },
+  "passport": { "kicker": "Official documents", "head": "Passport to everywhere, together", "nationality": "Citizens of the world", "job": "Professional explorers", "stamps": ["{place}", "Somewhere new", "Next stop: anywhere"] },
+  "movie": { "sub": "A love letter to {place}", "soon": "Sequel already in planning", "reviews": [["Pack your bags, it is wonderful", "The Daily Postcard"], ["We laughed, we got lost, we loved it", "Everyone who saw the photos"], ["Five stars, would go again", "The Holiday Group Chat"]] },
+  "quiz": [["How long did the first powered aeroplane flight last in 1903?", ["12 seconds", "12 minutes", "12 hours"], 0], ["Who set out from Venice in 1271 on a journey to Asia?", ["Christopher Columbus", "Marco Polo", "Captain Cook"], 1]],
+  "words": ["TRAVEL", "PASSPORT", "SUNSET", "JOURNEY", "EXPLORE", "POSTCARD"],
+  "note": {
+    "title": "What we believe a journey is",
+    "contents": "A note for you",
+    "paras": [
+      "We make magazines for a living, and some of them make us want to pack a bag. This was one of them.",
+      "We believe the best part of any trip is not the place. It is the person beside you on the bus, the shared plate, the wrong turn that becomes the story you tell for the rest of your lives.",
+      "{who}, someone wanted to keep this trip safe. Not in a phone full of photos, but here, in pages you can hold: the views, the meals, the moments only you share.",
+      "That someone is {from}. And from everything they told us, the best adventures are still ahead of you."
+    ],
+    "wish": "Wherever you go next, go together. Bon voyage, always."
+  }
+}

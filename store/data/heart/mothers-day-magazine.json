@@ -1,0 +1,92 @@
+{
+  "theme": "ruby",
+  "fields": [
+    { "id": "s_taught", "chapter": "The best thing she taught us", "label": "The best thing she taught you", "example": "To always say thank you, and to mean it", "max": 80 },
+    { "id": "s_sad", "chapter": "When we are sad, she...", "label": "What she does when you are sad", "example": "Makes hot chocolate and sits with us until it passes", "max": 80 },
+    { "id": "s_home", "chapter": "Home smells like", "label": "Home smells like...", "example": "Fresh bread and her perfume on a Sunday", "max": 60 },
+    { "id": "s_promise", "label": "A promise to her", "example": "To call more, and to visit more", "max": 70 }
+  ],
+  "story": {
+    "legend": "A few more things about her",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely ones we have written for her.",
+    "kicker": "Our story",
+    "title": "Everything She Is",
+    "hand": "And that is only the beginning of what {who} means to us."
+  },
+  "picks": {
+    "legend": "Ten things you love about her",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we love about you",
+    "items": ["Her warm hugs", "The way she always knows", "Her cooking", "How she never gives up on us", "Her laugh", "Her good advice", "How she makes a house a home", "The way she listens", "How strong she is", "Her kindness to everyone", "Her bedtime stories", "How she remembers everything", "Her sense of humour", "The way she believes in us", "Her patience", "How she makes every birthday special", "Her calm in a crisis", "The way she says our names", "How proud she makes us", "Simply being our mum"]
+  },
+  "timeline": {
+    "kicker": "Mums through the ages",
+    "title": "A Short History of Celebrating Mum",
+    "items": [
+      ["1600s", "Mothering Sunday", "In England, young people working away were given a day off to go home to their mothers, often with flowers picked on the way."],
+      ["1870", "A call for peace", "Julia Ward Howe wrote a Mother's Day Proclamation, asking mothers everywhere to unite for peace."],
+      ["1908", "A daughter remembers", "Anna Jarvis held a service for her own mother and handed out carnations, her mother's favourite flower."],
+      ["1914", "A day for every mum", "Mother's Day became a national holiday in the United States, and the idea spread around the world."]
+    ],
+    "today": ["Today", "{who}", "Not in the history books yet. But to us, the most important mum who ever lived."]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Mums",
+    "items": [
+      ["Mother is the name for God in the lips and hearts of little children.", "William Makepeace Thackeray, Vanity Fair, 1848"],
+      ["A mother is the truest friend we have.", "Washington Irving, 1820"],
+      ["A mother's love for her child is like nothing else in the world.", "Agatha Christie"],
+      ["An ounce of mother is worth a pound of clergy.", "An old Spanish saying"]
+    ],
+    "hand": "They all say it beautifully. We just say: thank you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of a Mother's Love",
+    "items": [
+      ["heart", "Before hello", "Babies can recognise their mother's voice before they are even born."],
+      ["eye", "Her face first", "Newborns can pick out their mother's face from others within days of birth."],
+      ["pulse", "The calming voice", "Just hearing mum's voice can lower a child's stress and release oxytocin, the cuddle hormone."],
+      ["spark", "Part of her forever", "A few of a child's cells can stay in their mother's body for decades. Scientists call it microchimerism."],
+      ["smile", "The first smile", "Babies begin smiling back at the people who love them at around six weeks old."],
+      ["moon", "The night shift", "In a baby's first year, mums give up hundreds of hours of sleep. Most would do it all again."]
+    ],
+    "hand": "Science can explain a lot. It still cannot explain how {who} always knows."
+  },
+  "world": {
+    "kicker": "A thank you from all of us",
+    "title": "Why the World Is Better With You in It",
+    "lead": "Because of you, the world got:",
+    "items": ["A hug that fixes almost anything.", "Someone who always saves the last slice for us.", "The wisest advice, given at exactly the right time.", "A kitchen full of laughter and good food.", "A kindness that spreads to everyone you meet.", "A home we always want to come back to.", "And the best mum we could ever have asked for."],
+    "close": "The world is better because of you, {who}. Ours most of all."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises to you",
+    "items": ["To call you just to say hello.", "To remember everything you taught us.", "To say thank you more often.", "To make you as proud as you make us.", "To love you, always, wherever we are."],
+    "hand": "Signed with love, {from}"
+  },
+  "awards": [["Best hugs in the world", "By a landslide"], ["Chief worry solver", "Unanimous"], ["The kitchen legend", "Ten years running"], ["Lifetime achievement", "In being Mum"]],
+  "vouchers": [["Breakfast in bed", "Served with a cup of tea"], ["A whole day off", "We do everything"], ["A long phone call", "No rushing, just talking"], ["One day out together", "Your choice, our treat"]],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "The Best Mum in the World",
+  "perfume": "Top notes of warm hugs, fresh bread and kindness. A heart of pure gold.",
+  "news": { "edition": "Mother's Day edition", "headline": "{who} does it all again", "lead": "Sources close to the family confirm that {who} has, once again, held everything together with love, patience and a cup of tea.", "weather": "Weather: warm, with a 100% chance of hugs" },
+  "passport": { "kicker": "Official documents", "head": "Passport to everywhere, with love", "nationality": "Loved, everywhere", "job": "Chief hug officer", "stamps": ["Our kitchen", "Every school play", "Always home"] },
+  "movie": { "sub": "The woman who did everything", "soon": "Showing forever, in our hearts", "reviews": [["We laughed, we cried, we called our mum", "The Daily Hug"], ["An absolute hero", "Everyone who knows her"], ["Iconic from start to finish", "The Family Group Chat"]] },
+  "quiz": [["How soon can a baby recognise their mother's voice?", ["Before they are born", "At one year old", "At school age"], 0], ["When did Mother's Day become an official holiday in the United States?", ["1814", "1914", "1994"], 1]],
+  "words": ["MUM", "LOVE", "HUGS", "HOME", "KIND", "HEART"],
+  "note": {
+    "title": "What we believe a mum is",
+    "contents": "A note for you",
+    "paras": [
+      "We make magazines for a living, but some feel different. This was one of them.",
+      "We believe a mum is not only the big moments. She is the packed lunch, the plaster on a knee, the light left on, the voice on the phone that makes everything feel smaller and more possible.",
+      "{who}, someone wanted you to have something special. Not a card anyone could buy, but pages full of you: your face, your words, the little things that make you, you.",
+      "That someone is {from}. And from everything they told us, you are loved more than you could ever know."
+    ],
+    "wish": "Thank you, {who}. For everything, always."
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "theme": "candy",
+  "fields": [
+    { "id": "s_laugh", "chapter": "What makes you laugh most", "label": "What makes them laugh most", "example": "Peekaboo behind the curtain, every single time", "max": 70 },
+    { "id": "s_song", "chapter": "The song that calms you", "label": "The song that calms them", "example": "Twinkle, twinkle, sung very quietly by Dad", "max": 60 },
+    { "id": "s_first", "chapter": "Our favourite first", "label": "Your favourite first this year", "example": "The first time you waved goodbye to the postman", "max": 80 },
+    { "id": "s_wish", "label": "A wish for their next year", "example": "To splash in every puddle you can find", "max": 70 }
+  ],
+  "labels": { "word": "Your first word", "food": "Your best food face", "toy": "Your favourite thing", "nick": "We call you" },
+  "story": {
+    "legend": "A few more firsts from year one",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely ones we have written for them.",
+    "kicker": "Year one",
+    "title": "The Story of Your First Year",
+    "hand": "One year down, {first}. A whole lifetime of firsts still to come."
+  },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we love about you",
+    "items": ["Your big gummy grin", "The way you clap for yourself", "Your babbling stories", "How you wave at everyone", "Your giggle at peekaboo", "Your wobbly first steps", "How you share your snacks", "Your bath time splashing", "The way you point at dogs", "Your sleepy morning hair", "How you dance to any music", "Your tiny hand in ours", "The way you say uh oh", "How you love a cardboard box", "Your very serious frown", "Your big sloppy kisses", "How you crawl at top speed", "The way you light up a room", "How brave you are", "Simply being you"]
+  },
+  "timeline": {
+    "kicker": "Birthdays around the world",
+    "title": "How the World Celebrates Turning One",
+    "items": [
+      ["Ancient", "A cake like the moon", "The story goes that ancient Greeks lit round honey cakes with candles for Artemis, goddess of the moon."],
+      ["Korea", "Choose your future", "At a first birthday called a dol, babies pick an object like a pencil or thread, said to hint at their future."],
+      ["1700s", "A candle for each year", "In Germany, children's birthday parties called Kinderfest brought a cake with a candle for every year."],
+      ["1893", "A song is born", "Sisters Mildred and Patty Hill published the tune we now know as Happy Birthday to You."]
+    ],
+    "today": ["Today", "{first} turns one", "Candles, cake and a song. And a whole family singing it just for you."]
+  },
+  "letters": {
+    "kicker": "Words for little explorers",
+    "title": "Wise Words for Your Next Steps",
+    "items": [
+      ["The journey of a thousand miles begins with a single step.", "Lao Tzu, Tao Te Ching"],
+      ["Today you are You, that is truer than true.", "Dr. Seuss, Happy Birthday to You!, 1959"],
+      ["Children are the living messages we send to a time we will not see.", "Neil Postman, 1982"],
+      ["Fall seven times, stand up eight.", "A Japanese proverb"]
+    ],
+    "hand": "Whatever step comes next, {first}, we will be right behind you."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "How Babies Learn Absolutely Everything",
+    "items": [
+      ["smile", "Little copycats", "Babies learn by watching our faces and copying them. Every silly face we pulled was a lesson."],
+      ["music", "Babble first", "Long before real words, babies babble ba ba and da da, practising the sounds of their language."],
+      ["book", "Words in waiting", "Babies understand lots of words months before they can say a single one out loud."],
+      ["eye", "Peekaboo magic", "Peekaboo delights babies partly because they are learning that hidden things still exist."],
+      ["spark", "The first big laugh", "Most babies laugh out loud for the first time at around three or four months old."],
+      ["star", "One step at a time", "Lots of babies take their first steps around their first birthday. Some like to take their time."]
+    ],
+    "hand": "You learned so much this year, {first}. We watched every bit."
+  },
+  "world": {
+    "kicker": "A cheer from all of us",
+    "title": "Why the World Is Better With You in It",
+    "lead": "In just one year, you gave the world:",
+    "items": ["A giggle that makes strangers smile.", "A brand new dancer, any music will do.", "A wave for every bus and every dog.", "Socks that somehow vanish one by one.", "A family that grew a little bigger.", "A whole year of tiny brilliant firsts.", "And the happiest one year old we know."],
+    "close": "The world is better because of you, {first}. Ours most of all."
+  },
+  "promises": {
+    "field": "s_wish",
+    "kicker": "From us to you",
+    "title": "Our wishes for your year two",
+    "items": ["More puddles to splash in.", "More songs, more stories, more dancing.", "New words, and lots of them.", "Brave steps and soft landings.", "And to be loved, always, by all of us."],
+    "hand": "Signed with love, {from}"
+  },
+  "awardsKicker": "Live from the high chair",
+  "awards": [["Best food face", "Lemon category"], ["Fastest crawler", "In the whole house"], ["Loudest giggle", "Unanimous"], ["Baby of the year", "Lifetime achievement"]],
+  "vouchers": [["One extra bedtime story", "Same book again is fine"], ["One big puddle splash", "Wellies provided"], ["A trip to see the ducks", "Bread not included"], ["Endless cuddles", "Never expires"]],
+  "vouchersTitle": "Vouchers for {first}",
+  "cert": "The Most Fabulous One Year Old",
+  "certLine": "is officially, joyfully and forever",
+  "perfume": "Top notes of birthday cake and bubble bath. A heart of pure giggles.",
+  "news": { "edition": "First birthday edition", "headline": "{first} turns one, family celebrates", "lead": "Sources close to the family confirm that {first}, also known as {nick}, has completed a whole year of being utterly wonderful.", "weather": "Weather: sunny, with a 100% chance of cake" },
+  "passport": { "kicker": "Official documents", "head": "Passport to year two and beyond", "nationality": "Loved, everywhere", "job": "Chief giggle officer", "stamps": ["Year one", "First steps", "Party time"] },
+  "movie": { "sub": "One year. A thousand firsts.", "soon": "Year two, coming soon", "reviews": [["We clapped, we cried, we ate cake", "The Family Group Chat"], ["Small star, huge performance", "The Daily Giggle"], ["Five stars, and a lot of crumbs", "Everyone at the party"]] },
+  "quizTitle": "The year one quiz",
+  "quiz": [["At a Korean first birthday, what do babies do?", ["Pick an object", "Plant a tree", "Sing a song"], 0], ["When was the Happy Birthday tune first published?", ["1793", "1893", "1993"], 1]],
+  "words": ["PARTY", "CAKE", "BALLOON", "GIGGLE", "CANDLE", "ONE"],
+  "note": {
+    "title": "What we believe a first birthday is",
+    "contents": "A note for you",
+    "paras": [
+      "We make magazines for a living, but this one was for someone who has only just turned one.",
+      "We believe a first birthday is really a party for a whole year: every giggle, every wobble, every first word and every sleepless night that somehow became the best year of all.",
+      "{first}, you will not remember this birthday. That is why someone wanted it kept here, so you could read it one day and see how loved you were.",
+      "That someone is {from}. From everything they told us, you made this year the happiest they have known."
+    ],
+    "wish": "Happy first birthday, {first}. Here is to every year after."
+  }
+}

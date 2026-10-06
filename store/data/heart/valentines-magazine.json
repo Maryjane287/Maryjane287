@@ -1,0 +1,93 @@
+{
+  "theme": "ruby",
+  "fields": [
+    { "id": "s_first", "chapter": "The first time I saw you", "label": "The first thing you noticed about them", "example": "That smile, across a very crowded room", "max": 70 },
+    { "id": "s_fav", "chapter": "My favourite thing to do with you", "label": "Your favourite thing to do together", "example": "Lazy Sunday mornings and far too much coffee", "max": 70 },
+    { "id": "s_secret", "chapter": "A little secret about you", "label": "Something only you know about them", "example": "Cries at every single film with a dog in it", "max": 70 },
+    { "id": "s_promise", "label": "A promise to them", "example": "To always let you have the last bite", "max": 70 }
+  ],
+  "story": {
+    "legend": "A few more things about them",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "kicker": "Our story",
+    "title": "Everything You Are to Me",
+    "hand": "And that is only the beginning of why {from} loves {who}."
+  },
+  "labels": { "years": "Years together", "date": "Our first date", "cute": "Your cutest habit", "song": "Our song", "words": "You, in three words" },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things I love about you",
+    "items": ["Your smile", "The way you laugh at my jokes", "Your hugs", "How safe you make me feel", "Our late night talks", "The way you look at me", "How kind you are", "Your terrible dancing", "How you always put the kettle on", "The way you say my name", "How you make me braver", "Your sleepy morning face", "How you remember the little things", "Your sense of humour", "The way you hold my hand", "How you cheer me on", "Our silly made up songs", "How patient you are with me", "How you make every day fun", "Simply being you"]
+  },
+  "timeline": {
+    "kicker": "Love through the ages",
+    "title": "A Short History of Valentine's Day",
+    "items": [
+      ["1380s", "Chaucer's birds", "The poet Geoffrey Chaucer wrote of birds choosing their mates on Saint Valentine's Day. Romance took flight."],
+      ["1415", "A letter from the Tower", "Held prisoner in London, Charles, Duke of Orléans, wrote valentine poems to his wife far away in France."],
+      ["1840", "Love by post", "A cheap new postal service in Britain meant almost anyone could send a valentine, and the idea took off."],
+      ["1840s", "Lace and ribbons", "Esther Howland began making lacy valentine cards in America, and the fashion spread far and wide."]
+    ],
+    "today": ["Today", "{from} and {who}", "Not in any history book yet. But ask {from}, and it is the best love story there is."]
+  },
+  "letters": {
+    "kicker": "From the archives",
+    "title": "The Most Romantic Lines Ever Written",
+    "items": [
+      ["My bounty is as boundless as the sea, my love as deep.", "William Shakespeare, Romeo and Juliet"],
+      ["Today more than yesterday, and less than tomorrow.", "Rosemonde Gérard, French poet"],
+      ["The heart has its reasons which reason knows nothing of.", "Blaise Pascal, Pensées"],
+      ["Love conquers all.", "Virgil, Eclogues"]
+    ],
+    "hand": "The greatest love lines were written for one person. {who}, yours is on page 3."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Being Smitten",
+    "items": [
+      ["spark", "Butterflies are real", "That fluttery feeling is adrenaline at work, sending blood away from your tummy."],
+      ["pulse", "The happy chemical", "Love lights up the brain's reward system and floods it with dopamine, the feel good chemical."],
+      ["book", "Dear Juliet", "Thousands of letters addressed to Juliet arrive in Verona every year, and volunteers answer them."],
+      ["heart", "Not quite a heart", "The classic heart symbol looks nothing like a real heart. Love never worried about accuracy."],
+      ["leaf", "Roses are red", "In ancient myths the rose belonged to the goddess of love. It still says I love you today."],
+      ["smile", "Pucker up", "A single kiss can use dozens of muscles in the face, and it can help melt stress away."]
+    ],
+    "hand": "Science can explain the butterflies. It cannot explain why {who} still gives them to {from}."
+  },
+  "world": {
+    "kicker": "A love note from the universe",
+    "title": "Why the World Is Better Because of You",
+    "lead": "Because {who} exists, the world got:",
+    "items": ["A smile that turns bad days around.", "The best person to share a sofa with.", "A laugh that is impossible not to join.", "Someone who notices the little things.", "Kindness that nobody has to ask for.", "A heart worth crossing oceans for.", "And the very best part of {from}'s every day."],
+    "close": "The world is better with you in it, {who}. {from}'s world most of all."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From my heart to yours",
+    "title": "My promises to you",
+    "items": ["To always share the last biscuit.", "To laugh at your jokes, even the old ones.", "To hold your hand on the hard days.", "To keep falling for you, again and again.", "To love you more every single year."],
+    "hand": "Signed, sealed and meant with all my heart, {from}"
+  },
+  "awards": [["Cutest human alive", "By a landslide"], ["Best hugs in the world", "Unanimous"], ["Most kissable", "Independently verified"], ["Love of my life", "No contest"]],
+  "vouchers": [["One candlelit dinner", "Cooked by me, mostly edible"], ["A movie night", "You pick, I bring snacks"], ["Breakfast in bed", "With a kiss on the side"], ["One long cuddle", "Valid any time, forever"]],
+  "vouchersTitle": "Love vouchers for {who}",
+  "cert": "The Love of My Life",
+  "perfume": "Top notes of first dates and stolen kisses. A heart of pure, head over heels love.",
+  "news": { "edition": "Valentine's edition", "headline": "{who} officially the one", "lead": "In news that will surprise nobody, {from} has confirmed that {who} is, and always will be, the love of their life.", "weather": "Weather: warm, with a 100% chance of kisses" },
+  "passport": { "kicker": "Official documents", "head": "Passport to my heart", "nationality": "Adored, everywhere", "job": "Professional heartthrob", "stamps": ["Our first date", "Every kiss", "Forever"] },
+  "movie": { "sub": "A love story", "soon": "Showing every day, in {from}'s heart", "reviews": [["Swoon worthy from start to finish", "The Daily Hug"], ["I would watch it a thousand times", "{from}"], ["Hopelessly romantic", "Everyone who knows them"]] },
+  "quiz": [["Which poet wrote of birds choosing mates on Saint Valentine's Day?", ["William Shakespeare", "Geoffrey Chaucer", "Robert Burns"], 1], ["Which city gets thousands of letters addressed to Juliet?", ["Paris", "Venice", "Verona"], 2]],
+  "words": ["LOVE", "KISS", "HEART", "ROSES", "CUPID", "FOREVER"],
+  "note": {
+    "title": "What we believe romance is",
+    "contents": "A note for you",
+    "paras": [
+      "We make a lot of magazines, but every now and then one makes us stop and smile. This was one of them.",
+      "We believe romance is not only roses and candlelight. It is the text asking if you got home safe, the shared umbrella, the song you both know, the best seat saved just for you.",
+      "{who}, someone wanted to tell you something, properly. Not in a card anyone could buy, but in pages full of you: your smile, your habits, the moments that made them fall for you.",
+      "That someone is {from}. And from everything they told us, they would choose you over and over again."
+    ],
+    "wish": "Happy Valentine's Day, {who}. You are so very loved."
+  }
+}

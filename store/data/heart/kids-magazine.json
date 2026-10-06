@@ -1,0 +1,95 @@
+{
+  "theme": "candy",
+  "fields": [
+    { "id": "s_laugh", "chapter": "What makes {first} giggle", "label": "What makes them laugh the most", "example": "Grown ups pretending to be grumpy dinosaurs", "max": 60 },
+    { "id": "s_kind", "chapter": "A time {first} was kind", "label": "A time they were really kind", "example": "Gave their last biscuit to a crying friend", "max": 60 },
+    { "id": "s_says", "chapter": "Our favourite thing {first} says", "label": "A funny word or thing they say", "example": "Calls spaghetti pasghetti", "max": 60 },
+    { "id": "s_promise", "label": "A promise to them", "example": "To build the biggest blanket fort ever", "max": 60 }
+  ],
+  "labels": { "age": "Age, and totally awesome", "expert": "Top expert in", "food": "Favourite food", "dream": "When I grow up", "fact": "A funny fact" },
+  "story": {
+    "legend": "A few more things about them",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely ones we have written for them.",
+    "kicker": "The inside scoop",
+    "title": "The Amazing World of {first}",
+    "hand": "And {who} is only just getting started!"
+  },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From the people who love you most",
+    "title": "Ten things we love about you",
+    "items": ["Your giant giggle", "Your amazing questions", "The way you dance", "Your squeezy hugs", "How kind you are to animals", "Your wild imagination", "How brave you are", "Your silly faces", "The way you share", "Your bedtime cuddles", "How you never give up", "Your brilliant drawings", "The stories you tell us", "How you make new friends", "Your sticky kisses", "How you sing in the bath", "The way you say sorry", "How curious you are", "Your very big ideas", "Simply being you"]
+  },
+  "timeline": {
+    "kicker": "Childhood through the ages",
+    "title": "A Short History of Fun",
+    "items": [
+      ["1837", "A garden for children", "Friedrich Froebel opened a school where little ones learned through play. It became the first kindergarten."],
+      ["1902", "Hello, teddy bear", "The first teddy bears were made, named after a president called Teddy who refused to shoot a captured bear."],
+      ["1958", "Click, the brick", "The LEGO brick we know today was patented, and children have been building towers ever since."],
+      ["1969", "A street full of friends", "Sesame Street first came on television, teaching letters, numbers and kindness with puppets."]
+    ],
+    "today": ["Today", "{who}", "Age {age}, expert in {expert}, and the best thing that ever happened to us."]
+  },
+  "letters": {
+    "kicker": "Big words for little people",
+    "title": "Clever Things People Have Said",
+    "items": [
+      ["There is no one alive who is Youer than You.", "Dr. Seuss, Happy Birthday to You!, 1959"],
+      ["Those who don't believe in magic will never find it.", "Roald Dahl, The Minpins"],
+      ["Imagination is more important than knowledge.", "Albert Einstein, 1929"],
+      ["All children, except one, grow up.", "J. M. Barrie, Peter Pan"]
+    ],
+    "hand": "Grow as slowly as you like, {who}. We are enjoying every minute."
+  },
+  "facts": {
+    "kicker": "Amazing but true",
+    "title": "Fun Facts to Amaze Your Friends",
+    "items": [
+      ["baby", "Bonus bones", "You were born with about 300 bones. Some join together as you grow, so grown ups have 206."],
+      ["heart", "A fist full of love", "Your heart is about the same size as your fist, and it grows bigger as you do."],
+      ["spark", "Super brain", "Your brain grows super fast when you are little. By age six it is nearly grown up sized."],
+      ["paw", "Three hearts", "An octopus has three hearts and blue blood. Imagine how many hugs it could give!"],
+      ["moon", "Footprints forever", "There is no wind on the Moon, so the astronauts' footprints could stay there for a very long time."],
+      ["clock", "Honey never goes off", "Honey found in ancient Egyptian tombs, thousands of years old, was still good to eat."]
+    ],
+    "hand": "Science is amazing. But the most amazing thing of all is you, {who}."
+  },
+  "world": {
+    "kicker": "A great big thank you",
+    "title": "Why the World Is Better With You in It",
+    "lead": "Because you were born, the world got:",
+    "items": ["The best giggle anyone has ever heard.", "A brand new expert in {expert}.", "Someone who asks the very best questions.", "Muddy footprints and great big hugs.", "Dance moves nobody else could invent.", "A brave explorer of the whole wide world.", "And our favourite person in the universe."],
+    "close": "The world is brighter, sillier and happier because of you, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "Pinky promise",
+    "title": "Our promises to you",
+    "items": ["To read you one more story.", "To answer all your why questions.", "To cheer the loudest, always.", "To keep every drawing you make.", "To love you more than all the stars."],
+    "hand": "Signed with love, your grown ups"
+  },
+  "awards": [["Best giggle in the house", "Voted by everyone"], ["Champion question asker", "Why? Why? Why?"], ["Bravest explorer", "Even in the dark"], ["Hug of the year", "The squeeziest ever"]],
+  "vouchers": [["Your favourite dinner", "You choose the menu"], ["Staying up late", "Fifteen whole minutes"], ["A trip to the park", "Swings first"], ["One giant cuddle", "Use it again and again"]],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "Superstar of the Year",
+  "certLine": "is officially, totally and brilliantly",
+  "perfume": "Top notes of bubblegum, muddy puddles and sunshine. A heart of pure sprinkles.",
+  "news": { "edition": "Superstar edition", "headline": "{who} is amazing again", "lead": "Reports are flooding in that {who}, aged {age}, has once again been brilliant, hilarious and the world's leading expert in {expert}.", "weather": "Weather: sunny, with a 100% chance of giggles" },
+  "passport": { "kicker": "Official documents", "head": "Passport to adventure", "nationality": "Citizen of Fun", "job": "Professional giggler", "stamps": ["The playground", "Dreamland", "The Moon"] },
+  "movie": { "sub": "The superstar", "soon": "Showing at bedtime, every night", "reviews": [["Funnier than a tickle fight", "The Daily Giggle"], ["A total superstar", "Everyone who knows them"], ["We want a sequel", "The Family Group Chat"]] },
+  "quizTitle": "The super quiz",
+  "quiz": [["How many hearts does an octopus have?", ["One", "Two", "Three"], 2], ["When were the first teddy bears made?", ["1702", "1902", "2002"], 1]],
+  "words": ["CANDY", "SMILE", "BRAVE", "DREAM", "PLAY", "STAR"],
+  "note": {
+    "title": "What we believe a child is",
+    "contents": "A note for you",
+    "paras": [
+      "We make magazines for a living, but some feel different. This was one of them.",
+      "We believe a child is a whole universe of wonder: big questions, muddy knees, brave hearts and the funniest ideas anyone has ever had.",
+      "{who}, the people who love you wanted you to have something special. A magazine all about you, because you are the star of the show.",
+      "One day, when you are all grown up, you can read this again and remember how loved you were, right from the very start."
+    ],
+    "wish": "Keep shining, {who}. The world needs you."
+  }
+}

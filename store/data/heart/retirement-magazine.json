@@ -1,0 +1,93 @@
+{
+  "theme": "garden",
+  "fields": [
+    { "id": "s_start", "chapter": "Where it all began", "label": "How they started out", "example": "As a nervous trainee in a borrowed tie", "max": 70 },
+    { "id": "s_taught", "chapter": "The best thing you taught us", "label": "The best thing they taught everyone", "example": "Always leave the kettle full for the next person", "max": 80 },
+    { "id": "s_saying", "chapter": "You always used to say", "label": "Something they always said", "example": "It will all look better after a cup of tea", "max": 70 },
+    { "id": "s_promise", "label": "A promise to them", "example": "To come round for tea every month", "max": 70 }
+  ],
+  "story": {
+    "legend": "A few more things about their career",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely ones we have written for them.",
+    "kicker": "The career so far",
+    "title": "The Making of a Legend",
+    "hand": "{years} years of stories, and we loved every one, {who}."
+  },
+  "labels": { "years": "Years of brilliance", "job": "The job", "known": "Famous for", "plans": "Big plans now", "miss": "What we will miss" },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we love about you",
+    "items": ["Your wise advice", "The way you made work fun", "Your legendary tea rounds", "How you always had time for us", "Your terrible puns", "The way you stayed calm", "How you remembered birthdays", "Your famous stories", "How you made new people welcome", "Your laugh down the corridor", "The way you fixed everything", "How you never took credit", "Your secret snack drawer", "The way you cheered us on", "How you made Mondays bearable", "Your kindness to everyone", "The way you knew all the answers", "How much you cared", "How proud you make us", "Simply being a legend"]
+  },
+  "timeline": {
+    "kicker": "Retirement through the ages",
+    "title": "A Short History of a Well Earned Rest",
+    "items": [
+      ["AD 6", "Rome says thank you", "Emperor Augustus set up a fund to reward soldiers who had finished their years of service."],
+      ["1889", "The first state pension", "Germany created one of the first national old age pensions, an idea the world soon followed."],
+      ["1909", "Pension day", "In Britain, people over 70 collected their first state pension from the post office."],
+      ["1935", "A promise for later", "The United States passed the Social Security Act, so a lifetime of work led to a safer rest."]
+    ],
+    "today": ["Today", "{who}", "After {years} years, a new chapter begins. Easily the best one yet."]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words for the Next Chapter",
+    "items": [
+      ["Come, my friends, 'Tis not too late to seek a newer world.", "Alfred, Lord Tennyson, Ulysses, 1842"],
+      ["How we spend our days is, of course, how we spend our lives.", "Annie Dillard, The Writing Life, 1989"],
+      ["Well done is better than well said.", "Benjamin Franklin, Poor Richard's Almanack"],
+      ["The best time to plant a tree was twenty years ago. The next best is now.", "A popular proverb"]
+    ],
+    "hand": "They all say it beautifully. We just say: thank you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of a Happy Retirement",
+    "items": [
+      ["leaf", "Green is good", "Time spent in gardens and green spaces is linked to lower stress and a brighter mood."],
+      ["pulse", "Never too late", "The brain keeps building new connections all through life. New hobbies keep it sharp."],
+      ["smile", "Happier with age", "Many studies find people tend to feel more content from their fifties onwards."],
+      ["heart", "Friends for life", "Strong friendships are linked to longer, healthier lives. Lunch dates are basically medicine."],
+      ["clock", "The early riser", "Body clocks shift with age, so many of us wake earlier. The lie in may start at six."],
+      ["tree", "Still growing", "Some bristlecone pine trees are over 4,000 years old. Still standing, still growing."]
+    ],
+    "hand": "Science can explain a lot. It still cannot explain how {who} made it all look so easy."
+  },
+  "world": {
+    "kicker": "A thank you from all of us",
+    "title": "Why the World Is Better With You in It",
+    "lead": "Because of you, the world got:",
+    "items": ["{years} years of hard work and good humour.", "Advice that was always worth listening to.", "A kettle that was never left empty.", "Stories we will be telling for years.", "Patience, even on the busiest days.", "A friend to everyone who walked in.", "And a legend we will never replace."],
+    "close": "The world is better because of you, {who}. Ours most of all."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises to you",
+    "items": ["To keep telling your famous stories.", "To visit, and bring the good biscuits.", "To never call you about work. Probably.", "To pass on everything you taught us.", "To miss you, always, and say so often."],
+    "hand": "Signed with love, {from}"
+  },
+  "awards": [["Lifetime achievement", "After {years} years"], ["Best tea maker", "Undefeated"], ["Calm in every storm", "Unanimous"], ["Most likely to be missed", "By a landslide"]],
+  "vouchers": [["One very long lie in", "No alarms, ever again"], ["A long lunch together", "No rushing back"], ["A day of doing nothing", "Officially approved"], ["A visit from the old team", "Biscuits included"]],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "An Officially Retired Legend",
+  "perfume": "Top notes of fresh tea and garden air. A heart of {years} years of kindness.",
+  "news": { "edition": "Retirement edition", "headline": "{who} clocks off for good", "lead": "Sources confirm that after {years} years, {who} has handed in the keys, and that nobody will ever fill those shoes.", "weather": "Weather: sunny, with a 100% chance of long lunches" },
+  "passport": { "kicker": "Official documents", "head": "Passport to the good life", "nationality": "Free, at last", "job": "Professional legend, retired", "stamps": ["The office", "{years} years", "Freedom"] },
+  "movie": { "sub": "One legend. {years} years. No regrets.", "soon": "The sequel starts on Monday", "reviews": [["We laughed, we cried, we wanted a sequel", "The Staff Room Times"], ["A career for the ages", "Everyone who worked with them"], ["Legendary from start to finish", "The Team Group Chat"]] },
+  "quiz": [["In which year did Germany create one of the first state pensions?", ["1789", "1889", "1989"], 1], ["How old are some bristlecone pine trees?", ["Over 40 years", "Over 400 years", "Over 4,000 years"], 2]],
+  "words": ["LEGEND", "FREEDOM", "THANKS", "GARDEN", "HOLIDAY", "RELAX"],
+  "note": {
+    "title": "What we believe a legend is",
+    "contents": "A note for you",
+    "paras": [
+      "We make magazines for a living, but some feel different. This was one of them.",
+      "We believe a career is not only the job title. It is the people you helped, the problems you quietly fixed, the kindness that made ordinary days better.",
+      "{who}, someone wanted you to have something special. Not a card anyone could buy, but pages full of you: your face, your stories, the years that made you a legend.",
+      "That someone is {from}. And from everything they told us, you will be missed more than you know."
+    ],
+    "wish": "Thank you, {who}. Enjoy every minute."
+  }
+}

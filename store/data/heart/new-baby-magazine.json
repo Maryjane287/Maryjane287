@@ -1,0 +1,95 @@
+{
+  "theme": "dawn",
+  "fields": [
+    { "id": "s_name", "chapter": "Why we chose your name", "label": "Why you chose their name", "example": "It means bright, and you lit up the room", "max": 80 },
+    { "id": "s_home", "chapter": "Your first night home", "label": "Their first night at home", "example": "Nobody slept, everybody smiled, the dog kept guard", "max": 80 },
+    { "id": "s_dream", "chapter": "What we dream for you", "label": "Something you dream for them", "example": "That you always know how loved you are", "max": 70 },
+    { "id": "s_promise", "label": "A promise to them", "example": "To read you a story every single night", "max": 70 }
+  ],
+  "labels": { "weight": "You weighed in at", "born": "Your birthday", "looks": "You look just like", "skill": "Your first talent", "loves": "You already love" },
+  "story": {
+    "legend": "A few more things about the little one",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely ones we have written for them.",
+    "kicker": "Your story begins",
+    "title": "The Very First Chapter",
+    "hand": "Keep this, {first}. One day you will want to know how it all began."
+  },
+  "picks": {
+    "legend": "Ten things you already love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we already love about you",
+    "items": ["Your tiny yawns", "The way you hold our finger", "Your sleepy little sighs", "That new baby smell", "Your serious thinking face", "How you stretch like a cat", "Your hiccups", "The way you fit in our arms", "Your tiny sneezes", "How you stare at the lights", "Your little grumbles", "The way you calm when we sing", "Your perfect tiny nails", "How you made us a family", "Your wriggly feet", "The way you watch our faces", "How quiet the house goes for you", "Your first proper smile", "The way everyone melts", "Simply being you"]
+  },
+  "timeline": {
+    "kicker": "Songs for little ones",
+    "title": "The Lullabies Sung Before You",
+    "items": [
+      ["1760s", "Mother Goose arrives", "One of the first books of nursery rhymes, Mother Goose's Melody, was printed in London for little ones."],
+      ["1806", "Twinkle, twinkle", "Jane Taylor published a poem called The Star. We still sing it to babies all over the world."],
+      ["1830", "Mary had a little lamb", "Sarah Josepha Hale wrote the rhyme about a lamb who followed Mary to school one day."],
+      ["1868", "The famous lullaby", "Johannes Brahms published his Wiegenlied, the gentle cradle song still hummed at bedtime."]
+    ],
+    "today": ["{born}", "{first} arrives", "A brand new song begins. And we will sing it to you for the rest of our lives."]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Babies",
+    "items": [
+      ["Every child begins the world again.", "Henry David Thoreau, Walden, 1854"],
+      ["A baby is God's opinion that the world should go on.", "Carl Sandburg"],
+      ["Every child comes with the message that God is not yet discouraged of man.", "Rabindranath Tagore, Stray Birds, 1916"],
+      ["It takes a village to raise a child.", "An African proverb"]
+    ],
+    "hand": "Our village is ready, {first}. And it already adores you."
+  },
+  "facts": {
+    "kicker": "Amazing from day one",
+    "title": "The Clever Science of Being New",
+    "items": [
+      ["eye", "Faces first", "From the very start, newborns love looking at faces more than almost anything else."],
+      ["heart", "Voices you knew", "Newborns already know the voices they heard most often before they were born."],
+      ["camera", "Just close enough", "New babies see best at about the distance from a cuddling arm to a loving face."],
+      ["smile", "The first real smile", "Real smiles usually arrive at around six to eight weeks. Worth every sleepy night."],
+      ["spark", "Little copycats", "Scientists have seen very young babies copy faces, like poking a tongue out back at a grown up."],
+      ["globe", "Every language", "Tiny babies can hear the sounds of every language, then tune in to their family's own."]
+    ],
+    "hand": "You were born clever, {first}. You were also born loved."
+  },
+  "world": {
+    "kicker": "A welcome from all of us",
+    "title": "Why the World Is Better With You in It",
+    "lead": "The day you arrived, the world got:",
+    "items": ["A brand new laugh it had never heard.", "Someone new to sing to at bedtime.", "A whole family who fell in love at once.", "Tiny socks, everywhere, forever.", "A reason for everyone to call home.", "A future full of things only you will do.", "And the sweetest little person we know."],
+    "close": "The world got better on {born}, {first}. Ours most of all."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises to you",
+    "items": ["To sing to you, even badly.", "To hold your hand until you let go.", "To keep every drawing you ever make.", "To cheer for you at everything.", "To love you, always, whatever you become."],
+    "hand": "Signed with love, {from}"
+  },
+  "awards": [["Newest family member", "Instantly famous"], ["Best yawn of the year", "By a landslide"], ["Champion cuddler", "Unbeaten"], ["Most loved person", "Unanimous"]],
+  "vouchers": [["One bedtime story", "Any book, any voice"], ["A lifetime of cuddles", "Never expires"], ["One song at bedtime", "Lullaby of your choice"], ["A big family day out", "When you are a bit bigger"]],
+  "vouchersTitle": "Vouchers for {first}",
+  "cert": "The Most Wonderful Arrival",
+  "certLine": "is officially, wonderfully and forever",
+  "perfume": "Top notes of warm milk and fresh laundry. A heart of brand new wonder.",
+  "news": { "edition": "Arrival edition", "headline": "{first} arrives, family melts", "lead": "Sources close to the family confirm that {first}, weighing in at {weight}, has taken charge of the whole household within hours.", "weather": "Weather: soft and sleepy, with cuddles all day" },
+  "passport": { "kicker": "Official documents", "head": "Passport to a whole life of adventures", "nationality": "Loved, everywhere", "job": "Chief cuddle receiver", "stamps": ["Our arms", "First night home", "Everywhere next"] },
+  "movie": { "sub": "The smallest star we ever met", "soon": "A lifelong story, starting now", "reviews": [["We cried before the opening scene", "The Family Group Chat"], ["Tiny, but a total showstopper", "The Daily Cuddle"], ["Already a classic", "Everyone who has met them"]] },
+  "quizTitle": "How much do you know about babies?",
+  "quiz": [["When do babies usually give their first real smile?", ["At one day old", "At six to eight weeks", "At two years old"], 1], ["Which famous rhyme began as a poem called The Star?", ["Twinkle, twinkle", "Humpty Dumpty", "Baa, baa, black sheep"], 0]],
+  "words": ["BABY", "CUDDLE", "LULLABY", "SMILE", "TINY", "WELCOME"],
+  "note": {
+    "title": "What we believe a new baby is",
+    "contents": "A note for you",
+    "paras": [
+      "We make magazines for a living, but this one was for someone very new.",
+      "We believe a new baby is the start of a thousand stories. The first smile, the first word, the first wobbly step. All of it still ahead, all of it already loved.",
+      "{first}, before you could even hold your head up, someone wanted the whole world to know you had arrived. They wanted you to read this one day and know.",
+      "That someone is {from}. From everything they told us, you were loved before you were even here."
+    ],
+    "wish": "Welcome to the world, {first}. It is so glad you came."
+  }
+}
