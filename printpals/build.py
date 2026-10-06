@@ -13,7 +13,7 @@ from usenglish import us_text, us_js, us_html, us_fix_js
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '61'
+VERSION = '62'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -3393,7 +3393,7 @@ JS_FILES = ['glyphs', 'sheet', 'tools', 'tools2', 'tools3', 'tools4', 'cursive',
 CONTACT = 'graceandloannesofficial@gmail.com'
 # Stripe customer portal: parents manage, switch or cancel their Plus subscription here.
 # The owner's Pinterest Tag ID (Pinterest Ads > Conversions > Pinterest Tag). Empty = no tag, no cookie banner.
-PINTEREST_TAG = ''
+PINTEREST_TAG = '2612359097249'
 PINTEREST_PROFILE = 'https://www.pinterest.com/printpalskids/'
 STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'
 
@@ -3536,7 +3536,7 @@ def tool_page(t):
 <main id="main">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><a href="/">PrintPals</a> › <a href="/#{t['cat']}">{html.escape(cat_name)}</a> › {html.escape(t['h1'])}</nav>
-<div class="tool-head"><h1>{html.escape(t['h1'])}</h1><p>{html.escape(t['lead'])}</p><div class="tags">{(f'<a class="tag plus" href="/plus">🍎 Teacher plan: $59 a year, 7 days free</a>' if price == '59.00' else '<a class="tag plus" href="/plus">✨ PrintPals Plus: $4.99 a month or $39 a year, 7 days free</a>') if price else ''}<span class="tag">👧 {ages_text(t['id'])}</span><span class="tag">{'✓ 7 days free, no card' if t.get('plus') else '✓ Free, no sign up'}</span><span class="tag">✓ A4 and US Letter</span>{pin_btn(t)}</div><a class="jump" href="#preview">See your worksheet ↓</a></div>{'<!--CLUB-->' if t['id'] == 'kidsclub' else ''}
+<div class="tool-head"><h1>{html.escape(t['h1'])}</h1><p>{html.escape(t['lead'])}</p><div class="tags">{(f'<a class="tag plus" href="/plus">🍎 Teacher plan: $59 a year, 7 days free</a>' if price == '59.00' else '<a class="tag plus" href="/plus">✨ PrintPals Plus: $4.99 a month or $39 a year, 7 days free</a>') if price else ''}<span class="tag">👧 {ages_text(t['id'])}</span><span class="tag">{'✓ 7 days free, no card' if t.get('plus') else ('✓ Free, just your email' if t['id'] == 'kidsclub' else '✓ Free, no sign up')}</span><span class="tag">✓ A4 and US Letter</span>{pin_btn(t)}</div><a class="jump" href="#preview">See your worksheet ↓</a></div>{'<!--CLUB-->' if t['id'] == 'kidsclub' else ''}
 <div class="maker">
 <form class="panel" id="maker" data-tool="{t['id']}"{level_attr}{(' data-plus="teacher"' if t['id'] == 'classpack' or t.get('teacher') else ' data-plus="plus"') if t.get('plus') else ''} autocomplete="off">
 {level_btns}
@@ -3812,7 +3812,7 @@ PIN_PRIVACY = ('''<h2>The Pinterest tag (only if you say yes)</h2>
 PRIVACY = f'''<h1>Privacy</h1>
 <p class="lead-p">Short version: we do not collect what you type. Worksheets are made on your own device. If you buy PrintPals Plus, we keep only what we need to give you your subscription.</p>
 <h2>What we collect</h2>
-<p>Nothing that you type. Names, word lists, messages and photos you use in a worksheet are processed inside your web browser and are never sent to us. There are no accounts and no sign up forms.</p>{PIN_PRIVACY}
+<p>Nothing that you type. Names, word lists, messages and photos you use in a worksheet are processed inside your web browser and are never sent to us. There are no accounts. The only form is the Kids Club email box, which is optional (see below).</p>{PIN_PRIVACY}
 <h2>If you join the Kids Club</h2>
 <p>When you join the PrintPals Kids Club, we keep your email address so we can send the club emails: a free pack each month and news about new packs. We also note whether you chose UK or US English and which page you joined from. Your email is stored securely in Google Firebase, and in the email service we use to send the club emails. We never sell it or share it with anyone else. Every email has a link to leave the club, or email us at {CONTACT} and we will delete it.</p>
 <h2>What stays on your device</h2>

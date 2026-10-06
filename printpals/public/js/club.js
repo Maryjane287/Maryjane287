@@ -12,6 +12,7 @@
 
   function done(form, msg, already) {
     remember();
+    if (!already && window.pintrk) window.pintrk('track', 'lead', { lead_type: 'Kids Club' });
     var here = document.querySelector('#maker[data-tool="kidsclub"]');
     form.classList.add('club-done');
     msg.innerHTML = (already ? 'You are already in the club. Welcome back! ' : '🎉 Welcome to the PrintPals Kids Club! ') +
