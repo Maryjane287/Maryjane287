@@ -13,7 +13,7 @@ from usenglish import us_text, us_js, us_html, us_fix_js
 
 SITE = 'https://printpals.web.app'
 OUT = os.path.join(os.path.dirname(__file__), 'public')
-VERSION = '60'
+VERSION = '61'
 
 LOGO = '''<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#ff6b9e"/></linearGradient></defs>
 <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg)"/><rect x="12" y="9" width="24" height="30" rx="4" fill="#fff"/>
@@ -3394,6 +3394,7 @@ CONTACT = 'graceandloannesofficial@gmail.com'
 # Stripe customer portal: parents manage, switch or cancel their Plus subscription here.
 # The owner's Pinterest Tag ID (Pinterest Ads > Conversions > Pinterest Tag). Empty = no tag, no cookie banner.
 PINTEREST_TAG = ''
+PINTEREST_PROFILE = 'https://www.pinterest.com/printpalskids/'
 STRIPE_PORTAL = 'https://billing.stripe.com/p/login/14A00igGPbu309ygcW1kA00'
 
 
@@ -3452,6 +3453,7 @@ def top(active=''):
 FOOT = '''<footer><div class="wrap"><div class="foot-brand"><div class="brand" style="font-size:24px;color:#fff;gap:0">Print<b style="color:#ff8a8a">Pals</b></div>
 <p style="max-width:420px;margin-top:8px">Free printable worksheets and ready-made packs for children, made in seconds. Everything is made inside your own browser: nothing you type is sent to us or stored.</p>
 <p class="foot-links"><a href="/plus">PrintPals Plus</a><a href="/my-shelf">My shelf</a><a href="/help">Help</a><a href="/refunds">Refunds and delivery</a><a href="/about">About us</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a>''' + ('<a href="#" data-action="cookies">Cookie choices</a>' if PINTEREST_TAG else '') + '''<a href="mailto:''' + CONTACT + '''">Contact</a></p>
+<p style="margin-top:14px"><a class="pin-follow" href="' + PINTEREST_PROFILE + '" target="_blank" rel="noopener">📌 Follow PrintPals on Pinterest</a></p>
 <p style="margin-top:14px">© PrintPals, by Grace and Loannes Ltd. For home and classroom use.</p></div>
 <div class="foot-cols">''' + ''.join(f'<div><h4>{v}</h4>' + ''.join(f'<a href="/{t["slug"]}">{t["nav"]}</a>' for t in [x for x in TOOLS if x['cat'] == k][:6]) + f'<a class="foot-all" href="/#{k}">See all {sum(1 for x in TOOLS if x["cat"] == k)} →</a></div>' for k, v in CATS) + '''</div></div></footer>'''
 
@@ -3595,7 +3597,7 @@ def home():
     ld = {'@context': 'https://schema.org', '@graph': [
           {'@type': 'WebSite', 'name': 'PrintPals', 'url': SITE + '/',
            'description': 'Free printable worksheets and ready-made learning packs for children aged 2 to 10: a personalised week in one click, tracing, reading, maths, puzzles, crafts and charts.'},
-          {'@type': 'Organization', 'name': 'PrintPals', 'legalName': 'Grace and Loannes Ltd', 'url': SITE + '/', 'logo': SITE + '/img/icon-512.png', 'email': CONTACT,
+          {'@type': 'Organization', 'name': 'PrintPals', 'legalName': 'Grace and Loannes Ltd', 'url': SITE + '/', 'logo': SITE + '/img/icon-512.png', 'email': CONTACT, 'sameAs': [PINTEREST_PROFILE],
            'contactPoint': {'@type': 'ContactPoint', 'contactType': 'customer support', 'email': CONTACT}}]}
     shapes = ''.join(f'<span style="width:{s}px;height:{s}px;left:{x}%;top:{y}%;background:{c};animation-delay:{d}s"></span>'
                      for s, x, y, c, d in [(90, 6, 18, '#ffe08a', 0), (60, 88, 12, '#bfe8ff', 1.5), (46, 80, 70, '#ffc6d9', 3), (70, 12, 72, '#c9f2e6', 4.5)])
@@ -3951,7 +3953,8 @@ document.querySelectorAll('[data-action="cookies"]').forEach(function(x){x.addEv
 def club_box(us):
     privacy = '/us/privacy' if us else '/privacy'
     return (f'<section class="club no-print" aria-label="PrintPals Kids Club"><div class="wrap club-in"><div class="club-text"><b>💌 Join the PrintPals Kids Club</b>'
-            f'<span>A free welcome pack right now, then a new free pack every month by email. For grown-ups. Leave any time.</span></div>'
+            f'<span>A free welcome pack right now, then a new free pack every month by email. For grown-ups. Leave any time.</span>'
+            f'<a class="club-pin" href="{PINTEREST_PROFILE}" target="_blank" rel="noopener">📌 Follow us on Pinterest for new ideas every day</a></div>'
             f'<form class="club-form" novalidate><div class="club-row"><input type="email" name="clubemail" placeholder="Your email address" autocomplete="email" aria-label="Your email address" maxlength="254">'
             f'<button type="submit" class="btn">Join free</button></div>'
             f'<label class="club-ok"><input type="checkbox" name="clubconsent"> Yes, email me the free monthly pack and news about new packs. I can leave any time. <a href="{privacy}">Privacy</a></label>'

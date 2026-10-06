@@ -375,3 +375,6 @@ footer .foot-all { color: #ffb3c7 !important; font-weight: 800; margin-top: 4px;
 .club-in > * { min-width: 0; }
 @media (max-width: 760px) { .club-in { grid-template-columns: 1fr; } .club-text b { font-size: 22px; } .club-row { flex-direction: column; } .club-row .btn { width: 100%; } }
 @media print { .club { display: none !important; } }
+.pin-follow { display: inline-block; background: #e60023; color: #fff !important; font-weight: 800; padding: 9px 16px; border-radius: 999px; text-decoration: none; }
+.pin-follow:hover { background: #c8001e; }
+.club-pin { display: inline-block; margin-top: 8px; font-weight: 700; color: #c2185b; }
