@@ -30,6 +30,8 @@ if (!mags.some(m => m.slug === state.slug)) state.slug = mags[0].slug;
 // A private magazine (like the birthday love magazine) only opens from its own link.
 if (mags.find(m => m.slug === state.slug).hidden && (params.get('m') !== state.slug || !params.get('code'))) state.slug = mags.find(m => !m.hidden).slug;
 const mag = () => mags.find(m => m.slug === state.slug);
+// A private gift link shows only its own magazine: no switching to the others.
+if (mag().hidden) { const pk = document.querySelector('.pick'); pk.style.display = 'none'; pk.previousElementSibling.style.display = 'none'; }
 
 if (params.get('t')) {
   const r = form.querySelector(`input[name="tier"][value="${CSS.escape(params.get('t'))}"]`);
