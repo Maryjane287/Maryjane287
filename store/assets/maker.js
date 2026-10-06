@@ -2,10 +2,14 @@
 // the cover update live. Photos stay in the browser until the order is placed.
 import { renderCover, renderPages, renderFullMagazine, renderCardSet, PALETTES, DESIGNS, designsFor, baseDesign, esc } from './covers.js';
 import { renderAndUpload, finishOrder } from './order-pdf.js';
+import { LOVE_PICKS } from './love.js';
 
 const mags = JSON.parse(document.getElementById('mags').textContent);
 const checkout = JSON.parse(document.getElementById('site-checkout').textContent);
 const params = new URLSearchParams(location.search);
+// Private gift links (a code in the link) stop working after their end date.
+const giftEnds = Date.parse(JSON.parse(document.getElementById('gift-expires')?.textContent || '""'));
+if (params.get('code') && giftEnds && Date.now() > giftEnds) { params.delete('code'); params.delete('m'); }
 const $ = s => document.querySelector(s);
 const form = $('#order');
 
@@ -23,7 +27,11 @@ const state = {
   tab: 0,
 };
 if (!mags.some(m => m.slug === state.slug)) state.slug = mags[0].slug;
+// A private magazine (like the birthday love magazine) only opens from its own link.
+if (mags.find(m => m.slug === state.slug).hidden && (params.get('m') !== state.slug || !params.get('code'))) state.slug = mags.find(m => !m.hidden).slug;
 const mag = () => mags.find(m => m.slug === state.slug);
+// A private gift link shows only its own magazine: no switching to the others.
+if (mag().hidden) { const pk = document.querySelector('.pick'); pk.style.display = 'none'; pk.previousElementSibling.style.display = 'none'; }
 
 if (params.get('t')) {
   const r = form.querySelector(`input[name="tier"][value="${CSS.escape(params.get('t'))}"]`);
@@ -46,6 +54,7 @@ function choose(slug) {
   renderPalette();
   renderDesigns();
   renderFields();
+  checkNotes(true);
   renderTabs();
   update();
 }
@@ -79,9 +88,15 @@ const FUN = [
   ['x_places', 'Places they love', 'Stamps for their passport, up to three', 'Paris, the seaside, Grandma\'s kitchen', 100],
   ['x_job', 'Their job title, the fun version', 'Printed on their passport', 'Chief hug officer', 40],
 ];
+// "Ten things I love about you": he taps the ones that are true instead of typing.
+function lovePicks() {
+  const on = String(state.values.x_loves || '').split('\n').filter(Boolean);
+  return `<fieldset class="love-picks wide"><legend>Ten things you love about her <small>(tap up to ten)</small></legend><p class="small">Tap the ones that are true. Any you leave out, we fill with lovely ones for you.</p><div class="pick-chips">${LOVE_PICKS.map(x => `<button type="button" class="chip" data-love="${esc(x)}" aria-pressed="${on.includes(x)}">${esc(x)}</button>`).join('')}</div><small class="pick-count">${on.length} of 10 chosen</small></fieldset>`;
+}
+
 function funPages(m) {
   const gentle = m.slug === 'pet-memorial-magazine';
-  const rows = FUN.filter(r => !(gentle && r[6])).map(([id, label, hint, eg, max, area]) => {
+  const rows = FUN.filter(r => !(gentle && r[6]) && !(m.love && r[0] === 'x_reasons')).map(([id, label, hint, eg, max, area]) => {
     const val = esc(state.values[id] || '');
     const common = `data-f="${id}" maxlength="${max}" placeholder="${esc(eg)}"`;
     return `<label class="field${area || max > 60 ? ' wide' : ''}"><span>${esc(label)} <small>${esc(hint)}</small></span>${area ? `<textarea rows="4" ${common}>${val}</textarea>` : `<input type="text" ${common} value="${val}">`}</label>`;
@@ -93,15 +108,92 @@ function renderFields() {
   const m = mag();
   const text = m.fields.filter(f => f.type !== 'photo');
   const photos = m.fields.filter(f => f.type === 'photo');
-  $('#fields').innerHTML = text.map((f, i) => {
+  const field = f => {
     const val = esc(state.values[f.id] || '');
-    const common = `name="q_${f.id}" data-f="${f.id}" maxlength="${f.max || 200}" placeholder="${esc(f.example)}" required`;
+    const common = `name="q_${f.id}" data-f="${f.id}" maxlength="${f.max || 200}" placeholder="${esc(f.example)}"${f.optional ? '' : ' required'}`;
     const input = f.type === 'textarea' ? `<textarea ${common}>${val}</textarea>` : `<input type="text" ${common} value="${val}">`;
     return `<label class="field${f.type === 'textarea' || (f.max || 0) > 60 ? ' wide' : ''}"><span>${esc(f.label)}</span>${input}${f.type === 'textarea' ? `<small class="count" data-count="${f.id}"></small>` : ''}</label>`;
-  }).join('') + funPages(m) + `<fieldset class="friend-notes wide"><legend>Little notes from family and friends <small>(optional)</small></legend><p class="small">Ask a few people who love them for one sweet line each. They all appear together on a special page in the magazine, each one signed with their name.</p>${[1, 2, 3, 4].map(i => `<div class="friend-note"><input type="text" data-f="note${i}_from" maxlength="30" placeholder="${['Grandma', 'Uncle Sam', 'Emma', 'Leo'][i - 1]}" aria-label="Note ${i}: who it is from" value="${esc(state.values[`note${i}_from`] || '')}"><input type="text" data-f="note${i}_msg" maxlength="110" placeholder="${['You make every room brighter.', 'Still the best dancer I know!', 'Here is to many more adventures together.', 'Love you to the moon and back.'][i - 1]}" aria-label="Note ${i}: their message" value="${esc(state.values[`note${i}_msg`] || '')}"></div>`).join('')}</fieldset><div class="photos">${photos.map(f => `
+  };
+  const extra = text.filter(f => f.optional);
+  // Optional questions sit in their own box: skip any, and that page swaps to one we write.
+  const story = extra.length ? `<fieldset class="fun-pages wide"><legend>Your love story <small>(optional)</small></legend><p class="small">Only if you have a minute. Skip any of these and we fill those pages with beautiful ones we have written for her.</p><div class="fun-grid">${extra.map(field).join('')}</div></fieldset>` : '';
+  $('#fields').innerHTML = text.filter(f => !f.optional).map(field).join('') + (m.love ? lovePicks() : '') + story + funPages(m) + `<fieldset class="friend-notes wide"><legend>Little notes from family and friends <small>(optional)</small></legend><p class="small">Ask a few people who love them for one sweet line each. They all appear together on a special page in the magazine, each one signed with their name.</p>${familyInvite()}${[1, 2, 3, 4].map(i => `<div class="friend-note"><input type="text" data-f="note${i}_from" maxlength="30" placeholder="${['Grandma', 'Uncle Sam', 'Emma', 'Leo'][i - 1]}" aria-label="Note ${i}: who it is from" value="${esc(state.values[`note${i}_from`] || '')}"><input type="text" data-f="note${i}_msg" maxlength="110" placeholder="${['You make every room brighter.', 'Still the best dancer I know!', 'Here is to many more adventures together.', 'Love you to the moon and back.'][i - 1]}" aria-label="Note ${i}: their message" value="${esc(state.values[`note${i}_msg`] || '')}"></div>`).join('')}</fieldset><div class="photos">${photos.map(f => `
     <label class="photo-drop"><span><b>+</b>${esc(f.label)}</span><input type="file" name="${f.id}" data-photo="${f.id}" accept="image/*"></label>`).join('')}</div>`;
   updateCounts();
 }
+
+// Family notes: a private link the buyer sends on WhatsApp or by email. Each
+// person writes their own line from their phone, and it drops into a free
+// note space above. Nobody without the link can see or add notes.
+function familyInvite() {
+  const board = state.values.notesBoard;
+  return `<div class="fam-invite"><p class="fam-head"><b>Let them write it themselves</b>Send a link to Grandma, an aunt or a friend. They type their note on their own phone and it appears here, signed with their name.</p>${board
+    ? `<div class="fam-link"><input type="text" readonly value="${esc(inviteLink())}" aria-label="Link for family"><button type="button" class="btn btn-small" data-fam="copy">Copy link</button><a class="btn btn-small btn-ghost" data-fam="wa" href="${esc(waLink())}" target="_blank" rel="noopener">Send on WhatsApp</a></div><p class="fam-status" id="fam-status" aria-live="polite">Waiting for notes. They drop into an empty space below as they arrive.</p><button type="button" class="link-btn" data-fam="check">Check for new notes</button>`
+    : '<button type="button" class="btn btn-small" data-fam="make">Get a link for family</button>'}</div>`;
+}
+const whoFor = () => { const m = mag(); return String(state.values[m.fields[0].id] || '').trim() || 'someone special'; };
+function inviteLink() {
+  const q = new URLSearchParams({ b: state.values.notesBoard, w: whoFor(), f: String(state.values.from || state.values.fromWho || '').trim(), m: mag().title });
+  return `${location.origin}/note/?${q}`;
+}
+const waLink = () => `https://wa.me/?text=${encodeURIComponent(`We're making a magazine for ${whoFor()} and it wouldn't be complete without you. Could you write one little line for them? It only takes a minute: ${inviteLink()}`)}`;
+function newBoard() {
+  const a = new Uint8Array(12);
+  (window.crypto || window.msCrypto).getRandomValues(a);
+  return Array.from(a, x => x.toString(36).padStart(2, '0')).join('').slice(0, 24);
+}
+var famBusy = false;
+async function checkNotes(quiet) {
+  const board = state.values.notesBoard;
+  const status = $('#fam-status');
+  if (!board || famBusy) return;
+  famBusy = true;
+  try {
+    const { notes = [] } = await (await fetch(`/api/notes?b=${board}`)).json();
+    const used = new Set(state.values.notesUsed || []);
+    let added = 0;
+    for (const n of notes.filter(n => !used.has(n.id))) {
+      const i = [1, 2, 3, 4].find(k => !String(state.values[`note${k}_msg`] || '').trim());
+      if (!i) break;
+      state.values[`note${i}_from`] = n.from; state.values[`note${i}_msg`] = n.msg;
+      const a = $(`[data-f="note${i}_from"]`), b = $(`[data-f="note${i}_msg"]`);
+      if (a) a.value = n.from; if (b) b.value = n.msg;
+      used.add(n.id); added++;
+    }
+    state.values.notesUsed = [...used];
+    store.set(`maker:${state.slug}`, state.values);
+    const waiting = notes.filter(n => !used.has(n.id)).length;
+    if (status) status.textContent = !notes.length
+      ? (quiet ? 'Waiting for notes. They drop into an empty space below as they arrive.' : 'No notes yet. Once someone writes one, it appears here.')
+      : `${notes.length} ${notes.length === 1 ? 'note has' : 'notes have'} arrived, from ${notes.map(n => n.from).join(', ')}.${added ? ` ${added} just added below.` : ''}${waiting ? ` ${waiting} more ${waiting === 1 ? 'is' : 'are'} waiting: clear a space below and tap Check for new notes.` : ''}`;
+  } catch { if (status && !quiet) status.textContent = 'Could not check just now. Please try again in a moment.'; }
+  famBusy = false;
+}
+$('#fields').addEventListener('click', async e => {
+  const b = e.target.closest('[data-fam]');
+  if (!b) return;
+  const act = b.dataset.fam;
+  if (act === 'make') {
+    state.values.notesBoard = newBoard();
+    store.set(`maker:${state.slug}`, state.values);
+    b.closest('.fam-invite').outerHTML = familyInvite();
+  } else if (act === 'copy') {
+    const input = b.parentElement.querySelector('input');
+    try { await navigator.clipboard.writeText(input.value); b.textContent = 'Copied'; } catch { input.select(); document.execCommand && document.execCommand('copy'); b.textContent = 'Copied'; }
+    setTimeout(() => { b.textContent = 'Copy link'; }, 2000);
+  } else if (act === 'check') checkNotes(false);
+});
+// The link carries the names, so refresh it when those answers change.
+function refreshInvite() {
+  const box = $('.fam-invite');
+  if (!box || !state.values.notesBoard) return;
+  const input = box.querySelector('input'), wa = box.querySelector('[data-fam="wa"]');
+  if (input) input.value = inviteLink();
+  if (wa) wa.href = waLink();
+}
+// Pick up new notes whenever the buyer comes back to the page.
+document.addEventListener('visibilitychange', () => { if (!document.hidden) checkNotes(true); });
+setInterval(() => { if (!document.hidden) checkNotes(true); }, 60000);
 
 function renderTabs() {
   const labels = ['Cover', 'Page 2', 'Page 3', 'Page 4'];
@@ -186,7 +278,20 @@ $('#fields').addEventListener('input', e => {
   state.values[f] = e.target.value;
   store.set(`maker:${state.slug}`, state.values);
   updateCounts();
+  refreshInvite();
   update();
+});
+
+$('#fields').addEventListener('click', e => {
+  const b = e.target.closest('[data-love]');
+  if (!b) return;
+  let on = String(state.values.x_loves || '').split('\n').filter(Boolean);
+  if (on.includes(b.dataset.love)) on = on.filter(x => x !== b.dataset.love);
+  else if (on.length < 10) on.push(b.dataset.love);
+  state.values.x_loves = on.join('\n');
+  store.set(`maker:${state.slug}`, state.values);
+  document.querySelectorAll('[data-love]').forEach(x => x.setAttribute('aria-pressed', String(on.includes(x.dataset.love))));
+  $('.pick-count').textContent = `${on.length} of 10 chosen`;
 });
 
 // Typing in a field jumps the preview to the page that shows it.
@@ -306,6 +411,8 @@ form.addEventListener('submit', async e => {
       url.searchParams.set(url.hostname.endsWith('lemonsqueezy.com') ? 'checkout[email]' : 'prefilled_email', form.email.value);
       // Lets Lemon Squeezy tell us which magazine was paid for, to unlock the download.
       if (made?.id && url.hostname.endsWith('lemonsqueezy.com')) url.searchParams.set('checkout[custom][order_id]', made.id);
+      // A discount code in the maker link (?code=...) is filled in at checkout; Lemon Squeezy checks it.
+      if (params.get('code') && url.hostname.endsWith('lemonsqueezy.com')) url.searchParams.set('checkout[discount_code]', params.get('code').trim().slice(0, 40));
       location.href = url.href;
     } else {
       location.href = new URL(form.getAttribute('action'), location.href).href;
@@ -317,6 +424,9 @@ form.addEventListener('submit', async e => {
 });
 
 choose(state.slug);
+
+// A gift link carries a code: say so, so the price shown never worries anyone.
+if (params.get('code')) $('#pay-note')?.insertAdjacentHTML('afterend', `<p class="small code-note">Your gift code <b>${esc(params.get('code').trim().slice(0, 40))}</b> is added at checkout, so the total comes to nothing.</p>`);
 
 // Flip through the whole finished magazine, with their answers, before paying.
 const allPages = $('#all-pages');

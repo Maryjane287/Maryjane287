@@ -364,15 +364,15 @@
 .pg-last { background: color-mix(in srgb, var(--bg) 18%, #fffaf2); }
 
 /* Showstopper pages: the fragrance ad, the movie poster and the collector's card */
-.pg-ad { background: radial-gradient(circle at 50% 38%, color-mix(in srgb, var(--accent) 55%, #fff) 0, var(--bg) 42%, color-mix(in srgb, var(--bg) 55%, #000) 100%); color: #fff; text-align: center; }
+.pg-ad { background: radial-gradient(circle at 50% 38%, color-mix(in srgb, var(--accent) 55%, #fff) 0, color-mix(in srgb, var(--bg) 62%, #14111f) 42%, color-mix(in srgb, var(--bg) 40%, #000) 100%); color: #fff; text-align: center; }
 .pg-ad::before { display: none; }
 .ad-glow { position: absolute; left: 50%; top: 40%; width: 90cqw; height: 90cqw; translate: -50% -50%; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,.35), transparent 60%); }
 .ad-kicker { position: relative; margin: 9cqw 0 0; font-size: 2.8cqw; font-weight: 800; letter-spacing: .4em; text-transform: uppercase; }
 .ad-bottle { position: relative; margin: 7cqw auto 0; width: 38cqw; display: grid; justify-items: center; filter: drop-shadow(0 3cqw 5cqw rgba(0,0,0,.35)); }
 .ad-cap { display: block; width: 14cqw; height: 11cqw; border-radius: 1.4cqw 1.4cqw .6cqw .6cqw; background: linear-gradient(90deg, #b8912f, #ffe9a8 45%, #a57c1f); }
 .ad-glass { display: grid; place-content: center; gap: 1.4cqw; width: 38cqw; height: 46cqw; margin-top: -.4cqw; border-radius: 5cqw; background: linear-gradient(120deg, rgba(255,255,255,.75), rgba(255,255,255,.25) 40%, color-mix(in srgb, var(--accent) 60%, transparent)); border: .6cqw solid rgba(255,255,255,.7); }
-.ad-glass span { font: 400 6.4cqw/1 'Anton', Impact, sans-serif; color: var(--ink); letter-spacing: .06em; padding: 1.6cqw 3cqw; background: rgba(255,255,255,.85); }
-.ad-glass small { font: 700 2.2cqw/1 'Outfit', sans-serif; letter-spacing: .3em; text-transform: uppercase; color: var(--ink); }
+.ad-glass span { font: 400 6.4cqw/1 'Anton', Impact, sans-serif; color: #1d1a2f; letter-spacing: .06em; padding: 1.6cqw 3cqw; background: rgba(255,255,255,.85); }
+.ad-glass small { font: 700 2.2cqw/1 'Outfit', sans-serif; letter-spacing: .3em; text-transform: uppercase; color: #1d1a2f; }
 .ad-name { position: relative; margin: 8cqw 0 2cqw; font-family: 'DM Serif Display', serif; font-style: italic; font-weight: 400; font-size: 11cqw; line-height: 1; }
 .ad-line { position: relative; margin: 0 8cqw 3cqw; font-family: 'DM Serif Display', serif; font-size: 5cqw; }
 .ad-notes { position: relative; margin: 0 12cqw; font-size: 3cqw; letter-spacing: .06em; opacity: .85; }
@@ -552,7 +552,7 @@
 .cs-tag { position: relative; height: 40cqw; border-radius: 2cqw; clip-path: polygon(20% 0, 80% 0, 100% 12%, 100% 100%, 0 100%, 0 12%); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 8cqw 2.4cqw 3cqw; border: .4cqw dashed rgba(0,0,0,.18); }
 .cs-tag0 { background: var(--bg); color: var(--ink); }
 .cs-tag1 { background: var(--accent); color: var(--ink); }
-.cs-tag2 { background: var(--ink); color: var(--pop); }
+.cs-tag2 { background: var(--ink); color: var(--bg); }
 .cs-hole { position: absolute; top: 4cqw; left: 50%; width: 3.6cqw; height: 3.6cqw; margin-left: -1.8cqw; border-radius: 50%; background: #fff; box-shadow: inset 0 0 0 .5cqw rgba(0,0,0,.15); }
 .cs-tag small { font-family: 'Caveat', cursive; font-size: 5cqw; line-height: 1; }
 .cs-tag b { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 5.4cqw; line-height: 1.02; margin-top: 1cqw; overflow-wrap: break-word; hyphens: manual; }
@@ -563,3 +563,107 @@
 .cs-mark-name { font-family: 'Anton', Impact, sans-serif; line-height: 1; white-space: nowrap; }
 .cs-mark-q { font-family: 'Caveat', cursive; font-size: 3.8cqw; line-height: 1; text-align: center; overflow: hidden; max-height: 8cqw; }
 .cs-mark-foot { font-size: 1.9cqw; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; opacity: .75; white-space: nowrap; }
+
+/* Christmas: soft snowflakes drifting over the cover */
+.cv-snow { position: absolute; inset: 0; pointer-events: none; z-index: 1; color: #fff; }
+.cv-snow i { position: absolute; display: block; aspect-ratio: 1; filter: drop-shadow(0 0 0.4cqw rgba(0,0,0,.15)); }
+.cv-snow svg { display: block; width: 100%; height: 100%; }
+.cv-minimal .cv-snow, .cv-scrapbook .cv-snow { color: #c8102e; }
+
+/* Love pages ("Happy Birthday, My Love"): warm jewel colours and gold, never pink. */
+.pg-lv { --gold: #e8b54a; }
+.pg-lv::before { display: none; }
+.pg-lv h3 { font-size: 8cqw; margin-bottom: 4cqw; }
+.pg-lv .lv-hand { font-family: 'Caveat', cursive; font-weight: 600; font-size: 4.8cqw; line-height: 1.1; margin: 0; }
+
+.lv-sci { background: radial-gradient(120% 70% at 100% 0%, color-mix(in srgb, var(--gold) 35%, transparent), transparent 60%), linear-gradient(160deg, #123c4a, #1d2a52 60%, #2e1f4f); color: #fff8ec; }
+.lv-sci .pg-kicker { color: var(--gold); }
+.lv-sci .pg-in { padding: 7cqw 7cqw; }
+.lv-sci h3 { font-size: 7.4cqw; margin-bottom: 3.4cqw; }
+.lv-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4cqw; margin-bottom: 4cqw; }
+.lv-fact { background: rgba(255,255,255,.08); border: .3cqw solid rgba(232,181,74,.45); border-radius: 3cqw; padding: 2.6cqw 2.8cqw; }
+.lv-fact i { display: grid; place-items: center; width: 5.6cqw; height: 5.6cqw; border-radius: 50%; background: var(--gold); margin-bottom: 1.2cqw; }
+.lv-fact svg { width: 3.4cqw; height: 3.4cqw; fill: none; stroke: #1d2a52; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.lv-fact b { display: block; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 3.8cqw; line-height: 1.05; margin-bottom: .8cqw; }
+.lv-fact p { margin: 0; font-size: 2.45cqw; line-height: 1.25; opacity: .9; }
+.lv-sci .lv-hand { color: var(--gold); text-align: center; font-size: 4.4cqw; }
+
+.lv-fame { background: linear-gradient(180deg, #fbf3e4, #f4e6cc); color: #2b1d14; }
+.lv-fame .pg-kicker { color: #9a5b1c; }
+.lv-fame .pg-in { padding: 8cqw 7cqw; }
+.lv-line { list-style: none; margin: 0; padding: 0 0 0 6cqw; position: relative; display: grid; gap: 2.4cqw; }
+.lv-line::before { content: ''; position: absolute; left: 1.4cqw; top: 1cqw; bottom: 2cqw; width: .5cqw; background: linear-gradient(var(--gold), #9a5b1c); border-radius: 1cqw; }
+.lv-line li { position: relative; }
+.lv-line li::before { content: ''; position: absolute; left: -6cqw; top: 1cqw; width: 3.4cqw; height: 3.4cqw; border-radius: 50%; background: #fbf3e4; border: .7cqw solid var(--gold); }
+.lv-year { display: inline-block; font-size: 2.5cqw; font-weight: 800; letter-spacing: .14em; color: #fff; background: #9a5b1c; border-radius: 2cqw; padding: .5cqw 1.8cqw; margin-bottom: .6cqw; }
+.lv-line b { display: block; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 4.3cqw; line-height: 1.05; margin-bottom: .8cqw; }
+.lv-line p { margin: 0; font-size: 2.65cqw; line-height: 1.28; }
+.lv-line .lv-us { background: linear-gradient(135deg, #123c4a, #2e1f4f); color: #fff8ec; border-radius: 3cqw; padding: 2.8cqw 3.6cqw; margin-left: -2cqw; }
+.lv-line .lv-us::before { left: -4cqw; top: 4.4cqw; background: var(--gold); }
+.lv-us .lv-year { background: var(--gold); color: #2e1f4f; }
+.lv-us b { font-size: 5.6cqw; color: var(--gold); }
+
+.lv-letters { background: radial-gradient(90% 60% at 0% 100%, rgba(232,181,74,.28), transparent 60%), linear-gradient(170deg, #5b2a3c, #3a1d3f); color: #fff8ec; }
+.lv-letters .pg-kicker { color: var(--gold); }
+.lv-letters .pg-in { padding: 8cqw 7cqw; }
+.lv-notes { display: grid; gap: 2.8cqw; margin-bottom: 3.6cqw; }
+.lv-note { position: relative; margin: 0; background: #fdf6e8; color: #3a2416; border-radius: 1.2cqw; padding: 3cqw 5cqw 2.6cqw; box-shadow: 0 1.2cqw 2.4cqw rgba(0,0,0,.28); background-image: repeating-linear-gradient(transparent 0 5.6cqw, rgba(154,91,28,.12) 5.6cqw 5.8cqw); }
+.lv-n1 { transform: rotate(-1.6deg); } .lv-n2 { transform: rotate(1.2deg); margin-left: 6cqw; } .lv-n3 { transform: rotate(-.8deg); margin-right: 5cqw; } .lv-n4 { transform: rotate(1deg); }
+.lv-note blockquote { margin: 0 0 1.4cqw; font-family: 'Caveat', cursive; font-weight: 600; font-size: 5cqw; line-height: 1.05; }
+.lv-note figcaption { font-size: 2.4cqw; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #9a5b1c; }
+.lv-seal { position: absolute; right: -2cqw; top: -2cqw; width: 7.5cqw; height: 7.5cqw; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(circle at 35% 30%, #c94a3a, #8c2a22); box-shadow: 0 .5cqw 1cqw rgba(0,0,0,.3); }
+.lv-seal svg { width: 3.8cqw; height: 3.8cqw; fill: #f6d58a; }
+.lv-letters .lv-hand { color: var(--gold); text-align: center; font-size: 4.4cqw; }
+.lv-letters h3 { font-size: 7.6cqw; margin-bottom: 3.6cqw; }
+
+.lv-world { background: linear-gradient(175deg, #ffd27a 0%, #f59e5b 38%, #c2554a 70%, #5a2a5e 100%); color: #2a1030; }
+.lv-world .pg-in { position: relative; z-index: 1; padding: 8cqw 8cqw; }
+.lv-sun { position: absolute; right: -26cqw; top: -26cqw; width: 66cqw; height: 66cqw; border-radius: 50%; background: radial-gradient(circle, #fff6d8 0 22%, rgba(255,246,216,.5) 23% 34%, transparent 35%), repeating-conic-gradient(rgba(255,255,255,.28) 0 6deg, transparent 6deg 18deg); -webkit-mask: radial-gradient(circle, #000 50%, transparent 70%); mask: radial-gradient(circle, #000 50%, transparent 70%); }
+.lv-world .pg-kicker { color: #7a2a1f; }
+.lv-world h3 { font-size: 8.6cqw; max-width: 62cqw; }
+.lv-lead { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 4.6cqw; margin: 0 0 3cqw; }
+.lv-gifts { list-style: none; margin: 0 0 4cqw; padding: 0; display: grid; gap: 1.8cqw; }
+.lv-gifts li { position: relative; padding-left: 7cqw; font-size: 3.7cqw; font-weight: 600; line-height: 1.22; }
+.lv-gifts li::before { content: '\2605'; position: absolute; left: 0; top: -.4cqw; font-size: 4.6cqw; color: #fff6d8; text-shadow: 0 .3cqw .8cqw rgba(90,42,94,.5); }
+.lv-gifts li:nth-child(n+5) { color: #fff8ec; }
+.lv-close { margin: 0; font-family: 'DM Serif Display', serif; font-size: 5.8cqw; line-height: 1.1; color: #fff8ec; }
+
+.lv-us-note { background: radial-gradient(100% 60% at 50% 0%, rgba(232,181,74,.22), transparent 60%), linear-gradient(180deg, #123c4a, #0c2733); color: #fff8ec; }
+.lv-us-note::after { content: ''; position: absolute; inset: 4cqw; border: .4cqw solid rgba(232,181,74,.7); border-radius: 2cqw; pointer-events: none; }
+.lv-us-note .pg-in { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 10cqw 11cqw; text-align: center; }
+.lv-us-note .pg-kicker { color: var(--gold); }
+.lv-us-note h3 { font-size: 7.6cqw; font-style: italic; margin-bottom: 3.6cqw; }
+.lv-letter p { margin: 0 0 2.2cqw; font-family: 'DM Serif Display', serif; font-size: 3.2cqw; line-height: 1.34; }
+.lv-letter .lv-wish { font-family: 'Caveat', cursive; font-weight: 600; font-size: 5.4cqw; line-height: 1.05; color: var(--gold); margin-top: 3cqw; }
+.lv-sign { margin: 3cqw 0 0; font-size: 2.7cqw; letter-spacing: .1em; text-transform: uppercase; opacity: .85; }
+.lv-sign b { display: block; margin-top: 1cqw; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 4.6cqw; letter-spacing: 0; text-transform: none; color: var(--gold); }
+.lv-sprig { position: absolute; width: 15cqw; height: 15cqw; left: 1cqw; bottom: 1cqw; z-index: 2; }
+.lv-sprig + .lv-sprig { left: auto; bottom: auto; right: 1cqw; top: 1cqw; transform: rotate(180deg); }
+.lv-sprig path { fill: rgba(232,181,74,.85); stroke: var(--gold); stroke-width: 1.2; }
+.lv-sprig path:first-child { fill: none; stroke-width: 1.6; }
+.lv-sprig circle { fill: #f2a65a; }
+
+.lv-story { background: radial-gradient(90% 50% at 100% 0%, rgba(232,181,74,.35), transparent 60%), linear-gradient(180deg, #fbf3e4, #f1dfc0); color: #2b1d14; }
+.lv-story .pg-kicker { color: #9a5b1c; }
+.lv-chapters { display: grid; gap: 2.4cqw; margin-bottom: 3.6cqw; }
+.lv-chapters div { background: #fffaf0; border-left: 1.2cqw solid var(--gold); border-radius: 0 2.4cqw 2.4cqw 0; padding: 3cqw 4cqw; box-shadow: 0 .8cqw 2cqw rgba(90,50,10,.12); }
+.lv-chapters span { display: block; font-size: 2.3cqw; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #9a5b1c; }
+.lv-chapters b { display: block; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 4.6cqw; margin: .6cqw 0 1cqw; }
+.lv-chapters p { margin: 0; font-family: 'Caveat', cursive; font-weight: 600; font-size: 5.4cqw; line-height: 1.05; color: #4a1d4f; }
+.lv-story .lv-hand { color: #4a1d4f; text-align: center; font-size: 5.6cqw; }
+
+.lv-ahead { background: radial-gradient(80% 50% at 0% 0%, rgba(232,181,74,.3), transparent 60%), linear-gradient(170deg, #4a1d4f, #2a1240); color: #fff6ec; }
+.lv-ahead .pg-kicker { color: var(--gold); }
+.lv-forecast { display: grid; grid-template-columns: 1fr 1fr; gap: 3cqw; margin-bottom: 5cqw; }
+.lv-forecast div { border: .3cqw solid rgba(232,181,74,.55); border-radius: 3cqw; padding: 4.6cqw 3.8cqw; background: rgba(255,255,255,.06); }
+.lv-forecast b { display: block; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 6.2cqw; color: var(--gold); margin-bottom: 1cqw; }
+.lv-forecast p { margin: 0; font-size: 3.6cqw; line-height: 1.3; }
+.lv-ahead .lv-hand { color: var(--gold); text-align: center; }
+
+.lv-promise { background: radial-gradient(70% 45% at 50% 100%, rgba(107,42,122,.18), transparent 70%), linear-gradient(180deg, #fdf7ee, #f3e6d6); color: #2a1030; }
+.lv-promise .pg-kicker { color: #6b2a7a; }
+.lv-promise h3 { font-style: italic; }
+.lv-promises { list-style: none; counter-reset: pr; margin: 0 0 6cqw; padding: 0; display: grid; gap: 3.6cqw; }
+.lv-promises li { counter-increment: pr; position: relative; padding-left: 13cqw; min-height: 9cqw; display: flex; align-items: center; font-family: 'DM Serif Display', serif; font-size: 4.8cqw; line-height: 1.2; }
+.lv-promises li::before { content: counter(pr); position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 9cqw; height: 9cqw; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(135deg, #f2c96a, #c98a22); color: #fff; font-size: 4.6cqw; box-shadow: 0 .6cqw 1.4cqw rgba(154,91,28,.35); }
+.lv-promise .lv-hand { color: #6b2a7a; font-size: 5.6cqw; }

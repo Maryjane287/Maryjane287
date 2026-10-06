@@ -8,6 +8,8 @@
   "companyNumber": "SC899696",
   "pinterestDomainVerify": "",
   "pinterestTagId": "",
+  "giftCode": "BIRTHDAYLOVE",
+  "giftExpires": "2026-10-08T23:59:00Z",
   "tiers": [
     { "id": "pdf", "label": "Instant PDF", "blurb": "Their 24 page magazine, ready to download, print or send by message", "gbp": 5, "usd": 7 },
     { "id": "cards", "label": "PDF plus card set", "blurb": "The 24 page magazine plus a matching printable card set: message cards, gift tags and bookmarks", "gbp": 7, "usd": 9, "popular": true },
