@@ -12,6 +12,22 @@ service cloud.firestore {
 
     function signedIn() { return request.auth != null; }
 
+    // PrintPals Kids Club (printpals.web.app): a parent can join with an email.
+    // Nobody can read, change or delete the list from a browser. The document id is
+    // the SHA-256 of the email, so the same email cannot join twice.
+    match /pp_signups/{id} {
+      allow create: if id.size() == 64
+        && request.resource.data.keys().hasOnly(['email', 'lang', 'src', 'consent'])
+        && request.resource.data.email is string
+        && request.resource.data.email.size() >= 6
+        && request.resource.data.email.size() <= 254
+        && request.resource.data.email.matches('^[^@ ]+@[^@ ]+[.][^@ ]+$')
+        && request.resource.data.consent == true
+        && request.resource.data.lang in ['uk', 'us']
+        && request.resource.data.src is string
+        && request.resource.data.src.size() <= 120;
+    }
+
     match /families/{fid} {
       function isOwner() {
         return signedIn() && get(/databases/$(database)/documents/families/$(fid)).data.owner == request.auth.uid;
