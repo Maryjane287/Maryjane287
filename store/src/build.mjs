@@ -1,6 +1,7 @@
 // Builds the whole shop into dist/ as plain HTML. No dependencies: run `npm run build`.
 // Every page is real HTML so Pinterest can read titles, prices and images (rich pins).
 import { readFile, writeFile, mkdir, rm, cp, readdir } from 'node:fs/promises';
+import { loadMags } from './mags.mjs';
 import { renderCover, renderPages, renderFullMagazine, esc, DESIGNS, designExamples, designsFor, baseDesign } from './covers.js';
 
 const root = new URL('..', import.meta.url);
@@ -9,7 +10,7 @@ const read = async p => readFile(new URL(p, root), 'utf8');
 const site = JSON.parse(await read('data/site.json'));
 // Hidden magazines (made for one person, like the birthday love magazine) skip the
 // shop pages, sitemap and feeds; only the maker and their private page know them.
-const allMags = JSON.parse(await read('data/magazines.json'));
+const allMags = await loadMags(root);
 const mags = allMags.filter(m => !m.hidden);
 const ideas = await loadIdeas();
 const abs = p => site.url.replace(/\/$/, '') + p;
@@ -331,7 +332,7 @@ async function magazinePage(mag, design = baseDesign(mag)) {
   <div class="design-grid">${designCards}</div>
 </section>
 <section class="section section-tint">
-  <div class="section-head"><p class="kicker">Flip through all ${inside.length} pages</p><h2>Every page is about them</h2><p>A contents page, the big interview, a pull out poster, a quiz and puzzle made from your answers, an official certificate and more. Swipe to see it all.</p></div>
+  <div class="section-head"><p class="kicker">Flip through all ${inside.length} pages</p><h2>Every page is about them</h2><p>${mag.heart ? "Their own story, pages we write just for them, a front page, a pull out poster, a quiz and puzzle made from your answers, and a closing note from us." : "A contents page, the big interview, a pull out poster, a quiz and puzzle made from your answers, an official certificate and more."} Swipe to see it all.</p></div>
   <div class="flip">${inside.map((p, i) => `<div><div class="flip-page">${p}</div><span class="flip-n">${i ? `Page ${i + 1}` : 'Cover'}</span></div>`).join('')}</div>
 </section>
 ${realLife(mag, inside, String(Object.values(main.values)[0] || '').split(/\s/)[0])}
@@ -602,6 +603,7 @@ await cp(new URL('assets/', root), new URL('assets/', dist), { recursive: true }
 await cp(new URL('pins/', root), new URL('pins/', dist), { recursive: true });
 await cp(new URL('src/covers.js', root), new URL('assets/covers.js', dist));
 await cp(new URL('src/love.js', root), new URL('assets/love.js', dist));
+await cp(new URL('src/heart.js', root), new URL('assets/heart.js', dist));
 await home();
 for (const m of mags) for (const d of designsFor(m)) await magazinePage(m, d);
 await makerPage();

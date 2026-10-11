@@ -1,0 +1,311 @@
+{
+  "theme": "dawn",
+  "fields": [
+    {
+      "id": "s_hello",
+      "chapter": "How you said hello",
+      "label": "How they greeted you",
+      "example": "A happy little wiggle from nose to tail",
+      "max": 60
+    },
+    {
+      "id": "s_comfort",
+      "chapter": "When we needed you",
+      "label": "How they comforted you on a hard day",
+      "example": "Rested their head on a knee and simply stayed",
+      "max": 70
+    },
+    {
+      "id": "s_sound",
+      "chapter": "The sound of home",
+      "label": "A sound you will always remember",
+      "example": "Soft paws on the kitchen floor every morning",
+      "max": 60
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To tell your stories, and smile when we do",
+      "max": 60
+    }
+  ],
+  "labels": {
+    "years": "Years we were lucky enough to share",
+    "spot": "Your favourite spot",
+    "habit": "Your sweetest habit",
+    "silly": "The moment that still makes us smile",
+    "words": "You, in three words"
+  },
+  "story": {
+    "legend": "A few more memories of them",
+    "hint": "Only if you feel ready. Skip any and we fill those pages with gentle words we have written for them.",
+    "kicker": "Our story",
+    "title": "Everything You Were to Us",
+    "hand": "And that is only a small part of what {who} gave us."
+  },
+  "picks": {
+    "legend": "Ten things you loved about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we will always love about you",
+    "items": [
+      "The welcome at the door",
+      "Your gentle eyes",
+      "The warm weight of you beside us",
+      "How you always knew when we were sad",
+      "Your happy little sighs",
+      "The way you followed us around",
+      "Your soft fur under our hands",
+      "How you made every day brighter",
+      "Your funny little habits",
+      "The way you trusted us completely",
+      "How you made a house a home",
+      "Your sleepy morning stretches",
+      "The quiet company on long evenings",
+      "How you loved without conditions",
+      "Your excitement over tiny things",
+      "The way you looked at us",
+      "How you forgave us everything",
+      "Your patience with us all",
+      "Every cuddle you ever gave",
+      "Simply being ours"
+    ]
+  },
+  "timeline": {
+    "kicker": "Pets remembered",
+    "title": "Loved Through the Ages",
+    "items": [
+      [
+        "10,000 BC",
+        "Side by side",
+        "In the Middle East, a person was laid to rest with a hand gently resting on a puppy."
+      ],
+      [
+        "Ancient Egypt",
+        "Mourned like family",
+        "Herodotus wrote that when a family cat died, the whole household shaved their eyebrows."
+      ],
+      [
+        "Ancient Rome",
+        "Words in stone",
+        "Romans carved loving epitaphs for their pets, praising their gentleness, loyalty and sweet ways."
+      ],
+      [
+        "1881",
+        "A garden of goodbyes",
+        "A small pet cemetery began in London's Hyde Park, with tiny headstones for much loved friends."
+      ]
+    ],
+    "today": [
+      "Always",
+      "{who}",
+      "Not in the history books. But in our hearts, for {years} wonderful years and every year after."
+    ]
+  },
+  "letters": {
+    "kicker": "Words of comfort",
+    "title": "What the World Has Said About Love That Stays",
+    "items": [
+      [
+        "All that we love deeply becomes a part of us.",
+        "Helen Keller"
+      ],
+      [
+        "Unable are the Loved to die, for Love is Immortality.",
+        "Emily Dickinson"
+      ],
+      [
+        "To live in hearts we leave behind is not to die.",
+        "Thomas Campbell, Hallowed Ground"
+      ],
+      [
+        "Love leaves a memory no one can steal.",
+        "A traditional saying"
+      ]
+    ],
+    "hand": "They all say it beautifully. We just say: thank you, {who}. You are still here."
+  },
+  "facts": {
+    "kicker": "Gentle facts",
+    "title": "The Science of How Pets Love Us",
+    "items": [
+      [
+        "heart",
+        "The love hormone",
+        "When a dog and its human gaze at each other, oxytocin, the bonding hormone, rises in both."
+      ],
+      [
+        "eye",
+        "The slow blink",
+        "A slow blink from a cat is a sign of trust and affection, often given only to their people."
+      ],
+      [
+        "music",
+        "They knew your voice",
+        "Pets can pick out their own human's voice from the voices of strangers."
+      ],
+      [
+        "smile",
+        "They read our faces",
+        "Dogs can tell a happy face from an angry one, and many pets come close when we are sad."
+      ],
+      [
+        "pulse",
+        "A calmer heart",
+        "Time with a much loved animal can lower stress and ease feelings of loneliness."
+      ],
+      [
+        "star",
+        "Love that lasts",
+        "Missing a pet deeply is completely natural. It shows how strong the bond really was."
+      ]
+    ],
+    "hand": "Science can explain a lot. It cannot measure how much {who} was loved."
+  },
+  "world": {
+    "kicker": "A thank you from all of us",
+    "title": "Why the World Was Better With You in It",
+    "lead": "Because of you, the world got:",
+    "items": [
+      "The happiest welcome home, every single time.",
+      "A friend who never once needed a reason.",
+      "Quiet company on the hardest days.",
+      "Small, silly moments that still make us smile.",
+      "A love that asked for nothing back.",
+      "A home that felt warmer just because you were in it.",
+      "And {years} years we would not trade for anything."
+    ],
+    "close": "The world was better because of you, {who}. Ours most of all."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises to you",
+    "items": [
+      "To remember you with a smile.",
+      "To tell your stories, often and proudly.",
+      "To keep your favourite spot sunny.",
+      "To be as kind as you taught us to be.",
+      "To love you, always, wherever you are."
+    ],
+    "hand": "Forever yours, {from}"
+  },
+  "awards": [
+    [
+      "Best cuddles",
+      "Every single day"
+    ],
+    [
+      "Most loyal friend",
+      "Without a doubt"
+    ],
+    [
+      "The warmest welcome",
+      "{years} years running"
+    ],
+    [
+      "Lifetime achievement",
+      "In being loved"
+    ]
+  ],
+  "awardsKicker": "With love and gratitude",
+  "awardsFoot": "Every one of them, so very deserved.",
+  "vouchers": [
+    [
+      "Their favourite spot",
+      "spot"
+    ],
+    [
+      "Their sweetest habit",
+      "habit"
+    ],
+    [
+      "The moment that made us laugh",
+      "silly"
+    ],
+    [
+      "In three words",
+      "words"
+    ]
+  ],
+  "vouchersTitle": "The little things we will always remember",
+  "cert": "Forever Loved",
+  "certLine": "was, is and will always be",
+  "perfume": "Top notes of warm fur, sunny windowsills and soft sighs. A heart of pure love.",
+  "news": {
+    "edition": "Special edition",
+    "date": "Remembering, with love",
+    "headline": "A life full of love",
+    "lead": "Everyone who knew {who} agrees: there has never been a gentler, kinder or more loved friend.",
+    "weather": "Forecast: warm memories, all day long"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to our hearts",
+    "nationality": "Loved, everywhere",
+    "job": "Best friend, full time",
+    "stamps": [
+      "Our sofa",
+      "Every sunny spot",
+      "Forever home"
+    ]
+  },
+  "movie": {
+    "sub": "A true story of love",
+    "soon": "Forever showing in our hearts",
+    "reviews": [
+      [
+        "The best friend anyone could wish for",
+        "Everyone who met {who}"
+      ],
+      [
+        "Full of love from start to finish",
+        "The whole family"
+      ],
+      [
+        "We would watch it all again",
+        "Our hearts"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "What can a slow blink from a cat mean?",
+      [
+        "Trust and affection",
+        "Hunger",
+        "Sleepiness"
+      ],
+      0
+    ],
+    [
+      "How did families in ancient Egypt mourn a cat?",
+      [
+        "They shaved their eyebrows",
+        "They sang all night",
+        "They planted a tree"
+      ],
+      0
+    ]
+  ],
+  "quizTitle": "How well did you know {who}?",
+  "toc": "A one of a kind keepsake, made for {who} with love from {from}.",
+  "words": [
+    "LOVED",
+    "GENTLE",
+    "LOYAL",
+    "FRIEND",
+    "HEART",
+    "ALWAYS"
+  ],
+  "note": {
+    "title": "What we believe love leaves behind",
+    "contents": "A note for you",
+    "paras": [
+      "We make magazines for a living, and some we make very gently. This was one of them.",
+      "We believe a pet never really leaves. They stay in the sunny spot by the door, in the habits we picked up from them, in the way we still smile at the silly things they did.",
+      "{who}, someone wanted your story kept safe. Not on a card that fades, but in pages full of you: your face, your favourite places, the little things that made you, you.",
+      "That someone is {from}. And from everything they told us, you were loved completely, and you still are."
+    ],
+    "wish": "Thank you, {who}. For every single day. Forever loved."
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "theme": "garden",
+  "fields": [
+    { "id": "s_heard", "chapter": "How we heard the news", "label": "How you heard the news", "example": "A blurry photo of a ring at two in the morning", "max": 80 },
+    { "id": "s_knew", "chapter": "We always knew because", "label": "How you knew they were perfect together", "example": "They share their chips, and nobody shares chips", "max": 80 },
+    { "id": "s_guess", "chapter": "Our wedding predictions", "label": "Your prediction for the wedding", "example": "Someone will cry before the first song even ends", "max": 80 },
+    { "id": "s_promise", "label": "A wish for the two of them", "example": "A long, happy and very well fed life together", "max": 70 }
+  ],
+  "story": {
+    "legend": "A few more things about the happy couple",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "kicker": "Their story",
+    "title": "How It All Led Here",
+    "hand": "And the best part of this story? For {who}, it is only just beginning."
+  },
+  "labels": { "year": "Engaged in", "where": "Where it happened", "nerves": "Nerves rating", "next": "What comes next", "words": "In three words" },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten reasons you are perfect together",
+    "items": ["The way you light up together", "How you make each other laugh", "Your equally terrible jokes", "How you share your chips", "The way you look at each other", "How you cheer each other on", "Your epic road trip playlists", "How at home you make everyone feel", "The way you hold hands", "How calm you are together", "Your shared love of snacks", "How you finish each other's sentences", "Your big plans and bigger dreams", "How easy you make love look", "The way you just fit", "How brave you are together", "Your kindness to everyone", "How you always show up", "The love that inspires us all", "Simply being you two"]
+  },
+  "timeline": {
+    "kicker": "Proposals through the ages",
+    "title": "A Short History of Saying Yes",
+    "items": [
+      ["Ancient Rome", "A ring to promise", "Romans marked a promise to marry with a ring, sometimes a simple band of iron."],
+      ["1477", "A famous diamond", "Archduke Maximilian gave Mary of Burgundy a diamond ring, and a sparkly tradition began."],
+      ["1839", "The queen proposes", "As queen, Victoria had to do the asking. She proposed to Prince Albert, and he happily said yes."],
+      ["1947", "A diamond is forever", "A copywriter dreamed up the famous line, and it became one of the best known slogans ever written."]
+    ],
+    "today": ["{year}", "{who}", "The newest yes in the history of yeses. And our favourite by far."]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Beautiful Words for New Beginnings",
+    "items": [
+      ["Yes I said yes I will Yes.", "James Joyce, Ulysses, 1922"],
+      ["I have found the one whom my soul loves.", "Song of Solomon 3:4"],
+      ["Two are better than one.", "Ecclesiastes 4:9"],
+      ["Well begun is half done.", "An old proverb"]
+    ],
+    "hand": "Lovely words, all of them. Ours are simpler: we are so happy for you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "Fun Facts for the Newly Engaged",
+    "items": [
+      ["ring", "The vein of love", "Rings go on the fourth finger because people once believed a vein ran from it straight to the heart."],
+      ["star", "Older than dinosaurs", "Most diamonds formed deep underground well over a billion years ago. Talk about lasting."],
+      ["key", "Hard to break", "Diamond is the hardest natural material on Earth. A very good sign for a promise."],
+      ["paw", "Penguin proposals", "Some penguins woo their partner with the perfect pebble for the nest. The original ring."],
+      ["music", "Dance first", "Albatrosses perform long courtship dances, and often stay with one partner for life."],
+      ["pulse", "Nerves or joy", "Nerves and excitement feel almost the same in the body: racing heart, quick breath, shaky hands."]
+    ],
+    "hand": "Science can explain the sparkle. It cannot explain how perfect {who} are together."
+  },
+  "world": {
+    "kicker": "A toast from all of us",
+    "title": "Why the World Is Better Because You Said Yes",
+    "lead": "The moment that question was answered, the world got:",
+    "items": ["A love story everyone wants to hear.", "The best excuse for a party in years.", "Two people who bring out the best in each other.", "A future full of adventures.", "Proof that the wait is always worth it.", "A brand new reason to cry happy tears.", "And a wedding we cannot wait to dance at."],
+    "close": "The world just got a little brighter, {who}. Thank you for letting us share it."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Wishes for the road ahead",
+    "items": ["Calm planning and no seating plan drama.", "Big laughs all the way to the aisle.", "A day that feels exactly like you.", "Patience, snacks and plenty of naps.", "A lifetime of saying yes to each other."],
+    "hand": "With love and very happy tears, {from}"
+  },
+  "awards": [["Proposal of the year", "By a landslide"], ["Best kept secret", "Almost nobody knew"], ["Most adorable couple", "Unanimous"], ["Bravest question asked", "And the best answer"]],
+  "vouchers": [["One planning night", "We bring snacks and big ideas"], ["A cake tasting buddy", "We will try every slice"], ["One stress free evening", "No wedding talk allowed"], ["First dance practice", "We promise not to laugh"]],
+  "vouchersTitle": "Engagement vouchers for {who}",
+  "cert": "Meant to Be",
+  "certLine": "are officially, undeniably and forever",
+  "perfume": "Top notes of happy tears and champagne, with a sparkling heart of yes.",
+  "news": { "edition": "Engagement edition", "headline": "{who} are engaged", "lead": "Friends and family are celebrating after {who} confirmed the news everyone was hoping for: there will be a wedding.", "weather": "Weather: sunny, with a 100% chance of happy tears" },
+  "passport": { "kicker": "Next stop, the wedding", "head": "Passport to forever", "nationality": "Engaged, everywhere", "job": "Happily engaged", "stamps": ["The proposal", "The planning", "The big day"] },
+  "movie": { "sub": "The proposal", "soon": "Sequel coming soon: the wedding", "reviews": [["I gasped, I cried, I said yes for them", "The Daily Hug"], ["The plot twist we all hoped for", "Everyone who knows them"], ["Romantic, chaotic, perfect", "The Group Chat"]] },
+  "quiz": [["Which queen proposed to her future husband in 1839?", ["Queen Victoria", "Queen Anne", "Queen Mary"], 0], ["What do some penguins give to win a partner's heart?", ["A fish", "A feather", "A pebble"], 2]],
+  "words": ["RING", "YES", "LOVE", "DIAMOND", "FOREVER", "ENGAGED"],
+  "note": {
+    "title": "What we believe a yes is",
+    "contents": "A note for the happy couple",
+    "paras": [
+      "We make magazines for a living, and every so often one makes us grin from ear to ear. This was one of them.",
+      "We believe a yes is not one word on one special day. It is a promise to keep saying yes: to adventures, to hard days, to burnt dinners and to each other.",
+      "{who}, someone wanted to celebrate you properly. Not with a card anyone could buy, but with pages full of you: your story, your proposal, the nerves and the joy.",
+      "That someone is {from}. And from everything they told us, the whole world is cheering for you two."
+    ],
+    "wish": "Congratulations, {who}. Here is to the next chapter."
+  }
+}

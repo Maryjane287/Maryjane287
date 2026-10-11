@@ -1,0 +1,95 @@
+{
+  "theme": "night",
+  "fields": [
+    { "id": "s_first", "chapter": "The first thing I noticed", "label": "The first thing you noticed about them", "example": "That laugh, from all the way across the room", "max": 70 },
+    { "id": "s_ordinary", "chapter": "Our perfect ordinary day", "label": "Your perfect ordinary day together", "example": "Coffee in bed, a long walk, then takeaway on the sofa", "max": 80 },
+    { "id": "s_tradition", "chapter": "A little tradition of ours", "label": "A little tradition only you two have", "example": "Pancakes every Sunday, no matter what", "max": 70 },
+    { "id": "s_promise", "label": "A promise for the year ahead", "example": "To always save you the last croissant", "max": 70 }
+  ],
+  "story": {
+    "legend": "A few more things about you two",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for you both.",
+    "kicker": "Our story",
+    "title": "Everything We Are",
+    "hand": "And the best chapters of {who} are still being written."
+  },
+  "labels": { "years": "Years of us", "met": "How it all began", "joke": "Our inside joke", "trip": "Our best adventure", "love": "What I love most about you" },
+  "picks": {
+    "legend": "Ten things you love about your life together",
+    "kicker": "Just between us",
+    "title": "Ten things I love about us",
+    "items": ["The way you still make me laugh", "Our terrible inside jokes", "How you reach for my hand", "Lazy mornings with you", "Your hugs after a long day", "How we finish each other's sentences", "Our adventures big and small", "The way you look at me", "How you always save me a seat", "Our late night kitchen chats", "How you make the ordinary fun", "The way you believe in me", "Our singalongs in the car", "How you know my coffee order", "The way we always make up", "How anywhere with you feels like home", "Our plans for the future", "Your patience with me", "How we are still best friends", "Choosing each other every day"]
+  },
+  "timeline": {
+    "kicker": "Love that lasts",
+    "title": "A Short History of Anniversaries",
+    "items": [
+      ["Middle Ages", "Silver and gold", "In parts of medieval Germany, the story goes, wives wore a silver wreath at 25 years and gold at 50."],
+      ["1897", "A diamond year", "Queen Victoria marked sixty years on the throne with a Diamond Jubilee. Diamond has meant sixty ever since."],
+      ["1922", "Paper, wood and tin", "Emily Post's famous etiquette book listed a gift for the big anniversaries, from paper in year one to gold."],
+      ["1937", "A gift for every year", "Jewellers in America grew the list so that almost every year had its own present, from paper to diamond."]
+    ],
+    "today": ["Today", "{who}", "Year {years} of the greatest love story never told. Until now."]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the Poets Say About Lasting Love",
+    "items": [
+      ["Grow old along with me! The best is yet to be.", "Robert Browning, Rabbi Ben Ezra, 1864"],
+      ["I love you without knowing how, or when, or from where.", "Pablo Neruda, One Hundred Love Sonnets"],
+      ["Two souls with but a single thought, two hearts that beat as one.", "Friedrich Halm, Ingomar the Barbarian"],
+      ["The heart that loves is always young.", "An old saying"]
+    ],
+    "hand": "The poets say it beautifully. We just say: here is to many more years of {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Lasting Love",
+    "items": [
+      ["spark", "Still that spark", "Some couples together for decades still show the brain activity of new love at each other's photo."],
+      ["smile", "Laugh together", "Couples who laugh together tend to feel closer, and happier in their relationship."],
+      ["heart", "Five to one", "Happy couples share about five kind moments for every grumpy one, even in the middle of a row."],
+      ["leaf", "Like swans", "Swans often stay with the same partner for many years, raising their young together."],
+      ["sun", "Good morning, dear", "Some seahorse couples greet each other every morning with a little dance, brightening as they go."],
+      ["hands", "Thank you matters", "Feeling appreciated by a partner is linked to happier, longer lasting love."]
+    ],
+    "hand": "Science can explain a lot. It still cannot explain how {who} make it look so easy."
+  },
+  "world": {
+    "kicker": "A toast to you both",
+    "title": "Why the World Is Better Because You Met",
+    "lead": "Because you two found each other, the world got:",
+    "items": ["A love story worth telling at every dinner.", "Twice the laughter, and half the washing up.", "An inside joke nobody else will ever get.", "Two people who make each other braver.", "A home full of music, noise and good food.", "Proof that the right person is worth the wait.", "And a team nobody would ever bet against."],
+    "close": "The world is better because you met, {who}. Here is to every year still to come."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "For the year ahead",
+    "title": "My promises to you",
+    "items": ["To keep making you laugh, even badly.", "To hold your hand on the busy days.", "To keep our silly traditions going.", "To choose you again, every single day.", "To love you a little more every year."],
+    "hand": "Signed, sealed and meant with all my heart."
+  },
+  "awards": [["Best love story", "Year after year"], ["Most iconic inside joke", "Nobody else gets it"], ["Couple of the year", "Every year, actually"], ["Lifetime achievement", "In loving each other"]],
+  "vouchers": [["Breakfast in bed", "Coffee exactly how you like it"], ["One date night", "Dressed up or in pyjamas"], ["A phones off evening", "Just us, talking for hours"], ["One big adventure", "Pick a map, any map"]],
+  "vouchersTitle": "Love vouchers for {who}",
+  "cert": "The Perfect Pair",
+  "certLine": "are officially, undeniably and forever",
+  "toc": "A one of a kind issue, made for {who}, with all my love.",
+  "perfume": "Top notes of lazy mornings and shared jokes, with a warm heart of forever.",
+  "news": { "edition": "Anniversary edition", "headline": "{who} still madly in love", "lead": "In news that surprises nobody, {who} have marked another year together, and sources say they are still each other's favourite person.", "weather": "Weather: cosy, with a 100% chance of cuddles" },
+  "passport": { "kicker": "Our next adventures", "head": "Passport to everywhere, together", "nationality": "Loved, everywhere", "job": "Professional sweethearts", "stamps": ["Where it all began", "Every adventure", "Home, together"] },
+  "movie": { "sub": "A love story", "soon": "Showing forever, in a living room near you", "reviews": [["I laughed, I cried, I hugged my other half", "The Daily Hug"], ["The romance of the decade", "Everyone who knows them"], ["Gets better every single year", "The Family Group Chat"]] },
+  "quiz": [["Whose jubilee made diamond the word for sixty years?", ["Queen Victoria", "Queen Elizabeth I", "Queen Anne"], 0], ["Which sea creatures may greet their partner with a morning dance?", ["Starfish", "Seahorses", "Crabs"], 1]],
+  "words": ["LOVE", "YEARS", "TOGETHER", "FOREVER", "HOME", "KISS"],
+  "note": {
+    "title": "What we believe lasting love is",
+    "contents": "A note for you both",
+    "paras": [
+      "We make magazines for a living, but some feel different. This was one of them.",
+      "We believe love that lasts is built from small things: the tea brought without asking, the joke that still works years later, the hand that finds yours in the dark.",
+      "{who}, one of you came to us wanting something special. Not a card anyone could buy, but pages full of your story: your faces, your jokes, the moments only you two share.",
+      "And from everything we were told, this love is only getting better with time."
+    ],
+    "wish": "Happy anniversary, {who}. Here is to forever, and a little longer."
+  }
+}

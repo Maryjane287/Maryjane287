@@ -1,0 +1,93 @@
+{
+  "theme": "night",
+  "fields": [
+    { "id": "s_little", "chapter": "Little you wanted to be", "label": "What they wanted to be when they were little", "example": "An astronaut, then a chef, then a dinosaur", "max": 70 },
+    { "id": "s_hard", "chapter": "The hard bit you pushed through", "label": "A hard moment they pushed through", "example": "Failing the first exam, then smashing the retake", "max": 80 },
+    { "id": "s_always", "chapter": "Always the one who", "label": "Among friends, they were always the one who...", "example": "Brought snacks to every single study session", "max": 70 },
+    { "id": "s_promise", "label": "A promise to them", "example": "To be there for every big step that comes next", "max": 70 }
+  ],
+  "story": {
+    "legend": "A few more things about the graduate",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely ones we have written for them.",
+    "kicker": "The road to today",
+    "title": "How You Got Here",
+    "hand": "Every late night and early alarm led here, {who}."
+  },
+  "labels": { "year": "The year it all paid off", "subject": "What you studied", "fuel": "Powered by", "next": "Your next big move", "words": "You in three words" },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we love about you",
+    "items": ["Your stubborn brilliance", "How hard you worked for this", "Your terrible exam playlists", "The way you never gave up", "Your three alarm mornings", "How you made it look easy", "Your big curious brain", "The calls home at midnight", "How you kept your sense of humour", "Your kindness under pressure", "The way you help your friends", "Your heroic coffee intake", "How you grew up so fast", "Your wild and wonderful dreams", "The way you light up a room", "How you surprise us every year", "Your courage to start again", "The way you ask big questions", "How proud you make us", "Simply being you"]
+  },
+  "timeline": {
+    "kicker": "Graduates through the ages",
+    "title": "A Short History of Graduation Day",
+    "items": [
+      ["859", "A woman builds a school", "Fatima al-Fihri founded al-Qarawiyyin in Fez. It is still teaching students today."],
+      ["1088", "The first university", "Students in Bologna came together to learn, and the idea of a university was born."],
+      ["1880", "Four women graduate", "The University of London awarded degrees to women for the first time. Four of them."],
+      ["1912", "Hats in the air", "New officers at the US Naval Academy threw their caps skyward, starting a tradition the world copied."]
+    ],
+    "today": ["{year}", "{who}", "Not in the history books yet. Give it time. We already know how this story goes."]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words for the Road Ahead",
+    "items": [
+      ["You have brains in your head. You have feet in your shoes.", "Dr. Seuss, Oh, the Places You'll Go!, 1990"],
+      ["Stay hungry. Stay foolish.", "Steve Jobs, Stanford graduation speech, 2005"],
+      ["A journey of a thousand miles begins with a single step.", "Lao Tzu, Tao Te Ching"],
+      ["Learning is a treasure that will follow its owner everywhere.", "An old Chinese saying"]
+    ],
+    "hand": "They all say it beautifully. We just say: go get them, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of a Brilliant Mind",
+    "items": [
+      ["cap", "A builder's hat", "The flat graduation cap is called a mortarboard, after the board builders use to hold mortar."],
+      ["key", "One step up", "Graduation comes from the Latin word gradus, which means a step. And what a step it is."],
+      ["pulse", "A brand new brain", "Learning really changes the brain. Every new skill builds fresh connections between nerve cells."],
+      ["moon", "Sleep is studying", "While you sleep, your brain sorts and stores what you learned that day. Naps count."],
+      ["clock", "Cramming loses", "Little and often beats one giant all nighter. Scientists call it the spacing effect."],
+      ["star", "Curiosity pays", "Being curious about a subject helps the brain remember it, and other things learned at the same time."]
+    ],
+    "hand": "Science can explain a lot. It still cannot explain how {who} did it on that much coffee."
+  },
+  "world": {
+    "kicker": "A thank you from all of us",
+    "title": "Why the World Is Better With You in It",
+    "lead": "Because of you, the world got:",
+    "items": ["A mind that never stops asking why.", "Someone brave enough to start again.", "A friend who shares notes and snacks.", "Proof that hard work really pays off.", "A laugh that gets everyone through exams.", "Big ideas that are only just beginning.", "And one very, very proud family."],
+    "close": "The world is better because of you, {who}. And it has no idea what is coming."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises to you",
+    "items": ["To cheer for you at every new start.", "To always answer when you call home.", "To keep a fridge full when you visit.", "To believe in you on the hard days.", "To be proud of you, always, wherever you go."],
+    "hand": "Signed with love, {from}"
+  },
+  "awards": [["Most likely to change the world", "By a landslide"], ["Deadline survivor", "Four minutes to spare"], ["Champion of the all nighter", "Undefeated"], ["Graduate of the year", "In our house, every year"]],
+  "vouchers": [["A celebration dinner", "Anywhere you like"], ["One lazy lie in", "No alarms, not even one"], ["A care package", "Snacks for the next adventure"], ["One big day out together", "Your choice, our treat"]],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "The Proudest Graduate of {year}",
+  "perfume": "Top notes of fresh pages and strong coffee. A heart of pure determination.",
+  "news": { "edition": "Graduation edition", "headline": "{who} actually did it", "lead": "Sources close to the family confirm that {who} has graduated in {subject}, against all odds, alarms and deadlines.", "weather": "Weather: bright, with a 100% chance of caps in the air" },
+  "passport": { "kicker": "Official documents", "head": "Passport to the future", "nationality": "Citizen of the world", "job": "Brand new graduate", "stamps": ["The library", "Exam season", "Class of {year}"] },
+  "movie": { "sub": "Late nights. Big dreams. One cap.", "soon": "The sequel starts now", "reviews": [["We laughed, we cried, we bought a frame", "The Proud Parent Post"], ["A triumph from start to finish", "Everyone who helped revise"], ["Five stars and a gown", "The Family Group Chat"]] },
+  "quiz": [["What is the flat graduation cap called?", ["A mortarboard", "A breadboard", "A skateboard"], 0], ["Who founded al-Qarawiyyin, still teaching since 859?", ["Fatima al-Fihri", "Marie Curie", "Ada Lovelace"], 0]],
+  "words": ["GRADUATE", "CLASS", "DREAMS", "PROUD", "STUDY", "FUTURE"],
+  "note": {
+    "title": "What we believe a graduate is",
+    "contents": "A note for you",
+    "paras": [
+      "We make magazines for a living, but some feel different. This was one of them.",
+      "We believe graduation is not only the cap and the gown. It is every early start, every page read twice, every time you nearly quit and kept going anyway.",
+      "{who}, someone wanted you to have something special. Not a card anyone could buy, but pages full of you: your face, your words, the long road that brought you here.",
+      "That someone is {from}. And from everything they told us, they could not be prouder of you."
+    ],
+    "wish": "Congratulations, {who}. The world is waiting."
+  }
+}

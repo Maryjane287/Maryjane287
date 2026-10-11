@@ -1,0 +1,94 @@
+{
+  "theme": "ocean",
+  "fields": [
+    { "id": "s_knew", "chapter": "When we knew they were the ones", "label": "When you knew they were meant to be", "example": "The day they ordered for each other without asking", "max": 80 },
+    { "id": "s_best", "chapter": "The best bit of the big day", "label": "The best bit of the big day", "example": "The speech that had the whole room in tears and stitches", "max": 80 },
+    { "id": "s_advice", "chapter": "Our advice for married life", "label": "A little advice for married life", "example": "Never go to sleep on an argument or an empty stomach", "max": 80 },
+    { "id": "s_promise", "label": "A wish for their future", "example": "A lifetime of lie ins and dancing in the kitchen", "max": 70 }
+  ],
+  "story": {
+    "legend": "A few more things about the happy couple",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "kicker": "Their story",
+    "title": "Everything They Are",
+    "hand": "And this is only the first page of happily ever after for {who}."
+  },
+  "labels": { "year": "Married in", "met": "How they met", "song": "The first dance", "secret": "The secret to their love", "words": "In three words" },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we love about you two",
+    "items": ["The way you look at each other", "How you make each other laugh", "Your kitchen dancing", "How you always show up for us", "The best dinner parties", "How you finish each other's stories", "Your terrible shared jokes", "What a great team you make", "The way you balance each other", "How kind you both are", "Your adventures together", "How welcome you make everyone feel", "Your matching snack habits", "How you cheer each other on", "The way you still hold hands", "How you light up a room together", "How you make us believe in love", "Your arguments about the map", "How easy you make love look", "Simply being you two"]
+  },
+  "timeline": {
+    "kicker": "Weddings through the ages",
+    "title": "A Short History of the Big Day",
+    "items": [
+      ["Ancient Rome", "The flame veil", "Roman brides wore a veil the colour of flame, called the flammeum, on their wedding day."],
+      ["1840", "The white dress", "Queen Victoria married Prince Albert in white, and brides around the world followed her lead."],
+      ["1858", "Here comes the bride", "A royal wedding in London used marches by Wagner and Mendelssohn. Couples have walked to them ever since."],
+      ["1800s", "Something borrowed", "An old English rhyme gave brides a lucky list: something old, something new, borrowed and blue."]
+    ],
+    "today": ["{year}", "{who}", "The newest chapter in the history of weddings. And, we think, the best one yet."]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Marriage",
+    "items": [
+      ["Let me not to the marriage of true minds admit impediments.", "William Shakespeare, Sonnet 116"],
+      ["Love is patient, love is kind.", "1 Corinthians 13"],
+      ["Let there be spaces in your togetherness.", "Kahlil Gibran, The Prophet, 1923"],
+      ["Marriages are made in heaven.", "An old proverb"]
+    ],
+    "hand": "They all say it beautifully. We just say: congratulations, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "Wedding Facts to Share at the Table",
+    "items": [
+      ["ring", "Gold for good", "Gold never rusts or tarnishes, which is one reason it became the metal of forever."],
+      ["gift", "Sweet confetti", "In Italian, confetti are sugared almonds, the sweets once thrown and shared at celebrations."],
+      ["eye", "Happy tears", "Scientists think tears of emotion differ from onion tears. So yes, wedding tears are the real thing."],
+      ["moon", "The honeymoon", "A centuries old word: honey for the sweetness, moon for the month it was said to last."],
+      ["cake", "Five almonds", "An old custom gives guests five sugared almonds: health, wealth, joy, children and long life."],
+      ["star", "Something blue", "In wedding tradition, blue stands for loyalty and faithful love. A very good colour to wear."]
+    ],
+    "hand": "Tradition explains a lot. It cannot explain how {who} found each other. We are just glad they did."
+  },
+  "world": {
+    "kicker": "A toast from all of us",
+    "title": "Why the World Is Better Because You Said I Do",
+    "lead": "The day you two said yes to each other, the world gained:",
+    "items": ["The best love story at any table.", "A home with the door always open.", "Two people who make each other better.", "Proof that soulmates really exist.", "A first dance nobody will forget.", "A team that can handle anything.", "And a reason for all of us to celebrate."],
+    "close": "The world is better because you found each other, {who}. Ours certainly is."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our wishes for you two",
+    "items": ["Long lie ins and lazy Sundays.", "Laughter in every room of your home.", "Adventures near and far.", "Patience on the harder days.", "A love that grows bigger every year."],
+    "hand": "With love and a raised glass, {from}"
+  },
+  "awards": [["Couple of the year", "By a landslide"], ["Best first dance", "Tears from the front row"], ["Most likely to hold hands at 90", "Unanimous"], ["Lifetime achievement", "In finding each other"]],
+  "vouchers": [["One dinner party", "We cook, you relax"], ["A house sitting weekend", "Plants and pets in safe hands"], ["Help with any move", "Boxes, tape and pizza"], ["A first anniversary toast", "Bubbles on us"]],
+  "vouchersTitle": "Wedding vouchers for {who}",
+  "cert": "Perfectly Matched",
+  "certLine": "are officially, joyfully and forever",
+  "perfume": "Top notes of confetti and champagne, with a heart of happily ever after.",
+  "news": { "edition": "Wedding edition", "headline": "{who} tie the knot", "lead": "Guests confirm that {who} said I do in style, and that not a single eye in the room stayed dry.", "weather": "Weather: bright, with a 100% chance of confetti" },
+  "passport": { "kicker": "Honeymoon ready", "head": "Passport to happily ever after", "nationality": "Married, everywhere", "job": "Newlyweds", "stamps": ["The big day", "The honeymoon", "Forever after"] },
+  "movie": { "sub": "A wedding story", "soon": "Now showing, happily ever after", "reviews": [["I cried at the vows, and at the cake", "The Daily Hug"], ["The wedding of the year", "Every single guest"], ["Would happily RSVP again", "The Group Chat"]] },
+  "quiz": [["Who made the white wedding dress fashionable in 1840?", ["Queen Victoria", "Marie Antoinette", "Jane Austen"], 0], ["What does confetti mean in Italian?", ["Little paper", "Sugared almonds", "Good luck"], 1]],
+  "words": ["LOVE", "VOWS", "RINGS", "DANCE", "FOREVER", "WEDDING"],
+  "note": {
+    "title": "What we believe a marriage is",
+    "contents": "A note for the newlyweds",
+    "paras": [
+      "We make a lot of magazines, and some of them stay with us. This was one of them.",
+      "We believe a marriage is not one big day but thousands of small ones: the coffee made for two, the coat held open, the choice to be a team, over and over again.",
+      "{who}, someone wanted you to have more than a card. They wanted pages full of you: your story, your faces, the moment the whole room cried.",
+      "That someone is {from}. And from everything they told us, yours is the kind of love that makes everyone around you believe in it too."
+    ],
+    "wish": "Congratulations, {who}. Here is to forever."
+  }
+}

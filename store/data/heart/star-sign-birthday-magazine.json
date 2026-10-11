@@ -1,0 +1,95 @@
+{
+  "theme": "night",
+  "fields": [
+    { "id": "s_shine", "chapter": "When {first} shines brightest", "label": "When they shine the brightest", "example": "Telling stories with everyone in stitches", "max": 60 },
+    { "id": "s_orbit", "chapter": "The people in their orbit", "label": "Who they pull into their orbit", "example": "Strangers, dogs and every waiter we meet", "max": 60 },
+    { "id": "s_wish", "chapter": "A wish on a shooting star", "label": "What they would wish for on a shooting star", "example": "A little house by the sea with a big telescope", "max": 60 },
+    { "id": "s_promise", "label": "A birthday promise to them", "example": "To take you somewhere dark enough to see the Milky Way", "max": 70 }
+  ],
+  "labels": { "sign": "Born under the sign of", "age": "Trips around the Sun", "born": "The day the sky got brighter", "crystal": "Lucky crystal", "power": "Cosmic superpower", "prediction": "The stars predict" },
+  "story": {
+    "legend": "A few more things about them",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely ones we have written for them.",
+    "kicker": "Their birth chart, sort of",
+    "title": "The Universe According to {first}",
+    "hand": "Every star has a story. This is ours."
+  },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we love about you",
+    "items": ["The way you light up a room", "Your laugh at three in the morning", "How you always pick us up", "Your terrible jokes", "Your big dreamy plans", "How you make strangers feel at home", "The way you remember the little things", "Your fearless curiosity", "How you never give up", "Your excellent taste in music", "The way you look after everyone", "Your cosy kind of calm", "How you make ordinary days fun", "Your generous heart", "The way you say our names", "How brave you are", "Your spectacular dance moves", "How you always see the bright side", "Your midnight snack choices", "Simply being you"]
+  },
+  "timeline": {
+    "kicker": "Looking up through the ages",
+    "title": "A Short History of Stargazing",
+    "items": [
+      ["1609", "Galileo looks up", "Galileo turned an early telescope to the sky and soon saw mountains on the Moon and moons around Jupiter."],
+      ["1781", "A new planet", "William Herschel spotted Uranus from his garden, the first planet found with a telescope."],
+      ["1969", "Footprints on the Moon", "Neil Armstrong and Buzz Aldrin walked on the Moon while about 600 million people watched."],
+      ["1990", "Hubble opens its eyes", "The Hubble Space Telescope launched and began sending back pictures of galaxies far, far away."]
+    ],
+    "today": ["Today", "{who}", "The brightest discovery of all. {age} trips around the Sun, and still dazzling."]
+  },
+  "letters": {
+    "kicker": "Words written in the stars",
+    "title": "What the World Has Said About Stars",
+    "items": [
+      ["We are made of star stuff.", "Carl Sagan, Cosmos, 1980"],
+      ["We are all in the gutter, but some of us are looking at the stars.", "Oscar Wilde, Lady Windermere's Fan, 1892"],
+      ["Look up at the stars and not down at your feet.", "Stephen Hawking"],
+      ["Keep your eyes on the stars, and your feet on the ground.", "Theodore Roosevelt"]
+    ],
+    "hand": "They all looked up and wondered. We look at you and feel the same, {who}."
+  },
+  "facts": {
+    "kicker": "Real science, real magic",
+    "title": "The Astonishing Science of You",
+    "items": [
+      ["star", "Made of star stuff", "The calcium in your bones and the iron in your blood were made inside stars long ago."],
+      ["globe", "Your space mileage", "Every birthday, you have ridden the Earth nearly a billion kilometres around the Sun."],
+      ["sun", "Eight minute sunshine", "Sunlight takes about eight minutes to reach you. You always see the Sun as it was moments ago."],
+      ["eye", "A time machine", "Look at a star and you see light that left it years, even centuries, before you were born."],
+      ["spark", "The sky has moved", "Earth slowly wobbles, so the stars behind the Sun on your birthday have shifted since ancient times."],
+      ["moon", "The thirteenth sign", "The Sun also passes through Ophiuchus, a constellation the old zodiac left out."]
+    ],
+    "hand": "The horoscope is just for fun. The star stuff is completely true, {who}."
+  },
+  "world": {
+    "kicker": "A cosmic thank you",
+    "title": "Why the Universe Is Better With You in It",
+    "lead": "Because you were born, the universe got:",
+    "items": ["A laugh that could outshine the Sun.", "A friend with real gravitational pull.", "Someone who makes big dreams feel possible.", "A kindness that travels faster than light.", "The best company on a long night.", "A spark that makes ordinary days glow.", "And one very rare, very bright star."],
+    "close": "Out of billions of stars, we are so glad we found you, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "Sealed under the stars",
+    "title": "Our promises for your new year",
+    "items": ["To look up at the night sky with you.", "To celebrate every one of your wins.", "To laugh at your horoscope with you.", "To be there whatever the stars say.", "To love you to the Moon and beyond."],
+    "hand": "Signed under a sky full of stars, {from}"
+  },
+  "awards": [["Brightest star in the sky", "Confirmed by telescope"], ["Strongest gravitational pull", "Everyone orbits you"], ["Best birthday of the year", "Written in the stars"], ["Lifetime achievement", "In being dazzling"]],
+  "vouchers": [["A night of stargazing", "Blankets and hot drinks included"], ["Breakfast in bed", "Served at a cosmic hour"], ["A day of your choosing", "The universe is yours"], ["One wish granted", "No shooting star needed"]],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "The Brightest Star in the Sky",
+  "certLine": "is officially, by order of the whole cosmos,",
+  "perfume": "Top notes of moonlight and birthday cake. A heart of pure stardust.",
+  "news": { "edition": "Cosmic birthday edition", "headline": "{who} turns {age}, universe celebrates", "lead": "Astronomers report a sudden rise in sparkle across the night sky, which experts have traced to the birthday of one {sign} called {who}.", "weather": "Weather: clear skies and a 100% chance of shooting stars" },
+  "passport": { "kicker": "Official documents", "head": "Passport to the stars", "nationality": "Citizen of the cosmos", "job": "Professional star", "stamps": ["The Moon", "{sign} season", "The Milky Way"] },
+  "movie": { "sub": "Born to shine", "soon": "Showing tonight under the stars", "reviews": [["Out of this world", "The Daily Comet"], ["A total supernova", "Everyone who knows them"], ["Stellar from start to finish", "The Group Chat"]] },
+  "quizTitle": "The cosmic quiz",
+  "quiz": [["How long does sunlight take to reach Earth?", ["About eight seconds", "About eight minutes", "About eight hours"], 1], ["Which planet did William Herschel discover in 1781?", ["Uranus", "Mars", "Saturn"], 0]],
+  "words": ["STARS", "MOON", "COMET", "GALAXY", "ORBIT", "PLANET"],
+  "note": {
+    "title": "What we believe about stars",
+    "contents": "A note for you",
+    "paras": [
+      "We make magazines for a living, but some feel different. This was one of them.",
+      "Horoscopes are a bit of fun. But here is something true: you are made of atoms forged in stars billions of years ago, and they came together, against all the odds, as you.",
+      "{who}, someone wanted you to have something special. Not a card anyone could buy, but pages full of you: your face, your sparkle, the little things that make you, you.",
+      "That someone is {from}. And from everything they told us, you light up their whole sky."
+    ],
+    "wish": "Happy birthday, {who}. Keep shining."
+  }
+}

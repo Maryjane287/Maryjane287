@@ -1,0 +1,96 @@
+{
+  "theme": "night",
+  "fields": [
+    { "id": "s_ordinary", "chapter": "The best ordinary day", "label": "The best ordinary day of the year", "example": "A rainy Sunday building a blanket fort", "max": 70 },
+    { "id": "s_firsts", "chapter": "Our first time", "label": "Something you did for the first time", "example": "Mia tried sushi and loved it", "max": 70 },
+    { "id": "s_learned", "chapter": "What this year taught us", "label": "What this year taught you", "example": "That the best plans are the ones that go wrong", "max": 70 },
+    { "id": "s_wish", "label": "A wish or promise for next year", "example": "More weekends away, all together", "max": 70 }
+  ],
+  "labels": { "year": "The year", "adventure": "The biggest adventure", "proud": "The proudest moment", "word": "Word of the year" },
+  "toc": "A one of a kind year in review, made for {who} with love from {from}.",
+  "story": {
+    "legend": "A few more bits of your year",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely ones we have written for you.",
+    "kicker": "Our year",
+    "title": "The Story of {year}",
+    "hand": "Not bad for one year. Imagine what comes next."
+  },
+  "picks": {
+    "legend": "Ten things you loved about this year",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we loved about {year}",
+    "items": ["Sunday mornings in pyjamas", "Our terrible singing in the car", "Kitchen dance parties", "Every muddy walk", "Film nights under one blanket", "The jokes nobody else gets", "Birthday breakfasts", "Laughing until we cried", "Board games that ended in drama", "Rainy day pancakes", "Everyone talking at once", "How we cheered each other on", "Long dinners nobody wanted to end", "Sleepy car journeys home", "Hugs at the front door", "Always saving each other a seat", "The plans that went wrong", "Lazy days with nowhere to be", "The photos we will keep forever", "Simply being us"]
+  },
+  "timeline": {
+    "kicker": "New years through the ages",
+    "title": "A Short History of New Year",
+    "items": [
+      ["c. 2000 BC", "The first resolutions", "In ancient Babylon, people welcomed the new year by promising the gods to pay debts and return what they borrowed."],
+      ["45 BC", "Hello, January", "The Julian calendar began the year on 1 January, named after Janus, the god who looks back and forward."],
+      ["1788", "Auld Lang Syne", "Robert Burns sent off the words of a song about old friends and days gone by. Now the world sings it at midnight."],
+      ["1927", "A year in one name", "A magazine first chose one person to sum up a whole year. The tradition still runs today."]
+    ],
+    "today": ["{year}", "{who}", "Not in the history books yet. But for us, the year that mattered most."]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Time",
+    "items": [
+      ["We do not remember days, we remember moments.", "Cesare Pavese"],
+      ["The days are long, but the years are short.", "Gretchen Rubin"],
+      ["Ring out the old, ring in the new, ring, happy bells, across the snow.", "Alfred, Lord Tennyson, In Memoriam, 1850"],
+      ["Life can only be understood backwards; but it must be lived forwards.", "Søren Kierkegaard"]
+    ],
+    "hand": "They all say it beautifully. We just say: what a year."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of a Year",
+    "items": [
+      ["globe", "A long way round", "In one year, the Earth carried you all about 940 million kilometres around the sun."],
+      ["heart", "Busy hearts", "A heart beats roughly 35 million times a year. Plenty of those were for each other."],
+      ["smile", "Better together", "People are far more likely to laugh with others than alone. Laughter is made for sharing."],
+      ["clock", "Why new things matter", "Busy years full of new experiences feel longer when we look back. So every adventure counts."],
+      ["leaf", "A smell, a memory", "Smell is closely tied to memory. One scent can bring back a moment from years ago."],
+      ["sun", "The extra quarter", "A year is about 365 and a quarter days long. That is why we get a leap year every four years."]
+    ],
+    "hand": "Science can measure a year. It cannot measure how much happened in this one."
+  },
+  "world": {
+    "kicker": "A toast from all of us",
+    "title": "Why the World Was Better This Year",
+    "lead": "Because of you, {year} got:",
+    "items": ["A kitchen that was never quiet.", "More laughter than any year deserves.", "Muddy boots by the door, and happy faces.", "People who turned up for each other.", "Small kindnesses nobody else noticed.", "Stories that will be told for years.", "And proof that the best things are done together."],
+    "close": "{year} was better because of you, {who}. Here is to the next one."
+  },
+  "promises": {
+    "field": "s_wish",
+    "kicker": "For the year ahead",
+    "title": "Our promises for next year",
+    "items": ["To say yes to more adventures.", "To laugh at ourselves, often.", "To put the phones down at dinner.", "To keep turning up for each other.", "To make next year even better."],
+    "hand": "Signed with love, {from}"
+  },
+  "awardsKicker": "Live from the {year} awards",
+  "awards": [["Best laugh of the year", "Heard from next door"], ["Most dramatic board game", "Still not over it"], ["Team of the year", "Unanimous"], ["Lifetime achievement", "In being wonderful"]],
+  "vouchers": [["A family film night", "Snacks and blankets included"], ["One lazy Sunday", "No plans, no alarms"], ["A day out together", "Your choice, our treat"], ["Breakfast for everyone", "Pancakes, obviously"]],
+  "vouchersTitle": "Vouchers for {who}",
+  "certLine": "officially made {year}",
+  "cert": "The Best Year Yet",
+  "perfume": "Top notes of muddy walks, hot chocolate and laughter. A heart of pure togetherness.",
+  "news": { "edition": "Year in review edition", "headline": "{who} have a year to remember", "lead": "Sources confirm that {year} was full of adventures, giggles and at least one disaster everyone now finds hilarious.", "weather": "Weather: bright, with a 100% chance of another great year" },
+  "passport": { "kicker": "Official documents", "head": "Passport to the year ahead", "nationality": "Loved, everywhere", "job": "Making memories", "stamps": ["{year}", "Home", "Next adventure"] },
+  "movie": { "sub": "The year in review", "soon": "The sequel arrives next year", "reviews": [["The feel good film of the year", "The Daily Hug"], ["Funny, messy and full of heart", "Everyone who was there"], ["We want a sequel", "The Family Group Chat"]] },
+  "quiz": [["How far does the Earth travel around the sun in a year?", ["About 940 million km", "About 9,000 km", "About 1 million km"], 0], ["Who sent off the words of Auld Lang Syne in 1788?", ["Charles Dickens", "Robert Burns", "William Shakespeare"], 1]],
+  "words": ["YEAR", "FAMILY", "MEMORIES", "CHEERS", "LAUGH", "TOGETHER"],
+  "note": {
+    "title": "What we believe a year is",
+    "contents": "A note for you",
+    "paras": [
+      "We make magazines for a living, and every December the year in review issues are the ones that make us smile most.",
+      "We believe a year is not only the big headlines. It is the ordinary Tuesdays, the burnt toast, the singing in the car, the hugs in the hallway. The little things that turn out to be the big ones.",
+      "{who}, someone wanted to keep this year safe. Not lost in a camera roll, but printed on pages you can pass around the table, laugh at and keep.",
+      "That someone is {from}. And from everything they told us, it was a year full of love."
+    ],
+    "wish": "Happy new year, {who}. May the next one be even better."
+  }
+}

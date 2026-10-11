@@ -1,0 +1,94 @@
+{
+  "theme": "candy",
+  "fields": [
+    { "id": "s_learned", "chapter": "The biggest thing we learned", "label": "The biggest thing your child learned this year", "example": "That being brave means trying, even when it is hard", "max": 80 },
+    { "id": "s_kind", "chapter": "A kindness we will never forget", "label": "A kindness you will never forget", "example": "Sitting with Leo on his first wobbly morning", "max": 80 },
+    { "id": "s_class", "chapter": "Our classroom in three words", "label": "Their classroom in three words", "example": "Bright, busy, happy", "max": 40 },
+    { "id": "s_promise", "label": "A promise to them", "example": "To keep reading every single night", "max": 70 }
+  ],
+  "story": {
+    "legend": "A few more things about this year",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely ones we have written for them.",
+    "kicker": "Our year together",
+    "title": "Everything You Gave Us",
+    "hand": "And that is only one year of everything {who} has given us. We will carry it for many more."
+  },
+  "labels": { "year": "Our school year", "says": "You always say", "lesson": "Our favourite lesson", "power": "Your superpower", "words": "You in three words" },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we love about you",
+    "items": ["Your fun lessons", "The way you believe in us", "Your story time voices", "How you make mistakes OK", "Your gold stars and stickers", "How you know when we are sad", "Your endless patience", "The way you make us laugh", "How you learn all our names", "Your science experiments", "How you make us feel brave", "The way you listen to us", "Your amazing classroom", "How you never give up on anyone", "The way you cheer us on", "Your kindness to everyone", "How you make learning an adventure", "The way you notice little things", "How proud you make us feel", "Simply being our teacher"]
+  },
+  "timeline": {
+    "kicker": "Teachers through the ages",
+    "title": "A Short History of Great Teaching",
+    "items": [
+      ["1088", "The oldest university", "The University of Bologna opened its doors. It is still teaching students today."],
+      ["1837", "A garden of children", "Friedrich Froebel opened a school for little ones built on play. He called it a kindergarten."],
+      ["1907", "Learning by doing", "Maria Montessori opened her first school in Rome, letting children learn through curious hands."],
+      ["1994", "A day for teachers", "UNESCO made 5 October World Teachers' Day, to thank teachers all over the world."]
+    ],
+    "today": ["{year}", "{who}", "Not in the history books yet. But in ours, the best teacher there ever was."]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Teachers",
+    "items": [
+      ["One child, one teacher, one book, one pen can change the world.", "Malala Yousafzai, 2013"],
+      ["While we teach, we learn.", "Seneca, Letters to Lucilius"],
+      ["If I have seen further it is by standing on the shoulders of Giants.", "Isaac Newton, 1675"],
+      ["Teachers open the door, but you must enter by yourself.", "An old Chinese saying"]
+    ],
+    "hand": "They all say it beautifully. We just say: thank you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Learning",
+    "items": [
+      ["spark", "Growing brains", "By around age six, a child's brain is already about ninety percent of its adult size."],
+      ["key", "Mistakes help", "Making a mistake and then fixing it is one of the best ways the brain learns something new."],
+      ["star", "Praise for trying", "Studies show children praised for effort are more willing to take on hard problems."],
+      ["moon", "Learning in your sleep", "Sleep helps the brain store what we learned that day. Bedtime is homework too."],
+      ["book", "Teach to learn", "Explaining something to someone else helps you remember it better yourself."],
+      ["leaf", "Children's garden", "Kindergarten is German for children's garden: a place where little minds can grow."]
+    ],
+    "hand": "Science can explain a lot. It still cannot explain how {who} made every single one of us feel special."
+  },
+  "world": {
+    "kicker": "A thank you from all of us",
+    "title": "Why the World Is Better With You in It",
+    "lead": "Because of you, the world got:",
+    "items": ["Children who believe they can do hard things.", "A classroom where every voice is heard.", "Lessons we will remember when we are grown.", "Someone who sees the best in every child.", "Patience that could fill a whole school.", "Readers, thinkers, makers and dreamers.", "And the best teacher we could have asked for."],
+    "close": "The world is better because of you, {who}. Our school days most of all."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises to you",
+    "items": ["To keep asking big questions.", "To be kind, like you taught us.", "To keep trying, even when it is hard.", "To read, read and read some more.", "To remember you, always, wherever we go."],
+    "hand": "Signed with love, {from}"
+  },
+  "awards": [["Teacher of the year", "Class of {year}"], ["Most patient human alive", "By a landslide"], ["Best story time voices", "Unanimous"], ["Lifetime achievement", "In changing lives"]],
+  "vouchers": [["One quiet cup of tea", "Hot, and not reheated"], ["A whole weekend off", "No marking allowed"], ["Our best behaviour", "For one whole day"], ["One giant thank you hug", "From the whole class"]],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "The Best Teacher in the World",
+  "awardsKicker": "Live from the school hall",
+  "perfume": "Top notes of fresh pencils, gold stars and endless patience. A heart of pure gold.",
+  "news": { "edition": "End of year edition", "headline": "{who} voted teacher of the year", "lead": "Sources close to the classroom confirm that {who} has, once again, turned ordinary days into adventures and made every child feel clever.", "weather": "Weather: bright, with scattered gold stars" },
+  "passport": { "kicker": "Official documents", "head": "Passport to a world of learning", "nationality": "Loved, everywhere", "job": "Changer of young lives", "stamps": ["Class of {year}", "Story time", "Top of the class"] },
+  "movie": { "sub": "The teacher who changed everything", "soon": "Showing forever, in our hearts", "reviews": [["We laughed, we learned, we never forgot", "The Daily Gold Star"], ["A true hero of the classroom", "Every child who met them"], ["Top marks from start to finish", "The School Gate"]] },
+  "quiz": [["What does the word kindergarten mean in German?", ["Children's garden", "Little school", "Play house"], 0], ["Which day is World Teachers' Day?", ["1 January", "5 October", "25 December"], 1]],
+  "words": ["TEACHER", "LEARN", "CLASS", "THANKS", "BOOKS", "STARS"],
+  "note": {
+    "title": "What we believe a teacher is",
+    "contents": "A note for you",
+    "paras": [
+      "We make magazines for a living, but some feel different. This was one of them.",
+      "We believe a great teacher is not only lessons and marking. A great teacher is the smile at the door, the patience on a hard morning, and the moment a child realises: I can do this.",
+      "{who}, someone wanted you to have something special. Not a mug or a card, but pages full of you: your words, your lessons, the little things that made this year magic.",
+      "That someone is {from}. And from everything they told us, you made a difference that will last a lifetime."
+    ],
+    "wish": "Thank you, {who}. For everything, always."
+  }
+}
