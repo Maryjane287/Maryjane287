@@ -262,3 +262,11 @@ PINTEREST TAG: build.py PINTEREST_TAG (empty = off). When set, every page asks f
   Owner reads them in the Firebase console. localStorage pp-club='1' marks a joined visitor.
 - Owner bought printpalskids.club (Namecheap, email forwarding set up). Site contact stays the Gmail address.
   Later: MailerLite or similar for sending, once there is money/time.
+
+PINTEREST STATUS (15 Oct 2026): the owner has uploaded ONLY 100 pins in total (27 Sep: part-1 65 + 35 of UPLOAD-TODAY; they ran
+29 Sep to 11 Oct). The 4-October file and the 19-October File 2 were never uploaded; all old CSVs are now in pinterest/old.
+Next file: pinterest/PrintPals-pins-3-UPLOAD-BY-16-October-2026.csv (100 pins, 17 to 30 Oct, 7 a day: 2 Kids Club, 29 Halloween
+and autumn, 15 Christmas/Diwali, 54 others, no product twice on a day). 313 pins still waiting in next-file-start.json
+(no pin ever uploaded is in it). Next file due about 30 Oct for 31 Oct to 13 Nov. Kids Club pins: pins/b-kidsclub(-2).jpg made by
+scratchpad pinterest/kc_pins.js from the live preview. seriesCover (tools23.js) now shrinks bubbles on short paper (Kids Club
+cover list overlapped the name line on US Letter). VERSION 63.

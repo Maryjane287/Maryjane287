@@ -7,7 +7,10 @@ function seriesCover(paper, kicker, title, sub, bubbles, ring, tint, owner, insi
   pg.add(txt(pg.w / 2, pg.m + 22, kicker, 6, { font: FONT, colour: SOFT }).replace('<text ', '<text letter-spacing="2" '));
   bubbleText(pg, title, pg.w / 2, pg.m + 48, pg.width - 40, 24);
   pg.add(txt(pg.w / 2, pg.m + 64, sub, fitFont(sub, 9, pg.width - 40, 0.55), { colour: ring }));
-  const cols = bubbles.length > 6 ? 4 : 3, r = bubbles.length > 6 ? 17 : 20;
+  const cols = bubbles.length > 6 ? 4 : 3, rowsB = Math.ceil(bubbles.length / cols), rowsI = inside && inside.length ? Math.ceil(inside.length / 2) : 0;
+  // Shorter paper (US Letter) gets slightly smaller circles, so the list never reaches the name line.
+  let r = bubbles.length > 6 ? 17 : 20;
+  while (r > 12 && pg.m + 100 + rowsB * (r * 2 + 10) - 4 + (rowsI ? 6 + rowsI * 13 : 0) > pg.bottom - 24) r -= 0.5;
   bubbles.forEach((s, i) => { const x = pg.left + ((i % cols) + 0.5) * pg.width / cols, y = pg.m + 100 + Math.floor(i / cols) * (r * 2 + 10); pg.add(`<circle cx="${x}" cy="${y}" r="${r}" fill="${TINTS[i % TINTS.length]}" stroke="${PALETTE[i % PALETTE.length]}" stroke-width="1.2"/>` + (/^\p{Extended_Pictographic}/u.test(s) ? emoji(s, x, y, r * 1.1) : txt(x, y + r * 0.36, s, fitFont(s, r, r * 1.6, 0.6), { colour: PALETTE[i % PALETTE.length] }))); });
   if (inside && inside.length) {
     const rows = Math.ceil(inside.length / 2), y0 = pg.m + 100 + Math.ceil(bubbles.length / cols) * (r * 2 + 10) - 4, ch = 13, bw = (pg.width - 60) / 2;

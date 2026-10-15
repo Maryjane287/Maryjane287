@@ -1,12 +1,693 @@
 [
  {
-  "Title": "Picture routine charts: Morning, bedtime and after school, in pictures",
-  "Media URL": "https://printpals.web.app/pins/b-routine.jpg",
-  "Pinterest board": "Printable Charts for Kids",
+  "Title": "Free Printable Weather Chart for Kids: Weekly and Monthly",
+  "Media URL": "https://printpals.web.app/pins/weather.jpg",
+  "Pinterest board": "Positive Parenting Printables",
   "Thumbnail": "",
-  "Description": "Make a free printable visual routine chart for your child: morning, bedtime or after school, with pictures for every step. Weekly tick chart or cut-out picture cards. Great for autism and ADHD. Free to print, no sign up, ready in seconds. Ages 2 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/visual-routine-chart",
-  "Keywords": "visual routine chart maker for kids, routine chart for kids, positive discipline, chore chart, reward chart, parenting tips, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+  "Description": "Free printable weather chart for kids: circle the weather each day of the week, then draw the weather for a whole month and count sunny, cloudy, rainy, windy, snowy and stormy days. Free to print, no sign up, ready in seconds. Ages 3 to 7. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/weather-chart-for-kids",
+  "Publish date": "2026-10-12T21:30:00",
+  "Keywords": "weather chart for kids, screen free activities, family traditions ideas, social emotional learning, positive parenting, montessori at home, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Classroom displays: A birthday chart, class jobs and name bunting from your class list",
+  "Media URL": "https://printpals.web.app/pins/b-displays.jpg",
+  "Pinterest board": "Homeschool Plans and Learning Packs",
+  "Thumbnail": "",
+  "Description": "Printable classroom displays made from your class list: a birthday chart with every child in their month, class job cards, and welcome bunting with a flag for every child. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 3 to 11. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/classroom-displays-printable",
+  "Publish date": "2026-10-23T22:45:00",
+  "Keywords": "printable classroom displays, homeschool planner, preschool curriculum, kindergarten homeschool, toddler learning activities, learning activities for kids, printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Classroom displays: Try it free for 7 days, no card needed",
+  "Media URL": "https://printpals.web.app/pins/b-displays-2.jpg",
+  "Pinterest board": "Homeschool Plans and Learning Packs",
+  "Thumbnail": "",
+  "Description": "Printable classroom displays made from your class list: a birthday chart with every child in their month, class job cards, and welcome bunting with a flag for every child. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 3 to 11. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/classroom-displays-printable",
+  "Publish date": "2026-10-24T09:30:00",
+  "Keywords": "printable classroom displays, homeschool planner, preschool curriculum, kindergarten homeschool, toddler learning activities, learning activities for kids, printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Pre-writing tracing lines: Help the bee reach the flower: lines, waves, zigzags and loops for ages",
+  "Media URL": "https://printpals.web.app/pins/b-prewriting.jpg",
+  "Pinterest board": "Handwriting and Tracing Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable pre-writing worksheets for ages 2 to 4: trace straight lines, bumps, waves, zigzags, castle lines and loops to help the bee reach the flower and the dog reach its bone. Free to print, no sign up, ready in seconds. Ages 2 to 4. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/pre-writing-tracing-lines",
+  "Publish date": "2026-10-24T11:30:00",
+  "Keywords": "pre-writing tracing lines for toddlers and preschool, handwriting practice, tracing worksheets, preschool worksheets, fine motor skills, kindergarten worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Scissor skills: Straight, zigzag and wavy lines, shapes and spirals to cut",
+  "Media URL": "https://printpals.web.app/pins/b-scissors.jpg",
+  "Pinterest board": "Handwriting and Tracing Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable scissor skills worksheets for toddlers and preschoolers: straight, zigzag and wavy lines, shapes to cut out and spirals. Help each animal reach its food!. Free to print, no sign up, ready in seconds. Ages 2 to 6. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/cutting-practice-worksheets",
+  "Publish date": "2026-10-24T13:15:00",
+  "Keywords": "cutting practice worksheets, handwriting practice, tracing worksheets, preschool worksheets, fine motor skills, kindergarten worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Alphabet tracing worksheets: Every letter A to Z with stroke order, a picture word and rows to trace",
+  "Media URL": "https://printpals.web.app/pins/b-letters.jpg",
+  "Pinterest board": "Handwriting and Tracing Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable alphabet tracing worksheets for every letter A to Z, with capital and small letters, stroke order and a picture word. Print one letter or the whole alphabet. Free to print, no sign up, ready in seconds. Ages 3 to 6. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/alphabet-tracing-worksheets",
+  "Publish date": "2026-10-24T15:30:00",
+  "Keywords": "alphabet tracing worksheets a to z, handwriting practice, tracing worksheets, preschool worksheets, fine motor skills, kindergarten worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "b and d mix-ups: The bed trick, tracing, find and colour and missing letters. Dyslexia friendly",
+  "Media URL": "https://printpals.web.app/pins/b-mixups.jpg",
+  "Pinterest board": "Handwriting and Tracing Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable worksheets to stop b and d (and p and q) mix-ups: the bed trick, tracing with stroke order, find and colour, and missing letter words. Choose cream, blue or green tinted paper. Free to print, no sign up, ready in seconds. Ages 5 to 7. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/b-d-reversal-worksheets",
+  "Publish date": "2026-10-24T17:45:00",
+  "Keywords": "b and d reversal worksheets, handwriting practice, tracing worksheets, preschool worksheets, fine motor skills, kindergarten worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Joined handwriting: Joined (cursive) writing with your own words: joins, tricky words and sentences",
+  "Media URL": "https://printpals.web.app/pins/b-joined.jpg",
+  "Pinterest board": "Handwriting and Tracing Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable joined handwriting (cursive) worksheets in the style taught in UK schools: practise common joins, Year 2 words, sentences or your own words, with a dotted trace and a green start dot. Free to print, no sign up, ready in seconds. Ages 6 to 9. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/joined-handwriting-worksheets",
+  "Publish date": "2026-10-24T19:30:00",
+  "Keywords": "joined handwriting worksheets, handwriting practice, tracing worksheets, preschool worksheets, fine motor skills, kindergarten worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Handwriting paper: Rainbow lines, four-line guides or plain lines, with a picture box",
+  "Media URL": "https://printpals.web.app/pins/b-writingpaper.jpg",
+  "Pinterest board": "Handwriting and Tracing Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable handwriting paper for kids: rainbow lines, four-line guides or plain lines in big, medium or small sizes, with an optional picture box and border. Free to print, no sign up, ready in seconds. Ages 4 to 9. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/handwriting-paper",
+  "Publish date": "2026-10-24T21:15:00",
+  "Keywords": "handwriting paper for kids, handwriting practice, tracing worksheets, preschool worksheets, fine motor skills, kindergarten worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Alphabets from around the world: 15 languages: Spanish, French, Polish, Welsh, Swahili, Yoruba",
+  "Media URL": "https://printpals.web.app/pins/b-alphabets.jpg",
+  "Pinterest board": "Handwriting and Tracing Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable alphabet charts and tracing sheets in 15 languages: Spanish, French, German, Italian, Portuguese, Polish, Turkish, Vietnamese, Filipino, Welsh, Swahili, Yoruba, Igbo, Hausa and Twi, with the special letters highlighted. Free to print, no sign up, ready in seconds. Ages 4 to 9. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/alphabet-in-other-languages",
+  "Publish date": "2026-10-24T22:45:00",
+  "Keywords": "alphabets in 15 languages, handwriting practice, tracing worksheets, preschool worksheets, fine motor skills, kindergarten worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Alphabet order: Missing letters, before and after, and putting words in ABC order",
+  "Media URL": "https://printpals.web.app/pins/b-abcorder.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable alphabet order worksheets: fill in the missing letters, write the letters before and after, and put picture words in ABC order. Small or capital letters. Free to print, no sign up, ready in seconds. Ages 4 to 6. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/alphabet-order-worksheets",
+  "Publish date": "2026-10-25T09:30:00",
+  "Keywords": "alphabet order worksheets, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "CVC words with pictures: Cat, dog, sun: sound it out, missing vowel, first sound, or cut and build",
+  "Media URL": "https://printpals.web.app/pins/b-cvc.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable CVC word worksheets with pictures: sound it out, missing vowel, first sound and cut and stick word building. Short a, e, i, o and u. Free to print, no sign up, ready in seconds. Ages 4 to 6. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/cvc-words-worksheets",
+  "Publish date": "2026-10-25T11:30:00",
+  "Keywords": "cvc words worksheets with pictures, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Phonics sounds: sh, ch, th, ck, ng and blends like cr and st, with pictures",
+  "Media URL": "https://printpals.web.app/pins/b-sounds.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable phonics worksheets for digraphs (sh, ch, th, wh, ck, ng) and blends (cr, st, sn, tr, fr, bl) with pictures: say the word, ring the sound and write it in. Free to print, no sign up, ready in seconds. Ages 5 to 7. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/phonics-digraphs-and-blends",
+  "Publish date": "2026-10-25T13:15:00",
+  "Keywords": "phonics digraphs and blends worksheets, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Word families: A word family house for -at, -an, -ig, -op, -ug and more",
+  "Media URL": "https://printpals.web.app/pins/b-families.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable word family worksheets with a word family house: -at, -an, -ig, -op, -ug, -en, -ot, -ing, -ake and -ell. Pictures, first letter boxes and writing lines. Free to print, no sign up, ready in seconds. Ages 5 to 7. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/word-families-worksheets",
+  "Publish date": "2026-10-25T15:30:00",
+  "Keywords": "word families worksheets, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Rhyming worksheets: Match the rhyming pictures or ring the one that rhymes",
+  "Media URL": "https://printpals.web.app/pins/b-rhyming.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable rhyming worksheets with pictures for preschool and reception: match the rhyming pairs or find the picture that rhymes. New sheet every click, answer key included. Free to print, no sign up, ready in seconds. Ages 4 to 6. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/rhyming-worksheets",
+  "Publish date": "2026-10-25T17:45:00",
+  "Keywords": "rhyming worksheets with pictures, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Syllables: clap the beats: Clap and count the beats in words, with bright pictures",
+  "Media URL": "https://printpals.web.app/pins/b-syllables.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable syllable worksheets with bright pictures: clap and count the beats, sort pictures into 1, 2 and 3 claps, or split words into syllables. With answer keys. Free to print, no sign up, ready in seconds. Ages 4 to 7. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/syllable-worksheets",
+  "Publish date": "2026-10-25T19:30:00",
+  "Keywords": "syllable worksheets, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Sight words worksheets: Read, trace, write and find. Dolch, Fry, UK Year 1 lists or your own words",
+  "Media URL": "https://printpals.web.app/pins/b-sight.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable sight word worksheets: read it, trace it, write it and find it. Dolch pre-primer, primer and first grade, Fry first 100, UK Year 1 common exception words, or your own list. Free to print, no sign up, ready in seconds. Ages 4 to 7. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/sight-words-worksheets",
+  "Publish date": "2026-10-25T21:15:00",
+  "Keywords": "sight words worksheets, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Colour words: Read, trace and write red, blue, green and more, then read and colour",
+  "Media URL": "https://printpals.web.app/pins/b-colourwords.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable colour words worksheets: learn to read and write red, blue, green and more with tracing and shapes to colour, or read the colour word and colour the picture. Free to print, no sign up, ready in seconds. Ages 3 to 5. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/colour-words-worksheets",
+  "Publish date": "2026-10-25T22:45:00",
+  "Keywords": "colour words worksheets, color words worksheets, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets"
+ },
+ {
+  "Title": "Spelling practice worksheets: Turn any spelling list into a look, trace and write sheet",
+  "Media URL": "https://printpals.web.app/pins/b-spelling.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "Turn any spelling list into a free printable handwriting worksheet. Each word is shown, traced and written alone. Great for weekly spelling tests and sight words. Free to print, no sign up, ready in seconds. Ages 5 to 9. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/spelling-practice-worksheets",
+  "Publish date": "2026-10-26T09:30:00",
+  "Keywords": "spelling practice worksheets, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Flashcard maker: Picture, alphabet, number and word cards. Double-sided if you like",
+  "Media URL": "https://printpals.web.app/pins/b-flashcards.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "Make free printable flashcards: animals, food, alphabet, numbers 0 to 20, sight words or your own words. Picture and word together, or double-sided with the word on the back. Free to print, no sign up, ready in seconds. Ages 2 to 7. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/flashcard-maker",
+  "Publish date": "2026-10-26T11:30:00",
+  "Keywords": "flashcards for kids, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Home language flashcards: Picture cards in English and your home language, any language at all",
+  "Media URL": "https://printpals.web.app/pins/b-homelang.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable bilingual picture flashcards: English with Spanish, French, German, Italian, Portuguese or Swahili, or type the words in any language your family speaks. Flashcards or a word mat. Free to print, no sign up, ready in seconds. Ages 2 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/bilingual-flashcards",
+  "Publish date": "2026-10-26T13:15:00",
+  "Keywords": "bilingual flashcards for kids, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Opposites: Big and small, hot and cold: match them or draw the opposite",
+  "Media URL": "https://printpals.web.app/pins/b-opposites.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable opposites worksheets with pictures: big and small, hot and cold, fast and slow, day and night. Match the opposites or draw the opposite. Free to print, no sign up, ready in seconds. Ages 3 to 6. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/opposites-worksheets",
+  "Publish date": "2026-10-26T15:30:00",
+  "Keywords": "opposites worksheets for preschool, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Position words: In, on, under, behind: circle, write or draw where it is",
+  "Media URL": "https://printpals.web.app/pins/b-position.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable position words worksheets: in, on, under, next to, behind, in front of, above and between, with cute animals and boxes. Circle, write or draw, with answer keys. Free to print, no sign up, ready in seconds. Ages 3 to 6. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/position-words-worksheets",
+  "Publish date": "2026-10-26T17:45:00",
+  "Keywords": "position words worksheets, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Sentence practice: Capital letters and full stops, mixed-up sentences and sentence starters",
+  "Media URL": "https://printpals.web.app/pins/b-sentences.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable sentence worksheets for Year 1 and 2: fix the sentence with a capital letter and full stop, unscramble mixed-up sentences, and finish the sentence. Answer key included. Free to print, no sign up, ready in seconds. Ages 5 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/sentence-worksheets",
+  "Publish date": "2026-10-26T19:30:00",
+  "Keywords": "sentence worksheets, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Story sequencing: Cut out the pictures and put them in order",
+  "Media URL": "https://printpals.web.app/pins/b-sequencing.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable picture sequencing worksheets: cut out the pictures and put them in order with first, next, then and last. Growing a flower, making a sandwich, a snowy day and more. Free to print, no sign up, ready in seconds. Ages 3 to 7. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/sequencing-worksheets",
+  "Publish date": "2026-10-26T21:15:00",
+  "Keywords": "sequencing worksheets for kids, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Reading comprehension: Little stories starring your child, with questions and answers",
+  "Media URL": "https://printpals.web.app/pins/b-comprehension.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable reading comprehension worksheets where your child is in the story: short stories for ages 5 to 7 and longer stories for ages 7 to 9, with tick box questions, a written answer, a drawing box and an answer key. Free to print, no sign up, ready in seconds. Ages 5 to 9. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/reading-comprehension-worksheets",
+  "Publish date": "2026-10-26T22:45:00",
+  "Keywords": "reading comprehension worksheets for kids, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Story sheets starring your child: Ten short stories where your child is the hero, with questions",
+  "Media URL": "https://printpals.web.app/pins/b-story.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable reading comprehension for early readers where your child is the hero of the story. Short stories, words to know, questions with pictures and a drawing box. Free to print, no sign up, ready in seconds. Ages 4 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/personalised-story-worksheets",
+  "Publish date": "2026-10-27T09:30:00",
+  "Keywords": "personalised reading comprehension worksheets, personalized reading comprehension worksheets, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets"
+ },
+ {
+  "Title": "Story writing: Story starters with pictures and word banks, or a comic strip",
+  "Media URL": "https://printpals.web.app/pins/b-storywriting.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable story writing worksheets: a picture box, words to help and a story starter to trace, or a comic strip with speech bubbles. Eight story ideas. Free to print, no sign up, ready in seconds. Ages 5 to 9. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/story-writing-worksheets",
+  "Publish date": "2026-10-27T11:30:00",
+  "Keywords": "story writing worksheets for kids, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Story dice: Picture dice to cut and fold, then roll and tell a story",
+  "Media URL": "https://printpals.web.app/pins/b-storydice.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable story dice: three picture dice to cut and fold (who, where and what), plus a story mat to draw and write the beginning, middle and end. Free to print, no sign up, ready in seconds. Ages 4 to 9. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/story-dice-printable",
+  "Publish date": "2026-10-27T13:15:00",
+  "Keywords": "story dice for kids, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Letter writing kit: Letter paper, a fold your own envelope and a how to guide",
+  "Media URL": "https://printpals.web.app/pins/b-letterkit.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "A free printable letter writing kit for children: pretty letter paper with \"Dear\" and \"Love from\", a fold your own envelope template and a simple guide to writing a letter. Free to print, no sign up, ready in seconds. Ages 5 to 11. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/letter-writing-kit-for-kids",
+  "Publish date": "2026-10-27T15:30:00",
+  "Keywords": "letter writing kit for kids, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Holiday diary: A travel journal with a page for every day away",
+  "Media URL": "https://printpals.web.app/pins/b-diary.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "A free printable holiday diary and travel journal for kids: a cover with their name, and a page for each day with date, weather, where we went, the best bit, feelings and a drawing box. Free to print, no sign up, ready in seconds. Ages 4 to 11. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/holiday-diary-for-kids",
+  "Publish date": "2026-10-27T17:45:00",
+  "Keywords": "holiday diary for kids, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Number tracing worksheets: Numbers 0 to 20 with ten frames, number words and stars to colour",
+  "Media URL": "https://printpals.web.app/pins/b-numbers.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable number tracing worksheets from 0 to 20 with ten frames, number words and counting. Great for preschool and kindergarten maths. Free to print, no sign up, ready in seconds. Ages 3 to 5. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/number-tracing-worksheets",
+  "Publish date": "2026-10-27T19:30:00",
+  "Keywords": "number tracing worksheets 0 to 20, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Ten frames: Count, show numbers, make 10 and count to 20",
+  "Media URL": "https://printpals.web.app/pins/b-tenframes.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable ten frame worksheets: count the dots, show a number, make 10 and count to 20 with double ten frames. With answer keys. Free to print, no sign up, ready in seconds. Ages 4 to 7. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/ten-frame-worksheets",
+  "Publish date": "2026-10-27T21:15:00",
+  "Keywords": "ten frame worksheets, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Patterns: what comes next?: What comes next? Picture and shape patterns in three levels",
+  "Media URL": "https://printpals.web.app/pins/b-patterns.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable pattern worksheets: what comes next with bright pictures or coloured shapes. AB, AAB, ABB and ABC patterns in three levels, with an answer key. Free to print, no sign up, ready in seconds. Ages 3 to 6. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/pattern-worksheets",
+  "Publish date": "2026-10-27T22:45:00",
+  "Keywords": "pattern worksheets for kids, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Number of the day: One number shown eight ways: words, ten frames, tally, number line and more",
+  "Media URL": "https://printpals.web.app/pins/b-numberday.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable number of the day worksheets: trace it, write it in words, ten frames, tally marks, one more and one less, odd or even, number line and draw it. Up to 20 or 100. Free to print, no sign up, ready in seconds. Ages 5 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/number-of-the-day",
+  "Publish date": "2026-10-28T09:30:00",
+  "Keywords": "number of the day worksheets, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Hundred square: 1 to 100 charts: missing numbers, patterns in 2s, 5s and 10s, and puzzles",
+  "Media URL": "https://printpals.web.app/pins/b-hundred.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable hundred squares (100 charts): a colourful full chart, missing numbers, a blank chart to fill, skip counting patterns in 2s, 3s, 5s and 10s, and hundred square puzzle pieces. Free to print, no sign up, ready in seconds. Ages 5 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/hundred-square-worksheets",
+  "Publish date": "2026-10-28T11:30:00",
+  "Keywords": "hundred square, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Greater than, less than: The hungry crocodile eats the bigger number: pictures, to 20 or to 100",
+  "Media URL": "https://printpals.web.app/pins/b-compare.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable greater than, less than and equal to worksheets with the hungry crocodile: compare groups of pictures, numbers to 20 or numbers to 100. Answer key included. Free to print, no sign up, ready in seconds. Ages 4 to 7. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/greater-than-less-than-worksheets",
+  "Publish date": "2026-10-28T13:15:00",
+  "Keywords": "greater than less than worksheets, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Number bonds: Part-whole circles to 5, 10 and 20, with pictures to count",
+  "Media URL": "https://printpals.web.app/pins/b-bonds.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable number bonds worksheets with part-whole circles and pictures to count. Number bonds to 5, 10, 20 or mixed, with an answer key. Free to print, no sign up, ready in seconds. Ages 4 to 7. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/number-bonds-worksheets",
+  "Publish date": "2026-10-28T15:30:00",
+  "Keywords": "number bonds worksheets to 5, 10 and 20, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Doubles and halves: Ladybird doubles, fair sharing and double and half facts",
+  "Media URL": "https://printpals.web.app/pins/b-doubles.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable doubles and halves worksheets: ladybird doubles, sharing treats fairly between two friends, and double and half number facts. With answer keys. Free to print, no sign up, ready in seconds. Ages 4 to 7. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/doubles-and-halves-worksheets",
+  "Publish date": "2026-10-28T17:45:00",
+  "Keywords": "doubles and halves worksheets, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Domino maths: Domino sums, missing dots and a full set to cut out",
+  "Media URL": "https://printpals.web.app/pins/b-dominoes.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable domino maths: count the dots and write the sum, draw the missing dots to make a number, or print a full double six domino set to cut out and play. Free to print, no sign up, ready in seconds. Ages 4 to 7. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/domino-maths-worksheets",
+  "Publish date": "2026-10-28T19:30:00",
+  "Keywords": "domino maths worksheets, domino math worksheets, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets"
+ },
+ {
+  "Title": "Maths minute: 30 quick facts in one minute, with a daily score tracker",
+  "Media URL": "https://printpals.web.app/pins/b-mathsminute.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable one minute maths drills: 30 quick facts for adding and taking away within 10 and 20, doubles and times tables, with a daily score tracker and answers. Free to print, no sign up, ready in seconds. Ages 5 to 10. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/maths-minute-worksheets",
+  "Publish date": "2026-10-28T21:15:00",
+  "Keywords": "maths minute worksheets, math minute worksheets, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets"
+ },
+ {
+  "Title": "Number lines: Missing numbers, and adding or taking away with jumps",
+  "Media URL": "https://printpals.web.app/pins/b-numberlines.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable number line worksheets: fill in the missing numbers to 10, 20 or 100, or add and take away by jumping along the line. Answer key with the jumps drawn. Free to print, no sign up, ready in seconds. Ages 5 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/number-line-worksheets",
+  "Publish date": "2026-10-28T22:45:00",
+  "Keywords": "number line worksheets, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Personalised maths word problems: Story sums starring your child and their friends, with pictures",
+  "Media URL": "https://printpals.web.app/pins/b-wordproblems.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Make free printable maths word problems starring your child and their friends. Adding, taking away and groups, with pictures and answer keys. Great for ages 5 to 8. Free to print, no sign up, ready in seconds. Ages 5 to 9. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/maths-word-problems",
+  "Publish date": "2026-10-29T09:30:00",
+  "Keywords": "personalised maths word problems for kids, personalized math word problems for kids, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets"
+ },
+ {
+  "Title": "Place value: Tens and ones with base ten blocks: count, draw and split numbers",
+  "Media URL": "https://printpals.web.app/pins/b-placevalue.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable place value worksheets with base ten blocks: count the tens and ones, draw them, or split numbers up to 50, 99 or 999. Answer key included. Free to print, no sign up, ready in seconds. Ages 6 to 9. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/place-value-worksheets",
+  "Publish date": "2026-10-29T11:30:00",
+  "Keywords": "place value worksheets, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Money worksheets in your currency: Count coins and notes in pounds, dollars, euros, naira, cedis",
+  "Media URL": "https://printpals.web.app/pins/b-money.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable counting money worksheets in your own currency: pounds, US dollars, euros, naira, cedis, shillings, rand, rupees and more. Count coins, make amounts, can I buy it. With answers. Free to print, no sign up, ready in seconds. Ages 5 to 9. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/money-worksheets",
+  "Publish date": "2026-10-29T13:15:00",
+  "Keywords": "money worksheets in your currency, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Savings jar: Colour a coin each time you save towards a goal",
+  "Media URL": "https://printpals.web.app/pins/b-savings.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "A free printable savings jar chart for children in your own currency: set a goal, colour a coin each time you save, plus spend, save and share jar labels. Free to print, no sign up, ready in seconds. Ages 4 to 12. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/savings-jar-chart-for-kids",
+  "Publish date": "2026-10-29T15:30:00",
+  "Keywords": "savings chart for kids, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Times tables worksheets: Practice sheets and mixed tests for 1 to 12, with answers and a certificate",
+  "Media URL": "https://printpals.web.app/pins/b-times.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable times tables worksheets from 1 to 12: practice sheets, mixed tests, missing number questions, answer keys and a personalised certificate. Free to print, no sign up, ready in seconds. Ages 6 to 10. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/times-tables-worksheets",
+  "Publish date": "2026-10-29T17:45:00",
+  "Keywords": "times tables worksheets, tests & certificates, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Telling the time worksheets: Clock faces from o'clock to 5 minutes. Read it or draw the hands",
+  "Media URL": "https://printpals.web.app/pins/b-clocks.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable telling the time worksheets with clock faces. O'clock, half past, quarter past and to, 5 minutes and 1 minute. Read the clock or draw the hands. Answer keys included. Free to print, no sign up, ready in seconds. Ages 5 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/telling-time-worksheets",
+  "Publish date": "2026-10-29T19:30:00",
+  "Keywords": "telling the time worksheets, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Make your own clock: A paper clock with moving hands, minutes and past and to",
+  "Media URL": "https://printpals.web.app/pins/b-clockcraft.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable paper clock for kids with cut-out hour and minute hands, minute numbers and past and to halves. Make your own clock to learn to tell the time. Free to print, no sign up, ready in seconds. Ages 4 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/paper-clock-craft",
+  "Publish date": "2026-10-29T21:15:00",
+  "Keywords": "paper clock craft, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Fractions worksheets: Halves, quarters and thirds: colour, name, equal parts and groups",
+  "Media URL": "https://printpals.web.app/pins/b-fractions.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable fractions worksheets: colour the fraction, name the shaded fraction, equal parts or not, and fractions of a group. Halves, quarters, thirds and eighths with answer keys. Free to print, no sign up, ready in seconds. Ages 5 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/fractions-worksheets",
+  "Publish date": "2026-10-29T22:45:00",
+  "Keywords": "fractions worksheets for kids, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Shapes and symmetry: Name and trace 2D shapes, or finish a mirror pattern",
+  "Media URL": "https://printpals.web.app/pins/b-shapes.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable 2D shapes worksheets: name the shapes and count sides and corners, trace shapes and their names, or finish a symmetry pattern on a mirror grid. Free to print, no sign up, ready in seconds. Ages 3 to 6. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/shapes-and-symmetry-worksheets",
+  "Publish date": "2026-10-30T09:30:00",
+  "Keywords": "2d shapes and symmetry worksheets, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Measuring: Real-size rulers in cm or inches, or count the cubes",
+  "Media URL": "https://printpals.web.app/pins/b-measuring.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable measuring worksheets with real-size rulers in centimetres or inches, or count the cubes. Pencils, crayons, paintbrushes and caterpillars to measure. Free to print, no sign up, ready in seconds. Ages 5 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/measuring-worksheets",
+  "Publish date": "2026-10-30T11:30:00",
+  "Keywords": "measuring worksheets, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Graphs and tally charts: Count the pictures, colour a bar graph or tally, then answer questions",
+  "Media URL": "https://printpals.web.app/pins/b-graphs.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable graph worksheets for kids: count the pictures, colour a bar graph or make a tally chart, then answer questions. Fruit, animals, toys and treats. Free to print, no sign up, ready in seconds. Ages 5 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/pictogram-and-bar-graph-worksheets",
+  "Publish date": "2026-10-30T13:15:00",
+  "Keywords": "bar graph and tally chart worksheets for kids, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Maze maker: A new maze every click, easy to hard, with solutions",
+  "Media URL": "https://printpals.web.app/pins/b-mazes.jpg",
+  "Pinterest board": "Screen Free Activities and Printable Games",
+  "Thumbnail": "",
+  "Description": "Make free printable mazes for kids in one click. Easy, medium and hard, 1, 2 or 4 mazes per page, fun characters and a solution page. A new maze every time. Free to print, no sign up, ready in seconds. Ages 3 to 9. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/maze-maker",
+  "Publish date": "2026-10-30T15:30:00",
+  "Keywords": "mazes for kids, screen free activities, printable games for kids, quiet time activities, rainy day activities, brain games for kids, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Dot to dot puzzles: Count in ones, twos, fives, tens or join the alphabet, from 10 to 50 dots",
+  "Media URL": "https://printpals.web.app/pins/b-dots.jpg",
+  "Pinterest board": "Screen Free Activities and Printable Games",
+  "Thumbnail": "",
+  "Description": "Free printable dot to dot puzzles for kids: stars, animals, rockets and more. Choose 10 to 50 dots and count in ones, twos, fives, tens or join the alphabet. Answer key included. Free to print, no sign up, ready in seconds. Ages 3 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/dot-to-dot-maker",
+  "Publish date": "2026-10-30T17:45:00",
+  "Keywords": "dot to dot printables for kids, screen free activities, printable games for kids, quiet time activities, rainy day activities, brain games for kids, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Matching worksheets: Pictures to words, big to little letters, counting, or match the shadow",
+  "Media URL": "https://printpals.web.app/pins/b-matching.jpg",
+  "Pinterest board": "Screen Free Activities and Printable Games",
+  "Thumbnail": "",
+  "Description": "Free printable matching worksheets: match pictures to words, big and little letters, count and match numbers, or match the shadow. New sheet every click, answer key included. Free to print, no sign up, ready in seconds. Ages 2 to 5. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/matching-worksheets",
+  "Publish date": "2026-10-30T19:30:00",
+  "Keywords": "matching worksheets for preschool, screen free activities, printable games for kids, quiet time activities, rainy day activities, brain games for kids, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Odd one out: Spot the one that does not belong, with bright pictures and answers",
+  "Media URL": "https://printpals.web.app/pins/b-oddone.jpg",
+  "Pinterest board": "Screen Free Activities and Printable Games",
+  "Thumbnail": "",
+  "Description": "Free printable odd one out worksheets with bright painted pictures: spot the different picture, or find the one that does not belong and say why. Three levels and an answer key. Free to print, no sign up, ready in seconds. Ages 3 to 7. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/odd-one-out-worksheets",
+  "Publish date": "2026-10-30T21:15:00",
+  "Keywords": "odd one out worksheets for kids, screen free activities, printable games for kids, quiet time activities, rainy day activities, brain games for kids, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Spot the difference: Two colourful pictures, 3 to 7 differences, new every click",
+  "Media URL": "https://printpals.web.app/pins/b-spotdiff.jpg",
+  "Pinterest board": "Screen Free Activities and Printable Games",
+  "Thumbnail": "",
+  "Description": "Free printable spot the difference puzzles for kids with colourful pictures. Easy, medium or hard, a brand new puzzle every click, with the answers circled. Free to print, no sign up, ready in seconds. Ages 3 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/spot-the-difference",
+  "Publish date": "2026-10-30T22:45:00",
+  "Keywords": "spot the difference printables for kids, screen free activities, printable games for kids, quiet time activities, rainy day activities, brain games for kids, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Word search maker: Type your own words and get a word search with an answer key in seconds",
+  "Media URL": "https://printpals.web.app/pins/b-wordsearch.jpg",
+  "Pinterest board": "Screen Free Activities and Printable Games",
+  "Thumbnail": "",
+  "Description": "Make your own word search puzzle for free. Type your words, choose the size and difficulty, and print with an answer key. Perfect for spelling lists, classrooms and parties. Free to print, no sign up, ready in seconds. Ages 5 to 10. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/word-search-maker",
+  "Publish date": "2026-10-31T09:30:00",
+  "Keywords": "word search maker, screen free activities, printable games for kids, quiet time activities, rainy day activities, brain games for kids, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Crossword maker: Type words and clues and get a numbered crossword with answers",
+  "Media URL": "https://printpals.web.app/pins/b-crossword.jpg",
+  "Pinterest board": "Screen Free Activities and Printable Games",
+  "Thumbnail": "",
+  "Description": "Make your own printable crossword puzzle for free. Type words and clues, and get a numbered crossword with an answer key and optional word bank. Perfect for spelling and topic words. Free to print, no sign up, ready in seconds. Ages 6 to 10. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/crossword-maker",
+  "Publish date": "2026-10-31T11:30:00",
+  "Keywords": "crossword maker for teachers and kids, screen free activities, printable games for kids, quiet time activities, rainy day activities, brain games for kids, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Secret code: Crack a picture or number code to read a secret message",
+  "Media URL": "https://printpals.web.app/pins/b-secretcode.jpg",
+  "Pinterest board": "Screen Free Activities and Printable Games",
+  "Thumbnail": "",
+  "Description": "Free printable secret code puzzles for kids: crack the picture code, number code or backwards alphabet to read kind messages, or type your own secret message. New code every click. Free to print, no sign up, ready in seconds. Ages 4 to 9. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/secret-code-worksheets",
+  "Publish date": "2026-10-31T13:15:00",
+  "Keywords": "secret code worksheets for kids, screen free activities, printable games for kids, quiet time activities, rainy day activities, brain games for kids, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Sudoku for kids: 4 by 4 picture puzzles for beginners and 6 by 6 for older children, easy to hard",
+  "Media URL": "https://printpals.web.app/pins/b-sudoku.jpg",
+  "Pinterest board": "Screen Free Activities and Printable Games",
+  "Thumbnail": "",
+  "Description": "Free printable sudoku for kids with pictures or numbers: 4x4 for beginners and 6x6 for older children, easy to hard, every puzzle checked to have one answer. Answer key included. Free to print, no sign up, ready in seconds. Ages 4 to 9. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/sudoku-for-kids",
+  "Publish date": "2026-10-31T15:30:00",
+  "Keywords": "picture sudoku for kids, screen free activities, printable games for kids, quiet time activities, rainy day activities, brain games for kids, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Picture bingo maker: Unique bingo cards for a whole class, each with a child's name. Pictures or",
+  "Media URL": "https://printpals.web.app/pins/b-bingo.jpg",
+  "Pinterest board": "Screen Free Activities and Printable Games",
+  "Thumbnail": "",
+  "Description": "Make free printable bingo cards for kids: animals, food, party pictures or your own sight words. Every card is different, with a name on each and calling cards to cut out. Free to print, no sign up, ready in seconds. Ages 3 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/picture-bingo-maker",
+  "Publish date": "2026-10-31T17:45:00",
+  "Keywords": "picture bingo card maker for kids, screen free activities, printable games for kids, quiet time activities, rainy day activities, brain games for kids, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Snakes and ladders: A new board every click, with a dice to fold and counters",
+  "Media URL": "https://printpals.web.app/pins/b-snakes.jpg",
+  "Pinterest board": "Screen Free Activities and Printable Games",
+  "Thumbnail": "",
+  "Description": "Free printable snakes and ladders board game with a new board every click, a dice to cut and fold, and counters to cut out. A colourful family game night in minutes. Free to print, no sign up, ready in seconds. Ages 4 to 10. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/snakes-and-ladders-printable",
+  "Publish date": "2026-10-31T19:30:00",
+  "Keywords": "snakes and ladders board game, screen free activities, printable games for kids, quiet time activities, rainy day activities, brain games for kids, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Road trip pack: Car bingo, noughts and crosses and dots and boxes for long journeys",
+  "Media URL": "https://printpals.web.app/pins/b-travel.jpg",
+  "Pinterest board": "Screen Free Activities and Printable Games",
+  "Thumbnail": "",
+  "Description": "Free printable road trip pack for kids: car journey bingo with pictures for two players, noughts and crosses grids and dots and boxes. Perfect for long car journeys. Free to print, no sign up, ready in seconds. Ages 4 to 10. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/road-trip-activity-pack",
+  "Publish date": "2026-10-31T21:15:00",
+  "Keywords": "road trip activities for kids, screen free activities, printable games for kids, quiet time activities, rainy day activities, brain games for kids, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Photo to colouring page: Your child, your pet, your family day out, turned into a colouring page.",
+  "Media URL": "https://printpals.web.app/pins/b-photo.jpg",
+  "Pinterest board": "Kids Crafts and Coloring Pages",
+  "Thumbnail": "",
+  "Description": "Turn any photo into a printable colouring page for free: your child, your pet, a family day out. Made inside your browser, so your photo never leaves your device. Free to print, no sign up, ready in seconds. Ages 2 to 10. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/photo-to-colouring-page",
+  "Publish date": "2026-10-31T22:45:00",
+  "Keywords": "turn a photo into a colouring page free, turn a photo into a coloring page free, art and craft activities, coloring pages for kids, kids crafts, crafts for kids, birthday party ideas, free printables for kids, educational activities for kids, printable worksheets"
+ },
+ {
+  "Title": "Colour by number: Colour the squares to reveal a picture. Numbers or sums",
+  "Media URL": "https://printpals.web.app/pins/b-colournum.jpg",
+  "Pinterest board": "Kids Crafts and Coloring Pages",
+  "Thumbnail": "",
+  "Description": "Free printable colour by number pages for kids: a heart, apple, house, fish, flower, star, cat, rainbow, butterfly, apple tree, rocket or duck appears as you colour. Choose numbers, adding sums or taking away sums. Free to print, no sign up, ready in seconds. Ages 4 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/colour-by-number",
+  "Publish date": "2026-11-01T09:30:00",
+  "Keywords": "colour by number printables for kids, color by number printables for kids, art and craft activities, coloring pages for kids, kids crafts, crafts for kids, birthday party ideas, free printables for kids, educational activities for kids, printable worksheets"
+ },
+ {
+  "Title": "Copy the picture: Copy a pixel picture square by square, or finish the other half",
+  "Media URL": "https://printpals.web.app/pins/b-gridcopy.jpg",
+  "Pinterest board": "Kids Crafts and Coloring Pages",
+  "Thumbnail": "",
+  "Description": "Free printable grid drawing worksheets: copy a pixel picture square by square, or colour the other half to finish a symmetrical picture. With grid letters and numbers to help. Free to print, no sign up, ready in seconds. Ages 4 to 9. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/grid-drawing-for-kids",
+  "Publish date": "2026-11-01T11:30:00",
+  "Keywords": "grid drawing worksheets for kids, art and craft activities, coloring pages for kids, kids crafts, crafts for kids, birthday party ideas, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "How to draw: Step by step drawing: cat, unicorn, robot, owl and more",
+  "Media URL": "https://printpals.web.app/pins/b-howtodraw.jpg",
+  "Pinterest board": "Kids Crafts and Coloring Pages",
+  "Thumbnail": "",
+  "Description": "Free printable step by step drawing guides for kids: how to draw a cat, owl, teddy, penguin, robot, frog, puppy, bunny, unicorn, ladybird, fish and rocket, with a big box to try it. Free to print, no sign up, ready in seconds. Ages 3 to 9. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/how-to-draw-for-kids",
+  "Publish date": "2026-11-01T13:15:00",
+  "Keywords": "step by step drawing for kids, art and craft activities, coloring pages for kids, kids crafts, crafts for kids, birthday party ideas, free printables for kids, educational activities for kids, printable worksheets, homeschool"
  },
  {
   "Title": "Free Times Tables Worksheets, Tests & Certificates",
@@ -15,6 +696,7 @@
   "Thumbnail": "",
   "Description": "Free printable times tables worksheets from 1 to 12: practice sheets, mixed tests, missing number questions, answer keys and a personalised certificate. Free to print, no sign up, ready in seconds. Ages 6 to 10. A4 and US Letter. Tap to make yours at PrintPals.",
   "Link": "https://printpals.web.app/times-tables-worksheets",
+  "Publish date": "2026-10-09T16:45:00",
   "Keywords": "times tables worksheets, tests & certificates, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
  },
  {
@@ -24,6 +706,7 @@
   "Thumbnail": "",
   "Description": "Free printable story writing worksheets: a picture box, words to help and a story starter to trace, or a comic strip with speech bubbles. Eight story ideas. Free to print, no sign up, ready in seconds. Ages 5 to 9. A4 and US Letter. Tap to make yours at PrintPals.",
   "Link": "https://printpals.web.app/story-writing-worksheets",
+  "Publish date": "2026-10-09T19:15:00",
   "Keywords": "story writing worksheets for kids, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
  },
  {
@@ -33,7 +716,127 @@
   "Thumbnail": "",
   "Description": "Free printable telling the time worksheets with clock faces. O'clock, half past, quarter past and to, 5 minutes and 1 minute. Read the clock or draw the hands. Answer keys included. Free to print, no sign up, ready in seconds. Ages 5 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
   "Link": "https://printpals.web.app/telling-time-worksheets",
+  "Publish date": "2026-10-09T21:45:00",
   "Keywords": "telling the time worksheets, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Free Printable Story Dice for Kids: Roll and Tell a Story",
+  "Media URL": "https://printpals.web.app/pins/storydice.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "Free printable story dice: three picture dice to cut and fold (who, where and what), plus a story mat to draw and write the beginning, middle and end. Free to print, no sign up, ready in seconds. Ages 4 to 9. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/story-dice-printable",
+  "Publish date": "2026-10-09T22:30:00",
+  "Keywords": "story dice for kids, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Free Printable Paper Clock Craft: Learn to Tell the Time",
+  "Media URL": "https://printpals.web.app/pins/clockcraft.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable paper clock for kids with cut-out hour and minute hands, minute numbers and past and to halves. Make your own clock to learn to tell the time. Free to print, no sign up, ready in seconds. Ages 4 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/paper-clock-craft",
+  "Publish date": "2026-10-10T12:15:00",
+  "Keywords": "paper clock craft, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Free Letter Writing Kit for Kids: Letter Paper, Envelope Template and Guide",
+  "Media URL": "https://printpals.web.app/pins/letterkit.jpg",
+  "Pinterest board": "Phonics and Reading Worksheets",
+  "Thumbnail": "",
+  "Description": "A free printable letter writing kit for children: pretty letter paper with \"Dear\" and \"Love from\", a fold your own envelope template and a simple guide to writing a letter. Free to print, no sign up, ready in seconds. Ages 5 to 11. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/letter-writing-kit-for-kids",
+  "Publish date": "2026-10-10T14:15:00",
+  "Keywords": "letter writing kit for kids, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Free Fractions Worksheets for Kids: Halves, Quarters, Thirds",
+  "Media URL": "https://printpals.web.app/pins/fractions.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable fractions worksheets: colour the fraction, name the shaded fraction, equal parts or not, and fractions of a group. Halves, quarters, thirds and eighths with answer keys. Free to print, no sign up, ready in seconds. Ages 5 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/fractions-worksheets",
+  "Publish date": "2026-10-10T16:45:00",
+  "Keywords": "fractions worksheets for kids, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Free 2D Shapes and Symmetry Worksheets: Name, Trace, Mirror",
+  "Media URL": "https://printpals.web.app/pins/shapes.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable 2D shapes worksheets: name the shapes and count sides and corners, trace shapes and their names, or finish a symmetry pattern on a mirror grid. Free to print, no sign up, ready in seconds. Ages 3 to 6. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/shapes-and-symmetry-worksheets",
+  "Publish date": "2026-10-10T19:15:00",
+  "Keywords": "2d shapes and symmetry worksheets, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Free Measuring Worksheets: Centimetres, Inches and Cubes",
+  "Media URL": "https://printpals.web.app/pins/measuring.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable measuring worksheets with real-size rulers in centimetres or inches, or count the cubes. Pencils, crayons, paintbrushes and caterpillars to measure. Free to print, no sign up, ready in seconds. Ages 5 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/measuring-worksheets",
+  "Publish date": "2026-10-10T21:45:00",
+  "Keywords": "measuring worksheets, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Free Bar Graph and Tally Chart Worksheets for Kids",
+  "Media URL": "https://printpals.web.app/pins/graphs.jpg",
+  "Pinterest board": "Math Worksheets for Kids",
+  "Thumbnail": "",
+  "Description": "Free printable graph worksheets for kids: count the pictures, colour a bar graph or make a tally chart, then answer questions. Fruit, animals, toys and treats. Free to print, no sign up, ready in seconds. Ages 5 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/pictogram-and-bar-graph-worksheets",
+  "Publish date": "2026-10-10T22:30:00",
+  "Keywords": "bar graph and tally chart worksheets for kids, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
+ },
+ {
+  "Title": "Little Learner Levels: Printable Learning Journey, Badges and Certificates for Kids",
+  "Media URL": "https://printpals.web.app/pins/levels.jpg",
+  "Pinterest board": "Homeschool Plans and Learning Packs",
+  "Thumbnail": "",
+  "Description": "Ten printable learning levels for children, from Pencil Pal to PrintPals Legend. Each level has five challenges, badges to colour and wear, and a certificate that points to the next level. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 3 to 8. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/little-learner-levels",
+  "Publish date": "2026-10-02T11:30:00",
+  "Keywords": "learning milestones for kids, preschool goals, kids achievement badges, reward certificates for kids, kindergarten readiness, learning journey, homeschool planner, educational activities for kids, printables for kids, positive parenting"
+ },
+ {
+  "Title": "Monthly Letters for Kids From Poppy: A Printable Letter and Challenge Every Month",
+  "Media URL": "https://printpals.web.app/pins/poppy.jpg",
+  "Pinterest board": "Positive Parenting Printables",
+  "Thumbnail": "",
+  "Description": "A personalised letter for your child every month from Poppy, the PrintPals friend, with a seasonal challenge, a challenge page and a page to write back. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 3 to 9. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/monthly-letters-from-poppy",
+  "Publish date": "2026-10-04T11:30:00",
+  "Keywords": "letters for kids, monthly activities for kids, kids pen pal, screen free activities, family traditions ideas, seasonal activities for kids, writing activities for kids, nature activities for kids, printables for kids, educational activities for kids"
+ },
+ {
+  "Title": "Printable Classroom Displays: Birthday Chart, Class Jobs and Welcome Bunting With Names",
+  "Media URL": "https://printpals.web.app/pins/displays.jpg",
+  "Pinterest board": "Printable Charts for Kids",
+  "Thumbnail": "",
+  "Description": "Printable classroom displays made from your class list: a birthday chart with every child in their month, class job cards, and welcome bunting with a flag for every child. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 3 to 11. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/classroom-displays-printable",
+  "Publish date": "2026-10-06T11:30:00",
+  "Keywords": "classroom decor, classroom birthday chart, classroom jobs chart, back to school classroom, teacher printables, classroom bunting, classroom organization, kindergarten classroom, teacher resources, printables for teachers"
+ },
+ {
+  "Title": "End of Year Memory Book for Every Child: Personalised, With Your Message",
+  "Media URL": "https://printpals.web.app/pins/yearbook.jpg",
+  "Pinterest board": "Homeschool Plans and Learning Packs",
+  "Thumbnail": "",
+  "Description": "A personalised end of year memory book for every child in your class: a named cover, a message from you, friends' signatures, what I learned, me at the start and now, and a certificate. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 4 to 11. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/end-of-year-memory-book-for-class",
+  "Publish date": "2026-10-10T11:30:00",
+  "Keywords": "end of year memory book, end of year activities, class memory book, teacher gifts to students, graduation keepsake, last day of school, teacher printables, classroom keepsake, printables for teachers, end of year student gifts"
+ },
+ {
+  "Title": "Picture routine charts: Morning, bedtime and after school, in pictures",
+  "Media URL": "https://printpals.web.app/pins/b-routine.jpg",
+  "Pinterest board": "Printable Charts for Kids",
+  "Thumbnail": "",
+  "Description": "Make a free printable visual routine chart for your child: morning, bedtime or after school, with pictures for every step. Weekly tick chart or cut-out picture cards. Great for autism and ADHD. Free to print, no sign up, ready in seconds. Ages 2 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
+  "Link": "https://printpals.web.app/visual-routine-chart",
+  "Keywords": "visual routine chart maker for kids, routine chart for kids, positive discipline, chore chart, reward chart, parenting tips, free printables for kids, educational activities for kids, printable worksheets, homeschool"
  },
  {
   "Title": "Adding and taking away: With answer keys for grown-ups",
@@ -45,33 +848,6 @@
   "Keywords": "addition and subtraction worksheets with answers, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
  },
  {
-  "Title": "Free Printable Story Dice for Kids: Roll and Tell a Story",
-  "Media URL": "https://printpals.web.app/pins/storydice.jpg",
-  "Pinterest board": "Phonics and Reading Worksheets",
-  "Thumbnail": "",
-  "Description": "Free printable story dice: three picture dice to cut and fold (who, where and what), plus a story mat to draw and write the beginning, middle and end. Free to print, no sign up, ready in seconds. Ages 4 to 9. A4 and US Letter. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/story-dice-printable",
-  "Keywords": "story dice for kids, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
- },
- {
-  "Title": "Free Printable Paper Clock Craft: Learn to Tell the Time",
-  "Media URL": "https://printpals.web.app/pins/clockcraft.jpg",
-  "Pinterest board": "Math Worksheets for Kids",
-  "Thumbnail": "",
-  "Description": "Free printable paper clock for kids with cut-out hour and minute hands, minute numbers and past and to halves. Make your own clock to learn to tell the time. Free to print, no sign up, ready in seconds. Ages 4 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/paper-clock-craft",
-  "Keywords": "paper clock craft, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
- },
- {
-  "Title": "Free Letter Writing Kit for Kids: Letter Paper, Envelope Template and Guide",
-  "Media URL": "https://printpals.web.app/pins/letterkit.jpg",
-  "Pinterest board": "Phonics and Reading Worksheets",
-  "Thumbnail": "",
-  "Description": "A free printable letter writing kit for children: pretty letter paper with \"Dear\" and \"Love from\", a fold your own envelope template and a simple guide to writing a letter. Free to print, no sign up, ready in seconds. Ages 5 to 11. A4 and US Letter. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/letter-writing-kit-for-kids",
-  "Keywords": "letter writing kit for kids, phonics activities, kindergarten reading, sight words, literacy activities, first grade reading, free printables for kids, educational activities for kids, printable worksheets, homeschool"
- },
- {
   "Title": "A personalised storybook: Eight stories to collect and colour",
   "Media URL": "https://printpals.web.app/pins/b-storybook.jpg",
   "Pinterest board": "Homeschool Plans and Learning Packs",
@@ -81,33 +857,6 @@
   "Keywords": "personalised storybook for kids, personalized storybook for kids, homeschool planner, preschool curriculum, kindergarten homeschool, toddler learning activities, learning activities for kids, printables for kids, educational activities for kids, printable worksheets"
  },
  {
-  "Title": "Free Fractions Worksheets for Kids: Halves, Quarters, Thirds",
-  "Media URL": "https://printpals.web.app/pins/fractions.jpg",
-  "Pinterest board": "Math Worksheets for Kids",
-  "Thumbnail": "",
-  "Description": "Free printable fractions worksheets: colour the fraction, name the shaded fraction, equal parts or not, and fractions of a group. Halves, quarters, thirds and eighths with answer keys. Free to print, no sign up, ready in seconds. Ages 5 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/fractions-worksheets",
-  "Keywords": "fractions worksheets for kids, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
- },
- {
-  "Title": "Free 2D Shapes and Symmetry Worksheets: Name, Trace, Mirror",
-  "Media URL": "https://printpals.web.app/pins/shapes.jpg",
-  "Pinterest board": "Math Worksheets for Kids",
-  "Thumbnail": "",
-  "Description": "Free printable 2D shapes worksheets: name the shapes and count sides and corners, trace shapes and their names, or finish a symmetry pattern on a mirror grid. Free to print, no sign up, ready in seconds. Ages 3 to 6. A4 and US Letter. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/shapes-and-symmetry-worksheets",
-  "Keywords": "2d shapes and symmetry worksheets, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
- },
- {
-  "Title": "Free Measuring Worksheets: Centimetres, Inches and Cubes",
-  "Media URL": "https://printpals.web.app/pins/measuring.jpg",
-  "Pinterest board": "Math Worksheets for Kids",
-  "Thumbnail": "",
-  "Description": "Free printable measuring worksheets with real-size rulers in centimetres or inches, or count the cubes. Pencils, crayons, paintbrushes and caterpillars to measure. Free to print, no sign up, ready in seconds. Ages 5 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/measuring-worksheets",
-  "Keywords": "measuring worksheets, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
- },
- {
   "Title": "Little Learner Levels: Badges and certificates for every level",
   "Media URL": "https://printpals.web.app/pins/b-levels.jpg",
   "Pinterest board": "Homeschool Plans and Learning Packs",
@@ -115,60 +864,6 @@
   "Description": "Ten printable learning levels for children, from Pencil Pal to PrintPals Legend. Each level has five challenges, badges to colour and wear, and a certificate that points to the next level. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 3 to 8. Tap to make yours at PrintPals.",
   "Link": "https://printpals.web.app/little-learner-levels",
   "Keywords": "little learner levels, homeschool planner, preschool curriculum, kindergarten homeschool, toddler learning activities, learning activities for kids, printables for kids, educational activities for kids, printable worksheets, homeschool"
- },
- {
-  "Title": "Free Bar Graph and Tally Chart Worksheets for Kids",
-  "Media URL": "https://printpals.web.app/pins/graphs.jpg",
-  "Pinterest board": "Math Worksheets for Kids",
-  "Thumbnail": "",
-  "Description": "Free printable graph worksheets for kids: count the pictures, colour a bar graph or make a tally chart, then answer questions. Fruit, animals, toys and treats. Free to print, no sign up, ready in seconds. Ages 5 to 8. A4 and US Letter. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/pictogram-and-bar-graph-worksheets",
-  "Keywords": "bar graph and tally chart worksheets for kids, math worksheets, kindergarten math, first grade math, math activities for kids, maths worksheets, free printables for kids, educational activities for kids, printable worksheets, homeschool"
- },
- {
-  "Title": "Little Learner Levels: Printable Learning Journey, Badges and Certificates for Kids",
-  "Media URL": "https://printpals.web.app/pins/levels.jpg",
-  "Pinterest board": "Homeschool Plans and Learning Packs",
-  "Thumbnail": "",
-  "Description": "Ten printable learning levels for children, from Pencil Pal to PrintPals Legend. Each level has five challenges, badges to colour and wear, and a certificate that points to the next level. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 3 to 8. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/little-learner-levels",
-  "Keywords": "learning milestones for kids, preschool goals, kids achievement badges, reward certificates for kids, kindergarten readiness, learning journey, homeschool planner, educational activities for kids, printables for kids, positive parenting"
- },
- {
-  "Title": "Monthly Letters for Kids From Poppy: A Printable Letter and Challenge Every Month",
-  "Media URL": "https://printpals.web.app/pins/poppy.jpg",
-  "Pinterest board": "Positive Parenting Printables",
-  "Thumbnail": "",
-  "Description": "A personalised letter for your child every month from Poppy, the PrintPals friend, with a seasonal challenge, a challenge page and a page to write back. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 3 to 9. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/monthly-letters-from-poppy",
-  "Keywords": "letters for kids, monthly activities for kids, kids pen pal, screen free activities, family traditions ideas, seasonal activities for kids, writing activities for kids, nature activities for kids, printables for kids, educational activities for kids"
- },
- {
-  "Title": "Printable Classroom Displays: Birthday Chart, Class Jobs and Welcome Bunting With Names",
-  "Media URL": "https://printpals.web.app/pins/displays.jpg",
-  "Pinterest board": "Printable Charts for Kids",
-  "Thumbnail": "",
-  "Description": "Printable classroom displays made from your class list: a birthday chart with every child in their month, class job cards, and welcome bunting with a flag for every child. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 3 to 11. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/classroom-displays-printable",
-  "Keywords": "classroom decor, classroom birthday chart, classroom jobs chart, back to school classroom, teacher printables, classroom bunting, classroom organization, kindergarten classroom, teacher resources, printables for teachers"
- },
- {
-  "Title": "Class Seasonal Books for Teachers: Personalised Christmas, Halloween, Easter and Diwali Books for",
-  "Media URL": "https://printpals.web.app/pins/classseason.jpg",
-  "Pinterest board": "Holiday Printables for Kids",
-  "Thumbnail": "",
-  "Description": "Paste your class list and get a personalised seasonal book for every child in one click: a named cover, colouring pages and a certificate. Christmas, Halloween, Diwali, Easter or spring. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 3 to 9. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/class-seasonal-books-for-teachers",
-  "Keywords": "christmas activities for classroom, class gifts from teacher, halloween classroom activities, teacher printables, personalized books for students, holiday classroom activities, teacher resources, classroom christmas, printables for teachers, educational activities for kids"
- },
- {
-  "Title": "End of Year Memory Book for Every Child: Personalised, With Your Message",
-  "Media URL": "https://printpals.web.app/pins/yearbook.jpg",
-  "Pinterest board": "Homeschool Plans and Learning Packs",
-  "Thumbnail": "",
-  "Description": "A personalised end of year memory book for every child in your class: a named cover, a message from you, friends' signatures, what I learned, me at the start and now, and a certificate. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 4 to 11. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/end-of-year-memory-book-for-class",
-  "Keywords": "end of year memory book, end of year activities, class memory book, teacher gifts to students, graduation keepsake, last day of school, teacher printables, classroom keepsake, printables for teachers, end of year student gifts"
  },
  {
   "Title": "Pocket Money Chart for Kids: Jobs That Earn, Spend Save Share Jars, Savings Goal Tracker, PrintPals",
@@ -223,96 +918,6 @@
   "Description": "A personalised pet diary for children with a real pet: a pet profile with a photo frame, four weeks of pet care charts, a vet and health log, a day in the life page, if my pet could talk, a pet owner promise and a Best Pet Carer award. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 4 to 11. Tap to make yours at PrintPals.",
   "Link": "https://printpals.web.app/my-pet-diary-for-kids",
   "Keywords": "my pet diary for kids, homeschool planner, preschool curriculum, kindergarten homeschool, toddler learning activities, learning activities for kids, printables for kids, educational activities for kids, printable worksheets, homeschool"
- },
- {
-  "Title": "Christmas Cards for Every Child in Your Class: Named Cards From the Teacher, Cards to Make, Gift",
-  "Media URL": "https://printpals.web.app/pins/xmascards.jpg",
-  "Pinterest board": "Homeschool Plans and Learning Packs",
-  "Thumbnail": "",
-  "Description": "A named Christmas card from you for every child in your class, with a colour-in front and a warm message inside, plus a card each child makes for their family and named gift tags. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 3 to 11. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/class-christmas-cards",
-  "Keywords": "christmas cards for every child in your class, homeschool planner, preschool curriculum, kindergarten homeschool, toddler learning activities, learning activities for kids, printables for kids, educational activities for kids, printable worksheets, homeschool"
- },
- {
-  "Title": "Class Calendar Christmas Gift: A Named Calendar Children Draw for Their Family, PrintPals Teacher",
-  "Media URL": "https://printpals.web.app/pins/classcalendar.jpg",
-  "Pinterest board": "Homeschool Plans and Learning Packs",
-  "Thumbnail": "",
-  "Description": "The classic Christmas gift for families: every child gets a named calendar for the new year with a cover and twelve month pages, each with a box for their own drawing, plus a monthly drawing plan for teachers. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 3 to 11. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/class-calendar-gift",
-  "Keywords": "class calendar christmas gift, homeschool planner, preschool curriculum, kindergarten homeschool, toddler learning activities, learning activities for kids, printables for kids, educational activities for kids, printable worksheets, homeschool"
- },
- {
-  "Title": "Christmas Show and Nativity Kit for Teachers: Cast List, Role Cards, Tickets, Programme",
-  "Media URL": "https://printpals.web.app/pins/xmasshow.jpg",
-  "Pinterest board": "Homeschool Plans and Learning Packs",
-  "Thumbnail": "",
-  "Description": "Everything for the class Christmas show or nativity: roles shared round your class list, a cast list, a named role card for every child, tickets, a programme with the whole cast, a poster, a rehearsal tracker and a Star Performer certificate for every child. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 3 to 9. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/christmas-show-kit",
-  "Keywords": "christmas show and nativity kit for teachers, homeschool planner, preschool curriculum, kindergarten homeschool, toddler learning activities, learning activities for kids, printables for kids, educational activities for kids, printable worksheets, homeschool"
- },
- {
-  "Title": "Class Advent Calendar for Teachers: 24 Classroom Christmas Activities, Daily Helper, Certificates",
-  "Media URL": "https://printpals.web.app/pins/classadvent.jpg",
-  "Pinterest board": "Homeschool Plans and Learning Packs",
-  "Thumbnail": "",
-  "Description": "A classroom advent countdown: 24 quick Christmas activity cards, a big countdown chart with a helper of the day from your class list, helper badges and a Christmas Star certificate for every child. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 3 to 11. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/class-advent-countdown",
-  "Keywords": "class advent calendar for teachers, homeschool planner, preschool curriculum, kindergarten homeschool, toddler learning activities, learning activities for kids, printables for kids, educational activities for kids, printable worksheets, homeschool"
- },
- {
-  "Title": "Class Christmas Cards: Named cards, cards to make and gift tags",
-  "Media URL": "https://printpals.web.app/pins/b-xmascards.jpg",
-  "Pinterest board": "Holiday Printables for Kids",
-  "Thumbnail": "",
-  "Description": "A named Christmas card from you for every child in your class, with a colour-in front and a warm message inside, plus a card each child makes for their family and named gift tags. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 3 to 11. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/class-christmas-cards",
-  "Keywords": "christmas cards for every child in your class, homeschool planner, preschool curriculum, kindergarten homeschool, toddler learning activities, learning activities for kids, printables for kids, educational activities for kids, printable worksheets, homeschool"
- },
- {
-  "Title": "Class Christmas Cards: Try the teacher plan free for 7 days",
-  "Media URL": "https://printpals.web.app/pins/b-xmascards-2.jpg",
-  "Pinterest board": "Holiday Printables for Kids",
-  "Thumbnail": "",
-  "Description": "A named Christmas card from you for every child in your class, with a colour-in front and a warm message inside, plus a card each child makes for their family and named gift tags. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 3 to 11. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/class-christmas-cards",
-  "Keywords": "christmas cards for every child in your class, homeschool planner, preschool curriculum, kindergarten homeschool, toddler learning activities, learning activities for kids, printables for kids, educational activities for kids, printable worksheets, homeschool"
- },
- {
-  "Title": "Class Calendar Gift: A named calendar each child draws",
-  "Media URL": "https://printpals.web.app/pins/b-classcalendar.jpg",
-  "Pinterest board": "Holiday Printables for Kids",
-  "Thumbnail": "",
-  "Description": "The classic Christmas gift for families: every child gets a named calendar for the new year with a cover and twelve month pages, each with a box for their own drawing, plus a monthly drawing plan for teachers. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 3 to 11. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/class-calendar-gift",
-  "Keywords": "class calendar christmas gift, homeschool planner, preschool curriculum, kindergarten homeschool, toddler learning activities, learning activities for kids, printables for kids, educational activities for kids, printable worksheets, homeschool"
- },
- {
-  "Title": "Class Calendar Gift: Try the teacher plan free for 7 days",
-  "Media URL": "https://printpals.web.app/pins/b-classcalendar-2.jpg",
-  "Pinterest board": "Holiday Printables for Kids",
-  "Thumbnail": "",
-  "Description": "The classic Christmas gift for families: every child gets a named calendar for the new year with a cover and twelve month pages, each with a box for their own drawing, plus a monthly drawing plan for teachers. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 3 to 11. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/class-calendar-gift",
-  "Keywords": "class calendar christmas gift, homeschool planner, preschool curriculum, kindergarten homeschool, toddler learning activities, learning activities for kids, printables for kids, educational activities for kids, printable worksheets, homeschool"
- },
- {
-  "Title": "Christmas Show Kit: Role cards, tickets, programme and certificates",
-  "Media URL": "https://printpals.web.app/pins/b-xmasshow.jpg",
-  "Pinterest board": "Holiday Printables for Kids",
-  "Thumbnail": "",
-  "Description": "Everything for the class Christmas show or nativity: roles shared round your class list, a cast list, a named role card for every child, tickets, a programme with the whole cast, a poster, a rehearsal tracker and a Star Performer certificate for every child. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 3 to 9. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/christmas-show-kit",
-  "Keywords": "christmas show and nativity kit for teachers, homeschool planner, preschool curriculum, kindergarten homeschool, toddler learning activities, learning activities for kids, printables for kids, educational activities for kids, printable worksheets, homeschool"
- },
- {
-  "Title": "Christmas Show Kit: Try the teacher plan free for 7 days",
-  "Media URL": "https://printpals.web.app/pins/b-xmasshow-2.jpg",
-  "Pinterest board": "Holiday Printables for Kids",
-  "Thumbnail": "",
-  "Description": "Everything for the class Christmas show or nativity: roles shared round your class list, a cast list, a named role card for every child, tickets, a programme with the whole cast, a poster, a rehearsal tracker and a Star Performer certificate for every child. Part of PrintPals Plus: try it free for 7 days, no card needed. Ages 3 to 9. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/christmas-show-kit",
-  "Keywords": "christmas show and nativity kit for teachers, homeschool planner, preschool curriculum, kindergarten homeschool, toddler learning activities, learning activities for kids, printables for kids, educational activities for kids, printable worksheets, homeschool"
  },
  {
   "Title": "Class Advent Countdown: Daily activities and a helper of the day",
@@ -1476,16 +2081,6 @@
   "Link": "https://printpals.web.app/pet-care-chart-for-kids",
   "Publish date": "2026-11-05T13:15:00",
   "Keywords": "pet care chart for kids, routine chart for kids, positive discipline, chore chart, reward chart, parenting tips, free printables for kids, educational activities for kids, printable worksheets, homeschool"
- },
- {
-  "Title": "Gratitude journal: Three good things, kindness and pride, one page a day",
-  "Media URL": "https://printpals.web.app/pins/b-gratitude.jpg",
-  "Pinterest board": "Printable Charts for Kids",
-  "Thumbnail": "",
-  "Description": "A free printable gratitude and happy journal for kids: three good things, a kind moment, something they are proud of and a picture every day, or a one page thankful week. Free to print, no sign up, ready in seconds. Ages 4 to 12. A4 and US Letter. Tap to make yours at PrintPals.",
-  "Link": "https://printpals.web.app/gratitude-journal-for-kids",
-  "Publish date": "2026-11-05T15:30:00",
-  "Keywords": "gratitude journal for kids, routine chart for kids, positive discipline, chore chart, reward chart, parenting tips, free printables for kids, educational activities for kids, printable worksheets, homeschool"
  },
  {
   "Title": "Certificates and awards: Star of the Week, Super Reader, Kindness Award and more, in four beautiful",

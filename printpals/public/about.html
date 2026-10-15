@@ -25,7 +25,7 @@
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="preload" href="/fonts/baloo2.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/site.css?v=62">
+<link rel="stylesheet" href="/css/site.css?v=63">
 
 </head>
 <body>
@@ -64,7 +64,7 @@ if(L||us===/^en-US/i.test(navigator.language))return;var o=document.querySelecto
 var b=document.createElement('div');b.className='lang-offer no-print';b.innerHTML=us?'🇬🇧 Hello! Would you prefer British English? Every worksheet changes too. <a class="btn" data-lang="uk" href="'+o.getAttribute('href')+'">Switch to UK English</a> <button type="button" class="linkish">Keep US English</button>':'🇺🇸 Hi there! PrintPals speaks American English too, and every worksheet changes with it. <a class="btn" data-lang="us" href="'+o.getAttribute('href')+'">Switch to US English</a> <button type="button" class="linkish">Keep UK English</button>';
 var h=document.querySelector('header.top');h.parentNode.insertBefore(b,h.nextSibling);
 b.querySelector('a').addEventListener('click',function(){try{localStorage.setItem('pp-lang',us?'uk':'us')}catch(e){}});
-b.querySelector('button').addEventListener('click',function(){try{localStorage.setItem('pp-lang',us?'us':'uk')}catch(e){}b.remove()})})()</script><script src="/js/club.js?v=62"></script><script>(function(){var K='pp-consent',c=null;try{c=localStorage.getItem(K)}catch(e){}
+b.querySelector('button').addEventListener('click',function(){try{localStorage.setItem('pp-lang',us?'us':'uk')}catch(e){}b.remove()})})()</script><script src="/js/club.js?v=63"></script><script>(function(){var K='pp-consent',c=null;try{c=localStorage.getItem(K)}catch(e){}
 function load(){!function(e){if(!window.pintrk){window.pintrk=function(){window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var n=window.pintrk;n.queue=[],n.version="3.0";var t=document.createElement("script");t.async=!0,t.src=e;var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
 pintrk('load','2612359097249');pintrk('page');pintrk('track','pagevisit');
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="buy.stripe.com"]');if(a)pintrk('track','checkout',{value:/aFa28/.test(a.href)?59:(/7sYcN/.test(a.href)?39:4.99),currency:'USD'})},true);}
