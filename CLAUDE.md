@@ -270,3 +270,6 @@ and autumn, 15 Christmas/Diwali, 54 others, no product twice on a day). 313 pins
 (no pin ever uploaded is in it). Next file due about 30 Oct for 31 Oct to 13 Nov. Kids Club pins: pins/b-kidsclub(-2).jpg made by
 scratchpad pinterest/kc_pins.js from the live preview. seriesCover (tools23.js) now shrinks bubbles on short paper (Kids Club
 cover list overlapped the name line on US Letter). VERSION 63.
+19 Oct: the old routine still said "upload File 2 on 19 Oct" (outdated, File 2 is in pinterest/old, never use it). Owner had not
+confirmed uploading the 16-Oct file, so pinterest/PrintPals-pins-3-NEW-DATES-UPLOAD-BY-20-October-2026.csv holds the SAME 100 pins
+re-dated 21 Oct to 2 Nov (Halloween by 30 Oct). She uploads ONE of the two, never both. Next file due about 30 Oct.
