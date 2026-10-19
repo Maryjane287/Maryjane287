@@ -273,3 +273,4 @@ cover list overlapped the name line on US Letter). VERSION 63.
 19 Oct: the old routine still said "upload File 2 on 19 Oct" (outdated, File 2 is in pinterest/old, never use it). Owner had not
 confirmed uploading the 16-Oct file, so pinterest/PrintPals-pins-3-NEW-DATES-UPLOAD-BY-20-October-2026.csv holds the SAME 100 pins
 re-dated 21 Oct to 2 Nov (Halloween by 30 Oct). She uploads ONE of the two, never both. Next file due about 30 Oct.
+Pin files for the owner can also be downloaded from https://printpals.web.app/downloads/<file>.csv (public/downloads, firebase.json sends them as attachments, noindex). The SendUserFile card did not open for her on 19 Oct.
