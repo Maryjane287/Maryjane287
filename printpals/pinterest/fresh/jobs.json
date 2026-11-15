@@ -1,0 +1,14 @@
+[
+ {"key":"christmas-3","id":"christmas","p":1,"c":"#2fa36b","hook":"24 days of family moments","head":"Christmas Advent book","sub":"A small moment together and a page for every day."},
+ {"key":"christmas-4","id":"christmas","p":9,"c":"#e5484d","hook":"A peek inside","head":"Christmas activity book","sub":"Colour, count and trace, one cosy page a day."},
+ {"key":"xmascards-3","id":"xmascards","p":3,"c":"#e5484d","hook":"For every child in your class","head":"Class Christmas cards","sub":"Each card has their name on the front."},
+ {"key":"xmascards-4","id":"xmascards","p":2,"c":"#2fa36b","hook":"A warm note inside","head":"Named Christmas cards","sub":"Type your class list once. Every card is ready."},
+ {"key":"classcalendar-3","id":"classcalendar","p":8,"c":"#7cc04a","hook":"The gift families keep","head":"Class calendar gift","sub":"A named 2027 calendar every child draws."},
+ {"key":"classcalendar-4","id":"classcalendar","p":2,"c":"#3fbfa8","hook":"A peek inside","head":"Draw one a day in December","sub":"Twelve month pages, each with a space to draw."},
+ {"key":"xmasshow-3","id":"xmasshow","p":2,"c":"#e5484d","hook":"Nativity or winter show","head":"Christmas show kit","sub":"Named role cards, tickets and a programme."},
+ {"key":"xmasshow-4","id":"xmasshow","p":7,"c":"#ffb938","hook":"Every child shines","head":"Star Performer awards","sub":"A named certificate for every child in the show."},
+ {"key":"classadvent-3","id":"classadvent","p":1,"c":"#2fa36b","hook":"Five minutes a day","head":"Class Advent countdown","sub":"A helper of the day from your class list."},
+ {"key":"classadvent-4","id":"classadvent","p":3,"c":"#e5484d","hook":"A peek inside","head":"24 Advent activity cards","sub":"From jumper day to a kindness note."},
+ {"key":"classseason-3","id":"classseason","p":1,"c":"#6c8cff","hook":"A book for every child","head":"Class Christmas books","sub":"Named covers, busy colouring scenes and a certificate."},
+ {"key":"winter-3","id":"winter","p":4,"c":"#3fb0e0","hook":"No snow needed","head":"Winter Wonderland pack","sub":"Roll a snowman, winter bingo and new year goals."}
+]

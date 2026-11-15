@@ -274,3 +274,10 @@ cover list overlapped the name line on US Letter). VERSION 63.
 confirmed uploading the 16-Oct file, so pinterest/PrintPals-pins-3-NEW-DATES-UPLOAD-BY-20-October-2026.csv holds the SAME 100 pins
 re-dated 21 Oct to 2 Nov (Halloween by 30 Oct). She uploads ONE of the two, never both. Next file due about 30 Oct.
 Pin files for the owner can also be downloaded from https://printpals.web.app/downloads/<file>.csv (public/downloads, firebase.json sends them as attachments, noindex). The SendUserFile card did not open for her on 19 Oct.
+
+PINTEREST FILE 4 (15 Nov 2026; the 30 Oct reminder fired 16 days late): owner never said which file 3 she uploaded (both ended by 2 Nov).
+pinterest/PrintPals-pins-4-UPLOAD-BY-16-November-2026.csv = 100 pins, 17 to 29 Nov, 8/7 a day, a Christmas pin every day:
+12 FRESH Christmas/winter pins (public/pins/b-<id>-3/-4.jpg, made by pinterest/fresh/grab.js + make.js from new pages) + 3 Christmas
+from the waiting list + 85 others. The fresh images are hosted on raw.githubusercontent.com (repo is public) because this machine had
+NO Firebase login, so the site was NOT deployed (public/downloads copy and the new pins go live on the next deploy). 225 pins still waiting
+(includes Easter/Mother's Day/Lunar New Year held for later). Next file due about 28 Nov for 30 Nov to 12 Dec.
