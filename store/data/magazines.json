@@ -175,7 +175,9 @@
           "words": "Cosy, chaotic, magical"
         },
         "photos": {
-          "photo1": "/assets/samples/christmas-magazine-0.jpg"
+          "photo1": "/assets/samples/christmas-magazine-0.jpg",
+          "photo2": "/assets/samples/christmas-magazine-0b.jpg",
+          "photo3": "/assets/samples/christmas-magazine-0c.jpg"
         }
       },
       {
@@ -387,7 +389,9 @@
           "words": "Kind, chaotic, magnificent"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-0.jpg"
+          "photo1": "/assets/samples/birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/birthday-magazine-0c.jpg"
         }
       },
       {
@@ -804,7 +808,9 @@
           "joke": "The Great Sofa Incident of 2021"
         },
         "photos": {
-          "photo1": "/assets/samples/anniversary-magazine-0.jpg"
+          "photo1": "/assets/samples/anniversary-magazine-0.jpg",
+          "photo2": "/assets/samples/anniversary-magazine-0b.jpg",
+          "photo3": "/assets/samples/anniversary-magazine-0c.jpg"
         }
       },
       {
@@ -995,7 +1001,9 @@
           "weather": "Sunny with a strong chance of cuddles"
         },
         "photos": {
-          "photo1": "/assets/samples/grandparents-newspaper-0.jpg"
+          "photo1": "/assets/samples/grandparents-newspaper-0.jpg",
+          "photo2": "/assets/samples/grandparents-newspaper-0b.jpg",
+          "photo3": "/assets/samples/grandparents-newspaper-0c.jpg"
         }
       },
       {
@@ -1189,7 +1197,9 @@
           "fact": "Once tried to post a letter to a real T rex"
         },
         "photos": {
-          "photo1": "/assets/samples/kids-magazine-0.jpg"
+          "photo1": "/assets/samples/kids-magazine-0.jpg",
+          "photo2": "/assets/samples/kids-magazine-0b.jpg",
+          "photo3": "/assets/samples/kids-magazine-0c.jpg"
         }
       },
       {
@@ -1390,7 +1400,9 @@
           "word": "Together"
         },
         "photos": {
-          "photo1": "/assets/samples/year-in-review-magazine-0.jpg"
+          "photo1": "/assets/samples/year-in-review-magazine-0.jpg",
+          "photo2": "/assets/samples/year-in-review-magazine-0b.jpg",
+          "photo3": "/assets/samples/year-in-review-magazine-0c.jpg"
         }
       },
       {
@@ -1599,7 +1611,9 @@
           "snack": "Anything you are eating"
         },
         "photos": {
-          "photo1": "/assets/samples/pet-magazine-0.jpg"
+          "photo1": "/assets/samples/pet-magazine-0.jpg",
+          "photo2": "/assets/samples/pet-magazine-0b.jpg",
+          "photo3": "/assets/samples/pet-magazine-0c.jpg"
         }
       },
       {
@@ -1811,7 +1825,9 @@
           "prediction": "A spontaneous trip and a very good haircut"
         },
         "photos": {
-          "photo1": "/assets/samples/star-sign-birthday-magazine-0.jpg"
+          "photo1": "/assets/samples/star-sign-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/star-sign-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/star-sign-birthday-magazine-0c.jpg"
         }
       },
       {
@@ -2028,7 +2044,9 @@
           "words": "Soppy, silly, soulmates"
         },
         "photos": {
-          "photo1": "/assets/samples/wedding-magazine-0.jpg"
+          "photo1": "/assets/samples/wedding-magazine-0.jpg",
+          "photo2": "/assets/samples/wedding-magazine-0b.jpg",
+          "photo3": "/assets/samples/wedding-magazine-0c.jpg"
         }
       },
       {
@@ -2222,7 +2240,9 @@
           "loves": "Milk, cuddles and the hoover noise"
         },
         "photos": {
-          "photo1": "/assets/samples/new-baby-magazine-0.jpg"
+          "photo1": "/assets/samples/new-baby-magazine-0.jpg",
+          "photo2": "/assets/samples/new-baby-magazine-0b.jpg",
+          "photo3": "/assets/samples/new-baby-magazine-0c.jpg"
         }
       },
       {
@@ -2409,7 +2429,9 @@
           "nick": "Little Chunk"
         },
         "photos": {
-          "photo1": "/assets/samples/first-birthday-magazine-0.jpg"
+          "photo1": "/assets/samples/first-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/first-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/first-birthday-magazine-0c.jpg"
         }
       },
       {
@@ -2601,7 +2623,9 @@
           "miss": "Your laugh down the corridor"
         },
         "photos": {
-          "photo1": "/assets/samples/retirement-magazine-0.jpg"
+          "photo1": "/assets/samples/retirement-magazine-0.jpg",
+          "photo2": "/assets/samples/retirement-magazine-0b.jpg",
+          "photo3": "/assets/samples/retirement-magazine-0c.jpg"
         }
       },
       {
@@ -2795,7 +2819,9 @@
           "words": "Clever, stubborn, unstoppable"
         },
         "photos": {
-          "photo1": "/assets/samples/graduation-magazine-0.jpg"
+          "photo1": "/assets/samples/graduation-magazine-0.jpg",
+          "photo2": "/assets/samples/graduation-magazine-0b.jpg",
+          "photo3": "/assets/samples/graduation-magazine-0c.jpg"
         }
       },
       {
@@ -2982,7 +3008,9 @@
           "words": "Warm, wise, wonderful"
         },
         "photos": {
-          "photo1": "/assets/samples/mothers-day-magazine-0.jpg"
+          "photo1": "/assets/samples/mothers-day-magazine-0.jpg",
+          "photo2": "/assets/samples/mothers-day-magazine-0b.jpg",
+          "photo3": "/assets/samples/mothers-day-magazine-0c.jpg"
         }
       },
       {
@@ -3167,7 +3195,9 @@
           "words": "Funny, patient, legendary"
         },
         "photos": {
-          "photo1": "/assets/samples/fathers-day-magazine-0.jpg"
+          "photo1": "/assets/samples/fathers-day-magazine-0.jpg",
+          "photo2": "/assets/samples/fathers-day-magazine-0b.jpg",
+          "photo3": "/assets/samples/fathers-day-magazine-0c.jpg"
         }
       },
       {
@@ -3359,7 +3389,9 @@
           "words": "Loyal, hilarious, iconic"
         },
         "photos": {
-          "photo1": "/assets/samples/best-friend-magazine-0.jpg"
+          "photo1": "/assets/samples/best-friend-magazine-0.jpg",
+          "photo2": "/assets/samples/best-friend-magazine-0b.jpg",
+          "photo3": "/assets/samples/best-friend-magazine-0c.jpg"
         }
       },
       {
@@ -3553,7 +3585,9 @@
           "words": "Patient, funny, amazing"
         },
         "photos": {
-          "photo1": "/assets/samples/teacher-magazine-0.jpg"
+          "photo1": "/assets/samples/teacher-magazine-0.jpg",
+          "photo2": "/assets/samples/teacher-magazine-0b.jpg",
+          "photo3": "/assets/samples/teacher-magazine-0c.jpg"
         }
       },
       {
@@ -3747,7 +3781,9 @@
           "still": "Whistle, or fold a fitted sheet"
         },
         "photos": {
-          "photo1": "/assets/samples/milestone-birthday-magazine-0.jpg"
+          "photo1": "/assets/samples/milestone-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/milestone-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/milestone-birthday-magazine-0c.jpg"
         }
       },
       {
@@ -3941,7 +3977,9 @@
           "words": "Giddy, gorgeous, glowing"
         },
         "photos": {
-          "photo1": "/assets/samples/engagement-magazine-0.jpg"
+          "photo1": "/assets/samples/engagement-magazine-0.jpg",
+          "photo2": "/assets/samples/engagement-magazine-0b.jpg",
+          "photo3": "/assets/samples/engagement-magazine-0c.jpg"
         }
       },
       {
@@ -4135,7 +4173,9 @@
           "words": "Cosy, chaotic, ours"
         },
         "photos": {
-          "photo1": "/assets/samples/new-home-magazine-0.jpg"
+          "photo1": "/assets/samples/new-home-magazine-0.jpg",
+          "photo2": "/assets/samples/new-home-magazine-0b.jpg",
+          "photo3": "/assets/samples/new-home-magazine-0c.jpg"
         }
       },
       {
@@ -4329,7 +4369,9 @@
           "lost": "Our own hotel, twice"
         },
         "photos": {
-          "photo1": "/assets/samples/travel-magazine-0.jpg"
+          "photo1": "/assets/samples/travel-magazine-0.jpg",
+          "photo2": "/assets/samples/travel-magazine-0b.jpg",
+          "photo3": "/assets/samples/travel-magazine-0c.jpg"
         }
       },
       {
@@ -4524,7 +4566,9 @@
           "words": "Gentle, loyal, ours"
         },
         "photos": {
-          "photo1": "/assets/samples/pet-memorial-magazine-0.jpg"
+          "photo1": "/assets/samples/pet-memorial-magazine-0.jpg",
+          "photo2": "/assets/samples/pet-memorial-magazine-0b.jpg",
+          "photo3": "/assets/samples/pet-memorial-magazine-0c.jpg"
         }
       },
       {
@@ -4722,7 +4766,9 @@
           "words": "Mine, all mine"
         },
         "photos": {
-          "photo1": "/assets/samples/valentines-magazine-0.jpg"
+          "photo1": "/assets/samples/valentines-magazine-0.jpg",
+          "photo2": "/assets/samples/valentines-magazine-0b.jpg",
+          "photo3": "/assets/samples/valentines-magazine-0c.jpg"
         }
       },
       {
@@ -4920,7 +4966,9 @@
           "words": "Kind, funny, ours"
         },
         "photos": {
-          "photo1": "/assets/samples/memorial-magazine-0.jpg"
+          "photo1": "/assets/samples/memorial-magazine-0.jpg",
+          "photo2": "/assets/samples/memorial-magazine-0b.jpg",
+          "photo3": "/assets/samples/memorial-magazine-0c.jpg"
         }
       },
       {
@@ -5114,7 +5162,9 @@
           "words": "Glowing, brave, ready"
         },
         "photos": {
-          "photo1": "/assets/samples/baby-shower-magazine-0.jpg"
+          "photo1": "/assets/samples/baby-shower-magazine-0.jpg",
+          "photo2": "/assets/samples/baby-shower-magazine-0b.jpg",
+          "photo3": "/assets/samples/baby-shower-magazine-0c.jpg"
         }
       },
       {
@@ -5308,7 +5358,9 @@
           "words": "Clever, chaotic, kind"
         },
         "photos": {
-          "photo1": "/assets/samples/eighteenth-birthday-magazine-0.jpg"
+          "photo1": "/assets/samples/eighteenth-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/eighteenth-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/eighteenth-birthday-magazine-0c.jpg"
         }
       },
       {
@@ -5502,7 +5554,9 @@
           "words": "Devoted, daft, golden"
         },
         "photos": {
-          "photo1": "/assets/samples/golden-anniversary-magazine-0.jpg"
+          "photo1": "/assets/samples/golden-anniversary-magazine-0.jpg",
+          "photo2": "/assets/samples/golden-anniversary-magazine-0b.jpg",
+          "photo3": "/assets/samples/golden-anniversary-magazine-0c.jpg"
         }
       },
       {
@@ -5696,7 +5750,9 @@
           "words": "Calm, kind, unforgettable"
         },
         "photos": {
-          "photo1": "/assets/samples/thank-you-magazine-0.jpg"
+          "photo1": "/assets/samples/thank-you-magazine-0.jpg",
+          "photo2": "/assets/samples/thank-you-magazine-0b.jpg",
+          "photo3": "/assets/samples/thank-you-magazine-0c.jpg"
         }
       },
       {
@@ -5890,7 +5946,9 @@
           "words": "Sharp, kind, unstoppable"
         },
         "photos": {
-          "photo1": "/assets/samples/new-job-magazine-0.jpg"
+          "photo1": "/assets/samples/new-job-magazine-0.jpg",
+          "photo2": "/assets/samples/new-job-magazine-0b.jpg",
+          "photo3": "/assets/samples/new-job-magazine-0c.jpg"
         }
       },
       {

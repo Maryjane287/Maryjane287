@@ -174,6 +174,23 @@ const trustStrip = `
 // The name on the gift tag: a first name, or the whole name when it starts with The, Mr, Mrs and so on.
 const firstName = v => { const n = String(v || '').trim(); const w = n.split(/\s/)[0]; return /^(the|mr|mrs|ms|miss|dr)\.?$/i.test(w) ? n : w; };
 
+// Real photos of finished magazines at home (our own sample covers), used on the home page.
+const PRODUCT_PHOTOS = {
+  'birthday-magazine': ['flatlay', 'Mia\'s birthday magazine, ready to wrap'],
+  'pet-magazine': ['hardcover', 'Biscuit\'s hardcover keepsake'],
+  'anniversary-magazine': ['bed', 'Chris and Emma\'s anniversary issue'],
+};
+const productImg = (k, alt, cls = '') => `<img class="real-photo${cls}" src="/assets/products/${k}.jpg" alt="${esc(alt)}" width="896" height="1200" loading="lazy" decoding="async">`;
+const realPhotos = () => `
+<section class="section real real-photos">
+  <div class="section-head"><p class="kicker">See it for real</p><h2>Made to be held, shared and kept</h2><p>Thick, glossy pages they will keep on the coffee table for years. Or a PDF on their phone in minutes, wherever they are in the world.</p></div>
+  <div class="real-grid">
+    <figure class="real-scene">${productImg('flatlay', 'A printed birthday magazine with a smiling woman on the cover, on a linen cloth with coffee, ribbon and dried flowers')}<figcaption><b>Printed and posted</b>A4 magazine, glossy or matte, printed near them.</figcaption></figure>
+    <figure class="real-scene">${productImg('hardcover', 'A hardcover keepsake book with a golden retriever on the cover, on an oak table beside a gift box and tea')}<figcaption><b>Hardcover keepsake</b>A thick, lasting edition for the shelf.</figcaption></figure>
+    <figure class="real-scene">${productImg('bed', 'A printed anniversary magazine with a hugging couple on the cover, on a knit blanket with cake and rose petals')}<figcaption><b>A morning they will never forget</b>Left on the bed with cake and a card.</figcaption></figure>
+  </div>
+</section>`;
+
 // "See it for real": the buyer's actual design shown as a printed magazine,
 // an open spread and on a phone, all drawn from the same pages as the PDF.
 const realLife = (mag, pages, name) => {
@@ -184,7 +201,7 @@ const realLife = (mag, pages, name) => {
   <div class="section-head"><p class="kicker">See it for real</p><h2>Made to be held, shared and kept</h2><p>This is exactly what they get: their own magazine, as a glossy printed copy or on their phone in seconds.</p></div>
   <div class="real-grid">
     <figure class="real-scene real-print">
-      <div class="real-stage"><div class="mock-mag"><div class="mock-pages"></div><div class="mock-cover">${pages[0]}</div></div><div class="mock-tag">${gentle ? 'Forever loved' : `For you, ${esc(name)}`}</div></div>
+      <div class="real-stage">${PRODUCT_PHOTOS[mag.slug] ? productImg(PRODUCT_PHOTOS[mag.slug][0], PRODUCT_PHOTOS[mag.slug][1], ' real-fill') : `<div class="mock-mag"><div class="mock-pages"></div><div class="mock-cover">${pages[0]}</div></div><div class="mock-tag">${gentle ? 'Forever loved' : `For you, ${esc(name)}`}</div>`}</div>
       <figcaption><b>Printed and posted</b>A4 glossy or matte, printed near them.</figcaption>
     </figure>
     <figure class="real-scene real-open">
@@ -300,7 +317,7 @@ ${tickerHtml}
   <div class="section-head"><p class="kicker">Simple prices</p><h2>Choose how you give it</h2></div>
   ${tierCards()}
 </section>
-${realLife(b, renderFullMagazine(b, b.examples[0].values, { palette: b.examples[0].palette, portraitOpts: b.examples[0].portrait, photos: samplePhotos(b.examples[0]), design: baseDesign(b) }), firstName(Object.values(b.examples[0].values)[0]))}
+${realPhotos()}
 ${reviewsSection('', true)}
 <section class="section">
   <div class="section-head"><p class="kicker">Questions</p><h2>Good to know</h2></div>
