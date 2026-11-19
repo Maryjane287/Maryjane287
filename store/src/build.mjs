@@ -25,8 +25,8 @@ const from = tiers[0];
 // ---------- helpers ----------
 
 const money = n => (Number.isInteger(n) ? String(n) : n.toFixed(2));
-const price = t => `<span class="price" data-gbp="£${money(t.gbp)}" data-usd="$${money(t.usd)}">£${money(t.gbp)}</span>`;
-const fromPrice = `<span class="price" data-gbp="£${from.gbp}" data-usd="$${from.usd}">£${from.gbp}</span>`;
+const price = t => `<span class="price" data-gbp="£${money(t.gbp)}" data-usd="$${money(t.usd)}">$${money(t.usd)}</span>`;
+const fromPrice = `<span class="price" data-gbp="£${from.gbp}" data-usd="$${from.usd}">$${from.usd}</span>`;
 
 function saveImg(src, alt, desc, cls = '') {
   return `<img class="${cls}" src="${src}" alt="${esc(alt)}" loading="lazy" width="1000" height="1500" data-pin-description="${esc(desc)}" data-pin-media="${abs(src)}">`;

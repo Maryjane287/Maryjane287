@@ -4,11 +4,8 @@ const store = {
   set(k, v) { try { localStorage.setItem(k, v); } catch {} },
 };
 
-function guessCurrency() {
-  const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
-  const lang = navigator.language || '';
-  return tz.startsWith('America/') || lang === 'en-US' ? 'usd' : 'gbp';
-}
+// Prices show in US dollars unless the visitor picks pounds in the footer.
+function guessCurrency() { return 'usd'; }
 
 export function setCurrency(cur) {
   store.set('cur', cur);
