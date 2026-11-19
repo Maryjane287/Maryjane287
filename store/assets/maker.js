@@ -384,7 +384,7 @@ form.addEventListener('submit', async e => {
       say('Printing page 1 of 24...');
       const id = await renderAndUpload({ mag: m, values: state.values, opts: coverOpts(), cards: tier === 'cards', onProgress: (n, total) => say(`Printing page ${Math.min(n + 1, total)} of ${total}...`) });
       say('Binding your magazine...');
-      made = { id, ...(await finishOrder({ id, kind: printed ? 'print' : 'digital', finish: tier === 'hardcover' ? 'hardcover' : form.finish.value, title: `${m.title}: ${who}`, email: form.email.value, who, mag: m.slug, tz: new Date().getTimezoneOffset(), gift: form.gift.checked ? { name: form.gift_name.value, email: form.gift_email.value, date: form.gift_when.value === 'later' ? form.gift_date.value : '', from: form.gift_from.value } : null })) };
+      made = { id, ...(await finishOrder({ id, kind: printed ? 'print' : 'digital', finish: tier === 'hardcover' ? 'hardcover' : form.finish.value, title: `${m.title}: ${who}`, email: form.email.value, who, mag: m.slug, tz: new Date().getTimezoneOffset(), gift: form.gift.checked ? { name: form.gift_name.value, email: form.gift_email.value, date: form.gift_when.value === 'later' ? form.gift_date.value : '', from: form.gift_from.value, note: form.gift_note.value } : null })) };
       form['order-id'].value = id;
       form.pdf.value = made.pdf;
       if (made.cards) form.cards.value = made.cards;
