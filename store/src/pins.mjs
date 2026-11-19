@@ -10,7 +10,7 @@ const mags = JSON.parse(await readFile(new URL('data/magazines.json', root))).fi
 const site = JSON.parse(await readFile(new URL('data/site.json', root)));
 const coversCss = await readFile(new URL('assets/covers.css', root), 'utf8');
 
-const executablePath = process.env.CHROMIUM_PATH || '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
+const executablePath = process.env.CHROMIUM_PATH || '/opt/pw-browsers/chromium';
 const browser = await chromium.launch({ executablePath });
 const page = await browser.newPage({ viewport: { width: 1000, height: 1500 } });
 await mkdir(new URL('pins/', root), { recursive: true });
