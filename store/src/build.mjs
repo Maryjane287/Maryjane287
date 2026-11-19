@@ -78,7 +78,7 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld)}</script
 </head>
 <body class="${bodyClass}">
 <a class="skip" href="#main">Skip to content</a>
-${site.christmasOrderBy ? `<p class="promo-bar">Order printed copies by <b>${esc(site.christmasOrderBy)}</b> for Christmas delivery. PDFs arrive in minutes, right up to Christmas Day.</p>` : ''}
+${site.christmasOrderBy ? `<p class="promo-bar"><span aria-hidden="true">&#127873;</span> Order printed copies by <b>${esc(site.christmasOrderBy)}</b> for Christmas delivery. PDFs arrive in minutes, right up to Christmas Day.</p>` : ''}
 <header class="top">
   <a class="logo" href="/" aria-label="${esc(site.name)} home"><span class="logo-mag" aria-hidden="true"></span>${esc(site.name)}</a>
   <nav class="nav">${nav}<a href="/ideas/">Ideas</a></nav>
@@ -89,6 +89,13 @@ ${site.christmasOrderBy ? `<p class="promo-bar">Order printed copies by <b>${esc
 ${body}
 </main>
 <footer class="foot">
+  <form class="news" name="newsletter" method="POST" action="/" data-netlify="true" netlify-honeypot="company">
+    <input type="hidden" name="form-name" value="newsletter">
+    <p class="hp"><label>Leave this empty <input name="company"></label></p>
+    <div class="news-text"><h3>Never miss a big day</h3><p>Gentle reminders before Mother's Day, Father's Day, Valentine's and Christmas, plus new magazines first. About one email a month, and you can leave any time.</p></div>
+    <div class="news-form"><label class="sr-only" for="news-email">Your email</label><input id="news-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com"><button class="btn" type="submit">Remind me</button></div>
+    <p class="news-done" hidden role="status">Lovely, you are on the list. We will see you before the next big day.</p>
+  </form>
   <div class="foot-grid">
     <div>
       <a class="logo" href="/"><span class="logo-mag" aria-hidden="true"></span>${esc(site.name)}</a>
@@ -237,8 +244,18 @@ async function home() {
   const heroCovers = [
     [a, a.examples[0]], [b, b.examples[0]], [k, k.examples[0]],
   ].map(([m, ex], i) => `<a class="hero-cover hc-${i}" href="/${m.slug}/" aria-label="${esc(m.title)}">${coverFor(m, ex)}</a>`).join('');
+  const FILTERS = [
+    ['birthday', 'Birthdays', /birthday|kids/],
+    ['love', 'Love and weddings', /anniversary|wedding|engagement|valentines/],
+    ['family', 'Family and baby', /grandparents|baby|mothers|fathers|kids|year-in-review/],
+    ['christmas', 'Christmas', /christmas|year-in-review/],
+    ['thanks', 'Friends and big moments', /best-friend|teacher|thank-you|retirement|graduation|new-job|new-home|travel/],
+    ['memory', 'Pets and memories', /pet|memorial/],
+  ];
+  const tagsFor = m => FILTERS.filter(([, , re]) => re.test(m.slug)).map(([id]) => id).join(' ');
+  const filterBar = `<div class="mag-filters" role="group" aria-label="Filter by occasion"><button type="button" class="chip on" data-f="all" aria-pressed="true">All ${mags.length}</button>${FILTERS.map(([id, label]) => `<button type="button" class="chip" data-f="${id}" aria-pressed="false">${label}</button>`).join('')}</div>`;
   const cards = mags.map(m => `
-    <a class="mag-card" href="/${m.slug}/">
+    <a class="mag-card" href="/${m.slug}/" data-tags="${tagsFor(m)}">
       <div class="mag-card-cover">${coverFor(m, [m.examples[1], ...m.examples].find(e => e && e.photos) || m.examples[1] || m.examples[0])}</div>
       <div class="mag-card-body">
         <p class="kicker">${esc(m.occasion)}</p>
@@ -257,7 +274,7 @@ async function home() {
   <div class="hero-text">
     <p class="kicker">Personalised keepsake magazines</p>
     <h1>Make them the <span class="hl">cover story.</span></h1>
-    <p class="lead">Answer a few fun questions, add your photos, and we turn them into a beautiful magazine all about the person you love. A 24 page magazine, sent to you as a PDF, ready for anyone, anywhere in the world.</p>
+    <p class="lead">Answer a few fun questions, add your photos, and we turn them into a beautiful magazine all about the person you love. 24 glossy pages about them, ready to send in minutes or printed and posted as a keepsake they will never throw away.</p>
     <div class="hero-cta"><a class="btn btn-big" href="/make/">Make a magazine</a><a class="btn btn-ghost" href="#magazines">See the magazines</a></div>
     <p class="hero-note">Ready in 5 minutes &middot; From ${fromPrice} &middot; No design skills needed</p>
   </div>
@@ -266,6 +283,7 @@ async function home() {
 ${tickerHtml}
 <section class="section" id="magazines">
   <div class="section-head"><p class="kicker">Pick a magazine</p><h2>Which story are you telling?</h2></div>
+  ${filterBar}
   <div class="mag-grid">${cards}</div>
 </section>
 <section class="section section-tint">
@@ -422,6 +440,7 @@ async function makerPage() {
               </div>
             </div>
             <label class="field wide gift-day" hidden><span>Which day?</span><span class="date-wrap">${icon('calendar')}<input type="date" name="gift_date"></span></label>
+            <label class="field wide"><span>A little note for them <small>(optional, it goes in the email above your name)</small></span><textarea name="gift_note" maxlength="300" rows="3" placeholder="Happy birthday, Mia! I could not wait for you to see this. Every page made me smile."></textarea></label>
             <label class="field wide"><span>From <small>(how your name appears)</small></span><input type="text" name="gift_from" maxlength="60" placeholder="Love, Chris"></label>
             <p class="small">You get your own copy too, so you can see it first.</p>
           </div>
@@ -483,10 +502,21 @@ async function simplePages() {
   await page('/help/', layout({
     title: 'Delivery and FAQ', description: 'Delivery times, worldwide shipping, photos, reprints and everything else you might wonder about.', path: '/help/', jsonld: faqLd,
     body: wrap('Help', 'Delivery and questions', `
+      <h2>How it works</h2>
+      <ol class="how-steps">
+        <li><b>Pick their magazine.</b> Birthday, anniversary, new baby, a beloved pet and many more, each with its own designs and colours.</li>
+        <li><b>Answer a few fun questions and add photos.</b> You see every page change as you type, so there are no surprises. It takes about five minutes.</li>
+        <li><b>Choose how to give it.</b> A PDF ready in minutes to email, message or print, or a printed magazine or hardcover book posted to their door.</li>
+      </ol>
+      <h2>When will it arrive?</h2>
+      <ul class="when-list">
+        <li><b>PDF magazine:</b> in your inbox within minutes of paying. Perfect for last minute gifts, even on the day.</li>
+        <li><b>Printed magazine or hardcover:</b> about 4 to 5 working days to print, plus postage. Please order at least 10 days before the big day.</li>
+        ${site.christmasOrderBy ? `<li><b>Christmas:</b> order printed copies by ${esc(site.christmasOrderBy)}. PDFs can be ordered right up to Christmas Day.</li>` : ''}
+      </ul>
       <h2>Delivery</h2>
       <p>Your finished 24 page magazine is ready to download as a PDF the moment you have paid, and we email it to you too. You can send it to anyone, anywhere, by email or message, or print it at home or at any print shop.</p>
       <p>Printed magazines are printed on glossy or matte paper, and hardcover keepsake books on thick, premium paper, by our print partner near the lucky person, then posted. Printing takes about 4 to 5 working days, plus a few days for the post. Shipping is worked out for their country and added at checkout.</p>
-      <p>Giving it for a special day? Order at least three days before, just to be safe.</p>
       <h2>Questions</h2>${faqHtml}
       <h2>Still stuck?</h2><p>Email <a href="mailto:${esc(site.email)}">${esc(site.email)}</a> and a real person will help.</p>`),
   }));
@@ -513,7 +543,7 @@ async function simplePages() {
     body: wrap('The small print', 'Privacy policy', `
       <p>This policy explains how ${esc(site.company)} (trading as ${esc(site.name)}) uses your information. We collect as little as we can, and only to make and deliver your magazine.</p>
       <h2>What we collect</h2><ul><li>Your answers and photos for the magazine</li><li>Your email address, and the delivery address for printed copies</li><li>Payment details, which are handled by our payment provider. We never see your card number.</li></ul>
-      <h2>How we use it</h2><p>Only to design, print, deliver and support your order. We never sell your information or post your photos anywhere.</p>
+      <h2>How we use it</h2><p>Only to design, print, deliver and support your order. We never sell your information or post your photos anywhere.</p><p>If you join our reminder list, we use your email only to send occasional reminders and news, about one email a month. Every email has a way to leave, or just email us and we will remove you.</p>
       <h2>How long we keep it</h2><p>Photos and answers are deleted 30 days after your order, or 30 days after a gift is delivered. If you send your magazine as a gift, we use the email address you give only to deliver it. Order records are kept as long as the law requires for tax and accounting.</p>
       <h2>Who helps us</h2><p>Our website host (which receives your order form), our payment provider, and our print partner (for printed copies only). Each one only receives what it needs.</p>
       <h2>Cookies</h2><p>We do not use advertising cookies unless you say yes. If we add Pinterest measurement, you will be asked first.</p>

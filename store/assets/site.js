@@ -61,3 +61,37 @@ if (window.PIN_TAG_ID) {
   new MutationObserver(ms => ms.forEach(m => m.addedNodes.forEach(n => { if (n.nodeType === 1) scan(n); }))).observe(document.body, { childList: true, subtree: true });
   if (!ro) addEventListener('resize', () => scan(document));
 })();
+
+// Occasion filters on the home page: show only the magazines for that moment.
+(() => {
+  const bar = document.querySelector('.mag-filters');
+  if (!bar) return;
+  const cards = [...document.querySelectorAll('.mag-grid .mag-card')];
+  bar.addEventListener('click', e => {
+    const b = e.target.closest('button[data-f]');
+    if (!b) return;
+    const f = b.dataset.f;
+    bar.querySelectorAll('button').forEach(x => { const on = x === b; x.classList.toggle('on', on); x.setAttribute('aria-pressed', String(on)); });
+    cards.forEach(c => { const show = f === 'all' || c.dataset.tags.split(' ').includes(f); c.hidden = !show; if (show) { c.classList.remove('pop'); void c.offsetWidth; c.classList.add('pop'); } });
+  });
+})();
+
+// Email sign up: sends to Netlify Forms without leaving the page.
+(() => {
+  const f = document.querySelector('form.news');
+  if (!f) return;
+  f.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = f.querySelector('button');
+    btn.disabled = true;
+    try {
+      const r = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(f)).toString() });
+      if (!r.ok) throw new Error(r.status);
+      f.querySelector('.news-form').hidden = true;
+      f.querySelector('.news-done').hidden = false;
+    } catch {
+      btn.disabled = false;
+      btn.textContent = 'Try again';
+    }
+  });
+})();

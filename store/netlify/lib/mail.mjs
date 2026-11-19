@@ -30,7 +30,7 @@ export async function saveOrderInfo(store, id, { kind, email, title, who, gift, 
       const offset = Math.max(-840, Math.min(840, Number(tz) || 0)); // minutes, as getTimezoneOffset gives
       sendAt = Math.min(Math.max(Date.UTC(+d[1], +d[2] - 1, +d[3], 8) + offset * 60000, now), now + 31 * DAY);
     }
-    info.gift = { name: clean(gift.name, 60), email: gift.email, from: clean(gift.from, 60), sendAt };
+    info.gift = { name: clean(gift.name, 60), email: gift.email, from: clean(gift.from, 60), note: clean(gift.note, 300), sendAt };
   }
   await store.set(`${id}/order.json`, JSON.stringify(info), { metadata: { created: now } });
   if (info.kind === 'digital') await store.set(`pending/${id}`, '1', { metadata: { created: now } });
@@ -64,8 +64,8 @@ function giftEmail(info, links, hasCover) {
   const from = info.gift.from || 'Someone who loves you';
   return {
     subject: `${name}, you're on the cover!`,
-    html: wrap(`<p style="font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:#ff6f59;font-weight:700;margin:0 0 10px">A gift for you</p><h1 style="font-family:Georgia,serif;font-weight:400;font-size:30px;line-height:1.2;margin:0 0 16px">Hello ${esc(name)}, somebody made you your very own magazine</h1>${hasCover ? '<img src="cid:cover" alt="Your magazine cover" width="260" style="width:260px;max-width:80%;border-radius:6px;box-shadow:0 14px 30px -14px rgba(29,26,47,.5);margin:0 0 22px">' : ''}<p style="font-size:16px;line-height:1.55;margin:0 0 22px">Every page is about you: your story, your photos and the little things that make you, you.</p>${button(links.pdf, 'Open my magazine')}<p style="font-family:Georgia,serif;font-size:20px;margin:26px 0 0">${esc(from)}</p><p style="font-size:13px;line-height:1.5;color:#8a8499;margin:22px 0 0">Your magazine is attached too. Save it somewhere safe, the download link is removed after 30 days.</p>`),
-    text: `Hello ${name}, somebody made you your very own magazine.\n\nOpen it here: ${links.pdf}\n\n${from}\n\nSave it somewhere safe, the link is removed after 30 days.`,
+    html: wrap(`<p style="font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:#ff6f59;font-weight:700;margin:0 0 10px">A gift for you</p><h1 style="font-family:Georgia,serif;font-weight:400;font-size:30px;line-height:1.2;margin:0 0 16px">Hello ${esc(name)}, somebody made you your very own magazine</h1>${hasCover ? '<img src="cid:cover" alt="Your magazine cover" width="260" style="width:260px;max-width:80%;border-radius:6px;box-shadow:0 14px 30px -14px rgba(29,26,47,.5);margin:0 0 22px">' : ''}<p style="font-size:16px;line-height:1.55;margin:0 0 22px">Every page is about you: your story, your photos and the little things that make you, you.</p>${button(links.pdf, 'Open my magazine')}${info.gift.note ? `<p style="font-family:Georgia,serif;font-style:italic;font-size:18px;line-height:1.55;white-space:pre-line;margin:28px 0 0;padding:18px 20px;background:#fff8ef;border-radius:14px">${esc(info.gift.note)}</p>` : ''}<p style="font-family:Georgia,serif;font-size:20px;margin:26px 0 0">${esc(from)}</p><p style="font-size:13px;line-height:1.5;color:#8a8499;margin:22px 0 0">Your magazine is attached too. Save it somewhere safe, the download link is removed after 30 days.</p>`),
+    text: `Hello ${name}, somebody made you your very own magazine.\n\nOpen it here: ${links.pdf}\n\n${info.gift.note ? `${info.gift.note}\n\n` : ''}${from}\n\nSave it somewhere safe, the link is removed after 30 days.`,
   };
 }
 
