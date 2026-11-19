@@ -229,7 +229,7 @@
   "certLine": "is officially, undeniably and forever",
   "perfume": "Top notes of warm toast, old photo albums and garden roses. A heart of pure gold.",
   "news": {
-    "edition": "The family edition",
+    "edition": "The family edition", "paper": "The {first} Times",
     "headline": "Family misses {who}, more than ever",
     "lead": "Sources close to the family confirm that {who} is missed every single day, talked about at dinner and expected back as soon as possible.",
     "weather": "Weather: warm spells of missing you, clearing to hugs"
@@ -295,7 +295,7 @@
     "title": "What we believe family is",
     "contents": "A note for you",
     "paras": [
-      "We make newspapers for a living, but some feel different. This was one of them.",
+      "We make magazines and newspapers for a living, but some feel different. This was one of them.",
       "We believe distance is just a number. Love finds its way through phone calls, parcels and paper, and it arrives every time, a little warmer than it left.",
       "{who}, someone wanted you to have something special. Not a quick message on a screen, but real pages you can hold, full of news, faces and little voices from home.",
       "That someone is {from}. And from everything they told us, you are missed more than you could ever know."

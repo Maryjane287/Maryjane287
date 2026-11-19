@@ -113,7 +113,7 @@
       {
         "id": "moment",
         "label": "The best moment of your year",
-        "example": "The day we all got caught in the rain at the seaside and laughed so hard we forgot to run",
+        "example": "The morning Leo found real snow on the doorstep and ran out in his pyjamas to catch it",
         "type": "textarea",
         "max": 220
       },
@@ -271,7 +271,7 @@
         "special"
       ],
       "quote": "{words}",
-      "credit": "The North Pole reports, page 9"
+      "credit": "The North Pole reports, page 10"
     }
   },
   {
@@ -762,7 +762,7 @@
       {
         "id": "love",
         "label": "What you love most about them",
-        "example": "The way they laugh at their own jokes before the punchline",
+        "example": "The way you laugh at your own jokes before the punchline",
         "max": 120
       },
       {
