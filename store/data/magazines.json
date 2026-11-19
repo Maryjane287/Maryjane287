@@ -820,6 +820,9 @@
           "years": "10",
           "met": "A wrong number that turned into a four hour call",
           "joke": "Never trust a quiet cat"
+        },
+        "photos": {
+          "photo1": "/assets/samples/anniversary-magazine-1.jpg"
         }
       },
       {
@@ -1442,6 +1445,9 @@
           "adventure": "Learning to surf, badly",
           "proud": "Running our first 10k",
           "word": "Joy"
+        },
+        "photos": {
+          "photo1": "/assets/samples/year-in-review-magazine-3.jpg"
         }
       }
     ],
@@ -1632,6 +1638,9 @@
           "talent": "Opens doors that should stay closed",
           "crime": "Digging to the centre of the earth",
           "snack": "Peanut butter, from a spoon"
+        },
+        "photos": {
+          "photo1": "/assets/samples/pet-magazine-2.jpg"
         }
       },
       {
@@ -2197,7 +2206,7 @@
     ],
     "examples": [
       {
-        "id": "olivia",
+        "id": "mia-quiz",
         "palette": "rose",
         "portrait": {
           "skin": 0,
@@ -3374,7 +3383,7 @@
         }
       },
       {
-        "id": "olivia",
+        "id": "mia-quiz",
         "palette": "rose",
         "portrait": {
           "skin": 3,
@@ -3382,12 +3391,15 @@
           "hairColor": "#120c08"
         },
         "values": {
-          "name": "Olivia",
+          "name": "Mia",
           "since": "2019",
           "met": "Same wrong answer in a quiz",
           "joke": "Just one more shop",
           "best": "Hypes you up like a stadium",
           "words": "Bold, bright, brilliant"
+        },
+        "photos": {
+          "photo1": "/assets/samples/best-friend-magazine-2.jpg"
         }
       }
     ],
@@ -3559,6 +3571,9 @@
           "lesson": "Building a castle out of boxes",
           "power": "Making maths actually fun",
           "words": "Kind, calm, the best"
+        },
+        "photos": {
+          "photo1": "/assets/samples/teacher-magazine-1.jpg"
         }
       },
       {
@@ -3576,6 +3591,9 @@
           "lesson": "Reading under the tables",
           "power": "Remembering every birthday",
           "words": "Sunny, smart, special"
+        },
+        "photos": {
+          "photo1": "/assets/samples/teacher-magazine-2.jpg"
         }
       }
     ],
@@ -3747,6 +3765,9 @@
           "famous": "Organising everyone, lovingly",
           "decade": "Her twenties, no regrets",
           "still": "Parallel park on the first go"
+        },
+        "photos": {
+          "photo1": "/assets/samples/milestone-birthday-magazine-1.jpg"
         }
       },
       {
@@ -3764,6 +3785,9 @@
           "famous": "The world's longest stories",
           "decade": "The eighties, and the hair",
           "still": "Resist a second pudding"
+        },
+        "photos": {
+          "photo1": "/assets/samples/milestone-birthday-magazine-2.jpg"
         }
       }
     ],
@@ -3941,7 +3965,7 @@
         }
       },
       {
-        "id": "jack-grace",
+        "id": "chris-mia",
         "palette": "mint",
         "portrait": {
           "skin": 0,
@@ -3949,12 +3973,15 @@
           "hairColor": "#c4803f"
         },
         "values": {
-          "names": "Jack & Grace",
+          "names": "Chris & Mia",
           "year": "2026",
           "where": "Their favourite little cafe",
           "nerves": "Hid the ring in a croissant",
           "next": "Finding a date both mums like",
           "words": "Sweet, sunny, sure"
+        },
+        "photos": {
+          "photo1": "/assets/samples/engagement-magazine-2.jpg"
         }
       }
     ],
@@ -4126,6 +4153,9 @@
           "first": "Noodles from the box",
           "dream": "A home cinema, one day",
           "words": "Small, bright, mine"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-home-magazine-1.jpg"
         }
       },
       {
@@ -4143,6 +4173,9 @@
           "first": "Beans on toast by candlelight",
           "dream": "Chickens, eventually",
           "words": "Crooked, lovely, home"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-home-magazine-2.jpg"
         }
       }
     ],
@@ -4314,6 +4347,9 @@
           "meal": "Ramen at a tiny counter at 1am",
           "view": "The city from the tallest tower",
           "lost": "The right train, every time"
+        },
+        "photos": {
+          "photo1": "/assets/samples/travel-magazine-1.jpg"
         }
       },
       {
@@ -4331,6 +4367,9 @@
           "meal": "Hot dogs by the harbour",
           "view": "The northern lights, finally",
           "lost": "A waterfall with no signal"
+        },
+        "photos": {
+          "photo1": "/assets/samples/travel-magazine-2.jpg"
         }
       }
     ],
@@ -4503,6 +4542,9 @@
           "habit": "Head bumps every morning",
           "silly": "Stuck in a paper bag, very proud",
           "words": "Soft, wise, beloved"
+        },
+        "photos": {
+          "photo1": "/assets/samples/pet-memorial-magazine-1.jpg"
         }
       },
       {
@@ -4521,6 +4563,9 @@
           "habit": "Bringing us one shoe as a gift",
           "silly": "Barking at his own reflection",
           "words": "Brave, daft, devoted"
+        },
+        "photos": {
+          "photo1": "/assets/samples/pet-memorial-magazine-2.jpg"
         }
       }
     ],
@@ -4695,6 +4740,9 @@
           "cute": "Stealing the duvet, gracefully",
           "song": "Our wedding song, obviously",
           "words": "Sweet, sassy, stunning"
+        },
+        "photos": {
+          "photo1": "/assets/samples/valentines-magazine-1.jpg"
         }
       },
       {
@@ -4712,6 +4760,9 @@
           "cute": "Talking to every dog",
           "song": "The first one we danced to",
           "words": "Funny, tender, perfect"
+        },
+        "photos": {
+          "photo1": "/assets/samples/valentines-magazine-2.jpg"
         }
       }
     ],
@@ -4867,6 +4918,9 @@
           "saying": "Put the kettle on, love",
           "loved": "Dancing in the kitchen to old records",
           "words": "Kind, funny, ours"
+        },
+        "photos": {
+          "photo1": "/assets/samples/memorial-magazine-0.jpg"
         }
       },
       {
@@ -4884,6 +4938,9 @@
           "saying": "Have you had enough to eat?",
           "loved": "Her garden roses, and anyone who visited",
           "words": "Gentle, wise, loved"
+        },
+        "photos": {
+          "photo1": "/assets/samples/memorial-magazine-1.jpg"
         }
       },
       {
@@ -4901,6 +4958,9 @@
           "saying": "It will all be fine, you watch",
           "loved": "Football on a Saturday and a big Sunday lunch",
           "words": "Loud, warm, irreplaceable"
+        },
+        "photos": {
+          "photo1": "/assets/samples/memorial-magazine-2.jpg"
         }
       }
     ],
@@ -5052,6 +5112,9 @@
           "craving": "Pickles dipped in ice cream",
           "guess": "Definitely a footballer, judging by the kicks",
           "words": "Glowing, brave, ready"
+        },
+        "photos": {
+          "photo1": "/assets/samples/baby-shower-magazine-0.jpg"
         }
       },
       {
@@ -5069,6 +5132,9 @@
           "craving": "Toast with far too much butter",
           "guess": "Mia's laugh and Leo's ears",
           "words": "Excited, nervous, smitten"
+        },
+        "photos": {
+          "photo1": "/assets/samples/baby-shower-magazine-1.jpg"
         }
       },
       {
@@ -5086,6 +5152,9 @@
           "craving": "Spicy noodles at midnight",
           "guess": "A night owl, just like their mum",
           "words": "Calm, strong, radiant"
+        },
+        "photos": {
+          "photo1": "/assets/samples/baby-shower-magazine-2.jpg"
         }
       }
     ],
@@ -5237,6 +5306,9 @@
           "dream": "Travelling the world with one backpack",
           "talent": "Sleeping through any alarm",
           "words": "Clever, chaotic, kind"
+        },
+        "photos": {
+          "photo1": "/assets/samples/eighteenth-birthday-magazine-0.jpg"
         }
       },
       {
@@ -5254,6 +5326,9 @@
           "dream": "Opening the best bakery in town",
           "talent": "Remembering every song lyric ever",
           "words": "Bold, bright, brilliant"
+        },
+        "photos": {
+          "photo1": "/assets/samples/eighteenth-birthday-magazine-1.jpg"
         }
       },
       {
@@ -5271,6 +5346,9 @@
           "dream": "Designing buildings people love",
           "talent": "Finding a bargain anywhere",
           "words": "Fierce, funny, golden"
+        },
+        "photos": {
+          "photo1": "/assets/samples/eighteenth-birthday-magazine-2.jpg"
         }
       }
     ],
@@ -5422,6 +5500,9 @@
           "met": "At a dance, where he trod on her feet all night",
           "secret": "Never go to bed angry, and always share the biscuits",
           "words": "Devoted, daft, golden"
+        },
+        "photos": {
+          "photo1": "/assets/samples/golden-anniversary-magazine-0.jpg"
         }
       },
       {
@@ -5439,6 +5520,9 @@
           "met": "Both late for the same bus, every single morning",
           "secret": "Laughing at each other's terrible jokes",
           "words": "Loyal, loving, legendary"
+        },
+        "photos": {
+          "photo1": "/assets/samples/golden-anniversary-magazine-1.jpg"
         }
       },
       {
@@ -5456,6 +5540,9 @@
           "met": "Neighbours who argued over a garden fence",
           "secret": "A cup of tea in bed every morning",
           "words": "Steady, sweet, forever"
+        },
+        "photos": {
+          "photo1": "/assets/samples/golden-anniversary-magazine-2.jpg"
         }
       }
     ],
@@ -5607,6 +5694,9 @@
           "power": "Making scary days feel calm",
           "year": "2026",
           "words": "Calm, kind, unforgettable"
+        },
+        "photos": {
+          "photo1": "/assets/samples/thank-you-magazine-0.jpg"
         }
       },
       {
@@ -5624,6 +5714,9 @@
           "power": "Turning nerves into goals",
           "year": "2026",
           "words": "Loud, loyal, legendary"
+        },
+        "photos": {
+          "photo1": "/assets/samples/thank-you-magazine-1.jpg"
         }
       },
       {
@@ -5641,6 +5734,9 @@
           "power": "Knowing exactly what we needed",
           "year": "2026",
           "words": "Warm, generous, golden"
+        },
+        "photos": {
+          "photo1": "/assets/samples/thank-you-magazine-2.jpg"
         }
       }
     ],
@@ -5792,6 +5888,9 @@
           "weapon": "A spreadsheet for everything",
           "coffee": "Oat flat whites, four a day",
           "words": "Sharp, kind, unstoppable"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-job-magazine-0.jpg"
         }
       },
       {
@@ -5809,6 +5908,9 @@
           "weapon": "Never forgetting a name",
           "coffee": "Double espresso, no time",
           "words": "Brave, bold, brilliant"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-job-magazine-1.jpg"
         }
       },
       {
@@ -5826,6 +5928,9 @@
           "weapon": "Fixing it before anyone notices",
           "coffee": "Green tea and biscuits",
           "words": "Calm, clever, legendary"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-job-magazine-2.jpg"
         }
       }
     ],
