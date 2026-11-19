@@ -61,6 +61,7 @@ function layout({ title, description, path, body, og = {}, jsonld, bodyClass = '
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fff8ef">
 <meta name="p:domain_verify" content="c34b640fddc5572ca6d8e32b76436aef">
 <title>${esc(fullTitle)}</title>
 <meta name="description" content="${esc(description)}">
@@ -94,8 +95,8 @@ ${body}
       <p>Personalised magazines for the people you love. Made in minutes, kept forever.</p>
       <p class="currency">Prices in <button type="button" data-cur="gbp">£ GBP</button> <button type="button" data-cur="usd">$ USD</button></p>
     </div>
-    <div><h4>Magazines</h4>${mags.map(m => `<a href="/${m.slug}/">${esc(m.title)}</a>`).join('')}</div>
-    <div><h4>Help</h4><a href="/help/">Delivery and FAQ</a><a href="/ideas/">Gift ideas</a><a href="/about/">About us</a><a href="/contact/">Contact us</a></div>
+    <div class="foot-mags"><h4>Magazines</h4><div class="foot-mag-list">${mags.map(m => `<a href="/${m.slug}/">${esc(m.title)}</a>`).join('')}</div></div>
+    <div><h4>Help</h4><a href="/help/">Delivery and FAQ</a><a href="/ideas/">Gift ideas</a><a href="/about/">About us</a><a href="/contact/">Contact us</a><a href="mailto:${esc(site.email)}">${esc(site.email)}</a></div>
     <div><h4>The small print</h4><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/refunds/">Refunds</a>${socialLinks ? `<h4 class="foot-follow">Follow us</h4>${socialLinks}` : ''}</div>
   </div>
   <p class="legal">&copy; ${new Date().getFullYear()} ${esc(site.name)} is a trading name of ${esc(site.company)}, a company registered in the United Kingdom, number ${esc(site.companyNumber)}.</p>
@@ -208,7 +209,7 @@ const steps = `
 
 const faq = [
   ['How long does it take?', 'About five minutes to fill in. Your finished 24 page magazine is ready to download as soon as you have paid, and we email it to you too.'],
-  ['What is the hardcover keepsake book like?', 'It is the same 24 pages as the magazine, bound as a thick A4 hardcover book with a square spine, printed on heavy glossy photo paper. It stands on a shelf like a real book, so it is perfect for grandparents, weddings, new babies and memories you want to keep forever. It is printed near them and posted, with shipping added at checkout.'],
+  ['What is the hardcover keepsake book like?', 'It is the same 24 pages as the magazine, bound as a thick A4 hardcover book with a square spine, printed on thick, premium paper. It stands on a shelf like a real book, so it is perfect for grandparents, weddings, new babies and memories you want to keep forever. It is printed near them and posted, with shipping added at checkout.'],
   ['Can you send it straight to them as a surprise?', 'Yes. Tick "It\'s a gift, send it to them for me" when you order, add their name and email, and pick the day. We email the finished magazine to them with your name on it, and you get your own copy first so you can see it. For a printed copy, just type their address at the printer\'s checkout.'],
   ['Where do you deliver?', 'Everywhere. Your magazine arrives by email, so you can send it to anyone in the world in seconds. Want it printed? Choose a printed magazine and it is printed near them and posted to their door, with shipping added at checkout.'],
   ['Can I see it before I pay?', 'Yes. You see a live preview of the cover and pages while you fill in the form.'],
@@ -273,7 +274,7 @@ ${tickerHtml}
   <p class="center"><a class="btn btn-big" href="/make/">Start yours now</a></p>
 </section>
 <section class="section">
-  <div class="section-head"><p class="kicker">Real magazines, made up names</p><h2>Save your favourites for later</h2><p>Hover on any cover and tap Save to keep it on your Pinterest board.</p></div>
+  <div class="section-head"><p class="kicker">Real magazines, made up names</p><h2>Save your favourites for later</h2><p>Tap Save on any cover to keep it on your Pinterest board.</p></div>
   <div class="wall wall-short">${wallHtml}</div>
   <p class="center"><button type="button" class="btn btn-ghost wall-more" aria-expanded="false">Show ${wall.length - 8} more covers</button></p>
 </section>
@@ -358,7 +359,7 @@ ${reviewsSection(mag.slug, true)}
   ${steps}
 </section>
 <section class="section section-tint">${faqHtml}</section>
-<section class="cta-band"><h2>Ready to make ${esc(mag.title)}?</h2><a class="btn btn-big btn-light" href="${makeUrl}">Start now</a></section>`;
+<section class="cta-band"><h2>Ready to put them on the cover?</h2><a class="btn btn-big btn-light" href="${makeUrl}">Start now</a></section>`;
   const jsonld = [{
     '@context': 'https://schema.org', '@type': 'Product',
     name, description: mag.description,
@@ -484,7 +485,7 @@ async function simplePages() {
     body: wrap('Help', 'Delivery and questions', `
       <h2>Delivery</h2>
       <p>Your finished 24 page magazine is ready to download as a PDF the moment you have paid, and we email it to you too. You can send it to anyone, anywhere, by email or message, or print it at home or at any print shop.</p>
-      <p>Printed magazines are printed on glossy or matte paper, and hardcover keepsake books on heavy glossy photo paper, by our print partner near the lucky person, then posted. Printing takes about 4 to 5 working days, plus a few days for the post. Shipping is worked out for their country and added at checkout.</p>
+      <p>Printed magazines are printed on glossy or matte paper, and hardcover keepsake books on thick, premium paper, by our print partner near the lucky person, then posted. Printing takes about 4 to 5 working days, plus a few days for the post. Shipping is worked out for their country and added at checkout.</p>
       <p>Giving it for a special day? Order at least three days before, just to be safe.</p>
       <h2>Questions</h2>${faqHtml}
       <h2>Still stuck?</h2><p>Email <a href="mailto:${esc(site.email)}">${esc(site.email)}</a> and a real person will help.</p>`),
