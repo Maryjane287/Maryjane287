@@ -113,7 +113,7 @@
       {
         "id": "moment",
         "label": "The best moment of your year",
-        "example": "The day we all got caught in the rain at the seaside and laughed so hard we forgot to run",
+        "example": "The morning Leo found real snow on the doorstep and ran out in his pyjamas to catch it",
         "type": "textarea",
         "max": 220
       },
@@ -173,6 +173,9 @@
           "dinner": "Roast potatoes, fought over every year",
           "jumper": "Grandpa, the one that lights up",
           "words": "Cosy, chaotic, magical"
+        },
+        "photos": {
+          "photo1": "/assets/samples/christmas-magazine-0.jpg"
         }
       },
       {
@@ -207,6 +210,9 @@
           "dinner": "Grandma's famous trifle",
           "jumper": "Mum, covered in tiny reindeer",
           "words": "Loud, loving, sparkly"
+        },
+        "photos": {
+          "photo1": "/assets/samples/christmas-magazine-1.jpg"
         }
       },
       {
@@ -235,6 +241,9 @@
           "dinner": "Pudding set on fire (on purpose)",
           "jumper": "Mia, the one with a bobble nose",
           "words": "Snug, silly, together"
+        },
+        "photos": {
+          "photo1": "/assets/samples/christmas-magazine-2.jpg"
         }
       }
     ],
@@ -262,7 +271,7 @@
         "special"
       ],
       "quote": "{words}",
-      "credit": "The North Pole reports, page 9"
+      "credit": "The North Pole reports, page 10"
     }
   },
   {
@@ -376,6 +385,9 @@
           "talent": "Finds anything you have lost in under a minute",
           "obsession": "Iced coffee and true crime podcasts",
           "words": "Kind, chaotic, magnificent"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-0.jpg"
         }
       },
       {
@@ -392,6 +404,9 @@
           "talent": "Can reverse park anything, first time",
           "obsession": "Sourdough. Still. Somehow.",
           "words": "Loyal, legendary, loud"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-1.jpg"
         }
       },
       {
@@ -408,6 +423,9 @@
           "talent": "Knows every word to every song, ever",
           "obsession": "Tiny plants and big earrings",
           "words": "Bright, brave, brilliant"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-2.jpg"
         }
       },
       {
@@ -424,6 +442,9 @@
           "talent": "Makes friends in any queue in the world",
           "obsession": "Crosswords and garden birds",
           "words": "Wise, warm, wildly funny"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-3.jpg"
         }
       }
     ],
@@ -741,7 +762,7 @@
       {
         "id": "love",
         "label": "What you love most about them",
-        "example": "The way they laugh at their own jokes before the punchline",
+        "example": "The way you laugh at your own jokes before the punchline",
         "max": 120
       },
       {
@@ -781,6 +802,9 @@
           "years": "5",
           "met": "Arguing over the last croissant in a tiny bakery",
           "joke": "The Great Sofa Incident of 2021"
+        },
+        "photos": {
+          "photo1": "/assets/samples/anniversary-magazine-0.jpg"
         }
       },
       {
@@ -796,6 +820,9 @@
           "years": "10",
           "met": "A wrong number that turned into a four hour call",
           "joke": "Never trust a quiet cat"
+        },
+        "photos": {
+          "photo1": "/assets/samples/anniversary-magazine-1.jpg"
         }
       },
       {
@@ -811,6 +838,9 @@
           "years": "1",
           "met": "Both reaching for the same library book",
           "joke": "Chapter eleven"
+        },
+        "photos": {
+          "photo1": "/assets/samples/anniversary-magazine-2.jpg"
         }
       },
       {
@@ -826,6 +856,9 @@
           "years": "25",
           "met": "A rainy bus stop and one shared umbrella",
           "joke": "Left at the big tree"
+        },
+        "photos": {
+          "photo1": "/assets/samples/anniversary-magazine-3.jpg"
         }
       }
     ],
@@ -960,6 +993,9 @@
           "headline": "Leo lost his first tooth and the tooth fairy paid a whole £2",
           "quote": "Grandma is a hundred and cool",
           "weather": "Sunny with a strong chance of cuddles"
+        },
+        "photos": {
+          "photo1": "/assets/samples/grandparents-newspaper-0.jpg"
         }
       },
       {
@@ -976,6 +1012,9 @@
           "headline": "Twins learn to ride bikes, garden fence survives",
           "quote": "Is Grandpa older than the internet?",
           "weather": "Cloudy with occasional giggles"
+        },
+        "photos": {
+          "photo1": "/assets/samples/grandparents-newspaper-1.jpg"
         }
       },
       {
@@ -992,6 +1031,9 @@
           "headline": "Baby Leo says first word, and it is definitely Nana",
           "quote": "Nana's house has the best biscuits in the world",
           "weather": "Warm spells of missing you"
+        },
+        "photos": {
+          "photo1": "/assets/samples/grandparents-newspaper-2.jpg"
         }
       },
       {
@@ -1008,6 +1050,9 @@
           "headline": "Mia wins the school spelling bee with the word enthusiastic",
           "quote": "Auntie is basically a superhero with nicer shoes",
           "weather": "Bright and breezy with big hugs"
+        },
+        "photos": {
+          "photo1": "/assets/samples/grandparents-newspaper-3.jpg"
         }
       }
     ],
@@ -1142,6 +1187,9 @@
           "expert": "Dinosaurs",
           "dream": "A volcano scientist",
           "fact": "Once tried to post a letter to a real T rex"
+        },
+        "photos": {
+          "photo1": "/assets/samples/kids-magazine-0.jpg"
         }
       },
       {
@@ -1158,6 +1206,9 @@
           "expert": "Unicorns",
           "dream": "A unicorn vet",
           "fact": "Has named every pigeon in the park"
+        },
+        "photos": {
+          "photo1": "/assets/samples/kids-magazine-1.jpg"
         }
       },
       {
@@ -1174,6 +1225,9 @@
           "expert": "Space",
           "dream": "The first chef on Mars",
           "fact": "Can burp the alphabet up to letter M"
+        },
+        "photos": {
+          "photo1": "/assets/samples/kids-magazine-2.jpg"
         }
       },
       {
@@ -1190,6 +1244,9 @@
           "expert": "Bugs",
           "dream": "A ladybird",
           "fact": "Says goodnight to the moon every single night"
+        },
+        "photos": {
+          "photo1": "/assets/samples/kids-magazine-3.jpg"
         }
       }
     ],
@@ -1331,6 +1388,9 @@
           "adventure": "Our first camping trip, in the rain, and we loved it",
           "proud": "Leo rode his bike with no stabilisers",
           "word": "Together"
+        },
+        "photos": {
+          "photo1": "/assets/samples/year-in-review-magazine-0.jpg"
         }
       },
       {
@@ -1347,6 +1407,9 @@
           "adventure": "Six countries, one very small car",
           "proud": "Finally finishing the garden",
           "word": "Brave"
+        },
+        "photos": {
+          "photo1": "/assets/samples/year-in-review-magazine-1.jpg"
         }
       },
       {
@@ -1363,6 +1426,9 @@
           "adventure": "Moving to a house by the sea",
           "proud": "Sam's first ever school play",
           "word": "Home"
+        },
+        "photos": {
+          "photo1": "/assets/samples/year-in-review-magazine-2.jpg"
         }
       },
       {
@@ -1379,6 +1445,9 @@
           "adventure": "Learning to surf, badly",
           "proud": "Running our first 10k",
           "word": "Joy"
+        },
+        "photos": {
+          "photo1": "/assets/samples/year-in-review-magazine-3.jpg"
         }
       }
     ],
@@ -1528,6 +1597,9 @@
           "talent": "Hears a cheese wrapper from three rooms away",
           "crime": "Stealing socks, then looking innocent",
           "snack": "Anything you are eating"
+        },
+        "photos": {
+          "photo1": "/assets/samples/pet-magazine-0.jpg"
         }
       },
       {
@@ -1545,6 +1617,9 @@
           "talent": "Knocking things off tables at 3am",
           "crime": "Sitting on laptops during meetings",
           "snack": "Tuna, served promptly"
+        },
+        "photos": {
+          "photo1": "/assets/samples/pet-magazine-1.jpg"
         }
       },
       {
@@ -1563,6 +1638,9 @@
           "talent": "Opens doors that should stay closed",
           "crime": "Digging to the centre of the earth",
           "snack": "Peanut butter, from a spoon"
+        },
+        "photos": {
+          "photo1": "/assets/samples/pet-magazine-2.jpg"
         }
       },
       {
@@ -1580,6 +1658,9 @@
           "talent": "Fits in any box, however small",
           "crime": "Stealing the warm spot in bed",
           "snack": "Chicken, never the cheap one"
+        },
+        "photos": {
+          "photo1": "/assets/samples/pet-magazine-3.jpg"
         }
       }
     ],
@@ -1728,6 +1809,9 @@
           "crystal": "Citrine",
           "power": "Lighting up every room they walk into",
           "prediction": "A spontaneous trip and a very good haircut"
+        },
+        "photos": {
+          "photo1": "/assets/samples/star-sign-birthday-magazine-0.jpg"
         }
       },
       {
@@ -1746,6 +1830,9 @@
           "crystal": "Obsidian",
           "power": "Knowing exactly what you are thinking",
           "prediction": "Big news at work and an even bigger celebration"
+        },
+        "photos": {
+          "photo1": "/assets/samples/star-sign-birthday-magazine-1.jpg"
         }
       },
       {
@@ -1764,6 +1851,9 @@
           "crystal": "Amethyst",
           "power": "Making everyone feel understood",
           "prediction": "A creative dream finally comes true"
+        },
+        "photos": {
+          "photo1": "/assets/samples/star-sign-birthday-magazine-2.jpg"
         }
       },
       {
@@ -1782,6 +1872,9 @@
           "crystal": "Clear quartz",
           "power": "Talking to anyone about anything",
           "prediction": "A new city, a new hobby and a lot of laughing"
+        },
+        "photos": {
+          "photo1": "/assets/samples/star-sign-birthday-magazine-3.jpg"
         }
       }
     ],
@@ -1933,6 +2026,9 @@
           "song": "A slow one they both pretended to know",
           "secret": "Terrible jokes and endless snacks",
           "words": "Soppy, silly, soulmates"
+        },
+        "photos": {
+          "photo1": "/assets/samples/wedding-magazine-0.jpg"
         }
       },
       {
@@ -1950,6 +2046,9 @@
           "song": "The song from their first road trip",
           "secret": "Never going to bed hungry",
           "words": "Loud, loyal, lovely"
+        },
+        "photos": {
+          "photo1": "/assets/samples/wedding-magazine-1.jpg"
         }
       },
       {
@@ -1967,6 +2066,9 @@
           "song": "A cheesy classic, played twice",
           "secret": "Laughing at the same bad films",
           "words": "Brave, bright, besotted"
+        },
+        "photos": {
+          "photo1": "/assets/samples/wedding-magazine-2.jpg"
         }
       }
     ],
@@ -2104,7 +2206,7 @@
     ],
     "examples": [
       {
-        "id": "olivia",
+        "id": "mia-quiz",
         "palette": "rose",
         "portrait": {
           "skin": 0,
@@ -2118,6 +2220,9 @@
           "looks": "Grandad, when he's grumpy",
           "skill": "Sleeping through anything but the night",
           "loves": "Milk, cuddles and the hoover noise"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-baby-magazine-0.jpg"
         }
       },
       {
@@ -2135,6 +2240,9 @@
           "looks": "Mummy, especially the frown",
           "skill": "Loudest sneeze on the ward",
           "loves": "Being rocked, never stopped"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-baby-magazine-1.jpg"
         }
       },
       {
@@ -2152,6 +2260,9 @@
           "looks": "A tiny, wise old professor",
           "skill": "Smiling only at the dog",
           "loves": "Warm towels and her own feet"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-baby-magazine-2.jpg"
         }
       }
     ],
@@ -2296,6 +2407,9 @@
           "food": "Lemon, never again",
           "toy": "The box the present came in",
           "nick": "Little Chunk"
+        },
+        "photos": {
+          "photo1": "/assets/samples/first-birthday-magazine-0.jpg"
         }
       },
       {
@@ -2312,6 +2426,9 @@
           "food": "Broccoli, total betrayal",
           "toy": "Anything with a button",
           "nick": "Sunshine"
+        },
+        "photos": {
+          "photo1": "/assets/samples/first-birthday-magazine-1.jpg"
         }
       },
       {
@@ -2328,6 +2445,9 @@
           "food": "Yoghurt, mostly on his face",
           "toy": "The TV remote",
           "nick": "Captain Wiggles"
+        },
+        "photos": {
+          "photo1": "/assets/samples/first-birthday-magazine-2.jpg"
         }
       }
     ],
@@ -2479,6 +2599,9 @@
           "known": "The biscuit tin nobody else could open",
           "plans": "Golf, gardening and very long lunches",
           "miss": "Your laugh down the corridor"
+        },
+        "photos": {
+          "photo1": "/assets/samples/retirement-magazine-0.jpg"
         }
       },
       {
@@ -2496,6 +2619,9 @@
           "known": "Remembering every patient's name",
           "plans": "Travelling to every country she can",
           "miss": "Your calm on the busy nights"
+        },
+        "photos": {
+          "photo1": "/assets/samples/retirement-magazine-1.jpg"
         }
       },
       {
@@ -2513,6 +2639,9 @@
           "known": "Knowing every passenger by name",
           "plans": "Fishing, finally",
           "miss": "Your cheery hello every morning"
+        },
+        "photos": {
+          "photo1": "/assets/samples/retirement-magazine-2.jpg"
         }
       }
     ],
@@ -2664,6 +2793,9 @@
           "fuel": "Instant noodles and three alarms",
           "next": "Saving the ocean, one fish at a time",
           "words": "Clever, stubborn, unstoppable"
+        },
+        "photos": {
+          "photo1": "/assets/samples/graduation-magazine-0.jpg"
         }
       },
       {
@@ -2681,6 +2813,9 @@
           "fuel": "Energy drinks and pure panic",
           "next": "Building bridges, literally",
           "words": "Calm, curious, brilliant"
+        },
+        "photos": {
+          "photo1": "/assets/samples/graduation-magazine-1.jpg"
         }
       },
       {
@@ -2698,6 +2833,9 @@
           "fuel": "Highlighters and hope",
           "next": "Winning every argument, legally",
           "words": "Sharp, kind, fearless"
+        },
+        "photos": {
+          "photo1": "/assets/samples/graduation-magazine-2.jpg"
         }
       }
     ],
@@ -2842,6 +2980,9 @@
           "says": "Have you eaten?",
           "dish": "Sunday roast, nobody does it better",
           "words": "Warm, wise, wonderful"
+        },
+        "photos": {
+          "photo1": "/assets/samples/mothers-day-magazine-0.jpg"
         }
       },
       {
@@ -2858,6 +2999,9 @@
           "says": "Did you take a coat?",
           "dish": "Her legendary pancakes",
           "words": "Strong, funny, fabulous"
+        },
+        "photos": {
+          "photo1": "/assets/samples/mothers-day-magazine-1.jpg"
         }
       },
       {
@@ -2874,6 +3018,9 @@
           "says": "Five more minutes",
           "dish": "Chocolate cake, extra thick",
           "words": "Kind, brave, beautiful"
+        },
+        "photos": {
+          "photo1": "/assets/samples/mothers-day-magazine-2.jpg"
         }
       }
     ],
@@ -3018,6 +3165,9 @@
           "skill": "Fixing anything with tape",
           "says": "Ask your mother",
           "words": "Funny, patient, legendary"
+        },
+        "photos": {
+          "photo1": "/assets/samples/fathers-day-magazine-0.jpg"
         }
       },
       {
@@ -3034,6 +3184,9 @@
           "skill": "Perfect barbecue, every time",
           "says": "Turn that light off",
           "words": "Strong, silly, the best"
+        },
+        "photos": {
+          "photo1": "/assets/samples/fathers-day-magazine-1.jpg"
         }
       },
       {
@@ -3050,6 +3203,9 @@
           "skill": "Piggy backs for miles",
           "says": "We will see",
           "words": "Kind, cool, our hero"
+        },
+        "photos": {
+          "photo1": "/assets/samples/fathers-day-magazine-2.jpg"
         }
       }
     ],
@@ -3201,6 +3357,9 @@
           "joke": "The goose incident",
           "best": "Always answers the phone at 2am",
           "words": "Loyal, hilarious, iconic"
+        },
+        "photos": {
+          "photo1": "/assets/samples/best-friend-magazine-0.jpg"
         }
       },
       {
@@ -3218,10 +3377,13 @@
           "joke": "Never trust a pigeon",
           "best": "Turns up with snacks, always",
           "words": "Honest, daft, dependable"
+        },
+        "photos": {
+          "photo1": "/assets/samples/best-friend-magazine-1.jpg"
         }
       },
       {
-        "id": "olivia",
+        "id": "mia-quiz",
         "palette": "rose",
         "portrait": {
           "skin": 3,
@@ -3229,12 +3391,15 @@
           "hairColor": "#120c08"
         },
         "values": {
-          "name": "Olivia",
+          "name": "Mia",
           "since": "2019",
           "met": "Same wrong answer in a quiz",
           "joke": "Just one more shop",
           "best": "Hypes you up like a stadium",
           "words": "Bold, bright, brilliant"
+        },
+        "photos": {
+          "photo1": "/assets/samples/best-friend-magazine-2.jpg"
         }
       }
     ],
@@ -3386,6 +3551,9 @@
           "lesson": "Volcanoes, with real explosions",
           "power": "Knowing who talked, without looking",
           "words": "Patient, funny, amazing"
+        },
+        "photos": {
+          "photo1": "/assets/samples/teacher-magazine-0.jpg"
         }
       },
       {
@@ -3403,6 +3571,9 @@
           "lesson": "Building a castle out of boxes",
           "power": "Making maths actually fun",
           "words": "Kind, calm, the best"
+        },
+        "photos": {
+          "photo1": "/assets/samples/teacher-magazine-1.jpg"
         }
       },
       {
@@ -3420,6 +3591,9 @@
           "lesson": "Reading under the tables",
           "power": "Remembering every birthday",
           "words": "Sunny, smart, special"
+        },
+        "photos": {
+          "photo1": "/assets/samples/teacher-magazine-2.jpg"
         }
       }
     ],
@@ -3571,6 +3745,9 @@
           "famous": "Dancing at every wedding, invited or not",
           "decade": "This one, obviously",
           "still": "Whistle, or fold a fitted sheet"
+        },
+        "photos": {
+          "photo1": "/assets/samples/milestone-birthday-magazine-0.jpg"
         }
       },
       {
@@ -3588,6 +3765,9 @@
           "famous": "Organising everyone, lovingly",
           "decade": "Her twenties, no regrets",
           "still": "Parallel park on the first go"
+        },
+        "photos": {
+          "photo1": "/assets/samples/milestone-birthday-magazine-1.jpg"
         }
       },
       {
@@ -3605,6 +3785,9 @@
           "famous": "The world's longest stories",
           "decade": "The eighties, and the hair",
           "still": "Resist a second pudding"
+        },
+        "photos": {
+          "photo1": "/assets/samples/milestone-birthday-magazine-2.jpg"
         }
       }
     ],
@@ -3756,6 +3939,9 @@
           "nerves": "Forgot own name, twice",
           "next": "A wedding, then a nap",
           "words": "Giddy, gorgeous, glowing"
+        },
+        "photos": {
+          "photo1": "/assets/samples/engagement-magazine-0.jpg"
         }
       },
       {
@@ -3773,10 +3959,13 @@
           "nerves": "Rehearsed it forty times",
           "next": "Planning, panicking, partying",
           "words": "Starry eyed and silly"
+        },
+        "photos": {
+          "photo1": "/assets/samples/engagement-magazine-1.jpg"
         }
       },
       {
-        "id": "jack-grace",
+        "id": "chris-mia",
         "palette": "mint",
         "portrait": {
           "skin": 0,
@@ -3784,12 +3973,15 @@
           "hairColor": "#c4803f"
         },
         "values": {
-          "names": "Jack & Grace",
+          "names": "Chris & Mia",
           "year": "2026",
           "where": "Their favourite little cafe",
           "nerves": "Hid the ring in a croissant",
           "next": "Finding a date both mums like",
           "words": "Sweet, sunny, sure"
+        },
+        "photos": {
+          "photo1": "/assets/samples/engagement-magazine-2.jpg"
         }
       }
     ],
@@ -3941,6 +4133,9 @@
           "first": "Pizza on the floor, no chairs",
           "dream": "A garden full of tomatoes",
           "words": "Cosy, chaotic, ours"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-home-magazine-0.jpg"
         }
       },
       {
@@ -3958,6 +4153,9 @@
           "first": "Noodles from the box",
           "dream": "A home cinema, one day",
           "words": "Small, bright, mine"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-home-magazine-1.jpg"
         }
       },
       {
@@ -3975,6 +4173,9 @@
           "first": "Beans on toast by candlelight",
           "dream": "Chickens, eventually",
           "words": "Crooked, lovely, home"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-home-magazine-2.jpg"
         }
       }
     ],
@@ -4126,6 +4327,9 @@
           "meal": "Custard tarts for breakfast, every day",
           "view": "Sunset from the castle walls",
           "lost": "Our own hotel, twice"
+        },
+        "photos": {
+          "photo1": "/assets/samples/travel-magazine-0.jpg"
         }
       },
       {
@@ -4143,6 +4347,9 @@
           "meal": "Ramen at a tiny counter at 1am",
           "view": "The city from the tallest tower",
           "lost": "The right train, every time"
+        },
+        "photos": {
+          "photo1": "/assets/samples/travel-magazine-1.jpg"
         }
       },
       {
@@ -4160,6 +4367,9 @@
           "meal": "Hot dogs by the harbour",
           "view": "The northern lights, finally",
           "lost": "A waterfall with no signal"
+        },
+        "photos": {
+          "photo1": "/assets/samples/travel-magazine-2.jpg"
         }
       }
     ],
@@ -4312,6 +4522,9 @@
           "habit": "Waiting at the window every evening",
           "silly": "Chasing their own tail at the vet",
           "words": "Gentle, loyal, ours"
+        },
+        "photos": {
+          "photo1": "/assets/samples/pet-memorial-magazine-0.jpg"
         }
       },
       {
@@ -4329,6 +4542,9 @@
           "habit": "Head bumps every morning",
           "silly": "Stuck in a paper bag, very proud",
           "words": "Soft, wise, beloved"
+        },
+        "photos": {
+          "photo1": "/assets/samples/pet-memorial-magazine-1.jpg"
         }
       },
       {
@@ -4347,6 +4563,9 @@
           "habit": "Bringing us one shoe as a gift",
           "silly": "Barking at his own reflection",
           "words": "Brave, daft, devoted"
+        },
+        "photos": {
+          "photo1": "/assets/samples/pet-memorial-magazine-2.jpg"
         }
       }
     ],
@@ -4501,6 +4720,9 @@
           "cute": "Humming while cooking",
           "song": "The one from the kitchen disco",
           "words": "Mine, all mine"
+        },
+        "photos": {
+          "photo1": "/assets/samples/valentines-magazine-0.jpg"
         }
       },
       {
@@ -4518,6 +4740,9 @@
           "cute": "Stealing the duvet, gracefully",
           "song": "Our wedding song, obviously",
           "words": "Sweet, sassy, stunning"
+        },
+        "photos": {
+          "photo1": "/assets/samples/valentines-magazine-1.jpg"
         }
       },
       {
@@ -4535,6 +4760,9 @@
           "cute": "Talking to every dog",
           "song": "The first one we danced to",
           "words": "Funny, tender, perfect"
+        },
+        "photos": {
+          "photo1": "/assets/samples/valentines-magazine-2.jpg"
         }
       }
     ],
@@ -4563,6 +4791,1174 @@
       ],
       "quote": "{words}",
       "credit": "Their biggest fan"
+    }
+  },
+  {
+    "slug": "memorial-magazine",
+    "title": "In Loving Memory",
+    "searchTitle": "Personalised Memorial Keepsake Magazine",
+    "pinTitle": "Personalised In Loving Memory Magazine",
+    "occasion": "In loving memory",
+    "short": "A gentle keepsake magazine celebrating the life of someone you miss.",
+    "description": "A beautiful way to remember them. The things they always said, the things they loved and the stories the family still tells, gathered into a keepsake magazine with their photo on the cover. A comforting gift for a family who are grieving, for a memorial, or for the first birthday without them.",
+    "keywords": [
+      "memorial gift",
+      "in loving memory gift",
+      "sympathy gift",
+      "remembrance keepsake",
+      "celebration of life",
+      "bereavement gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo",
+      "A letter to them",
+      "Their life story",
+      "A photo spread",
+      "Our favourite memory",
+      "A gentle front page and keepsake poster",
+      "A quiz and word search made from your answers",
+      "A keepsake certificate and a notes page"
+    ],
+    "letterTitle": "A letter to you",
+    "feature": [
+      "Our favourite memory",
+      "moment"
+    ],
+    "gentle": true,
+    "skipDesigns": [
+      "comic"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Grandad Sam",
+        "max": 16
+      },
+      {
+        "id": "years",
+        "label": "Their age",
+        "example": "87",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "All of your family",
+        "max": 34
+      },
+      {
+        "id": "known",
+        "label": "Always known for",
+        "example": "The best roast potatoes in the world",
+        "max": 40
+      },
+      {
+        "id": "saying",
+        "label": "What they always said",
+        "example": "Put the kettle on, love",
+        "max": 36
+      },
+      {
+        "id": "loved",
+        "label": "Something they loved",
+        "example": "Dancing in the kitchen to old records",
+        "max": 40
+      },
+      {
+        "id": "words",
+        "label": "Three words for them",
+        "example": "Kind, funny, ours",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "Our favourite memory",
+        "example": "Every summer when you taught the grandchildren to fish, and pretended not to notice when we let them all go",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "Thank you for every story, every hug and every cup of tea. You made us who we are. We will carry you with us, always.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of them",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A happy day",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "grandad-sam",
+        "palette": "sky",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#d9d9d9"
+        },
+        "values": {
+          "name": "Grandad Sam",
+          "years": "87",
+          "known": "The best roast potatoes in the world",
+          "saying": "Put the kettle on, love",
+          "loved": "Dancing in the kitchen to old records",
+          "words": "Kind, funny, ours"
+        },
+        "photos": {
+          "photo1": "/assets/samples/memorial-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "nana-emma",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "bun",
+          "hairColor": "#e6e6e6"
+        },
+        "values": {
+          "name": "Nana Emma",
+          "years": "92",
+          "known": "Knitting a jumper for every new baby",
+          "saying": "Have you had enough to eat?",
+          "loved": "Her garden roses, and anyone who visited",
+          "words": "Gentle, wise, loved"
+        },
+        "photos": {
+          "photo1": "/assets/samples/memorial-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "uncle-chris",
+        "palette": "mint",
+        "portrait": {
+          "skin": 2,
+          "hair": "short",
+          "hairColor": "#3a3a3a"
+        },
+        "values": {
+          "name": "Uncle Chris",
+          "years": "64",
+          "known": "Telling the same joke at every party",
+          "saying": "It will all be fine, you watch",
+          "loved": "Football on a Saturday and a big Sunday lunch",
+          "words": "Loud, warm, irreplaceable"
+        },
+        "photos": {
+          "photo1": "/assets/samples/memorial-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "A life well loved",
+      "edition": "In loving memory",
+      "lines": [
+        [
+          "Always known for",
+          "{known}"
+        ],
+        [
+          "They always said",
+          "{saying}"
+        ],
+        [
+          "They loved",
+          "{loved}"
+        ]
+      ],
+      "badge": [
+        "Forever",
+        "loved",
+        "always missed"
+      ],
+      "quote": "{words}",
+      "credit": "Always remembered"
+    }
+  },
+  {
+    "slug": "baby-shower-magazine",
+    "title": "Baby on the Way",
+    "searchTitle": "Personalised Baby Shower Magazine",
+    "pinTitle": "Personalised Baby Shower Magazine",
+    "occasion": "Baby shower",
+    "short": "A glowing magazine for the mum or parents to be, before baby arrives.",
+    "description": "The sweetest gift for a baby shower. Their cravings, the bump's nickname, everyone's guesses and the wishes the family has for the little one, written up as a glossy magazine starring the parents to be. A keepsake they can show the baby one day.",
+    "keywords": [
+      "baby shower gift",
+      "gift for mum to be",
+      "pregnancy gift",
+      "gender reveal gift",
+      "expecting parents gift",
+      "new mum gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring the parents to be",
+      "A letter for the bump",
+      "The story so far",
+      "A photo spread",
+      "Everyone's wishes for the baby",
+      "A front page, perfume ad, movie poster and pull out poster",
+      "A quiz and word search made from your answers",
+      "Awards, a passport, a certificate and a notes page"
+    ],
+    "letterTitle": "A letter for the bump",
+    "feature": [
+      "The moment we found out",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Mum or parents to be",
+        "example": "Emma",
+        "max": 20
+      },
+      {
+        "id": "due",
+        "label": "When is baby due?",
+        "example": "March",
+        "max": 14
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "All your friends",
+        "max": 30
+      },
+      {
+        "id": "nickname",
+        "label": "The bump's nickname",
+        "example": "Little Bean",
+        "max": 20
+      },
+      {
+        "id": "craving",
+        "label": "Biggest craving",
+        "example": "Pickles dipped in ice cream",
+        "max": 36
+      },
+      {
+        "id": "guess",
+        "label": "Everyone's guess",
+        "example": "Definitely a footballer, judging by the kicks",
+        "max": 50
+      },
+      {
+        "id": "words",
+        "label": "Three words for them",
+        "example": "Glowing, brave, ready",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment we found out",
+        "example": "You handed us a tiny pair of socks over dinner and it took us a full minute to understand",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "You are going to be the most wonderful parent. That little one is so lucky already, and we cannot wait to meet them.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the parents to be",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A bump photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma",
+        "palette": "rose",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#6b3a1f"
+        },
+        "values": {
+          "name": "Emma",
+          "due": "March",
+          "nickname": "Little Bean",
+          "craving": "Pickles dipped in ice cream",
+          "guess": "Definitely a footballer, judging by the kicks",
+          "words": "Glowing, brave, ready"
+        },
+        "photos": {
+          "photo1": "/assets/samples/baby-shower-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "mia-leo",
+        "palette": "sky",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Mia & Leo",
+          "due": "June",
+          "nickname": "The Peanut",
+          "craving": "Toast with far too much butter",
+          "guess": "Mia's laugh and Leo's ears",
+          "words": "Excited, nervous, smitten"
+        },
+        "photos": {
+          "photo1": "/assets/samples/baby-shower-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "mint",
+        "portrait": {
+          "skin": 2,
+          "hair": "bun",
+          "hairColor": "#2a1a12"
+        },
+        "values": {
+          "name": "Sam",
+          "due": "October",
+          "nickname": "Baby Bear",
+          "craving": "Spicy noodles at midnight",
+          "guess": "A night owl, just like their mum",
+          "words": "Calm, strong, radiant"
+        },
+        "photos": {
+          "photo1": "/assets/samples/baby-shower-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The bump issue",
+      "edition": "Special delivery edition",
+      "lines": [
+        [
+          "Exclusive",
+          "{nickname} is on the way"
+        ],
+        [
+          "Craving",
+          "{craving}"
+        ],
+        [
+          "Everyone guesses",
+          "{guess}"
+        ]
+      ],
+      "badge": [
+        "Arriving",
+        "{due}",
+        "with love"
+      ],
+      "quote": "{words}",
+      "credit": "The family agrees"
+    }
+  },
+  {
+    "slug": "eighteenth-birthday-magazine",
+    "title": "Officially Grown Up",
+    "searchTitle": "Personalised 18th Birthday Magazine",
+    "pinTitle": "Personalised 18th Birthday Magazine",
+    "occasion": "18th birthday",
+    "short": "A glossy cover star magazine for an 18th or 21st birthday.",
+    "description": "The coming of age gift they will actually keep. Their most likely to, their big dream, their funniest childhood moment and the advice the family wants to give them, written up as a glossy celebrity magazine. Perfect for an 18th or a 21st, with baby photos encouraged.",
+    "keywords": [
+      "18th birthday gift",
+      "21st birthday gift",
+      "coming of age gift",
+      "18th birthday ideas",
+      "gift for teenager",
+      "birthday gift for daughter"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A glossy cover starring them",
+      "A birthday letter",
+      "Their story so far",
+      "A photo spread, baby photos welcome",
+      "Our advice for the next chapter",
+      "A front page, perfume ad, movie poster and pull out poster",
+      "A quiz and word search made from your answers",
+      "Awards, a passport, a certificate and a notes page"
+    ],
+    "letterTitle": "A letter for your big birthday",
+    "feature": [
+      "The childhood moment we still talk about",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Leo",
+        "max": 12
+      },
+      {
+        "id": "age",
+        "label": "Age they are turning",
+        "example": "18",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mum and Dad",
+        "max": 30
+      },
+      {
+        "id": "likely",
+        "label": "Most likely to",
+        "example": "Become famous for something nobody expected",
+        "max": 46
+      },
+      {
+        "id": "dream",
+        "label": "Their big dream",
+        "example": "Travelling the world with one backpack",
+        "max": 40
+      },
+      {
+        "id": "talent",
+        "label": "Secret talent",
+        "example": "Sleeping through any alarm",
+        "max": 36
+      },
+      {
+        "id": "words",
+        "label": "Three words for them",
+        "example": "Clever, chaotic, kind",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The childhood moment we still talk about",
+        "example": "Age five, when you announced at a wedding that you would be marrying the cake",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "Watching you grow up has been the best adventure of our lives. Go and be brilliant. We will always be here, with snacks and lifts.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of them",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A baby photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "leo",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Leo",
+          "age": "18",
+          "likely": "Become famous for something nobody expected",
+          "dream": "Travelling the world with one backpack",
+          "talent": "Sleeping through any alarm",
+          "words": "Clever, chaotic, kind"
+        },
+        "photos": {
+          "photo1": "/assets/samples/eighteenth-birthday-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "sunset",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#8a4a1f"
+        },
+        "values": {
+          "name": "Mia",
+          "age": "18",
+          "likely": "Talk their way into any room",
+          "dream": "Opening the best bakery in town",
+          "talent": "Remembering every song lyric ever",
+          "words": "Bold, bright, brilliant"
+        },
+        "photos": {
+          "photo1": "/assets/samples/eighteenth-birthday-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "emma",
+        "palette": "plum",
+        "portrait": {
+          "skin": 2,
+          "hair": "curly",
+          "hairColor": "#2a1a12"
+        },
+        "values": {
+          "name": "Emma",
+          "age": "21",
+          "likely": "Win an argument with a lawyer",
+          "dream": "Designing buildings people love",
+          "talent": "Finding a bargain anywhere",
+          "words": "Fierce, funny, golden"
+        },
+        "photos": {
+          "photo1": "/assets/samples/eighteenth-birthday-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The coming of age issue",
+      "edition": "Officially an adult edition",
+      "lines": [
+        [
+          "Exclusive",
+          "{name} turns {age}"
+        ],
+        [
+          "Most likely to",
+          "{likely}"
+        ],
+        [
+          "Big dream",
+          "{dream}"
+        ]
+      ],
+      "badge": [
+        "Officially",
+        "{age}",
+        "and fabulous"
+      ],
+      "quote": "{words}",
+      "credit": "The family agrees"
+    }
+  },
+  {
+    "slug": "golden-anniversary-magazine",
+    "title": "Golden Years",
+    "searchTitle": "Personalised Golden Anniversary Magazine",
+    "pinTitle": "Personalised 50th Anniversary Magazine",
+    "occasion": "Parents anniversary",
+    "short": "A magazine for parents or grandparents celebrating a big anniversary.",
+    "description": "A gift for the couple who started it all. How they met, the year they married, their secret to a happy marriage and the family they built, written up as a glossy magazine from their children and grandchildren. Made for a 25th, 40th, 50th or 60th wedding anniversary.",
+    "keywords": [
+      "50th anniversary gift",
+      "golden wedding anniversary",
+      "anniversary gift for parents",
+      "ruby anniversary gift",
+      "silver anniversary gift",
+      "grandparents anniversary gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring the happy couple",
+      "A letter from the family",
+      "Their love story",
+      "A photo spread, wedding photos welcome",
+      "The family they built",
+      "A front page, perfume ad, movie poster and pull out poster",
+      "A quiz and word search made from your answers",
+      "Awards, a passport, a certificate and a notes page"
+    ],
+    "letterTitle": "A letter from all of us",
+    "feature": [
+      "The family story everyone still tells",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "names",
+        "label": "Their names",
+        "example": "Nana & Grandad",
+        "max": 24
+      },
+      {
+        "id": "years",
+        "label": "Years married",
+        "example": "50",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "All your children and grandchildren",
+        "max": 40
+      },
+      {
+        "id": "married",
+        "label": "Year they married",
+        "example": "1976",
+        "max": 4
+      },
+      {
+        "id": "met",
+        "label": "How they met",
+        "example": "At a dance, where he trod on her feet all night",
+        "max": 80
+      },
+      {
+        "id": "secret",
+        "label": "Their secret to a happy marriage",
+        "example": "Never go to bed angry, and always share the biscuits",
+        "max": 60
+      },
+      {
+        "id": "words",
+        "label": "Three words for them",
+        "example": "Devoted, daft, golden",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The family story everyone still tells",
+        "example": "The camping holiday when the tent blew away and you both laughed so hard you had to sit down in the rain",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "Thank you for showing us what love looks like. Everything good in this family started with the two of you. Happy anniversary.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the couple",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A wedding photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "nana-grandad",
+        "palette": "butter",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#e6e6e6"
+        },
+        "values": {
+          "names": "Nana & Grandad",
+          "years": "50",
+          "married": "1976",
+          "met": "At a dance, where he trod on her feet all night",
+          "secret": "Never go to bed angry, and always share the biscuits",
+          "words": "Devoted, daft, golden"
+        },
+        "photos": {
+          "photo1": "/assets/samples/golden-anniversary-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "mum-dad",
+        "palette": "cranberry",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#3a3a3a"
+        },
+        "values": {
+          "names": "Mum & Dad",
+          "years": "40",
+          "married": "1986",
+          "met": "Both late for the same bus, every single morning",
+          "secret": "Laughing at each other's terrible jokes",
+          "words": "Loyal, loving, legendary"
+        },
+        "photos": {
+          "photo1": "/assets/samples/golden-anniversary-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "grandma-grandpa",
+        "palette": "sky",
+        "portrait": {
+          "skin": 2,
+          "hair": "bun",
+          "hairColor": "#cfcfcf"
+        },
+        "values": {
+          "names": "Grandma & Grandpa",
+          "years": "60",
+          "married": "1966",
+          "met": "Neighbours who argued over a garden fence",
+          "secret": "A cup of tea in bed every morning",
+          "words": "Steady, sweet, forever"
+        },
+        "photos": {
+          "photo1": "/assets/samples/golden-anniversary-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{names}",
+      "issue": "The anniversary issue",
+      "edition": "{years} years of love",
+      "lines": [
+        [
+          "Exclusive",
+          "Married in {married}"
+        ],
+        [
+          "How they met",
+          "{met}"
+        ],
+        [
+          "Their secret",
+          "{secret}"
+        ]
+      ],
+      "badge": [
+        "Celebrating",
+        "{years}",
+        "years"
+      ],
+      "quote": "{words}",
+      "credit": "The whole family agrees"
+    }
+  },
+  {
+    "slug": "thank-you-magazine",
+    "title": "Our Hero",
+    "searchTitle": "Personalised Thank You Magazine",
+    "pinTitle": "Personalised Thank You Gift Magazine",
+    "occasion": "Thank you",
+    "short": "A magazine to thank a nurse, carer, coach, neighbour or anyone who went above and beyond.",
+    "description": "For the people who never ask for thanks. The nurse who held a hand, the carer who became family, the coach who believed, the neighbour who was always there. Their famous sayings, their superpower and what they mean to you, written up as a glossy magazine starring them.",
+    "keywords": [
+      "thank you gift",
+      "nurse thank you gift",
+      "carer gift",
+      "coach thank you gift",
+      "gift for mentor",
+      "appreciation gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring them",
+      "A thank you letter",
+      "Everything they did for us",
+      "A photo spread",
+      "The moment we will never forget",
+      "A front page, perfume ad, movie poster and pull out poster",
+      "A quiz and word search made from your answers",
+      "Awards, a passport, a certificate and a notes page"
+    ],
+    "letterTitle": "A thank you letter",
+    "feature": [
+      "The moment we will never forget",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Nurse Mia",
+        "max": 16
+      },
+      {
+        "id": "role",
+        "label": "Who they are to you",
+        "example": "The nurse who looked after Grandad",
+        "max": 40
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "The Taylor family",
+        "max": 30
+      },
+      {
+        "id": "always",
+        "label": "They always",
+        "example": "Had a smile, even at 3am",
+        "max": 36
+      },
+      {
+        "id": "power",
+        "label": "Their superpower",
+        "example": "Making scary days feel calm",
+        "max": 40
+      },
+      {
+        "id": "year",
+        "label": "Year",
+        "example": "2026",
+        "max": 4
+      },
+      {
+        "id": "words",
+        "label": "Three words for them",
+        "example": "Calm, kind, unforgettable",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment we will never forget",
+        "example": "The night you sat with Grandad and sang his favourite song so he would not be on his own",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "You made the hardest weeks bearable. Thank you for your kindness, your patience and every single cup of tea. We will never forget you.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of them",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "nurse-mia",
+        "palette": "mint",
+        "portrait": {
+          "skin": 3,
+          "hair": "bun",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Nurse Mia",
+          "role": "The nurse who looked after Grandad",
+          "always": "Had a smile, even at 3am",
+          "power": "Making scary days feel calm",
+          "year": "2026",
+          "words": "Calm, kind, unforgettable"
+        },
+        "photos": {
+          "photo1": "/assets/samples/thank-you-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "coach-sam",
+        "palette": "sunset",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#6b3a1f"
+        },
+        "values": {
+          "name": "Coach Sam",
+          "role": "The football coach who believed in us",
+          "always": "Said \"one more lap, superstars\"",
+          "power": "Turning nerves into goals",
+          "year": "2026",
+          "words": "Loud, loyal, legendary"
+        },
+        "photos": {
+          "photo1": "/assets/samples/thank-you-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "emma",
+        "palette": "butter",
+        "portrait": {
+          "skin": 2,
+          "hair": "long",
+          "hairColor": "#2a1a12"
+        },
+        "values": {
+          "name": "Emma",
+          "role": "The neighbour who became family",
+          "always": "Had the kettle on before we knocked",
+          "power": "Knowing exactly what we needed",
+          "year": "2026",
+          "words": "Warm, generous, golden"
+        },
+        "photos": {
+          "photo1": "/assets/samples/thank-you-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The thank you issue",
+      "edition": "Hero of the year edition",
+      "lines": [
+        [
+          "Exclusive",
+          "{role}"
+        ],
+        [
+          "They always",
+          "{always}"
+        ],
+        [
+          "Superpower",
+          "{power}"
+        ]
+      ],
+      "badge": [
+        "Hero of",
+        "{year}",
+        "officially"
+      ],
+      "quote": "{words}",
+      "credit": "Everyone agrees"
+    }
+  },
+  {
+    "slug": "new-job-magazine",
+    "title": "The Big Promotion",
+    "searchTitle": "Personalised New Job Congratulations Magazine",
+    "pinTitle": "Personalised New Job Gift Magazine",
+    "occasion": "New job",
+    "short": "A glossy business magazine celebrating a new job or a big promotion.",
+    "description": "Congratulations, the magazine. Their new title, their secret weapon at work, the coffee order that fuels it all and what everyone is predicting next, written up as a glossy business cover story. Perfect for a new job, a promotion, starting a business or a colleague moving on.",
+    "keywords": [
+      "new job gift",
+      "promotion gift",
+      "congratulations gift",
+      "leaving gift for colleague",
+      "gift for new boss",
+      "new business gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A business cover starring them",
+      "A letter of congratulations",
+      "The road to the top",
+      "A photo spread",
+      "The moment we knew they would make it",
+      "A front page, perfume ad, movie poster and pull out poster",
+      "A quiz and word search made from your answers",
+      "Awards, a passport, a certificate and a notes page"
+    ],
+    "letterTitle": "A letter of congratulations",
+    "feature": [
+      "The moment we knew you would make it",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Emma",
+        "max": 12
+      },
+      {
+        "id": "job",
+        "label": "New job title",
+        "example": "Head of Design",
+        "max": 32
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "The whole team",
+        "max": 30
+      },
+      {
+        "id": "year",
+        "label": "Year",
+        "example": "2026",
+        "max": 4
+      },
+      {
+        "id": "weapon",
+        "label": "Secret weapon at work",
+        "example": "A spreadsheet for everything",
+        "max": 40
+      },
+      {
+        "id": "coffee",
+        "label": "Fuelled by",
+        "example": "Oat flat whites, four a day",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Three words for them",
+        "example": "Sharp, kind, unstoppable",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment we knew you would make it",
+        "example": "When the projector died before the big pitch and you drew the whole thing on a whiteboard and won the client anyway",
+        "type": "textarea",
+        "max": 220
+      },
+      {
+        "id": "message",
+        "label": "Your message to them",
+        "example": "Nobody deserves this more. Thank you for the laughs, the patience and the emergency biscuits. Go and be brilliant, boss.",
+        "type": "textarea",
+        "max": 400
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of them",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite work photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Emma",
+          "job": "Head of Design",
+          "year": "2026",
+          "weapon": "A spreadsheet for everything",
+          "coffee": "Oat flat whites, four a day",
+          "words": "Sharp, kind, unstoppable"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-job-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "chris",
+        "palette": "lagoon",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Chris",
+          "job": "Founder of Chris & Co",
+          "year": "2026",
+          "weapon": "Never forgetting a name",
+          "coffee": "Double espresso, no time",
+          "words": "Brave, bold, brilliant"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-job-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "plum",
+        "portrait": {
+          "skin": 2,
+          "hair": "curly",
+          "hairColor": "#2a1a12"
+        },
+        "values": {
+          "name": "Sam",
+          "job": "Senior Software Engineer",
+          "year": "2026",
+          "weapon": "Fixing it before anyone notices",
+          "coffee": "Green tea and biscuits",
+          "words": "Calm, clever, legendary"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-job-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The promotion issue",
+      "edition": "Big news edition",
+      "lines": [
+        [
+          "Exclusive",
+          "Meet the new {job}"
+        ],
+        [
+          "Secret weapon",
+          "{weapon}"
+        ],
+        [
+          "Fuelled by",
+          "{coffee}"
+        ]
+      ],
+      "badge": [
+        "Hired",
+        "{year}",
+        "big news"
+      ],
+      "quote": "{words}",
+      "credit": "The team agrees"
     }
   }
 ]

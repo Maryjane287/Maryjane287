@@ -1,0 +1,293 @@
+{
+  "theme": "ocean",
+  "fields": [
+    {
+      "id": "s_advice",
+      "chapter": "Our best advice",
+      "label": "Your best advice for them",
+      "example": "Always carry a phone charger and a snack",
+      "max": 80
+    },
+    {
+      "id": "s_proud",
+      "chapter": "Our proudest moment",
+      "label": "Your proudest moment of them",
+      "example": "Standing up for a friend when nobody else would",
+      "max": 80
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To always pick up the phone, even at 3am",
+      "max": 70
+    }
+  ],
+  "story": {
+    "legend": "A few more things about them",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely ones we have written.",
+    "kicker": "The story so far",
+    "title": "How {who} Grew Up",
+    "hand": "{age} years of stories, and the best chapters are just beginning."
+  },
+  "labels": {
+    "age": "The big number",
+    "likely": "Most likely to",
+    "dream": "The big dream",
+    "talent": "Secret talent",
+    "words": "You, in three words"
+  },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we love about you",
+    "items": [
+      "Your laugh, the loud one",
+      "How kind you are to people",
+      "Your brilliant ideas at midnight",
+      "The way you stand up for friends",
+      "Your terrible taste in snacks",
+      "How you make us laugh",
+      "Your big, big dreams",
+      "The way you never give up",
+      "Your playlists",
+      "How you still hug us, sometimes",
+      "The way you light up a room",
+      "Your stubbornness, in a good way",
+      "How much you have grown",
+      "Simply being you"
+    ]
+  },
+  "timeline": {
+    "kicker": "Growing up through the ages",
+    "title": "A Short History of Coming of Age",
+    "items": [
+      [
+        "Ancient Rome",
+        "A new toga",
+        "Roman boys swapped their childhood toga for a plain white adult one, and the whole family celebrated."
+      ],
+      [
+        "Long ago",
+        "The key of the door",
+        "In Britain, turning 21 traditionally meant being trusted with your own front door key. People still give silver keys today."
+      ],
+      [
+        "1970",
+        "The vote at 18",
+        "For the first time, 18 year olds in the UK could vote. Many countries soon did the same."
+      ],
+      [
+        "1971",
+        "Across the ocean",
+        "The United States lowered its voting age to 18 too, and a whole generation got a say."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who} turns {age}",
+      "Not in the history books yet. Give it a few years."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Advice for the Road Ahead",
+    "items": [
+      [
+        "It takes courage to grow up and become who you really are.",
+        "E. E. Cummings"
+      ],
+      [
+        "Be yourself; everyone else is already taken.",
+        "Often credited to Oscar Wilde"
+      ],
+      [
+        "The future belongs to those who believe in the beauty of their dreams.",
+        "Often credited to Eleanor Roosevelt"
+      ],
+      [
+        "Do not go where the path may lead, go instead where there is no path and leave a trail.",
+        "Often credited to Ralph Waldo Emerson"
+      ]
+    ],
+    "hand": "Good advice, all of it. Ours is simpler: go and be brilliant, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Turning {age}",
+    "items": [
+      [
+        "spark",
+        "Still growing",
+        "The brain keeps building its planning and decision making parts until around the mid twenties."
+      ],
+      [
+        "star",
+        "Well travelled",
+        "By now you have ridden the Earth around the Sun {age} times, and every lap is nearly a billion kilometres."
+      ],
+      [
+        "heart",
+        "Busy heart",
+        "By your 18th birthday, your heart has beaten more than 700 million times."
+      ],
+      [
+        "moon",
+        "Night owl, officially",
+        "Teenagers really are wired to fall asleep later. Their body clock can shift by up to two hours."
+      ],
+      [
+        "music",
+        "Songs for life",
+        "The music we love as teenagers stays with us more strongly than almost any other."
+      ],
+      [
+        "eye",
+        "One of a kind",
+        "Nobody in history has ever had your fingerprints, or your laugh."
+      ]
+    ],
+    "hand": "Science can explain a lot. It cannot explain how {who} got this grown up, this fast."
+  },
+  "world": {
+    "kicker": "A thank you from all of us",
+    "title": "Why the World Is Better Because You Were Born",
+    "lead": "Because you were born, the world got:",
+    "items": [
+      "A laugh you can hear from the next room.",
+      "A friend who always turns up.",
+      "Big dreams, and the nerve to chase them.",
+      "Better playlists.",
+      "Someone who stands up for people.",
+      "Kindness, when it counts.",
+      "And the one and only {who}."
+    ],
+    "close": "The world is better because you are in it, {who}. Ours most of all."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "For your next chapter",
+    "title": "Our promises to you",
+    "items": [
+      "To always be on the end of the phone.",
+      "To give advice only when asked, mostly.",
+      "To cheer the loudest at every win.",
+      "To keep your baby photos safe, and use them.",
+      "To love you, always, whatever you choose."
+    ],
+    "hand": "Signed, sealed and meant. {from}"
+  },
+  "awards": [
+    [
+      "Most likely to succeed",
+      "Obviously"
+    ],
+    [
+      "Best laugh in the family",
+      "Heard for miles"
+    ],
+    [
+      "Champion sleeper",
+      "Through every alarm"
+    ],
+    [
+      "Lifetime achievement",
+      "In growing up brilliant"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One free lift",
+      "Any time, no questions"
+    ],
+    [
+      "A home cooked favourite dinner",
+      "You choose the menu"
+    ],
+    [
+      "One lie in",
+      "Nobody says a word"
+    ],
+    [
+      "Emergency snack delivery",
+      "Valid during exams"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "A Grown Up, Sort Of",
+  "awardsKicker": "Live from the red carpet",
+  "perfume": "Top notes of birthday cake, fresh trainers and big dreams. A heart of pure gold.",
+  "news": {
+    "edition": "Coming of age edition",
+    "headline": "{who} turns {age}, world braces itself",
+    "lead": "Sources close to the family confirm that {who} is now officially a grown up, though the laundry situation suggests otherwise.",
+    "weather": "Weather: bright, with a 100% chance of confetti"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to the rest of your life",
+    "nationality": "Loved, everywhere",
+    "job": "Professional legend in training",
+    "stamps": [
+      "Age {age}",
+      "The world",
+      "Home, always"
+    ]
+  },
+  "movie": {
+    "sub": "The coming of age blockbuster",
+    "soon": "The sequel starts now",
+    "reviews": [
+      [
+        "Funny, warm and totally unmissable",
+        "The family group chat"
+      ],
+      [
+        "A star is born, again",
+        "The Daily Cake"
+      ],
+      [
+        "We want a sequel every year",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "In Britain, what did turning 21 traditionally earn you?",
+      [
+        "The key of the door",
+        "A pocket watch",
+        "A new hat"
+      ],
+      0
+    ],
+    [
+      "In which year did the UK lower the voting age to 18?",
+      [
+        "1918",
+        "1970",
+        "2001"
+      ],
+      1
+    ]
+  ],
+  "words": [
+    "BIRTHDAY",
+    "DREAMS",
+    "PARTY",
+    "FUTURE",
+    "CHEERS",
+    "LEGEND"
+  ],
+  "note": {
+    "title": "What we believe growing up is",
+    "contents": "A note for you",
+    "paras": [
+      "We make magazines for a living, and coming of age issues are some of our favourites.",
+      "We believe growing up is not about suddenly having all the answers. It is about the people who believed in you before you did, and all the adventures still waiting.",
+      "{who}, someone wanted to mark this moment properly. Not with a card anyone could buy, but pages full of you: your face, your stories, your very big dreams.",
+      "That someone is {from}. And from everything they told us, the future is very lucky to be getting you."
+    ],
+    "wish": "Happy birthday, {who}. Go and be brilliant."
+  }
+}

@@ -40,7 +40,12 @@ const sprig = '<svg class="lv-sprig" viewBox="0 0 100 100" aria-hidden="true"><p
 
 // Fills {who}, {from}, {age} and any answer id in our written lines, escaped.
 export function filler(map) {
-  return s => escH(String(s ?? '').replace(/\{(\w+)\}/g, (_, k) => String(map[k] ?? '')));
+  const many = /,|&|\sand\s/i.test(String(map.from || ''));
+  const group = /^(All|Your|Everyone|The)\b/.test(String(map.from || ''));
+  return s => escH(String(s ?? '')
+    .replace(/That someone is \{from\}/g, many || group ? 'It came from {fromLower}' : 'That someone is {from}')
+    .replace(/(with love from|love from) \{from\}/gi, (m, p) => `${p} ${group ? '{fromLower}' : '{from}'}`)
+    .replace(/\{(\w+)\}/g, (_, k) => k === 'fromLower' ? (group ? String(map.from || '').replace(/^\w/, c => c.toLowerCase()) : String(map.from || '')) : String(map[k] ?? '')));
 }
 
 // Returns the written pages for one magazine as HTML. `page(cls, inner, n)`

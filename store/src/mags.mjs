@@ -22,7 +22,7 @@ export async function loadMags(root = new URL('..', import.meta.url)) {
       'Their own story page, and ten things you love about them',
       `Pages we write just for them: "${say(heart.timeline?.title)}", "${say(heart.facts?.title)}" and "${say(heart.letters?.title)}"`,
       `"${say(heart.world?.title)}" and a page of promises`,
-      mag.slug === 'pet-memorial-magazine' ? 'A gentle front page, poster and certificate' : 'A front page, perfume ad, movie poster and pull out poster',
+      (mag.gentle || mag.slug === 'pet-memorial-magazine') ? 'A gentle front page, poster and certificate' : 'A front page, perfume ad, movie poster and pull out poster',
       'A quiz and word search made from your answers',
       'Awards, a passport, a certificate and a notes page',
       'A closing note from all of us at Cover Story',

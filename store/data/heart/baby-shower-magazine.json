@@ -1,0 +1,294 @@
+{
+  "theme": "dawn",
+  "fields": [
+    {
+      "id": "s_wish",
+      "chapter": "Our wish for the baby",
+      "label": "Your wish for the baby",
+      "example": "Your mum's kindness and your dad's terrible dance moves",
+      "max": 80
+    },
+    {
+      "id": "s_ready",
+      "chapter": "Most ready for",
+      "label": "What they are most ready for",
+      "example": "Tiny socks, sleepy cuddles and the first smile",
+      "max": 80
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To babysit, often, and bring snacks",
+      "max": 70
+    }
+  ],
+  "story": {
+    "legend": "A few more things about this baby",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely ones we have written.",
+    "kicker": "The story so far",
+    "title": "Waiting for You",
+    "hand": "And this is only the first chapter. The best one starts in {due}."
+  },
+  "labels": {
+    "due": "Arriving in",
+    "nickname": "The bump is known as",
+    "craving": "The biggest craving",
+    "guess": "Everyone guesses",
+    "words": "In three words"
+  },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten reasons you will be wonderful",
+    "items": [
+      "Your enormous heart",
+      "Your patience, mostly",
+      "The way you look after everyone",
+      "Your silly songs",
+      "How you make people feel safe",
+      "Your terrible jokes, perfect for a baby",
+      "The cuddles you give",
+      "How much you already love them",
+      "Your bravery",
+      "The way you laugh",
+      "Your bedtime story voices",
+      "How you never give up",
+      "The home you have made",
+      "Your kindness to strangers",
+      "Simply being you"
+    ]
+  },
+  "timeline": {
+    "kicker": "Babies through the ages",
+    "title": "A Short History of Welcoming Babies",
+    "items": [
+      [
+        "Ancient Greece",
+        "A celebration at the door",
+        "Families held a party a few days after a birth, when the new baby was carried around the family hearth."
+      ],
+      [
+        "1733",
+        "The first pram",
+        "The architect William Kent designed a little carriage for a duke's children. It was pulled by a goat."
+      ],
+      [
+        "1950s",
+        "The baby shower",
+        "Baby showers became popular in America, with friends showering the parents to be with gifts."
+      ],
+      [
+        "1958",
+        "A first look",
+        "Doctors in Glasgow showed how ultrasound could safely see a baby before birth. The scan on the fridge began here."
+      ]
+    ],
+    "today": [
+      "{due}",
+      "{nickname}",
+      "Not in the history books yet. But already the most famous baby in ours."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Babies",
+    "items": [
+      [
+        "Every child begins the world again.",
+        "Henry David Thoreau"
+      ],
+      [
+        "A baby is God's opinion that the world should go on.",
+        "Carl Sandburg"
+      ],
+      [
+        "Babies are such a nice way to start people.",
+        "Don Herold"
+      ],
+      [
+        "A new baby is like the beginning of all things: wonder, hope, a dream of possibilities.",
+        "Eda LeShan"
+      ]
+    ],
+    "hand": "They all say it beautifully. We just say: we cannot wait to meet you."
+  },
+  "facts": {
+    "kicker": "Amazing but true",
+    "title": "The Science of the Bump",
+    "items": [
+      [
+        "heart",
+        "A tiny heartbeat",
+        "A baby's heart starts beating at around six weeks, and it beats about twice as fast as a grown up's."
+      ],
+      [
+        "music",
+        "Listening already",
+        "Babies in the womb can hear voices by about 25 weeks. They will know yours when they arrive."
+      ],
+      [
+        "eye",
+        "Practising faces",
+        "Scans show babies yawning, hiccuping and even smiling before they are born."
+      ],
+      [
+        "hands",
+        "Unique from the start",
+        "Fingerprints form in the womb, months before birth. Nobody else will ever have the same ones."
+      ],
+      [
+        "moon",
+        "Night owls",
+        "Many babies are most active in the evening, just when their mum is trying to sleep."
+      ],
+      [
+        "spark",
+        "Bonus bones",
+        "Babies are born with around 300 bones. Some join together as they grow, so adults have 206."
+      ]
+    ],
+    "hand": "Science can explain a lot. It cannot explain how loved this baby already is."
+  },
+  "world": {
+    "kicker": "A thank you from all of us",
+    "title": "Why This Baby Is the Luckiest in the World",
+    "lead": "Because of you, this baby gets:",
+    "items": [
+      "The warmest arms to fall asleep in.",
+      "Someone who will sing, even badly.",
+      "A home full of laughter and noise.",
+      "More love than a nursery can hold.",
+      "A family who are already besotted.",
+      "Somebody brave, for the scary bits.",
+      "And the best parent we could imagine."
+    ],
+    "close": "That little one is lucky already, {who}. And so are we."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises to you",
+    "items": [
+      "To bring snacks, always.",
+      "To hold the baby so you can shower.",
+      "To never visit without food.",
+      "To spoil this baby, a lot.",
+      "To love you both, forever."
+    ],
+    "hand": "With love, {from}"
+  },
+  "awards": [
+    [
+      "Best bump of the year",
+      "Glowing, officially"
+    ],
+    [
+      "Craving champion",
+      "Pickles, unbeaten"
+    ],
+    [
+      "Most ready parent",
+      "By a landslide"
+    ],
+    [
+      "Lifetime achievement",
+      "In growing a whole human"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One full night of sleep",
+      "We will do the night feed"
+    ],
+    [
+      "A home cooked dinner",
+      "Delivered to your door"
+    ],
+    [
+      "A babysitting evening",
+      "Go and have fun"
+    ],
+    [
+      "One giant tidy up",
+      "Before the visitors come"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "Ready for Baby",
+  "awardsKicker": "Live from the baby shower",
+  "perfume": "Top notes of baby powder, warm milk and fresh linen. A heart of pure love.",
+  "news": {
+    "edition": "Special delivery edition",
+    "headline": "{nickname} on the way, family overjoyed",
+    "lead": "Sources close to the family confirm that {nickname} is due in {due}, and that everyone is already arguing about who gets the first cuddle.",
+    "weather": "Weather: sunny, with a 100% chance of tiny socks"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to parenthood",
+    "nationality": "Loved, everywhere",
+    "job": "Parent to be",
+    "stamps": [
+      "Due in {due}",
+      "The nursery",
+      "First cuddle"
+    ]
+  },
+  "movie": {
+    "sub": "A special delivery",
+    "soon": "Arriving in {due}",
+    "reviews": [
+      [
+        "We cried before the opening scene",
+        "The family group chat"
+      ],
+      [
+        "The most anticipated release of the year",
+        "The Daily Bump"
+      ],
+      [
+        "Tiny star, huge story",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "At around how many weeks does a baby's heart start beating?",
+      [
+        "Six weeks",
+        "Twenty weeks",
+        "Forty weeks"
+      ],
+      0
+    ],
+    [
+      "About how many bones is a baby born with?",
+      [
+        "100",
+        "206",
+        "300"
+      ],
+      2
+    ]
+  ],
+  "words": [
+    "BABY",
+    "BUMP",
+    "CUDDLES",
+    "NURSERY",
+    "LOVE",
+    "SOCKS"
+  ],
+  "note": {
+    "title": "What we believe a family is",
+    "contents": "A note for you",
+    "paras": [
+      "We make magazines for a living, but some feel different. This was one of them.",
+      "We believe the waiting is part of the magic: the scans on the fridge, the names on a list, the tiny clothes folded and refolded, and everyone who loves you counting the days.",
+      "{who}, someone wanted you to have something special. Not just another gift for the nursery, but pages full of you, and of the little one on the way.",
+      "That someone is {from}. And from everything they told us, this baby is already loved beyond measure."
+    ],
+    "wish": "Good luck, {who}. We cannot wait to meet {nickname}."
+  }
+}

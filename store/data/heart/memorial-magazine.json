@@ -1,0 +1,296 @@
+{
+  "theme": "garden",
+  "fields": [
+    {
+      "id": "s_taught",
+      "chapter": "What you taught us",
+      "label": "Something they taught you",
+      "example": "That a cup of tea fixes most things",
+      "max": 80
+    },
+    {
+      "id": "s_laugh",
+      "chapter": "The story that still makes us laugh",
+      "label": "A story that still makes you laugh",
+      "example": "The Christmas you set the pudding on fire, on purpose",
+      "max": 80
+    },
+    {
+      "id": "s_carry",
+      "label": "Something you will carry on for them",
+      "example": "To keep their Sunday lunch tradition going",
+      "max": 70
+    }
+  ],
+  "story": {
+    "legend": "A few more things about them",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with gentle ones we have written.",
+    "kicker": "A life well lived",
+    "title": "Everything You Were to Us",
+    "hand": "And that is only a small part of everything {who} gave us."
+  },
+  "quizTitle": "How well did you know {who}?",
+  "labels": {
+    "years": "Years of a wonderful life",
+    "known": "Always known for",
+    "saying": "What you always said",
+    "loved": "Something you loved",
+    "words": "You, in three words"
+  },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we will always love about you",
+    "items": [
+      "Your warm hugs at the door",
+      "The stories you told",
+      "Your famous cooking",
+      "The way you laughed",
+      "How you always had time",
+      "Your terrible jokes",
+      "The advice you gave",
+      "How proud you were of us",
+      "Your kindness to everyone",
+      "The way you made a house a home",
+      "Your songs in the kitchen",
+      "How you never let us leave hungry",
+      "Your gentle patience",
+      "The twinkle in your eye",
+      "How you remembered every birthday",
+      "Simply being you"
+    ]
+  },
+  "timeline": {
+    "kicker": "Remembering through the ages",
+    "title": "How the World Remembers",
+    "items": [
+      [
+        "Ancient Egypt",
+        "A name lives on",
+        "The Egyptians believed that saying someone's name out loud kept their memory alive. We think they were right."
+      ],
+      [
+        "1839",
+        "Faces we can keep",
+        "Photography was announced to the world, and families could finally keep the faces of the people they loved."
+      ],
+      [
+        "1919",
+        "Two minutes of silence",
+        "On the first Armistice Day, people across Britain stopped for two minutes to remember. The tradition carries on."
+      ],
+      [
+        "Every year",
+        "A day of remembering",
+        "In Mexico, families build bright altars with photos and favourite foods on the Day of the Dead, to welcome memories home."
+      ]
+    ],
+    "today": [
+      "Always",
+      "{who}",
+      "Not in the history books. But written on every one of our hearts."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Love and Memory",
+    "items": [
+      [
+        "To live in hearts we leave behind is not to die.",
+        "Thomas Campbell, Hallowed Ground, 1825"
+      ],
+      [
+        "Unable are the Loved to die, for Love is Immortality.",
+        "Emily Dickinson"
+      ],
+      [
+        "What we have once enjoyed we can never lose. All that we love deeply becomes a part of us.",
+        "Helen Keller"
+      ],
+      [
+        "Those we love never truly leave us.",
+        "An old saying"
+      ]
+    ],
+    "hand": "They all say it beautifully. We just say: we love you, {who}."
+  },
+  "facts": {
+    "kicker": "Gentle facts",
+    "title": "The Science of Remembering",
+    "items": [
+      [
+        "leaf",
+        "A smell, a memory",
+        "Smell is wired close to the brain's memory centres, so one scent can bring a person right back to us."
+      ],
+      [
+        "music",
+        "Songs stay",
+        "The songs we love are some of the longest lasting memories we have. A tune can return a whole afternoon."
+      ],
+      [
+        "book",
+        "Writing helps",
+        "Studies have found that writing about the people we miss can help us feel a little lighter."
+      ],
+      [
+        "star",
+        "Light that travels",
+        "Some of the starlight we see tonight left its star long ago, and it is still reaching us. A little like love."
+      ],
+      [
+        "heart",
+        "Elephants remember",
+        "Elephants have been seen returning to gently touch the bones of family members, years later."
+      ],
+      [
+        "spark",
+        "Telling stories",
+        "Sharing happy stories about someone we miss can genuinely lift our mood, and keeps them close."
+      ]
+    ],
+    "hand": "Science can explain a lot. It cannot explain how much we miss you, {who}."
+  },
+  "world": {
+    "kicker": "A thank you from all of us",
+    "title": "Why the World Was Better With You in It",
+    "lead": "Because of you, the world got:",
+    "items": [
+      "A kitchen that was always open.",
+      "Stories we will be telling for years.",
+      "Laughter that filled every room.",
+      "Someone who turned up when it mattered.",
+      "Advice that we still hear in our heads.",
+      "Kindness, in very generous portions.",
+      "And a family who will always remember you."
+    ],
+    "close": "The world was better because of you, {who}. Ours most of all."
+  },
+  "promises": {
+    "field": "s_carry",
+    "kicker": "From us to you",
+    "title": "Our promises to you",
+    "items": [
+      "To tell your stories, often.",
+      "To keep your traditions going.",
+      "To laugh at your jokes, still.",
+      "To look after each other, like you did.",
+      "To love you, always."
+    ],
+    "hand": "With all our love, {from}"
+  },
+  "awards": [
+    [
+      "Best hugs in the family",
+      "Every single time"
+    ],
+    [
+      "Keeper of the family stories",
+      "For a lifetime"
+    ],
+    [
+      "Kindest heart we knew",
+      "By a landslide"
+    ],
+    [
+      "Lifetime achievement",
+      "In being loved"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Always known for",
+      "known"
+    ],
+    [
+      "What you always said",
+      "saying"
+    ],
+    [
+      "Something you loved",
+      "loved"
+    ],
+    [
+      "In three words",
+      "words"
+    ]
+  ],
+  "vouchersTitle": "The little things we will always remember",
+  "cert": "Loved Beyond Words, Forever",
+  "awardsKicker": "With love, from all of us",
+  "perfume": "Top notes of tea, garden roses and old photo albums. A heart of pure love.",
+  "news": {
+    "edition": "Remembering, with love",
+    "headline": "A life full of love",
+    "lead": "Friends and family gathered to remember {who}, and agreed that the world was a warmer place for having them in it.",
+    "weather": "Forecast: warm memories, all day long"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to our hearts",
+    "nationality": "Loved, everywhere",
+    "job": "Keeper of the family",
+    "stamps": [
+      "Always home",
+      "Forever loved",
+      "Every memory"
+    ]
+  },
+  "movie": {
+    "sub": "A true story of love",
+    "soon": "Forever showing in our hearts",
+    "reviews": [
+      [
+        "A life full of love",
+        "The whole family"
+      ],
+      [
+        "We laughed, we cried, we remembered",
+        "Everyone who knew them"
+      ],
+      [
+        "Five stars, forever",
+        "Our hearts"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Which flower do people in the UK wear to remember?",
+      [
+        "The poppy",
+        "The tulip",
+        "The daisy"
+      ],
+      0
+    ],
+    [
+      "On the Day of the Dead in Mexico, which flower fills the altars?",
+      [
+        "Marigolds",
+        "Roses",
+        "Lilies"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "LOVE",
+    "FAMILY",
+    "MEMORY",
+    "FOREVER",
+    "HOME",
+    "STORIES"
+  ],
+  "note": {
+    "title": "What we believe love is",
+    "contents": "A note for the family",
+    "paras": [
+      "We make magazines for a living, but some feel different. This was one of them.",
+      "We believe a life is not measured in years. It is the hugs at the door, the stories at the table, the advice we still hear in our heads, and the people who carry it all forward.",
+      "{who}, your family wanted you to have something special. Not a card that goes in a drawer, but pages full of you: your words, your laughter, the little things that made you, you.",
+      "That someone is {from}. And from everything they told us, you were loved more than words could ever say."
+    ],
+    "wish": "Forever loved, {who}. Always remembered."
+  }
+}

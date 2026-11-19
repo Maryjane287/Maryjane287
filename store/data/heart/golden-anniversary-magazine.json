@@ -1,0 +1,293 @@
+{
+  "theme": "ruby",
+  "fields": [
+    {
+      "id": "s_built",
+      "chapter": "The family you built",
+      "label": "The family they built",
+      "example": "Three children, six grandchildren and one very spoilt dog",
+      "max": 80
+    },
+    {
+      "id": "s_learned",
+      "chapter": "What you taught us about love",
+      "label": "What they taught you about love",
+      "example": "That love is a cup of tea brought without asking",
+      "max": 80
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To visit more, and bring cake",
+      "max": 70
+    }
+  ],
+  "story": {
+    "legend": "A few more things about them",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely ones we have written.",
+    "kicker": "Their love story",
+    "title": "How It All Began",
+    "hand": "{years} years, and still the best love story we know."
+  },
+  "labels": {
+    "years": "Years married",
+    "married": "The year they said I do",
+    "met": "How they met",
+    "secret": "The secret to a happy marriage",
+    "words": "In three words"
+  },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we love about you two",
+    "items": [
+      "The way you still hold hands",
+      "Your Sunday dinners",
+      "How you finish each other's stories",
+      "The way you tease each other",
+      "Your open door for everyone",
+      "How you still dance in the kitchen",
+      "Your terrible jokes, both of you",
+      "The way you look after us",
+      "Your patience with the grandchildren",
+      "How you always have biscuits",
+      "The way you make a house a home",
+      "How you never miss a birthday",
+      "Your stories from long ago",
+      "Simply being you"
+    ]
+  },
+  "timeline": {
+    "kicker": "Love through the ages",
+    "title": "A Short History of Anniversaries",
+    "items": [
+      [
+        "Middle Ages",
+        "Silver and gold",
+        "In parts of Germany, the story goes, wives wore a silver wreath at 25 years of marriage and a gold one at 50."
+      ],
+      [
+        "1897",
+        "A diamond year",
+        "Queen Victoria celebrated sixty years on the throne with a Diamond Jubilee. Diamond has meant sixty ever since."
+      ],
+      [
+        "1922",
+        "Paper to gold",
+        "Emily Post's etiquette book listed gifts for the big anniversaries, from paper in year one to gold at fifty."
+      ],
+      [
+        "1937",
+        "A gift for every year",
+        "Jewellers in America grew the list so almost every year had its own present, from paper to diamond."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who}",
+      "{years} years married. Not in the history books, but the start of our whole family."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the Poets Say About Lasting Love",
+    "items": [
+      [
+        "Grow old along with me! The best is yet to be.",
+        "Robert Browning, Rabbi Ben Ezra, 1864"
+      ],
+      [
+        "How do I love thee? Let me count the ways.",
+        "Elizabeth Barrett Browning, 1850"
+      ],
+      [
+        "Love does not consist in gazing at each other, but in looking outward together in the same direction.",
+        "Antoine de Saint-Exupéry, Wind, Sand and Stars"
+      ],
+      [
+        "The heart that loves is always young.",
+        "An old saying"
+      ]
+    ],
+    "hand": "The poets say it beautifully. We just say: here is to you two, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Lasting Love",
+    "items": [
+      [
+        "heart",
+        "Still that spark",
+        "Some couples married for decades still show the brain activity of new love when they see each other's photo."
+      ],
+      [
+        "spark",
+        "Laugh together",
+        "Couples who laugh together tend to feel closer and happier in their marriage."
+      ],
+      [
+        "hands",
+        "Holding hands",
+        "Holding the hand of someone you love can calm the body's stress response."
+      ],
+      [
+        "leaf",
+        "Like swans",
+        "Swans often stay with the same partner for many years, raising their young together."
+      ],
+      [
+        "star",
+        "Gold for fifty",
+        "Gold is given at fifty years because, like a long marriage, it does not tarnish."
+      ],
+      [
+        "home",
+        "Five to one",
+        "Happy couples share about five kind moments for every grumpy one."
+      ]
+    ],
+    "hand": "Science can explain a lot. It cannot explain how you two make it look so easy."
+  },
+  "world": {
+    "kicker": "A toast from all of us",
+    "title": "Why the World Is Better Because You Met",
+    "lead": "Because you two found each other, the world got:",
+    "items": [
+      "A whole family, and every one of us.",
+      "Sunday dinners worth travelling for.",
+      "Proof that real love lasts.",
+      "A front door that is always open.",
+      "Stories we will tell our own grandchildren.",
+      "Two people who make each other better.",
+      "And the best example we could ever have."
+    ],
+    "close": "Everything good in this family started with you, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From all of us",
+    "title": "Our promises to you",
+    "items": [
+      "To visit more, and bring cake.",
+      "To keep your traditions going.",
+      "To listen to the old stories, again.",
+      "To love each other the way you taught us.",
+      "To celebrate you every single year."
+    ],
+    "hand": "With all our love, {from}"
+  },
+  "awards": [
+    [
+      "Couple of the century",
+      "Unanimous"
+    ],
+    [
+      "Best love story we know",
+      "{years} years running"
+    ],
+    [
+      "Most iconic inside joke",
+      "Nobody else gets it"
+    ],
+    [
+      "Lifetime achievement",
+      "In loving each other"
+    ]
+  ],
+  "vouchers": [
+    [
+      "A Sunday dinner, cooked for you",
+      "You just sit down"
+    ],
+    [
+      "A day out together",
+      "We will drive"
+    ],
+    [
+      "One afternoon of jobs",
+      "Every one on the list"
+    ],
+    [
+      "A big family photo",
+      "Everybody smiling, eventually"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "The Greatest Love Story We Know",
+  "awardsKicker": "Live from the anniversary party",
+  "perfume": "Top notes of wedding cake, Sunday roast and old love letters. A heart of pure gold.",
+  "news": {
+    "edition": "Anniversary edition",
+    "headline": "{who} celebrate {years} years",
+    "lead": "Sources close to the family confirm that {who} are still madly in love, still telling the same jokes and still the heart of everything.",
+    "weather": "Weather: golden, with a 100% chance of happy tears"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to forever",
+    "nationality": "Loved, everywhere",
+    "job": "Founders of the family",
+    "stamps": [
+      "Married {married}",
+      "Home",
+      "{years} years"
+    ]
+  },
+  "movie": {
+    "sub": "A love story for the ages",
+    "soon": "Still showing after {years} years",
+    "reviews": [
+      [
+        "We laughed, we cried, we called our parents",
+        "The family group chat"
+      ],
+      [
+        "The romance of the century",
+        "The Daily Hug"
+      ],
+      [
+        "Gets better every single year",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Which anniversary is traditionally golden?",
+      [
+        "The 25th",
+        "The 50th",
+        "The 60th"
+      ],
+      1
+    ],
+    [
+      "Whose jubilee made diamond the word for sixty years?",
+      [
+        "Queen Victoria",
+        "Queen Anne",
+        "Queen Mary"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "GOLDEN",
+    "LOVE",
+    "FAMILY",
+    "FOREVER",
+    "CHEERS",
+    "WEDDING"
+  ],
+  "note": {
+    "title": "What we believe lasting love is",
+    "contents": "A note for you both",
+    "paras": [
+      "We make magazines for a living, but some feel different. This was one of them.",
+      "We believe lasting love is built from small things: the tea brought without asking, the joke that still works years later, the hand that finds yours at the end of a long day.",
+      "{who}, your family wanted you to have something special. Not a card that ends up in a drawer, but pages full of your story, and of everyone it made.",
+      "That someone is {from}. And from everything they told us, you are the reason this family is what it is."
+    ],
+    "wish": "Happy anniversary, {who}. Here is to many more."
+  }
+}
