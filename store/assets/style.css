@@ -567,3 +567,9 @@ p { margin: 0 0 1em; }
 .how-steps li::before { content: counter(s); position: absolute; left: 16px; top: 14px; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--coral, #ff6b5b); color: #fff; font-weight: 700; }
 .when-list { padding-left: 20px; line-height: 1.6; }
 .when-list li { margin-bottom: 8px; }
+
+/* Real product photos */
+.real-photo { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); transition: transform .5s cubic-bezier(.2, .8, .2, 1), box-shadow .5s; }
+.real-photos .real-scene:hover .real-photo { transform: translateY(-6px) rotate(-.6deg); box-shadow: 0 30px 50px -24px rgba(60, 30, 10, .45); }
+.real-stage .real-fill { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; border-radius: 0; box-shadow: none; object-position: 50% 52%; }
+@media (prefers-reduced-motion: reduce) { .real-photo { transition: none; } }
