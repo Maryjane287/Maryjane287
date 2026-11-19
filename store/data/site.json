@@ -2,22 +2,67 @@
   "name": "Cover Story",
   "tagline": "Make them the cover story",
   "description": "Personalised keepsake magazines made from your memories. Answer a few fun questions, add photos, and get a beautiful magazine all about the person you love. A 24 page magazine, sent as an instant PDF anywhere in the world.",
-  "url": "https://lively-cobbler-7b3eb5.netlify.app",
+  "url": "https://coverstorymagazines.netlify.app",
   "email": "graceandloannesofficial@gmail.com",
   "company": "Grace and Loannes Ltd",
   "companyNumber": "SC899696",
   "pinterestDomainVerify": "",
   "pinterestTagId": "",
   "christmasOrderBy": "",
-  "social": { "tiktok": "", "instagram": "", "pinterest": "", "facebook": "", "youtube": "" },
+  "social": {
+    "tiktok": "",
+    "instagram": "",
+    "pinterest": "",
+    "facebook": "",
+    "youtube": ""
+  },
   "giftCode": "BIRTHDAYLOVE",
   "giftExpires": "2026-10-08T23:59:00Z",
   "tiers": [
-    { "id": "pdf", "label": "Instant PDF", "blurb": "Their 24 page magazine, ready to download, print or send by message", "gbp": 5, "usd": 7 },
-    { "id": "cards", "label": "PDF plus card set", "blurb": "The 24 page magazine plus a matching printable card set: message cards, gift tags and bookmarks", "gbp": 7, "usd": 9, "popular": true },
-    { "id": "print", "label": "Printed magazine", "blurb": "Glossy or matte A4 magazine, printed near them and posted. Shipping is added at checkout", "gbp": 14.99, "usd": 19.99 },
-    { "id": "hardcover", "label": "Hardcover keepsake book", "blurb": "All 24 pages bound as a thick A4 hardcover book on glossy photo paper, made to keep forever. Printed near them and posted. Shipping is added at checkout", "gbp": 18.99, "usd": 24.99 }
+    {
+      "id": "pdf",
+      "label": "Instant PDF",
+      "blurb": "Their 24 page magazine, ready to download, print or send by message",
+      "gbp": 5,
+      "usd": 7,
+      "soon": true
+    },
+    {
+      "id": "cards",
+      "label": "Magazine plus card set",
+      "blurb": "The 24 page magazine plus a matching printable card set: message cards, gift tags and bookmarks",
+      "gbp": 7,
+      "usd": 9,
+      "popular": true
+    },
+    {
+      "id": "print",
+      "label": "Printed magazine",
+      "blurb": "Glossy or matte A4 magazine, printed near them and posted. Shipping is added at checkout",
+      "gbp": 14.99,
+      "usd": 19.99,
+      "soon": true
+    },
+    {
+      "id": "hardcover",
+      "label": "Hardcover keepsake book",
+      "blurb": "All 24 pages bound as a thick A4 hardcover book on glossy photo paper, made to keep forever. Printed near them and posted. Shipping is added at checkout",
+      "gbp": 18.99,
+      "usd": 24.99,
+      "soon": true
+    }
   ],
-  "peecho": { "offerings": { "glossy": 7380360, "matte": 7380353, "hardcover": 7380323 } },
-  "checkout": { "pdf": "https://coverstorymagazines.lemonsqueezy.com/checkout/buy/0250373e-9962-40d1-96ba-51271f19a005", "cards": "https://coverstorymagazines.lemonsqueezy.com/checkout/buy/e6590a4e-8901-40f8-9923-a536d4128141", "print": "", "premium": "" }
+  "peecho": {
+    "offerings": {
+      "glossy": 7380360,
+      "matte": 7380353,
+      "hardcover": 7380323
+    }
+  },
+  "checkout": {
+    "pdf": "https://coverstorymagazines.lemonsqueezy.com/checkout/buy/0250373e-9962-40d1-96ba-51271f19a005",
+    "cards": "https://coverstorymagazines.lemonsqueezy.com/checkout/buy/bfbce68d-17d0-4a57-acef-08f23c6ed35f",
+    "print": "",
+    "premium": ""
+  }
 }
