@@ -36,6 +36,10 @@ function coverFor(mag, ex, design = baseDesign(mag)) {
   return renderCover(mag, ex.values, { palette: ex.palette, portraitOpts: ex.portrait, design });
 }
 
+// Social links show in the footer only once they are filled in data/site.json.
+const SOCIAL = [['tiktok', 'TikTok'], ['instagram', 'Instagram'], ['pinterest', 'Pinterest'], ['facebook', 'Facebook'], ['youtube', 'YouTube']];
+const socialLinks = SOCIAL.filter(([k]) => site.social?.[k]).map(([k, label]) => `<a href="${esc(site.social[k])}" rel="me noopener" target="_blank">${label}</a>`).join('');
+
 function layout({ title, description, path, body, og = {}, jsonld, bodyClass = '', scripts = '', noindex = false }) {
   const fullTitle = path === '/' ? `${site.name}: ${site.tagline}` : `${title} | ${site.name}`;
   const image = og.image || abs('/pins/birthday-magazine-mia.jpg');
@@ -70,10 +74,12 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld)}</script
 </head>
 <body class="${bodyClass}">
 <a class="skip" href="#main">Skip to content</a>
+${site.christmasOrderBy ? `<p class="promo-bar">Order printed copies by <b>${esc(site.christmasOrderBy)}</b> for Christmas delivery. PDFs arrive in minutes, right up to Christmas Day.</p>` : ''}
 <header class="top">
   <a class="logo" href="/" aria-label="${esc(site.name)} home"><span class="logo-mag" aria-hidden="true"></span>${esc(site.name)}</a>
   <nav class="nav">${nav}<a href="/ideas/">Ideas</a></nav>
   <a class="btn btn-small" href="/make/">Make yours</a>
+  <details class="menu"><summary aria-label="Menu"><span></span><span></span><span></span></summary><nav class="menu-panel">${mags.map(m => `<a href="/${m.slug}/">${esc(m.title)}</a>`).join('')}<a href="/ideas/">Gift ideas</a><a href="/help/">Delivery and FAQ</a><a href="/contact/">Contact us</a></nav></details>
 </header>
 <main id="main">
 ${body}
@@ -86,8 +92,8 @@ ${body}
       <p class="currency">Prices in <button type="button" data-cur="gbp">£ GBP</button> <button type="button" data-cur="usd">$ USD</button></p>
     </div>
     <div><h4>Magazines</h4>${mags.map(m => `<a href="/${m.slug}/">${esc(m.title)}</a>`).join('')}</div>
-    <div><h4>Help</h4><a href="/help/">Delivery and FAQ</a><a href="/ideas/">Gift ideas</a><a href="/about/">About us</a><a href="mailto:${esc(site.email)}">Contact</a></div>
-    <div><h4>The small print</h4><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
+    <div><h4>Help</h4><a href="/help/">Delivery and FAQ</a><a href="/ideas/">Gift ideas</a><a href="/about/">About us</a><a href="/contact/">Contact us</a></div>
+    <div><h4>The small print</h4><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/refunds/">Refunds</a>${socialLinks ? `<h4 class="foot-follow">Follow us</h4>${socialLinks}` : ''}</div>
   </div>
   <p class="legal">&copy; ${new Date().getFullYear()} ${esc(site.name)} is a trading name of ${esc(site.company)}, a company registered in the United Kingdom, number ${esc(site.companyNumber)}.</p>
 </footer>
@@ -153,6 +159,9 @@ const trustStrip = `
     <li>${icon('spark')}<div><b>Ready in minutes</b> <small>Download straight after paying, and a copy by email.</small></div></li>
     <li>${icon('globe')}<div><b>Sent anywhere in the world</b> <small>By email in seconds, or printed near them and posted.</small></div></li>
   </ul>`;
+
+// The name on the gift tag: a first name, or the whole name when it starts with The, Mr, Mrs and so on.
+const firstName = v => { const n = String(v || '').trim(); const w = n.split(/\s/)[0]; return /^(the|mr|mrs|ms|miss|dr)\.?$/i.test(w) ? n : w; };
 
 // "See it for real": the buyer's actual design shown as a printed magazine,
 // an open spread and on a phone, all drawn from the same pages as the PDF.
@@ -269,7 +278,7 @@ ${tickerHtml}
   <div class="section-head"><p class="kicker">Simple prices</p><h2>Choose how you give it</h2></div>
   ${tierCards()}
 </section>
-${realLife(b, renderFullMagazine(b, b.examples[0].values, { palette: b.examples[0].palette, portraitOpts: b.examples[0].portrait, design: baseDesign(b) }), String(Object.values(b.examples[0].values)[0] || '').split(/\s/)[0])}
+${realLife(b, renderFullMagazine(b, b.examples[0].values, { palette: b.examples[0].palette, portraitOpts: b.examples[0].portrait, design: baseDesign(b) }), firstName(Object.values(b.examples[0].values)[0]))}
 ${reviewsSection('', true)}
 <section class="section">
   <div class="section-head"><p class="kicker">Questions</p><h2>Good to know</h2></div>
@@ -335,7 +344,7 @@ async function magazinePage(mag, design = baseDesign(mag)) {
   <div class="section-head"><p class="kicker">Flip through all ${inside.length} pages</p><h2>Every page is about them</h2><p>${mag.heart ? "Their own story, pages we write just for them, a front page, a pull out poster, a quiz and puzzle made from your answers, and a closing note from us." : "A contents page, the big interview, a pull out poster, a quiz and puzzle made from your answers, an official certificate and more."} Swipe to see it all.</p></div>
   <div class="flip">${inside.map((p, i) => `<div><div class="flip-page">${p}</div><span class="flip-n">${i ? `Page ${i + 1}` : 'Cover'}</span></div>`).join('')}</div>
 </section>
-${realLife(mag, inside, String(Object.values(main.values)[0] || '').split(/\s/)[0])}
+${realLife(mag, inside, firstName(Object.values(main.values)[0]))}
 <section class="section">
   <div class="section-head"><p class="kicker">Prices</p><h2>Choose how you give it</h2></div>
   ${tierCards(mag.slug)}
@@ -516,6 +525,24 @@ async function simplePages() {
       <h2>PDF magazines</h2><p>Your PDF is for personal use. You are welcome to print as many copies as you like for family and friends.</p>
       <h2>Contact</h2><p><a href="mailto:${esc(site.email)}">${esc(site.email)}</a></p>`),
   }));
+  await page('/contact/', layout({
+    title: 'Contact us', description: `Questions about your magazine or an order? Talk to the ${site.name} team.`, path: '/contact/',
+    body: wrap('We are here to help', 'Contact us', `
+      <p>We are a small team and we read every message ourselves. Whether you have a question before you order, want to change something, or something is not quite right, we would love to hear from you.</p>
+      <h2>Email us</h2><p><a class="btn" href="mailto:${esc(site.email)}">${esc(site.email)}</a></p><p>We usually reply within one working day. If your message is about an order, please include the email address you ordered with.</p>
+      <h2>Quick answers</h2><ul class="ticks"><li><a href="/help/">Delivery times and questions</a></li><li><a href="/refunds/">Refunds and reprints</a></li><li><a href="/privacy/">How we look after your photos</a></li></ul>
+      <p class="small">${esc(site.name)} is a trading name of ${esc(site.company)}, a company registered in the United Kingdom (company number ${esc(site.companyNumber)}).</p>`),
+  }));
+  await page('/refunds/', layout({
+    title: 'Refunds and reprints', description: 'Our promise if anything is wrong with your magazine: we fix it, reprint it or refund you.', path: '/refunds/',
+    body: wrap('Our promise', 'Refunds and reprints', `
+      <p>Every magazine is made for one person, from your own words and photos. We want you to love it. If you do not, tell us and we will put it right.</p>
+      <h2>If something is wrong</h2><ul class="ticks"><li><b>A typo or mistake we can fix:</b> we correct it and send your new magazine free.</li><li><b>A printing fault or damage in the post:</b> we reprint it free, or refund you in full.</li><li><b>It never arrived:</b> we reprint and resend it, or refund you.</li></ul>
+      <p>Just email <a href="mailto:${esc(site.email)}">${esc(site.email)}</a> as soon as you can, with your order email and a photo if something is damaged.</p>
+      <h2>Changing your mind</h2><p>Because each magazine is personalised, we cannot refund a change of mind once it has been made.</p>
+      <h2>How refunds are paid</h2><p>Refunds go back to the card or PayPal account you paid with.</p>
+      <p class="small">This does not affect your legal rights. See our <a href="/terms/">terms of sale</a>.</p>`),
+  }));
   await page('/download/', layout({
     title: 'Your magazine is ready', description: 'Download your finished magazine.', path: '/download/',
     body: `<section class="thanks download"><div class="confetti" aria-hidden="true">${Array.from({ length: 18 }, (_, i) => `<i style="--i:${i}"></i>`).join('')}</div><p class="kicker">Hot off the press</p><h1 id="dl-title">Just a moment, we're fetching your magazine.</h1><p class="lead" id="dl-lead">This usually takes a few seconds after payment.</p><div class="dl-btns" id="dl-btns" hidden></div><p class="small" id="dl-note">We email your magazine to you as well, so it is always safe in your inbox.</p><a class="btn btn-ghost" href="/">Back to the front page</a></section>`,
@@ -581,7 +608,7 @@ async function simplePages() {
 }
 
 async function feeds() {
-  const urls = ['/', ...mags.flatMap(m => designsFor(m).map(d => magPath(m, d))), '/make/', '/ideas/', ...ideas.map(i => `/ideas/${i.slug}/`), '/help/', '/about/', '/privacy/', '/terms/'];
+  const urls = ['/', ...mags.flatMap(m => designsFor(m).map(d => magPath(m, d))), '/make/', '/ideas/', ...ideas.map(i => `/ideas/${i.slug}/`), '/help/', '/about/', '/contact/', '/refunds/', '/privacy/', '/terms/'];
   await page('/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${abs(u)}</loc></url>`).join('\n')}\n</urlset>\n`);
   await page('/robots.txt', `User-agent: *\nAllow: /\nDisallow: /note/\nDisallow: /gift/\nSitemap: ${abs('/sitemap.xml')}\n`);
   // Pinterest catalog feed: one row per magazine and edition, so each shows up as a shoppable product.

@@ -907,7 +907,7 @@
       {
         "id": "miss",
         "label": "What you miss most about them",
-        "example": "Sunday pancakes and her terrible jokes",
+        "example": "Sunday pancakes and those terrible jokes",
         "max": 70
       },
       {
