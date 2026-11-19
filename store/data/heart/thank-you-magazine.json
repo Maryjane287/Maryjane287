@@ -1,0 +1,292 @@
+{
+  "theme": "candy",
+  "fields": [
+    {
+      "id": "s_did",
+      "chapter": "What you did for us",
+      "label": "Something they did for you",
+      "example": "Called every evening to check we were all right",
+      "max": 80
+    },
+    {
+      "id": "s_changed",
+      "chapter": "How you changed things",
+      "label": "How they changed things for you",
+      "example": "We stopped feeling alone",
+      "max": 80
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To pass your kindness on to someone else",
+      "max": 70
+    }
+  ],
+  "story": {
+    "legend": "A few more things about them",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely ones we have written.",
+    "kicker": "A thank you story",
+    "title": "Everything You Did for Us",
+    "hand": "And that is only a small part of what {who} did for us. We will never forget it."
+  },
+  "labels": {
+    "role": "Who you are to us",
+    "always": "You always",
+    "power": "Your superpower",
+    "year": "The year you were our hero",
+    "words": "You, in three words"
+  },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we will always remember",
+    "items": [
+      "Your smile when we needed it",
+      "How you always had time",
+      "Your endless patience",
+      "The way you listened",
+      "Your terrible jokes, on the right days",
+      "How you made us feel safe",
+      "Your kindness to everyone",
+      "The way you noticed little things",
+      "How you never gave up",
+      "Your calm in a crisis",
+      "How you made hard days lighter",
+      "The way you believed in us",
+      "Simply being you"
+    ]
+  },
+  "timeline": {
+    "kicker": "Heroes through the ages",
+    "title": "A Short History of Kindness",
+    "items": [
+      [
+        "1854",
+        "The lady with the lamp",
+        "Florence Nightingale nursed soldiers through the night, and changed nursing for ever."
+      ],
+      [
+        "1863",
+        "Help for everyone",
+        "The Red Cross was founded to care for anyone who was hurt, whichever side they were on."
+      ],
+      [
+        "1974",
+        "A day for nurses",
+        "International Nurses Day began, held every year on 12 May, Florence Nightingale's birthday."
+      ],
+      [
+        "Every day",
+        "Ordinary heroes",
+        "Carers, coaches, neighbours and nurses quietly change lives, mostly without anyone saying thank you."
+      ]
+    ],
+    "today": [
+      "{year}",
+      "{who}",
+      "Not in the history books yet. But in ours, a real hero."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Kindness",
+    "items": [
+      [
+        "No act of kindness, no matter how small, is ever wasted.",
+        "Aesop, The Lion and the Mouse"
+      ],
+      [
+        "How far that little candle throws his beams! So shines a good deed in a weary world.",
+        "William Shakespeare, The Merchant of Venice"
+      ],
+      [
+        "Kind words can be short and easy to speak, but their echoes are truly endless.",
+        "Often credited to Mother Teresa"
+      ],
+      [
+        "Gratitude is the memory of the heart.",
+        "An old saying"
+      ]
+    ],
+    "hand": "They all say it beautifully. We just say: thank you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Kindness",
+    "items": [
+      [
+        "heart",
+        "Good for the heart",
+        "Being kind releases oxytocin, a hormone that helps relax blood vessels and calm the heart."
+      ],
+      [
+        "spark",
+        "The helper's high",
+        "Helping others lights up the brain's reward centres, the same ones that light up for chocolate."
+      ],
+      [
+        "hands",
+        "Catching kindness",
+        "Studies show that seeing someone be kind makes us more likely to be kind ourselves."
+      ],
+      [
+        "pulse",
+        "Thank you matters",
+        "Saying thank you makes people more likely to help again. So consider this magazine a very big one."
+      ],
+      [
+        "star",
+        "Small things count",
+        "People who receive a thank you note often say it meant far more than the sender guessed."
+      ],
+      [
+        "leaf",
+        "Kindness lasts",
+        "People who do kind things often feel happier for days afterwards."
+      ]
+    ],
+    "hand": "Science can explain a lot. It cannot explain how {who} made such a difference to us."
+  },
+  "world": {
+    "kicker": "A thank you from all of us",
+    "title": "Why the World Is Better With You in It",
+    "lead": "Because of you, the world got:",
+    "items": [
+      "Someone who turns up when it matters.",
+      "A calm voice on the hardest days.",
+      "Kindness that nobody had to ask for.",
+      "A smile that changed the whole room.",
+      "Patience that could fill a hospital.",
+      "People who feel less alone.",
+      "And a real, everyday hero."
+    ],
+    "close": "The world is better because of you, {who}. Ours most of all."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises to you",
+    "items": [
+      "To pass your kindness on.",
+      "To tell everyone about you.",
+      "To say thank you more often.",
+      "To remember what you did for us.",
+      "To keep you in our hearts, always."
+    ],
+    "hand": "With love and thanks, {from}"
+  },
+  "awards": [
+    [
+      "Hero of the year",
+      "{year}, unanimous"
+    ],
+    [
+      "Kindest human alive",
+      "By a landslide"
+    ],
+    [
+      "Calm in a crisis",
+      "Gold medal standard"
+    ],
+    [
+      "Lifetime achievement",
+      "In changing lives"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One hot cup of tea",
+      "Drunk while it is still hot"
+    ],
+    [
+      "A whole day off",
+      "No phones, no favours"
+    ],
+    [
+      "A home baked cake",
+      "Delivered with love"
+    ],
+    [
+      "One giant thank you hug",
+      "Valid any time"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "A Real Life Hero",
+  "awardsKicker": "Live from the thank you awards",
+  "perfume": "Top notes of fresh tea, clean linen and kindness. A heart of pure gold.",
+  "news": {
+    "edition": "Hero of the year edition",
+    "headline": "{who} named hero of the year",
+    "lead": "Sources close to the family confirm that {who} went above and beyond, every single day, and never once asked for thanks.",
+    "weather": "Weather: warm, with a 100% chance of gratitude"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to everywhere kind",
+    "nationality": "Loved, everywhere",
+    "job": "Professional hero",
+    "stamps": [
+      "Hero of {year}",
+      "Above and beyond",
+      "Forever thanked"
+    ]
+  },
+  "movie": {
+    "sub": "An everyday hero",
+    "soon": "Showing forever, in our hearts",
+    "reviews": [
+      [
+        "We laughed, we cried, we said thank you",
+        "The family group chat"
+      ],
+      [
+        "A true hero, start to finish",
+        "The Daily Hug"
+      ],
+      [
+        "Five stars, and a big hug",
+        "Everyone who met them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Who was known as the lady with the lamp?",
+      [
+        "Florence Nightingale",
+        "Marie Curie",
+        "Mary Seacole"
+      ],
+      0
+    ],
+    [
+      "Which day is International Nurses Day?",
+      [
+        "1 January",
+        "12 May",
+        "25 December"
+      ],
+      1
+    ]
+  ],
+  "words": [
+    "THANKS",
+    "HERO",
+    "KIND",
+    "CARING",
+    "HEART",
+    "STAR"
+  ],
+  "note": {
+    "title": "What we believe a hero is",
+    "contents": "A note for you",
+    "paras": [
+      "We make magazines for a living, but some feel different. This was one of them.",
+      "We believe the real heroes rarely wear capes. They hold a hand, make the tea, cheer from the side of the pitch and turn up again tomorrow.",
+      "{who}, someone wanted to say thank you properly. Not with a card that gets lost, but pages full of you: your words, your kindness, the difference you made.",
+      "That someone is {from}. And from everything they told us, you changed things for them in a way they will never forget."
+    ],
+    "wish": "Thank you, {who}. For everything."
+  }
+}

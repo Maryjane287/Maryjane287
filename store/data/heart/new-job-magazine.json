@@ -1,0 +1,292 @@
+{
+  "theme": "ocean",
+  "fields": [
+    {
+      "id": "s_proud",
+      "chapter": "The work we are proudest of",
+      "label": "Work of theirs you are proudest of",
+      "example": "The project everyone said could not be done",
+      "max": 80
+    },
+    {
+      "id": "s_next",
+      "chapter": "What comes next",
+      "label": "What you predict comes next",
+      "example": "Running the whole place within five years",
+      "max": 80
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To bring cake on your first day",
+      "max": 70
+    }
+  ],
+  "story": {
+    "legend": "A few more things about them",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely ones we have written.",
+    "kicker": "The road to the top",
+    "title": "How {who} Got Here",
+    "hand": "And this is only the start of the {who} success story."
+  },
+  "labels": {
+    "job": "The new title",
+    "year": "The year it happened",
+    "weapon": "Secret weapon",
+    "coffee": "Fuelled by",
+    "words": "In three words"
+  },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten reasons you deserve this",
+    "items": [
+      "Your brilliant ideas",
+      "How hard you work, quietly",
+      "The way you help everyone",
+      "Your calm in a crisis",
+      "Your excellent biscuit supply",
+      "The way you make meetings bearable",
+      "How you never take the credit",
+      "Your terrible jokes on Monday mornings",
+      "The way you believe in people",
+      "How you always find a way",
+      "Your patience with the printer",
+      "The way you lead by example",
+      "Simply being you"
+    ]
+  },
+  "timeline": {
+    "kicker": "Work through the ages",
+    "title": "A Short History of Getting the Job",
+    "items": [
+      [
+        "1482",
+        "The first CV",
+        "Leonardo da Vinci wrote a letter to the Duke of Milan listing everything he could do. It is often called the first CV."
+      ],
+      [
+        "1800s",
+        "Wanted: help",
+        "Newspapers began printing job adverts, and the hunt for the perfect job went public."
+      ],
+      [
+        "1926",
+        "The weekend",
+        "Henry Ford gave his factory workers a five day week, helping make the two day weekend normal."
+      ],
+      [
+        "1990s",
+        "Online jobs",
+        "The first job websites appeared, and applying for work moved from the post box to the inbox."
+      ]
+    ],
+    "today": [
+      "{year}",
+      "{who}",
+      "Not in the history books yet. But definitely in the company newsletter."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Success",
+    "items": [
+      [
+        "Choose a job you love, and you will never have to work a day in your life.",
+        "Often credited to Confucius"
+      ],
+      [
+        "Opportunities multiply as they are seized.",
+        "Often credited to Sun Tzu"
+      ],
+      [
+        "Pleasure in the job puts perfection in the work.",
+        "Often credited to Aristotle"
+      ],
+      [
+        "Hard work beats talent when talent doesn't work hard.",
+        "An old coaching saying"
+      ]
+    ],
+    "hand": "Good advice, all of it. Ours is simpler: you have got this, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of a Great Day at Work",
+    "items": [
+      [
+        "spark",
+        "Happy works",
+        "Studies have found that happier people tend to be more productive at work."
+      ],
+      [
+        "star",
+        "Thank you matters",
+        "People who feel appreciated at work are more likely to stay and do their best."
+      ],
+      [
+        "moon",
+        "Sleep on it",
+        "A good night's sleep helps the brain solve problems. Bedtime is a business strategy."
+      ],
+      [
+        "leaf",
+        "Plants help",
+        "Having plants nearby has been linked to people feeling calmer and more focused at work."
+      ],
+      [
+        "pulse",
+        "Walk it out",
+        "A short walk can boost creative thinking. Meetings on foot count."
+      ],
+      [
+        "music",
+        "Background music",
+        "Gentle music can help some people focus. Others need total silence. Both are allowed."
+      ]
+    ],
+    "hand": "Science can explain a lot. It cannot explain how {who} gets so much done."
+  },
+  "world": {
+    "kicker": "A toast from all of us",
+    "title": "Why Your New Team Is Lucky",
+    "lead": "Because of you, they are getting:",
+    "items": [
+      "Ideas nobody else would think of.",
+      "Someone who listens before deciding.",
+      "Calm when everything is on fire.",
+      "A sense of humour on Monday mornings.",
+      "Hard work that never shows off.",
+      "Kindness, even when it is busy.",
+      "And the best {job} they could have hoped for."
+    ],
+    "close": "They are very lucky, {who}. And we are so proud of you."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises to you",
+    "items": [
+      "To cheer for every win.",
+      "To still invite you to the pub.",
+      "To tell everyone we knew you first.",
+      "To send biscuits on the hard days.",
+      "To be proud of you, always."
+    ],
+    "hand": "Signed with love, {from}"
+  },
+  "awards": [
+    [
+      "Employee of the decade",
+      "Unanimous"
+    ],
+    [
+      "Best ideas in the building",
+      "By a landslide"
+    ],
+    [
+      "Calm in a crisis",
+      "Gold medal standard"
+    ],
+    [
+      "Lifetime achievement",
+      "In being brilliant"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One emergency coffee",
+      "Delivered to your desk"
+    ],
+    [
+      "A celebration lunch",
+      "Our treat"
+    ],
+    [
+      "One meeting skipped",
+      "We will cover for you"
+    ],
+    [
+      "A Friday off",
+      "Your choice, no emails"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "The Best in the Business",
+  "awardsKicker": "Live from the office party",
+  "perfume": "Top notes of fresh coffee, new stationery and big ambition. A heart of pure gold.",
+  "news": {
+    "edition": "Big news edition",
+    "headline": "{who} lands the top job",
+    "lead": "Sources close to the office confirm that {who} is the new {job}, and that everyone saw it coming years ago.",
+    "weather": "Weather: bright, with a 100% chance of success"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to the top",
+    "nationality": "Loved, everywhere",
+    "job": "{job}",
+    "stamps": [
+      "Hired {year}",
+      "The top floor",
+      "Big ideas"
+    ]
+  },
+  "movie": {
+    "sub": "The success story",
+    "soon": "The sequel starts on Monday",
+    "reviews": [
+      [
+        "We cheered, we cried, we asked for a raise",
+        "The team group chat"
+      ],
+      [
+        "A career for the ages",
+        "The Daily Business"
+      ],
+      [
+        "Five stars, and a corner office",
+        "Everyone who works with them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Who wrote a letter to the Duke of Milan that is often called the first CV?",
+      [
+        "Leonardo da Vinci",
+        "Michelangelo",
+        "Galileo"
+      ],
+      0
+    ],
+    [
+      "Which car maker helped make the five day week normal in 1926?",
+      [
+        "Henry Ford",
+        "Karl Benz",
+        "Enzo Ferrari"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "SUCCESS",
+    "BOSS",
+    "COFFEE",
+    "TEAM",
+    "CHEERS",
+    "IDEAS"
+  ],
+  "note": {
+    "title": "What we believe success is",
+    "contents": "A note for you",
+    "paras": [
+      "We make magazines for a living, but some feel different. This was one of them.",
+      "We believe success is not only the job title. It is the late nights nobody saw, the colleagues you helped along the way and the people cheering when the good news finally came.",
+      "{who}, someone wanted to celebrate you properly. Not with a card passed round the office, but pages full of you: your wins, your quirks, your very big future.",
+      "That someone is {from}. And from everything they told us, this is only the beginning."
+    ],
+    "wish": "Congratulations, {who}. Go and be brilliant."
+  }
+}

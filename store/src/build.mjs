@@ -169,7 +169,7 @@ const firstName = v => { const n = String(v || '').trim(); const w = n.split(/\s
 // "See it for real": the buyer's actual design shown as a printed magazine,
 // an open spread and on a phone, all drawn from the same pages as the PDF.
 const realLife = (mag, pages, name) => {
-  const gentle = mag.slug === 'pet-memorial-magazine';
+  const gentle = !!mag.gentle || mag.slug === 'pet-memorial-magazine';
   const [say, reply] = gentle ? ['Made this for you. Thinking of you.', 'Oh, this is so beautiful. Thank you.'] : ["You're on the cover!", 'WHAT?! I love it so much'];
   return `
 <section class="section real">

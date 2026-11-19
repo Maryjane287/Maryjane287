@@ -72,7 +72,7 @@
   "awards": [["Best laugh in the business", "By a landslide"], ["Most likely to start the dancing", "Every single time"], ["Outstanding friendship", "A lifetime achievement"], ["Star of the year", "Voted {age} years running"]],
   "vouchers": [["Breakfast in bed", "Coffee included, obviously"], ["A day of your choosing", "Anywhere, anything"], ["One night out", "Our treat, your playlist"], ["A lie in", "Nobody says a word"]],
   "vouchersTitle": "Birthday vouchers for {who}",
-  "cert": "Officially Iconic",
+  "cert": "Iconic",
   "perfume": "Top notes of birthday candles, fizz and laughter. A heart of pure sunshine.",
   "news": { "edition": "Birthday edition", "headline": "{who} turns {age} and the world celebrates", "lead": "Reports are coming in from everywhere: {who} is {age} today and looking better than ever. Cake has been confirmed.", "weather": "Weather: sunny, with scattered confetti" },
   "passport": { "kicker": "Official documents", "head": "Passport to every party", "nationality": "Celebrated, everywhere", "job": "Professional legend", "stamps": ["Birthday city", "Party central", "Adored"] },

@@ -447,7 +447,7 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
   const v = fillValues(mag, values);
   const who = v.name || v.names || v.forWho || v.family || v.who;
   const from = v.from || v.fromWho || 'all of us';
-  const gentle = mag.slug === 'pet-memorial-magazine';
+  const gentle = !!mag.gentle || mag.slug === 'pet-memorial-magazine';
   const xmas = !!mag.festive;
   // "The Taylors" reads as "The Taylors quiz", never "The The Taylors quiz".
   const bare = String(who).replace(/^the\s+/i, '');
@@ -520,7 +520,7 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
   const briefs = facts.map(f => [f.label, String(v[f.id] || '')]).filter(([, x]) => x.length > 1 && x.length <= 48).slice(0, 3);
   const plural = /&| and /i.test(String(who)) || /^the\s.+s$/i.test(String(who));
   // Couples and families keep their whole name (The Emma & Leo Awards), one person just their first name.
-  const first = plural || /^(mr|mrs|ms|miss|dr|mx)\.?\s/i.test(bare) ? bare : bare.split(/\s+/)[0] || who;
+  const first = plural || /^(mr|mrs|ms|miss|dr|mx|nurse|coach|uncle|aunt|auntie|aunty|nana|nan|grandma|grandad|grandpa|granny|gran|grandmother|grandfather)\.?\s/i.test(bare) ? bare : bare.split(/\s+/)[0] || who;
   const headline = xmas ? `${who} save Christmas again` : gentle ? `A life full of love` : `${who} ${plural ? 'do' : 'does'} it again`;
   const paper = xmas ? 'The North Pole Times' : plural ? 'The Daily News' : `The Daily ${first}`;
   const amounts = ['A big cup of', 'Two spoons of', 'A generous pinch of', 'A sprinkle of', 'A splash of'];
@@ -657,7 +657,7 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
       `<div class="pg pg-poster" ${style}>${ph('photo1', 'po-photo')}<div class="po-name" style="font-size:calc(${fit(String(who).toUpperCase(), 88, 0.5, 30)} * var(--cq))">${esc(String(who).toUpperCase())}</div><div class="po-badge"><small>${s.badge[0]}</small>${s.badge[1]}<small>${s.badge[2]}</small></div><span class="pg-num">15</span></div>`,
       page('awards', `<p class="pg-kicker">${t(H.awardsKicker || 'Live from the red carpet')}</p><h3>The ${esc(first)} Awards</h3><div class="aw">${hawards.map(([x, n]) => `<div class="aw-item"><svg class="aw-cup" viewBox="0 0 24 24" aria-hidden="true"><path fill="#f3d67a" d="M7 3h10v2h3a1 1 0 0 1 1 1c0 3.2-2 5.6-4.8 6A5 5 0 0 1 13 14.9V18h3v3H8v-3h3v-3.1A5 5 0 0 1 7.8 12C5 11.6 3 9.2 3 6a1 1 0 0 1 1-1h3V3zm10 4v3.8c1.3-.5 2.1-1.8 2.3-3.8H17zM7 7H4.7c.2 2 1 3.3 2.3 3.8V7z"/></svg><p class="aw-cat">${x}</p><p class="aw-win">Winner: ${esc(who)}</p><p class="aw-note">${n}</p></div>`).join('')}</div><p class="aw-foot">${t(H.awardsFoot || 'The envelope, please. It was never in doubt.')}</p>`, 16),
       W.world(17),
-      page('cert', `<div class="cert"><p class="pg-kicker">Official certificate</p><p class="cert-small">This certifies that</p><p class="cert-name">${esc(who)}</p><p class="cert-small">${t(H.certLine || 'is officially, undeniably and forever')}</p><p class="cert-title">${t(H.cert)}</p><div class="cert-foot"><span>${esc(from)}</span><i class="cert-seal">&#9733;</i><span>${esc(mag.title)}</span></div></div>`, 18),
+      page('cert', `<div class="cert"><p class="pg-kicker">Official certificate</p><p class="cert-small">This certifies that</p><p class="cert-name">${esc(who)}</p><p class="cert-small">${t(H.certLine || (plural ? 'are officially, undeniably and forever' : 'is officially, undeniably and forever'))}</p><p class="cert-title">${t(H.cert)}</p><div class="cert-foot"><span>${esc(from)}</span><i class="cert-seal">&#9733;</i><span>${esc(mag.title)}</span></div></div>`, 18),
       page('vouchers', `<p class="pg-kicker">${gentle ? 'Favourite things' : 'Cut out and keep'}</p><h3>${t(H.vouchersTitle || 'Vouchers for {who}')}</h3><div class="vch vch-tight${gentle ? ' vch-gentle' : ''}">${hvouch.map(([a, b]) => `<div><b>${a}</b><span>${b}</span></div>`).join('')}</div>`, 19),
       page('passport', `<p class="pg-kicker">${t(P.kicker || 'Official documents')}</p><h3>The ${esc(first)} passport</h3><div class="pp"><div class="pp-head"><span>${t(P.head || 'Passport to everywhere fun')}</span><span>No. 001</span></div><div class="pp-body">${ph('photo1', 'pp-photo')}<dl class="pp-data"><dt>Name</dt><dd>${esc(who)}</dd><dt>Nationality</dt><dd>${t(P.nationality || 'Loved, everywhere')}</dd><dt>Occupation</dt><dd>${values.x_job ? esc(String(values.x_job).trim()) : t(P.job || 'Professional legend')}</dd><dt>Issued by</dt><dd${String(from).length > 22 ? ' class="pp-sm"' : ''}>${esc(from)}</dd><dt>Valid until</dt><dd>Forever</dd></dl></div><div class="pp-stamps">${pad(mine('x_places', 3).map(esc), (P.stamps || ['Adored', 'Approved', 'One of a kind']).map(t), 3).map(x => `<span>${x}</span>`).join('')}</div><div class="pp-mrz"><p>${esc(mrzLine1)}</p><p>${esc(mrzLine2)}</p></div></div>`, 20),
       W.promises(21),
@@ -704,7 +704,7 @@ export function renderCardSet(mag, values = {}, opts = {}) {
   const v = fillValues(mag, values);
   const who = v.name || v.names || v.forWho || v.family || v.who;
   const from = v.from || v.fromWho || 'all of us';
-  const gentle = mag.slug === 'pet-memorial-magazine';
+  const gentle = !!mag.gentle || mag.slug === 'pet-memorial-magazine';
   const xmas = !!mag.festive;
   const s = mag.cover ? slots(mag, v) : { quote: '', badge: ['', '', ''] };
   const quote = s.quote || esc(v.words || 'One of a kind');
