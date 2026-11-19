@@ -32,8 +32,11 @@ function saveImg(src, alt, desc, cls = '') {
   return `<img class="${cls}" src="${src}" alt="${esc(alt)}" loading="lazy" width="1000" height="1500" data-pin-description="${esc(desc)}" data-pin-media="${abs(src)}">`;
 }
 
+// Sample photos for the example magazines (made in Google Flow). Missing spread photos reuse the cover photo.
+const samplePhotos = (ex = {}) => { const s = ex.photos; if (!s || !s.photo1) return {}; return { photo1: s.photo1, photo2: s.photo2 || s.photo1, photo3: s.photo3 || s.photo2 || s.photo1 }; };
+
 function coverFor(mag, ex, design = baseDesign(mag)) {
-  return renderCover(mag, ex.values, { palette: ex.palette, portraitOpts: ex.portrait, design });
+  return renderCover(mag, ex.values, { palette: ex.palette, portraitOpts: ex.portrait, photos: samplePhotos(ex), design });
 }
 
 // Social links show in the footer only once they are filled in data/site.json.
@@ -235,7 +238,7 @@ async function home() {
   ].map(([m, ex], i) => `<a class="hero-cover hc-${i}" href="/${m.slug}/" aria-label="${esc(m.title)}">${coverFor(m, ex)}</a>`).join('');
   const cards = mags.map(m => `
     <a class="mag-card" href="/${m.slug}/">
-      <div class="mag-card-cover">${coverFor(m, m.examples[1] || m.examples[0])}</div>
+      <div class="mag-card-cover">${coverFor(m, [m.examples[1], ...m.examples].find(e => e && e.photos) || m.examples[1] || m.examples[0])}</div>
       <div class="mag-card-body">
         <p class="kicker">${esc(m.occasion)}</p>
         <h3>${esc(m.title)}</h3>
@@ -278,7 +281,7 @@ ${tickerHtml}
   <div class="section-head"><p class="kicker">Simple prices</p><h2>Choose how you give it</h2></div>
   ${tierCards()}
 </section>
-${realLife(b, renderFullMagazine(b, b.examples[0].values, { palette: b.examples[0].palette, portraitOpts: b.examples[0].portrait, design: baseDesign(b) }), firstName(Object.values(b.examples[0].values)[0]))}
+${realLife(b, renderFullMagazine(b, b.examples[0].values, { palette: b.examples[0].palette, portraitOpts: b.examples[0].portrait, photos: samplePhotos(b.examples[0]), design: baseDesign(b) }), firstName(Object.values(b.examples[0].values)[0]))}
 ${reviewsSection('', true)}
 <section class="section">
   <div class="section-head"><p class="kicker">Questions</p><h2>Good to know</h2></div>
@@ -315,7 +318,7 @@ async function magazinePage(mag, design = baseDesign(mag)) {
   }).join('');
   const lowest = Math.min(...tiers.map(t => t.gbp));
   const highest = Math.max(...tiers.map(t => t.gbp));
-  const inside = renderFullMagazine(mag, main.values, { palette: main.palette, portraitOpts: main.portrait, design });
+  const inside = renderFullMagazine(mag, main.values, { palette: main.palette, portraitOpts: main.portrait, photos: samplePhotos(main), design });
   const desc = `${name}: ${mag.short} Made in 5 minutes from your answers and photos. A 24 page magazine sent as an instant PDF, anywhere in the world.`;
   const body = `
 <nav class="crumbs"><a href="/">Home</a> <span>/</span> ${base ? esc(mag.occasion) : `<a href="${magPath(mag)}">${esc(mag.occasion)}</a> <span>/</span> ${esc(dLabel)}`}</nav>
@@ -593,7 +596,7 @@ async function simplePages() {
     title: 'A birthday gift for her', description: 'Make a beautiful birthday magazine for the love of your life.', path: '/gift/her-birthday/', noindex: true,
     body: `<section class="section gift-page" data-expires="${esc(site.giftExpires || '')}"><div class="gift-expired" hidden><p class="kicker">Sorry</p><h1>This gift link has expired</h1><p class="lead">It was a private link, open for a short time only. You can still make a magazine for someone you love.</p><a class="btn" href="/">See the magazines</a></div><div class="gift-live"><div class="section-head"><p class="kicker">A gift, just for you</p><h1>Make her birthday unforgettable</h1><p class="lead">Choose the design you love. Answer five quick questions, add three photos, and we fill all 24 pages for her. It is completely free.</p></div>
       <ol class="gift-steps"><li><b>Pick a design</b>Tap any cover below. You can flip through all 24 pages before you finish.</li><li><b>Answer a few questions</b>Her name, her age, what you call her, a short letter and three photos. Everything else is optional.</li><li><b>Choose her day</b>Tick "It's a gift" and pick the date. You get your own copy straight away to check, and she gets hers on her day.</li></ol>
-      ${giftMags.map((m, i) => `<div class="gift-mag"><div class="gift-mag-head"><h2>${esc(m.title)}</h2>${i === 0 ? '<span class="gift-tag">Made for her</span>' : ''}<p>${esc(m.short)}</p></div><div class="gift-designs">${designsFor(m).map(d => `<a class="gift-design" href="${giftLink(m, d)}">${renderCover(m, designExamples(m, d)[0].values, { palette: designExamples(m, d)[0].palette, portraitOpts: designExamples(m, d)[0].portrait, design: d })}<span>${esc(DESIGNS[d].label)}</span></a>`).join('')}</div></div>`).join('')}
+      ${giftMags.map((m, i) => `<div class="gift-mag"><div class="gift-mag-head"><h2>${esc(m.title)}</h2>${i === 0 ? '<span class="gift-tag">Made for her</span>' : ''}<p>${esc(m.short)}</p></div><div class="gift-designs">${designsFor(m).map(d => `<a class="gift-design" href="${giftLink(m, d)}">${renderCover(m, designExamples(m, d)[0].values, { palette: designExamples(m, d)[0].palette, portraitOpts: designExamples(m, d)[0].portrait, photos: samplePhotos(designExamples(m, d)[0]), design: d })}<span>${esc(DESIGNS[d].label)}</span></a>`).join('')}</div></div>`).join('')}
     </div></section>
     <script>(function(){var g=document.querySelector('.gift-page'),e=Date.parse(g.dataset.expires);if(e&&Date.now()>e){g.querySelector('.gift-live').hidden=true;g.querySelector('.gift-expired').hidden=false;}})();</script>`,
   }));

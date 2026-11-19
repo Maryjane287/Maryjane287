@@ -18,7 +18,8 @@ const tmp = new URL('.pin-render.html', root);
 
 const pinHtml = (mag, ex, design) => {
   const p = PALETTES[ex.palette];
-  const cover = renderCover(mag, ex.values, { palette: ex.palette, portraitOpts: ex.portrait, design });
+  const ph = ex.photos?.photo1 ? { photo1: ex.photos.photo1.replace(/^\//, '') } : {};
+  const cover = renderCover(mag, ex.values, { palette: ex.palette, portraitOpts: ex.portrait, photos: ph, design });
   const back = ex.palette === 'paper' ? '#8b1e1e' : p.bg;
   const light = ['rose', 'butter', 'mint', 'sky', 'snow'].includes(ex.palette);
   const size = mag.pinTitle.length > 30 ? 60 : 68;
