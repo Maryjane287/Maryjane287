@@ -35,9 +35,9 @@
     "kicker": "Words written in the stars",
     "title": "What the World Has Said About Stars",
     "items": [
-      ["We are made of star stuff.", "Carl Sagan, Cosmos, 1980"],
+      ["The sight of the stars always makes me dream.", "Vincent van Gogh, 1888"],
       ["We are all in the gutter, but some of us are looking at the stars.", "Oscar Wilde, Lady Windermere's Fan, 1892"],
-      ["Look up at the stars and not down at your feet.", "Stephen Hawking"],
+      ["Doubt thou the stars are fire, doubt that the sun doth move, doubt truth to be a liar, but never doubt I love.", "William Shakespeare, Hamlet"],
       ["Keep your eyes on the stars, and your feet on the ground.", "Theodore Roosevelt"]
     ],
     "hand": "They all looked up and wondered. We look at you and feel the same, {who}."
