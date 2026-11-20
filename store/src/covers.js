@@ -691,6 +691,7 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
     // The editorial issue: photo led spreads written like a glossy magazine
     // feature, built from the buyer's answers. No certificates or vouchers.
     const renum = (html, n) => /<span class="pg-num">\d+<\/span>/.test(html) ? html.replace(/<span class="pg-num">\d+<\/span>/, `<span class="pg-num">${n}</span>`) : html.replace(/<\/div>\s*$/, `<span class="pg-num">${n}</span></div>`);
+    const slot = (j, few) => pool.length > 3 ? j : few;
     const ed = (cls, inner) => `<div class="pg ed ${cls}" ${style}>${inner}</div>`;
     const L = H.labels || {};
     const greet = greetName(who, from);
@@ -708,29 +709,29 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
       : Array(4).fill('<figure class="ed-v ed-v-blank"><i>&#9829;</i><span></span><span></span><span></span><figcaption>From</figcaption></figure>').join('');
     const editorial = [
       pages[0],
-      ed('ed-contents', `${pic(1, 'ed-c-ph')}<div class="ed-c-col"><p class="ed-k">Inside this issue</p><h3>Inside</h3><ol class="ed-toc">${toc.map(([n, x]) => `<li><b>${n}</b><span>${t(x)}</span></li>`).join('')}</ol><p class="ed-c-note">Made for ${esc(who)}, with love.</p></div>`),
-      ed(`ed-letter${msg.length > 260 ? ' ed-long' : msg.length > 150 ? ' ed-mid' : ''}`, `${pic(0, 'ed-l-ph')}<div class="ed-l-body"><p class="ed-k">${esc(mag.letterTitle || 'A letter for you')}</p><h3>Dear ${esc(greet)},</h3><p class="ed-l-txt">${esc(msg)}</p><p class="ed-sign">With love, ${esc(from)}</p></div>`),
-      ed('ed-open', `${pic(2, 'ed-o-ph')}<div class="ed-o-shade"></div><div class="ed-o-txt"><p class="ed-k">The cover story</p><h3 style="font-size:calc(${fit(String(t(H.story?.title || who)), 150, 0.5, 13)} * var(--cq))">${t(H.story?.title || who)}</h3><p class="ed-o-dek">${leadLine(s, mag)}</p></div>`),
+      ed('ed-contents', `${pic(slot(3, 1), 'ed-c-ph')}<div class="ed-c-col"><p class="ed-k">Inside this issue</p><h3>Inside</h3><ol class="ed-toc">${toc.map(([n, x]) => `<li><b>${n}</b><span>${t(x)}</span></li>`).join('')}</ol><p class="ed-c-note">Made for ${esc(who)}, with love.</p></div>`),
+      ed(`ed-letter${msg.length > 260 ? ' ed-long' : msg.length > 150 ? ' ed-mid' : ''}`, `${pic(slot(0, 0), 'ed-l-ph')}<div class="ed-l-body"><p class="ed-k">${esc(mag.letterTitle || 'A letter for you')}</p><h3>Dear ${esc(greet)},</h3><p class="ed-l-txt">${esc(msg)}</p><p class="ed-sign">With love, ${esc(from)}</p></div>`),
+      ed('ed-open', `${pic(slot(1, 2), 'ed-o-ph')}<div class="ed-o-shade"></div><div class="ed-o-txt"><p class="ed-k">The cover story</p><h3 style="font-size:calc(${fit(String(t(H.story?.title || who)), 150, 0.5, 13)} * var(--cq))">${t(H.story?.title || who)}</h3><p class="ed-o-dek">${leadLine(s, mag)}</p></div>`),
       ed('ed-article', `<div class="ed-pad"><p class="ed-k">The cover story</p>${pull ? `<blockquote class="ed-pull${pull.length > 130 ? ' ed-pull-s' : ''}">&ldquo;${esc(pull)}&rdquo;</blockquote>` : ''}<div class="ed-cols"><p class="ed-drop">Ask anyone who ${knew} ${esc(first)} to sum them up${words ? `, and you will hear the same words: ${words}` : ''}. ${t('{from}')} told us the rest of the story.</p>${ch.map(([l, x]) => `<h4>${t(l)}</h4><p>${esc(x)}</p>`).join('')}</div><p class="ed-hand">${t(H.story?.hand || '')}</p></div>`),
-      ed('ed-file', `${pic(1, 'ed-f-ph')}<div class="ed-f-shade"></div><p class="ed-k ed-f-k">The fact file</p><h3 class="ed-f-name" style="font-size:calc(${fit(String(first).toUpperCase(), 86, 0.5, 22)} * var(--cq))">${esc(String(first).toUpperCase())}</h3><dl class="ed-fl">${facts6.map(f => `<div><dt>${t(L[f.id] || f.label)}</dt><dd>${esc(v[f.id])}</dd></div>`).join('')}</dl>`),
-      ed('ed-full', `${pic(0, 'ed-full-ph')}${ch[0] ? `<p class="ed-cap"><b>${t(ch[0][0])}</b>${esc(ch[0][1])}</p>` : ''}`),
+      ed('ed-file', `${pic(slot(4, 1), 'ed-f-ph')}<div class="ed-f-shade"></div><p class="ed-k ed-f-k">The fact file</p><h3 class="ed-f-name" style="font-size:calc(${fit(String(first).toUpperCase(), 86, 0.5, 22)} * var(--cq))">${esc(String(first).toUpperCase())}</h3><dl class="ed-fl">${facts6.map(f => `<div><dt>${t(L[f.id] || f.label)}</dt><dd>${esc(v[f.id])}</dd></div>`).join('')}</dl>`),
+      ed('ed-full', `${pic(slot(5, 0), 'ed-full-ph')}${ch[0] ? `<p class="ed-cap"><b>${t(ch[0][0])}</b>${esc(ch[0][1])}</p>` : ''}`),
       pages[5],
       pages[8],
-      ed('ed-duo', `${pic(1, 'ed-d1')}${pic(2, 'ed-d2')}${ch[1] ? `<p class="ed-cap ed-cap1"><b>${t(ch[1][0])}</b>${esc(ch[1][1])}</p>` : ''}${ch[2] ? `<p class="ed-cap ed-cap2"><b>${t(ch[2][0])}</b>${esc(ch[2][1])}</p>` : ''}`),
+      ed('ed-duo', `${pic(slot(6, 1), 'ed-d1')}${pic(slot(7, 2), `ed-d2${pool.length > 3 ? ' ed-nozoom' : ''}`)}${ch[1] ? `<p class="ed-cap ed-cap1"><b>${t(ch[1][0])}</b>${esc(ch[1][1])}</p>` : ''}${ch[2] ? `<p class="ed-cap ed-cap2"><b>${t(ch[2][0])}</b>${esc(ch[2][1])}</p>` : ''}`),
       pages[10],
       ed('ed-nums', `<div class="ed-pad"><p class="ed-k">By the numbers</p><h3>${esc(first)}, in numbers</h3><div class="ed-big">${bigNums.map(([n, l]) => `<div><b style="font-size:calc(${fit(String(n).replace(/&[^;]+;/g, 'x'), 38, 0.55, 20)} * var(--cq))">${n}</b><span>${l}</span></div>`).join('')}</div><div class="ed-bars">${stats.map(([k, n]) => `<div><span>${k}</span><i><em style="width:${n}%"></em></i><b>${n}%</b></div>`).join('')}</div></div>`),
-      ed('ed-quote', `${pic(2, 'ed-q-ph')}<div class="ed-q-shade"></div><div class="ed-q-in"><p class="ed-k">In a word</p><p class="ed-q-txt" style="font-size:calc(${fit(String(words).replace(/&[^;]+;/g, 'x'), 260, 0.5, 13)} * var(--cq))">&ldquo;${words}&rdquo;</p><p class="ed-q-by">Everyone who ${knew} ${esc(first)}</p></div>`),
+      ed('ed-quote', `${pic(slot(8, 2), 'ed-q-ph')}<div class="ed-q-shade"></div><div class="ed-q-in"><p class="ed-k">In a word</p><p class="ed-q-txt" style="font-size:calc(${fit(String(words).replace(/&[^;]+;/g, 'x'), 260, 0.5, 13)} * var(--cq))">&ldquo;${words}&rdquo;</p><p class="ed-q-by">Everyone who ${knew} ${esc(first)}</p></div>`),
       pages[14],
       ed('ed-voices', `<div class="ed-pad"><p class="ed-k">Voices</p><h3>${friendNotes.length ? `What everyone says about ${esc(first)}` : `Leave a little message for ${esc(first)}`}</h3><div class="ed-vs">${voices}</div></div>`),
       pages[11],
       pages[16],
-      ed('ed-trio', `${pic(0, 'ed-t ed-t1')}${pic(1, 'ed-t ed-t2')}${pic(2, 'ed-t ed-t3')}<p class="ed-k ed-t-k">The scrapbook</p><p class="ed-t-cap">${words ? `&ldquo;${words}&rdquo;` : ''}</p>`),
+      ed('ed-trio', `${pic(slot(9, 0), 'ed-t ed-t1')}${pic(slot(10, 1), 'ed-t ed-t2')}${pic(slot(11, 2), 'ed-t ed-t3')}<p class="ed-k ed-t-k">The scrapbook</p><p class="ed-t-cap">${words ? `&ldquo;${words}&rdquo;` : ''}</p>`),
       pages[12],
       pages[20],
       pages[6],
       pages[22],
       pages[23],
-      ed('ed-back', `${pic(1, 'ed-b-ph')}<div class="ed-b-shade"></div><div class="ed-b-in"><p class="ed-k">Made with love for</p><h3 style="font-size:calc(${fit(String(who), 84, 0.5, 16)} * var(--cq))">${esc(who)}</h3><p class="ed-b-q">${words ? `&ldquo;${words}&rdquo;` : ''}</p><p class="ed-b-from">From ${esc(from)}</p></div><div class="ed-b-foot"><span>Cover Story</span>${barcode()}</div>`),
+      ed('ed-back', `${pic(slot(2, 1), 'ed-b-ph')}<div class="ed-b-shade"></div><div class="ed-b-in"><p class="ed-k">Made with love for</p><h3 style="font-size:calc(${fit(String(who), 84, 0.5, 16)} * var(--cq))">${esc(who)}</h3><p class="ed-b-q">${words ? `&ldquo;${words}&rdquo;` : ''}</p><p class="ed-b-from">From ${esc(from)}</p></div><div class="ed-b-foot"><span>Cover Story</span>${barcode()}</div>`),
     ];
     return editorial.map((html, i) => i ? renum(html, i + 1) : html);
   }
