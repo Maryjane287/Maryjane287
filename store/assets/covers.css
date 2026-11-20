@@ -814,3 +814,137 @@
 .x-sticker { top: auto; bottom: 36cqw; right: 28cqw; width: 16cqw; height: 16cqw; font-size: 7cqw; z-index: 3; }
 .x-sticker small { font-size: 1.7cqw; }
 .x-reasons .reasons li:nth-child(n+6) { padding-right: 33cqw; }
+
+/* ---------- The editorial issue (photo led, like a glossy magazine) ---------- */
+.ed { background: #fffaf2; color: #1d1a2f; --edk: color-mix(in srgb, var(--bg) 55%, #1d1a2f); }
+.ed::before { display: none; }
+.ed img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ed-k { margin: 0 0 2.4cqw; font: 800 2.4cqw/1 'Outfit', sans-serif; letter-spacing: .2em; text-transform: uppercase; color: var(--edk); }
+.ed h3 { margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-style: italic; line-height: .98; letter-spacing: -.01em; text-wrap: balance; }
+.ed .pg-num { color: inherit; }
+
+/* Contents: a tall photo on the left, the list on the right. */
+.ed-contents { display: grid; grid-template-columns: 40cqw 1fr; }
+.ed-c-ph { height: 100%; overflow: hidden; background: var(--bg); }
+.ed-c-col { padding: 10cqw 6cqw 8cqw; display: flex; flex-direction: column; }
+.ed-contents h3 { font-size: 15cqw; margin-bottom: 5cqw; }
+.ed-toc { list-style: none; margin: 0; padding: 0; display: grid; gap: 2.2cqw; }
+.ed-toc li { display: grid; grid-template-columns: 8cqw 1fr; align-items: baseline; border-bottom: .25cqw solid color-mix(in srgb, #1d1a2f 14%, transparent); padding-bottom: 1.8cqw; }
+.ed-toc b { font: 400 5cqw/1 'Anton', Impact, sans-serif; color: var(--edk); }
+.ed-toc span { font: 400 3.3cqw/1.15 'DM Serif Display', serif; }
+.ed-c-note { margin: auto 0 0; padding-top: 3cqw; font: 600 4.4cqw/1.05 'Caveat', cursive; color: var(--edk); }
+
+/* Letter: photo on top, the words below. */
+.ed-letter { display: flex; flex-direction: column; }
+.ed-l-ph { flex: 1 1 auto; min-height: 30cqw; overflow: hidden; background: var(--bg); }
+.ed-l-body { flex: none; padding: 7cqw 8cqw 9cqw; }
+.ed-letter h3 { font-size: 9cqw; margin-bottom: 3.4cqw; }
+.ed-l-txt { margin: 0 0 3.4cqw; font: 400 4.7cqw/1.38 'DM Serif Display', serif; }
+.ed-sign { margin: 0; font: 600 6.6cqw/1 'Caveat', cursive; color: var(--edk); }
+.ed-mid .ed-l-txt { font-size: 4.1cqw; }
+.ed-long .ed-l-txt { font-size: 3.6cqw; }
+.ed-long .ed-l-body { padding-top: 5cqw; }
+
+/* The cover story opener: a full page photo and a huge headline. */
+.ed-open, .ed-full, .ed-quote, .ed-back, .ed-duo, .ed-file { color: #fff; background: #1d1a2f; }
+.ed-o-ph, .ed-full-ph, .ed-q-ph, .ed-b-ph { position: absolute; inset: 0; overflow: hidden; }
+.ed-o-shade, .ed-b-shade { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 38%, rgba(10,8,20,.82) 82%); }
+.ed-o-txt { position: absolute; left: 7cqw; right: 7cqw; bottom: 10cqw; }
+.ed-open .ed-k, .ed-quote .ed-k, .ed-back .ed-k, .ed-file .ed-k { color: var(--pop, #fff); }
+.ed-open h3 { color: #fff; margin-bottom: 3.4cqw; }
+.ed-o-dek { margin: 0; font: italic 400 4.6cqw/1.25 'DM Serif Display', serif; max-width: 78cqw; }
+
+/* The article: pull quote, two columns, subheads. */
+.ed-article { padding: 9cqw 7cqw 8cqw; display: flex; flex-direction: column; }
+.ed-pull { margin: 0 0 4.4cqw; padding: 3.4cqw 0; border-top: .6cqw solid var(--edk); border-bottom: .6cqw solid var(--edk); font: italic 700 5.8cqw/1.15 'Playfair Display', Georgia, serif; }
+.ed-pull-s { font-size: 4.6cqw; }
+.ed-cols { columns: 2; column-gap: 5cqw; font: 400 3.25cqw/1.42 'DM Serif Display', serif; }
+.ed-cols p { margin: 0 0 1cqw; }
+.ed-cols h4 { margin: 2.4cqw 0 .6cqw; font: 800 2.1cqw/1.2 'Outfit', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--edk); break-after: avoid; }
+.ed-drop::first-letter { float: left; font: 400 12cqw/.8 'Playfair Display', Georgia, serif; font-weight: 900; margin: .6cqw 1.6cqw 0 0; color: var(--edk); }
+.ed-hand { margin: auto 0 0; padding-top: 3cqw; font: 600 5.4cqw/1.05 'Caveat', cursive; color: var(--edk); text-align: center; }
+
+/* Fact file: big photo, their name across it, facts below. */
+.ed-file { background: #fffaf2; color: #1d1a2f; }
+.ed-f-ph { position: absolute; left: 0; right: 0; top: 0; height: 74cqw; overflow: hidden; }
+.ed-f-shade { position: absolute; left: 0; right: 0; top: 0; height: 74cqw; background: linear-gradient(180deg, rgba(10,8,20,.35), transparent 30%, transparent 55%, rgba(10,8,20,.7)); }
+.ed-f-k { position: absolute; left: 7cqw; top: 7cqw; }
+.ed-f-name { position: absolute; left: 6cqw; right: 6cqw; top: 54cqw; margin: 0; font: 400 20cqw/.9 'Anton', Impact, sans-serif !important; font-style: normal !important; color: #fff; letter-spacing: .01em; }
+.ed-fl { position: absolute; left: 7cqw; right: 7cqw; top: 80cqw; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 3.4cqw 5cqw; }
+.ed-fl div { border-top: .5cqw solid #1d1a2f; padding-top: 1.6cqw; }
+.ed-fl dt { font: 800 2.1cqw/1.2 'Outfit', sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--edk); opacity: 1; }
+.ed-fl dd { margin: 1cqw 0 0; padding: 0; border: 0; font: 400 4cqw/1.15 'DM Serif Display', serif; }
+
+/* Photo pages with a caption card. */
+.ed-cap { position: absolute; z-index: 2; left: 6cqw; right: 22cqw; bottom: 8cqw; margin: 0; padding: 3.4cqw 4.4cqw; background: #fffaf2; color: #1d1a2f; font: 600 5cqw/1.05 'Caveat', cursive; box-shadow: 0 1.4cqw 3.4cqw rgba(0,0,0,.25); }
+.ed-cap b { display: block; margin-bottom: 1.2cqw; font: 800 2.1cqw/1.2 'Outfit', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--edk); }
+.ed-d1, .ed-d2 { position: absolute; left: 0; right: 0; overflow: hidden; }
+.ed-d1 { top: 0; height: 70cqw; }
+.ed-d2 { top: 71.4cqw; bottom: 0; }
+.ed-d2 img { transform: scale(1.4); transform-origin: 55% 35%; }
+.ed-duo { background: #fffaf2; }
+.ed-cap1 { top: 46cqw; bottom: auto; left: auto; right: 6cqw; width: 54cqw; }
+.ed-cap2 { left: 6cqw; right: auto; width: 54cqw; bottom: 8cqw; }
+
+/* By the numbers: bold colour, huge numerals, bars. */
+.ed-nums { background: var(--bg); color: var(--ink); padding: 9cqw 7cqw; }
+.ed-nums .ed-k { color: var(--ink); opacity: .75; }
+.ed-nums h3 { font-size: 10cqw; margin-bottom: 6cqw; }
+.ed-big { display: grid; grid-template-columns: 1fr 1fr; gap: 4cqw 5cqw; margin-bottom: 7cqw; }
+.ed-big div { border-top: .6cqw solid currentColor; padding-top: 2cqw; }
+.ed-big b { display: block; font: 400 20cqw/.9 'Anton', Impact, sans-serif; }
+.ed-big span { display: block; margin-top: 1.4cqw; font: 800 2.3cqw/1.2 'Outfit', sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.ed-bars { display: grid; gap: 2.6cqw; }
+.ed-bars div { display: grid; grid-template-columns: 26cqw 1fr 12cqw; align-items: center; gap: 3cqw; font: 800 2.4cqw/1 'Outfit', sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+.ed-bars i { height: 2.6cqw; border-radius: 2cqw; background: color-mix(in srgb, currentColor 18%, transparent); overflow: hidden; }
+.ed-bars em { display: block; height: 100%; background: currentColor; border-radius: 2cqw; }
+.ed-bars b { font: 400 4.4cqw/1 'Anton', Impact, sans-serif; text-align: right; }
+
+/* In a word: a dark full photo with one huge quote. */
+.ed-q-ph img { filter: brightness(.6) saturate(.9); }
+.ed-q-shade { position: absolute; inset: 0; background: radial-gradient(circle at 50% 55%, rgba(10,8,20,.1), rgba(10,8,20,.55)); }
+.ed-q-in { position: absolute; inset: 0; padding: 0 9cqw; display: flex; flex-direction: column; justify-content: center; text-align: center; }
+.ed-q-txt { margin: 0 0 4cqw; font: italic 900 13cqw/1 'Playfair Display', Georgia, serif; text-wrap: balance; }
+.ed-q-by { margin: 0; font: 800 2.4cqw/1 'Outfit', sans-serif; letter-spacing: .2em; text-transform: uppercase; color: var(--pop, #fff); }
+
+/* Voices: a card from each person who loves them. */
+.ed-voices { padding: 9cqw 7cqw; background: radial-gradient(color-mix(in srgb, var(--accent) 13%, transparent) .25cqw, transparent .32cqw) 0 0 / 4cqw 4cqw, color-mix(in srgb, var(--bg) 14%, #fffaf2); }
+.ed-voices h3 { font-size: 9cqw; margin-bottom: 5cqw; }
+.ed-vs { display: grid; grid-template-columns: 1fr 1fr; gap: 4cqw; }
+.ed-v { position: relative; margin: 0; min-height: 44cqw; padding: 7cqw 4cqw 4cqw; background: #fff; border-radius: 2cqw; box-shadow: 0 1cqw 3cqw rgba(60,20,40,.12); display: flex; flex-direction: column; }
+.ed-v:nth-child(2n) { transform: rotate(1.5deg); }
+.ed-v:nth-child(2n+1) { transform: rotate(-1.2deg); }
+.ed-v > i { position: absolute; top: -4cqw; left: 4cqw; width: 10cqw; height: 10cqw; border-radius: 50%; display: grid; place-items: center; background: var(--bg); color: var(--ink); font: 400 5cqw/1 'Playfair Display', serif; font-weight: 900; font-style: normal; border: .8cqw solid #fff; }
+.ed-v blockquote { margin: 0 0 2cqw; font: 400 3.5cqw/1.3 'DM Serif Display', serif; }
+.ed-v figcaption { margin-top: auto; font: 600 5cqw/1 'Caveat', cursive; color: var(--edk); }
+.ed-v-blank span { display: block; height: 7cqw; border-bottom: .3cqw dashed color-mix(in srgb, #1d1a2f 25%, transparent); }
+
+/* The scrapbook: three photos and their words. */
+.ed-trio { background: color-mix(in srgb, var(--bg) 22%, #fffaf2); }
+.ed-t { position: absolute; overflow: hidden; border: 1.6cqw solid #fff; border-bottom-width: 6cqw; box-shadow: 0 1.6cqw 4cqw rgba(0,0,0,.2); background: var(--bg); }
+.ed-t1 { left: 6cqw; top: 15cqw; width: 54cqw; height: 60cqw; transform: rotate(-4deg); }
+.ed-t2 { right: 6cqw; top: 26cqw; width: 40cqw; height: 46cqw; transform: rotate(5deg); }
+.ed-t3 { left: 22cqw; top: 74cqw; width: 50cqw; height: 44cqw; transform: rotate(-1.5deg); }
+.ed-t3 img { transform: scale(1.3); transform-origin: 50% 35%; }
+.ed-t-k { position: absolute; left: 7cqw; top: 7cqw; }
+.ed-t-cap { position: absolute; left: 8cqw; right: 8cqw; bottom: 7cqw; margin: 0; text-align: center; font: 600 6.4cqw/1 'Caveat', cursive; color: var(--edk); }
+
+/* Back cover. */
+.ed-b-in { position: absolute; left: 8cqw; right: 8cqw; bottom: 26cqw; text-align: center; }
+.ed-back h3 { color: #fff; margin: 1cqw 0 3cqw; }
+.ed-b-q { margin: 0 0 2cqw; font: italic 400 5cqw/1.2 'DM Serif Display', serif; }
+.ed-b-from { margin: 0; font: 600 6cqw/1 'Caveat', cursive; color: var(--pop, #fff); }
+.ed-b-foot { position: absolute; left: 0; right: 0; bottom: 0; height: 18cqw; padding: 0 7cqw; display: flex; align-items: center; justify-content: space-between; background: #fffaf2; color: #1d1a2f; }
+.ed-b-foot > span { font: 900 7cqw/1 'Playfair Display', serif; font-style: italic; }
+.ed-b-foot .cv-barcode { position: static; }
+.ed-back .pg-num { display: none; }
+.ed-contents { grid-template-columns: 40% 1fr; }
+.ed-article, .ed-nums, .ed-voices { padding: 0; }
+.ed-pad { position: absolute; inset: 0; padding: 9cqw 7cqw 8cqw; display: flex; flex-direction: column; }
+.ed-c-col { padding: 8cqw 5cqw 6cqw; }
+.ed-contents h3 { font-size: 13cqw; margin-bottom: 3.4cqw; }
+.ed-toc { gap: 1.2cqw; }
+.ed-toc li { padding-bottom: 1.2cqw; }
+.ed-toc span { font-size: 3.1cqw; }
+.ed-cols { font-size: 3.6cqw; }
+.ed-cols h4 { font-size: 2.3cqw; }

@@ -393,7 +393,15 @@
           "s_met": "Sharing the last umbrella at a bus stop in the pouring rain",
           "s_kind": "Drove two hours at midnight when my car broke down, and brought snacks",
           "x_who": "bestie",
-          "x_type": "party"
+          "x_type": "party",
+          "note1_from": "Emma",
+          "note1_msg": "Thirty looks ridiculous on you. Thank you for every 2am phone call and every terrible karaoke duet.",
+          "note2_from": "Mum",
+          "note2_msg": "You were the loudest baby on the ward and you have been lighting up rooms ever since. So proud of you.",
+          "note3_from": "Sam",
+          "note3_msg": "Still waiting for you to give back my good umbrella. Happy birthday, legend.",
+          "note4_from": "Leo",
+          "note4_msg": "The best person to sit next to at any party. Here is to thirty more."
         },
         "photos": {
           "photo1": "/assets/samples/birthday-magazine-0.jpg",
