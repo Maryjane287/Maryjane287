@@ -603,3 +603,14 @@ p { margin: 0 0 1em; }
 .photo-mini { aspect-ratio: 1; font-size: 12px; border-radius: 14px; }
 .photo-mini b { font-size: 20px; }
 .story-tip { margin: 6px 0 0; }
+/* Product page: tidy badges and an at a glance grid of real inside pages. */
+.badges { list-style: none; padding: 0; margin: 4px 0 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+.badges li { background: var(--ink); color: #fff; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 600; letter-spacing: .02em; }
+.badges b { color: var(--pink); font-weight: 800; }
+.glance { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px 26px; }
+.glance figure { margin: 0; }
+.glance-pg { border-radius: 6px; overflow: hidden; box-shadow: var(--shadow); container-type: inline-size; }
+.glance-pg .pg, .glance-pg .cv { pointer-events: none; }
+.glance > figure > figcaption { margin-top: 12px; font-size: 15px; color: var(--soft); line-height: 1.4; }
+.glance > figure > figcaption b { display: block; font: 400 21px/1.2 'DM Serif Display', serif; color: var(--ink); margin-bottom: 2px; }
+@media (max-width: 720px) { .glance { grid-template-columns: 1fr 1fr; gap: 22px 14px; } .glance > figure > figcaption { font-size: 13px; } .glance > figure > figcaption b { font-size: 17px; } }

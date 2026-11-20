@@ -374,6 +374,7 @@ async function magazinePage(mag, design = baseDesign(mag)) {
   <div class="mag-info">
     <p class="kicker">${esc(mag.occasion)}</p>
     <h1>${esc(name)}</h1>
+    <ul class="badges"><li><b>24</b> pages</li><li><b>${designIds.length}</b> designs</li><li>PDF in <b>minutes</b></li><li>Printed and <b>posted</b></li></ul>
     <p class="lead">${esc(mag.description)}</p>
     <p class="mag-price">From ${fromPrice}</p>
     <a class="btn btn-big" href="${makeUrl}">Make yours in 5 minutes</a>
@@ -383,7 +384,11 @@ async function magazinePage(mag, design = baseDesign(mag)) {
     <p class="chips">${mag.keywords.map(k => `<span>${esc(k)}</span>`).join('')}</p>
   </div>
 </section>
-<section class="section">
+${mag.heart ? `<section class="section glance-sec">
+  <div class="section-head"><p class="kicker">Inside this issue</p><h2>Written about them, page by page</h2><p>Not a template you fill in. Every page below is built from your answers, so it sounds like you and looks like them.</p></div>
+  <div class="glance">${[[2, 'Your letter', 'Your own words, beautifully set'], [3, 'Their story', 'Your memories, with photos if you like'], [8, 'A day in their life', 'Written to match their personality'], [10, 'The little things', 'What only you would notice'], [11, 'Their field guide', 'Funny, true and all about them'], [14, 'The pull out poster', 'Their photo, front and centre']].map(([i, t, d]) => inside[i] ? `<figure><div class="glance-pg">${inside[i]}</div><figcaption><b>${t}</b>${d}</figcaption></figure>` : '').join('')}</div>
+</section>
+` : ''}<section class="section">
   <div class="section-head"><p class="kicker">${designIds.length} designs</p><h2>Pick the look they will love</h2><p>Same questions, same price. Every design is made from your answers and photos.</p></div>
   <div class="design-grid">${designCards}</div>
 </section>

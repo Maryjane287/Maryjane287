@@ -3062,7 +3062,7 @@
           "says": "Have you eaten?",
           "dish": "Sunday roast, nobody does it better",
           "words": "Warm, wise, wonderful",
-          "x_type": "adventurer"
+          "x_type": "carer"
         },
         "photos": {
           "photo1": "/assets/samples/mothers-day-magazine-0.jpg",
@@ -3252,7 +3252,7 @@
           "skill": "Fixing anything with tape",
           "says": "Ask your mother",
           "words": "Funny, patient, legendary",
-          "x_type": "adventurer"
+          "x_type": "calm"
         },
         "photos": {
           "photo1": "/assets/samples/fathers-day-magazine-0.jpg",

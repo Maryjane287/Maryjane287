@@ -19,8 +19,8 @@ export async function loadMags(root = new URL('..', import.meta.url)) {
     mag.inside = [
       '24 full pages, all about them',
       mag.inside[1],
-      'Their own story page, and ten things you love about them',
-      `Pages we write just for them: "${say(heart.timeline?.title)}", "${say(heart.facts?.title)}" and "${say(heart.letters?.title)}"`,
+      'Their own story page, with your photos beside your memories, and ten things you love about them',
+      heart.concepts ? 'Pages written about them: a day in their life, the little things only you notice, and their own field guide' : `Pages we write just for them: "${say(heart.timeline?.title)}", "${say(heart.facts?.title)}" and "${say(heart.letters?.title)}"`,
       `"${say(heart.world?.title)}" and a page of promises`,
       (mag.gentle || mag.slug === 'pet-memorial-magazine') ? 'A gentle front page, poster and certificate' : 'A front page, perfume ad, movie poster and pull out poster',
       'A quiz and word search made from your answers',
