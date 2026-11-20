@@ -640,7 +640,14 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
     const nhead = t(N.headline || headline).replace(/&#39;/g, "'").replace(/&amp;/g, '&');
     const lead = feature[1] ? esc(feature[1]) : t(N.lead);
     const hcontents = [[3, mag.letterTitle || 'A letter for you'], [4, H.story?.title], [6, H.picks?.title], [8, gentle ? 'In a word' : 'The fragrance'], [9, H.timeline?.title], [10, 'Front page news'], [11, H.letters?.title], [12, H.facts?.title], [13, 'The quiz'], [16, 'The awards'], [17, H.world?.title], [21, H.promises?.title], [23, 'Now showing: the movie'], [24, H.note?.contents || 'A note for you']].map(([n, x]) => [n, String(t(x)).replace(/&#39;/g, "'").replace(/&amp;/g, '&')]);
-    return [
+    // Photos on almost every page: the buyer's own pictures, reused in
+    // polaroids, round cut outs and strips, so no page is only text.
+    const pool = [...new Set([photos.photo3, photos.photo2, photos.photo1, ...Object.keys(photos).filter(k => k.startsWith('p_')).map(k => photos[k])].filter(Boolean))];
+    const pic = (i, cls) => pool.length ? `<div class="${cls}"><img src="${esc(pool[i % pool.length])}" alt=""></div>` : ph('photo1', cls);
+    const deco = (html, cls, inner) => html.replace(/^(\s*)<div class="pg ([^"]*)"([^>]*)>/, (m, a, c, r) => `${a}<div class="pg ${c} ${cls}"${r}>${inner}`);
+    const dot = (html, i, tag) => deco(html, 'x-has-dot', `<figure class="x-dot">${pic(i, 'x-dot-ph')}${tag ? `<figcaption>${tag}</figcaption>` : ''}</figure>`);
+    const msgLen = String(v.message || '').length;
+    const pages = [
       renderCover(mag, values, opts),
       page('contents', `<p class="pg-kicker">Inside this issue</p><h3>Contents</h3><ol class="toc">${hcontents.map(([n, x]) => `<li><b>${n}</b><span>${esc(x)}</span></li>`).join('')}</ol><p class="toc-note">${t(H.toc || 'A one of a kind issue, made for {who} with love from {from}.')}</p>`, 2),
       num(renderPages(mag, values, opts)[0], 3),
@@ -668,6 +675,19 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
       `<div class="pg pg-movie" ${style}>${ph('photo2', 'mv-photo')}<div class="mv-shade"></div><p class="mv-presents">${esc(from)} presents</p><div class="mv-stars">${(M.reviews || reviews).map(([q, src]) => `<p>&#9733;&#9733;&#9733;&#9733;&#9733;<b>&ldquo;${t(q)}&rdquo;</b><small>${t(src)}</small></p>`).join('')}</div><div class="mv-title"><h3 style="font-size:calc(${fit(String(who).toUpperCase(), 86, 0.5, 24)} * var(--cq))">${esc(String(who).toUpperCase())}</h3><p class="mv-sub">${t(M.sub || 'The movie')}</p><p class="mv-tag">&ldquo;${leadLine(s, mag)}&rdquo;</p><p class="mv-credits">Starring ${esc(who)} &middot; Directed by ${esc(from)} &middot; Written with love &middot; Filmed on location at home</p><p class="mv-soon">${t(M.soon || 'Coming soon to a living room near you')}</p></div><span class="pg-num">23</span></div>`,
       W.note(24),
     ];
+    const strip = `<div class="x-strip">${pic(2, 'x-s x-s1')}${pic(1, 'x-s x-s2')}${pic(0, 'x-s x-s3')}<i class="x-tape"></i><i class="x-tape x-tape2"></i></div>`;
+    pages[1] = deco(pages[1], 'x-contents', strip);
+    if (msgLen < 300) pages[2] = deco(pages[2], `x-letter${msgLen > 170 ? ' x-letter-s' : ''}`, `<figure class="x-pola">${pic(0, 'x-pola-ph')}<i class="x-tape"></i></figure><i class="x-heart" aria-hidden="true"></i>`);
+    if (!chapters.some(c => c[2])) pages[3] = dot(pages[3], 1, '');
+    pages[5] = deco(pages[5], 'x-reasons', `<figure class="x-pola x-pola-r">${pic(1, 'x-pola-ph')}<i class="x-tape"></i></figure><b class="x-sticker" aria-hidden="true">10<small>out of 10</small></b>`);
+    pages[8] = dot(pages[8], 2, '');
+    pages[10] = dot(pages[10], 0, '');
+    pages[11] = dot(pages[11], 1, `Specimen: ${esc(first)}`);
+    pages[12] = dot(pages[12], 2, 'Who is this?');
+    if (!gentle) pages[16] = deco(pages[16], 'x-world', `<figure class="x-sunph">${pic(0, 'x-sun-ph')}</figure>`);
+    pages[17] = deco(pages[17], 'x-cert', `<figure class="x-seal">${pic(1, 'x-seal-ph')}</figure>`);
+    pages[20] = dot(pages[20], 0, '');
+    return pages;
   }
 
   return [

@@ -263,7 +263,7 @@ async function home() {
   ].map(([m, ex], i) => `<a class="hero-cover hc-${i}" href="/${m.slug}/" aria-label="${esc(m.title)}">${coverFor(m, ex)}</a>`).join('');
   const FILTERS = [
     ['birthday', 'Birthdays', /birthday|kids/],
-    ['love', 'Love and weddings', /anniversary|wedding|engagement|valentines/],
+    ['love', 'Love and weddings', /anniversary|wedding|engagement|valentines|boyfriend|girlfriend|husband|wife|marry|bridesmaid|christmas-together|long-distance/],
     ['family', 'Family and baby', /grandparents|baby|mothers|fathers|kids|year-in-review/],
     ['christmas', 'Christmas', /christmas|year-in-review/],
     ['thanks', 'Friends and big moments', /best-friend|teacher|thank-you|retirement|graduation|new-job|new-home|travel/],
@@ -386,7 +386,7 @@ async function magazinePage(mag, design = baseDesign(mag)) {
 </section>
 ${mag.heart ? `<section class="section glance-sec">
   <div class="section-head"><p class="kicker">Inside this issue</p><h2>Written about them, page by page</h2><p>Not a template you fill in. Every page below is built from your answers, so it sounds like you and looks like them.</p></div>
-  <div class="glance">${[[2, 'Your letter', 'Your own words, beautifully set'], [3, 'Their story', 'Your memories, with photos if you like'], [8, 'A day in their life', 'Written to match their personality'], [10, 'The little things', 'What only you would notice'], [11, 'Their field guide', 'Funny, true and all about them'], [14, 'The pull out poster', 'Their photo, front and centre']].map(([i, t, d]) => inside[i] ? `<figure><div class="glance-pg">${inside[i]}</div><figcaption><b>${t}</b>${d}</figcaption></figure>` : '').join('')}</div>
+  <div class="glance">${[[2, 'Your letter', 'Your own words, with your favourite photo'], [5, 'Ten things you love', 'Picked by you, in seconds'], [9, 'Front page news', 'Their big day makes the headlines'], [3, 'Their story', 'Your memories, with photos if you like'], [11, 'Their field guide', 'Funny, true and all about them'], [22, 'Now showing: the movie', 'Their photo, on the big screen']].map(([i, t, d]) => inside[i] ? `<figure><div class="glance-pg">${inside[i]}</div><figcaption><b>${t}</b>${d}</figcaption></figure>` : '').join('')}</div>
 </section>
 ` : ''}<section class="section">
   <div class="section-head"><p class="kicker">${designIds.length} designs</p><h2>Pick the look they will love</h2><p>Same questions, same price. Every design is made from your answers and photos.</p></div>

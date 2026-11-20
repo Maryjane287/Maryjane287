@@ -1,0 +1,307 @@
+{
+  "theme": "ruby",
+  "fields": [
+    {
+      "id": "s_first",
+      "label": "The first thing you noticed about him",
+      "example": "He was the only one helping clear up the cups",
+      "max": 70,
+      "chapter": "The first time I saw you"
+    },
+    {
+      "id": "s_fav",
+      "label": "Your favourite ordinary moment together",
+      "example": "Tea in the garden before anyone else wakes up",
+      "max": 70,
+      "chapter": "My favourite ordinary moment"
+    },
+    {
+      "id": "s_secret",
+      "label": "Something about him only you know",
+      "example": "He keeps every card I have ever given him in a shoebox",
+      "max": 70,
+      "chapter": "Something you might not know"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to him",
+      "example": "To always save you the crispy potato",
+      "max": 70
+    }
+  ],
+  "story": {
+    "legend": "A few more things about him",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for him.",
+    "kicker": "Our story",
+    "title": "Still You, After All These Years",
+    "hand": "Every year, {from} would choose {who} all over again."
+  },
+  "labels": {
+    "years": "Years married",
+    "date": "Where we met",
+    "cute": "The habit I would miss",
+    "song": "Our wedding song",
+    "words": "Him, in three words"
+  },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things I love about you",
+    "items": [
+      "Your smile",
+      "The way you laugh at my jokes",
+      "Your hugs",
+      "How safe you make me feel",
+      "Our late night talks",
+      "The way you look at me",
+      "How kind you are",
+      "Your terrible dancing",
+      "How you always put the kettle on",
+      "The way you say my name",
+      "How you make me braver",
+      "Your sleepy morning face",
+      "How you remember the little things",
+      "Your sense of humour",
+      "The way you hold my hand",
+      "How you cheer me on",
+      "Our silly made up songs",
+      "How patient you are with me",
+      "How you make every day fun",
+      "Simply being you"
+    ]
+  },
+  "timeline": {
+    "kicker": "Love through the ages",
+    "title": "A Short History of Valentine's Day",
+    "items": [
+      [
+        "1380s",
+        "Chaucer's birds",
+        "The poet Geoffrey Chaucer wrote of birds choosing their mates on Saint Valentine's Day. Romance took flight."
+      ],
+      [
+        "1415",
+        "A letter from the Tower",
+        "Held prisoner in London, Charles, Duke of Orléans, wrote valentine poems to his wife far away in France."
+      ],
+      [
+        "1840",
+        "Love by post",
+        "A cheap new postal service in Britain meant almost anyone could send a valentine, and the idea took off."
+      ],
+      [
+        "1840s",
+        "Lace and ribbons",
+        "Esther Howland began making lacy valentine cards in America, and the fashion spread far and wide."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{from} and {who}",
+      "Not in any history book yet. But ask {from}, and it is the best love story there is."
+    ]
+  },
+  "letters": {
+    "kicker": "From the archives",
+    "title": "The Most Romantic Lines Ever Written",
+    "items": [
+      [
+        "My bounty is as boundless as the sea, my love as deep.",
+        "William Shakespeare, Romeo and Juliet"
+      ],
+      [
+        "Today more than yesterday, and less than tomorrow.",
+        "Rosemonde Gérard, French poet"
+      ],
+      [
+        "The heart has its reasons which reason knows nothing of.",
+        "Blaise Pascal, Pensées"
+      ],
+      [
+        "Love conquers all.",
+        "Virgil, Eclogues"
+      ]
+    ],
+    "hand": "The greatest love lines were written for one person. {who}, yours is on page 3."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Being Smitten",
+    "items": [
+      [
+        "spark",
+        "Butterflies are real",
+        "That fluttery feeling is adrenaline at work, sending blood away from your tummy."
+      ],
+      [
+        "pulse",
+        "The happy chemical",
+        "Love lights up the brain's reward system and floods it with dopamine, the feel good chemical."
+      ],
+      [
+        "book",
+        "Dear Juliet",
+        "Thousands of letters addressed to Juliet arrive in Verona every year, and volunteers answer them."
+      ],
+      [
+        "heart",
+        "Not quite a heart",
+        "The classic heart symbol looks nothing like a real heart. Love never worried about accuracy."
+      ],
+      [
+        "leaf",
+        "Roses are red",
+        "In ancient myths the rose belonged to the goddess of love. It still says I love you today."
+      ],
+      [
+        "smile",
+        "Pucker up",
+        "A single kiss can use dozens of muscles in the face, and it can help melt stress away."
+      ]
+    ],
+    "hand": "Science can explain the butterflies. It cannot explain why {who} still gives them to {from}."
+  },
+  "world": {
+    "kicker": "A love note from the universe",
+    "title": "Why the World Is Better Because of You",
+    "lead": "Because {who} exists, the world got:",
+    "items": [
+      "A smile that turns bad days around.",
+      "The best person to share a sofa with.",
+      "A laugh that is impossible not to join.",
+      "Someone who notices the little things.",
+      "Kindness that nobody has to ask for.",
+      "A heart worth crossing oceans for.",
+      "And the very best part of {from}'s every day."
+    ],
+    "close": "The world is better with you in it, {who}. {from}'s world most of all."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From my heart to yours",
+    "title": "My promises to you",
+    "items": [
+      "To always share the last biscuit.",
+      "To laugh at your jokes, even the old ones.",
+      "To hold your hand on the hard days.",
+      "To keep falling for you, again and again.",
+      "To love you more every single year."
+    ],
+    "hand": "Signed, sealed and meant with all my heart, {from}"
+  },
+  "awards": [
+    [
+      "Husband of the year",
+      "Every year running"
+    ],
+    [
+      "Best at fixing things",
+      "And hearts"
+    ],
+    [
+      "Most reliable human",
+      "Independently verified"
+    ],
+    [
+      "My favourite person",
+      "No contest"
+    ]
+  ],
+  "vouchers": [
+    [
+      "A full lie in",
+      "Children and chores handled"
+    ],
+    [
+      "One date night",
+      "Just us, like before"
+    ],
+    [
+      "Your favourite dinner",
+      "Cooked with love"
+    ],
+    [
+      "The remote",
+      "Yours for one whole evening"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for my husband, {who}",
+  "cert": "The Best Husband in the World",
+  "perfume": "Top notes of morning tea and toolbox. A heart of strong, quiet, everyday love.",
+  "news": {
+    "edition": "Special edition",
+    "headline": "{who} still the one",
+    "lead": "Sources close to the family confirm that {from} would marry {who} all over again, without a moment's hesitation.",
+    "weather": "Weather: settled and warm, as always"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to forever",
+    "nationality": "Adored, at home and away",
+    "job": "Husband, hero, tea maker",
+    "stamps": [
+      "Where we met",
+      "Our wedding day",
+      "Every day since"
+    ]
+  },
+  "movie": {
+    "sub": "A love story that keeps going",
+    "soon": "Now showing, every single day",
+    "reviews": [
+      [
+        "Better with every year",
+        "The Daily Hug"
+      ],
+      [
+        "The best thing I ever said yes to",
+        "{from}"
+      ],
+      [
+        "A leading man with heart",
+        "Everyone who knows him"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Which anniversary is traditionally celebrated with paper?",
+      [
+        "The first",
+        "The fifth",
+        "The tenth"
+      ],
+      0
+    ],
+    [
+      "Which finger is the wedding ring traditionally worn on in the UK?",
+      [
+        "The middle finger",
+        "The fourth finger of the left hand",
+        "The little finger"
+      ],
+      1
+    ]
+  ],
+  "words": [
+    "HUSBAND",
+    "LOVE",
+    "HOME",
+    "TEAM",
+    "HEART",
+    "ALWAYS"
+  ],
+  "note": {
+    "title": "Why we made this for him",
+    "contents": "A note for you",
+    "paras": [
+      "Long love is our favourite kind to write about. It is the love that has seen bills, babies, bad days and still holds hands in the supermarket.",
+      "Busy years can make the important things go unsaid. This magazine is where they finally get said.",
+      "{who}, someone wanted you to know exactly what you mean to them. Not in a card anyone could buy, but in pages full of you.",
+      "That someone is {from}. And from everything they told us, they would say yes all over again."
+    ],
+    "wish": "Here is to you, {who}. Still the one."
+  },
+  "concepts": true,
+  "conceptWho": "partner"
+}

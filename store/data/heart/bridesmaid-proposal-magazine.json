@@ -1,0 +1,307 @@
+{
+  "theme": "ruby",
+  "fields": [
+    {
+      "id": "s_first",
+      "label": "The moment you became proper friends",
+      "example": "She shared her chips with me on the worst day of school",
+      "max": 70,
+      "chapter": "The day we became friends"
+    },
+    {
+      "id": "s_fav",
+      "label": "Your best story together",
+      "example": "Got lost on holiday and ended up at a stranger's wedding",
+      "max": 70,
+      "chapter": "The trouble we caused"
+    },
+    {
+      "id": "s_secret",
+      "label": "What you will need her for on the day",
+      "example": "Keeping me calm, and keeping my aunt off the microphone",
+      "max": 70,
+      "chapter": "What I will need you for"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to her",
+      "example": "To give you the best seat at the top table",
+      "max": 70
+    }
+  ],
+  "story": {
+    "legend": "A few more things about her",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for her.",
+    "kicker": "Our story",
+    "title": "Every Chapter Had You in It",
+    "hand": "And there is one more chapter {from} cannot write without {who}."
+  },
+  "labels": {
+    "years": "Years of friendship",
+    "met": "How we met",
+    "trouble": "Most likely to",
+    "song": "Our dance floor song",
+    "words": "Her, in three words"
+  },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things I love about you",
+    "items": [
+      "Your laugh that sets me off",
+      "How you always pick up",
+      "Our inside jokes",
+      "The way you hype me up",
+      "Your terrible dance moves",
+      "How you tell me the truth",
+      "Our late night chats",
+      "The way you know my order",
+      "How brave you are",
+      "Your snack supply",
+      "How you remember the little things",
+      "The way we can sit in silence",
+      "How you make bad days better",
+      "Your loyalty",
+      "How we pick up where we left off",
+      "Your brilliant ideas",
+      "Our road trip playlists",
+      "How you never judge me",
+      "The way you love my weirdness",
+      "Simply being my best friend"
+    ]
+  },
+  "timeline": {
+    "kicker": "Friendship through the ages",
+    "title": "A Short History of Best Friends",
+    "items": [
+      [
+        "About 350 BC",
+        "A philosopher agrees",
+        "Aristotle wrote that true friendship is one of the most important things in a good life."
+      ],
+      [
+        "1926",
+        "Pooh and Piglet",
+        "A. A. Milne published Winnie the Pooh, and the world met its most famous pair of best friends."
+      ],
+      [
+        "1994",
+        "I'll be there for you",
+        "The TV show Friends began, and a group of pals on a sofa became family for millions."
+      ],
+      [
+        "2011",
+        "A day for friends",
+        "The United Nations made 30 July the International Day of Friendship."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who}",
+      "Not in the history books yet. But in mine, the best friend anyone has ever had."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Friendship",
+    "items": [
+      [
+        "What! You too? I thought I was the only one.",
+        "C. S. Lewis, The Four Loves"
+      ],
+      [
+        "A friend is a single soul dwelling in two bodies.",
+        "Aristotle"
+      ],
+      [
+        "The only way to have a friend is to be one.",
+        "Ralph Waldo Emerson, 1841"
+      ],
+      [
+        "Shared joy is a double joy, shared sorrow is half a sorrow.",
+        "An old Swedish saying"
+      ]
+    ],
+    "hand": "They all say it beautifully. I just say: thank you for being you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Best Friends",
+    "items": [
+      [
+        "smile",
+        "Laughing together",
+        "One researcher found we are around thirty times more likely to laugh with others than alone."
+      ],
+      [
+        "spark",
+        "Brains in sync",
+        "Close friends' brains react in strikingly similar ways when they watch the same videos."
+      ],
+      [
+        "leaf",
+        "Smaller hills",
+        "In one study, a hill looked less steep to people standing next to a friend."
+      ],
+      [
+        "clock",
+        "Hours of hanging out",
+        "One study suggests it takes about 200 hours together to become close friends. Worth every minute."
+      ],
+      [
+        "hands",
+        "The inner circle",
+        "Most of us have room for only about five very closest friends. You made the cut."
+      ],
+      [
+        "pulse",
+        "Good for your health",
+        "Strong friendships are linked to lower stress and longer, healthier lives."
+      ]
+    ],
+    "hand": "Science can explain a lot. It still cannot explain how {who} always knows exactly what to say."
+  },
+  "world": {
+    "kicker": "A thank you from me",
+    "title": "Why the World Is Better With You in It",
+    "lead": "Because of you, the world got:",
+    "items": [
+      "A laugh that makes strangers laugh too.",
+      "Someone who answers the phone at any hour.",
+      "The best advice, and the worst ideas. Both fun.",
+      "A loyal heart that never keeps score.",
+      "Stories we will be telling when we are ninety.",
+      "Proof that you can choose your family.",
+      "And the best friend I could ever have asked for."
+    ],
+    "close": "The world is better because of you, {who}. Mine most of all."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "If you say yes",
+    "title": "What I promise my bridesmaid",
+    "items": [
+      "A dress you will actually love.",
+      "Snacks in every pocket.",
+      "No speeches unless you want one.",
+      "The first dance with me after the groom.",
+      "To be there for all of your big days too."
+    ],
+    "hand": "With all my love and a lot of happy tears, {from}"
+  },
+  "awards": [
+    [
+      "Best friend of all time",
+      "By a landslide"
+    ],
+    [
+      "Keeper of every secret",
+      "Never spilled one"
+    ],
+    [
+      "Most likely to cry first",
+      "Independently verified"
+    ],
+    [
+      "Bridesmaid material",
+      "Obviously"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One dress shopping trip",
+      "Lunch included"
+    ],
+    [
+      "A pamper night",
+      "Face masks and gossip"
+    ],
+    [
+      "One emergency call",
+      "Any time, no questions"
+    ],
+    [
+      "The last dance",
+      "At the wedding, with me"
+    ]
+  ],
+  "vouchersTitle": "Bridesmaid vouchers for {who}",
+  "cert": "Officially Irreplaceable",
+  "perfume": "Top notes of prosecco and inside jokes. A heart of the loyal, forever kind of love.",
+  "news": {
+    "edition": "Wedding edition",
+    "headline": "Bride needs {who}",
+    "lead": "Sources confirm that {from} is getting married and cannot possibly do it without {who} by her side.",
+    "weather": "Weather: sunny, with a 100% chance of happy tears"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to the wedding",
+    "nationality": "Best friend, everywhere",
+    "job": "Bridesmaid in waiting",
+    "stamps": [
+      "The day we met",
+      "Every adventure",
+      "The big day"
+    ]
+  },
+  "movie": {
+    "sub": "A friendship story",
+    "soon": "Next scene: the wedding",
+    "reviews": [
+      [
+        "Two friends, one aisle, zero dry eyes",
+        "The Daily Hug"
+      ],
+      [
+        "I could not do it without her",
+        "{from}"
+      ],
+      [
+        "The best supporting role ever",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "In ancient Rome, why did bridesmaids dress like the bride?",
+      [
+        "To confuse bad spirits",
+        "To save money",
+        "To win a prize"
+      ],
+      0
+    ],
+    [
+      "Which colour wedding dress did Queen Victoria make fashionable in 1840?",
+      [
+        "Blue",
+        "White",
+        "Gold"
+      ],
+      1
+    ]
+  ],
+  "words": [
+    "BRIDE",
+    "FRIEND",
+    "DRESS",
+    "LOVE",
+    "BOUQUET",
+    "YES"
+  ],
+  "note": {
+    "title": "Will you be my bridesmaid?",
+    "contents": "The question",
+    "paras": [
+      "We make a lot of magazines, but the ones about friendship always make us call our own best friends afterwards.",
+      "{who}, every page you have just read is about you: the day you met, the trouble you caused, the songs you know every word to.",
+      "All of it was leading here. {from} is getting married, and there is one person she cannot do it without.",
+      "You."
+    ],
+    "wish": "{who}, will you be my bridesmaid?"
+  },
+  "concepts": true,
+  "conceptWho": "bestie"
+}

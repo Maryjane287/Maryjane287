@@ -730,3 +730,87 @@
 .pg.lv-roomy .lv-fact b { font-size: 4.4cqw; margin-bottom: .8cqw; }
 .pg.lv-roomy .lv-fact p { font-size: 2.95cqw; line-height: 1.25; }
 .pg.lv-roomy .lv-hand { font-size: 4.8cqw; }
+
+/* Photo rich pages: the buyer's own photos on almost every page, as taped
+   polaroids, round cut outs and a strip, plus polka dot paper and stickers. */
+.pg-contents, .pg-letter, .pg-reasons, .pg-quiz, .pg-puzzle, .pg-vouchers, .pg-notes, .pg-cert {
+  background: radial-gradient(color-mix(in srgb, var(--accent) 22%, transparent) .32cqw, transparent .42cqw) 0 0 / 4.4cqw 4.4cqw, color-mix(in srgb, var(--bg) 12%, #fffaf2);
+}
+.pg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.x-tape { position: absolute; z-index: 3; width: 16cqw; height: 4.6cqw; background: color-mix(in srgb, var(--accent) 45%, rgba(255,255,255,.55)); opacity: .9; box-shadow: 0 .3cqw .6cqw rgba(0,0,0,.08); }
+
+/* Contents: a strip of three photos across the top, two column list. */
+.x-strip { position: absolute; z-index: 1; left: 5cqw; right: 5cqw; top: 6cqw; height: 46cqw; }
+.x-s { position: absolute; overflow: hidden; background: var(--bg); border: 1.4cqw solid #fff; border-bottom-width: 5cqw; box-shadow: 0 1.4cqw 3.4cqw rgba(0,0,0,.2); }
+.x-s1 { left: 0; top: 4cqw; width: 34cqw; height: 38cqw; transform: rotate(-6deg); }
+.x-s2 { left: 28cqw; top: 0; width: 36cqw; height: 42cqw; transform: rotate(2deg); z-index: 2; }
+.x-s3 { right: 0; top: 5cqw; width: 33cqw; height: 37cqw; transform: rotate(7deg); }
+.x-strip .x-tape { left: 37cqw; top: -2cqw; transform: rotate(-4deg); }
+.x-strip .x-tape2 { left: auto; right: 6cqw; top: 3cqw; transform: rotate(14deg); }
+.x-contents .pg-in { padding-top: 56cqw; }
+.x-contents .pg-kicker { margin-bottom: 1.4cqw; }
+.x-contents h3 { font-size: 8cqw; margin-bottom: 2.6cqw; }
+.x-contents .toc { grid-template-columns: 1fr 1fr; column-gap: 4cqw; gap: .9cqw 4cqw; }
+.x-contents .toc li { gap: 2cqw; padding-bottom: .8cqw; }
+.x-contents .toc b { font-size: 4cqw; min-width: 5.6cqw; }
+.x-contents .toc span { font-size: 2.9cqw; line-height: 1.12; }
+.x-contents .toc-note { font-size: 4.2cqw; margin-top: 2cqw; }
+
+/* Letter: a big taped polaroid below the words, and a heart sticker. */
+.x-pola { position: absolute; z-index: 1; margin: 0; right: 8cqw; bottom: 9cqw; width: 52cqw; height: 58cqw; padding: 2cqw 2cqw 8cqw; background: #fff; box-shadow: 0 1.6cqw 4cqw rgba(0,0,0,.2); transform: rotate(4deg); }
+.x-pola-ph { width: 100%; height: 100%; overflow: hidden; background: var(--bg); }
+.x-pola .x-tape { left: 18cqw; top: -2.4cqw; transform: rotate(-3deg); }
+.x-letter-s .x-pola { width: 38cqw; height: 42cqw; bottom: 7cqw; }
+.x-letter .pg-sign { position: relative; z-index: 2; }
+.x-heart { position: absolute; z-index: 2; left: 10cqw; bottom: 14cqw; width: 18cqw; height: 18cqw; background: var(--accent); transform: rotate(-12deg); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6-8 11-8 11z'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6-8 11-8 11z'/%3E%3C/svg%3E") center / contain no-repeat; }
+.x-letter-s .x-heart { width: 13cqw; height: 13cqw; bottom: 10cqw; }
+
+/* Ten things: a polaroid tucked into the corner and a 10 out of 10 sticker. */
+.x-reasons .x-pola-r { width: 36cqw; height: 40cqw; padding-bottom: 6cqw; right: 6cqw; bottom: 7cqw; transform: rotate(-5deg); }
+.x-reasons .x-pola-r .x-tape { left: 10cqw; width: 14cqw; }
+.x-reasons .reasons li:nth-child(n+7) { padding-right: 38cqw; }
+.x-reasons .pg-kicker, .x-reasons h3 { padding-right: 22cqw; }
+.x-sticker { position: absolute; z-index: 2; top: 6cqw; right: 6cqw; width: 20cqw; height: 20cqw; border-radius: 50%; display: grid; place-content: center; text-align: center; background: var(--accent); color: #fff; font: 400 9cqw/0.9 'Anton', Impact, sans-serif; transform: rotate(10deg); box-shadow: 0 1cqw 2.4cqw rgba(0,0,0,.18); border: .8cqw dashed rgba(255,255,255,.7); }
+.x-sticker small { display: block; font: 800 2cqw/1 'Outfit', sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+
+/* A round photo cut out in the top corner of the busier pages. */
+.x-dot { position: absolute; z-index: 2; margin: 0; top: 6.5cqw; right: 6cqw; width: 23cqw; }
+.x-dot-ph { width: 23cqw; height: 23cqw; border-radius: 50%; overflow: hidden; background: var(--bg); border: 1.2cqw solid #fff; box-shadow: 0 0 0 .5cqw var(--accent), 0 1.4cqw 3cqw rgba(0,0,0,.22); }
+.x-dot figcaption { position: absolute; left: 50%; bottom: -3cqw; translate: -50% 0; white-space: nowrap; background: var(--accent); color: #fff; font: 800 2cqw/1 'Outfit', sans-serif; letter-spacing: .08em; text-transform: uppercase; padding: 1cqw 2cqw; border-radius: 4cqw; transform: rotate(-4deg); max-width: 30cqw; overflow: hidden; text-overflow: ellipsis; }
+.x-has-dot .pg-kicker, .x-has-dot h3 { padding-right: 26cqw; }
+.x-has-dot.lv-roomy h3 { font-size: 7.4cqw; }
+
+/* The world page: the sun becomes their photo. */
+.x-world .lv-sun { display: none; }
+.x-sunph { position: absolute; z-index: 1; margin: 0; top: -8cqw; right: -8cqw; width: 46cqw; height: 46cqw; border-radius: 50%; padding: 3cqw; background: repeating-conic-gradient(rgba(255,246,216,.85) 0 6deg, rgba(255,246,216,.25) 6deg 18deg); }
+.x-sun-ph { width: 100%; height: 100%; border-radius: 50%; overflow: hidden; border: 1cqw solid #fff6d8; }
+.x-world .pg-kicker, .x-world h3 { padding-right: 30cqw; }
+
+/* Certificate: their photo as a round seal above the words. */
+.x-seal { position: absolute; z-index: 2; margin: 0; left: 50%; top: 12cqw; translate: -50% 0; width: 24cqw; height: 24cqw; }
+.x-seal-ph { width: 100%; height: 100%; border-radius: 50%; overflow: hidden; border: 1cqw solid #fff; box-shadow: 0 0 0 .6cqw color-mix(in srgb, var(--bg) 70%, var(--ink)), 0 1cqw 2.4cqw rgba(0,0,0,.2); }
+.x-cert .cert { padding-top: 26cqw; }
+.x-sunph { width: 34cqw; height: 34cqw; top: -5cqw; right: -5cqw; padding: 2.4cqw; }
+.x-world .pg-kicker { padding-right: 26cqw; }
+.x-world h3 { padding-right: 18cqw; font-size: 8.4cqw; }
+.x-dot { width: 20cqw; top: 6cqw; right: 5.5cqw; }
+.x-dot-ph { width: 20cqw; height: 20cqw; }
+.x-has-dot .pg-kicker, .x-has-dot h3 { padding-right: 21cqw; }
+.pg-quiz.x-has-dot h3 { font-size: 7.6cqw; margin-bottom: 3.6cqw; }
+.pg-quiz.x-has-dot .qz { margin-bottom: 3cqw; }
+.x-contents .pg-in { padding-top: 53cqw; }
+.x-contents .toc-note { font-size: 3.6cqw; line-height: 1.05; }
+.x-reasons .x-pola-r { width: 30cqw; height: 34cqw; padding-bottom: 5cqw; bottom: 6cqw; }
+.x-reasons .reasons li:nth-child(n+7) { padding-right: 0; }
+.x-reasons .reasons li:nth-child(n+8) { padding-right: 32cqw; }
+.x-world h3 { max-width: none; margin-bottom: 3.4cqw; }
+.x-world .lv-gifts { gap: 1.4cqw; margin-bottom: 3cqw; }
+.x-world .lv-close { font-size: 5.2cqw; }
+.x-reasons .reasons { gap: 1.4cqw; }
+.pg-contents, .pg-letter, .pg-reasons, .pg-quiz, .pg-puzzle, .pg-vouchers, .pg-notes, .pg-cert {
+  background: radial-gradient(color-mix(in srgb, var(--accent) 13%, transparent) .25cqw, transparent .32cqw) 0 0 / 4cqw 4cqw, color-mix(in srgb, var(--bg) 12%, #fffaf2);
+}
+.x-reasons .pg-kicker, .x-reasons h3 { padding-right: 0; }
+.x-sticker { top: auto; bottom: 36cqw; right: 28cqw; width: 16cqw; height: 16cqw; font-size: 7cqw; z-index: 3; }
+.x-sticker small { font-size: 1.7cqw; }
+.x-reasons .reasons li:nth-child(n+6) { padding-right: 33cqw; }

@@ -1,0 +1,307 @@
+{
+  "theme": "ruby",
+  "fields": [
+    {
+      "id": "s_first",
+      "label": "The first thing you noticed about them",
+      "example": "Their laugh, before I even saw their face",
+      "max": 70,
+      "chapter": "The first time I saw you"
+    },
+    {
+      "id": "s_fav",
+      "label": "A moment you felt completely at home with them",
+      "example": "Falling asleep on their shoulder on a long train",
+      "max": 70,
+      "chapter": "When I knew I was home"
+    },
+    {
+      "id": "s_secret",
+      "label": "Picture your life together in ten years",
+      "example": "A noisy kitchen, a dog called Biscuit, and you",
+      "max": 70,
+      "chapter": "What I see when I look at our future"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise for your marriage",
+      "example": "To choose you, every single day",
+      "max": 70
+    }
+  ],
+  "story": {
+    "legend": "A few more things about them",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "kicker": "Our story",
+    "title": "How We Got Here",
+    "hand": "Every page of this story has been leading to one question."
+  },
+  "labels": {
+    "years": "Years together",
+    "date": "Our first date",
+    "cute": "Your cutest habit",
+    "song": "Our song",
+    "words": "You, in three words"
+  },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things I love about you",
+    "items": [
+      "Your smile",
+      "The way you laugh at my jokes",
+      "Your hugs",
+      "How safe you make me feel",
+      "Our late night talks",
+      "The way you look at me",
+      "How kind you are",
+      "Your terrible dancing",
+      "How you always put the kettle on",
+      "The way you say my name",
+      "How you make me braver",
+      "Your sleepy morning face",
+      "How you remember the little things",
+      "Your sense of humour",
+      "The way you hold my hand",
+      "How you cheer me on",
+      "Our silly made up songs",
+      "How patient you are with me",
+      "How you make every day fun",
+      "Simply being you"
+    ]
+  },
+  "timeline": {
+    "kicker": "Love through the ages",
+    "title": "A Short History of Valentine's Day",
+    "items": [
+      [
+        "1380s",
+        "Chaucer's birds",
+        "The poet Geoffrey Chaucer wrote of birds choosing their mates on Saint Valentine's Day. Romance took flight."
+      ],
+      [
+        "1415",
+        "A letter from the Tower",
+        "Held prisoner in London, Charles, Duke of Orléans, wrote valentine poems to his wife far away in France."
+      ],
+      [
+        "1840",
+        "Love by post",
+        "A cheap new postal service in Britain meant almost anyone could send a valentine, and the idea took off."
+      ],
+      [
+        "1840s",
+        "Lace and ribbons",
+        "Esther Howland began making lacy valentine cards in America, and the fashion spread far and wide."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{from} and {who}",
+      "Not in any history book yet. But ask {from}, and it is the best love story there is."
+    ]
+  },
+  "letters": {
+    "kicker": "From the archives",
+    "title": "The Most Romantic Lines Ever Written",
+    "items": [
+      [
+        "My bounty is as boundless as the sea, my love as deep.",
+        "William Shakespeare, Romeo and Juliet"
+      ],
+      [
+        "Today more than yesterday, and less than tomorrow.",
+        "Rosemonde Gérard, French poet"
+      ],
+      [
+        "The heart has its reasons which reason knows nothing of.",
+        "Blaise Pascal, Pensées"
+      ],
+      [
+        "Love conquers all.",
+        "Virgil, Eclogues"
+      ]
+    ],
+    "hand": "The greatest love lines were written for one person. {who}, yours is on page 3."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Being Smitten",
+    "items": [
+      [
+        "spark",
+        "Butterflies are real",
+        "That fluttery feeling is adrenaline at work, sending blood away from your tummy."
+      ],
+      [
+        "pulse",
+        "The happy chemical",
+        "Love lights up the brain's reward system and floods it with dopamine, the feel good chemical."
+      ],
+      [
+        "book",
+        "Dear Juliet",
+        "Thousands of letters addressed to Juliet arrive in Verona every year, and volunteers answer them."
+      ],
+      [
+        "heart",
+        "Not quite a heart",
+        "The classic heart symbol looks nothing like a real heart. Love never worried about accuracy."
+      ],
+      [
+        "leaf",
+        "Roses are red",
+        "In ancient myths the rose belonged to the goddess of love. It still says I love you today."
+      ],
+      [
+        "smile",
+        "Pucker up",
+        "A single kiss can use dozens of muscles in the face, and it can help melt stress away."
+      ]
+    ],
+    "hand": "Science can explain the butterflies. It cannot explain why {who} still gives them to {from}."
+  },
+  "world": {
+    "kicker": "A love note from the universe",
+    "title": "Why the World Is Better Because of You",
+    "lead": "Because {who} exists, the world got:",
+    "items": [
+      "A smile that turns bad days around.",
+      "The best person to share a sofa with.",
+      "A laugh that is impossible not to join.",
+      "Someone who notices the little things.",
+      "Kindness that nobody has to ask for.",
+      "A heart worth crossing oceans for.",
+      "And the very best part of {from}'s every day."
+    ],
+    "close": "The world is better with you in it, {who}. {from}'s world most of all."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "If you say yes",
+    "title": "What I promise you",
+    "items": [
+      "To laugh with you every single day.",
+      "To hold your hand on the hard days.",
+      "To keep falling for you, again and again.",
+      "To make a home wherever you are.",
+      "To love you for the rest of my life."
+    ],
+    "hand": "Signed, sealed and meant with all my heart, {from}"
+  },
+  "awards": [
+    [
+      "Love of my life",
+      "No contest"
+    ],
+    [
+      "Best hugs in the world",
+      "Unanimous"
+    ],
+    [
+      "The one",
+      "Confirmed"
+    ],
+    [
+      "Future spouse",
+      "Pending one answer"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One yes",
+      "Redeemable right now"
+    ],
+    [
+      "A lifetime of cuddles",
+      "No expiry date"
+    ],
+    [
+      "First dance",
+      "At our wedding"
+    ],
+    [
+      "Forever",
+      "Starting today"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "The One",
+  "perfume": "Top notes of nervous hearts and new beginnings. A heart of forever.",
+  "news": {
+    "edition": "Breaking news",
+    "headline": "Big question for {who}",
+    "lead": "Reports are coming in that {from} has something very important to ask {who}. The whole world is holding its breath.",
+    "weather": "Weather: perfect, with a 100% chance of happy tears"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to forever",
+    "nationality": "Adored, everywhere",
+    "job": "Love of my life",
+    "stamps": [
+      "Our first date",
+      "Every adventure",
+      "Forever, hopefully"
+    ]
+  },
+  "movie": {
+    "sub": "A love story",
+    "soon": "The ending is up to you",
+    "reviews": [
+      [
+        "The best ending I have ever read",
+        "The Daily Hug"
+      ],
+      [
+        "I have been waiting so long to ask",
+        "{from}"
+      ],
+      [
+        "Hopelessly romantic",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Which queen proposed to her future husband in 1839?",
+      [
+        "Queen Victoria",
+        "Queen Anne",
+        "Queen Mary"
+      ],
+      0
+    ],
+    [
+      "What do some penguins give to win a partner's heart?",
+      [
+        "A fish",
+        "A feather",
+        "A pebble"
+      ],
+      2
+    ]
+  ],
+  "words": [
+    "MARRY",
+    "YES",
+    "RING",
+    "LOVE",
+    "FOREVER",
+    "HEART"
+  ],
+  "note": {
+    "title": "Will you marry me?",
+    "contents": "The question",
+    "paras": [
+      "We make a lot of magazines, and this is the one that makes our hands shake a little, because we know what happens next.",
+      "{who}, every page you have just read was written about you. The habits, the songs, the first date, the moment {from} knew.",
+      "All of it was leading here. To this page, and to one question.",
+      "Look up. Someone has something to ask you."
+    ],
+    "wish": "{who}, will you marry me?"
+  },
+  "concepts": true,
+  "conceptWho": "partner"
+}

@@ -1,0 +1,299 @@
+{
+  "theme": "ruby",
+  "fields": [
+    {
+      "id": "s_heard",
+      "label": "The first moment it felt like Christmas with them",
+      "example": "Ice skating, holding on to each other for dear life",
+      "max": 80,
+      "chapter": "The first time it felt like Christmas"
+    },
+    {
+      "id": "s_knew",
+      "label": "The most thoughtful gift, given or received",
+      "example": "A tiny framed ticket from our very first date",
+      "max": 80,
+      "chapter": "The gift that said I know you"
+    },
+    {
+      "id": "s_guess",
+      "label": "Something you want to do next Christmas",
+      "example": "Finally get a real tree, and a cat to climb it",
+      "max": 80,
+      "chapter": "Next Christmas, we will"
+    },
+    {
+      "id": "s_promise",
+      "label": "A Christmas wish for the two of you",
+      "example": "Many more Christmases, each one cosier than the last",
+      "max": 70
+    }
+  ],
+  "story": {
+    "legend": "A few more things about your Christmas",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for you.",
+    "kicker": "Our story",
+    "title": "Our First Christmas, in Pictures and Words",
+    "hand": "The first of many, many Christmases for {who}."
+  },
+  "labels": {
+    "year": "Our first Christmas",
+    "where": "Where we spent it",
+    "tradition": "Our new tradition",
+    "jumper": "Silliest jumper",
+    "words": "In three words"
+  },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we love about our Christmas",
+    "items": [
+      "Our first tree, wonky and perfect",
+      "Cocoa with far too much cream",
+      "Your terrible Christmas jumper",
+      "Wrapping presents badly together",
+      "Christmas songs in the car",
+      "The way you look in twinkly lights",
+      "Our new tradition",
+      "Cold noses on frosty walks",
+      "Falling asleep during the film",
+      "Simply being together",
+      "Mince pies for breakfast",
+      "Your face opening my present"
+    ]
+  },
+  "timeline": {
+    "kicker": "Proposals through the ages",
+    "title": "A Short History of Saying Yes",
+    "items": [
+      [
+        "Ancient Rome",
+        "A ring to promise",
+        "Romans marked a promise to marry with a ring, sometimes a simple band of iron."
+      ],
+      [
+        "1477",
+        "A famous diamond",
+        "Archduke Maximilian gave Mary of Burgundy a diamond ring, and a sparkly tradition began."
+      ],
+      [
+        "1839",
+        "The queen proposes",
+        "As queen, Victoria had to do the asking. She proposed to Prince Albert, and he happily said yes."
+      ],
+      [
+        "1947",
+        "A diamond is forever",
+        "A copywriter dreamed up the famous line, and it became one of the best known slogans ever written."
+      ]
+    ],
+    "today": [
+      "{year}",
+      "{who}",
+      "The newest yes in the history of yeses. And our favourite by far."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Beautiful Words for New Beginnings",
+    "items": [
+      [
+        "Yes I said yes I will Yes.",
+        "James Joyce, Ulysses, 1922"
+      ],
+      [
+        "I have found the one whom my soul loves.",
+        "Song of Solomon 3:4"
+      ],
+      [
+        "Two are better than one.",
+        "Ecclesiastes 4:9"
+      ],
+      [
+        "Well begun is half done.",
+        "An old proverb"
+      ]
+    ],
+    "hand": "Lovely words, all of them. Ours are simpler: we are so happy for you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "Fun Facts for the Newly Engaged",
+    "items": [
+      [
+        "ring",
+        "The vein of love",
+        "Rings go on the fourth finger because people once believed a vein ran from it straight to the heart."
+      ],
+      [
+        "star",
+        "Older than dinosaurs",
+        "Most diamonds formed deep underground well over a billion years ago. Talk about lasting."
+      ],
+      [
+        "key",
+        "Hard to break",
+        "Diamond is the hardest natural material on Earth. A very good sign for a promise."
+      ],
+      [
+        "paw",
+        "Penguin proposals",
+        "Some penguins woo their partner with the perfect pebble for the nest. The original ring."
+      ],
+      [
+        "music",
+        "Dance first",
+        "Albatrosses perform long courtship dances, and often stay with one partner for life."
+      ],
+      [
+        "pulse",
+        "Nerves or joy",
+        "Nerves and excitement feel almost the same in the body: racing heart, quick breath, shaky hands."
+      ]
+    ],
+    "hand": "Science can explain the sparkle. It cannot explain how perfect {who} are together."
+  },
+  "world": {
+    "kicker": "A toast this Christmas",
+    "title": "Why Christmas Is Better With You Two",
+    "lead": "Because {who} found each other, Christmas got:",
+    "items": [
+      "Twice the fairy lights, and twice the arguing about them.",
+      "A brand new tradition, started by you two.",
+      "Someone to share the last mince pie with.",
+      "Matching pyjamas, worn with pride.",
+      "Warm hands on frosty walks.",
+      "A table with one more chair pulled up.",
+      "And a love story that sparkles brighter than the tree."
+    ],
+    "close": "Merry Christmas, {who}. Here is to every December still to come."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From me to you",
+    "title": "Christmas wishes for us",
+    "items": [
+      "Cosy nights and twinkly lights.",
+      "Hot chocolate with far too many marshmallows.",
+      "A tree we both agree on, eventually.",
+      "Silly jumpers, worn proudly.",
+      "Every Christmas, together."
+    ],
+    "hand": "With all my love this Christmas, {from}"
+  },
+  "awards": [
+    [
+      "Best first Christmas ever",
+      "By a landslide"
+    ],
+    [
+      "Champion present wrapper",
+      "Mostly sellotape"
+    ],
+    [
+      "Cosiest couple",
+      "Unanimous"
+    ],
+    [
+      "Silliest jumper",
+      "Independently verified"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One cosy film night",
+      "Blankets and snacks provided"
+    ],
+    [
+      "Hot chocolate on demand",
+      "Marshmallows included"
+    ],
+    [
+      "One festive walk",
+      "Mittens, then mulled wine"
+    ],
+    [
+      "First pick of the chocolates",
+      "Even the good ones"
+    ]
+  ],
+  "vouchersTitle": "Christmas vouchers for {who}",
+  "cert": "Our First Christmas Together",
+  "certLine": "spent their very first Christmas together, and made it magic",
+  "perfume": "Top notes of pine and cinnamon. A heart of cosy, twinkly, brand new love.",
+  "news": {
+    "edition": "Christmas edition",
+    "headline": "{who} celebrate first Christmas",
+    "lead": "Festive sources confirm that {who} have spent their very first Christmas together, and that it was, by all accounts, perfect.",
+    "weather": "Weather: frosty outside, very cosy inside"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to Christmas",
+    "nationality": "Festive, everywhere",
+    "job": "Professional cuddlers",
+    "stamps": [
+      "The first tree",
+      "Christmas morning",
+      "Every Christmas after"
+    ]
+  },
+  "movie": {
+    "sub": "A Christmas love story",
+    "soon": "Showing every December, forever",
+    "reviews": [
+      [
+        "The cosiest film of the year",
+        "The Daily Hug"
+      ],
+      [
+        "I would watch it every Christmas",
+        "{from}"
+      ],
+      [
+        "Twinkly, funny and full of heart",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Who is said to have invented the Christmas cracker in the 1840s?",
+      [
+        "A London sweet maker",
+        "A French chef",
+        "A Scottish poet"
+      ],
+      0
+    ],
+    [
+      "Which country gave Britain the tradition of the Christmas tree?",
+      [
+        "Germany",
+        "Italy",
+        "Spain"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "SNOW",
+    "COCOA",
+    "TINSEL",
+    "KISSES",
+    "COSY",
+    "STAR"
+  ],
+  "note": {
+    "title": "Why your first Christmas matters",
+    "contents": "A note for you both",
+    "paras": [
+      "Of all the magazines we make, first Christmases might be our favourite. Everything is new: the first stocking, the first tree, the first time your names go on one card.",
+      "Years from now you will not remember every present. But you will remember the tin foil star, the terrible jumper and the night it first felt like home.",
+      "{who}, this is your first Christmas, kept safe in print, so you can read it again every December.",
+      "From everything {from} told us, it is the first of many."
+    ],
+    "wish": "Merry first Christmas, {who}."
+  },
+  "concepts": "couple"
+}

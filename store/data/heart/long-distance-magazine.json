@@ -1,0 +1,307 @@
+{
+  "theme": "ruby",
+  "fields": [
+    {
+      "id": "s_first",
+      "label": "The first thing you noticed about them",
+      "example": "Their voice, before I ever saw their face",
+      "max": 70,
+      "chapter": "The first time I saw you"
+    },
+    {
+      "id": "s_fav",
+      "label": "What you miss most when you are apart",
+      "example": "Your cold feet on mine at night, oddly",
+      "max": 70,
+      "chapter": "What I miss most"
+    },
+    {
+      "id": "s_secret",
+      "label": "The first thing you will do together",
+      "example": "A whole day in pyjamas, no screens",
+      "max": 70,
+      "chapter": "When we are finally together"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise across the miles",
+      "example": "To always answer, whatever the time",
+      "max": 70
+    }
+  ],
+  "story": {
+    "legend": "A few more things about them",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "kicker": "Our story",
+    "title": "Love, Across the Miles",
+    "hand": "However far, {from} is never far from {who}."
+  },
+  "labels": {
+    "miles": "Miles between us",
+    "time": "Time difference",
+    "call": "Longest call",
+    "next": "Next time",
+    "words": "You, in three words"
+  },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things I love about you",
+    "items": [
+      "Your smile",
+      "The way you laugh at my jokes",
+      "Your hugs",
+      "How safe you make me feel",
+      "Our late night talks",
+      "The way you look at me",
+      "How kind you are",
+      "Your terrible dancing",
+      "How you always put the kettle on",
+      "The way you say my name",
+      "How you make me braver",
+      "Your sleepy morning face",
+      "How you remember the little things",
+      "Your sense of humour",
+      "The way you hold my hand",
+      "How you cheer me on",
+      "Our silly made up songs",
+      "How patient you are with me",
+      "How you make every day fun",
+      "Simply being you"
+    ]
+  },
+  "timeline": {
+    "kicker": "Love through the ages",
+    "title": "A Short History of Valentine's Day",
+    "items": [
+      [
+        "1380s",
+        "Chaucer's birds",
+        "The poet Geoffrey Chaucer wrote of birds choosing their mates on Saint Valentine's Day. Romance took flight."
+      ],
+      [
+        "1415",
+        "A letter from the Tower",
+        "Held prisoner in London, Charles, Duke of Orléans, wrote valentine poems to his wife far away in France."
+      ],
+      [
+        "1840",
+        "Love by post",
+        "A cheap new postal service in Britain meant almost anyone could send a valentine, and the idea took off."
+      ],
+      [
+        "1840s",
+        "Lace and ribbons",
+        "Esther Howland began making lacy valentine cards in America, and the fashion spread far and wide."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{from} and {who}",
+      "Not in any history book yet. But ask {from}, and it is the best love story there is."
+    ]
+  },
+  "letters": {
+    "kicker": "From the archives",
+    "title": "The Most Romantic Lines Ever Written",
+    "items": [
+      [
+        "My bounty is as boundless as the sea, my love as deep.",
+        "William Shakespeare, Romeo and Juliet"
+      ],
+      [
+        "Today more than yesterday, and less than tomorrow.",
+        "Rosemonde Gérard, French poet"
+      ],
+      [
+        "The heart has its reasons which reason knows nothing of.",
+        "Blaise Pascal, Pensées"
+      ],
+      [
+        "Love conquers all.",
+        "Virgil, Eclogues"
+      ]
+    ],
+    "hand": "The greatest love lines were written for one person. {who}, yours is on page 3."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Being Smitten",
+    "items": [
+      [
+        "spark",
+        "Butterflies are real",
+        "That fluttery feeling is adrenaline at work, sending blood away from your tummy."
+      ],
+      [
+        "pulse",
+        "The happy chemical",
+        "Love lights up the brain's reward system and floods it with dopamine, the feel good chemical."
+      ],
+      [
+        "book",
+        "Dear Juliet",
+        "Thousands of letters addressed to Juliet arrive in Verona every year, and volunteers answer them."
+      ],
+      [
+        "heart",
+        "Not quite a heart",
+        "The classic heart symbol looks nothing like a real heart. Love never worried about accuracy."
+      ],
+      [
+        "leaf",
+        "Roses are red",
+        "In ancient myths the rose belonged to the goddess of love. It still says I love you today."
+      ],
+      [
+        "smile",
+        "Pucker up",
+        "A single kiss can use dozens of muscles in the face, and it can help melt stress away."
+      ]
+    ],
+    "hand": "Science can explain the butterflies. It cannot explain why {who} still gives them to {from}."
+  },
+  "world": {
+    "kicker": "A love note from the universe",
+    "title": "Why the World Is Better Because of You",
+    "lead": "Because {who} exists, the world got:",
+    "items": [
+      "A smile that turns bad days around.",
+      "The best person to share a sofa with.",
+      "A laugh that is impossible not to join.",
+      "Someone who notices the little things.",
+      "Kindness that nobody has to ask for.",
+      "A heart worth crossing oceans for.",
+      "And the very best part of {from}'s every day."
+    ],
+    "close": "The world is better with you in it, {who}. {from}'s world most of all."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From my heart to yours",
+    "title": "My promises across the miles",
+    "items": [
+      "To call you goodnight, whatever the time.",
+      "To count down every single day.",
+      "To send you silly photos, often.",
+      "To close the distance one day.",
+      "To love you just the same, near or far."
+    ],
+    "hand": "Sent with all my love, from far away, {from}"
+  },
+  "awards": [
+    [
+      "Worth every mile",
+      "By a landslide"
+    ],
+    [
+      "Best voice on the phone",
+      "Unanimous"
+    ],
+    [
+      "Most missed person",
+      "Every single day"
+    ],
+    [
+      "Love of my life",
+      "No contest"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One airport hug",
+      "The long, running kind"
+    ],
+    [
+      "A video call film night",
+      "Press play together"
+    ],
+    [
+      "Your favourite meal",
+      "Cooked when you land"
+    ],
+    [
+      "One whole day",
+      "Nowhere to be but with you"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for when you are here, {who}",
+  "cert": "Worth Every Mile",
+  "perfume": "Top notes of airport coffee and late night calls. A heart of love that travels well.",
+  "news": {
+    "edition": "Long distance edition",
+    "headline": "Distance no match for {who}",
+    "lead": "Experts confirm that the miles between {from} and {who} have done absolutely nothing to their love, except make the hellos even better.",
+    "weather": "Weather: different skies, same moon"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to my heart",
+    "nationality": "Loved, in every time zone",
+    "job": "Professional long distance lover",
+    "stamps": [
+      "First hello",
+      "Every visit",
+      "One day, forever"
+    ]
+  },
+  "movie": {
+    "sub": "A long distance love story",
+    "soon": "Next scene: arrivals",
+    "reviews": [
+      [
+        "Proves love can travel",
+        "The Daily Hug"
+      ],
+      [
+        "Worth every mile",
+        "{from}"
+      ],
+      [
+        "Hopelessly romantic",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "How long does sunlight take to reach Earth?",
+      [
+        "About 8 minutes",
+        "About 8 hours",
+        "About 8 seconds"
+      ],
+      0
+    ],
+    [
+      "Roughly how far is it around the Earth at the equator?",
+      [
+        "About 4,000 miles",
+        "About 25,000 miles",
+        "About 100,000 miles"
+      ],
+      1
+    ]
+  ],
+  "words": [
+    "MILES",
+    "LOVE",
+    "HELLO",
+    "CALL",
+    "HEART",
+    "SOON"
+  ],
+  "note": {
+    "title": "Why distance changes nothing",
+    "contents": "A note for you",
+    "paras": [
+      "Long distance love is the bravest kind we know. It is goodnights in two time zones, screenshots of shared skies and countdowns on the fridge.",
+      "You cannot hug a phone. So we made something you can hold.",
+      "{who}, every page in here is about you, written by someone who misses you more than they can say.",
+      "That someone is {from}. And from everything they told us, every mile is worth it."
+    ],
+    "wish": "See you soon, {who}. Not long now."
+  },
+  "concepts": true,
+  "conceptWho": "partner"
+}

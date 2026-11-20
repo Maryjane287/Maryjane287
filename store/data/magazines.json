@@ -6122,5 +6122,1821 @@
       "quote": "{words}",
       "credit": "The team agrees"
     }
+  },
+  {
+    "slug": "boyfriend-magazine",
+    "title": "The Boyfriend Issue",
+    "searchTitle": "Personalised Magazine for Boyfriend",
+    "pinTitle": "Personalised Boyfriend Magazine Gift",
+    "occasion": "For him",
+    "short": "A glossy magazine all about him, for a birthday, an anniversary or just because.",
+    "description": "For the boyfriend who is impossible to buy for. Tell him what you never quite say out loud: how you met, the habit you secretly adore, the moment you knew. We turn it into a glossy magazine where he is the cover star, and every page sounds like you.",
+    "keywords": [
+      "boyfriend gift",
+      "gift for boyfriend",
+      "boyfriend birthday gift",
+      "personalised gift for him",
+      "anniversary gift for him",
+      "romantic gift for boyfriend"
+    ],
+    "inside": [
+      "24 full pages, all about him",
+      "A cover starring your boyfriend",
+      "A letter from you",
+      "Your love story by the numbers",
+      "A photo spread of your favourite days",
+      "The moment I knew",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter for him",
+    "feature": [
+      "The moment I knew",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "His name",
+        "example": "Chris",
+        "max": 12
+      },
+      {
+        "id": "years",
+        "label": "Years together",
+        "example": "3",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mia",
+        "max": 30
+      },
+      {
+        "id": "date",
+        "label": "Your first date",
+        "example": "Pizza, then a very long walk",
+        "max": 34
+      },
+      {
+        "id": "cute",
+        "label": "His cutest habit",
+        "example": "Narrating what the cat is thinking",
+        "max": 34
+      },
+      {
+        "id": "song",
+        "label": "Your song",
+        "example": "The one from the car, windows down",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Three words that are so him",
+        "example": "Kind, daft, mine",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment you knew he was the one",
+        "example": "He remembered the name of my childhood teddy, months after I mentioned it once, and bought me a new one for my birthday",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you wish you told him more often? (This becomes your letter)",
+        "example": "You make me feel safe and silly at the same time, and I did not know that was possible. Thank you for every cup of tea and every terrible joke. I love you.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of him",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite day together",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "chris",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Chris",
+          "years": "3",
+          "from": "Mia",
+          "date": "Pizza, then a very long walk",
+          "cute": "Narrating what the cat is thinking",
+          "song": "The one from the car, windows down",
+          "words": "Kind, daft, mine",
+          "x_type": "adventurer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/valentines-magazine-0b.jpg",
+          "photo2": "/assets/samples/valentines-magazine-0c.jpg",
+          "photo3": "/assets/samples/valentines-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Sam",
+          "years": "5",
+          "from": "Emma",
+          "date": "Coffee that turned into dinner",
+          "cute": "Singing to the kettle",
+          "song": "Anything we can dance badly to",
+          "words": "Gentle, funny, home",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/star-sign-birthday-magazine-3.jpg"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#1d140e"
+        },
+        "values": {
+          "name": "Leo",
+          "years": "1",
+          "from": "Ava",
+          "date": "Bowling, he lost spectacularly",
+          "cute": "Sending me photos of dogs",
+          "song": "Our first slow dance",
+          "words": "Handsome, loyal, ridiculous",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/star-sign-birthday-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The boyfriend issue",
+      "edition": "Boyfriend of the year",
+      "lines": [
+        [
+          "Exclusive",
+          "Why {name} is the one"
+        ],
+        [
+          "First date",
+          "{date}"
+        ],
+        [
+          "Cutest habit",
+          "{cute}"
+        ]
+      ],
+      "badge": [
+        "Together",
+        "{years}",
+        "years"
+      ],
+      "quote": "{words}",
+      "credit": "His biggest fan"
+    }
+  },
+  {
+    "slug": "girlfriend-magazine",
+    "title": "The Girlfriend Issue",
+    "searchTitle": "Personalised Magazine for Girlfriend",
+    "pinTitle": "Personalised Girlfriend Magazine Gift",
+    "occasion": "For her",
+    "short": "A glossy magazine all about her, for a birthday, an anniversary or just because.",
+    "description": "For the girlfriend who deserves more than flowers. Tell her the things you think about but never say: the first time you saw her, the habit you love, the moment you knew. We make it into a glossy magazine where she is the cover star, and every page sounds like you.",
+    "keywords": [
+      "girlfriend gift",
+      "gift for girlfriend",
+      "girlfriend birthday gift",
+      "personalised gift for her",
+      "anniversary gift for her",
+      "romantic gift for girlfriend"
+    ],
+    "inside": [
+      "24 full pages, all about her",
+      "A cover starring your girlfriend",
+      "A letter from you",
+      "Your love story by the numbers",
+      "A photo spread of your favourite days",
+      "The moment I knew",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter for her",
+    "feature": [
+      "The moment I knew",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Her name",
+        "example": "Mia",
+        "max": 12
+      },
+      {
+        "id": "years",
+        "label": "Years together",
+        "example": "2",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Chris",
+        "max": 30
+      },
+      {
+        "id": "date",
+        "label": "Your first date",
+        "example": "Ice skating, mostly falling over",
+        "max": 34
+      },
+      {
+        "id": "cute",
+        "label": "Her cutest habit",
+        "example": "Dancing as she brushes her teeth",
+        "max": 34
+      },
+      {
+        "id": "song",
+        "label": "Your song",
+        "example": "The one she sings in the shower",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Three words that are so her",
+        "example": "Bright, brave, beautiful",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment you knew she was the one",
+        "example": "I had the worst day at work and she turned up with my favourite takeaway and a terrible film, and did not ask a single question",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you wish you told her more often? (This becomes your letter)",
+        "example": "You make everything brighter, even the boring bits. Thank you for laughing at my jokes and for being exactly you. I am so lucky. I love you.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of her",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite day together",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "mia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#b5552b"
+        },
+        "values": {
+          "name": "Mia",
+          "years": "2",
+          "from": "Chris",
+          "date": "Ice skating, mostly falling over",
+          "cute": "Dancing as she brushes her teeth",
+          "song": "The one she sings in the shower",
+          "words": "Bright, brave, beautiful",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/star-sign-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/star-sign-birthday-magazine-0c.jpg",
+          "photo3": "/assets/samples/star-sign-birthday-magazine-0b.jpg"
+        }
+      },
+      {
+        "id": "emma",
+        "palette": "coral",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#2a1a10"
+        },
+        "values": {
+          "name": "Emma",
+          "years": "6",
+          "from": "Sam",
+          "date": "A bookshop, then cake",
+          "cute": "Naming every pigeon she meets",
+          "song": "Our kitchen disco anthem",
+          "words": "Warm, witty, wonderful",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/star-sign-birthday-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#b5552b"
+        },
+        "values": {
+          "name": "Ava",
+          "years": "1",
+          "from": "Leo",
+          "date": "Fireworks on the beach",
+          "cute": "Stealing my hoodies",
+          "song": "The one from the fireworks",
+          "words": "Sparkly, smart, mine",
+          "x_type": "adventurer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/eighteenth-birthday-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The girlfriend issue",
+      "edition": "Girlfriend of the year",
+      "lines": [
+        [
+          "Exclusive",
+          "Why {name} is the one"
+        ],
+        [
+          "First date",
+          "{date}"
+        ],
+        [
+          "Cutest habit",
+          "{cute}"
+        ]
+      ],
+      "badge": [
+        "Together",
+        "{years}",
+        "years"
+      ],
+      "quote": "{words}",
+      "credit": "Her biggest fan"
+    }
+  },
+  {
+    "slug": "husband-magazine",
+    "title": "The Husband Issue",
+    "searchTitle": "Personalised Magazine for Husband",
+    "pinTitle": "Personalised Husband Magazine Gift",
+    "occasion": "For my husband",
+    "short": "All the reasons you would marry him again, in a glossy magazine about him.",
+    "description": "For the husband who says he wants nothing. Tell him the things the busy years leave unsaid: what you noticed first, the habit you would miss, the moment you knew. We turn it into a glossy magazine where he is the cover star. Perfect for his birthday, your anniversary or a Tuesday.",
+    "keywords": [
+      "husband gift",
+      "gift for husband",
+      "husband birthday gift",
+      "anniversary gift for husband",
+      "personalised gift for him",
+      "gift for him who has everything"
+    ],
+    "inside": [
+      "24 full pages, all about him",
+      "A cover starring your husband",
+      "A letter from you",
+      "Your marriage by the numbers",
+      "A photo spread of your favourite days",
+      "Why I would marry you again",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter for my husband",
+    "feature": [
+      "Why I would marry you again",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "His name",
+        "example": "Sam",
+        "max": 12
+      },
+      {
+        "id": "years",
+        "label": "Years married",
+        "example": "12",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "date",
+        "label": "Where you met",
+        "example": "A friend's very loud party",
+        "max": 34
+      },
+      {
+        "id": "cute",
+        "label": "The habit you would miss most",
+        "example": "Warming my side of the bed",
+        "max": 34
+      },
+      {
+        "id": "song",
+        "label": "Your wedding song",
+        "example": "The one we still dance to",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Three words that are so him",
+        "example": "Steady, silly, safe",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "Why you would marry him all over again",
+        "example": "Because after twelve years he still saves me the crispy potato, still checks I got home safe, and still makes me laugh until I snort",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What does he not hear enough from you? (This becomes your letter)",
+        "example": "Life gets busy and I forget to say it. You are the calm in every storm and the best dad, partner and friend I could ask for. Thank you for choosing us every day.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of him",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite day together",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "sam",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#5a4a3a"
+        },
+        "values": {
+          "name": "Sam",
+          "years": "12",
+          "from": "Emma",
+          "date": "A friend's very loud party",
+          "cute": "Warming my side of the bed",
+          "song": "The one we still dance to",
+          "words": "Steady, silly, safe",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/milestone-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/milestone-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/milestone-birthday-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "chris",
+        "palette": "mint",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#2a2a2a"
+        },
+        "values": {
+          "name": "Chris",
+          "years": "25",
+          "from": "Mia",
+          "date": "The bus stop, in the rain",
+          "cute": "Humming when he is happy",
+          "song": "The one from our first dance",
+          "words": "Wise, warm, wonderful",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "coral",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#c9c2b8"
+        },
+        "values": {
+          "name": "Leo",
+          "years": "30",
+          "from": "Ava",
+          "date": "A dance class, he was hopeless",
+          "cute": "Reading me the headlines",
+          "song": "Still our first dance",
+          "words": "Charming, kind, mine",
+          "x_type": "gogetter"
+        },
+        "photos": {
+          "photo1": "/assets/samples/milestone-birthday-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The husband issue",
+      "edition": "Husband of the year",
+      "lines": [
+        [
+          "Exclusive",
+          "Why I would marry {name} again"
+        ],
+        [
+          "Where we met",
+          "{date}"
+        ],
+        [
+          "The habit I would miss",
+          "{cute}"
+        ]
+      ],
+      "badge": [
+        "Married",
+        "{years}",
+        "years"
+      ],
+      "quote": "{words}",
+      "credit": "His wife agrees"
+    }
+  },
+  {
+    "slug": "wife-magazine",
+    "title": "The Wife Issue",
+    "searchTitle": "Personalised Magazine for Wife",
+    "pinTitle": "Personalised Wife Magazine Gift",
+    "occasion": "For my wife",
+    "short": "All the reasons you would marry her again, in a glossy magazine about her.",
+    "description": "For the wife who gives everyone else her time. Tell her what the busy years leave unsaid: what you noticed first, the habit you would miss, the moment you knew. We turn it into a glossy magazine where she is the cover star. Perfect for her birthday, your anniversary or any day she deserves it, which is every day.",
+    "keywords": [
+      "wife gift",
+      "gift for wife",
+      "wife birthday gift",
+      "anniversary gift for wife",
+      "personalised gift for her",
+      "romantic gift for wife"
+    ],
+    "inside": [
+      "24 full pages, all about her",
+      "A cover starring your wife",
+      "A letter from you",
+      "Your marriage by the numbers",
+      "A photo spread of your favourite days",
+      "Why I would marry you again",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter for my wife",
+    "feature": [
+      "Why I would marry you again",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Her name",
+        "example": "Emma",
+        "max": 12
+      },
+      {
+        "id": "years",
+        "label": "Years married",
+        "example": "10",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Chris",
+        "max": 30
+      },
+      {
+        "id": "date",
+        "label": "Where you met",
+        "example": "Queueing for the same taxi",
+        "max": 34
+      },
+      {
+        "id": "cute",
+        "label": "The habit you would miss most",
+        "example": "Reading the end of a book first",
+        "max": 34
+      },
+      {
+        "id": "song",
+        "label": "Your wedding song",
+        "example": "The one we still slow dance to",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Three words that are so her",
+        "example": "Fierce, funny, kind",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "Why you would marry her all over again",
+        "example": "Because she still laughs at my worst jokes, still holds my hand at the scary bits of films, and still makes every house we live in feel like home",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What does she not hear enough from you? (This becomes your letter)",
+        "example": "You carry so much and make it look easy. I see it, all of it. Thank you for this life and this family. Marrying you is the best thing I ever did.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of her",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite day together",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma",
+        "palette": "rose",
+        "portrait": {
+          "skin": 3,
+          "hair": "long",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Emma",
+          "years": "10",
+          "from": "Chris",
+          "date": "Queueing for the same taxi",
+          "cute": "Reading the end of a book first",
+          "song": "The one we still slow dance to",
+          "words": "Fierce, funny, kind",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/birthday-magazine-0c.jpg",
+          "photo3": "/assets/samples/birthday-magazine-0b.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#b5552b"
+        },
+        "values": {
+          "name": "Mia",
+          "years": "7",
+          "from": "Leo",
+          "date": "A wedding, we were both guests",
+          "cute": "Singing the wrong words, loudly",
+          "song": "The one from our first dance",
+          "words": "Radiant, clever, mine",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/milestone-birthday-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "years": "15",
+          "from": "Sam",
+          "date": "A library, she shushed me",
+          "cute": "Dancing while she cooks",
+          "song": "Our song, always",
+          "words": "Golden, gorgeous, wise",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/eighteenth-birthday-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The wife issue",
+      "edition": "Wife of the year",
+      "lines": [
+        [
+          "Exclusive",
+          "Why I would marry {name} again"
+        ],
+        [
+          "Where we met",
+          "{date}"
+        ],
+        [
+          "The habit I would miss",
+          "{cute}"
+        ]
+      ],
+      "badge": [
+        "Married",
+        "{years}",
+        "years"
+      ],
+      "quote": "{words}",
+      "credit": "Her husband agrees"
+    }
+  },
+  {
+    "slug": "will-you-marry-me-magazine",
+    "title": "The Question",
+    "searchTitle": "Personalised Proposal Magazine",
+    "pinTitle": "Will You Marry Me Magazine, a Proposal Idea",
+    "occasion": "A proposal",
+    "short": "A magazine all about them, that ends with the biggest question of all.",
+    "description": "A proposal they can keep forever. Every page is about them: how you met, the little things, the moment you knew. They read it thinking it is a lovely gift. Then they reach the last page, and the question is waiting. You get down on one knee. They get a keepsake of the best day of their life.",
+    "keywords": [
+      "proposal ideas",
+      "will you marry me",
+      "unique proposal idea",
+      "proposal gift",
+      "personalised proposal",
+      "marriage proposal keepsake"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring the love of your life",
+      "A letter from you",
+      "Your love story by the numbers",
+      "A photo spread of your favourite days",
+      "The moment I knew",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "The last page: the question"
+    ],
+    "letterTitle": "Before I ask",
+    "feature": [
+      "The moment I knew",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Emma",
+        "max": 12
+      },
+      {
+        "id": "years",
+        "label": "Years together",
+        "example": "4",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Leo",
+        "max": 30
+      },
+      {
+        "id": "date",
+        "label": "Your first date",
+        "example": "Chips on the beach in the cold",
+        "max": 34
+      },
+      {
+        "id": "cute",
+        "label": "Their cutest habit",
+        "example": "Saying goodnight to the moon",
+        "max": 34
+      },
+      {
+        "id": "song",
+        "label": "Your song",
+        "example": "The one I will ask you to dance to",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Three words that are so them",
+        "example": "My whole heart",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment you knew you wanted forever",
+        "example": "You held my hand in the hospital waiting room all night when my dad was ill, and the next morning you went and fed his cat without being asked",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "Everything you want to say before you ask (This becomes your letter)",
+        "example": "I have read a lot of love stories, and none of them come close to ours. You make me braver, kinder and happier. So I have one question for you, and it is on the last page.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of them",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite day together",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Emma",
+          "years": "4",
+          "from": "Leo",
+          "date": "Chips on the beach in the cold",
+          "cute": "Saying goodnight to the moon",
+          "song": "The one I will ask you to dance to",
+          "words": "My whole heart",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/engagement-magazine-0.jpg",
+          "photo2": "/assets/samples/engagement-magazine-0c.jpg",
+          "photo3": "/assets/samples/engagement-magazine-0b.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "curly",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Mia",
+          "years": "6",
+          "from": "Chris",
+          "date": "A seaside ice cream, in March",
+          "cute": "Saving the best bite for me",
+          "song": "The one from the pier",
+          "words": "Forever starts now",
+          "x_type": "adventurer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/anniversary-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Sam",
+          "years": "3",
+          "from": "Ava",
+          "date": "A gallery, then noodles",
+          "cute": "Fixing things that are not broken",
+          "song": "Our kitchen song",
+          "words": "Yes, please, always",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/engagement-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The question issue",
+      "edition": "A very important question",
+      "lines": [
+        [
+          "Exclusive",
+          "Everything {name} means to me"
+        ],
+        [
+          "First date",
+          "{date}"
+        ],
+        [
+          "Turn to the last page",
+          "There is a question waiting"
+        ]
+      ],
+      "badge": [
+        "Together",
+        "{years}",
+        "years"
+      ],
+      "quote": "{words}",
+      "credit": "Read to the very end"
+    }
+  },
+  {
+    "slug": "bridesmaid-proposal-magazine",
+    "title": "Will You Be My Bridesmaid?",
+    "searchTitle": "Personalised Bridesmaid Proposal Magazine",
+    "pinTitle": "Bridesmaid Proposal Magazine Gift",
+    "occasion": "Bridesmaid proposal",
+    "short": "Ask your favourite people in the sweetest way: a magazine all about them.",
+    "description": "Before she says yes to the dress, ask her to stand beside you. Every page is about her: how you met, the trouble you have caused, why you cannot get married without her. The last page asks the question. Make one for each bridesmaid, so every friend gets her own.",
+    "keywords": [
+      "bridesmaid proposal",
+      "will you be my bridesmaid",
+      "bridesmaid gift",
+      "maid of honour proposal",
+      "bridesmaid box idea",
+      "personalised bridesmaid gift"
+    ],
+    "inside": [
+      "24 full pages, all about her",
+      "A cover starring your bridesmaid",
+      "A letter from the bride",
+      "Your friendship by the numbers",
+      "A photo spread of your best days",
+      "Why I need you there",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "The last page: the question"
+    ],
+    "letterTitle": "A letter from the bride",
+    "feature": [
+      "Why I need you there",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Her name",
+        "example": "Emma",
+        "max": 12
+      },
+      {
+        "id": "years",
+        "label": "Years of friendship",
+        "example": "15",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "From the bride",
+        "example": "Mia",
+        "max": 30
+      },
+      {
+        "id": "met",
+        "label": "How you met",
+        "example": "Sharing a pencil at school",
+        "max": 34
+      },
+      {
+        "id": "trouble",
+        "label": "At the wedding, she is most likely to",
+        "example": "Start the conga line",
+        "max": 34
+      },
+      {
+        "id": "song",
+        "label": "Your dance floor song",
+        "example": "The one we know every word to",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Three words that are so her",
+        "example": "Loyal, loud, legend",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "Why you cannot get married without her",
+        "example": "Because she held my hair, my hand and my secrets for fifteen years, and she was the first person I called when he proposed",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want her to know before you ask? (This becomes your letter)",
+        "example": "You have been there for every big moment of my life, and I cannot imagine walking towards the biggest one without you behind me. I love you, my forever person.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of her",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "The two of you",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#b5552b"
+        },
+        "values": {
+          "name": "Emma",
+          "years": "15",
+          "from": "Mia",
+          "met": "Sharing a pencil at school",
+          "trouble": "Start the conga line",
+          "song": "The one we know every word to",
+          "words": "Loyal, loud, legend",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/best-friend-magazine-0.jpg",
+          "photo2": "/assets/samples/best-friend-magazine-0b.jpg",
+          "photo3": "/assets/samples/best-friend-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "years": "8",
+          "from": "Emma",
+          "met": "First week of university",
+          "trouble": "Cry before the vows",
+          "song": "Our road trip anthem",
+          "words": "Sunshine in human form",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/best-friend-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "mint",
+        "portrait": {
+          "skin": 1,
+          "hair": "bun",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Sam",
+          "years": "20",
+          "from": "Ava",
+          "met": "Neighbours, aged four",
+          "trouble": "Give the funniest speech",
+          "song": "Anything from the nineties",
+          "words": "My chosen sister",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-0b.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The bridesmaid issue",
+      "edition": "A question for {name}",
+      "lines": [
+        [
+          "Exclusive",
+          "Will you be my bridesmaid?"
+        ],
+        [
+          "How we met",
+          "{met}"
+        ],
+        [
+          "Most likely to",
+          "{trouble}"
+        ]
+      ],
+      "badge": [
+        "Friends",
+        "{years}",
+        "years"
+      ],
+      "quote": "{words}",
+      "credit": "The bride to be"
+    }
+  },
+  {
+    "slug": "first-christmas-together-magazine",
+    "title": "Our First Christmas",
+    "searchTitle": "Our First Christmas Together Magazine",
+    "pinTitle": "Our First Christmas Together, a Personalised Magazine",
+    "occasion": "First Christmas together",
+    "short": "Your first Christmas as a couple, written up as a cosy magazine to keep forever.",
+    "description": "The first stocking with both your names. The first tree you argued about. The first new tradition. Tell us about your first Christmas together and we turn it into a cosy keepsake magazine starring the two of you. Lovely to give, and even lovelier to read again every December.",
+    "keywords": [
+      "our first christmas together",
+      "first christmas gift for boyfriend",
+      "first christmas gift for girlfriend",
+      "couples christmas gift",
+      "christmas keepsake",
+      "personalised christmas gift"
+    ],
+    "inside": [
+      "24 full pages, all about the two of you",
+      "A cover starring you both",
+      "A Christmas letter",
+      "Your first Christmas by the numbers",
+      "A photo spread of your festive days",
+      "The moment it felt like home",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A Christmas letter",
+    "feature": [
+      "The moment it felt like home",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "names",
+        "label": "Your names",
+        "example": "Mia & Chris",
+        "max": 16
+      },
+      {
+        "id": "year",
+        "label": "This Christmas",
+        "example": "2026",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Chris",
+        "max": 34
+      },
+      {
+        "id": "where",
+        "label": "Where you spent it",
+        "example": "Our tiny flat, and both mums",
+        "max": 34
+      },
+      {
+        "id": "tradition",
+        "label": "Your new tradition",
+        "example": "Matching pyjamas, no exceptions",
+        "max": 34
+      },
+      {
+        "id": "jumper",
+        "label": "Who wore the silliest jumper",
+        "example": "Chris, it lit up and played music",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Three words for your Christmas",
+        "example": "Cosy, chaotic, ours",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment it felt like home",
+        "example": "Decorating our first tree at midnight with one string of lights, three baubles and a star made of tin foil, and it was perfect",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want to say this first Christmas? (This becomes your letter)",
+        "example": "Of all the Christmases I have had, this is the one I want to remember forever. Thank you for the cocoa, the cuddles and for making every day feel like a holiday.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of you both",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "Your Christmas",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "mia-chris",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "names": "Mia & Chris",
+          "year": "2026",
+          "from": "Chris",
+          "where": "Our tiny flat, and both mums",
+          "tradition": "Matching pyjamas, no exceptions",
+          "jumper": "Chris, it lit up and played music",
+          "words": "Cosy, chaotic, ours",
+          "x_type": "homebodies"
+        },
+        "photos": {
+          "photo1": "/assets/samples/anniversary-magazine-0b.jpg",
+          "photo2": "/assets/samples/anniversary-magazine-0.jpg",
+          "photo3": "/assets/samples/anniversary-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "emma-sam",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#2a1a10"
+        },
+        "values": {
+          "names": "Emma & Sam",
+          "year": "2026",
+          "from": "Emma",
+          "where": "A cabin with no wifi",
+          "tradition": "A walk before presents",
+          "jumper": "Sam, a reindeer with real bells",
+          "words": "Snowy, sweet, silly",
+          "x_type": "romantics"
+        },
+        "photos": {
+          "photo1": "/assets/samples/christmas-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "ava-leo",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "names": "Ava & Leo",
+          "year": "2026",
+          "from": "Leo",
+          "where": "Two dinners, two families",
+          "tradition": "Christmas Eve takeaway",
+          "jumper": "Both of us, matching",
+          "words": "Full, happy, home",
+          "x_type": "comedians"
+        },
+        "photos": {
+          "photo1": "/assets/samples/christmas-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{names}",
+      "issue": "The Christmas issue",
+      "edition": "Our first Christmas together",
+      "lines": [
+        [
+          "Exclusive",
+          "Their very first Christmas"
+        ],
+        [
+          "New tradition",
+          "{tradition}"
+        ],
+        [
+          "Silliest jumper",
+          "{jumper}"
+        ]
+      ],
+      "badge": [
+        "Christmas",
+        "{year}",
+        "together"
+      ],
+      "quote": "{words}",
+      "credit": "Merry Christmas, with love"
+    }
+  },
+  {
+    "slug": "first-anniversary-magazine",
+    "title": "Year One",
+    "searchTitle": "First Anniversary Paper Gift Magazine",
+    "pinTitle": "Paper Anniversary Gift: Our First Year Married",
+    "occasion": "First anniversary",
+    "short": "The perfect paper anniversary gift: your first year of marriage, in print.",
+    "description": "The first wedding anniversary is the paper one, and nothing is more paper than a magazine about your first year married. The best day, the silliest argument, what you learned and the moment it all felt real. Glossy, funny and made to be read again on your fiftieth.",
+    "keywords": [
+      "paper anniversary gift",
+      "first anniversary gift",
+      "1st anniversary gift for him",
+      "1st anniversary gift for her",
+      "first year married",
+      "personalised anniversary gift"
+    ],
+    "inside": [
+      "24 full pages, all about the two of you",
+      "A cover starring you both",
+      "An anniversary letter",
+      "Your first year by the numbers",
+      "A photo spread of year one",
+      "The moment it felt real",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "An anniversary letter",
+    "feature": [
+      "The moment it felt real",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "names",
+        "label": "Your names",
+        "example": "Emma & Chris",
+        "max": 16
+      },
+      {
+        "id": "year",
+        "label": "Year you married",
+        "example": "2025",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 34
+      },
+      {
+        "id": "where",
+        "label": "Best day of year one",
+        "example": "Our first holiday as Mr and Mrs",
+        "max": 34
+      },
+      {
+        "id": "nerves",
+        "label": "Silliest argument",
+        "example": "Which way the toilet roll goes",
+        "max": 34
+      },
+      {
+        "id": "next",
+        "label": "What you learned",
+        "example": "Never touch his chips",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Year one in three words",
+        "example": "Messy, magic, ours",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment being married felt real",
+        "example": "Signing for a parcel with my new surname, then running inside to tell Chris like it was the biggest news in the world",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want to say after one year married? (This becomes your letter)",
+        "example": "One year ago I promised to love you forever, and it turns out forever is the easiest promise I ever made. Thank you for the best year of my life. Here is to the next fifty.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of you both",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "Your wedding day",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "A favourite from year one",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma-chris",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "names": "Emma & Chris",
+          "year": "2025",
+          "from": "Emma",
+          "where": "Our first holiday as Mr and Mrs",
+          "nerves": "Which way the toilet roll goes",
+          "next": "Never touch his chips",
+          "words": "Messy, magic, ours",
+          "x_type": "romantics"
+        },
+        "photos": {
+          "photo1": "/assets/samples/wedding-magazine-0.jpg",
+          "photo2": "/assets/samples/wedding-magazine-0b.jpg",
+          "photo3": "/assets/samples/wedding-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "mia-sam",
+        "palette": "butter",
+        "portrait": {
+          "skin": 1,
+          "hair": "curly",
+          "hairColor": "#2a1a10"
+        },
+        "values": {
+          "names": "Mia & Sam",
+          "year": "2025",
+          "from": "Sam",
+          "where": "Building the wonky bookshelf",
+          "nerves": "Who ate the last yoghurt",
+          "next": "She is always right, mostly",
+          "words": "Easy, happy, home",
+          "x_type": "homebodies"
+        },
+        "photos": {
+          "photo1": "/assets/samples/wedding-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "ava-leo",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 3,
+          "hair": "long",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "names": "Ava & Leo",
+          "year": "2025",
+          "from": "Their families",
+          "where": "Leo learning to cook, finally",
+          "nerves": "Thermostat, every single day",
+          "next": "Love is in the little things",
+          "words": "Brave, bright, beautiful",
+          "x_type": "team"
+        },
+        "photos": {
+          "photo1": "/assets/samples/wedding-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{names}",
+      "issue": "The paper anniversary issue",
+      "edition": "One year married",
+      "lines": [
+        [
+          "Exclusive",
+          "Year one, the full story"
+        ],
+        [
+          "Best day",
+          "{where}"
+        ],
+        [
+          "Silliest argument",
+          "{nerves}"
+        ]
+      ],
+      "badge": [
+        "Married",
+        "1",
+        "year"
+      ],
+      "quote": "{words}",
+      "credit": "Happy first anniversary"
+    }
+  },
+  {
+    "slug": "long-distance-magazine",
+    "title": "Miles Apart",
+    "searchTitle": "Long Distance Relationship Gift Magazine",
+    "pinTitle": "Long Distance Relationship Gift: a Personalised Magazine",
+    "occasion": "Long distance love",
+    "short": "For the one who is far away: proof that distance changes nothing.",
+    "description": "When you cannot be there, send something they can hold. The miles between you, the longest call, the countdown to next time. We turn your long distance love story into a glossy magazine, printed and posted straight to their door, wherever in the world they are.",
+    "keywords": [
+      "long distance relationship gift",
+      "long distance boyfriend gift",
+      "long distance girlfriend gift",
+      "miss you gift",
+      "gift to send abroad",
+      "personalised long distance gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring the love of your life",
+      "A letter across the miles",
+      "Your love story by the numbers",
+      "A photo spread of your days together",
+      "The hello I will never forget",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter across the miles",
+    "feature": [
+      "The hello I will never forget",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Sam",
+        "max": 12
+      },
+      {
+        "id": "miles",
+        "label": "Miles between you",
+        "example": "3,450",
+        "max": 7
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "time",
+        "label": "Your time difference",
+        "example": "Five hours, lots of sleepy calls",
+        "max": 34
+      },
+      {
+        "id": "call",
+        "label": "Your longest call ever",
+        "example": "Seven hours, we both fell asleep",
+        "max": 34
+      },
+      {
+        "id": "next",
+        "label": "Next time you see each other",
+        "example": "March, and I am counting",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Three words that are so them",
+        "example": "Worth every mile",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The hello you will never forget",
+        "example": "Seeing you at arrivals holding a sign with my name spelled wrong on purpose, and running so fast I dropped my bag",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to read when they miss you? (This becomes your letter)",
+        "example": "I know the miles are hard. But I would rather miss you than be with anyone else. Every call, every message and every countdown is worth it. I love you across every single mile.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of them",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "The two of you together",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "sam",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Sam",
+          "miles": "3,450",
+          "from": "Emma",
+          "time": "Five hours, lots of sleepy calls",
+          "call": "Seven hours, we both fell asleep",
+          "next": "March, and I am counting",
+          "words": "Worth every mile",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/anniversary-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Mia",
+          "miles": "210",
+          "from": "Chris",
+          "time": "None, just a long train",
+          "call": "Five hours on a Sunday",
+          "next": "Friday, at the station",
+          "words": "Always worth it",
+          "x_type": "adventurer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/anniversary-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Leo",
+          "miles": "5,600",
+          "from": "Ava",
+          "time": "Eight hours apart",
+          "call": "All night, twice",
+          "next": "Christmas, at last",
+          "words": "My favourite hello",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/engagement-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The miles apart issue",
+      "edition": "Long distance special",
+      "lines": [
+        [
+          "Exclusive",
+          "Why {name} is worth every mile"
+        ],
+        [
+          "Longest call",
+          "{call}"
+        ],
+        [
+          "Next time",
+          "{next}"
+        ]
+      ],
+      "badge": [
+        "Miles apart",
+        "{miles}",
+        "but close"
+      ],
+      "quote": "{words}",
+      "credit": "Missing you"
+    }
   }
 ]
