@@ -972,3 +972,23 @@
 .ed-ten-col { padding: 8cqw 5cqw 6cqw; }
 .ed-tl { gap: 1.3cqw; }
 .ed-tl li { font-size: 3.3cqw; padding-bottom: 1.2cqw; }
+
+/* Printed codes: scan to hear a voice note or play their song. */
+.qr { display: block; width: 100%; height: auto; background: #fff; }
+.ed-v-foot { margin-top: auto; display: flex; align-items: flex-end; justify-content: space-between; gap: 2cqw; }
+.ed-v-foot figcaption { margin: 0; }
+.ed-v-qr { flex: none; width: 13cqw; text-align: center; }
+.ed-v-qr small { display: block; margin-top: .6cqw; font: 800 1.5cqw/1.1 'Outfit', sans-serif; letter-spacing: .04em; text-transform: uppercase; color: var(--edk); }
+.ed-v > i.ed-v-ph { overflow: hidden; padding: 0; }
+.ed-v > i.ed-v-ph img { width: 100%; height: 100%; object-fit: cover; }
+.ed-l-qr { position: absolute; z-index: 2; right: 6cqw; top: 6cqw; width: 22cqw; padding: 2cqw 2cqw 1.6cqw; background: #fff; border-radius: 1.6cqw; box-shadow: 0 1cqw 3cqw rgba(0,0,0,.25); text-align: center; transform: rotate(3deg); }
+.ed-l-qr span { display: block; margin-top: 1cqw; font: 800 1.8cqw/1.15 'Outfit', sans-serif; letter-spacing: .06em; text-transform: uppercase; color: #1d1a2f; }
+.ed-song { display: flex; align-items: center; gap: 2cqw; }
+.ed-song .qr { width: 12cqw; }
+.ed-song span { font: 800 1.7cqw/1.2 'Outfit', sans-serif; letter-spacing: .08em; text-transform: uppercase; max-width: 20cqw; }
+.ed-song b { display: block; font: 400 2.8cqw/1.1 'DM Serif Display', serif; letter-spacing: 0; text-transform: none; }
+.ed-voices:has(.ed-v-voice) h3 { font-size: 8cqw; margin-bottom: 4.4cqw; }
+.ed-voices:has(.ed-v-voice) .ed-vs { gap: 3.4cqw; }
+.ed-voices:has(.ed-v-voice) .ed-v { min-height: 0; padding: 6cqw 3.6cqw 3cqw; }
+.ed-voices:has(.ed-v-voice) .ed-v blockquote { font-size: 3.2cqw; }
+.ed-v-qr { width: 11.5cqw; }

@@ -1,5 +1,6 @@
 // The magazine maker: pick a magazine, answer questions, add photos, and watch
 // the cover update live. Photos stay in the browser until the order is placed.
+import { makeRecorder, uploadVoice } from './recorder.js';
 import { renderCover, renderPages, renderFullMagazine, renderCardSet, PALETTES, DESIGNS, designsFor, baseDesign, esc } from './covers.js';
 import { renderAndUpload, finishOrder } from './order-pdf.js';
 import { LOVE_PICKS } from './love.js';
@@ -130,9 +131,41 @@ function renderFields() {
   const extra = text.filter(f => f.optional);
   // Optional questions sit in their own box: skip any, and that page swaps to one we write.
   const story = extra.length ? `<fieldset class="fun-pages wide"><legend>${esc(m.heart?.story?.legend || 'Your love story')} <small>(optional)</small></legend><p class="small">${esc(m.heart?.story?.hint || 'Only if you have a minute. Skip any of these and we fill those pages with beautiful ones we have written for her.')}</p><div class="fun-grid">${extra.map(f => f.chapter ? `<div class="story-q wide">${field(f)}<label class="photo-drop photo-mini"><span><b>+</b>Add a photo of this</span><input type="file" name="p_${f.id}" data-photo="p_${f.id}" accept="image/*"></label></div>` : field(f)).join('')}</div><p class="small story-tip">Add a photo to any memory and it sits right beside the story in the magazine, like a little album.</p></fieldset>` : '';
-  $('#fields').innerHTML = text.filter(f => !f.optional).map(field).join('') + conceptPick(m) + (m.love || m.heart?.picks ? lovePicks(m) : '') + story + funPages(m) + `<fieldset class="friend-notes wide"><legend>Little notes from family and friends <small>(optional)</small></legend><p class="small">Ask a few people who love them for one sweet line each. They all appear together on a special page in the magazine, each one signed with their name.</p>${familyInvite()}${[1, 2, 3, 4].map(i => `<div class="friend-note"><input type="text" data-f="note${i}_from" maxlength="30" placeholder="${['Grandma', 'Uncle Sam', 'Emma', 'Leo'][i - 1]}" aria-label="Note ${i}: who it is from" value="${esc(state.values[`note${i}_from`] || '')}"><input type="text" data-f="note${i}_msg" maxlength="110" placeholder="${['You make every room brighter.', 'Still the best dancer I know!', 'Here is to many more adventures together.', 'Love you to the moon and back.'][i - 1]}" aria-label="Note ${i}: their message" value="${esc(state.values[`note${i}_msg`] || '')}"></div>`).join('')}</fieldset><div class="photos">${photos.map(f => `
+  $('#fields').innerHTML = text.filter(f => !f.optional).map(field).join('') + conceptPick(m) + (m.love || m.heart?.picks ? lovePicks(m) : '') + story + (m.heart ? '' : funPages(m)) + talkExtras(m) + `<fieldset class="friend-notes wide"><legend>Little notes from family and friends <small>(optional)</small></legend><p class="small">Ask a few people who love them for one sweet line each. They all appear together on a special page in the magazine, each one signed with their name.</p>${familyInvite()}${[1, 2, 3, 4].map(i => `<div class="friend-note"><input type="text" data-f="note${i}_from" maxlength="30" placeholder="${['Grandma', 'Uncle Sam', 'Emma', 'Leo'][i - 1]}" aria-label="Note ${i}: who it is from" value="${esc(state.values[`note${i}_from`] || '')}"><input type="text" data-f="note${i}_msg" maxlength="110" placeholder="${['You make every room brighter.', 'Still the best dancer I know!', 'Here is to many more adventures together.', 'Love you to the moon and back.'][i - 1]}" aria-label="Note ${i}: their message" value="${esc(state.values[`note${i}_msg`] || '')}"></div>`).join('')}</fieldset><div class="photos">${photos.map(f => `
     <label class="photo-drop"><span><b>+</b>${esc(f.label)}</span><input type="file" name="${f.id}" data-photo="${f.id}" accept="image/*"></label>`).join('')}</div>${m.heart ? `<fieldset class="more-photos wide"><legend>More photos <small>(optional, up to 9)</small></legend><p class="small">The more photos you add, the more pages become full page photos, with no picture used twice. Old ones, silly ones, any you love.</p><div class="photos photos-more">${[1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => `<label class="photo-drop photo-mini"><span><b>+</b>Photo ${i + 3}</span><input type="file" name="p_more${i}" data-photo="p_more${i}" accept="image/*"></label>`).join('')}</div></fieldset>` : ''}`;
   updateCounts();
+  wireTalk();
+}
+
+// Codes printed in the magazine: their song, and the buyer reading the letter
+// aloud. Both optional; the voice note uploads as soon as it is recorded.
+function talkExtras(m) {
+  if (!m.heart) return '';
+  const song = esc(state.values.songLink || '');
+  return `<fieldset class="talk-extras wide"><legend>Make the pages talk <small>(optional)</small></legend><p class="small">Add a code they can scan with their phone. Your voice, reading your letter, or the song that is so them.</p>
+    <div class="talk-row"><p class="talk-head"><b>Your voice on the letter page</b>Record yourself saying your letter, or anything you like. A code appears on the letter page.</p><div id="letter-rec"></div><p class="small" id="letter-rec-status"></p></div>
+    <label class="field wide"><span>Their song <small>Paste a link from Spotify, Apple Music or YouTube. A code on the back cover plays it.</small></span><input type="url" data-f="songLink" maxlength="300" placeholder="https://open.spotify.com/track/..." value="${song}"></label></fieldset>`;
+}
+function wireTalk() {
+  const box = $('#letter-rec');
+  if (!box) return;
+  const status = $('#letter-rec-status');
+  if (state.values.v_letter) {
+    box.innerHTML = '<div class="rec-done"><span class="talk-saved">Your voice note is saved, and its code is on your letter page.</span><button type="button" class="btn btn-small btn-ghost" data-talk="remove">Remove it</button></div>';
+    box.querySelector('[data-talk]').addEventListener('click', () => { delete state.values.v_letter; store.set(`maker:${state.slug}`, state.values); wireTalk(); update(); });
+    status.textContent = '';
+    return;
+  }
+  makeRecorder(box, { label: 'Record your voice', onChange: async blob => {
+    if (!blob) return;
+    status.textContent = 'Saving your voice note...';
+    try {
+      state.values.v_letter = await uploadVoice(blob);
+      store.set(`maker:${state.slug}`, state.values);
+      status.textContent = '';
+      wireTalk(); update();
+    } catch (err) { status.textContent = err.message; }
+  } });
 }
 
 // Family notes: a private link the buyer sends on WhatsApp or by email. Each
@@ -165,16 +198,24 @@ async function checkNotes(quiet) {
     const { notes = [] } = await (await fetch(`/api/notes?b=${board}`)).json();
     const used = new Set(state.values.notesUsed || []);
     let added = 0;
+    // Photos are not saved on the device, so put back any for notes already placed.
+    for (const n of notes) {
+      const k = [1, 2, 3, 4].find(x => state.values[`note${x}_id`] === n.id);
+      if (k && n.photo && !state.photos[`note${k}`]) { state.photos[`note${k}`] = n.photo; }
+    }
     for (const n of notes.filter(n => !used.has(n.id))) {
       const i = [1, 2, 3, 4].find(k => !String(state.values[`note${k}_msg`] || '').trim());
       if (!i) break;
-      state.values[`note${i}_from`] = n.from; state.values[`note${i}_msg`] = n.msg;
+      state.values[`note${i}_from`] = n.from; state.values[`note${i}_msg`] = n.msg; state.values[`note${i}_id`] = n.id;
+      if (n.voice) state.values[`note${i}_voice`] = n.voice; else delete state.values[`note${i}_voice`];
+      if (n.photo) state.photos[`note${i}`] = n.photo; else delete state.photos[`note${i}`];
       const a = $(`[data-f="note${i}_from"]`), b = $(`[data-f="note${i}_msg"]`);
       if (a) a.value = n.from; if (b) b.value = n.msg;
       used.add(n.id); added++;
     }
     state.values.notesUsed = [...used];
     store.set(`maker:${state.slug}`, state.values);
+    update();
     const waiting = notes.filter(n => !used.has(n.id)).length;
     if (status) status.textContent = !notes.length
       ? (quiet ? 'Waiting for notes. They drop into an empty space below as they arrive.' : 'No notes yet. Once someone writes one, it appears here.')
@@ -289,6 +330,9 @@ $('#fields').addEventListener('input', e => {
   const f = e.target.dataset.f;
   if (!f) return;
   state.values[f] = e.target.value;
+  // A cleared note space lets go of that person's photo and voice note too.
+  const slot = /^note(\d)_msg$/.exec(f);
+  if (slot && !e.target.value.trim()) { delete state.values[`note${slot[1]}_id`]; delete state.values[`note${slot[1]}_voice`]; delete state.photos[`note${slot[1]}`]; }
   store.set(`maker:${state.slug}`, state.values);
   updateCounts();
   refreshInvite();

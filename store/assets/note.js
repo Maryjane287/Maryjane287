@@ -1,6 +1,8 @@
 // The page family members open from a notes link: they write one line for the
 // magazine, which the person making it pulls into their magazine.
+import { makeRecorder, uploadVoice, smallPhoto } from './recorder.js';
 const $ = s => document.querySelector(s);
+let voiceBlob = null, photoUrl = '';
 const q = new URLSearchParams(location.search);
 const board = q.get('b') || '';
 const who = (q.get('w') || '').trim().slice(0, 40);
@@ -24,13 +26,24 @@ const preview = () => {
   $('#note-count').textContent = `${form.msg.value.length} / 110`;
 };
 form.addEventListener('input', preview);
+makeRecorder($('#note-rec'), { label: 'Record a voice note', onChange: b => { voiceBlob = b; } });
+form.photo.addEventListener('change', async () => {
+  const drop = form.photo.closest('.photo-drop');
+  drop.querySelector('img')?.remove();
+  photoUrl = '';
+  const file = form.photo.files[0];
+  if (!file) return;
+  try { photoUrl = await smallPhoto(file); } catch { say('That photo would not open. Try a JPG or PNG.'); return; }
+  drop.insertAdjacentHTML('afterbegin', `<img src="${photoUrl}" alt="">`);
+});
 
 form.addEventListener('submit', async e => {
   e.preventDefault();
   const btn = form.querySelector('button[type=submit]');
   btn.disabled = true; btn.textContent = 'Sending...';
   try {
-    const res = await fetch('/api/notes', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ board, from: form.from.value, msg: form.msg.value }) });
+    const voice = voiceBlob ? await uploadVoice(voiceBlob) : '';
+    const res = await fetch('/api/notes', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ board, from: form.from.value, msg: form.msg.value, photo: photoUrl, voice }) });
     const out = await res.json().catch(() => ({}));
     if (!res.ok) throw new Error(out.error || 'Something went wrong.');
     form.hidden = true;

@@ -206,7 +206,7 @@ const realLife = (mag, pages, name) => {
     </figure>
     <figure class="real-scene real-open">
       <div class="real-stage"><div class="mock-spread"><div class="mock-left">${pages[9]}</div><div class="mock-right">${pages[10]}</div></div></div>
-      <figcaption><b>24 pages all about them</b>Their own newspaper, awards night, passport and more.</figcaption>
+      <figcaption><b>24 pages all about them</b>A cover story, full page photos, your letter and more.</figcaption>
     </figure>
     <figure class="real-scene real-phone">
       <div class="real-stage"><div class="mock-phone"><div class="mock-screen"><p class="mock-bubble">${say}</p><div class="mock-file">${pages[0]}</div><p class="mock-bubble mock-reply">${reply}</p></div></div></div>
@@ -393,7 +393,7 @@ ${mag.heart ? `<section class="section glance-sec">
   <div class="design-grid">${designCards}</div>
 </section>
 <section class="section section-tint">
-  <div class="section-head"><p class="kicker">Flip through all ${inside.length} pages</p><h2>Every page is about them</h2><p>${mag.heart ? "Their own story, pages we write just for them, a front page, a pull out poster, a quiz and puzzle made from your answers, and a closing note from us." : "A contents page, the big interview, a pull out poster, a quiz and puzzle made from your answers, an official certificate and more."} Swipe to see it all.</p></div>
+  <div class="section-head"><p class="kicker">Flip through all ${inside.length} pages</p><h2>Every page is about them</h2><p>${mag.heart ? "A cover story written about them, full page photos, your letter, voices from the people who love them, a pull out poster and a closing note from us." : "A contents page, the big interview, a pull out poster, a quiz and puzzle made from your answers, an official certificate and more."} Swipe to see it all.</p></div>
   <div class="flip">${inside.map((p, i) => `<div><div class="flip-page">${p}</div><span class="flip-n">${i ? `Page ${i + 1}` : 'Cover'}</span></div>`).join('')}</div>
 </section>
 ${realLife(mag, inside, firstName(Object.values(main.values)[0]))}
@@ -555,7 +555,7 @@ async function simplePages() {
     body: wrap('About', 'Everybody deserves a front page', `
       <p>The best gifts say <em>I really know you</em>. Not a gift card, not another candle, but something that could only ever be for them.</p>
       <p>${esc(site.name)} began with a feeling many of us know. The people we love most are often far away, busy lives get in the way, and when a birthday or an anniversary comes round we want to give something that shows how much they mean to us. The shops are full of templates you have to design yourself, late at night, hoping it looks all right.</p>
-      <p>So we built the opposite. You answer a few fun questions and add your favourite photos, and we do the rest: a real, glossy magazine all about them, with their own cover, their own newspaper, their own awards night and passport, and little notes from the people who love them. It is ready in minutes and can reach them anywhere in the world.</p>
+      <p>So we built the opposite. You answer a few fun questions and add your favourite photos, and we do the rest: a real, glossy magazine all about them, with their own cover, a cover story written about them, full page photos, and notes from the people who love them. It is ready in minutes and can reach them anywhere in the world.</p>
       <h2>Our promise</h2>
       <ul class="ticks">
         <li>Every magazine is made for one person only. No two are ever the same.</li>
@@ -572,9 +572,9 @@ async function simplePages() {
     title: 'Privacy policy', description: 'How we look after your answers, photos and details.', path: '/privacy/',
     body: wrap('The small print', 'Privacy policy', `
       <p>This policy explains how ${esc(site.company)} (trading as ${esc(site.name)}) uses your information. We collect as little as we can, and only to make and deliver your magazine.</p>
-      <h2>What we collect</h2><ul><li>Your answers and photos for the magazine</li><li>Your email address, and the delivery address for printed copies</li><li>Payment details, which are handled by our payment provider. We never see your card number.</li></ul>
+      <h2>What we collect</h2><ul><li>Your answers and photos for the magazine</li><li>Notes, photos and voice notes that family and friends add through your private link, and any voice note you record yourself</li><li>Your email address, and the delivery address for printed copies</li><li>Payment details, which are handled by our payment provider. We never see your card number.</li></ul>
       <h2>How we use it</h2><p>Only to design, print, deliver and support your order. We never sell your information or post your photos anywhere.</p><p>If you join our reminder list, we use your email only to send occasional reminders and news, about one email a month. Every email has a way to leave, or just email us and we will remove you.</p>
-      <h2>How long we keep it</h2><p>Photos and answers are deleted 30 days after your order, or 30 days after a gift is delivered. If you send your magazine as a gift, we use the email address you give only to deliver it. Order records are kept as long as the law requires for tax and accounting.</p>
+      <h2>How long we keep it</h2><p>Photos and answers are deleted 30 days after your order, or 30 days after a gift is delivered. If you send your magazine as a gift, we use the email address you give only to deliver it. Order records are kept as long as the law requires for tax and accounting.</p><p>Family notes and their photos are deleted 60 days after they are written. Voice notes are kept so the code printed in the magazine keeps working for years. Only someone with the code can play one, and we delete any voice note as soon as you or the person who recorded it asks.</p>
       <h2>Who helps us</h2><p>Our website host (which receives your order form), our payment provider, and our print partner (for printed copies only). Each one only receives what it needs.</p>
       <h2>Cookies</h2><p>We do not use advertising cookies unless you say yes. If we add Pinterest measurement, you will be asked first.</p>
       <h2>Your rights</h2><p>You can ask to see, correct or delete your information at any time by emailing <a href="mailto:${esc(site.email)}">${esc(site.email)}</a>. You can also complain to the UK Information Commissioner's Office.</p>`),
@@ -639,15 +639,25 @@ async function simplePages() {
         <label class="field"><span>Your name, as you would sign a card</span><input name="from" maxlength="30" required autocomplete="given-name" placeholder="Grandma"></label>
         <label class="field"><span>Your note</span><textarea name="msg" maxlength="110" required placeholder="You light up every room you walk into. Love you always."></textarea></label>
         <small class="note-count" id="note-count">0 / 110</small>
+        <div class="note-extras">
+          <label class="photo-drop photo-mini note-photo"><span><b>+</b>Add a photo of you two <small>(optional)</small></span><input type="file" name="photo" accept="image/*"></label>
+          <div class="note-voice"><p class="note-voice-head"><b>Say it out loud too</b> <small>(optional)</small></p><p class="small">Record a voice note. A code printed beside your note lets them scan it and hear you, for years to come.</p><div id="note-rec"></div></div>
+        </div>
         <p class="small">How it will look in the magazine:</p>
         <p class="note-preview" id="note-preview">You light up every room you walk into. Love you always.<b>Grandma</b></p>
         <p class="rev-msg" id="note-msg" hidden></p>
         <button class="btn btn-big" type="submit">Add my note</button>
-        <p class="small">Only the person making the magazine sees your note, and it is printed in their magazine. We delete it after 60 days.</p>
+        <p class="small">Only the person making the magazine sees your note and photo, and they are printed in their magazine. We delete them after 60 days. A voice note is kept so the printed code keeps working, and we delete it whenever you ask.</p>
       </form>
       <div id="note-done" class="thanks" hidden><p class="kicker">Thank you</p><h2>Your note is in.</h2><p class="lead" id="note-done-lead">It will be printed in the magazine, signed with your name.</p><p class="small">Want to make one for someone you love?</p><a class="btn" href="/">See the magazines</a></div>
     </section>`,
     scripts: '<script type="module" src="/assets/note.js"></script>',
+  }));
+  // Where the codes printed in a magazine lead: a voice note, played in one tap.
+  await page('/listen/', layout({
+    title: 'A voice note for you', description: 'A voice note from the pages of your Cover Story magazine.', path: '/listen/', noindex: true,
+    body: `<section class="section listen-page"><div class="listen-card"><p class="kicker" id="listen-kicker">From the pages of your magazine</p><h1 id="listen-title">Someone recorded this, just for you</h1><button type="button" class="listen-play" id="listen-play" aria-label="Play the voice note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button><div class="listen-bar" aria-hidden="true"><i id="listen-fill"></i></div><audio id="listen-audio" preload="metadata"></audio><p class="small" id="listen-msg">Tap to listen. Turn your sound up.</p><p class="small listen-foot">Made with love, and <a href="/">Cover Story</a>.</p></div></section>`,
+    scripts: '<script type="module" src="/assets/listen.js"></script>',
   }));
   // A private gift page: the birthday love magazine in every design, each opening
   // the maker with the gift code filled in. Not linked anywhere, not indexed.
@@ -675,7 +685,7 @@ async function simplePages() {
 async function feeds() {
   const urls = ['/', ...mags.flatMap(m => designsFor(m).map(d => magPath(m, d))), '/make/', '/ideas/', ...ideas.map(i => `/ideas/${i.slug}/`), '/help/', '/about/', '/contact/', '/refunds/', '/privacy/', '/terms/'];
   await page('/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${abs(u)}</loc></url>`).join('\n')}\n</urlset>\n`);
-  await page('/robots.txt', `User-agent: *\nAllow: /\nDisallow: /note/\nDisallow: /gift/\nSitemap: ${abs('/sitemap.xml')}\n`);
+  await page('/robots.txt', `User-agent: *\nAllow: /\nDisallow: /note/\nDisallow: /listen/\nDisallow: /gift/\nSitemap: ${abs('/sitemap.xml')}\n`);
   // Pinterest catalog feed: one row per magazine and edition, so each shows up as a shoppable product.
   const csvCell = s => `"${String(s).replace(/"/g, '""')}"`;
   const rows = [['id', 'title', 'description', 'link', 'image_link', 'additional_image_link', 'price', 'availability', 'condition', 'brand', 'item_group_id', 'google_product_category', 'product_type']];
@@ -697,6 +707,7 @@ await cp(new URL('src/covers.js', root), new URL('assets/covers.js', dist));
 await cp(new URL('src/love.js', root), new URL('assets/love.js', dist));
 await cp(new URL('src/heart.js', root), new URL('assets/heart.js', dist));
 await cp(new URL('src/concepts.js', root), new URL('assets/concepts.js', dist));
+await cp(new URL('src/qr.js', root), new URL('assets/qr.js', dist));
 await home();
 for (const m of mags) for (const d of designsFor(m)) await magazinePage(m, d);
 await makerPage();

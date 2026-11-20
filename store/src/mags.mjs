@@ -16,16 +16,18 @@ export async function loadMags(root = new URL('..', import.meta.url)) {
     // The product page's "What's inside" list follows the new pages.
     const name = mag.fields[0].example;
     const say = x => String(x || '').replace(/\{\w+\}/g, k => (k === '{who}' || k === '{first}' || k === '{bare}' ? name : 'them'));
+    const asks = (mag.inside || []).some(x => /the question/i.test(x));
     mag.inside = [
       '24 full pages, all about them',
       mag.inside[1],
-      'Their own story page, with your photos beside your memories, and ten things you love about them',
+      'Your letter, set beneath a full page photo',
+      'A cover story feature written about them, with a pull quote and their fact file',
+      'Full page photos and a scrapbook, with up to 12 of your pictures',
       heart.concepts ? 'Pages written about them: a day in their life, the little things only you notice, and their own field guide' : `Pages we write just for them: "${say(heart.timeline?.title)}", "${say(heart.facts?.title)}" and "${say(heart.letters?.title)}"`,
-      `"${say(heart.world?.title)}" and a page of promises`,
-      (mag.gentle || mag.slug === 'pet-memorial-magazine') ? 'A gentle front page, poster and certificate' : 'A front page, perfume ad, movie poster and pull out poster',
-      'A quiz and word search made from your answers',
-      'Awards, a passport, a certificate and a notes page',
-      'A closing note from all of us at Cover Story',
+      `"${say(heart.world?.title)}", ten things you love and a page of promises`,
+      'Voices: a card from each friend or family member you invite',
+      'A pull out poster, a movie poster and one fun quiz',
+      asks ? 'At the very end: the big question' : 'A closing note from us and a proper back cover',
     ];
   }
   return mags;

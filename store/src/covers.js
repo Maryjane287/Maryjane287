@@ -1,6 +1,23 @@
 import { lovePages, LOVE_PICKS } from './love.js';
 import { heartPages, filler } from './heart.js';
 import { applyConcept } from './concepts.js';
+import qrcode from './qr.js';
+
+// Printed codes: a voice note (from family, or the buyer reading their letter)
+// or their song. Scanning opens the site's listen page, or the song itself.
+export const SITE = 'https://coverstorymagazines.netlify.app';
+export const voiceOk = v => /^[a-z0-9]{20}$/.test(String(v || ''));
+export const songOk = u => /^https:\/\/(open\.spotify\.com|spotify\.link|music\.apple\.com|(www\.|music\.|m\.)?youtube\.com|youtu\.be|(www\.)?soundcloud\.com|(www\.)?deezer\.com|deezer\.page\.link|(www\.)?tidal\.com|music\.amazon\.[a-z.]+)\/\S{3,300}$/.test(String(u || '').trim());
+export const listenUrl = (id, from) => `${SITE}/listen/?v=${id}${from ? `&f=${encodeURIComponent(String(from).slice(0, 24))}` : ''}`;
+export function qrSvg(text, cls = 'qr') {
+  const c = qrcode(0, 'M');
+  c.addData(String(text));
+  c.make();
+  const n = c.getModuleCount();
+  let d = '';
+  for (let y = 0; y < n; y++) for (let x = 0; x < n; x++) if (c.isDark(y, x)) d += `M${x} ${y}h1v1h-1z`;
+  return `<svg class="${cls}" viewBox="-2 -2 ${n + 4} ${n + 4}" shape-rendering="crispEdges" aria-hidden="true"><rect x="-2" y="-2" width="${n + 4}" height="${n + 4}" fill="#fff"/><path d="${d}" fill="#111"/></svg>`;
+}
 
 // Magazine cover and page renderer. Shared by the static build (Node) and the
 // magazine maker in the browser, so every cover looks the same everywhere.
@@ -543,7 +560,7 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
     ? [['Best cuddles', 'Every single day'], ['Most loyal friend', 'Undefeated'], ['Best at making us smile', 'Year after year'], ['Lifetime achievement', 'In being loved']]
     : xmas ? [['Best Christmas jumper', 'By a landslide', v.jumper], ['Top of the naughty list', 'Unanimous', v.naughty], ['Loudest cracker puller', 'Caught on camera'], ['Champion of the leftovers', 'Undefeated']]
     : [['Best smile', 'By a landslide'], ['Funniest person in the room', 'Unanimous'], ['World\'s best hugs', 'Ten years running'], ['Lifetime achievement', 'In being wonderful']], 4);
-  const friendNotes = [1, 2, 3, 4].map(i => [String(values[`note${i}_from`] || '').trim(), String(values[`note${i}_msg`] || '').trim()]).filter(([, m]) => m);
+  const friendNotes = [1, 2, 3, 4].map(i => [String(values[`note${i}_from`] || '').trim(), String(values[`note${i}_msg`] || '').trim(), i]).filter(([, m]) => m);
   const noteBox = ([f, m]) => `<div class="note-full"><p>${esc(m)}</p><b>${f ? esc(f) : 'With love'}</b></div>`;
   const notesHtml = [...friendNotes.map(noteBox), ...Array(4 - friendNotes.length).fill('<div><i></i><i></i><i></i></div>')].join('');
   const mrz = s => String(s).toUpperCase().replace(/[^A-Z]+/g, '<').replace(/^<|<$/g, '');
@@ -705,7 +722,12 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
     const nums = own.filter(f => /^\s*\d[\d,.]*\s*$/.test(String(v[f.id] || ''))).slice(0, 2).map(f => [esc(v[f.id]), t(L[f.id] || f.label)]);
     const bigNums = [...nums, ['100%', gentle ? 'Loved, always' : 'Loved'], ['1', 'One of a kind']].slice(0, 4);
     const voices = friendNotes.length
-      ? friendNotes.map(([f, m]) => `<figure class="ed-v"><i>${esc((f || '?').trim()[0] || '?').toUpperCase()}</i><blockquote>${esc(m)}</blockquote><figcaption>${f ? esc(f) : 'With love'}</figcaption></figure>`).join('')
+      ? friendNotes.map(([f, m, i]) => {
+        const face = photos[`note${i}`] ? `<i class="ed-v-ph"><img src="${esc(photos[`note${i}`])}" alt=""></i>` : `<i>${esc((f || '?').trim()[0] || '?').toUpperCase()}</i>`;
+        const vid = values[`note${i}_voice`];
+        const code = voiceOk(vid) ? `<span class="ed-v-qr">${qrSvg(listenUrl(vid, f))}<small>Scan to hear ${f ? esc(String(f).split(/\s+/)[0]) : 'it'}</small></span>` : '';
+        return `<figure class="ed-v${code ? ' ed-v-voice' : ''}">${face}<blockquote>${esc(m)}</blockquote><div class="ed-v-foot"><figcaption>${f ? esc(f) : 'With love'}</figcaption>${code}</div></figure>`;
+      }).join('') + Array(4 - friendNotes.length).fill('<figure class="ed-v ed-v-blank"><i>&#9829;</i><span></span><span></span><span></span><figcaption>From</figcaption></figure>').join('')
       : Array(4).fill('<figure class="ed-v ed-v-blank"><i>&#9829;</i><span></span><span></span><span></span><figcaption>From</figcaption></figure>').join('');
     // Lists become editorial pages: a tall photo beside them, or above them.
     const grab = (html, re) => (html.match(re) || [])[1] || '';
@@ -716,7 +738,7 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
     const editorial = [
       pages[0],
       ed('ed-contents', `${pic(slot(3, 1), 'ed-c-ph')}<div class="ed-c-col"><p class="ed-k">Inside this issue</p><h3>Inside</h3><ol class="ed-toc">${toc.map(([n, x]) => `<li><b>${n}</b><span>${t(x)}</span></li>`).join('')}</ol><p class="ed-c-note">Made for ${esc(who)}, with love.</p></div>`),
-      ed(`ed-letter${msg.length > 260 ? ' ed-long' : msg.length > 150 ? ' ed-mid' : ''}`, `${pic(slot(0, 0), 'ed-l-ph')}<div class="ed-l-body"><p class="ed-k">${esc(mag.letterTitle || 'A letter for you')}</p><h3>Dear ${esc(greet)},</h3><p class="ed-l-txt">${esc(msg)}</p><p class="ed-sign">With love, ${esc(from)}</p></div>`),
+      ed(`ed-letter${msg.length > 260 ? ' ed-long' : msg.length > 150 ? ' ed-mid' : ''}`, `${pic(slot(0, 0), 'ed-l-ph')}${voiceOk(values.v_letter) ? `<div class="ed-l-qr">${qrSvg(listenUrl(values.v_letter, from))}<span>Scan to hear<br>me say it</span></div>` : ''}<div class="ed-l-body"><p class="ed-k">${esc(mag.letterTitle || 'A letter for you')}</p><h3>Dear ${esc(greet)},</h3><p class="ed-l-txt">${esc(msg)}</p><p class="ed-sign">With love, ${esc(from)}</p></div>`),
       ed('ed-open', `${pic(slot(1, 2), 'ed-o-ph')}<div class="ed-o-shade"></div><div class="ed-o-txt"><p class="ed-k">The cover story</p><h3 style="font-size:calc(${fit(String(t(H.story?.title || who)), 150, 0.5, 13)} * var(--cq))">${t(H.story?.title || who)}</h3><p class="ed-o-dek">${leadLine(s, mag)}</p></div>`),
       ed('ed-article', `<div class="ed-pad"><p class="ed-k">The cover story</p>${pull ? `<blockquote class="ed-pull${pull.length > 130 ? ' ed-pull-s' : ''}">&ldquo;${esc(pull)}&rdquo;</blockquote>` : ''}<div class="ed-cols"><p class="ed-drop">Ask anyone who ${knew} ${esc(first)} to sum them up${words ? `, and you will hear the same words: ${words}` : ''}. ${t('{from}')} told us the rest of the story.</p>${ch.filter(c => !/^\s*\d+\s*$/.test(String(c[1]))).map(([l, x]) => `<h4>${t(l)}</h4><p>${esc(x)}</p>`).join('')}</div><p class="ed-hand">${t(H.story?.hand || '')}</p></div>`),
       ed('ed-file', `${pic(slot(4, 1), 'ed-f-ph')}<div class="ed-f-shade"></div><p class="ed-k ed-f-k">The fact file</p><h3 class="ed-f-name" style="font-size:calc(${fit(String(first).toUpperCase(), 86, 0.5, 22)} * var(--cq))">${esc(String(first).toUpperCase())}</h3><dl class="ed-fl">${facts6.map(f => `<div><dt>${t(L[f.id] || f.label)}</dt><dd>${esc(v[f.id])}</dd></div>`).join('')}</dl>`),
@@ -737,7 +759,7 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
       pages[6],
       pages[22],
       pages[23],
-      ed('ed-back', `${pic(slot(2, 1), 'ed-b-ph')}<div class="ed-b-shade"></div><div class="ed-b-in"><p class="ed-k">Made with love for</p><h3 style="font-size:calc(${fit(String(who), 84, 0.5, 16)} * var(--cq))">${esc(who)}</h3><p class="ed-b-q">${words ? `&ldquo;${words}&rdquo;` : ''}</p><p class="ed-b-from">From ${esc(from)}</p></div><div class="ed-b-foot"><span>Cover Story</span>${barcode()}</div>`),
+      ed('ed-back', `${pic(slot(2, 1), 'ed-b-ph')}<div class="ed-b-shade"></div><div class="ed-b-in"><p class="ed-k">Made with love for</p><h3 style="font-size:calc(${fit(String(who), 84, 0.5, 16)} * var(--cq))">${esc(who)}</h3><p class="ed-b-q">${words ? `&ldquo;${words}&rdquo;` : ''}</p><p class="ed-b-from">From ${esc(from)}</p></div><div class="ed-b-foot"><span>Cover Story</span>${songOk(values.songLink) ? `<div class="ed-song">${qrSvg(String(values.songLink).trim())}<span>Scan to play<b>${esc(v.song && String(v.song).length < 34 ? v.song : 'our song')}</b></span></div>` : ''}${barcode()}</div>`),
     ];
     return editorial.map((html, i) => i ? renum(html, i + 1) : html);
   }

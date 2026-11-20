@@ -614,3 +614,37 @@ p { margin: 0 0 1em; }
 .glance > figure > figcaption { margin-top: 12px; font-size: 15px; color: var(--soft); line-height: 1.4; }
 .glance > figure > figcaption b { display: block; font: 400 21px/1.2 'DM Serif Display', serif; color: var(--ink); margin-bottom: 2px; }
 @media (max-width: 720px) { .glance { grid-template-columns: 1fr 1fr; gap: 22px 14px; } .glance > figure > figcaption { font-size: 13px; } .glance > figure > figcaption b { font-size: 17px; } }
+
+/* Voice notes and photos on the family note page, the maker and the listen page. */
+.note-extras { display: grid; grid-template-columns: 130px 1fr; gap: 16px; align-items: start; }
+.note-photo { aspect-ratio: 4 / 5; font-size: 12px; }
+.note-photo small { display: block; font-weight: 600; opacity: .7; }
+.note-voice-head { margin: 0 0 4px; }
+.note-voice .small { margin: 0 0 10px; }
+.rec-btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 999px; border: 2px solid var(--coral); background: #fff; color: var(--ink); font: 700 15px/1 'Outfit', sans-serif; cursor: pointer; }
+.rec-btn:hover { background: var(--tint); }
+.rec-dot { width: 12px; height: 12px; border-radius: 50%; background: #e0245e; flex: none; }
+.rec-live { background: #fff0f4; border-color: #e0245e; }
+.rec-live .rec-dot { animation: rec-pulse 1s ease-in-out infinite; }
+@keyframes rec-pulse { 50% { transform: scale(.55); opacity: .5; } }
+.rec-hint { margin: 8px 0 0; }
+.rec-done { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.rec-done audio { width: 100%; max-width: 320px; height: 40px; }
+.rec-err { color: #b3261e; margin: 0 0 8px; }
+@media (max-width: 560px) { .note-extras { grid-template-columns: 1fr; } .note-photo { max-width: 160px; } }
+
+.listen-page { min-height: 70vh; display: grid; place-items: center; }
+.listen-card { width: min(100%, 460px); margin: 0 auto; text-align: center; background: var(--paper); border-radius: var(--radius); padding: 40px 28px; box-shadow: var(--shadow); }
+.listen-card h1 { font-size: clamp(28px, 6vw, 40px); margin: 6px 0 26px; }
+.listen-play { width: 112px; height: 112px; border-radius: 50%; border: 0; background: var(--coral); color: #fff; display: grid; place-items: center; margin: 0 auto 20px; cursor: pointer; box-shadow: 0 12px 30px rgba(180, 68, 106, .35); transition: transform .2s; }
+.listen-play:hover { transform: scale(1.05); }
+.listen-play svg { width: 46px; height: 46px; fill: currentColor; margin-left: 6px; }
+.listen-play.on svg path { d: path("M7 5h4v14H7zM13 5h4v14h-4z"); }
+.listen-play.on svg { margin-left: 0; }
+.listen-bar { height: 6px; border-radius: 6px; background: var(--tint); overflow: hidden; margin: 0 0 14px; }
+.listen-bar i { display: block; height: 100%; width: 0; background: var(--coral); transition: width .25s linear; }
+.listen-foot { margin-top: 18px; opacity: .8; }
+.talk-extras .talk-row { margin: 6px 0 14px; }
+.talk-head { margin: 0 0 10px; font-size: 14px; color: var(--soft); }
+.talk-head b { display: block; color: var(--ink); font-size: 15px; }
+.talk-saved { font-weight: 700; color: var(--coral-dk); }

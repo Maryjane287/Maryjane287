@@ -8,6 +8,7 @@ export default async () => {
   const removed = await cleanOldOrders(getStore({ name: 'orders', consistency: 'strong' }));
   console.log(`Removed ${removed} old order files`);
   console.log(`Removed ${await cleanOldNotes(getStore({ name: 'notes', consistency: 'strong' }))} old family notes`);
+  console.log(`Removed ${await cleanOldNotes(getStore({ name: 'note-photos', consistency: 'strong' }))} old note photos`);
 };
 
 export const config = { schedule: '@daily' };
