@@ -305,5 +305,6 @@
       "That someone is {from}. And from everything they told us, this home is going to be full of love."
     ],
     "wish": "Welcome home, {who}. May every day here be a happy one."
-  }
+  },
+  "concepts": "family"
 }

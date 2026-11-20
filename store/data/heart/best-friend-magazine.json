@@ -301,5 +301,7 @@
       "That someone is {from}. And from everything they told us, you are loved more than you could ever know."
     ],
     "wish": "Here is to you, {who}, and to many more adventures."
-  }
+  },
+  "concepts": true,
+  "conceptWho": "bestie"
 }

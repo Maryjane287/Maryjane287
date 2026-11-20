@@ -706,3 +706,27 @@
 .lv-sci .lv-fact { padding: 2.2cqw 2.6cqw; }
 /* One photo only: a single, larger print in the photo spread instead of the same picture twice */
 .pg-ph-solo { left: 12cqw; right: 12cqw; top: 20cqw; height: 86cqw; transform: rotate(-2.5deg); }
+/* The story page as a little album: each memory with its own photo. */
+.lv-polas { display: grid; grid-template-columns: 1fr 1fr; gap: 4cqw 3.4cqw; margin: 1cqw 0 3cqw; }
+.lv-pola { margin: 0; background: #fff; padding: 2cqw 2cqw 2.6cqw; border-radius: .8cqw; box-shadow: 0 1.2cqw 3cqw rgba(60,30,10,.22); transform: rotate(-2deg); }
+.lv-p2 { transform: rotate(2.2deg); } .lv-p3 { transform: rotate(1.4deg); } .lv-p4 { transform: rotate(-1.6deg); }
+.lv-pola img { display: block; width: 100% !important; height: 27cqw !important; max-height: none; object-fit: cover; border-radius: .4cqw; position: static !important; }
+.lv-pola figcaption { font-family: 'Caveat', cursive; font-weight: 600; font-size: 3.8cqw; line-height: 1.05; color: var(--lv-plum); margin-top: 1.6cqw; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
+.lv-pola figcaption span { display: block; font-family: 'Outfit', sans-serif; font-size: 2cqw; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--lv-brown); margin-bottom: .8cqw; }
+.lv-pola-txt { display: grid; align-content: center; background: var(--lv-card); min-height: 34cqw; }
+.lv-pola-txt figcaption { font-size: 5.2cqw; margin: 0; }
+.lv-album h3 { margin-bottom: 3cqw; }
+/* Our written pages about them are shorter than the old fact pages, so they get room to breathe. */
+.pg.lv-roomy .lv-line { gap: 3.4cqw; margin-top: 1.4cqw; }
+.pg.lv-roomy .lv-line b { font-size: 4.8cqw; }
+.pg.lv-roomy .lv-line p { font-size: 3.1cqw; line-height: 1.28; }
+.pg.lv-roomy .lv-year { font-size: 2.9cqw; }
+.pg.lv-roomy .lv-us b { font-size: 5.4cqw; }
+.pg.lv-roomy .lv-line .lv-us { padding: 2.8cqw 3.6cqw; }
+.pg.lv-roomy .lv-facts { gap: 2.4cqw; margin-bottom: 2.6cqw; }
+.pg.lv-roomy .lv-fact { padding: 2.8cqw 3cqw; }
+.pg.lv-roomy .lv-fact i { width: 6.2cqw; height: 6.2cqw; margin-bottom: 1.2cqw; }
+.pg.lv-roomy .lv-fact svg { width: 4.2cqw; height: 4.2cqw; }
+.pg.lv-roomy .lv-fact b { font-size: 4.4cqw; margin-bottom: .8cqw; }
+.pg.lv-roomy .lv-fact p { font-size: 2.95cqw; line-height: 1.25; }
+.pg.lv-roomy .lv-hand { font-size: 4.8cqw; }

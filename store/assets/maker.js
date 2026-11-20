@@ -3,6 +3,7 @@
 import { renderCover, renderPages, renderFullMagazine, renderCardSet, PALETTES, DESIGNS, designsFor, baseDesign, esc } from './covers.js';
 import { renderAndUpload, finishOrder } from './order-pdf.js';
 import { LOVE_PICKS } from './love.js';
+import { PEOPLE, packOf, conceptOf } from './concepts.js';
 
 const mags = JSON.parse(document.getElementById('mags').textContent);
 const checkout = JSON.parse(document.getElementById('site-checkout').textContent);
@@ -92,9 +93,18 @@ const FUN = [
 function lovePicks(m) {
   const on = String(state.values.x_loves || '').split('\n').filter(Boolean);
   const P = m.heart?.picks;
-  const items = m.love ? LOVE_PICKS : P.items.map(x => x.replace(/\{who\}/g, state.values.name || m.fields[0].example));
+  const items = m.love ? LOVE_PICKS : (packOf(m.heart)?.people ? PEOPLE[conceptOf(state.values, m.heart).who].picks : P.items).map(x => x.replace(/\{who\}/g, state.values.name || m.fields[0].example));
   const legend = m.love ? 'Ten things you love about her' : P.legend;
   return `<fieldset class="love-picks wide"><legend>${esc(legend)} <small>(tap up to ten)</small></legend><p class="small">Tap the ones that are true. Any you leave out, we fill with lovely ones for you.</p><div class="pick-chips">${items.map(x => `<button type="button" class="chip" data-love="${esc(x)}" aria-pressed="${on.includes(x)}">${esc(x)}</button>`).join('')}</div><small class="pick-count">${on.length} of 10 chosen</small></fieldset>`;
+}
+
+// Two taps that change the pages we write: who they are to you, and what they are like.
+function conceptPick(m) {
+  const pack = packOf(m.heart);
+  if (!pack) return '';
+  const row = (key, title, hint, list) => `<fieldset class="concept-pick wide"><legend>${esc(title)}</legend><p class="small">${esc(hint)}</p><div class="pick-chips">${Object.entries(list).filter(([, x]) => !x.hidden).map(([k, x]) => `<button type="button" class="chip" data-concept="${key}" data-val="${k}" aria-pressed="${state.values[key] === k}">${esc(x.label)}</button>`).join('')}</div></fieldset>`;
+  return (pack.people && !m.heart.conceptWho ? row('x_who', 'Who are they to you?', 'So the little things, promises and love list sound like you two.', pack.people) : '')
+    + (Object.keys(pack.types).length > 1 ? row('x_type', pack.ask || 'Which sounds most like them?', 'We write their day in the life and their field guide to match.', pack.types) : '');
 }
 
 function funPages(m) {
@@ -119,8 +129,8 @@ function renderFields() {
   };
   const extra = text.filter(f => f.optional);
   // Optional questions sit in their own box: skip any, and that page swaps to one we write.
-  const story = extra.length ? `<fieldset class="fun-pages wide"><legend>${esc(m.heart?.story?.legend || 'Your love story')} <small>(optional)</small></legend><p class="small">${esc(m.heart?.story?.hint || 'Only if you have a minute. Skip any of these and we fill those pages with beautiful ones we have written for her.')}</p><div class="fun-grid">${extra.map(field).join('')}</div></fieldset>` : '';
-  $('#fields').innerHTML = text.filter(f => !f.optional).map(field).join('') + (m.love || m.heart?.picks ? lovePicks(m) : '') + story + funPages(m) + `<fieldset class="friend-notes wide"><legend>Little notes from family and friends <small>(optional)</small></legend><p class="small">Ask a few people who love them for one sweet line each. They all appear together on a special page in the magazine, each one signed with their name.</p>${familyInvite()}${[1, 2, 3, 4].map(i => `<div class="friend-note"><input type="text" data-f="note${i}_from" maxlength="30" placeholder="${['Grandma', 'Uncle Sam', 'Emma', 'Leo'][i - 1]}" aria-label="Note ${i}: who it is from" value="${esc(state.values[`note${i}_from`] || '')}"><input type="text" data-f="note${i}_msg" maxlength="110" placeholder="${['You make every room brighter.', 'Still the best dancer I know!', 'Here is to many more adventures together.', 'Love you to the moon and back.'][i - 1]}" aria-label="Note ${i}: their message" value="${esc(state.values[`note${i}_msg`] || '')}"></div>`).join('')}</fieldset><div class="photos">${photos.map(f => `
+  const story = extra.length ? `<fieldset class="fun-pages wide"><legend>${esc(m.heart?.story?.legend || 'Your love story')} <small>(optional)</small></legend><p class="small">${esc(m.heart?.story?.hint || 'Only if you have a minute. Skip any of these and we fill those pages with beautiful ones we have written for her.')}</p><div class="fun-grid">${extra.map(f => f.chapter ? `<div class="story-q wide">${field(f)}<label class="photo-drop photo-mini"><span><b>+</b>Add a photo of this</span><input type="file" name="p_${f.id}" data-photo="p_${f.id}" accept="image/*"></label></div>` : field(f)).join('')}</div><p class="small story-tip">Add a photo to any memory and it sits right beside the story in the magazine, like a little album.</p></fieldset>` : '';
+  $('#fields').innerHTML = text.filter(f => !f.optional).map(field).join('') + conceptPick(m) + (m.love || m.heart?.picks ? lovePicks(m) : '') + story + funPages(m) + `<fieldset class="friend-notes wide"><legend>Little notes from family and friends <small>(optional)</small></legend><p class="small">Ask a few people who love them for one sweet line each. They all appear together on a special page in the magazine, each one signed with their name.</p>${familyInvite()}${[1, 2, 3, 4].map(i => `<div class="friend-note"><input type="text" data-f="note${i}_from" maxlength="30" placeholder="${['Grandma', 'Uncle Sam', 'Emma', 'Leo'][i - 1]}" aria-label="Note ${i}: who it is from" value="${esc(state.values[`note${i}_from`] || '')}"><input type="text" data-f="note${i}_msg" maxlength="110" placeholder="${['You make every room brighter.', 'Still the best dancer I know!', 'Here is to many more adventures together.', 'Love you to the moon and back.'][i - 1]}" aria-label="Note ${i}: their message" value="${esc(state.values[`note${i}_msg`] || '')}"></div>`).join('')}</fieldset><div class="photos">${photos.map(f => `
     <label class="photo-drop"><span><b>+</b>${esc(f.label)}</span><input type="file" name="${f.id}" data-photo="${f.id}" accept="image/*"></label>`).join('')}</div>`;
   updateCounts();
 }
@@ -286,6 +296,20 @@ $('#fields').addEventListener('input', e => {
 });
 
 $('#fields').addEventListener('click', e => {
+  const c = e.target.closest('[data-concept]');
+  if (!c) return;
+  const key = c.dataset.concept;
+  state.values[key] = state.values[key] === c.dataset.val ? '' : c.dataset.val;
+  // A new person means a new love list to tap from.
+  if (key === 'x_who') state.values.x_loves = '';
+  store.set(`maker:${state.slug}`, state.values);
+  document.querySelectorAll(`[data-concept="${key}"]`).forEach(x => x.setAttribute('aria-pressed', String(state.values[key] === x.dataset.val)));
+  const picks = document.querySelector('.love-picks');
+  if (picks && key === 'x_who') picks.outerHTML = lovePicks(mag());
+  update();
+});
+
+$('#fields').addEventListener('click', e => {
   const b = e.target.closest('[data-love]');
   if (!b) return;
   let on = String(state.values.x_loves || '').split('\n').filter(Boolean);
@@ -330,6 +354,7 @@ $('#fields').addEventListener('change', async e => {
   drop.querySelector('img')?.remove();
   drop.insertAdjacentHTML('afterbegin', `<img src="${dataUrl}" alt="">`);
   state.tab = id === 'photo1' ? 0 : 3;
+  if (id.startsWith('p_')) state.tab = 0;
   renderTabs();
   update();
 });

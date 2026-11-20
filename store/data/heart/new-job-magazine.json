@@ -288,5 +288,6 @@
       "That someone is {from}. And from everything they told us, this is only the beginning."
     ],
     "wish": "Congratulations, {who}. Go and be brilliant."
-  }
+  },
+  "concepts": true
 }

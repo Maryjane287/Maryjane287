@@ -288,5 +288,6 @@
       "That someone is {from}. And from everything they told us, you changed things for them in a way they will never forget."
     ],
     "wish": "Thank you, {who}. For everything."
-  }
+  },
+  "concepts": true
 }

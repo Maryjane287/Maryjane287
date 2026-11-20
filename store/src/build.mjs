@@ -61,7 +61,7 @@ function layout({ title, description, path, body, og = {}, jsonld, bodyClass = '
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#fdf3f5">
+<meta name="theme-color" content="#fae3e9">
 <meta name="p:domain_verify" content="c34b640fddc5572ca6d8e32b76436aef">
 <title>${esc(fullTitle)}</title>
 <meta name="description" content="${esc(description)}">
@@ -308,6 +308,14 @@ ${tickerHtml}
   ${steps}
   <p class="center"><a class="btn btn-big" href="/make/">Start yours now</a></p>
 </section>
+<section class="section why" id="why">
+  <div class="section-head"><p class="kicker">Why Cover Story</p><h2>Other magazine makers hand you a template. We hand you a finished gift.</h2><p>Most personalised magazines are a blank editor and an evening of work. We do the writing, the design and the hard part, so you get the fun part: watching their face.</p></div>
+  <div class="why-table">
+    <div class="why-head" aria-hidden="true"><span></span><span>The usual way</span><span>With Cover Story</span></div>
+    <ul><li><span class="why-what">Time it takes</span><span class="why-them">Hours of dragging text boxes and photos around</span><span class="why-us">About five minutes of fun questions</span></li><li><span class="why-what">The words</span><span class="why-them">You write every page yourself</span><span class="why-us">We write all 24 pages for you, warm and funny, from your answers</span></li><li><span class="why-what">Friends and family</span><span class="why-them">Chase everyone for messages, then copy them in</span><span class="why-us">Send one link. Everyone adds a note, and they never find out</span></li><li><span class="why-what">Left it late?</span><span class="why-them">Wait days for a proof or a parcel</span><span class="why-us">Your PDF arrives in minutes, even on Christmas morning</span></li><li><span class="why-what">Far away</span><span class="why-them">Often posted from abroad, slow and costly</span><span class="why-us">Printed near them anywhere in the world, or sent by email in seconds</span></li><li><span class="why-what">Before you pay</span><span class="why-them">Pay first and hope it looks right</span><span class="why-us">See the cover and every page while you fill it in</span></li><li><span class="why-what">If something is wrong</span><span class="why-them">Your typo, your problem</span><span class="why-us">Spot a mistake? We fix it free</span></li></ul>
+  </div>
+  <p class="center"><a class="btn btn-big" href="/make/">See yours take shape</a></p>
+</section>
 <section class="section">
   <div class="section-head"><p class="kicker">Real magazines, made up names</p><h2>Save your favourites for later</h2><p>Tap Save on any cover to keep it on your Pinterest board.</p></div>
   <div class="wall wall-short">${wallHtml}</div>
@@ -366,6 +374,7 @@ async function magazinePage(mag, design = baseDesign(mag)) {
   <div class="mag-info">
     <p class="kicker">${esc(mag.occasion)}</p>
     <h1>${esc(name)}</h1>
+    <ul class="badges"><li><b>24</b> pages</li><li><b>${designIds.length}</b> designs</li><li>PDF in <b>minutes</b></li><li>Printed and <b>posted</b></li></ul>
     <p class="lead">${esc(mag.description)}</p>
     <p class="mag-price">From ${fromPrice}</p>
     <a class="btn btn-big" href="${makeUrl}">Make yours in 5 minutes</a>
@@ -375,7 +384,11 @@ async function magazinePage(mag, design = baseDesign(mag)) {
     <p class="chips">${mag.keywords.map(k => `<span>${esc(k)}</span>`).join('')}</p>
   </div>
 </section>
-<section class="section">
+${mag.heart ? `<section class="section glance-sec">
+  <div class="section-head"><p class="kicker">Inside this issue</p><h2>Written about them, page by page</h2><p>Not a template you fill in. Every page below is built from your answers, so it sounds like you and looks like them.</p></div>
+  <div class="glance">${[[2, 'Your letter', 'Your own words, beautifully set'], [3, 'Their story', 'Your memories, with photos if you like'], [8, 'A day in their life', 'Written to match their personality'], [10, 'The little things', 'What only you would notice'], [11, 'Their field guide', 'Funny, true and all about them'], [14, 'The pull out poster', 'Their photo, front and centre']].map(([i, t, d]) => inside[i] ? `<figure><div class="glance-pg">${inside[i]}</div><figcaption><b>${t}</b>${d}</figcaption></figure>` : '').join('')}</div>
+</section>
+` : ''}<section class="section">
   <div class="section-head"><p class="kicker">${designIds.length} designs</p><h2>Pick the look they will love</h2><p>Same questions, same price. Every design is made from your answers and photos.</p></div>
   <div class="design-grid">${designCards}</div>
 </section>
@@ -683,6 +696,7 @@ await cp(new URL('pins/', root), new URL('pins/', dist), { recursive: true });
 await cp(new URL('src/covers.js', root), new URL('assets/covers.js', dist));
 await cp(new URL('src/love.js', root), new URL('assets/love.js', dist));
 await cp(new URL('src/heart.js', root), new URL('assets/heart.js', dist));
+await cp(new URL('src/concepts.js', root), new URL('assets/concepts.js', dist));
 await home();
 for (const m of mags) for (const d of designsFor(m)) await magazinePage(m, d);
 await makerPage();
