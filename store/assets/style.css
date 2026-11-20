@@ -1,6 +1,6 @@
 [hidden] { display: none !important; }
 :root {
-  --cream: #fdf3f5;
+  --cream: #fae3e9;
   --paper: #fff;
   --ink: #1f0f17;
   --soft: #5d5660;
@@ -10,7 +10,7 @@
   --pink: #ef7fa2;
   --mint: #c9d8c5;
   --sky: #c9d3e0;
-  --tint: #f9dfe7;
+  --tint: #f5cdd8;
   --radius: 22px;
   --shadow: 0 18px 40px -18px rgba(22, 19, 24, .3);
   --gutter: clamp(16px, 4vw, 48px);
