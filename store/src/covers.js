@@ -1,5 +1,6 @@
 import { lovePages, LOVE_PICKS } from './love.js';
 import { heartPages, filler } from './heart.js';
+import { applyConcept } from './concepts.js';
 
 // Magazine cover and page renderer. Shared by the static build (Node) and the
 // magazine maker in the browser, so every cover looks the same everywhere.
@@ -60,6 +61,8 @@ export function fillValues(mag, values = {}) {
     // Optional questions stay empty, so our example words never print in someone's magazine.
     out[f.id] = v || (f.optional ? '' : f.example);
   }
+  // The two concept taps (who they are to you, what they are like) are not fields.
+  for (const k of ['x_who', 'x_type']) if (values[k]) out[k] = String(values[k]);
   return out;
 }
 
@@ -611,7 +614,7 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
   if (mag.heart) {
     // The reworked magazines: the buyer's answers plus pages we write for each
     // occasion (data/heart/<slug>.json), so every issue feels personal and loved.
-    const H = mag.heart;
+    const H = applyConcept(mag.heart, v);
     const num = (html, n) => html.replace(/<\/div>$/, `<span class="pg-num">${n}</span></div>`);
     const t = filler({ ...v, who, from, first, bare });
     const own = facts.filter(f => !f.optional);

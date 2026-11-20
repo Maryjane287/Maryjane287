@@ -691,6 +691,7 @@ await cp(new URL('pins/', root), new URL('pins/', dist), { recursive: true });
 await cp(new URL('src/covers.js', root), new URL('assets/covers.js', dist));
 await cp(new URL('src/love.js', root), new URL('assets/love.js', dist));
 await cp(new URL('src/heart.js', root), new URL('assets/heart.js', dist));
+await cp(new URL('src/concepts.js', root), new URL('assets/concepts.js', dist));
 await home();
 for (const m of mags) for (const d of designsFor(m)) await magazinePage(m, d);
 await makerPage();

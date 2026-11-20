@@ -326,33 +326,33 @@
       },
       {
         "id": "talent",
-        "label": "Their secret talent",
+        "label": "Something they are secretly brilliant at",
         "example": "Finds anything you have lost in under a minute",
         "max": 70
       },
       {
         "id": "obsession",
-        "label": "Their current obsession",
+        "label": "What they cannot stop talking about lately",
         "example": "Iced coffee and true crime podcasts",
         "max": 60
       },
       {
         "id": "words",
-        "label": "Three words that sum them up",
+        "label": "Three words that are so them",
         "example": "Kind, chaotic, magnificent",
         "max": 40
       },
       {
         "id": "moment",
-        "label": "A moment you will never forget",
+        "label": "A moment with them you would happily live again tomorrow",
         "example": "Singing the wrong words to a song at a wedding, very loudly, and getting a standing ovation",
         "type": "textarea",
         "max": 220
       },
       {
         "id": "message",
-        "label": "Your message to them",
-        "example": "Happy birthday to the funniest, kindest person I know. Here is to another year of you being wonderful.",
+        "label": "What do you wish you told them more often? (This becomes your letter on page 3)",
+        "example": "I do not say it enough, but you are the first person I call with good news and bad. Thank you for being exactly you. Happy birthday.",
         "type": "textarea",
         "max": 400
       },
@@ -386,7 +386,11 @@
           "age": "30",
           "talent": "Finds anything you have lost in under a minute",
           "obsession": "Iced coffee and true crime podcasts",
-          "words": "Kind, chaotic, magnificent"
+          "words": "Kind, chaotic, magnificent",
+          "s_met": "Sharing the last umbrella at a bus stop in the pouring rain",
+          "s_kind": "Drove two hours at midnight when my car broke down, and brought snacks",
+          "x_who": "bestie",
+          "x_type": "party"
         },
         "photos": {
           "photo1": "/assets/samples/birthday-magazine-0.jpg",
@@ -407,7 +411,9 @@
           "age": "40",
           "talent": "Can reverse park anything, first time",
           "obsession": "Sourdough. Still. Somehow.",
-          "words": "Loyal, legendary, loud"
+          "words": "Loyal, legendary, loud",
+          "x_who": "dad",
+          "x_type": "gogetter"
         },
         "photos": {
           "photo1": "/assets/samples/birthday-magazine-1.jpg"
@@ -426,7 +432,9 @@
           "age": "21",
           "talent": "Knows every word to every song, ever",
           "obsession": "Tiny plants and big earrings",
-          "words": "Bright, brave, brilliant"
+          "words": "Bright, brave, brilliant",
+          "x_who": "sibling",
+          "x_type": "creative"
         },
         "photos": {
           "photo1": "/assets/samples/birthday-magazine-2.jpg"
@@ -445,7 +453,9 @@
           "age": "50",
           "talent": "Makes friends in any queue in the world",
           "obsession": "Crosswords and garden birds",
-          "words": "Wise, warm, wildly funny"
+          "words": "Wise, warm, wildly funny",
+          "x_who": "grand",
+          "x_type": "calm"
         },
         "photos": {
           "photo1": "/assets/samples/birthday-magazine-3.jpg"
