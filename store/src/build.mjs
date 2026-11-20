@@ -308,6 +308,14 @@ ${tickerHtml}
   ${steps}
   <p class="center"><a class="btn btn-big" href="/make/">Start yours now</a></p>
 </section>
+<section class="section why" id="why">
+  <div class="section-head"><p class="kicker">Why Cover Story</p><h2>Other magazine makers hand you a template. We hand you a finished gift.</h2><p>Most personalised magazines are a blank editor and an evening of work. We do the writing, the design and the hard part, so you get the fun part: watching their face.</p></div>
+  <div class="why-table">
+    <div class="why-head" aria-hidden="true"><span></span><span>The usual way</span><span>With Cover Story</span></div>
+    <ul><li><span class="why-what">Time it takes</span><span class="why-them">Hours of dragging text boxes and photos around</span><span class="why-us">About five minutes of fun questions</span></li><li><span class="why-what">The words</span><span class="why-them">You write every page yourself</span><span class="why-us">We write all 24 pages for you, warm and funny, from your answers</span></li><li><span class="why-what">Friends and family</span><span class="why-them">Chase everyone for messages, then copy them in</span><span class="why-us">Send one link. Everyone adds a note, and they never find out</span></li><li><span class="why-what">Left it late?</span><span class="why-them">Wait days for a proof or a parcel</span><span class="why-us">Your PDF arrives in minutes, even on Christmas morning</span></li><li><span class="why-what">Far away</span><span class="why-them">Often posted from abroad, slow and costly</span><span class="why-us">Printed near them anywhere in the world, or sent by email in seconds</span></li><li><span class="why-what">Before you pay</span><span class="why-them">Pay first and hope it looks right</span><span class="why-us">See the cover and every page while you fill it in</span></li><li><span class="why-what">If something is wrong</span><span class="why-them">Your typo, your problem</span><span class="why-us">Spot a mistake? We fix it free</span></li></ul>
+  </div>
+  <p class="center"><a class="btn btn-big" href="/make/">See yours take shape</a></p>
+</section>
 <section class="section">
   <div class="section-head"><p class="kicker">Real magazines, made up names</p><h2>Save your favourites for later</h2><p>Tap Save on any cover to keep it on your Pinterest board.</p></div>
   <div class="wall wall-short">${wallHtml}</div>
