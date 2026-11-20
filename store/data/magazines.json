@@ -119,7 +119,7 @@
       },
       {
         "id": "message",
-        "label": "Your Christmas message to them",
+        "label": "What made this year special for your family? (This becomes your letter)",
         "example": "Every Christmas with you is the best one yet. Thank you for the laughter, the chaos and all the love. Here is to many more years of paper hats and terrible jokes.",
         "type": "textarea",
         "max": 400
@@ -172,7 +172,8 @@
           "naughty": "Dad, for eating the chocolate coins",
           "dinner": "Roast potatoes, fought over every year",
           "jumper": "Grandpa, the one that lights up",
-          "words": "Cosy, chaotic, magical"
+          "words": "Cosy, chaotic, magical",
+          "x_type": "cosy"
         },
         "photos": {
           "photo1": "/assets/samples/christmas-magazine-0.jpg",
@@ -211,7 +212,8 @@
           "naughty": "Leo, for peeking at every present",
           "dinner": "Grandma's famous trifle",
           "jumper": "Mum, covered in tiny reindeer",
-          "words": "Loud, loving, sparkly"
+          "words": "Loud, loving, sparkly",
+          "x_type": "sporty"
         },
         "photos": {
           "photo1": "/assets/samples/christmas-magazine-1.jpg"
@@ -242,7 +244,8 @@
           "naughty": "Sam, for hiding the last mince pie",
           "dinner": "Pudding set on fire (on purpose)",
           "jumper": "Mia, the one with a bobble nose",
-          "words": "Snug, silly, together"
+          "words": "Snug, silly, together",
+          "x_type": "foodies"
         },
         "photos": {
           "photo1": "/assets/samples/christmas-magazine-2.jpg"
@@ -781,7 +784,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What do you wish you told them more often? (This becomes your letter)",
         "example": "Five years and I would still choose you in every bakery, in every city, every single time.",
         "type": "textarea",
         "max": 400
@@ -815,7 +818,8 @@
           "names": "Chris & Emma",
           "years": "5",
           "met": "Arguing over the last croissant in a tiny bakery",
-          "joke": "The Great Sofa Incident of 2021"
+          "joke": "The Great Sofa Incident of 2021",
+          "x_type": "romantics"
         },
         "photos": {
           "photo1": "/assets/samples/anniversary-magazine-0.jpg",
@@ -835,7 +839,8 @@
           "names": "Leo & Sam",
           "years": "10",
           "met": "A wrong number that turned into a four hour call",
-          "joke": "Never trust a quiet cat"
+          "joke": "Never trust a quiet cat",
+          "x_type": "adventurers"
         },
         "photos": {
           "photo1": "/assets/samples/anniversary-magazine-1.jpg"
@@ -853,7 +858,8 @@
           "names": "Mia & Leo",
           "years": "1",
           "met": "Both reaching for the same library book",
-          "joke": "Chapter eleven"
+          "joke": "Chapter eleven",
+          "x_type": "homebodies"
         },
         "photos": {
           "photo1": "/assets/samples/anniversary-magazine-2.jpg"
@@ -871,7 +877,8 @@
           "names": "Emma & Sam",
           "years": "25",
           "met": "A rainy bus stop and one shared umbrella",
-          "joke": "Left at the big tree"
+          "joke": "Left at the big tree",
+          "x_type": "comedians"
         },
         "photos": {
           "photo1": "/assets/samples/anniversary-magazine-3.jpg"
@@ -973,7 +980,7 @@
       },
       {
         "id": "message",
-        "label": "Your letter to them",
+        "label": "What do you miss telling them in person? (This becomes your letter)",
         "example": "We think about you every day. The house is louder than ever and we cannot wait to see you soon.",
         "type": "textarea",
         "max": 400
@@ -1008,7 +1015,8 @@
           "fromWho": "Leo, Mia and Sam",
           "headline": "Leo lost his first tooth and the tooth fairy paid a whole £2",
           "quote": "Grandma is a hundred and cool",
-          "weather": "Sunny with a strong chance of cuddles"
+          "weather": "Sunny with a strong chance of cuddles",
+          "x_type": "party"
         },
         "photos": {
           "photo1": "/assets/samples/grandparents-newspaper-0.jpg",
@@ -1029,7 +1037,8 @@
           "fromWho": "Emma and the twins",
           "headline": "Twins learn to ride bikes, garden fence survives",
           "quote": "Is Grandpa older than the internet?",
-          "weather": "Cloudy with occasional giggles"
+          "weather": "Cloudy with occasional giggles",
+          "x_type": "carer"
         },
         "photos": {
           "photo1": "/assets/samples/grandparents-newspaper-1.jpg"
@@ -1048,7 +1057,8 @@
           "fromWho": "Sam, Chris and baby Leo",
           "headline": "Baby Leo says first word, and it is definitely Nana",
           "quote": "Nana's house has the best biscuits in the world",
-          "weather": "Warm spells of missing you"
+          "weather": "Warm spells of missing you",
+          "x_type": "adventurer"
         },
         "photos": {
           "photo1": "/assets/samples/grandparents-newspaper-2.jpg"
@@ -1067,7 +1077,8 @@
           "fromWho": "Mia and Leo",
           "headline": "Mia wins the school spelling bee with the word enthusiastic",
           "quote": "Auntie is basically a superhero with nicer shoes",
-          "weather": "Bright and breezy with big hugs"
+          "weather": "Bright and breezy with big hugs",
+          "x_type": "calm"
         },
         "photos": {
           "photo1": "/assets/samples/grandparents-newspaper-3.jpg"
@@ -1169,7 +1180,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What do you want them to always remember? (This becomes your letter)",
         "example": "We are so proud of you, our brave, clever, dinosaur loving boy. Never stop asking questions.",
         "type": "textarea",
         "max": 400
@@ -1204,7 +1215,8 @@
           "age": "6",
           "expert": "Dinosaurs",
           "dream": "A volcano scientist",
-          "fact": "Once tried to post a letter to a real T rex"
+          "fact": "Once tried to post a letter to a real T rex",
+          "x_type": "builder"
         },
         "photos": {
           "photo1": "/assets/samples/kids-magazine-0.jpg",
@@ -1225,7 +1237,8 @@
           "age": "5",
           "expert": "Unicorns",
           "dream": "A unicorn vet",
-          "fact": "Has named every pigeon in the park"
+          "fact": "Has named every pigeon in the park",
+          "x_type": "chatterbox"
         },
         "photos": {
           "photo1": "/assets/samples/kids-magazine-1.jpg"
@@ -1244,7 +1257,8 @@
           "age": "7",
           "expert": "Space",
           "dream": "The first chef on Mars",
-          "fact": "Can burp the alphabet up to letter M"
+          "fact": "Can burp the alphabet up to letter M",
+          "x_type": "performer"
         },
         "photos": {
           "photo1": "/assets/samples/kids-magazine-2.jpg"
@@ -1263,7 +1277,8 @@
           "age": "4",
           "expert": "Bugs",
           "dream": "A ladybird",
-          "fact": "Says goodnight to the moon every single night"
+          "fact": "Says goodnight to the moon every single night",
+          "x_type": "giggler"
         },
         "photos": {
           "photo1": "/assets/samples/kids-magazine-3.jpg"
@@ -1372,7 +1387,7 @@
       },
       {
         "id": "message",
-        "label": "Your message about the year",
+        "label": "What would you say to your family about this year? (This becomes your letter)",
         "example": "What a year. Thank you for every muddy walk, every late night chat and every silly dance in the kitchen. Here is to the next one.",
         "type": "textarea",
         "max": 400
@@ -1407,7 +1422,8 @@
           "year": "2026",
           "adventure": "Our first camping trip, in the rain, and we loved it",
           "proud": "Leo rode his bike with no stabilisers",
-          "word": "Together"
+          "word": "Together",
+          "x_type": "sporty"
         },
         "photos": {
           "photo1": "/assets/samples/year-in-review-magazine-0.jpg",
@@ -1428,7 +1444,8 @@
           "year": "2026",
           "adventure": "Six countries, one very small car",
           "proud": "Finally finishing the garden",
-          "word": "Brave"
+          "word": "Brave",
+          "x_type": "foodies"
         },
         "photos": {
           "photo1": "/assets/samples/year-in-review-magazine-1.jpg"
@@ -1447,7 +1464,8 @@
           "year": "2026",
           "adventure": "Moving to a house by the sea",
           "proud": "Sam's first ever school play",
-          "word": "Home"
+          "word": "Home",
+          "x_type": "lively"
         },
         "photos": {
           "photo1": "/assets/samples/year-in-review-magazine-2.jpg"
@@ -1466,7 +1484,8 @@
           "year": "2026",
           "adventure": "Learning to surf, badly",
           "proud": "Running our first 10k",
-          "word": "Joy"
+          "word": "Joy",
+          "x_type": "cosy"
         },
         "photos": {
           "photo1": "/assets/samples/year-in-review-magazine-3.jpg"
@@ -1581,7 +1600,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What would you say to them if they understood every word? (This becomes your letter)",
         "example": "You are the best thing that ever happened to our sofa. Thank you for every wag, every cuddle and every stolen sock.",
         "type": "textarea",
         "max": 400
@@ -1618,7 +1637,8 @@
           "age": "3",
           "talent": "Hears a cheese wrapper from three rooms away",
           "crime": "Stealing socks, then looking innocent",
-          "snack": "Anything you are eating"
+          "snack": "Anything you are eating",
+          "x_type": "foodie"
         },
         "photos": {
           "photo1": "/assets/samples/pet-magazine-0.jpg",
@@ -1640,7 +1660,8 @@
           "age": "5",
           "talent": "Knocking things off tables at 3am",
           "crime": "Sitting on laptops during meetings",
-          "snack": "Tuna, served promptly"
+          "snack": "Tuna, served promptly",
+          "x_type": "shadow"
         },
         "photos": {
           "photo1": "/assets/samples/pet-magazine-1.jpg"
@@ -1661,7 +1682,8 @@
           "age": "2",
           "talent": "Opens doors that should stay closed",
           "crime": "Digging to the centre of the earth",
-          "snack": "Peanut butter, from a spoon"
+          "snack": "Peanut butter, from a spoon",
+          "x_type": "napper"
         },
         "photos": {
           "photo1": "/assets/samples/pet-magazine-2.jpg"
@@ -1681,7 +1703,8 @@
           "age": "4",
           "talent": "Fits in any box, however small",
           "crime": "Stealing the warm spot in bed",
-          "snack": "Chicken, never the cheap one"
+          "snack": "Chicken, never the cheap one",
+          "x_type": "menace"
         },
         "photos": {
           "photo1": "/assets/samples/pet-magazine-3.jpg"
@@ -1795,7 +1818,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What do you wish you told them more often? (This becomes your letter)",
         "example": "Happy birthday to the brightest star I know. The universe got it very right when it made you.",
         "type": "textarea",
         "max": 400
@@ -1832,7 +1855,9 @@
           "born": "12 August",
           "crystal": "Citrine",
           "power": "Lighting up every room they walk into",
-          "prediction": "A spontaneous trip and a very good haircut"
+          "prediction": "A spontaneous trip and a very good haircut",
+          "x_type": "adventurer",
+          "x_who": "bestie"
         },
         "photos": {
           "photo1": "/assets/samples/star-sign-birthday-magazine-0.jpg",
@@ -1855,7 +1880,9 @@
           "born": "3 November",
           "crystal": "Obsidian",
           "power": "Knowing exactly what you are thinking",
-          "prediction": "Big news at work and an even bigger celebration"
+          "prediction": "Big news at work and an even bigger celebration",
+          "x_type": "calm",
+          "x_who": "bestie"
         },
         "photos": {
           "photo1": "/assets/samples/star-sign-birthday-magazine-1.jpg"
@@ -1876,7 +1903,9 @@
           "born": "9 March",
           "crystal": "Amethyst",
           "power": "Making everyone feel understood",
-          "prediction": "A creative dream finally comes true"
+          "prediction": "A creative dream finally comes true",
+          "x_type": "creative",
+          "x_who": "bestie"
         },
         "photos": {
           "photo1": "/assets/samples/star-sign-birthday-magazine-2.jpg"
@@ -1897,7 +1926,9 @@
           "born": "2 June",
           "crystal": "Clear quartz",
           "power": "Talking to anyone about anything",
-          "prediction": "A new city, a new hobby and a lot of laughing"
+          "prediction": "A new city, a new hobby and a lot of laughing",
+          "x_type": "gogetter",
+          "x_who": "bestie"
         },
         "photos": {
           "photo1": "/assets/samples/star-sign-birthday-magazine-3.jpg"
@@ -2002,7 +2033,7 @@
       },
       {
         "id": "words",
-        "label": "Three words for them",
+        "label": "Three words that are so them",
         "example": "Soppy, silly, soulmates",
         "max": 28
       },
@@ -2015,7 +2046,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What do you want them to know as they start this new chapter? (This becomes your letter)",
         "example": "Watching you two find each other has been one of the best stories we know. Here is to a lifetime of adventures, lie ins and dancing in the kitchen.",
         "type": "textarea",
         "max": 400
@@ -2051,7 +2082,8 @@
           "met": "Spilled coffee on each other on a train",
           "song": "A slow one they both pretended to know",
           "secret": "Terrible jokes and endless snacks",
-          "words": "Soppy, silly, soulmates"
+          "words": "Soppy, silly, soulmates",
+          "x_type": "adventurers"
         },
         "photos": {
           "photo1": "/assets/samples/wedding-magazine-0.jpg",
@@ -2073,7 +2105,8 @@
           "met": "Both reached for the last slice of pizza",
           "song": "The song from their first road trip",
           "secret": "Never going to bed hungry",
-          "words": "Loud, loyal, lovely"
+          "words": "Loud, loyal, lovely",
+          "x_type": "homebodies"
         },
         "photos": {
           "photo1": "/assets/samples/wedding-magazine-1.jpg"
@@ -2093,7 +2126,8 @@
           "met": "Lost on the same hiking trail",
           "song": "A cheesy classic, played twice",
           "secret": "Laughing at the same bad films",
-          "words": "Brave, bright, besotted"
+          "words": "Brave, bright, besotted",
+          "x_type": "comedians"
         },
         "photos": {
           "photo1": "/assets/samples/wedding-magazine-2.jpg"
@@ -2211,7 +2245,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What do you want them to know one day? (This becomes your letter)",
         "example": "We waited so long to meet you and you are even better than we dreamed. Welcome to the world, little one. You are so loved.",
         "type": "textarea",
         "max": 400
@@ -2401,7 +2435,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What do you want them to know one day? (This becomes your letter)",
         "example": "One year ago you changed everything. Thank you for every giggle, every sleepy cuddle and every tiny first. Happy first birthday, our darling.",
         "type": "textarea",
         "max": 400
@@ -2594,7 +2628,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What do you want them to know as they leave? (This becomes your letter)",
         "example": "Work will not be the same without you. Thank you for the wisdom, the patience and the terrible puns. Enjoy every single lie in, you have earned it.",
         "type": "textarea",
         "max": 400
@@ -2630,7 +2664,9 @@
           "job": "Head of maths",
           "known": "The biscuit tin nobody else could open",
           "plans": "Golf, gardening and very long lunches",
-          "miss": "Your laugh down the corridor"
+          "miss": "Your laugh down the corridor",
+          "x_type": "adventurer",
+          "x_who": "friend"
         },
         "photos": {
           "photo1": "/assets/samples/retirement-magazine-0.jpg",
@@ -2652,7 +2688,9 @@
           "job": "Nurse, and everyone's hero",
           "known": "Remembering every patient's name",
           "plans": "Travelling to every country she can",
-          "miss": "Your calm on the busy nights"
+          "miss": "Your calm on the busy nights",
+          "x_type": "calm",
+          "x_who": "friend"
         },
         "photos": {
           "photo1": "/assets/samples/retirement-magazine-1.jpg"
@@ -2672,7 +2710,9 @@
           "job": "Bus driver, route 12",
           "known": "Knowing every passenger by name",
           "plans": "Fishing, finally",
-          "miss": "Your cheery hello every morning"
+          "miss": "Your cheery hello every morning",
+          "x_type": "creative",
+          "x_who": "friend"
         },
         "photos": {
           "photo1": "/assets/samples/retirement-magazine-2.jpg"
@@ -2777,7 +2817,7 @@
       },
       {
         "id": "words",
-        "label": "Three words for them",
+        "label": "Three words that are so them",
         "example": "Clever, stubborn, unstoppable",
         "max": 30
       },
@@ -2790,7 +2830,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What do you wish you told them more often? (This becomes your letter)",
         "example": "We have watched you work so hard for this. Whatever comes next, you have already made us the proudest family in the world. Congratulations, graduate.",
         "type": "textarea",
         "max": 400
@@ -2826,7 +2866,9 @@
           "subject": "Marine biology",
           "fuel": "Instant noodles and three alarms",
           "next": "Saving the ocean, one fish at a time",
-          "words": "Clever, stubborn, unstoppable"
+          "words": "Clever, stubborn, unstoppable",
+          "x_type": "carer",
+          "x_who": "child"
         },
         "photos": {
           "photo1": "/assets/samples/graduation-magazine-0.jpg",
@@ -2848,7 +2890,9 @@
           "subject": "Engineering",
           "fuel": "Energy drinks and pure panic",
           "next": "Building bridges, literally",
-          "words": "Calm, curious, brilliant"
+          "words": "Calm, curious, brilliant",
+          "x_type": "adventurer",
+          "x_who": "child"
         },
         "photos": {
           "photo1": "/assets/samples/graduation-magazine-1.jpg"
@@ -2868,7 +2912,9 @@
           "subject": "Law",
           "fuel": "Highlighters and hope",
           "next": "Winning every argument, legally",
-          "words": "Sharp, kind, fearless"
+          "words": "Sharp, kind, fearless",
+          "x_type": "calm",
+          "x_who": "child"
         },
         "photos": {
           "photo1": "/assets/samples/graduation-magazine-2.jpg"
@@ -2967,7 +3013,7 @@
       },
       {
         "id": "words",
-        "label": "Three words for her",
+        "label": "Three words that are so her",
         "example": "Warm, wise, wonderful",
         "max": 28
       },
@@ -2980,7 +3026,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to her",
+        "label": "What do you wish you told her more often? (This becomes your letter)",
         "example": "Thank you for every packed lunch, every late night chat and every time you believed in us before we did. You are the heart of everything.",
         "type": "textarea",
         "max": 400
@@ -3015,7 +3061,8 @@
           "power": "Finding things before we even lose them",
           "says": "Have you eaten?",
           "dish": "Sunday roast, nobody does it better",
-          "words": "Warm, wise, wonderful"
+          "words": "Warm, wise, wonderful",
+          "x_type": "adventurer"
         },
         "photos": {
           "photo1": "/assets/samples/mothers-day-magazine-0.jpg",
@@ -3036,7 +3083,8 @@
           "power": "Knowing when something is wrong",
           "says": "Did you take a coat?",
           "dish": "Her legendary pancakes",
-          "words": "Strong, funny, fabulous"
+          "words": "Strong, funny, fabulous",
+          "x_type": "calm"
         },
         "photos": {
           "photo1": "/assets/samples/mothers-day-magazine-1.jpg"
@@ -3055,7 +3103,8 @@
           "power": "Kissing it better, instantly",
           "says": "Five more minutes",
           "dish": "Chocolate cake, extra thick",
-          "words": "Kind, brave, beautiful"
+          "words": "Kind, brave, beautiful",
+          "x_type": "creative"
         },
         "photos": {
           "photo1": "/assets/samples/mothers-day-magazine-2.jpg"
@@ -3154,7 +3203,7 @@
       },
       {
         "id": "words",
-        "label": "Three words for him",
+        "label": "Three words that are so him",
         "example": "Funny, patient, legendary",
         "max": 30
       },
@@ -3167,7 +3216,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to him",
+        "label": "What do you wish you told him more often? (This becomes your letter)",
         "example": "Thank you for the lifts, the lessons, the bad jokes and the good advice. We are who we are because of you. Love you, Dad.",
         "type": "textarea",
         "max": 400
@@ -3202,7 +3251,8 @@
           "joke": "Hi hungry, I am Dad",
           "skill": "Fixing anything with tape",
           "says": "Ask your mother",
-          "words": "Funny, patient, legendary"
+          "words": "Funny, patient, legendary",
+          "x_type": "adventurer"
         },
         "photos": {
           "photo1": "/assets/samples/fathers-day-magazine-0.jpg",
@@ -3223,7 +3273,8 @@
           "joke": "Is this seat taken? No? Good",
           "skill": "Perfect barbecue, every time",
           "says": "Turn that light off",
-          "words": "Strong, silly, the best"
+          "words": "Strong, silly, the best",
+          "x_type": "calm"
         },
         "photos": {
           "photo1": "/assets/samples/fathers-day-magazine-1.jpg"
@@ -3242,7 +3293,8 @@
           "joke": "I am not old, I am vintage",
           "skill": "Piggy backs for miles",
           "says": "We will see",
-          "words": "Kind, cool, our hero"
+          "words": "Kind, cool, our hero",
+          "x_type": "creative"
         },
         "photos": {
           "photo1": "/assets/samples/fathers-day-magazine-2.jpg"
@@ -3347,7 +3399,7 @@
       },
       {
         "id": "words",
-        "label": "Three words for them",
+        "label": "Three words that are so them",
         "example": "Loyal, hilarious, iconic",
         "max": 28
       },
@@ -3360,7 +3412,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What do you wish you told them more often? (This becomes your letter)",
         "example": "Thank you for every laugh, every late night and every time you made a bad day brilliant. I would pick you every single time.",
         "type": "textarea",
         "max": 400
@@ -3396,7 +3448,8 @@
           "met": "Stuck in the same broken lift",
           "joke": "The goose incident",
           "best": "Always answers the phone at 2am",
-          "words": "Loyal, hilarious, iconic"
+          "words": "Loyal, hilarious, iconic",
+          "x_type": "adventurer"
         },
         "photos": {
           "photo1": "/assets/samples/best-friend-magazine-0.jpg",
@@ -3418,7 +3471,8 @@
           "met": "Fought over a football at school",
           "joke": "Never trust a pigeon",
           "best": "Turns up with snacks, always",
-          "words": "Honest, daft, dependable"
+          "words": "Honest, daft, dependable",
+          "x_type": "calm"
         },
         "photos": {
           "photo1": "/assets/samples/best-friend-magazine-1.jpg"
@@ -3438,7 +3492,8 @@
           "met": "Same wrong answer in a quiz",
           "joke": "Just one more shop",
           "best": "Hypes you up like a stadium",
-          "words": "Bold, bright, brilliant"
+          "words": "Bold, bright, brilliant",
+          "x_type": "creative"
         },
         "photos": {
           "photo1": "/assets/samples/best-friend-magazine-2.jpg"
@@ -3543,7 +3598,7 @@
       },
       {
         "id": "words",
-        "label": "Three words for them",
+        "label": "Three words that are so them",
         "example": "Patient, funny, amazing",
         "max": 28
       },
@@ -3556,7 +3611,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What do you want them to know they did for your child? (This becomes your letter)",
         "example": "Thank you for making every day feel like an adventure. You made us feel clever, brave and listened to. We will never forget you.",
         "type": "textarea",
         "max": 400
@@ -3592,7 +3647,8 @@
           "says": "Eyes on me, superstars",
           "lesson": "Volcanoes, with real explosions",
           "power": "Knowing who talked, without looking",
-          "words": "Patient, funny, amazing"
+          "words": "Patient, funny, amazing",
+          "x_type": "party"
         },
         "photos": {
           "photo1": "/assets/samples/teacher-magazine-0.jpg",
@@ -3614,7 +3670,8 @@
           "says": "Mistakes help us grow",
           "lesson": "Building a castle out of boxes",
           "power": "Making maths actually fun",
-          "words": "Kind, calm, the best"
+          "words": "Kind, calm, the best",
+          "x_type": "carer"
         },
         "photos": {
           "photo1": "/assets/samples/teacher-magazine-1.jpg"
@@ -3634,7 +3691,8 @@
           "says": "Magic fingers, magic ears",
           "lesson": "Reading under the tables",
           "power": "Remembering every birthday",
-          "words": "Sunny, smart, special"
+          "words": "Sunny, smart, special",
+          "x_type": "adventurer"
         },
         "photos": {
           "photo1": "/assets/samples/teacher-magazine-2.jpg"
@@ -3752,7 +3810,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What do you wish you told them more often? (This becomes your letter)",
         "example": "Happy birthday to someone who gets better every year. Thank you for the laughs, the love and the terrible dancing. Here is to the next chapter.",
         "type": "textarea",
         "max": 400
@@ -3788,7 +3846,9 @@
           "born": "1976",
           "famous": "Dancing at every wedding, invited or not",
           "decade": "This one, obviously",
-          "still": "Whistle, or fold a fitted sheet"
+          "still": "Whistle, or fold a fitted sheet",
+          "x_type": "party",
+          "x_who": "friend"
         },
         "photos": {
           "photo1": "/assets/samples/milestone-birthday-magazine-0.jpg",
@@ -3810,7 +3870,9 @@
           "born": "1986",
           "famous": "Organising everyone, lovingly",
           "decade": "Her twenties, no regrets",
-          "still": "Parallel park on the first go"
+          "still": "Parallel park on the first go",
+          "x_type": "carer",
+          "x_who": "friend"
         },
         "photos": {
           "photo1": "/assets/samples/milestone-birthday-magazine-1.jpg"
@@ -3830,7 +3892,9 @@
           "born": "1966",
           "famous": "The world's longest stories",
           "decade": "The eighties, and the hair",
-          "still": "Resist a second pudding"
+          "still": "Resist a second pudding",
+          "x_type": "adventurer",
+          "x_who": "friend"
         },
         "photos": {
           "photo1": "/assets/samples/milestone-birthday-magazine-2.jpg"
@@ -3935,7 +3999,7 @@
       },
       {
         "id": "words",
-        "label": "Three words for them",
+        "label": "Three words that are so them",
         "example": "Giddy, gorgeous, glowing",
         "max": 28
       },
@@ -3948,7 +4012,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What do you want them to know as they start this new chapter? (This becomes your letter)",
         "example": "We have been waiting for this news for ages. Congratulations to two people who make each other shine. We cannot wait to celebrate you.",
         "type": "textarea",
         "max": 400
@@ -3984,7 +4048,8 @@
           "where": "On top of a very windy hill",
           "nerves": "Forgot own name, twice",
           "next": "A wedding, then a nap",
-          "words": "Giddy, gorgeous, glowing"
+          "words": "Giddy, gorgeous, glowing",
+          "x_type": "homebodies"
         },
         "photos": {
           "photo1": "/assets/samples/engagement-magazine-0.jpg",
@@ -4006,7 +4071,8 @@
           "where": "Under the stars on a beach",
           "nerves": "Rehearsed it forty times",
           "next": "Planning, panicking, partying",
-          "words": "Starry eyed and silly"
+          "words": "Starry eyed and silly",
+          "x_type": "comedians"
         },
         "photos": {
           "photo1": "/assets/samples/engagement-magazine-1.jpg"
@@ -4026,7 +4092,8 @@
           "where": "Their favourite little cafe",
           "nerves": "Hid the ring in a croissant",
           "next": "Finding a date both mums like",
-          "words": "Sweet, sunny, sure"
+          "words": "Sweet, sunny, sure",
+          "x_type": "team"
         },
         "photos": {
           "photo1": "/assets/samples/engagement-magazine-2.jpg"
@@ -4144,7 +4211,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What do you wish for them in their new home? (This becomes your letter)",
         "example": "Congratulations on your new home. May it be full of laughter, good food, lazy Sundays and friends who never want to leave.",
         "type": "textarea",
         "max": 400
@@ -4180,7 +4247,8 @@
           "room": "The kitchen, where the snacks live",
           "first": "Pizza on the floor, no chairs",
           "dream": "A garden full of tomatoes",
-          "words": "Cosy, chaotic, ours"
+          "words": "Cosy, chaotic, ours",
+          "x_type": "cosy"
         },
         "photos": {
           "photo1": "/assets/samples/new-home-magazine-0.jpg",
@@ -4202,7 +4270,8 @@
           "room": "The sunny window seat",
           "first": "Noodles from the box",
           "dream": "A home cinema, one day",
-          "words": "Small, bright, mine"
+          "words": "Small, bright, mine",
+          "x_type": "sporty"
         },
         "photos": {
           "photo1": "/assets/samples/new-home-magazine-1.jpg"
@@ -4222,7 +4291,8 @@
           "room": "The garden, all four metres",
           "first": "Beans on toast by candlelight",
           "dream": "Chickens, eventually",
-          "words": "Crooked, lovely, home"
+          "words": "Crooked, lovely, home",
+          "x_type": "foodies"
         },
         "photos": {
           "photo1": "/assets/samples/new-home-magazine-2.jpg"
@@ -4340,7 +4410,7 @@
       },
       {
         "id": "message",
-        "label": "Your message",
+        "label": "What do you want to remember about this trip forever? (This becomes your letter)",
         "example": "Thank you for the best trip of my life. Every wrong turn was worth it because I was with you. Where shall we go next?",
         "type": "textarea",
         "max": 400
@@ -4523,7 +4593,7 @@
       },
       {
         "id": "words",
-        "label": "Three words for them",
+        "label": "Three words that are so them",
         "example": "Gentle, loyal, ours",
         "max": 28
       },
@@ -4536,7 +4606,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What would you tell them, if you could say one more thing? (This becomes your letter)",
         "example": "Thank you for every walk, every wag and every quiet cuddle when we needed it most. You were the best friend we could ever have asked for. Forever loved.",
         "type": "textarea",
         "max": 400
@@ -4724,7 +4794,7 @@
       },
       {
         "id": "words",
-        "label": "Three words for them",
+        "label": "Three words that are so them",
         "example": "Mine, all mine",
         "max": 28
       },
@@ -4737,7 +4807,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What do you wish you told them more often? (This becomes your letter)",
         "example": "You make ordinary days feel like the best ones. Thank you for the laughs, the patience and the last biscuit. I love you more every year.",
         "type": "textarea",
         "max": 400
@@ -4773,7 +4843,8 @@
           "date": "Mini golf, I lost on purpose",
           "cute": "Humming while cooking",
           "song": "The one from the kitchen disco",
-          "words": "Mine, all mine"
+          "words": "Mine, all mine",
+          "x_type": "adventurer"
         },
         "photos": {
           "photo1": "/assets/samples/valentines-magazine-0.jpg",
@@ -4795,7 +4866,8 @@
           "date": "A picnic in the rain",
           "cute": "Stealing the duvet, gracefully",
           "song": "Our wedding song, obviously",
-          "words": "Sweet, sassy, stunning"
+          "words": "Sweet, sassy, stunning",
+          "x_type": "calm"
         },
         "photos": {
           "photo1": "/assets/samples/valentines-magazine-1.jpg"
@@ -4815,7 +4887,8 @@
           "date": "Tacos, then karaoke",
           "cute": "Talking to every dog",
           "song": "The first one we danced to",
-          "words": "Funny, tender, perfect"
+          "words": "Funny, tender, perfect",
+          "x_type": "creative"
         },
         "photos": {
           "photo1": "/assets/samples/valentines-magazine-2.jpg"
@@ -4924,7 +4997,7 @@
       },
       {
         "id": "words",
-        "label": "Three words for them",
+        "label": "Three words that are so them",
         "example": "Kind, funny, ours",
         "max": 28
       },
@@ -4937,7 +5010,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What would you tell them, if you could say one more thing? (This becomes your letter)",
         "example": "Thank you for every story, every hug and every cup of tea. You made us who we are. We will carry you with us, always.",
         "type": "textarea",
         "max": 400
@@ -5120,7 +5193,7 @@
       },
       {
         "id": "words",
-        "label": "Three words for them",
+        "label": "Three words that are so them",
         "example": "Glowing, brave, ready",
         "max": 28
       },
@@ -5133,7 +5206,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What do you want the parents to be to hear right now? (This becomes your letter)",
         "example": "You are going to be the most wonderful parent. That little one is so lucky already, and we cannot wait to meet them.",
         "type": "textarea",
         "max": 400
@@ -5316,7 +5389,7 @@
       },
       {
         "id": "words",
-        "label": "Three words for them",
+        "label": "Three words that are so them",
         "example": "Clever, chaotic, kind",
         "max": 28
       },
@@ -5329,7 +5402,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What do you wish you told them more often? (This becomes your letter)",
         "example": "Watching you grow up has been the best adventure of our lives. Go and be brilliant. We will always be here, with snacks and lifts.",
         "type": "textarea",
         "max": 400
@@ -5365,7 +5438,9 @@
           "likely": "Become famous for something nobody expected",
           "dream": "Travelling the world with one backpack",
           "talent": "Sleeping through any alarm",
-          "words": "Clever, chaotic, kind"
+          "words": "Clever, chaotic, kind",
+          "x_type": "party",
+          "x_who": "child"
         },
         "photos": {
           "photo1": "/assets/samples/eighteenth-birthday-magazine-0.jpg",
@@ -5387,7 +5462,9 @@
           "likely": "Talk their way into any room",
           "dream": "Opening the best bakery in town",
           "talent": "Remembering every song lyric ever",
-          "words": "Bold, bright, brilliant"
+          "words": "Bold, bright, brilliant",
+          "x_type": "carer",
+          "x_who": "child"
         },
         "photos": {
           "photo1": "/assets/samples/eighteenth-birthday-magazine-1.jpg"
@@ -5407,7 +5484,9 @@
           "likely": "Win an argument with a lawyer",
           "dream": "Designing buildings people love",
           "talent": "Finding a bargain anywhere",
-          "words": "Fierce, funny, golden"
+          "words": "Fierce, funny, golden",
+          "x_type": "adventurer",
+          "x_who": "child"
         },
         "photos": {
           "photo1": "/assets/samples/eighteenth-birthday-magazine-2.jpg"
@@ -5512,7 +5591,7 @@
       },
       {
         "id": "words",
-        "label": "Three words for them",
+        "label": "Three words that are so them",
         "example": "Devoted, daft, golden",
         "max": 28
       },
@@ -5525,7 +5604,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What have they shown you about love? (This becomes your letter)",
         "example": "Thank you for showing us what love looks like. Everything good in this family started with the two of you. Happy anniversary.",
         "type": "textarea",
         "max": 400
@@ -5561,7 +5640,8 @@
           "married": "1976",
           "met": "At a dance, where he trod on her feet all night",
           "secret": "Never go to bed angry, and always share the biscuits",
-          "words": "Devoted, daft, golden"
+          "words": "Devoted, daft, golden",
+          "x_type": "adventurers"
         },
         "photos": {
           "photo1": "/assets/samples/golden-anniversary-magazine-0.jpg",
@@ -5583,7 +5663,8 @@
           "married": "1986",
           "met": "Both late for the same bus, every single morning",
           "secret": "Laughing at each other's terrible jokes",
-          "words": "Loyal, loving, legendary"
+          "words": "Loyal, loving, legendary",
+          "x_type": "homebodies"
         },
         "photos": {
           "photo1": "/assets/samples/golden-anniversary-magazine-1.jpg"
@@ -5603,7 +5684,8 @@
           "married": "1966",
           "met": "Neighbours who argued over a garden fence",
           "secret": "A cup of tea in bed every morning",
-          "words": "Steady, sweet, forever"
+          "words": "Steady, sweet, forever",
+          "x_type": "comedians"
         },
         "photos": {
           "photo1": "/assets/samples/golden-anniversary-magazine-2.jpg"
@@ -5708,7 +5790,7 @@
       },
       {
         "id": "words",
-        "label": "Three words for them",
+        "label": "Three words that are so them",
         "example": "Calm, kind, unforgettable",
         "max": 28
       },
@@ -5721,7 +5803,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What did they do that you will never forget? (This becomes your letter)",
         "example": "You made the hardest weeks bearable. Thank you for your kindness, your patience and every single cup of tea. We will never forget you.",
         "type": "textarea",
         "max": 400
@@ -5757,7 +5839,9 @@
           "always": "Had a smile, even at 3am",
           "power": "Making scary days feel calm",
           "year": "2026",
-          "words": "Calm, kind, unforgettable"
+          "words": "Calm, kind, unforgettable",
+          "x_type": "party",
+          "x_who": "friend"
         },
         "photos": {
           "photo1": "/assets/samples/thank-you-magazine-0.jpg",
@@ -5779,7 +5863,9 @@
           "always": "Said \"one more lap, superstars\"",
           "power": "Turning nerves into goals",
           "year": "2026",
-          "words": "Loud, loyal, legendary"
+          "words": "Loud, loyal, legendary",
+          "x_type": "carer",
+          "x_who": "friend"
         },
         "photos": {
           "photo1": "/assets/samples/thank-you-magazine-1.jpg"
@@ -5799,7 +5885,9 @@
           "always": "Had the kettle on before we knocked",
           "power": "Knowing exactly what we needed",
           "year": "2026",
-          "words": "Warm, generous, golden"
+          "words": "Warm, generous, golden",
+          "x_type": "adventurer",
+          "x_who": "friend"
         },
         "photos": {
           "photo1": "/assets/samples/thank-you-magazine-2.jpg"
@@ -5904,7 +5992,7 @@
       },
       {
         "id": "words",
-        "label": "Three words for them",
+        "label": "Three words that are so them",
         "example": "Sharp, kind, unstoppable",
         "max": 28
       },
@@ -5917,7 +6005,7 @@
       },
       {
         "id": "message",
-        "label": "Your message to them",
+        "label": "What do you wish you told them more often? (This becomes your letter)",
         "example": "Nobody deserves this more. Thank you for the laughs, the patience and the emergency biscuits. Go and be brilliant, boss.",
         "type": "textarea",
         "max": 400
@@ -5953,7 +6041,9 @@
           "year": "2026",
           "weapon": "A spreadsheet for everything",
           "coffee": "Oat flat whites, four a day",
-          "words": "Sharp, kind, unstoppable"
+          "words": "Sharp, kind, unstoppable",
+          "x_type": "adventurer",
+          "x_who": "partner"
         },
         "photos": {
           "photo1": "/assets/samples/new-job-magazine-0.jpg",
@@ -5975,7 +6065,9 @@
           "year": "2026",
           "weapon": "Never forgetting a name",
           "coffee": "Double espresso, no time",
-          "words": "Brave, bold, brilliant"
+          "words": "Brave, bold, brilliant",
+          "x_type": "calm",
+          "x_who": "partner"
         },
         "photos": {
           "photo1": "/assets/samples/new-job-magazine-1.jpg"
@@ -5995,7 +6087,9 @@
           "year": "2026",
           "weapon": "Fixing it before anyone notices",
           "coffee": "Green tea and biscuits",
-          "words": "Calm, clever, legendary"
+          "words": "Calm, clever, legendary",
+          "x_type": "creative",
+          "x_who": "partner"
         },
         "photos": {
           "photo1": "/assets/samples/new-job-magazine-2.jpg"

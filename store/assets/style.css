@@ -598,3 +598,8 @@ p { margin: 0 0 1em; }
 .concept-pick { border: 2px solid rgba(194, 24, 91, .25); background: var(--paper); border-radius: 18px; padding: 14px 18px 18px; margin: 4px 0 0; min-width: 0; display: grid; gap: 10px; }
 .concept-pick legend { font-weight: 700; padding: 0 6px; }
 .concept-pick .small { margin: 0; }
+.story-q { display: grid; grid-template-columns: 1fr 112px; gap: 12px; align-items: end; }
+.story-q .field { min-width: 0; }
+.photo-mini { aspect-ratio: 1; font-size: 12px; border-radius: 14px; }
+.photo-mini b { font-size: 20px; }
+.story-tip { margin: 6px 0 0; }

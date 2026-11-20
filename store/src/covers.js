@@ -619,7 +619,7 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
     const t = filler({ ...v, who, from, first, bare });
     const own = facts.filter(f => !f.optional);
     const chapters = [
-      ...mag.fields.filter(f => f.optional && f.chapter && v[f.id]).map(f => [f.chapter, v[f.id]]),
+      ...mag.fields.filter(f => f.optional && f.chapter && v[f.id]).map(f => [f.chapter, v[f.id], photos[`p_${f.id}`]]),
       ...own.filter(f => v[f.id]).map(f => [(H.labels || {})[f.id] || f.label, v[f.id]]),
     ].slice(0, 5);
     const W = heartPages(H, { t, page, style, chapters, own: mine('x_loves', 10), promise: H.promises?.field ? v[H.promises.field] : '' });

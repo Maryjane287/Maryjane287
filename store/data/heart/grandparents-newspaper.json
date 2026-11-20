@@ -229,7 +229,8 @@
   "certLine": "is officially, undeniably and forever",
   "perfume": "Top notes of warm toast, old photo albums and garden roses. A heart of pure gold.",
   "news": {
-    "edition": "The family edition", "paper": "The {first} Times",
+    "edition": "The family edition",
+    "paper": "The {first} Times",
     "headline": "Family misses {who}, more than ever",
     "lead": "Sources close to the family confirm that {who} is missed every single day, talked about at dinner and expected back as soon as possible.",
     "weather": "Weather: warm spells of missing you, clearing to hugs"
@@ -301,5 +302,7 @@
       "That someone is {from}. And from everything they told us, you are missed more than you could ever know."
     ],
     "wish": "Until the next big hug, {who}. We love you."
-  }
+  },
+  "concepts": true,
+  "conceptWho": "grand"
 }

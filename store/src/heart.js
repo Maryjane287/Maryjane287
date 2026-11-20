@@ -55,18 +55,21 @@ export function heartPages(H, { t, page, style, chapters = [], own = [], promise
   const out = {};
   const sec = (k, f) => { if (H[k]) out[k] = f(H[k]); };
 
-  sec('story', s => (n) => page(`lv lv-story${theme}`, `<p class="pg-kicker">${t(s.kicker)}</p><h3>${t(s.title)}</h3><div class="lv-chapters${chapters.length > 4 || chapters.join('').length > 210 ? ' lv-ch5' : ''}">${chapters.map(([l, x], i) => `<div><span>${t(s.chapter || 'Chapter')} ${i + 1}</span><b>${t(l)}</b><p>${escH(x)}</p></div>`).join('')}</div><p class="lv-hand${t(s.hand).length > 70 ? ' lv-hand-s' : ''}">${t(s.hand)}</p>`, n));
+  // With photos added to the story answers, the page becomes a little album:
+  // each photo sits beside the memory it belongs to.
+  const album = chapters.some(c => c[2]);
+  sec('story', s => (n) => album ? page(`lv lv-story lv-album${theme}`, `<p class="pg-kicker">${t(s.kicker)}</p><h3>${t(s.title)}</h3><div class="lv-polas">${[...chapters].sort((a, b) => !!b[2] - !!a[2]).slice(0, 4).map(([l, x, img], i) => `<figure class="lv-pola lv-p${i + 1}${img ? '' : ' lv-pola-txt'}">${img ? `<img src="${escH(img)}" alt="">` : ''}<figcaption><span>${t(l)}</span>${escH(x)}</figcaption></figure>`).join('')}</div><p class="lv-hand lv-hand-s">${t(s.hand)}</p>`, n) : page(`lv lv-story${theme}`, `<p class="pg-kicker">${t(s.kicker)}</p><h3>${t(s.title)}</h3><div class="lv-chapters${chapters.length > 4 || chapters.join('').length > 210 ? ' lv-ch5' : ''}">${chapters.map(([l, x], i) => `<div><span>${t(s.chapter || 'Chapter')} ${i + 1}</span><b>${t(l)}</b><p>${escH(x)}</p></div>`).join('')}</div><p class="lv-hand${t(s.hand).length > 70 ? ' lv-hand-s' : ''}">${t(s.hand)}</p>`, n));
 
   sec('picks', s => (n) => {
     const list = [...own, ...s.items.filter(x => !own.includes(x))].slice(0, 10);
     return page(`reasons${theme}`, `<p class="pg-kicker">${t(s.kicker)}</p><h3>${t(s.title)}</h3><ol class="reasons">${list.map(r => `<li>${t(r)}</li>`).join('')}</ol>`, n);
   });
 
-  sec('timeline', s => (n) => page(`lv lv-fame${theme}`, `<p class="pg-kicker">${t(s.kicker)}</p><h3>${t(s.title)}</h3><ol class="lv-line">${s.items.map(([y, h, d]) => `<li><span class="lv-year">${t(y)}</span><b>${t(h)}</b><p>${t(d)}</p></li>`).join('')}<li class="lv-us"><span class="lv-year">${t(s.today[0] || 'Today')}</span><b>${t(s.today[1])}</b><p>${t(s.today[2])}</p></li></ol>`, n));
+  sec('timeline', s => (n) => page(`lv lv-fame${theme}${s.roomy ? ' lv-roomy' : ''}`, `<p class="pg-kicker">${t(s.kicker)}</p><h3>${t(s.title)}</h3><ol class="lv-line">${s.items.map(([y, h, d]) => `<li><span class="lv-year">${t(y)}</span><b>${t(h)}</b><p>${t(d)}</p></li>`).join('')}<li class="lv-us"><span class="lv-year">${t(s.today[0] || 'Today')}</span><b>${t(s.today[1])}</b><p>${t(s.today[2])}</p></li></ol>`, n));
 
   sec('letters', s => (n) => page(`lv lv-letters${theme}`, `<p class="pg-kicker">${t(s.kicker)}</p><h3>${t(s.title)}</h3><div class="lv-notes">${s.items.map(([q, src], i) => `<figure class="lv-note lv-n${i + 1}"><blockquote>&ldquo;${t(q)}&rdquo;</blockquote><figcaption>${t(src)}</figcaption><i class="lv-seal">${seal}</i></figure>`).join('')}</div><p class="lv-hand">${t(s.hand)}</p>`, n));
 
-  sec('facts', s => (n) => page(`lv lv-sci${theme}`, `<p class="pg-kicker">${t(s.kicker)}</p><h3>${t(s.title)}</h3><div class="lv-facts">${s.items.map(([k, h, d]) => `<div class="lv-fact"><i>${icon(k)}</i><b>${t(h)}</b><p>${t(d)}</p></div>`).join('')}</div><p class="lv-hand${t(s.hand).length > 60 ? ' lv-hand-s' : ''}">${t(s.hand)}</p>`, n));
+  sec('facts', s => (n) => page(`lv lv-sci${theme}${s.roomy ? ' lv-roomy' : ''}`, `<p class="pg-kicker">${t(s.kicker)}</p><h3>${t(s.title)}</h3><div class="lv-facts">${s.items.map(([k, h, d]) => `<div class="lv-fact"><i>${icon(k)}</i><b>${t(h)}</b><p>${t(d)}</p></div>`).join('')}</div><p class="lv-hand${t(s.hand).length > 60 ? ' lv-hand-s' : ''}">${t(s.hand)}</p>`, n));
 
   sec('world', s => (n) => page(`lv lv-world${theme}`, `<div class="lv-sun" aria-hidden="true"></div><p class="pg-kicker">${t(s.kicker)}</p><h3>${t(s.title)}</h3><p class="lv-lead">${t(s.lead)}</p><ul class="lv-gifts">${s.items.map(g => `<li>${t(g)}</li>`).join('')}</ul><p class="lv-close">${t(s.close)}</p>`, n));
 
