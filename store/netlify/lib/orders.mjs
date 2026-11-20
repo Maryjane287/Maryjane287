@@ -152,7 +152,7 @@ export async function createCheckout({ env, origin, id, title, finish, offerings
     },
     ...(offering ? { fixedOfferingId: Number(offering) } : {}),
     redirect: {
-      thankyou: { href: `${origin}/thanks/?printed=1` },
+      thankyou: { href: `${origin}/thanks/?printed=1&id=${id}` },
       cancellation: { href: `${origin}/make/` },
       error: { href: `${origin}/make/?print_error=1` },
     },

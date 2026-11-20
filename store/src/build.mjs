@@ -533,7 +533,7 @@ async function simplePages() {
       </ul>
       <h2>Delivery</h2>
       <p>Your finished 24 page magazine is ready to download as a PDF the moment you have paid, and we email it to you too. You can send it to anyone, anywhere, by email or message, or print it at home or at any print shop.</p>
-      <p>Printed magazines are printed on glossy or matte paper, and hardcover keepsake books on thick, premium paper, by our print partner near the lucky person, then posted. Printing takes about 4 to 5 working days, plus a few days for the post. Shipping is worked out for their country and added at checkout.</p>
+      <p>Printed magazines are printed on glossy or matte paper, and hardcover keepsake books on thick, premium paper, by our print partner near the lucky person, then posted. Printing takes about 4 to 5 working days, plus a few days for the post. Every printed copy comes with the PDF too, ready to download as soon as you have paid. Shipping is worked out for their country and added at checkout.</p>
       <h2>Questions</h2>${faqHtml}
       <h2>Still stuck?</h2><p>Email <a href="mailto:${esc(site.email)}">${esc(site.email)}</a> and a real person will help.</p>`),
   }));
@@ -650,7 +650,8 @@ async function simplePages() {
   }));
   await page('/thanks/', layout({
     title: 'Thank you', description: 'Your magazine is on its way.', path: '/thanks/',
-    body: `<section class="thanks"><div class="confetti" aria-hidden="true">${Array.from({ length: 18 }, (_, i) => `<i style="--i:${i}"></i>`).join('')}</div><p class="kicker">Order received</p><h1>Stop the press! Your magazine is in the works.</h1><p class="lead" id="thanks-lead">Digital magazines are ready to download straight after payment, and we email them to you too. Printed copies are printed near the lucky person and posted, and our print partner emails you when it ships.</p><a class="btn" href="/">Back to the front page</a></section>`,
+    body: `<section class="thanks"><div class="confetti" aria-hidden="true">${Array.from({ length: 18 }, (_, i) => `<i style="--i:${i}"></i>`).join('')}</div><p class="kicker">Order received</p><h1>Stop the press! Your magazine is in the works.</h1><p class="lead" id="thanks-lead">Digital magazines are ready to download straight after payment, and we email them to you too. Printed copies are printed near the lucky person and posted, and our print partner emails you when it ships.</p><div class="thanks-pdf" id="thanks-pdf" hidden><p><b>Your PDF copy is ready now.</b> Send it on the day while the printed copy is in the post, or keep it safe on your phone.</p><a class="btn btn-big" id="thanks-pdf-link" href="#">Download the PDF</a><small>Please save it. For your privacy the link is removed after 30 days.</small></div><a class="btn btn-ghost" href="/">Back to the front page</a></section>
+    <script>(function(){var q=new URLSearchParams(location.search),id=q.get('id');if(q.get('printed')!=='1'||!/^[A-Za-z0-9_-]{6,80}$/.test(id||''))return;document.getElementById('thanks-lead').textContent='Thank you! Your copy is being printed near the lucky person and posted. Our print partner emails you when it ships.';document.getElementById('thanks-pdf-link').href='/api/order/file?id='+encodeURIComponent(id)+'&f=pdf&dl=1';document.getElementById('thanks-pdf').hidden=false;})();</script>`,
   }));
   await page('/404.html', layout({
     title: 'Page not found', description: 'This page has gone to print somewhere else.', path: '/404.html',

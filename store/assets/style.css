@@ -573,3 +573,8 @@ p { margin: 0 0 1em; }
 .real-photos .real-scene:hover .real-photo { transform: translateY(-6px) rotate(-.6deg); box-shadow: 0 30px 50px -24px rgba(60, 30, 10, .45); }
 .real-stage .real-fill { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; border-radius: 0; box-shadow: none; object-position: 50% 52%; }
 @media (prefers-reduced-motion: reduce) { .real-photo { transition: none; } }
+
+/* Thank you page: the PDF that comes with a printed copy */
+.thanks-pdf { max-width: 520px; margin: 0 auto 26px; padding: 22px 24px; border-radius: 22px; background: #fff; box-shadow: var(--shadow); display: grid; gap: 12px; justify-items: center; }
+.thanks-pdf p { margin: 0; line-height: 1.5; }
+.thanks-pdf small { color: var(--soft); }

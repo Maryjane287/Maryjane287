@@ -37,17 +37,17 @@
     },
     {
       "id": "print",
-      "label": "Printed magazine",
-      "blurb": "Glossy or matte A4 magazine, printed near them and posted. Shipping is added at checkout",
-      "gbp": 14.99,
-      "usd": 19.99
+      "label": "Printed magazine plus PDF",
+      "blurb": "Glossy or matte A4 magazine, printed near them and posted, plus the PDF to download straight away. Shipping is added at checkout",
+      "gbp": 16.99,
+      "usd": 22.99
     },
     {
       "id": "hardcover",
-      "label": "Hardcover keepsake book",
-      "blurb": "All 24 pages bound as a thick A4 hardcover book on thick, premium paper, made to keep forever. Printed near them and posted. Shipping is added at checkout",
-      "gbp": 18.99,
-      "usd": 24.99
+      "label": "Hardcover keepsake plus PDF",
+      "blurb": "All 24 pages bound as a thick A4 hardcover book on thick, premium paper, made to keep forever. Printed near them and posted, plus the PDF to download straight away. Shipping is added at checkout",
+      "gbp": 21.99,
+      "usd": 27.99
     }
   ],
   "peecho": {
