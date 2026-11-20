@@ -707,15 +707,21 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
     const voices = friendNotes.length
       ? friendNotes.map(([f, m]) => `<figure class="ed-v"><i>${esc((f || '?').trim()[0] || '?').toUpperCase()}</i><blockquote>${esc(m)}</blockquote><figcaption>${f ? esc(f) : 'With love'}</figcaption></figure>`).join('')
       : Array(4).fill('<figure class="ed-v ed-v-blank"><i>&#9829;</i><span></span><span></span><span></span><figcaption>From</figcaption></figure>').join('');
+    // Lists become editorial pages: a tall photo beside them, or above them.
+    const grab = (html, re) => (html.match(re) || [])[1] || '';
+    const ten = W.picks ? W.picks(8) : '';
+    const tenPage = ten ? ed('ed-ten', `${pic(slot(12, 2), 'ed-ten-ph')}<div class="ed-ten-col"><p class="ed-k">${grab(ten, /<p class="pg-kicker">([\s\S]*?)<\/p>/)}</p><h3>${grab(ten, /<h3>([\s\S]*?)<\/h3>/)}</h3><ol class="ed-tl">${grab(ten, /<ol class="reasons">([\s\S]*?)<\/ol>/)}</ol></div>`) : pages[5];
+    const pr = W.promises ? W.promises(20) : '';
+    const prPage = pr ? ed('ed-prom', `${pic(slot(13, 0), 'ed-p-ph')}<div class="ed-p-col"><p class="ed-k">${grab(pr, /<p class="pg-kicker">([\s\S]*?)<\/p>/)}</p><h3>${grab(pr, /<h3>([\s\S]*?)<\/h3>/)}</h3><ol class="ed-pl">${grab(pr, /<ol class="lv-promises">([\s\S]*?)<\/ol>/)}</ol><p class="ed-p-hand">${grab(pr, /<p class="lv-hand">([\s\S]*?)<\/p>/)}</p></div>`) : pages[20];
     const editorial = [
       pages[0],
       ed('ed-contents', `${pic(slot(3, 1), 'ed-c-ph')}<div class="ed-c-col"><p class="ed-k">Inside this issue</p><h3>Inside</h3><ol class="ed-toc">${toc.map(([n, x]) => `<li><b>${n}</b><span>${t(x)}</span></li>`).join('')}</ol><p class="ed-c-note">Made for ${esc(who)}, with love.</p></div>`),
       ed(`ed-letter${msg.length > 260 ? ' ed-long' : msg.length > 150 ? ' ed-mid' : ''}`, `${pic(slot(0, 0), 'ed-l-ph')}<div class="ed-l-body"><p class="ed-k">${esc(mag.letterTitle || 'A letter for you')}</p><h3>Dear ${esc(greet)},</h3><p class="ed-l-txt">${esc(msg)}</p><p class="ed-sign">With love, ${esc(from)}</p></div>`),
       ed('ed-open', `${pic(slot(1, 2), 'ed-o-ph')}<div class="ed-o-shade"></div><div class="ed-o-txt"><p class="ed-k">The cover story</p><h3 style="font-size:calc(${fit(String(t(H.story?.title || who)), 150, 0.5, 13)} * var(--cq))">${t(H.story?.title || who)}</h3><p class="ed-o-dek">${leadLine(s, mag)}</p></div>`),
-      ed('ed-article', `<div class="ed-pad"><p class="ed-k">The cover story</p>${pull ? `<blockquote class="ed-pull${pull.length > 130 ? ' ed-pull-s' : ''}">&ldquo;${esc(pull)}&rdquo;</blockquote>` : ''}<div class="ed-cols"><p class="ed-drop">Ask anyone who ${knew} ${esc(first)} to sum them up${words ? `, and you will hear the same words: ${words}` : ''}. ${t('{from}')} told us the rest of the story.</p>${ch.map(([l, x]) => `<h4>${t(l)}</h4><p>${esc(x)}</p>`).join('')}</div><p class="ed-hand">${t(H.story?.hand || '')}</p></div>`),
+      ed('ed-article', `<div class="ed-pad"><p class="ed-k">The cover story</p>${pull ? `<blockquote class="ed-pull${pull.length > 130 ? ' ed-pull-s' : ''}">&ldquo;${esc(pull)}&rdquo;</blockquote>` : ''}<div class="ed-cols"><p class="ed-drop">Ask anyone who ${knew} ${esc(first)} to sum them up${words ? `, and you will hear the same words: ${words}` : ''}. ${t('{from}')} told us the rest of the story.</p>${ch.filter(c => !/^\s*\d+\s*$/.test(String(c[1]))).map(([l, x]) => `<h4>${t(l)}</h4><p>${esc(x)}</p>`).join('')}</div><p class="ed-hand">${t(H.story?.hand || '')}</p></div>`),
       ed('ed-file', `${pic(slot(4, 1), 'ed-f-ph')}<div class="ed-f-shade"></div><p class="ed-k ed-f-k">The fact file</p><h3 class="ed-f-name" style="font-size:calc(${fit(String(first).toUpperCase(), 86, 0.5, 22)} * var(--cq))">${esc(String(first).toUpperCase())}</h3><dl class="ed-fl">${facts6.map(f => `<div><dt>${t(L[f.id] || f.label)}</dt><dd>${esc(v[f.id])}</dd></div>`).join('')}</dl>`),
       ed('ed-full', `${pic(slot(5, 0), 'ed-full-ph')}${ch[0] ? `<p class="ed-cap"><b>${t(ch[0][0])}</b>${esc(ch[0][1])}</p>` : ''}`),
-      pages[5],
+      tenPage,
       pages[8],
       ed('ed-duo', `${pic(slot(6, 1), 'ed-d1')}${pic(slot(7, 2), `ed-d2${pool.length > 3 ? ' ed-nozoom' : ''}`)}${ch[1] ? `<p class="ed-cap ed-cap1"><b>${t(ch[1][0])}</b>${esc(ch[1][1])}</p>` : ''}${ch[2] ? `<p class="ed-cap ed-cap2"><b>${t(ch[2][0])}</b>${esc(ch[2][1])}</p>` : ''}`),
       pages[10],
@@ -727,7 +733,7 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
       pages[16],
       ed('ed-trio', `${pic(slot(9, 0), 'ed-t ed-t1')}${pic(slot(10, 1), 'ed-t ed-t2')}${pic(slot(11, 2), 'ed-t ed-t3')}<p class="ed-k ed-t-k">The scrapbook</p><p class="ed-t-cap">${words ? `&ldquo;${words}&rdquo;` : ''}</p>`),
       pages[12],
-      pages[20],
+      prPage,
       pages[6],
       pages[22],
       pages[23],
