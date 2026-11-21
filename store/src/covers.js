@@ -538,7 +538,7 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
 
   const short = facts.map(f => [f.label, String(v[f.id] || '')]).filter(([, x]) => x.length > 3 && x.length <= 30 && !/^\d/.test(x));
   const briefs = facts.map(f => [f.label, String(v[f.id] || '')]).filter(([, x]) => x.length > 1 && x.length <= 48).slice(0, 3);
-  const plural = /&| and /i.test(String(who)) || /^the\s.+s$/i.test(String(who));
+  const plural = !!mag.group || /&| and /i.test(String(who)) || /^the\s.+s$/i.test(String(who));
   // Couples and families keep their whole name (The Emma & Leo Awards), one person just their first name.
   const first = plural || /^(mr|mrs|ms|miss|dr|mx|nurse|coach|uncle|aunt|auntie|aunty|nana|nan|grandma|grandad|grandpa|granny|gran|grandmother|grandfather)\.?\s/i.test(bare) ? bare : bare.split(/\s+/)[0] || who;
   const headline = xmas ? `${who} save Christmas again` : gentle ? `A life full of love` : `${who} ${plural ? 'do' : 'does'} it again`;

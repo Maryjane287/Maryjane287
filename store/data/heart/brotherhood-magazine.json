@@ -1,0 +1,372 @@
+{
+  "theme": "ocean",
+  "fields": [
+    {
+      "id": "s_first",
+      "label": "How the group first came together",
+      "example": "Sunday league, and the worst team in the division",
+      "max": 80,
+      "chapter": "How the lads met"
+    },
+    {
+      "id": "s_rescue",
+      "label": "What the lads do when one of you is struggling",
+      "example": "Say nothing, turn up anyway, stay all night",
+      "max": 80,
+      "chapter": "When one of us goes down"
+    },
+    {
+      "id": "s_song",
+      "label": "The song the lads always sing",
+      "example": "The one we belt out at every wedding",
+      "max": 80,
+      "chapter": "The anthem"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to the lads",
+      "example": "To be there, every single time",
+      "max": 70
+    }
+  ],
+  "story": {
+    "title": "Brothers by Choice",
+    "hand": "Not brothers by blood. Brothers by choice. {who}.",
+    "kicker": "Our story",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "labels": {
+    "since": "Mates since",
+    "count": "How many of us",
+    "ritual": "Our ritual",
+    "legend": "The legend",
+    "words": "Us, in three words"
+  },
+  "picks": {
+    "legend": "Things the lads love",
+    "kicker": "From {from}, with love",
+    "title": "Ten things only the lads do",
+    "items": [
+      "Five a side, rain or shine",
+      "Roasting each other, lovingly",
+      "The annual lads trip",
+      "Group chat at full volume",
+      "Arguing about football",
+      "Turning up to help move house",
+      "The stag do stories",
+      "Carrying the barbecue",
+      "Hugs that turn into wrestling",
+      "Calling each other by surnames",
+      "Remembering every embarrassing moment",
+      "Always having each other's backs"
+    ]
+  },
+  "timeline": {
+    "kicker": "Friendship through the ages",
+    "title": "A Short History of Best Friends",
+    "items": [
+      [
+        "About 350 BC",
+        "A philosopher agrees",
+        "Aristotle wrote that true friendship is one of the most important things in a good life."
+      ],
+      [
+        "1926",
+        "Pooh and Piglet",
+        "A. A. Milne published Winnie the Pooh, and the world met its most famous pair of best friends."
+      ],
+      [
+        "1994",
+        "I'll be there for you",
+        "The TV show Friends began, and a group of pals on a sofa became family for millions."
+      ],
+      [
+        "2011",
+        "A day for friends",
+        "The United Nations made 30 July the International Day of Friendship."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who}",
+      "Not in the history books yet. But in mine, the best friend anyone has ever had."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Friendship",
+    "items": [
+      [
+        "What! You too? I thought I was the only one.",
+        "C. S. Lewis, The Four Loves"
+      ],
+      [
+        "A friend is a single soul dwelling in two bodies.",
+        "Aristotle"
+      ],
+      [
+        "The only way to have a friend is to be one.",
+        "Ralph Waldo Emerson, 1841"
+      ],
+      [
+        "Shared joy is a double joy, shared sorrow is half a sorrow.",
+        "An old Swedish saying"
+      ]
+    ],
+    "hand": "They all say it beautifully. I just say: thank you for being you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Best Friends",
+    "items": [
+      [
+        "smile",
+        "Laughing together",
+        "One researcher found we are around thirty times more likely to laugh with others than alone."
+      ],
+      [
+        "spark",
+        "Brains in sync",
+        "Close friends' brains react in strikingly similar ways when they watch the same videos."
+      ],
+      [
+        "leaf",
+        "Smaller hills",
+        "In one study, a hill looked less steep to people standing next to a friend."
+      ],
+      [
+        "clock",
+        "Hours of hanging out",
+        "One study suggests it takes about 200 hours together to become close friends. Worth every minute."
+      ],
+      [
+        "hands",
+        "The inner circle",
+        "Most of us have room for only about five very closest friends. You made the cut."
+      ],
+      [
+        "pulse",
+        "Good for your health",
+        "Strong friendships are linked to lower stress and longer, healthier lives."
+      ]
+    ],
+    "hand": "Science can explain a lot. It still cannot explain how {who} always knows exactly what to say."
+  },
+  "world": {
+    "kicker": "A thank you from the universe",
+    "title": "Why the World Is Better With {who} In It",
+    "lead": "Because {who} found each other, the world got:",
+    "items": [
+      "A team that never loses heart.",
+      "Men who turn up when it matters.",
+      "Legendary stories, slightly exaggerated.",
+      "Removal vans that never need hiring.",
+      "Best men, sorted for life.",
+      "A brotherhood worth celebrating.",
+      "And every one of {who}."
+    ],
+    "close": "Brothers for life, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From me to you",
+    "title": "My promises to the lads",
+    "items": [
+      "To always pick up the phone.",
+      "To turn up, no questions asked.",
+      "To never tell the camping story to your kids. Maybe.",
+      "To keep the five a side going until our knees give up.",
+      "To be brothers, forever."
+    ],
+    "hand": "Love you lads, {from}"
+  },
+  "awards": [
+    [
+      "Best friend of the year",
+      "Every year since {since}"
+    ],
+    [
+      "Funniest human alive",
+      "By a landslide"
+    ],
+    [
+      "Keeper of all secrets",
+      "Locked forever"
+    ],
+    [
+      "Lifetime achievement",
+      "In being iconic"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One emergency chat",
+      "Any time, no questions"
+    ],
+    [
+      "A movie night in",
+      "Snacks on me"
+    ],
+    [
+      "Your choice of brunch",
+      "My treat"
+    ],
+    [
+      "One big adventure",
+      "Destination to be argued over"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "The Best Friend in the World",
+  "perfume": "Top notes of late night laughter, shared fries and loyalty. A heart of pure gold.",
+  "news": {
+    "edition": "The best friend edition",
+    "headline": "{who} named best friend of the century",
+    "lead": "Sources close to the friendship confirm that {who} has, once again, been there at exactly the right moment with snacks, jokes and a hug.",
+    "weather": "Weather: sunny, with a 100% chance of inside jokes"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every adventure",
+    "nationality": "Loved, everywhere",
+    "job": "Professional best friend",
+    "stamps": [
+      "Every road trip",
+      "Late night chats",
+      "Friends forever"
+    ]
+  },
+  "movie": {
+    "sub": "A buddy comedy",
+    "soon": "The sequel: the next lads trip",
+    "reviews": [
+      [
+        "Hilarious, loyal and secretly soft",
+        "The Daily Hug"
+      ],
+      [
+        "The best mates a man could ask for",
+        "{from}"
+      ],
+      [
+        "Brotherhood at its finest",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Which sport do most UK friendship groups say they play together?",
+      [
+        "Football",
+        "Cricket",
+        "Rugby"
+      ],
+      0
+    ],
+    [
+      "What is the traditional job of the best man at a wedding?",
+      [
+        "The speech and the rings",
+        "The flowers",
+        "The cake"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "BESTIE",
+    "LAUGH",
+    "LOYAL",
+    "FOREVER",
+    "SECRETS",
+    "FRIENDS"
+  ],
+  "note": {
+    "title": "Why we made this for the lads",
+    "contents": "A note for you",
+    "paras": [
+      "Lads are not famous for saying how they feel. They say it with lifts, turning up and a lot of terrible jokes.",
+      "So this magazine says it for them, in print, where nobody can laugh it off.",
+      "{who}, this is your brotherhood, on the record.",
+      "From everything {from} told us, you lot are the real thing."
+    ],
+    "wish": "Brothers for life, {who}."
+  },
+  "concepts": true,
+  "conceptWho": "friend",
+  "own": {
+    "world": true,
+    "promises": true,
+    "picks": true,
+    "dayTitle": "A Saturday With {first}",
+    "day": [
+      [
+        "10:00",
+        "Five a side",
+        "Someone has forgotten their boots. Again."
+      ],
+      [
+        "13:00",
+        "The pub",
+        "Replaying every goal, each one better than it was."
+      ],
+      [
+        "16:00",
+        "The match",
+        "Seven grown men shouting at one telly."
+      ],
+      [
+        "20:00",
+        "The curry",
+        "Ordering far too much. Eating all of it."
+      ]
+    ],
+    "night": [
+      "23:30",
+      "Home",
+      "Group chat: \"Same time next week, lads?\""
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The pub, the pitch or someone's sofa"
+      ],
+      [
+        "apple",
+        "Diet",
+        "A curry, a fry up and whatever is on the barbecue"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Lads, lads, lads.\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Turning up with a van, no questions asked"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Saturdays, stag dos and moving days"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Feed them, put the football on, let them tell the old stories"
+      ]
+    ],
+    "little": [
+      "You always save a seat at the bar for whoever is late.",
+      "You remember everyone's kids' names, somehow.",
+      "You turn up to help with anything heavy.",
+      "You say \"love you, mate\" only after midnight, and mean it."
+    ],
+    "letters": "Little Things the Lads Do"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

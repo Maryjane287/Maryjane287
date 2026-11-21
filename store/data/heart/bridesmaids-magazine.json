@@ -1,0 +1,372 @@
+{
+  "theme": "garden",
+  "fields": [
+    {
+      "id": "s_first",
+      "label": "Why you chose each of your bridesmaids",
+      "example": "Emma for her calm, Ava for her laugh, Mia because she has been there since we were five",
+      "max": 80,
+      "chapter": "Why I chose each of you"
+    },
+    {
+      "id": "s_rescue",
+      "label": "A wobble they helped you through",
+      "example": "The dress fitting where nothing fitted and they took me for cake",
+      "max": 80,
+      "chapter": "When it nearly went wrong"
+    },
+    {
+      "id": "s_song",
+      "label": "The song you all danced to",
+      "example": "The one we sang in the hot tub at the hen do",
+      "max": 80,
+      "chapter": "Our dance floor song"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To be there for every one of your big days",
+      "max": 70
+    }
+  ],
+  "story": {
+    "title": "The Women Beside the Bride",
+    "hand": "I could not have done it without every one of you, {who}.",
+    "kicker": "Their story",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "labels": {
+    "count": "How many bridesmaids",
+    "wedding": "The wedding",
+    "colour": "Their dress colour",
+    "hen": "The hen do",
+    "words": "Them, in three words"
+  },
+  "picks": {
+    "legend": "Their finest moments",
+    "kicker": "From {from}, with love",
+    "title": "Ten things my bridesmaids did",
+    "items": [
+      "Came to every dress fitting",
+      "Planned the hen do",
+      "Made the bridal suite playlist",
+      "Kept the tissues coming",
+      "Fixed my hair, and my nerves",
+      "Walked down the aisle like models",
+      "Kept my mum calm",
+      "Danced with every great aunt",
+      "Carried my shoes",
+      "Gathered every guest for photos",
+      "Sang the loudest",
+      "Never left my side"
+    ]
+  },
+  "timeline": {
+    "kicker": "Friendship through the ages",
+    "title": "A Short History of Best Friends",
+    "items": [
+      [
+        "About 350 BC",
+        "A philosopher agrees",
+        "Aristotle wrote that true friendship is one of the most important things in a good life."
+      ],
+      [
+        "1926",
+        "Pooh and Piglet",
+        "A. A. Milne published Winnie the Pooh, and the world met its most famous pair of best friends."
+      ],
+      [
+        "1994",
+        "I'll be there for you",
+        "The TV show Friends began, and a group of pals on a sofa became family for millions."
+      ],
+      [
+        "2011",
+        "A day for friends",
+        "The United Nations made 30 July the International Day of Friendship."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who}",
+      "Not in the history books yet. But in mine, the best friend anyone has ever had."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Friendship",
+    "items": [
+      [
+        "What! You too? I thought I was the only one.",
+        "C. S. Lewis, The Four Loves"
+      ],
+      [
+        "A friend is a single soul dwelling in two bodies.",
+        "Aristotle"
+      ],
+      [
+        "The only way to have a friend is to be one.",
+        "Ralph Waldo Emerson, 1841"
+      ],
+      [
+        "Shared joy is a double joy, shared sorrow is half a sorrow.",
+        "An old Swedish saying"
+      ]
+    ],
+    "hand": "They all say it beautifully. I just say: thank you for being you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Best Friends",
+    "items": [
+      [
+        "smile",
+        "Laughing together",
+        "One researcher found we are around thirty times more likely to laugh with others than alone."
+      ],
+      [
+        "spark",
+        "Brains in sync",
+        "Close friends' brains react in strikingly similar ways when they watch the same videos."
+      ],
+      [
+        "leaf",
+        "Smaller hills",
+        "In one study, a hill looked less steep to people standing next to a friend."
+      ],
+      [
+        "clock",
+        "Hours of hanging out",
+        "One study suggests it takes about 200 hours together to become close friends. Worth every minute."
+      ],
+      [
+        "hands",
+        "The inner circle",
+        "Most of us have room for only about five very closest friends. You made the cut."
+      ],
+      [
+        "pulse",
+        "Good for your health",
+        "Strong friendships are linked to lower stress and longer, healthier lives."
+      ]
+    ],
+    "hand": "Science can explain a lot. It still cannot explain how {who} always knows exactly what to say."
+  },
+  "world": {
+    "kicker": "A thank you from the universe",
+    "title": "Why the World Is Better With {who} In It",
+    "lead": "Because these women said yes, the world got:",
+    "items": [
+      "A bride who felt like a queen.",
+      "The best hen do of the year.",
+      "An aisle full of beauty.",
+      "A dance floor that never emptied.",
+      "Tissues in every handbag.",
+      "Friendships for life.",
+      "And every one of {who}."
+    ],
+    "close": "Thank you, {who}. For everything."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From the bride",
+    "title": "My promises to my bridesmaids",
+    "items": [
+      "To be there for every one of your big days.",
+      "To never forget what you did for me.",
+      "To keep the hen do photos safe. And secret.",
+      "To return every favour.",
+      "To love you all, forever."
+    ],
+    "hand": "Forever grateful, {from}"
+  },
+  "awards": [
+    [
+      "Best friend of the year",
+      "Every year since {since}"
+    ],
+    [
+      "Funniest human alive",
+      "By a landslide"
+    ],
+    [
+      "Keeper of all secrets",
+      "Locked forever"
+    ],
+    [
+      "Lifetime achievement",
+      "In being iconic"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One emergency chat",
+      "Any time, no questions"
+    ],
+    [
+      "A movie night in",
+      "Snacks on me"
+    ],
+    [
+      "Your choice of brunch",
+      "My treat"
+    ],
+    [
+      "One big adventure",
+      "Destination to be argued over"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "The Best Friend in the World",
+  "perfume": "Top notes of late night laughter, shared fries and loyalty. A heart of pure gold.",
+  "news": {
+    "edition": "The best friend edition",
+    "headline": "{who} named best friend of the century",
+    "lead": "Sources close to the friendship confirm that {who} has, once again, been there at exactly the right moment with snacks, jokes and a hug.",
+    "weather": "Weather: sunny, with a 100% chance of inside jokes"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every adventure",
+    "nationality": "Loved, everywhere",
+    "job": "Professional best friend",
+    "stamps": [
+      "Every road trip",
+      "Late night chats",
+      "Friends forever"
+    ]
+  },
+  "movie": {
+    "sub": "A wedding ensemble comedy",
+    "soon": "The sequel: the next wedding",
+    "reviews": [
+      [
+        "Glamorous, funny and full of love",
+        "The Daily Hug"
+      ],
+      [
+        "The best women I know",
+        "{from}"
+      ],
+      [
+        "An ensemble cast in matching dresses",
+        "Everyone at the wedding"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "In which century did bridesmaids first start wearing matching dresses in Britain?",
+      [
+        "The 19th century",
+        "The 15th century",
+        "The 21st century"
+      ],
+      0
+    ],
+    [
+      "What were bridesmaids originally meant to do, according to tradition?",
+      [
+        "Protect the bride from bad luck",
+        "Choose the music",
+        "Bake the cake"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "BESTIE",
+    "LAUGH",
+    "LOYAL",
+    "FOREVER",
+    "SECRETS",
+    "FRIENDS"
+  ],
+  "note": {
+    "title": "Why we made this for them",
+    "contents": "A note for the bridesmaids",
+    "paras": [
+      "Every bride has her women: the ones who came to the fittings, planned the hen do and held her hand on the morning.",
+      "This magazine is the bride's thank you, with a little bit of every one of them inside.",
+      "{who}, this one is for you.",
+      "From everything {from} told us, the day was magic because of you."
+    ],
+    "wish": "Thank you, {who}. Truly."
+  },
+  "concepts": true,
+  "conceptWho": "friend",
+  "own": {
+    "world": true,
+    "promises": true,
+    "picks": true,
+    "dayTitle": "The Wedding Morning With {first}",
+    "day": [
+      [
+        "7:00",
+        "Matching robes",
+        "Coffee, croissants and a lot of squealing."
+      ],
+      [
+        "9:00",
+        "Hair and make up",
+        "One playlist, five mirrors, one very calm bride."
+      ],
+      [
+        "11:00",
+        "The dress",
+        "Five pairs of hands doing up one hundred tiny buttons."
+      ],
+      [
+        "13:00",
+        "The aisle",
+        "Walking first, then turning to watch her come in."
+      ]
+    ],
+    "night": [
+      "00:00",
+      "The last dance",
+      "All of them, arms round the bride, singing."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The bridal suite, then the dance floor"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Croissants, prosecco and the wedding cake"
+      ],
+      [
+        "music",
+        "Call",
+        "\"You look beautiful. Breathe.\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Fixing anything with a safety pin and a smile"
+      ],
+      [
+        "clock",
+        "Most active",
+        "From the first fitting to the last dance"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Thank them often. Keep their photos. Be at their weddings"
+      ]
+    ],
+    "little": [
+      "You packed a bag with every emergency in it.",
+      "You knew exactly when I needed a hug.",
+      "You told me I looked beautiful a hundred times.",
+      "You danced with every single great aunt."
+    ],
+    "letters": "Little Things My Bridesmaids Did"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

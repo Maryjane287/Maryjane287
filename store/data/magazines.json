@@ -10799,9 +10799,9 @@
           "x_type": "romantics"
         },
         "photos": {
-          "photo1": "/assets/samples/valentines-magazine-0.jpg",
-          "photo2": "/assets/samples/valentines-magazine-0b.jpg",
-          "photo3": "/assets/samples/valentines-magazine-0c.jpg"
+          "photo1": "/assets/samples/hundred-reasons-magazine-0.jpg",
+          "photo2": "/assets/samples/hundred-reasons-magazine-0b.jpg",
+          "photo3": "/assets/samples/hundred-reasons-magazine-0c.jpg"
         }
       },
       {
@@ -11001,9 +11001,9 @@
           "x_type": "romantics"
         },
         "photos": {
-          "photo1": "/assets/samples/anniversary-magazine-0.jpg",
-          "photo2": "/assets/samples/anniversary-magazine-0b.jpg",
-          "photo3": "/assets/samples/anniversary-magazine-0c.jpg"
+          "photo1": "/assets/samples/first-date-magazine-0.jpg",
+          "photo2": "/assets/samples/first-date-magazine-0b.jpg",
+          "photo3": "/assets/samples/first-date-magazine-0c.jpg"
         }
       },
       {
@@ -11203,9 +11203,9 @@
           "x_type": "team"
         },
         "photos": {
-          "photo1": "/assets/samples/new-home-magazine-0.jpg",
-          "photo2": "/assets/samples/new-home-magazine-0b.jpg",
-          "photo3": "/assets/samples/new-home-magazine-0c.jpg"
+          "photo1": "/assets/samples/forever-starts-magazine-0.jpg",
+          "photo2": "/assets/samples/forever-starts-magazine-0b.jpg",
+          "photo3": "/assets/samples/forever-starts-magazine-0c.jpg"
         }
       },
       {
@@ -11405,9 +11405,9 @@
           "x_type": "team"
         },
         "photos": {
-          "photo1": "/assets/samples/golden-anniversary-magazine-0.jpg",
-          "photo2": "/assets/samples/golden-anniversary-magazine-0b.jpg",
-          "photo3": "/assets/samples/golden-anniversary-magazine-0c.jpg"
+          "photo1": "/assets/samples/still-falling-magazine-0.jpg",
+          "photo2": "/assets/samples/still-falling-magazine-0b.jpg",
+          "photo3": "/assets/samples/still-falling-magazine-0c.jpg"
         }
       },
       {
@@ -11607,9 +11607,9 @@
           "x_type": "adventurers"
         },
         "photos": {
-          "photo1": "/assets/samples/travel-magazine-0.jpg",
-          "photo2": "/assets/samples/travel-magazine-0b.jpg",
-          "photo3": "/assets/samples/travel-magazine-0c.jpg"
+          "photo1": "/assets/samples/adventures-with-you-magazine-0.jpg",
+          "photo2": "/assets/samples/adventures-with-you-magazine-0b.jpg",
+          "photo3": "/assets/samples/adventures-with-you-magazine-0c.jpg"
         }
       },
       {
@@ -11809,9 +11809,9 @@
           "x_type": "romantics"
         },
         "photos": {
-          "photo1": "/assets/samples/valentines-magazine-0c.jpg",
-          "photo2": "/assets/samples/valentines-magazine-0.jpg",
-          "photo3": "/assets/samples/valentines-magazine-0b.jpg"
+          "photo1": "/assets/samples/letters-to-my-love-magazine-0.jpg",
+          "photo2": "/assets/samples/letters-to-my-love-magazine-0b.jpg",
+          "photo3": "/assets/samples/letters-to-my-love-magazine-0c.jpg"
         }
       },
       {
@@ -12011,7 +12011,9 @@
           "x_type": "romantics"
         },
         "photos": {
-          "photo1": "/assets/samples/engagement-magazine-1.jpg"
+          "photo1": "/assets/samples/forever-person-magazine-0.jpg",
+          "photo2": "/assets/samples/forever-person-magazine-0b.jpg",
+          "photo3": "/assets/samples/forever-person-magazine-0c.jpg"
         }
       },
       {
@@ -12211,7 +12213,9 @@
           "x_type": "calm"
         },
         "photos": {
-          "photo1": "/assets/samples/fathers-day-magazine-1.jpg"
+          "photo1": "/assets/samples/like-father-like-son-magazine-0.jpg",
+          "photo2": "/assets/samples/like-father-like-son-magazine-0b.jpg",
+          "photo3": "/assets/samples/like-father-like-son-magazine-0c.jpg"
         }
       },
       {
@@ -12400,7 +12404,9 @@
           "x_type": "cosy"
         },
         "photos": {
-          "photo1": "/assets/samples/grandparents-newspaper-1.jpg"
+          "photo1": "/assets/samples/generations-magazine-0.jpg",
+          "photo2": "/assets/samples/generations-magazine-0b.jpg",
+          "photo3": "/assets/samples/generations-magazine-0c.jpg"
         }
       },
       {
@@ -12476,7 +12482,8 @@
     "feature": [
       "The moment all the generations were together",
       "moment"
-    ]
+    ],
+    "group": true
   },
   {
     "slug": "family-reunion-magazine",
@@ -12592,7 +12599,9 @@
           "x_type": "lively"
         },
         "photos": {
-          "photo1": "/assets/samples/year-in-review-magazine-2.jpg"
+          "photo1": "/assets/samples/family-reunion-magazine-0.jpg",
+          "photo2": "/assets/samples/family-reunion-magazine-0b.jpg",
+          "photo3": "/assets/samples/family-reunion-magazine-0c.jpg"
         }
       },
       {
@@ -12668,7 +12677,8 @@
     "feature": [
       "The best moment of the reunion",
       "moment"
-    ]
+    ],
+    "group": true
   },
   {
     "slug": "family-holiday-magazine",
@@ -12794,7 +12804,9 @@
           "lost": "The tent that flooded on night one"
         },
         "photos": {
-          "photo1": "/assets/samples/travel-magazine-1.jpg"
+          "photo1": "/assets/samples/family-holiday-magazine-0.jpg",
+          "photo2": "/assets/samples/family-holiday-magazine-0b.jpg",
+          "photo3": "/assets/samples/family-holiday-magazine-0c.jpg"
         }
       },
       {
@@ -12981,7 +12993,9 @@
           "x_type": "cosy"
         },
         "photos": {
-          "photo1": "/assets/samples/grandparents-newspaper-3.jpg"
+          "photo1": "/assets/samples/family-heritage-magazine-0.jpg",
+          "photo2": "/assets/samples/family-heritage-magazine-0b.jpg",
+          "photo3": "/assets/samples/family-heritage-magazine-0c.jpg"
         }
       },
       {
@@ -13057,7 +13071,8 @@
     "feature": [
       "The story of how we came to be here",
       "moment"
-    ]
+    ],
+    "group": true
   },
   {
     "slug": "aunt-magazine",
@@ -13184,7 +13199,9 @@
           "x_type": "party"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-1.jpg"
+          "photo1": "/assets/samples/aunt-magazine-0.jpg",
+          "photo2": "/assets/samples/aunt-magazine-0b.jpg",
+          "photo3": "/assets/samples/aunt-magazine-0c.jpg"
         }
       },
       {
@@ -13384,7 +13401,9 @@
           "x_type": "party"
         },
         "photos": {
-          "photo1": "/assets/samples/new-job-magazine-2.jpg"
+          "photo1": "/assets/samples/uncle-magazine-0.jpg",
+          "photo2": "/assets/samples/uncle-magazine-0b.jpg",
+          "photo3": "/assets/samples/uncle-magazine-0c.jpg"
         }
       },
       {
@@ -13458,5 +13477,1422 @@
       "quote": "{words}",
       "credit": "His nieces and nephews agree"
     }
+  },
+  {
+    "slug": "girls-club-magazine",
+    "title": "The Girls' Club",
+    "searchTitle": "Personalised Girls' Group Friendship Magazine",
+    "pinTitle": "Gift for Your Girl Gang: The Girls' Club Personalised Magazine",
+    "occasion": "Girl gang",
+    "short": "For the group chat that never sleeps: a magazine all about your girls.",
+    "description": "The group chat that never sleeps, the brunches that last until dinner and the friends who have seen you at your best and your very worst. Everyone in the group adds notes, photos and voice messages through one link, and we make a glossy magazine starring all of you.",
+    "keywords": [
+      "gift for girl group",
+      "girl gang gift",
+      "friendship group gift",
+      "galentines gift",
+      "girls trip keepsake",
+      "gift for best friends group"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring your best friend",
+      "A letter from you",
+      "Your friendship by the numbers",
+      "A photo spread of your adventures",
+      "Your wildest adventure",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter to my girls",
+    "feature": [
+      "The night that made us legends",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Your group name",
+        "example": "The Brunch Club",
+        "max": 22
+      },
+      {
+        "id": "since",
+        "label": "Friends since",
+        "example": "2014",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mia",
+        "max": 30
+      },
+      {
+        "id": "count",
+        "label": "How many of you",
+        "example": "6",
+        "max": 2
+      },
+      {
+        "id": "chat",
+        "label": "Your group chat name",
+        "example": "Wine Not",
+        "max": 24
+      },
+      {
+        "id": "spot",
+        "label": "Your favourite place",
+        "example": "The window table at Lulu's",
+        "max": 40
+      },
+      {
+        "id": "words",
+        "label": "The group in three words",
+        "example": "Loud, loyal, legendary",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The night that made you legends",
+        "example": "Emma's thirtieth, when the karaoke machine broke, we sang the whole of our song with no music and the entire bar joined in",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want your girls to know? (This becomes your letter)",
+        "example": "You are my safe place, my hype team and my favourite people in the world. Whatever happens, I know there is a group chat full of women ready to fight for me. I love you all.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the girls",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite night out",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "brunch",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "The Brunch Club",
+          "since": "2014",
+          "from": "Mia",
+          "count": "6",
+          "chat": "Wine Not",
+          "spot": "The window table at Lulu's",
+          "words": "Loud, loyal, legendary",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/girls-club-magazine-0.jpg",
+          "photo2": "/assets/samples/girls-club-magazine-0b.jpg",
+          "photo3": "/assets/samples/girls-club-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "uni",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Flat 12",
+          "since": "2009",
+          "from": "Ava",
+          "count": "4",
+          "chat": "Flat 12 Forever",
+          "spot": "Anywhere with a dance floor",
+          "words": "Wild, wise, wonderful",
+          "x_type": "lively"
+        },
+        "photos": {
+          "photo1": "/assets/samples/best-friend-magazine-0.jpg",
+          "photo2": "/assets/samples/best-friend-magazine-0b.jpg",
+          "photo3": "/assets/samples/best-friend-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "mums",
+        "palette": "mint",
+        "portrait": {
+          "skin": 1,
+          "hair": "bun",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "The School Gate Girls",
+          "since": "2019",
+          "from": "Emma",
+          "count": "5",
+          "chat": "Coffee Emergency",
+          "spot": "Sam's kitchen, Fridays",
+          "words": "Tired, funny, fierce",
+          "x_type": "cosy"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The girls' club issue",
+      "edition": "Since {since}",
+      "lines": [
+        [
+          "Exclusive",
+          "{count} women, one group chat"
+        ],
+        [
+          "Our place",
+          "{spot}"
+        ],
+        [
+          "The group chat",
+          "{chat}"
+        ]
+      ],
+      "badge": [
+        "Girls",
+        "since",
+        "{since}"
+      ],
+      "quote": "{words}",
+      "credit": "All of us agree"
+    },
+    "group": true
+  },
+  {
+    "slug": "brotherhood-magazine",
+    "title": "Brotherhood: The Edition",
+    "searchTitle": "Personalised Lads' Friendship Group Magazine",
+    "pinTitle": "Gift for the Lads: Brotherhood Personalised Friendship Magazine",
+    "occasion": "The lads",
+    "short": "For the brothers you chose: a magazine all about the lads.",
+    "description": "Five a side on Tuesdays, the stag do nobody talks about and the friends who would drop everything at 3am. The lads add their notes, photos and voice messages through one link, and we make a glossy magazine about your brotherhood. Funny, a little bit soft and absolutely legendary.",
+    "keywords": [
+      "gift for male friends",
+      "gift for the lads",
+      "best man gift",
+      "groomsmen gift",
+      "male friendship gift",
+      "stag do keepsake"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring your best friend",
+      "A letter from you",
+      "Your friendship by the numbers",
+      "A photo spread of your adventures",
+      "Your wildest adventure",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter to the lads",
+    "feature": [
+      "The story the lads still tell",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Your group name",
+        "example": "The Five a Side Lot",
+        "max": 20
+      },
+      {
+        "id": "since",
+        "label": "Mates since",
+        "example": "2006",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Leo",
+        "max": 30
+      },
+      {
+        "id": "count",
+        "label": "How many of you",
+        "example": "7",
+        "max": 2
+      },
+      {
+        "id": "ritual",
+        "label": "Your weekly ritual",
+        "example": "Five a side, then the pub",
+        "max": 40
+      },
+      {
+        "id": "legend",
+        "label": "The legend of the group",
+        "example": "Sam, who once ate a whole pizza in the shower",
+        "max": 60
+      },
+      {
+        "id": "words",
+        "label": "The lads in three words",
+        "example": "Daft, loyal, brothers",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The story the lads still tell",
+        "example": "The camping trip where the tent blew away at 2am, we slept in Chris's tiny car, seven of us, and laughed so hard nobody slept at all",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want the lads to know? (This becomes your letter)",
+        "example": "We do not say it enough, so here it is in print: you lot are my brothers. Thank you for every laugh, every lift and every time you turned up when it mattered. Love you, lads.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the lads",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite day together",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "fives",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "The Five a Side Lot",
+          "since": "2006",
+          "from": "Leo",
+          "count": "7",
+          "ritual": "Five a side, then the pub",
+          "legend": "Sam, who once ate a whole pizza in the shower",
+          "words": "Daft, loyal, brothers",
+          "x_type": "sporty"
+        },
+        "photos": {
+          "photo1": "/assets/samples/brotherhood-magazine-0.jpg",
+          "photo2": "/assets/samples/brotherhood-magazine-0b.jpg",
+          "photo3": "/assets/samples/brotherhood-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "school",
+        "palette": "sky",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Class of 2010",
+          "since": "2005",
+          "from": "Chris",
+          "count": "5",
+          "ritual": "Sunday roast and the match",
+          "legend": "Leo, who has never once been on time",
+          "words": "Loud, solid, family",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/graduation-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "golf",
+        "palette": "mint",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#5a4a3a"
+        },
+        "values": {
+          "name": "The Golf Society",
+          "since": "1998",
+          "from": "Sam",
+          "count": "4",
+          "ritual": "Bad golf, good chats",
+          "legend": "Chris, and the ball in the pond",
+          "words": "Old, bold, brilliant",
+          "x_type": "adventurer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/retirement-magazine-0.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The brotherhood issue",
+      "edition": "Mates since {since}",
+      "lines": [
+        [
+          "Exclusive",
+          "{count} lads, one brotherhood"
+        ],
+        [
+          "The ritual",
+          "{ritual}"
+        ],
+        [
+          "The legend",
+          "{legend}"
+        ]
+      ],
+      "badge": [
+        "Brothers",
+        "since",
+        "{since}"
+      ],
+      "quote": "{words}",
+      "credit": "The lads agree"
+    },
+    "group": true
+  },
+  {
+    "slug": "friend-group-magazine",
+    "title": "Friend Group Hall of Fame",
+    "searchTitle": "Personalised Friend Group Magazine",
+    "pinTitle": "Friend Group Hall of Fame: a Magazine Starring Every One of You",
+    "occasion": "Friend group",
+    "short": "Every friend gets their own page: who they are, what they bring and why the group needs them.",
+    "description": "The planner, the wild card, the one who always cries and the one who always pays. In this magazine every friend gets their own profile page, written by the rest of the group through one link. It is funny, it is honest, and it is a celebration of the people who make your group, your group.",
+    "keywords": [
+      "friend group gift",
+      "gift for group of friends",
+      "friendship keepsake",
+      "christmas gift for friends",
+      "friends reunion gift",
+      "personalised friend gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring your best friend",
+      "A letter from you",
+      "Your friendship by the numbers",
+      "A photo spread of your adventures",
+      "Your wildest adventure",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter to the group",
+    "feature": [
+      "The moment we knew this group was forever",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Your group name",
+        "example": "The Sunday Lot",
+        "max": 20
+      },
+      {
+        "id": "since",
+        "label": "Friends since",
+        "example": "2011",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Ava",
+        "max": 30
+      },
+      {
+        "id": "count",
+        "label": "How many of you",
+        "example": "8",
+        "max": 2
+      },
+      {
+        "id": "planner",
+        "label": "The planner",
+        "example": "Emma, spreadsheets and all",
+        "max": 34
+      },
+      {
+        "id": "wild",
+        "label": "The wild card",
+        "example": "Leo, never without a plan B",
+        "max": 34
+      },
+      {
+        "id": "heart",
+        "label": "The heart of the group",
+        "example": "Mia, who remembers everything",
+        "max": 34
+      },
+      {
+        "id": "moment",
+        "label": "The moment you knew this group was forever",
+        "example": "When Sam lost his job and, without a single message being sent, all eight of us turned up at his door with pizza and a plan by eight o'clock",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want the group to know? (This becomes your letter)",
+        "example": "Every single one of you brings something nobody else could. Together you are my family, my favourite chaos and the best thing I ever found. Here is to the hall of fame.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the whole group",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite group moment",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "sunday",
+        "palette": "butter",
+        "portrait": {
+          "skin": 1,
+          "hair": "curly",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "The Sunday Lot",
+          "since": "2011",
+          "from": "Ava",
+          "count": "8",
+          "planner": "Emma, spreadsheets and all",
+          "wild": "Leo, never without a plan B",
+          "heart": "Mia, who remembers everything",
+          "x_type": "lively"
+        },
+        "photos": {
+          "photo1": "/assets/samples/friend-group-magazine-0.jpg",
+          "photo2": "/assets/samples/friend-group-magazine-0b.jpg",
+          "photo3": "/assets/samples/friend-group-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "uni",
+        "palette": "sky",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#5a3a22"
+        },
+        "values": {
+          "name": "Halls Block C",
+          "since": "2008",
+          "from": "Chris",
+          "count": "6",
+          "planner": "Sam and his group calendar",
+          "wild": "Ava, always",
+          "heart": "Emma, our agony aunt",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/year-in-review-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "work",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "The Office Escapees",
+          "since": "2016",
+          "from": "Mia",
+          "count": "5",
+          "planner": "Chris, booking it all",
+          "wild": "Leo, karaoke king",
+          "heart": "Sam, who sends the cards",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/best-friend-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The hall of fame issue",
+      "edition": "Since {since}",
+      "lines": [
+        [
+          "Exclusive",
+          "Every one of the {count} of us"
+        ],
+        [
+          "The planner",
+          "{planner}"
+        ],
+        [
+          "The wild card",
+          "{wild}"
+        ]
+      ],
+      "badge": [
+        "Hall of",
+        "fame",
+        "{since}"
+      ],
+      "quote": "{heart}",
+      "credit": "The heart of the group"
+    },
+    "group": true
+  },
+  {
+    "slug": "maid-of-honour-magazine",
+    "title": "Maid of Honour Spotlight",
+    "searchTitle": "Maid of Honour Thank You Gift Magazine",
+    "pinTitle": "Maid of Honour Gift: a Thank You Magazine From the Bride",
+    "occasion": "Maid of honour",
+    "short": "A thank you from the bride to the woman who held her hand, her dress and her nerves.",
+    "description": "She planned the hen do, held your dress, fixed your make up and gave a speech that made the room cry. A thank you magazine from the bride to her maid of honour: your friendship, the wedding through her eyes and everything you want to say. A keepsake she will treasure long after the confetti.",
+    "keywords": [
+      "maid of honour gift",
+      "maid of honour thank you",
+      "gift from bride",
+      "chief bridesmaid gift",
+      "wedding thank you gift",
+      "best friend wedding gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring your best friend",
+      "A letter from you",
+      "Your friendship by the numbers",
+      "A photo spread of your adventures",
+      "Your wildest adventure",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter to my maid of honour",
+    "feature": [
+      "The moment on the wedding day I will never forget",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Her name",
+        "example": "Emma",
+        "max": 12
+      },
+      {
+        "id": "since",
+        "label": "Friends since",
+        "example": "2008",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mia, the bride",
+        "max": 30
+      },
+      {
+        "id": "wedding",
+        "label": "The wedding date",
+        "example": "14 June 2026",
+        "max": 18
+      },
+      {
+        "id": "hen",
+        "label": "The hen do she planned",
+        "example": "A weekend in Lisbon, matching hats",
+        "max": 40
+      },
+      {
+        "id": "save",
+        "label": "How she saved the day",
+        "example": "Sewed my strap back on in the car",
+        "max": 40
+      },
+      {
+        "id": "words",
+        "label": "Her in three words",
+        "example": "Calm, fierce, golden",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment on the wedding day you will never forget",
+        "example": "Just before I walked in, she fixed my veil, squeezed my hands, whispered \"you look like you\" and I stopped shaking",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want her to know? (This becomes your letter)",
+        "example": "You did not just stand beside me. You held me up, all year. Thank you for the hen do, the speech, the tissues and every single time you said it would all be fine. It was, because of you.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of her",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "The two of you on the day",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Emma",
+          "since": "2008",
+          "from": "Mia, the bride",
+          "wedding": "14 June 2026",
+          "hen": "A weekend in Lisbon, matching hats",
+          "save": "Sewed my strap back on in the car",
+          "words": "Calm, fierce, golden",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/maid-of-honour-magazine-0.jpg",
+          "photo2": "/assets/samples/maid-of-honour-magazine-0b.jpg",
+          "photo3": "/assets/samples/maid-of-honour-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "butter",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "since": "1999",
+          "from": "Sam, the bride",
+          "wedding": "2 August 2026",
+          "hen": "Spa day, then dancing until 3",
+          "save": "Found the rings in the florist's van",
+          "words": "Organised, warm, iconic",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/bridesmaid-proposal-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "mint",
+        "portrait": {
+          "skin": 1,
+          "hair": "bun",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Mia",
+          "since": "2012",
+          "from": "Emma, the bride",
+          "wedding": "20 September 2026",
+          "hen": "A cottage, a hot tub, a karaoke machine",
+          "save": "Talked my dad out of his third joke",
+          "words": "Kind, funny, unshakeable",
+          "x_type": "cosy"
+        },
+        "photos": {
+          "photo1": "/assets/samples/best-friend-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The maid of honour issue",
+      "edition": "Married {wedding}",
+      "lines": [
+        [
+          "Exclusive",
+          "The woman behind the bride"
+        ],
+        [
+          "She planned",
+          "{hen}"
+        ],
+        [
+          "She saved the day",
+          "{save}"
+        ]
+      ],
+      "badge": [
+        "Maid of",
+        "honour",
+        "forever"
+      ],
+      "quote": "{words}",
+      "credit": "The bride agrees"
+    }
+  },
+  {
+    "slug": "friends-on-tour-magazine",
+    "title": "Best Friends on Tour",
+    "searchTitle": "Personalised Friends Trip Magazine",
+    "pinTitle": "Girls Trip or Lads Trip Keepsake: Best Friends on Tour Magazine",
+    "occasion": "Friends trip",
+    "short": "The friends trip, from the airport selfie to the last night, in a glossy travel magazine.",
+    "description": "The airport prosecco, the villa with the pool, the night nobody can fully remember and the sunset everyone went quiet for. Tell us about your friends trip and everyone adds their photos and voice notes through one link. We make a glossy travel magazine of the whole adventure.",
+    "keywords": [
+      "girls trip gift",
+      "lads holiday keepsake",
+      "friends trip memory book",
+      "best friends holiday gift",
+      "travel gift for friends",
+      "hen do keepsake"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring your trip",
+      "A postcard letter",
+      "The trip by the numbers",
+      "A photo spread of the best views",
+      "The moment we will laugh about forever",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter about our trip",
+    "feature": [
+      "The night of the trip",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "place",
+        "label": "Where you went",
+        "example": "Mykonos",
+        "max": 18
+      },
+      {
+        "id": "days",
+        "label": "How many days",
+        "example": "5",
+        "max": 3
+      },
+      {
+        "id": "who",
+        "label": "Who went",
+        "example": "The Brunch Club, all six",
+        "max": 28
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "meal",
+        "label": "The best thing anyone ate",
+        "example": "Calamari on the harbour, twice a day",
+        "max": 60
+      },
+      {
+        "id": "view",
+        "label": "The best view",
+        "example": "Little Venice at sunset",
+        "max": 60
+      },
+      {
+        "id": "lost",
+        "label": "The trip disaster",
+        "example": "Leo's passport, found in the fridge",
+        "max": 60
+      },
+      {
+        "id": "moment",
+        "label": "The night of the trip",
+        "example": "The last night, when we danced barefoot on the beach until sunrise, then watched it come up over the sea, all six of us in one big heap",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want everyone to remember? (This becomes your letter)",
+        "example": "Years from now we will not remember the delayed flight or the sunburn. We will remember the laughing, the dancing and being all together in one place. Same time next year?",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the friends on tour",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "Your favourite place",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another trip favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "myk",
+        "palette": "sky",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "place": "Mykonos",
+          "days": "5",
+          "who": "The Brunch Club, all six",
+          "from": "Emma",
+          "meal": "Calamari on the harbour, twice a day",
+          "view": "Little Venice at sunset",
+          "lost": "Leo's passport, found in the fridge"
+        },
+        "photos": {
+          "photo1": "/assets/samples/friends-on-tour-magazine-0.jpg",
+          "photo2": "/assets/samples/friends-on-tour-magazine-0b.jpg",
+          "photo3": "/assets/samples/friends-on-tour-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "lisbon",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "place": "Lisbon",
+          "days": "4",
+          "who": "Ava, Mia and Sam",
+          "from": "Ava",
+          "meal": "Custard tarts, every hour",
+          "view": "The city from the castle",
+          "lost": "Every single tram"
+        },
+        "photos": {
+          "photo1": "/assets/samples/travel-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "vegas",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "place": "Las Vegas",
+          "days": "6",
+          "who": "The lads, all eight",
+          "from": "Chris",
+          "meal": "The 3am pancakes",
+          "view": "The Strip from the rooftop",
+          "lost": "Sam's dignity, at karaoke"
+        },
+        "photos": {
+          "photo1": "/assets/samples/travel-magazine-0.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{place}",
+      "issue": "The friends on tour issue",
+      "edition": "{who}",
+      "lines": [
+        [
+          "Exclusive",
+          "{days} days in {place}"
+        ],
+        [
+          "Best thing we ate",
+          "{meal}"
+        ],
+        [
+          "Trip disaster",
+          "{lost}"
+        ]
+      ],
+      "badge": [
+        "Days",
+        "{days}",
+        "on tour"
+      ],
+      "quote": "{view}",
+      "credit": "Best view"
+    }
+  },
+  {
+    "slug": "unfiltered-magazine",
+    "title": "The Unfiltered Edition",
+    "searchTitle": "Funny Honest Best Friend Magazine",
+    "pinTitle": "The Unfiltered Edition: a Funny, Honest Magazine for Your Best Friend",
+    "occasion": "Unfiltered",
+    "short": "No filters, no flattery: the brutally honest, hilarious magazine about your best friend.",
+    "description": "The truth about your best friend: their worst habits, their most embarrassing moments, the things only you know and, underneath all the teasing, how much you adore them. Funny, honest and a little bit rude, with a soft centre. The perfect birthday gift for the friend who has heard every compliment already.",
+    "keywords": [
+      "funny best friend gift",
+      "funny birthday gift for friend",
+      "roast gift",
+      "joke gift for best friend",
+      "honest friend gift",
+      "gift for friend who has everything"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring your best friend",
+      "A letter from you",
+      "Your friendship by the numbers",
+      "A photo spread of your adventures",
+      "Your wildest adventure",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "The unfiltered truth, with love",
+    "feature": [
+      "The most embarrassing thing you have ever seen them do",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Your friend's name",
+        "example": "Sam",
+        "max": 12
+      },
+      {
+        "id": "since",
+        "label": "Friends since",
+        "example": "2010",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Leo",
+        "max": 30
+      },
+      {
+        "id": "habit",
+        "label": "Their worst habit",
+        "example": "Saying \"five minutes away\" from the shower",
+        "max": 44
+      },
+      {
+        "id": "cook",
+        "label": "Their cooking, honestly",
+        "example": "Bravely beige",
+        "max": 34
+      },
+      {
+        "id": "truth",
+        "label": "The thing nobody tells them",
+        "example": "They sing in their sleep",
+        "max": 40
+      },
+      {
+        "id": "words",
+        "label": "Them, unfiltered, in three words",
+        "example": "Late, loud, lovely",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The most embarrassing thing you have ever seen them do",
+        "example": "Waved back at someone across a packed restaurant who was waving at the person behind them, then pretended to stretch for a full minute",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "The honest truth (This becomes your letter)",
+        "example": "You are late, you are loud and your playlists are a crime. You are also the funniest, kindest, most loyal person I know, and I would not change one single thing about you. Unfiltered and completely true.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo, the more unflattering the better",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A funny photo of them",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "One where they actually look nice",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "sam",
+        "palette": "butter",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Sam",
+          "since": "2010",
+          "from": "Leo",
+          "habit": "Saying \"five minutes away\" from the shower",
+          "cook": "Bravely beige",
+          "truth": "They sing in their sleep",
+          "words": "Late, loud, lovely",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/unfiltered-magazine-0.jpg",
+          "photo2": "/assets/samples/unfiltered-magazine-0b.jpg",
+          "photo3": "/assets/samples/unfiltered-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "since": "2005",
+          "from": "Mia",
+          "habit": "Leaving voice notes at 1am",
+          "cook": "Smoke alarm famous",
+          "truth": "Her laugh scares dogs",
+          "words": "Chaotic, kind, iconic",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/best-friend-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "chris",
+        "palette": "sky",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#5a4a3a"
+        },
+        "values": {
+          "name": "Chris",
+          "since": "2013",
+          "from": "Emma",
+          "habit": "Explaining films during films",
+          "cook": "Toast, sometimes",
+          "truth": "He cried at a cartoon",
+          "words": "Daft, loyal, golden",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-job-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The unfiltered issue",
+      "edition": "No filters since {since}",
+      "lines": [
+        [
+          "Exclusive",
+          "The truth, finally"
+        ],
+        [
+          "Worst habit",
+          "{habit}"
+        ],
+        [
+          "Nobody tells them",
+          "{truth}"
+        ]
+      ],
+      "badge": [
+        "Zero",
+        "filters",
+        "applied"
+      ],
+      "quote": "{words}",
+      "credit": "Sorry, not sorry"
+    }
+  },
+  {
+    "slug": "bridesmaids-magazine",
+    "title": "The Bridesmaids Edition",
+    "searchTitle": "Bridesmaids Thank You Gift Magazine",
+    "pinTitle": "Bridesmaids Gift: The Bridesmaids Edition, a Thank You From the Bride",
+    "occasion": "Bridesmaids",
+    "short": "A thank you from the bride to her bridesmaids: every one of them, on the cover.",
+    "description": "The women who stood beside you: from the hen do to the last dance. A thank you magazine from the bride to all her bridesmaids, with a page for each of them, the wedding morning in photos and a letter that says everything. Order a copy for every bridesmaid.",
+    "keywords": [
+      "bridesmaid gift",
+      "bridesmaids thank you",
+      "gift from bride to bridesmaids",
+      "bridal party gift",
+      "wedding thank you gift",
+      "bridesmaid keepsake"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring your best friend",
+      "A letter from you",
+      "Your friendship by the numbers",
+      "A photo spread of your adventures",
+      "Your wildest adventure",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter to my bridesmaids",
+    "feature": [
+      "The moment with my bridesmaids I will never forget",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "What you call your bridesmaids",
+        "example": "My Girls",
+        "max": 16
+      },
+      {
+        "id": "count",
+        "label": "How many bridesmaids",
+        "example": "5",
+        "max": 2
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma, the bride",
+        "max": 30
+      },
+      {
+        "id": "wedding",
+        "label": "The wedding date",
+        "example": "14 June 2026",
+        "max": 18
+      },
+      {
+        "id": "colour",
+        "label": "Their dress colour",
+        "example": "Dusty rose",
+        "max": 20
+      },
+      {
+        "id": "hen",
+        "label": "The hen do",
+        "example": "A cottage in the Cotswolds, a hot tub and a lot of singing",
+        "max": 60
+      },
+      {
+        "id": "words",
+        "label": "Them in three words",
+        "example": "Glamorous, loyal, hilarious",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "The moment with your bridesmaids you will never forget",
+        "example": "All five of them in a circle around me in the bridal suite, holding my hands, everyone crying and laughing at once, just before I put my dress on",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "You did not just stand next to me on the day. You stood next to me through every dress fitting, every wobble and every spreadsheet. Thank you for being my girls. I love you all more than I can say.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the bridesmaids",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "The getting ready photos",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "girls",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "My Girls",
+          "count": "5",
+          "from": "Emma, the bride",
+          "wedding": "14 June 2026",
+          "colour": "Dusty rose",
+          "hen": "A cottage in the Cotswolds, a hot tub and a lot of singing",
+          "words": "Glamorous, loyal, hilarious",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/bridesmaids-magazine-0.jpg",
+          "photo2": "/assets/samples/bridesmaids-magazine-0b.jpg",
+          "photo3": "/assets/samples/bridesmaids-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "sage",
+        "palette": "mint",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "The Bride Squad",
+          "count": "4",
+          "from": "Ava, the bride",
+          "wedding": "2 August 2026",
+          "colour": "Sage green",
+          "hen": "Marbella, matching swimsuits",
+          "words": "Fierce, funny, family",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/bridesmaid-proposal-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "navy",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "bun",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "My Bridesmaids",
+          "count": "3",
+          "from": "Mia, the bride",
+          "wedding": "18 October 2026",
+          "colour": "Midnight blue",
+          "hen": "Dinner, dancing and a sing song on the bus home",
+          "words": "Calm, kind, unforgettable",
+          "x_type": "cosy"
+        },
+        "photos": {
+          "photo1": "/assets/samples/wedding-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The bridesmaids issue",
+      "edition": "Married {wedding}",
+      "lines": [
+        [
+          "Exclusive",
+          "The {count} women beside the bride"
+        ],
+        [
+          "In {colour}",
+          "And absolutely stunning"
+        ],
+        [
+          "The hen do",
+          "{hen}"
+        ]
+      ],
+      "badge": [
+        "Brides",
+        "maids",
+        "forever"
+      ],
+      "quote": "{words}",
+      "credit": "The bride agrees"
+    },
+    "group": true
   }
 ]

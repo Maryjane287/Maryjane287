@@ -1,0 +1,372 @@
+{
+  "theme": "sunset",
+  "fields": [
+    {
+      "id": "s_first",
+      "label": "How the whole group first came together",
+      "example": "A friend of a friend's birthday that never really ended",
+      "max": 80,
+      "chapter": "How the group was born"
+    },
+    {
+      "id": "s_rescue",
+      "label": "The time the group was at its best",
+      "example": "Throwing Emma a surprise wedding shower in four days",
+      "max": 80,
+      "chapter": "Our finest hour"
+    },
+    {
+      "id": "s_song",
+      "label": "Your group's song",
+      "example": "The one every party ends with",
+      "max": 80,
+      "chapter": "The group anthem"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to the group",
+      "example": "An annual reunion, no excuses, forever",
+      "max": 70
+    }
+  ],
+  "story": {
+    "title": "The Hall of Fame: {first}",
+    "hand": "Every one of you belongs in here, {who}.",
+    "kicker": "Our story",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "labels": {
+    "since": "Friends since",
+    "count": "How many of us",
+    "planner": "The planner",
+    "wild": "The wild card",
+    "heart": "The heart of the group"
+  },
+  "picks": {
+    "legend": "Group legends",
+    "kicker": "From {from}, with love",
+    "title": "Ten things that make our group, our group",
+    "items": [
+      "The planner who books it all",
+      "The one who is always late",
+      "The one who cries at adverts",
+      "The one who always pays",
+      "The group DJ",
+      "The one who remembers everything",
+      "The terrible cook we still let cook",
+      "The one with the best sofa",
+      "The voice of reason",
+      "The one who starts the dancing",
+      "The quiet one with the best jokes",
+      "All of us, together"
+    ]
+  },
+  "timeline": {
+    "kicker": "Friendship through the ages",
+    "title": "A Short History of Best Friends",
+    "items": [
+      [
+        "About 350 BC",
+        "A philosopher agrees",
+        "Aristotle wrote that true friendship is one of the most important things in a good life."
+      ],
+      [
+        "1926",
+        "Pooh and Piglet",
+        "A. A. Milne published Winnie the Pooh, and the world met its most famous pair of best friends."
+      ],
+      [
+        "1994",
+        "I'll be there for you",
+        "The TV show Friends began, and a group of pals on a sofa became family for millions."
+      ],
+      [
+        "2011",
+        "A day for friends",
+        "The United Nations made 30 July the International Day of Friendship."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who}",
+      "Not in the history books yet. But in mine, the best friend anyone has ever had."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Friendship",
+    "items": [
+      [
+        "What! You too? I thought I was the only one.",
+        "C. S. Lewis, The Four Loves"
+      ],
+      [
+        "A friend is a single soul dwelling in two bodies.",
+        "Aristotle"
+      ],
+      [
+        "The only way to have a friend is to be one.",
+        "Ralph Waldo Emerson, 1841"
+      ],
+      [
+        "Shared joy is a double joy, shared sorrow is half a sorrow.",
+        "An old Swedish saying"
+      ]
+    ],
+    "hand": "They all say it beautifully. I just say: thank you for being you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Best Friends",
+    "items": [
+      [
+        "smile",
+        "Laughing together",
+        "One researcher found we are around thirty times more likely to laugh with others than alone."
+      ],
+      [
+        "spark",
+        "Brains in sync",
+        "Close friends' brains react in strikingly similar ways when they watch the same videos."
+      ],
+      [
+        "leaf",
+        "Smaller hills",
+        "In one study, a hill looked less steep to people standing next to a friend."
+      ],
+      [
+        "clock",
+        "Hours of hanging out",
+        "One study suggests it takes about 200 hours together to become close friends. Worth every minute."
+      ],
+      [
+        "hands",
+        "The inner circle",
+        "Most of us have room for only about five very closest friends. You made the cut."
+      ],
+      [
+        "pulse",
+        "Good for your health",
+        "Strong friendships are linked to lower stress and longer, healthier lives."
+      ]
+    ],
+    "hand": "Science can explain a lot. It still cannot explain how {who} always knows exactly what to say."
+  },
+  "world": {
+    "kicker": "A thank you from the universe",
+    "title": "Why the World Is Better With {who} In It",
+    "lead": "Because {who} exists, the world got:",
+    "items": [
+      "Eight people who never miss a birthday.",
+      "A planner for every emergency.",
+      "A wild card for every quiet night.",
+      "Someone to call at any hour.",
+      "Parties that end with everyone dancing.",
+      "A family you chose yourselves.",
+      "And every single legend of {who}."
+    ],
+    "close": "Hall of famers, every one of you."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From all of us",
+    "title": "Group promises",
+    "items": [
+      "The annual reunion, no excuses.",
+      "Nobody gets left out of the chat.",
+      "Every big moment, we are all there.",
+      "No secrets that matter.",
+      "Friends until we are very old and very loud."
+    ],
+    "hand": "With love, {from}"
+  },
+  "awards": [
+    [
+      "Best friend of the year",
+      "Every year since {since}"
+    ],
+    [
+      "Funniest human alive",
+      "By a landslide"
+    ],
+    [
+      "Keeper of all secrets",
+      "Locked forever"
+    ],
+    [
+      "Lifetime achievement",
+      "In being iconic"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One emergency chat",
+      "Any time, no questions"
+    ],
+    [
+      "A movie night in",
+      "Snacks on me"
+    ],
+    [
+      "Your choice of brunch",
+      "My treat"
+    ],
+    [
+      "One big adventure",
+      "Destination to be argued over"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "The Best Friend in the World",
+  "perfume": "Top notes of late night laughter, shared fries and loyalty. A heart of pure gold.",
+  "news": {
+    "edition": "The best friend edition",
+    "headline": "{who} named best friend of the century",
+    "lead": "Sources close to the friendship confirm that {who} has, once again, been there at exactly the right moment with snacks, jokes and a hug.",
+    "weather": "Weather: sunny, with a 100% chance of inside jokes"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every adventure",
+    "nationality": "Loved, everywhere",
+    "job": "Professional best friend",
+    "stamps": [
+      "Every road trip",
+      "Late night chats",
+      "Friends forever"
+    ]
+  },
+  "movie": {
+    "sub": "An ensemble comedy",
+    "soon": "The sequel: the next reunion",
+    "reviews": [
+      [
+        "The best ensemble cast of the year",
+        "The Daily Hug"
+      ],
+      [
+        "Every one of them a star",
+        "{from}"
+      ],
+      [
+        "Funny, warm and full of chaos",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "What is the name for a friendship holiday shared at Thanksgiving?",
+      [
+        "Friendsgiving",
+        "Palsday",
+        "Matesmas"
+      ],
+      0
+    ],
+    [
+      "According to research, roughly how many hours does it take to turn an acquaintance into a close friend?",
+      [
+        "About 200",
+        "About 10",
+        "About 2,000"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "BESTIE",
+    "LAUGH",
+    "LOYAL",
+    "FOREVER",
+    "SECRETS",
+    "FRIENDS"
+  ],
+  "note": {
+    "title": "Why every friend gets a page",
+    "contents": "A note for the group",
+    "paras": [
+      "A friend group is a strange and wonderful thing. Every person in it plays a part, and the whole thing would fall apart without any one of them.",
+      "So in this magazine, everyone gets their moment: the planner, the wild card, the heart and everyone in between.",
+      "{who}, this is your hall of fame.",
+      "From everything {from} told us, every one of you deserves your place in it."
+    ],
+    "wish": "To every legend in {who}."
+  },
+  "concepts": true,
+  "conceptWho": "friend",
+  "own": {
+    "world": true,
+    "promises": true,
+    "picks": true,
+    "dayTitle": "A Weekend Away With {first}",
+    "day": [
+      [
+        "9:00",
+        "The planner's itinerary",
+        "Laminated. Colour coded. Ignored by lunchtime."
+      ],
+      [
+        "12:00",
+        "The long lunch",
+        "Eight people, one table, four conversations at once."
+      ],
+      [
+        "16:00",
+        "The wild card's idea",
+        "Nobody knows how we ended up on a pedalo."
+      ],
+      [
+        "20:00",
+        "Dinner",
+        "The heart of the group makes a toast. Everyone cries."
+      ]
+    ],
+    "night": [
+      "01:00",
+      "The kitchen",
+      "Still up, still talking, still the best of friends."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The biggest table in any room"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Sharing platters, so everyone gets a bit"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Is everyone coming?\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Turning any Tuesday into an event"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Weekends, birthdays and big announcements"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Keep the group chat alive and the calendar full"
+      ]
+    ],
+    "little": [
+      "You always save the best seat for whoever needs it most.",
+      "You take the group photo, then retake it for whoever blinked.",
+      "You keep the annual tradition going, whatever happens.",
+      "You make every new partner feel part of the group."
+    ],
+    "letters": "Little Things That Make Our Group"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

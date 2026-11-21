@@ -1,0 +1,372 @@
+{
+  "theme": "ocean",
+  "fields": [
+    {
+      "id": "s_song",
+      "label": "The song of the trip",
+      "example": "The one the taxi driver played and we made him play again",
+      "max": 80,
+      "chapter": "The soundtrack of the trip"
+    },
+    {
+      "id": "s_word",
+      "label": "Everyone's favourite moment, in their own words",
+      "example": "Mia: the boat. Emma: sunrise. Sam: the 3am gyros",
+      "max": 80,
+      "chapter": "Everyone's highlight"
+    },
+    {
+      "id": "s_again",
+      "label": "What you would go back for",
+      "example": "That beach bar, and the man who sang to us",
+      "max": 80,
+      "chapter": "We would go back for"
+    },
+    {
+      "id": "s_next",
+      "label": "Where the tour goes next",
+      "example": "Ibiza. It has been decided. In the group chat",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "place": "Where we went",
+    "days": "Days on tour",
+    "meal": "Best thing we ate",
+    "view": "Best view",
+    "lost": "Trip disaster"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "quizTitle": "How well do you remember {place}?",
+  "story": {
+    "title": "Best Friends on Tour",
+    "hand": "Same time next year, {who}?",
+    "kicker": "The trip",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Trip highlights",
+    "kicker": "Trip highlights",
+    "title": "Ten best bits of the trip",
+    "items": [
+      "The airport prosecco",
+      "The villa pool",
+      "Matching sunglasses",
+      "The boat day",
+      "The sunset that silenced us",
+      "Dancing until sunrise",
+      "The 3am snack run",
+      "The terrible group photo",
+      "Getting lost, together",
+      "The rooftop bar",
+      "The beach nap",
+      "All of us, in one place"
+    ]
+  },
+  "timeline": {
+    "kicker": "Travel through the ages",
+    "title": "A Short History of Going Away",
+    "items": [
+      [
+        "1271",
+        "The great journey",
+        "Marco Polo set out from Venice for Asia. He did not get home for about 24 years. Some holiday."
+      ],
+      [
+        "1700s",
+        "The Grand Tour",
+        "Young travellers crossed Europe for months, chasing art, music, ruins and sunshine."
+      ],
+      [
+        "1841",
+        "The first package trip",
+        "Thomas Cook took hundreds of people on a day trip by train, and the group holiday was born."
+      ],
+      [
+        "1970",
+        "The jumbo jet",
+        "The first Boeing 747 passenger flight took off, and flying abroad began to open up for millions."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who}",
+      "{days} days in {place}. Not in the history books yet, but the best trip ever taken, if you ask us."
+    ]
+  },
+  "letters": {
+    "kicker": "Words for the road",
+    "title": "What the World Has Said About Travel",
+    "items": [
+      [
+        "The world is a book, and those who do not travel read only one page.",
+        "Saint Augustine"
+      ],
+      [
+        "I travel not to go anywhere, but to go. I travel for travel's sake.",
+        "Robert Louis Stevenson, 1879"
+      ],
+      [
+        "A journey of a thousand miles begins with a single step.",
+        "Laozi, Tao Te Ching"
+      ],
+      [
+        "A good companion shortens the longest road.",
+        "An old proverb"
+      ]
+    ],
+    "hand": "They all say it beautifully. We just say: where to next?"
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Adventure",
+    "items": [
+      [
+        "spark",
+        "New is good for you",
+        "New places light up the brain's reward system, the same one that makes good news feel so good."
+      ],
+      [
+        "clock",
+        "The joy of waiting",
+        "Studies suggest just looking forward to a trip can make people happier for weeks before they go."
+      ],
+      [
+        "gift",
+        "Better than things",
+        "Research shows experiences bring longer lasting happiness than things. Memories never go out of style."
+      ],
+      [
+        "eye",
+        "That view",
+        "A breathtaking view sparks awe, which studies link to feeling kinder and more connected."
+      ],
+      [
+        "plane",
+        "Short but sweet",
+        "The first powered aeroplane flight, in 1903, lasted just 12 seconds."
+      ],
+      [
+        "moon",
+        "Catching up",
+        "After a long flight, the body clock catches up at roughly one time zone a day."
+      ]
+    ],
+    "hand": "Science can explain a lot. It cannot explain why holiday food always tastes better."
+  },
+  "world": {
+    "kicker": "A postcard from the world",
+    "title": "Why Trips Are Better With {who}",
+    "lead": "When {who} go on tour, the world gets:",
+    "items": [
+      "Very happy beach bar owners.",
+      "The best group photos in the resort.",
+      "A dance floor that never empties.",
+      "Postcards nobody actually sends.",
+      "Memories that last forever.",
+      "Friendships closer than ever.",
+      "And all of {who}."
+    ],
+    "close": "Wish you were here. Love, {who}."
+  },
+  "promises": {
+    "field": "s_next",
+    "kicker": "Until the next trip",
+    "title": "Trip promises",
+    "items": [
+      "To make it a tradition.",
+      "To share every photo, even the bad ones.",
+      "To never tell anyone about that night.",
+      "To book the next one before we land.",
+      "To always travel together."
+    ],
+    "hand": "Love, {from}"
+  },
+  "awardsKicker": "Live from the departure lounge",
+  "awards": [
+    [
+      "Best travel buddies",
+      "No contest"
+    ],
+    [
+      "Most photos of breakfast",
+      "A new record"
+    ],
+    [
+      "Chief map holder",
+      "Upside down, mostly"
+    ],
+    [
+      "Adventurers of the year",
+      "Unanimous"
+    ]
+  ],
+  "awardsFoot": "The envelope, please. It came with a postcard stamp.",
+  "vouchers": [
+    [
+      "The window seat",
+      "Valid on any journey"
+    ],
+    [
+      "A day with no plans",
+      "Wander wherever you like"
+    ],
+    [
+      "One more holiday breakfast",
+      "Recreated at home"
+    ],
+    [
+      "Planning the next trip",
+      "Maps and snacks included"
+    ]
+  ],
+  "vouchersTitle": "Travel vouchers for {who}",
+  "certLine": "officially and forever qualify as",
+  "cert": "World Class Travellers",
+  "perfume": "Top notes of sea air, sun cream and strong coffee. A heart of pure wanderlust.",
+  "news": {
+    "edition": "Travel edition",
+    "headline": "{who} back from {place}",
+    "lead": "Sources close to the travellers confirm {days} days in {place}, far too many photos and not one single regret.",
+    "weather": "Weather: sunny, wherever you go together"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to everywhere, together",
+    "nationality": "Citizens of the world",
+    "job": "Professional explorers",
+    "stamps": [
+      "{place}",
+      "Somewhere new",
+      "Next stop: anywhere"
+    ]
+  },
+  "movie": {
+    "sub": "A friends trip comedy",
+    "soon": "The sequel: next year's trip",
+    "reviews": [
+      [
+        "Sunny, chaotic and hilarious",
+        "The Daily Hug"
+      ],
+      [
+        "The best holiday of my life",
+        "{from}"
+      ],
+      [
+        "Five stars, sand in everything",
+        "Everyone who went"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Which European city is famous for its custard tarts, pastéis de nata?",
+      [
+        "Lisbon",
+        "Madrid",
+        "Rome"
+      ],
+      0
+    ],
+    [
+      "What do most groups say is the best part of a friends trip?",
+      [
+        "Being together",
+        "The weather",
+        "The flights"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "TRAVEL",
+    "PASSPORT",
+    "SUNSET",
+    "JOURNEY",
+    "EXPLORE",
+    "POSTCARD"
+  ],
+  "note": {
+    "title": "Why friends trips matter",
+    "contents": "A note for the group",
+    "paras": [
+      "Some trips are just holidays. Others become the story your friendship tells forever.",
+      "So we gathered the whole thing, through everyone's eyes, into one magazine.",
+      "{who}, this is the trip you will talk about for years.",
+      "From everything {from} told us, it was the best one yet."
+    ],
+    "wish": "Wish you were here, {who}."
+  },
+  "concepts": "trip",
+  "own": {
+    "dayTitle": "A Perfect Day on Tour in {place}",
+    "day": [
+      [
+        "11:00",
+        "Up, eventually",
+        "Breakfast becomes brunch becomes lunch."
+      ],
+      [
+        "14:00",
+        "The pool",
+        "Inflatables, sunglasses and a very important playlist."
+      ],
+      [
+        "18:00",
+        "Getting ready",
+        "One mirror, six outfits each, one bottle of something cold."
+      ],
+      [
+        "21:00",
+        "Dinner",
+        "A long table by the sea and a toast to us."
+      ]
+    ],
+    "night": [
+      "04:00",
+      "Sunrise",
+      "Still dancing. Nobody wants it to end."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "A sun lounger, then the dance floor"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Calamari, cocktails and the 3am snack run"
+      ],
+      [
+        "music",
+        "Call",
+        "\"One more, then home.\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Turning any bar into the best night of the trip"
+      ],
+      [
+        "clock",
+        "Most active",
+        "From sunset until sunrise"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Pack light. Bring snacks. Book the next one"
+      ]
+    ],
+    "little": [
+      "You always found the best little bar.",
+      "You took every group photo, and the funny ones too.",
+      "You made sure nobody went home alone.",
+      "You turned a delayed flight into a party."
+    ],
+    "letters": "Little Moments From the Trip"
+  }
+}

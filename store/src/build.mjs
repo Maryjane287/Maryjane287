@@ -264,9 +264,9 @@ async function home() {
   const FILTERS = [
     ['birthday', 'Birthdays', /birthday|kids/],
     ['love', 'Love and weddings', /anniversary|wedding|engagement|valentines|boyfriend|girlfriend|husband|wife|marry|bridesmaid|christmas-together|long-distance|love-story|hundred-reasons|first-date|forever|still-falling|adventures-with|letters-to/],
-    ['family', 'Family and baby', /grandparents|father-son|generations|reunion|heritage|aunt|uncle|grandma|baby|mothers|mum-|fathers|daddys|sister|brother|sibling|family|matriarch|pregnancy|kids|year-in-review/],
+    ['family', 'Family and baby', /grandparents|like-father|generations|reunion|heritage|aunt|uncle|grandma|baby|mothers|mum-|fathers|daddys|sister|brother-mag|sibling|family|matriarch|pregnancy|kids|year-in-review/],
     ['christmas', 'Christmas', /christmas|year-in-review/],
-    ['thanks', 'Friends and big moments', /best-friend|teacher|thank-you|retirement|graduation|new-job|new-home|travel|leaving/],
+    ['thanks', 'Friends and big moments', /best-friend|girls-club|brotherhood|friend-group|maid-of-honour|friends-on-tour|unfiltered|bridesmaids|teacher|thank-you|retirement|graduation|new-job|new-home|travel|leaving/],
     ['memory', 'Pets and memories', /pet|memorial/],
   ];
   const tagsFor = m => FILTERS.filter(([, , re]) => re.test(m.slug)).map(([id]) => id).join(' ');

@@ -1,0 +1,372 @@
+{
+  "theme": "candy",
+  "fields": [
+    {
+      "id": "s_first",
+      "label": "Your honest first impression of them",
+      "example": "Too loud, too much, absolutely not my type of person. Wrong",
+      "max": 80,
+      "chapter": "My honest first impression"
+    },
+    {
+      "id": "s_rescue",
+      "label": "The thing you would never say to their face",
+      "example": "You are the bravest person I know",
+      "max": 80,
+      "chapter": "Under all the jokes"
+    },
+    {
+      "id": "s_song",
+      "label": "The song they always ruin at karaoke",
+      "example": "Every power ballad ever written",
+      "max": 80,
+      "chapter": "The song they ruin"
+    },
+    {
+      "id": "s_promise",
+      "label": "An honest promise",
+      "example": "To keep telling you the truth, forever",
+      "max": 70
+    }
+  ],
+  "story": {
+    "title": "{first}, Unfiltered",
+    "hand": "Every word true, every word with love. {who}.",
+    "kicker": "The truth",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "labels": {
+    "since": "Friends since",
+    "habit": "Worst habit",
+    "cook": "Their cooking, honestly",
+    "truth": "Nobody tells them",
+    "words": "Them, unfiltered"
+  },
+  "picks": {
+    "legend": "The honest list",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we have to tell you",
+    "items": [
+      "You are always late",
+      "Your playlists are a crime",
+      "You overshare with strangers",
+      "You steal chips",
+      "You cry at adverts",
+      "Your dancing is a hazard",
+      "You are terrible at secrets",
+      "You give the best hugs",
+      "You never let anyone down",
+      "You make every room better",
+      "You are the funniest person we know",
+      "We adore you, sorry"
+    ]
+  },
+  "timeline": {
+    "kicker": "Friendship through the ages",
+    "title": "A Short History of Best Friends",
+    "items": [
+      [
+        "About 350 BC",
+        "A philosopher agrees",
+        "Aristotle wrote that true friendship is one of the most important things in a good life."
+      ],
+      [
+        "1926",
+        "Pooh and Piglet",
+        "A. A. Milne published Winnie the Pooh, and the world met its most famous pair of best friends."
+      ],
+      [
+        "1994",
+        "I'll be there for you",
+        "The TV show Friends began, and a group of pals on a sofa became family for millions."
+      ],
+      [
+        "2011",
+        "A day for friends",
+        "The United Nations made 30 July the International Day of Friendship."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who}",
+      "Not in the history books yet. But in mine, the best friend anyone has ever had."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Friendship",
+    "items": [
+      [
+        "What! You too? I thought I was the only one.",
+        "C. S. Lewis, The Four Loves"
+      ],
+      [
+        "A friend is a single soul dwelling in two bodies.",
+        "Aristotle"
+      ],
+      [
+        "The only way to have a friend is to be one.",
+        "Ralph Waldo Emerson, 1841"
+      ],
+      [
+        "Shared joy is a double joy, shared sorrow is half a sorrow.",
+        "An old Swedish saying"
+      ]
+    ],
+    "hand": "They all say it beautifully. I just say: thank you for being you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Best Friends",
+    "items": [
+      [
+        "smile",
+        "Laughing together",
+        "One researcher found we are around thirty times more likely to laugh with others than alone."
+      ],
+      [
+        "spark",
+        "Brains in sync",
+        "Close friends' brains react in strikingly similar ways when they watch the same videos."
+      ],
+      [
+        "leaf",
+        "Smaller hills",
+        "In one study, a hill looked less steep to people standing next to a friend."
+      ],
+      [
+        "clock",
+        "Hours of hanging out",
+        "One study suggests it takes about 200 hours together to become close friends. Worth every minute."
+      ],
+      [
+        "hands",
+        "The inner circle",
+        "Most of us have room for only about five very closest friends. You made the cut."
+      ],
+      [
+        "pulse",
+        "Good for your health",
+        "Strong friendships are linked to lower stress and longer, healthier lives."
+      ]
+    ],
+    "hand": "Science can explain a lot. It still cannot explain how {who} always knows exactly what to say."
+  },
+  "world": {
+    "kicker": "An honest thank you",
+    "title": "Why the World Is Better With {who} In It",
+    "lead": "Unfiltered and true, because {who} exists, the world got:",
+    "items": [
+      "Someone who says what we are all thinking.",
+      "The best worst karaoke ever.",
+      "Laughs that hurt our stomachs.",
+      "A friend who never, ever judges.",
+      "Honesty, even when we did not ask.",
+      "Loyalty that cannot be shaken.",
+      "And the one and only {who}."
+    ],
+    "close": "No filter needed, {who}. You are brilliant."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "Honest promises",
+    "title": "My unfiltered promises",
+    "items": [
+      "To always tell you if there is spinach in your teeth.",
+      "To never let you text your ex.",
+      "To laugh at you, and with you.",
+      "To tell you the truth, always.",
+      "To be your friend, no matter how late you are."
+    ],
+    "hand": "Brutally yours, {from}"
+  },
+  "awards": [
+    [
+      "Best friend of the year",
+      "Every year since {since}"
+    ],
+    [
+      "Funniest human alive",
+      "By a landslide"
+    ],
+    [
+      "Keeper of all secrets",
+      "Locked forever"
+    ],
+    [
+      "Lifetime achievement",
+      "In being iconic"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One emergency chat",
+      "Any time, no questions"
+    ],
+    [
+      "A movie night in",
+      "Snacks on me"
+    ],
+    [
+      "Your choice of brunch",
+      "My treat"
+    ],
+    [
+      "One big adventure",
+      "Destination to be argued over"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "The Best Friend in the World",
+  "perfume": "Top notes of late night laughter, shared fries and loyalty. A heart of pure gold.",
+  "news": {
+    "edition": "The best friend edition",
+    "headline": "{who} named best friend of the century",
+    "lead": "Sources close to the friendship confirm that {who} has, once again, been there at exactly the right moment with snacks, jokes and a hug.",
+    "weather": "Weather: sunny, with a 100% chance of inside jokes"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every adventure",
+    "nationality": "Loved, everywhere",
+    "job": "Professional best friend",
+    "stamps": [
+      "Every road trip",
+      "Late night chats",
+      "Friends forever"
+    ]
+  },
+  "movie": {
+    "sub": "A brutally honest comedy",
+    "soon": "The sequel: even less filtered",
+    "reviews": [
+      [
+        "Cruelly funny and secretly sweet",
+        "The Daily Hug"
+      ],
+      [
+        "Every word true, I promise",
+        "{from}"
+      ],
+      [
+        "Brave, chaotic, unmissable",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Studies say true friends tell each other the truth. How often do people admit to telling friends small white lies?",
+      [
+        "Most weeks",
+        "Never",
+        "Once a year"
+      ],
+      0
+    ],
+    [
+      "What does the phrase \"warts and all\" mean?",
+      [
+        "Including the faults",
+        "Covered in glitter",
+        "Very carefully"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "BESTIE",
+    "LAUGH",
+    "LOYAL",
+    "FOREVER",
+    "SECRETS",
+    "FRIENDS"
+  ],
+  "note": {
+    "title": "Why we made it unfiltered",
+    "contents": "A note for you",
+    "paras": [
+      "Most gifts are full of compliments. This one is full of the truth, because that is what real friends do.",
+      "The bad habits, the embarrassing moments and, underneath it all, how much they mean to you.",
+      "{who}, consider yourself told.",
+      "From everything {from} told us, you are perfect exactly as you are. Mostly."
+    ],
+    "wish": "Love you, honestly, {who}."
+  },
+  "concepts": true,
+  "conceptWho": "friend",
+  "own": {
+    "world": true,
+    "promises": true,
+    "picks": true,
+    "dayTitle": "A Day in the Life of {first}, Honestly",
+    "day": [
+      [
+        "9:00",
+        "Alarm one",
+        "Snoozed. Alarms two to six, also snoozed."
+      ],
+      [
+        "11:00",
+        "\"Five minutes away\"",
+        "Still at home. Still looking for keys."
+      ],
+      [
+        "14:00",
+        "Lunch",
+        "Orders a salad. Eats everyone's chips."
+      ],
+      [
+        "20:00",
+        "The night out",
+        "Says \"I am not drinking\". Is on the table by ten."
+      ]
+    ],
+    "night": [
+      "02:00",
+      "The voice note",
+      "Twelve minutes long. Mostly laughing. Completely perfect."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "Wherever the snacks are"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Other people's chips, mostly"
+      ],
+      [
+        "music",
+        "Call",
+        "\"I am literally on my way.\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Making any situation more embarrassing, and more fun"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Very late at night, and very late for everything"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Forgive the lateness. Hide the chips. Never stop laughing"
+      ]
+    ],
+    "little": [
+      "You always say you are five minutes away. You never are.",
+      "You tell strangers your whole life story in a queue.",
+      "You still have my jumper from 2015. I want it back.",
+      "You are there in a heartbeat, every single time."
+    ],
+    "letters": "The Little Things, Unfiltered"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}
