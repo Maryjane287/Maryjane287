@@ -1,0 +1,371 @@
+{
+  "theme": "candy",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "Their first ever win",
+      "example": "The egg and spoon race, age five, with tape on the egg",
+      "max": 80,
+      "chapter": "Born a winner"
+    },
+    {
+      "id": "s_two",
+      "label": "What it took to get here",
+      "example": "Years of weekends, early mornings and believing",
+      "max": 80,
+      "chapter": "The work behind it"
+    },
+    {
+      "id": "s_three",
+      "label": "What you hope they win next",
+      "example": "Something even bigger. They deserve it",
+      "max": 80,
+      "chapter": "Next stage"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To keep the trophy polished",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "award": "Award",
+    "for": "Won for",
+    "thanks": "First thank you",
+    "next": "Next win"
+  },
+  "story": {
+    "title": "And the Award Goes To {first}",
+    "hand": "We always knew, {who}. Now everyone does.",
+    "kicker": "The winner's story",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Winner's kit",
+    "kicker": "From {from}, with love",
+    "title": "Ten things every winner needs",
+    "items": [
+      "A shelf for trophies",
+      "A great outfit for the ceremony",
+      "An acceptance speech, just in case",
+      "Waterproof mascara",
+      "A cheer squad",
+      "Champagne on ice",
+      "Hard work",
+      "A mentor",
+      "A humble heart",
+      "A photo with the award",
+      "A new goal",
+      "People to thank"
+    ]
+  },
+  "timeline": {
+    "kicker": "Birthdays through the ages",
+    "title": "A Short History of Birthdays",
+    "items": [
+      [
+        "Ancient Rome",
+        "A day worth a feast",
+        "Romans marked the birthdays of friends and family with feasts, gifts and wishes for good luck."
+      ],
+      [
+        "1700s",
+        "Cake and candles",
+        "In Germany, children's birthday parties called Kinderfeste had a cake with a candle for every year."
+      ],
+      [
+        "1893",
+        "The tune we all know",
+        "Sisters Mildred and Patty Hill published Good Morning to All. Its melody became Happy Birthday to You."
+      ],
+      [
+        "2015",
+        "A song for everyone",
+        "A judge ruled the old copyright claim on Happy Birthday invalid. Now it belongs to all of us."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who} turns {age}",
+      "The most important birthday in the history books. Well, in ours."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words for Your Birthday",
+    "items": [
+      [
+        "Let us celebrate the occasion with wine and sweet words.",
+        "Plautus"
+      ],
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Wrinkles should merely indicate where the smiles have been.",
+        "Mark Twain, Following the Equator, 1897"
+      ],
+      [
+        "A joy that is shared is a joy made double.",
+        "An old English proverb"
+      ]
+    ],
+    "hand": "Every one of them is true. Especially the bit about smiles, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Birthdays",
+    "items": [
+      [
+        "sun",
+        "A lap of the Sun",
+        "Every birthday marks one more trip around the Sun, about 940 million kilometres. Well travelled."
+      ],
+      [
+        "globe",
+        "Birthday twins",
+        "Around twenty million people share your birthday. None of them are quite as good at it as you."
+      ],
+      [
+        "smile",
+        "The party trick",
+        "In a room of just 23 people, there is a better than even chance two of them share a birthday."
+      ],
+      [
+        "music",
+        "The famous song",
+        "Happy Birthday to You is often called the most recognised song in the English language."
+      ],
+      [
+        "clock",
+        "Leap day babies",
+        "People born on 29 February only get a true birthday once every four years."
+      ],
+      [
+        "spark",
+        "Brand new you",
+        "Your skin renews its outer layer every few weeks, so you are always a slightly fresher edition."
+      ]
+    ],
+    "hand": "Science says you are {age}. We say you are timeless, {who}."
+  },
+  "world": {
+    "kicker": "A note from the universe",
+    "title": "Why {who} Deserved to Win",
+    "lead": "Because {who} won, the world got:",
+    "items": [
+      "Proof that hard work pays off.",
+      "An acceptance speech for the ages.",
+      "A trophy shelf getting full.",
+      "An inspiration to everyone watching.",
+      "A humble winner.",
+      "A very proud family.",
+      "And the one and only {who}."
+    ],
+    "close": "Congratulations, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From me to you",
+    "title": "My promises to the winner",
+    "items": [
+      "To tell everyone, constantly.",
+      "To polish the trophy.",
+      "To cheer even louder next time.",
+      "To remind you that you earned this.",
+      "To be proud of you, win or lose."
+    ],
+    "hand": "Love, {from}"
+  },
+  "awards": [
+    [
+      "Best laugh in the business",
+      "By a landslide"
+    ],
+    [
+      "Most likely to start the dancing",
+      "Every single time"
+    ],
+    [
+      "Outstanding friendship",
+      "A lifetime achievement"
+    ],
+    [
+      "Star of the year",
+      "Voted {age} years running"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Breakfast in bed",
+      "Coffee included, obviously"
+    ],
+    [
+      "A day of your choosing",
+      "Anywhere, anything"
+    ],
+    [
+      "One night out",
+      "Our treat, your playlist"
+    ],
+    [
+      "A lie in",
+      "Nobody says a word"
+    ]
+  ],
+  "vouchersTitle": "Birthday vouchers for {who}",
+  "cert": "Iconic",
+  "perfume": "Top notes of birthday candles, fizz and laughter. A heart of pure sunshine.",
+  "news": {
+    "edition": "Birthday edition",
+    "headline": "{who} turns {age} and the world celebrates",
+    "lead": "Reports are coming in from everywhere: {who} is {age} today and looking better than ever. Cake has been confirmed.",
+    "weather": "Weather: sunny, with scattered confetti"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every party",
+    "nationality": "Celebrated, everywhere",
+    "job": "Professional legend",
+    "stamps": [
+      "Birthday city",
+      "Party central",
+      "Adored"
+    ]
+  },
+  "movie": {
+    "sub": "An award winning story",
+    "soon": "The sequel: the hat trick",
+    "reviews": [
+      [
+        "A worthy winner",
+        "The Daily Hug"
+      ],
+      [
+        "We knew it all along",
+        "{from}"
+      ],
+      [
+        "A standing ovation",
+        "Everyone in the room"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "What is the famous golden film award statue nicknamed?",
+      [
+        "Oscar",
+        "Bafta",
+        "Goldie"
+      ],
+      0
+    ],
+    [
+      "What do we call coming first, second and third?",
+      [
+        "Gold, silver and bronze",
+        "Red, amber and green",
+        "Big, medium and small"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CAKE",
+    "PARTY",
+    "CANDLES",
+    "WISH",
+    "LEGEND",
+    "CHEERS"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Behind every award is a story most people never hear.",
+      "This magazine tells it: the hard work, the people, and the moment they heard their name.",
+      "{who}, this is your standing ovation.",
+      "From everything {from} told us, you more than deserved it."
+    ],
+    "wish": "Congratulations, {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "Award Night With {first}",
+    "day": [
+      [
+        "16:00",
+        "Getting ready",
+        "The outfit. The nerves. The speech, just in case."
+      ],
+      [
+        "19:00",
+        "Arrival",
+        "Red carpet, sort of. Photos anyway."
+      ],
+      [
+        "21:00",
+        "The moment",
+        "Their name. A gasp. Tears."
+      ],
+      [
+        "22:00",
+        "Celebrations",
+        "Champagne, hugs and a lot of photos."
+      ]
+    ],
+    "night": [
+      "02:00",
+      "Bedtime",
+      "Trophy on the bedside table."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "On stage, then the dance floor"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Champagne and the canapés"
+      ],
+      [
+        "music",
+        "Call",
+        "\"I cannot believe it!\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Working harder than anyone"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Award season"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Cheer loudly. Bring tissues. Tell everyone"
+      ]
+    ],
+    "little": [
+      "You always share the credit.",
+      "You work hard without being asked.",
+      "You stay humble, even with a trophy.",
+      "You inspire everyone around you."
+    ],
+    "letters": "Little Things Only You Do",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "conceptWho": "friend",
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

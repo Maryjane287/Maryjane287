@@ -1,0 +1,371 @@
+{
+  "theme": "ocean",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "A sign when they were young that they would care for people",
+      "example": "Nursed every injured bird in the garden",
+      "max": 80,
+      "chapter": "A natural carer"
+    },
+    {
+      "id": "s_two",
+      "label": "A story that shows the nurse they are",
+      "example": "Did a patient's hair before her family visited",
+      "max": 80,
+      "chapter": "On shift"
+    },
+    {
+      "id": "s_three",
+      "label": "What you wish for them",
+      "example": "Rest, a pay rise and every thank you they deserve",
+      "max": 80,
+      "chapter": "Looking after you"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To look after you the way you look after everyone",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "ward": "Ward",
+    "years": "Years nursing",
+    "kit": "Shift survival kit",
+    "why": "Why nursing"
+  },
+  "story": {
+    "title": "The Heart of {first}",
+    "hand": "Thank you for every hand you have held, {who}.",
+    "kicker": "A life of caring",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "The pocket",
+    "kicker": "From {from}, with love",
+    "title": "Ten things every nurse carries",
+    "items": [
+      "Three pens, minimum",
+      "Hand cream",
+      "A fob watch",
+      "Chocolate",
+      "Plasters",
+      "A notepad of tasks",
+      "Comfortable shoes",
+      "A calm voice",
+      "A sense of humour",
+      "Patience",
+      "A big heart",
+      "A colleague who has their back"
+    ]
+  },
+  "timeline": {
+    "kicker": "Birthdays through the ages",
+    "title": "A Short History of Birthdays",
+    "items": [
+      [
+        "Ancient Rome",
+        "A day worth a feast",
+        "Romans marked the birthdays of friends and family with feasts, gifts and wishes for good luck."
+      ],
+      [
+        "1700s",
+        "Cake and candles",
+        "In Germany, children's birthday parties called Kinderfeste had a cake with a candle for every year."
+      ],
+      [
+        "1893",
+        "The tune we all know",
+        "Sisters Mildred and Patty Hill published Good Morning to All. Its melody became Happy Birthday to You."
+      ],
+      [
+        "2015",
+        "A song for everyone",
+        "A judge ruled the old copyright claim on Happy Birthday invalid. Now it belongs to all of us."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who} turns {age}",
+      "The most important birthday in the history books. Well, in ours."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words for Your Birthday",
+    "items": [
+      [
+        "Let us celebrate the occasion with wine and sweet words.",
+        "Plautus"
+      ],
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Wrinkles should merely indicate where the smiles have been.",
+        "Mark Twain, Following the Equator, 1897"
+      ],
+      [
+        "A joy that is shared is a joy made double.",
+        "An old English proverb"
+      ]
+    ],
+    "hand": "Every one of them is true. Especially the bit about smiles, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Birthdays",
+    "items": [
+      [
+        "sun",
+        "A lap of the Sun",
+        "Every birthday marks one more trip around the Sun, about 940 million kilometres. Well travelled."
+      ],
+      [
+        "globe",
+        "Birthday twins",
+        "Around twenty million people share your birthday. None of them are quite as good at it as you."
+      ],
+      [
+        "smile",
+        "The party trick",
+        "In a room of just 23 people, there is a better than even chance two of them share a birthday."
+      ],
+      [
+        "music",
+        "The famous song",
+        "Happy Birthday to You is often called the most recognised song in the English language."
+      ],
+      [
+        "clock",
+        "Leap day babies",
+        "People born on 29 February only get a true birthday once every four years."
+      ],
+      [
+        "spark",
+        "Brand new you",
+        "Your skin renews its outer layer every few weeks, so you are always a slightly fresher edition."
+      ]
+    ],
+    "hand": "Science says you are {age}. We say you are timeless, {who}."
+  },
+  "world": {
+    "kicker": "A note from the universe",
+    "title": "Why the World Is Kinder With {who}",
+    "lead": "Because {who} became a nurse, the world got:",
+    "items": [
+      "Hands held in the hardest moments.",
+      "Calm in every storm.",
+      "Families comforted at 3am.",
+      "Babies welcomed, gently.",
+      "Patients who felt like people.",
+      "A thousand quiet kindnesses.",
+      "And the one and only {who}."
+    ],
+    "close": "Thank you, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises to our nurse",
+    "items": [
+      "To have dinner ready after every long shift.",
+      "To rub your feet. Sometimes.",
+      "To listen after the hard days.",
+      "To tell you how amazing you are.",
+      "To care for you, always."
+    ],
+    "hand": "Love, {from}"
+  },
+  "awards": [
+    [
+      "Best laugh in the business",
+      "By a landslide"
+    ],
+    [
+      "Most likely to start the dancing",
+      "Every single time"
+    ],
+    [
+      "Outstanding friendship",
+      "A lifetime achievement"
+    ],
+    [
+      "Star of the year",
+      "Voted {age} years running"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Breakfast in bed",
+      "Coffee included, obviously"
+    ],
+    [
+      "A day of your choosing",
+      "Anywhere, anything"
+    ],
+    [
+      "One night out",
+      "Our treat, your playlist"
+    ],
+    [
+      "A lie in",
+      "Nobody says a word"
+    ]
+  ],
+  "vouchersTitle": "Birthday vouchers for {who}",
+  "cert": "Iconic",
+  "perfume": "Top notes of birthday candles, fizz and laughter. A heart of pure sunshine.",
+  "news": {
+    "edition": "Birthday edition",
+    "headline": "{who} turns {age} and the world celebrates",
+    "lead": "Reports are coming in from everywhere: {who} is {age} today and looking better than ever. Cake has been confirmed.",
+    "weather": "Weather: sunny, with scattered confetti"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every party",
+    "nationality": "Celebrated, everywhere",
+    "job": "Professional legend",
+    "stamps": [
+      "Birthday city",
+      "Party central",
+      "Adored"
+    ]
+  },
+  "movie": {
+    "sub": "A true story of everyday heroes",
+    "soon": "The sequel: senior sister",
+    "reviews": [
+      [
+        "Kind, brave and tireless",
+        "The Daily Hug"
+      ],
+      [
+        "Our hero",
+        "{from}"
+      ],
+      [
+        "The best nurse on the ward",
+        "Every patient"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Who is known as the founder of modern nursing?",
+      [
+        "Florence Nightingale",
+        "Marie Curie",
+        "Mary Seacole"
+      ],
+      0
+    ],
+    [
+      "On which day is International Nurses Day celebrated?",
+      [
+        "12 May",
+        "1 March",
+        "25 December"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CAKE",
+    "PARTY",
+    "CANDLES",
+    "WISH",
+    "LEGEND",
+    "CHEERS"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Nurses look after everyone. This magazine looks after them, just for a moment.",
+      "It tells their story and thanks them for every shift, every patient and every kindness.",
+      "{who}, this one is all about you.",
+      "From everything {from} told us, you are a true hero."
+    ],
+    "wish": "Thank you, {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "A Day on Shift With {first}",
+    "day": [
+      [
+        "7:00",
+        "Handover",
+        "Twenty patients, twenty stories. Ready."
+      ],
+      [
+        "10:00",
+        "Rounds",
+        "Meds, checks, a joke for the grumpy one."
+      ],
+      [
+        "14:00",
+        "Lunch",
+        "Cold tea and a biscuit. Better than nothing."
+      ],
+      [
+        "18:00",
+        "The last hour",
+        "Holding a hand until the family arrives."
+      ]
+    ],
+    "night": [
+      "20:30",
+      "Home",
+      "Feet up. Heart full. Exhausted."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The ward, then the bath"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Toast, tea and staff room chocolate"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Let us get you comfortable\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Making people feel safe in the scariest moments"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Twelve hour shifts, nights and weekends"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Feed them. Thank them. Let them sleep"
+      ]
+    ],
+    "little": [
+      "You always ask how I am, even when you are tired.",
+      "You make everyone feel safe.",
+      "You never forget a patient.",
+      "You are the kindest person we know."
+    ],
+    "letters": "Little Things Only You Do",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "conceptWho": "friend",
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

@@ -1,0 +1,371 @@
+{
+  "theme": "night",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "When you first knew they would do it",
+      "example": "When she sold out at the school fair in ten minutes",
+      "max": 80,
+      "chapter": "The idea"
+    },
+    {
+      "id": "s_two",
+      "label": "The toughest moment on the way",
+      "example": "The month the oven broke and she baked at a friend's house",
+      "max": 80,
+      "chapter": "The hard yards"
+    },
+    {
+      "id": "s_three",
+      "label": "Where you see the business in ten years",
+      "example": "A name everyone knows",
+      "max": 80,
+      "chapter": "The empire"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To be your first and loudest customer",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "business": "Business",
+    "idea": "Where it started",
+    "firstsale": "First sale",
+    "vision": "The vision"
+  },
+  "story": {
+    "title": "The Making of {business}",
+    "hand": "You built this, {who}. This is only the beginning.",
+    "kicker": "The founder story",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Founder essentials",
+    "kicker": "From {from}, with love",
+    "title": "Ten things every founder needs",
+    "items": [
+      "A big idea",
+      "Courage",
+      "A laptop at midnight",
+      "A first customer",
+      "A spreadsheet they hate",
+      "Strong coffee",
+      "A support squad",
+      "A logo they love",
+      "A launch day outfit",
+      "Thick skin",
+      "A plan B",
+      "People who believe in them"
+    ]
+  },
+  "timeline": {
+    "kicker": "Birthdays through the ages",
+    "title": "A Short History of Birthdays",
+    "items": [
+      [
+        "Ancient Rome",
+        "A day worth a feast",
+        "Romans marked the birthdays of friends and family with feasts, gifts and wishes for good luck."
+      ],
+      [
+        "1700s",
+        "Cake and candles",
+        "In Germany, children's birthday parties called Kinderfeste had a cake with a candle for every year."
+      ],
+      [
+        "1893",
+        "The tune we all know",
+        "Sisters Mildred and Patty Hill published Good Morning to All. Its melody became Happy Birthday to You."
+      ],
+      [
+        "2015",
+        "A song for everyone",
+        "A judge ruled the old copyright claim on Happy Birthday invalid. Now it belongs to all of us."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who} turns {age}",
+      "The most important birthday in the history books. Well, in ours."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words for Your Birthday",
+    "items": [
+      [
+        "Let us celebrate the occasion with wine and sweet words.",
+        "Plautus"
+      ],
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Wrinkles should merely indicate where the smiles have been.",
+        "Mark Twain, Following the Equator, 1897"
+      ],
+      [
+        "A joy that is shared is a joy made double.",
+        "An old English proverb"
+      ]
+    ],
+    "hand": "Every one of them is true. Especially the bit about smiles, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Birthdays",
+    "items": [
+      [
+        "sun",
+        "A lap of the Sun",
+        "Every birthday marks one more trip around the Sun, about 940 million kilometres. Well travelled."
+      ],
+      [
+        "globe",
+        "Birthday twins",
+        "Around twenty million people share your birthday. None of them are quite as good at it as you."
+      ],
+      [
+        "smile",
+        "The party trick",
+        "In a room of just 23 people, there is a better than even chance two of them share a birthday."
+      ],
+      [
+        "music",
+        "The famous song",
+        "Happy Birthday to You is often called the most recognised song in the English language."
+      ],
+      [
+        "clock",
+        "Leap day babies",
+        "People born on 29 February only get a true birthday once every four years."
+      ],
+      [
+        "spark",
+        "Brand new you",
+        "Your skin renews its outer layer every few weeks, so you are always a slightly fresher edition."
+      ]
+    ],
+    "hand": "Science says you are {age}. We say you are timeless, {who}."
+  },
+  "world": {
+    "kicker": "A note from the universe",
+    "title": "Why the World Needed {business}",
+    "lead": "Because {who} took the leap, the world got:",
+    "items": [
+      "Proof that dreams can be built.",
+      "Jobs, smiles and happy customers.",
+      "Courage for everyone watching.",
+      "A brand made with heart.",
+      "A brilliant boss.",
+      "Something that did not exist before.",
+      "And the one and only {who}."
+    ],
+    "close": "To the founder, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From me to you",
+    "title": "My promises to the founder",
+    "items": [
+      "To buy, share and shout about everything you make.",
+      "To bring snacks on the late nights.",
+      "To remind you why you started.",
+      "To celebrate every milestone.",
+      "To believe in you, always."
+    ],
+    "hand": "Your biggest supporter, {from}"
+  },
+  "awards": [
+    [
+      "Best laugh in the business",
+      "By a landslide"
+    ],
+    [
+      "Most likely to start the dancing",
+      "Every single time"
+    ],
+    [
+      "Outstanding friendship",
+      "A lifetime achievement"
+    ],
+    [
+      "Star of the year",
+      "Voted {age} years running"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Breakfast in bed",
+      "Coffee included, obviously"
+    ],
+    [
+      "A day of your choosing",
+      "Anywhere, anything"
+    ],
+    [
+      "One night out",
+      "Our treat, your playlist"
+    ],
+    [
+      "A lie in",
+      "Nobody says a word"
+    ]
+  ],
+  "vouchersTitle": "Birthday vouchers for {who}",
+  "cert": "Iconic",
+  "perfume": "Top notes of birthday candles, fizz and laughter. A heart of pure sunshine.",
+  "news": {
+    "edition": "Birthday edition",
+    "headline": "{who} turns {age} and the world celebrates",
+    "lead": "Reports are coming in from everywhere: {who} is {age} today and looking better than ever. Cake has been confirmed.",
+    "weather": "Weather: sunny, with scattered confetti"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every party",
+    "nationality": "Celebrated, everywhere",
+    "job": "Professional legend",
+    "stamps": [
+      "Birthday city",
+      "Party central",
+      "Adored"
+    ]
+  },
+  "movie": {
+    "sub": "An inspiring true story",
+    "soon": "The sequel: the empire years",
+    "reviews": [
+      [
+        "A founder story for the ages",
+        "The Daily Hug"
+      ],
+      [
+        "The bravest person I know",
+        "{from}"
+      ],
+      [
+        "Five stars",
+        "The first customer"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "What is the money used to start a business often called?",
+      [
+        "Start up capital",
+        "Pocket money",
+        "Payroll"
+      ],
+      0
+    ],
+    [
+      "What do we call the first public opening of a new shop?",
+      [
+        "A grand opening",
+        "A soft close",
+        "A closing down"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CAKE",
+    "PARTY",
+    "CANDLES",
+    "WISH",
+    "LEGEND",
+    "CHEERS"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Every business you love started as somebody's brave idea.",
+      "This magazine tells the story of one of them: the idea, the hustle and the launch.",
+      "{who}, this is your founder story.",
+      "From everything {from} told us, the best is yet to come."
+    ],
+    "wish": "To the founder, {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "A Day in the Life of the Founder",
+    "day": [
+      [
+        "6:00",
+        "Up",
+        "Emails before the coffee is ready."
+      ],
+      [
+        "9:00",
+        "Open",
+        "Doors open. Heart racing. Every time."
+      ],
+      [
+        "13:00",
+        "Hustle",
+        "Lunch eaten standing up, between calls."
+      ],
+      [
+        "18:00",
+        "Close",
+        "Counting the day. Grinning."
+      ]
+    ],
+    "night": [
+      "23:00",
+      "Bedtime",
+      "One more idea, written on a napkin."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "Behind the counter, or at a laptop"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Coffee, and lunch at 4pm"
+      ],
+      [
+        "music",
+        "Call",
+        "\"I have had an idea\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Turning a dream into a business"
+      ],
+      [
+        "clock",
+        "Most active",
+        "All the hours, honestly"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Buy from them. Tell everyone. Make them rest"
+      ]
+    ],
+    "little": [
+      "You answer every customer like a friend.",
+      "You never give up on an idea.",
+      "You make it look easy. It is not.",
+      "You inspire everyone around you."
+    ],
+    "letters": "Little Things Only a Founder Does",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "conceptWho": "friend",
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

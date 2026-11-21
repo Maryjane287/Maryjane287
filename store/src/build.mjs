@@ -268,7 +268,7 @@ async function home() {
     ['christmas', 'Christmas', /christmas|year-in-review/],
     ['thanks', 'Friends and big moments', /best-friend|girls-club|brotherhood|friend-group|maid-of-honour|friends-on-tour|unfiltered|bridesmaids|teacher|thank-you|retirement|graduation|new-job|new-home|travel|leaving/],
     ['you', 'All about them', /main-character|self-love|zodiac|fashion-icon|luxury|book-lover|coffee-lover|plant-parent|fitness|foodie/],
-    ['career', 'Career and achievements', /entrepreneur|boss-|doctor|nurse|valedictorian|service-|business-launch|award|new-beginnings|graduation|new-job|retirement/],
+    ['career', 'Career and achievements', /entrepreneur|boss-|doctor|nurse|valedictorian|top-of-the-class|service-|business-launch|award|new-beginnings|graduation|new-job|retirement/],
     ['memory', 'Pets and memories', /pet|memorial/],
   ];
   const tagsFor = m => FILTERS.filter(([, , re]) => re.test(m.slug)).map(([id]) => id).join(' ');

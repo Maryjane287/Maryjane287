@@ -1,0 +1,371 @@
+{
+  "theme": "ocean",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "A sign when they were young that they would be a doctor",
+      "example": "Bandaged every teddy in the house",
+      "max": 80,
+      "chapter": "Little doctor"
+    },
+    {
+      "id": "s_two",
+      "label": "A story that shows the doctor they are",
+      "example": "Stayed after her shift to hold a scared child's hand",
+      "max": 80,
+      "chapter": "On the ward"
+    },
+    {
+      "id": "s_three",
+      "label": "What you wish for their career",
+      "example": "Rest, recognition and a team that adores them",
+      "max": 80,
+      "chapter": "The future"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To feed you after every night shift",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "specialty": "Speciality",
+    "school": "Studied at",
+    "shift": "Longest shift",
+    "why": "Why medicine"
+  },
+  "story": {
+    "title": "The Making of {first}",
+    "hand": "Thank you for every life you touch, {who}.",
+    "kicker": "The doctor's story",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "The doctor's bag",
+    "kicker": "From {from}, with love",
+    "title": "Ten things every doctor needs",
+    "items": [
+      "A stethoscope",
+      "Comfortable shoes",
+      "Coffee, lots",
+      "A steady hand",
+      "Patience",
+      "A good pen",
+      "Snacks in every pocket",
+      "A team that has their back",
+      "Dark humour",
+      "Sleep, eventually",
+      "A warm heart",
+      "Someone who cooks for them"
+    ]
+  },
+  "timeline": {
+    "kicker": "Birthdays through the ages",
+    "title": "A Short History of Birthdays",
+    "items": [
+      [
+        "Ancient Rome",
+        "A day worth a feast",
+        "Romans marked the birthdays of friends and family with feasts, gifts and wishes for good luck."
+      ],
+      [
+        "1700s",
+        "Cake and candles",
+        "In Germany, children's birthday parties called Kinderfeste had a cake with a candle for every year."
+      ],
+      [
+        "1893",
+        "The tune we all know",
+        "Sisters Mildred and Patty Hill published Good Morning to All. Its melody became Happy Birthday to You."
+      ],
+      [
+        "2015",
+        "A song for everyone",
+        "A judge ruled the old copyright claim on Happy Birthday invalid. Now it belongs to all of us."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who} turns {age}",
+      "The most important birthday in the history books. Well, in ours."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words for Your Birthday",
+    "items": [
+      [
+        "Let us celebrate the occasion with wine and sweet words.",
+        "Plautus"
+      ],
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Wrinkles should merely indicate where the smiles have been.",
+        "Mark Twain, Following the Equator, 1897"
+      ],
+      [
+        "A joy that is shared is a joy made double.",
+        "An old English proverb"
+      ]
+    ],
+    "hand": "Every one of them is true. Especially the bit about smiles, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Birthdays",
+    "items": [
+      [
+        "sun",
+        "A lap of the Sun",
+        "Every birthday marks one more trip around the Sun, about 940 million kilometres. Well travelled."
+      ],
+      [
+        "globe",
+        "Birthday twins",
+        "Around twenty million people share your birthday. None of them are quite as good at it as you."
+      ],
+      [
+        "smile",
+        "The party trick",
+        "In a room of just 23 people, there is a better than even chance two of them share a birthday."
+      ],
+      [
+        "music",
+        "The famous song",
+        "Happy Birthday to You is often called the most recognised song in the English language."
+      ],
+      [
+        "clock",
+        "Leap day babies",
+        "People born on 29 February only get a true birthday once every four years."
+      ],
+      [
+        "spark",
+        "Brand new you",
+        "Your skin renews its outer layer every few weeks, so you are always a slightly fresher edition."
+      ]
+    ],
+    "hand": "Science says you are {age}. We say you are timeless, {who}."
+  },
+  "world": {
+    "kicker": "A note from the universe",
+    "title": "Why the World Is Safer With {who}",
+    "lead": "Because {who} became a doctor, the world got:",
+    "items": [
+      "Patients who feel heard.",
+      "Families comforted on hard days.",
+      "Brave little patients with stickers.",
+      "Years of study, given back.",
+      "A calm voice when it matters most.",
+      "Hope, every shift.",
+      "And the one and only {who}."
+    ],
+    "close": "Thank you, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises to the doctor",
+    "items": [
+      "To never ask you to look at a rash at dinner.",
+      "To have food ready after every shift.",
+      "To let you sleep in on days off.",
+      "To listen after the hard days.",
+      "To be proud of you, always."
+    ],
+    "hand": "Love, {from}"
+  },
+  "awards": [
+    [
+      "Best laugh in the business",
+      "By a landslide"
+    ],
+    [
+      "Most likely to start the dancing",
+      "Every single time"
+    ],
+    [
+      "Outstanding friendship",
+      "A lifetime achievement"
+    ],
+    [
+      "Star of the year",
+      "Voted {age} years running"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Breakfast in bed",
+      "Coffee included, obviously"
+    ],
+    [
+      "A day of your choosing",
+      "Anywhere, anything"
+    ],
+    [
+      "One night out",
+      "Our treat, your playlist"
+    ],
+    [
+      "A lie in",
+      "Nobody says a word"
+    ]
+  ],
+  "vouchersTitle": "Birthday vouchers for {who}",
+  "cert": "Iconic",
+  "perfume": "Top notes of birthday candles, fizz and laughter. A heart of pure sunshine.",
+  "news": {
+    "edition": "Birthday edition",
+    "headline": "{who} turns {age} and the world celebrates",
+    "lead": "Reports are coming in from everywhere: {who} is {age} today and looking better than ever. Cake has been confirmed.",
+    "weather": "Weather: sunny, with scattered confetti"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every party",
+    "nationality": "Celebrated, everywhere",
+    "job": "Professional legend",
+    "stamps": [
+      "Birthday city",
+      "Party central",
+      "Adored"
+    ]
+  },
+  "movie": {
+    "sub": "A medical drama, but real",
+    "soon": "The sequel: consultant",
+    "reviews": [
+      [
+        "Brilliant, kind and tireless",
+        "The Daily Hug"
+      ],
+      [
+        "Our favourite doctor",
+        "{from}"
+      ],
+      [
+        "Exactly the doctor you want",
+        "Every patient"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Which oath is traditionally linked to doctors?",
+      [
+        "The Hippocratic Oath",
+        "The Olympic Oath",
+        "The Oath of Office"
+      ],
+      0
+    ],
+    [
+      "How many bones are in the adult human body?",
+      [
+        "206",
+        "150",
+        "300"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CAKE",
+    "PARTY",
+    "CANDLES",
+    "WISH",
+    "LEGEND",
+    "CHEERS"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Behind every doctor are years of study, sleepless nights and a family that is so proud.",
+      "This magazine tells their story and thanks them for all of it.",
+      "{who}, this is your story.",
+      "From everything {from} told us, you are exactly the doctor the world needs."
+    ],
+    "wish": "Thank you, {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "A Day on Shift With {first}",
+    "day": [
+      [
+        "7:00",
+        "Handover",
+        "Coffee in one hand, notes in the other."
+      ],
+      [
+        "10:00",
+        "Ward round",
+        "Every patient seen, every question answered."
+      ],
+      [
+        "14:00",
+        "Lunch",
+        "Two bites of a sandwich. Bleep goes off."
+      ],
+      [
+        "19:00",
+        "The extra hour",
+        "Stays to finish. Always does."
+      ]
+    ],
+    "night": [
+      "23:00",
+      "Home",
+      "Toast, a shower, and straight to sleep."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The ward, or the sofa after a night shift"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Hospital coffee and anything someone else cooked"
+      ],
+      [
+        "music",
+        "Call",
+        "\"I am fine, I am a doctor\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Staying calm when everyone else panics"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Night shifts, unfortunately"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Feed them. Let them sleep. Say thank you"
+      ]
+    ],
+    "little": [
+      "You always explain things kindly.",
+      "You remember every patient's name.",
+      "You never let anyone feel alone.",
+      "You make us all feel safe."
+    ],
+    "letters": "Little Things Only You Do",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "conceptWho": "friend",
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

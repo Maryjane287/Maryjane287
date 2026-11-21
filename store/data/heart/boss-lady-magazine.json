@@ -1,0 +1,371 @@
+{
+  "theme": "night",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "Her first job and where it led",
+      "example": "Answering phones at nineteen, running the floor by twenty five",
+      "max": 80,
+      "chapter": "The rise"
+    },
+    {
+      "id": "s_two",
+      "label": "Someone she helped climb",
+      "example": "Mentored three women who now lead their own teams",
+      "max": 80,
+      "chapter": "Lifting others"
+    },
+    {
+      "id": "s_three",
+      "label": "Where you see her in ten years",
+      "example": "Running the whole thing",
+      "max": 80,
+      "chapter": "The top"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to her",
+      "example": "To always remind you to take a holiday",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "role": "Role",
+    "power": "Signature power move",
+    "rule": "Leadership rule",
+    "next": "Next on her list"
+  },
+  "story": {
+    "title": "The Rise of {first}",
+    "hand": "Keep running the world, {who}.",
+    "kicker": "Her story",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Boss essentials",
+    "kicker": "From {from}, with love",
+    "title": "Ten things every boss lady owns",
+    "items": [
+      "A power blazer",
+      "A to do list that gets done",
+      "Noise cancelling headphones",
+      "A calendar like Tetris",
+      "Strong coffee",
+      "A mentor",
+      "A team she adores",
+      "Comfortable heels",
+      "A firm handshake",
+      "Boundaries",
+      "A big laugh",
+      "A seat at the table"
+    ]
+  },
+  "timeline": {
+    "kicker": "Birthdays through the ages",
+    "title": "A Short History of Birthdays",
+    "items": [
+      [
+        "Ancient Rome",
+        "A day worth a feast",
+        "Romans marked the birthdays of friends and family with feasts, gifts and wishes for good luck."
+      ],
+      [
+        "1700s",
+        "Cake and candles",
+        "In Germany, children's birthday parties called Kinderfeste had a cake with a candle for every year."
+      ],
+      [
+        "1893",
+        "The tune we all know",
+        "Sisters Mildred and Patty Hill published Good Morning to All. Its melody became Happy Birthday to You."
+      ],
+      [
+        "2015",
+        "A song for everyone",
+        "A judge ruled the old copyright claim on Happy Birthday invalid. Now it belongs to all of us."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who} turns {age}",
+      "The most important birthday in the history books. Well, in ours."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words for Your Birthday",
+    "items": [
+      [
+        "Let us celebrate the occasion with wine and sweet words.",
+        "Plautus"
+      ],
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Wrinkles should merely indicate where the smiles have been.",
+        "Mark Twain, Following the Equator, 1897"
+      ],
+      [
+        "A joy that is shared is a joy made double.",
+        "An old English proverb"
+      ]
+    ],
+    "hand": "Every one of them is true. Especially the bit about smiles, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Birthdays",
+    "items": [
+      [
+        "sun",
+        "A lap of the Sun",
+        "Every birthday marks one more trip around the Sun, about 940 million kilometres. Well travelled."
+      ],
+      [
+        "globe",
+        "Birthday twins",
+        "Around twenty million people share your birthday. None of them are quite as good at it as you."
+      ],
+      [
+        "smile",
+        "The party trick",
+        "In a room of just 23 people, there is a better than even chance two of them share a birthday."
+      ],
+      [
+        "music",
+        "The famous song",
+        "Happy Birthday to You is often called the most recognised song in the English language."
+      ],
+      [
+        "clock",
+        "Leap day babies",
+        "People born on 29 February only get a true birthday once every four years."
+      ],
+      [
+        "spark",
+        "Brand new you",
+        "Your skin renews its outer layer every few weeks, so you are always a slightly fresher edition."
+      ]
+    ],
+    "hand": "Science says you are {age}. We say you are timeless, {who}."
+  },
+  "world": {
+    "kicker": "A note from the universe",
+    "title": "Why Every Room Is Better With {who} in Charge",
+    "lead": "Because {who} leads, the world got:",
+    "items": [
+      "Meetings that end on time.",
+      "A team that feels seen.",
+      "Proof that kindness is strength.",
+      "Glass ceilings with cracks in.",
+      "A mentor to so many.",
+      "Decisions made with heart.",
+      "And the one and only {who}."
+    ],
+    "close": "Run the world, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From me to you",
+    "title": "My promises to the boss",
+    "items": [
+      "To cheer every promotion, loudly.",
+      "To make you log off on holiday.",
+      "To bring wine after the big meetings.",
+      "To be your sounding board.",
+      "To be proud of you, always."
+    ],
+    "hand": "Love, {from}"
+  },
+  "awards": [
+    [
+      "Best laugh in the business",
+      "By a landslide"
+    ],
+    [
+      "Most likely to start the dancing",
+      "Every single time"
+    ],
+    [
+      "Outstanding friendship",
+      "A lifetime achievement"
+    ],
+    [
+      "Star of the year",
+      "Voted {age} years running"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Breakfast in bed",
+      "Coffee included, obviously"
+    ],
+    [
+      "A day of your choosing",
+      "Anywhere, anything"
+    ],
+    [
+      "One night out",
+      "Our treat, your playlist"
+    ],
+    [
+      "A lie in",
+      "Nobody says a word"
+    ]
+  ],
+  "vouchersTitle": "Birthday vouchers for {who}",
+  "cert": "Iconic",
+  "perfume": "Top notes of birthday candles, fizz and laughter. A heart of pure sunshine.",
+  "news": {
+    "edition": "Birthday edition",
+    "headline": "{who} turns {age} and the world celebrates",
+    "lead": "Reports are coming in from everywhere: {who} is {age} today and looking better than ever. Cake has been confirmed.",
+    "weather": "Weather: sunny, with scattered confetti"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every party",
+    "nationality": "Celebrated, everywhere",
+    "job": "Professional legend",
+    "stamps": [
+      "Birthday city",
+      "Party central",
+      "Adored"
+    ]
+  },
+  "movie": {
+    "sub": "An inspiring career story",
+    "soon": "The sequel: CEO",
+    "reviews": [
+      [
+        "A powerhouse",
+        "The Daily Hug"
+      ],
+      [
+        "The best boss I know",
+        "{from}"
+      ],
+      [
+        "Leadership goals",
+        "Her team"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "In what year did women in the UK first get the vote on equal terms with men?",
+      [
+        "1928",
+        "1918",
+        "1945"
+      ],
+      0
+    ],
+    [
+      "What do we call a senior person who guides someone in their career?",
+      [
+        "A mentor",
+        "A mascot",
+        "A manager of the month"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CAKE",
+    "PARTY",
+    "CANDLES",
+    "WISH",
+    "LEGEND",
+    "CHEERS"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "She makes it look easy. It never is.",
+      "This magazine celebrates her rise, her power moves and every person she lifted on the way.",
+      "{who}, this is your boardroom.",
+      "From everything {from} told us, you are a true leader."
+    ],
+    "wish": "Run the world, {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "A Day in the Life of the Boss",
+    "day": [
+      [
+        "6:30",
+        "Up",
+        "Gym, emails, outfit. In that order."
+      ],
+      [
+        "9:00",
+        "Meetings",
+        "Back to back. Running every one."
+      ],
+      [
+        "13:00",
+        "Mentoring",
+        "Lunch with someone she is lifting up."
+      ],
+      [
+        "17:30",
+        "Wins",
+        "The deal is done. Team celebrated."
+      ]
+    ],
+    "night": [
+      "22:00",
+      "Bedtime",
+      "Laptop closed. Finally."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The head of the table"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Salads at her desk, steak to celebrate"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Let us make a decision\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Running five things at once, calmly"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Always, but especially on Mondays"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Bring coffee. Back her up. Make her rest"
+      ]
+    ],
+    "little": [
+      "You remember every team member's birthday.",
+      "You make hard decisions kindly.",
+      "You lift other women up.",
+      "You make it all look effortless."
+    ],
+    "letters": "Little Things Only a Boss Does",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "conceptWho": "friend",
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

@@ -1,0 +1,371 @@
+{
+  "theme": "night",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "A sign when they were little that they loved learning",
+      "example": "Read the encyclopaedia for fun, age seven",
+      "max": 80,
+      "chapter": "Always curious"
+    },
+    {
+      "id": "s_two",
+      "label": "A moment they kept going when it was hard",
+      "example": "Studied through a broken wrist, writing left handed",
+      "max": 80,
+      "chapter": "The hard work"
+    },
+    {
+      "id": "s_three",
+      "label": "What you dream for their future",
+      "example": "A career they love and a life full of joy",
+      "max": 80,
+      "chapter": "Bright future"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To always keep your fridge stocked for study nights",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "achievement": "Achievement",
+    "subject": "Favourite subject",
+    "ritual": "Study ritual",
+    "future": "What comes next"
+  },
+  "story": {
+    "title": "The Scholar: {first}",
+    "hand": "All that hard work. So very proud, {who}.",
+    "kicker": "The scholar's story",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Study kit",
+    "kicker": "From {from}, with love",
+    "title": "Ten things every top student owns",
+    "items": [
+      "Colour coded notes",
+      "Flashcards, hundreds",
+      "A favourite pen",
+      "A library card",
+      "A study playlist",
+      "Highlighters, every colour",
+      "A revision timetable",
+      "Snacks at the desk",
+      "A teacher who believed",
+      "A quiet corner",
+      "A study buddy",
+      "Determination"
+    ]
+  },
+  "timeline": {
+    "kicker": "Birthdays through the ages",
+    "title": "A Short History of Birthdays",
+    "items": [
+      [
+        "Ancient Rome",
+        "A day worth a feast",
+        "Romans marked the birthdays of friends and family with feasts, gifts and wishes for good luck."
+      ],
+      [
+        "1700s",
+        "Cake and candles",
+        "In Germany, children's birthday parties called Kinderfeste had a cake with a candle for every year."
+      ],
+      [
+        "1893",
+        "The tune we all know",
+        "Sisters Mildred and Patty Hill published Good Morning to All. Its melody became Happy Birthday to You."
+      ],
+      [
+        "2015",
+        "A song for everyone",
+        "A judge ruled the old copyright claim on Happy Birthday invalid. Now it belongs to all of us."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who} turns {age}",
+      "The most important birthday in the history books. Well, in ours."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words for Your Birthday",
+    "items": [
+      [
+        "Let us celebrate the occasion with wine and sweet words.",
+        "Plautus"
+      ],
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Wrinkles should merely indicate where the smiles have been.",
+        "Mark Twain, Following the Equator, 1897"
+      ],
+      [
+        "A joy that is shared is a joy made double.",
+        "An old English proverb"
+      ]
+    ],
+    "hand": "Every one of them is true. Especially the bit about smiles, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Birthdays",
+    "items": [
+      [
+        "sun",
+        "A lap of the Sun",
+        "Every birthday marks one more trip around the Sun, about 940 million kilometres. Well travelled."
+      ],
+      [
+        "globe",
+        "Birthday twins",
+        "Around twenty million people share your birthday. None of them are quite as good at it as you."
+      ],
+      [
+        "smile",
+        "The party trick",
+        "In a room of just 23 people, there is a better than even chance two of them share a birthday."
+      ],
+      [
+        "music",
+        "The famous song",
+        "Happy Birthday to You is often called the most recognised song in the English language."
+      ],
+      [
+        "clock",
+        "Leap day babies",
+        "People born on 29 February only get a true birthday once every four years."
+      ],
+      [
+        "spark",
+        "Brand new you",
+        "Your skin renews its outer layer every few weeks, so you are always a slightly fresher edition."
+      ]
+    ],
+    "hand": "Science says you are {age}. We say you are timeless, {who}."
+  },
+  "world": {
+    "kicker": "A note from the universe",
+    "title": "Why the Future Is Brighter With {who}",
+    "lead": "Because {who} worked so hard, the world got:",
+    "items": [
+      "A brilliant mind, ready to go.",
+      "Proof that effort pays off.",
+      "An inspiration to younger students.",
+      "Teachers who are very proud.",
+      "A future scientist, lawyer or leader.",
+      "Curiosity that never switches off.",
+      "And the one and only {who}."
+    ],
+    "close": "The world is yours, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises to you",
+    "items": [
+      "To always be proud, whatever the grades.",
+      "To make you rest after exams.",
+      "To help with the next big step.",
+      "To frame every certificate.",
+      "To love you always."
+    ],
+    "hand": "Love, {from}"
+  },
+  "awards": [
+    [
+      "Best laugh in the business",
+      "By a landslide"
+    ],
+    [
+      "Most likely to start the dancing",
+      "Every single time"
+    ],
+    [
+      "Outstanding friendship",
+      "A lifetime achievement"
+    ],
+    [
+      "Star of the year",
+      "Voted {age} years running"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Breakfast in bed",
+      "Coffee included, obviously"
+    ],
+    [
+      "A day of your choosing",
+      "Anywhere, anything"
+    ],
+    [
+      "One night out",
+      "Our treat, your playlist"
+    ],
+    [
+      "A lie in",
+      "Nobody says a word"
+    ]
+  ],
+  "vouchersTitle": "Birthday vouchers for {who}",
+  "cert": "Iconic",
+  "perfume": "Top notes of birthday candles, fizz and laughter. A heart of pure sunshine.",
+  "news": {
+    "edition": "Birthday edition",
+    "headline": "{who} turns {age} and the world celebrates",
+    "lead": "Reports are coming in from everywhere: {who} is {age} today and looking better than ever. Cake has been confirmed.",
+    "weather": "Weather: sunny, with scattered confetti"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every party",
+    "nationality": "Celebrated, everywhere",
+    "job": "Professional legend",
+    "stamps": [
+      "Birthday city",
+      "Party central",
+      "Adored"
+    ]
+  },
+  "movie": {
+    "sub": "An inspiring true story",
+    "soon": "The sequel: the PhD",
+    "reviews": [
+      [
+        "Brilliant and humble",
+        "The Daily Hug"
+      ],
+      [
+        "Our clever, kind star",
+        "{from}"
+      ],
+      [
+        "A gold star student",
+        "The teachers"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "What is a valedictorian?",
+      [
+        "The top student who gives the farewell speech",
+        "The school caretaker",
+        "The head of the PTA"
+      ],
+      0
+    ],
+    [
+      "Which university is the oldest in the English speaking world?",
+      [
+        "Oxford",
+        "Harvard",
+        "Edinburgh"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CAKE",
+    "PARTY",
+    "CANDLES",
+    "WISH",
+    "LEGEND",
+    "CHEERS"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Behind every top grade are a thousand quiet hours of work nobody saw.",
+      "This magazine sees them all, and celebrates the student, and the person, behind the results.",
+      "{who}, this one is top of the class.",
+      "From everything {from} told us, your future is so bright."
+    ],
+    "wish": "The world is yours, {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "A Study Day With {first}",
+    "day": [
+      [
+        "7:00",
+        "Up",
+        "Flashcards before breakfast."
+      ],
+      [
+        "10:00",
+        "Library",
+        "Same seat. Same playlist. Total focus."
+      ],
+      [
+        "15:00",
+        "Break",
+        "A walk, a snack, a quick quiz."
+      ],
+      [
+        "19:00",
+        "Practice paper",
+        "Timed. Marked. Improved."
+      ]
+    ],
+    "night": [
+      "23:00",
+      "Bedtime",
+      "Notes under the pillow. Just in case."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The library, the same seat every day"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Tea, toast and revision snacks"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Just one more chapter\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Remembering everything, eventually"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Exam season, mostly"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Bring snacks. Test them. Make them rest"
+      ]
+    ],
+    "little": [
+      "You always help classmates who are stuck.",
+      "You never give up on a hard question.",
+      "You make learning look like fun.",
+      "You stay humble, even at the top."
+    ],
+    "letters": "Little Things Only You Do",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "conceptWho": "friend",
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

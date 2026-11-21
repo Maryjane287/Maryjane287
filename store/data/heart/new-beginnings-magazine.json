@@ -1,0 +1,371 @@
+{
+  "theme": "dawn",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "Something wonderful from the chapter that is ending",
+      "example": "Ten years of Friday nights at the same pub",
+      "max": 80,
+      "chapter": "The last chapter"
+    },
+    {
+      "id": "s_two",
+      "label": "What took the most courage",
+      "example": "Saying the plan out loud for the first time",
+      "max": 80,
+      "chapter": "The brave bit"
+    },
+    {
+      "id": "s_three",
+      "label": "What you hope the new chapter brings",
+      "example": "Sunshine, peace and a life they love",
+      "max": 80,
+      "chapter": "Chapter two"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To visit, call and send care packages",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "chapter": "New chapter",
+    "leaving": "Leaving behind",
+    "excited": "Excited for",
+    "carry": "Taking with them"
+  },
+  "story": {
+    "title": "The Next Chapter of {first}",
+    "hand": "Go and be brave, {who}. Home is always here.",
+    "kicker": "A new beginning",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Packing list",
+    "kicker": "From {from}, with love",
+    "title": "Ten things to take into a new chapter",
+    "items": [
+      "Courage",
+      "A good suitcase",
+      "Photos of home",
+      "A notebook for the journey",
+      "Phone numbers that matter",
+      "A favourite mug",
+      "Comfortable shoes",
+      "An open heart",
+      "A sense of adventure",
+      "Mum's recipes",
+      "A little bit of fear",
+      "Everyone's love"
+    ]
+  },
+  "timeline": {
+    "kicker": "Birthdays through the ages",
+    "title": "A Short History of Birthdays",
+    "items": [
+      [
+        "Ancient Rome",
+        "A day worth a feast",
+        "Romans marked the birthdays of friends and family with feasts, gifts and wishes for good luck."
+      ],
+      [
+        "1700s",
+        "Cake and candles",
+        "In Germany, children's birthday parties called Kinderfeste had a cake with a candle for every year."
+      ],
+      [
+        "1893",
+        "The tune we all know",
+        "Sisters Mildred and Patty Hill published Good Morning to All. Its melody became Happy Birthday to You."
+      ],
+      [
+        "2015",
+        "A song for everyone",
+        "A judge ruled the old copyright claim on Happy Birthday invalid. Now it belongs to all of us."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who} turns {age}",
+      "The most important birthday in the history books. Well, in ours."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words for Your Birthday",
+    "items": [
+      [
+        "Let us celebrate the occasion with wine and sweet words.",
+        "Plautus"
+      ],
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Wrinkles should merely indicate where the smiles have been.",
+        "Mark Twain, Following the Equator, 1897"
+      ],
+      [
+        "A joy that is shared is a joy made double.",
+        "An old English proverb"
+      ]
+    ],
+    "hand": "Every one of them is true. Especially the bit about smiles, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Birthdays",
+    "items": [
+      [
+        "sun",
+        "A lap of the Sun",
+        "Every birthday marks one more trip around the Sun, about 940 million kilometres. Well travelled."
+      ],
+      [
+        "globe",
+        "Birthday twins",
+        "Around twenty million people share your birthday. None of them are quite as good at it as you."
+      ],
+      [
+        "smile",
+        "The party trick",
+        "In a room of just 23 people, there is a better than even chance two of them share a birthday."
+      ],
+      [
+        "music",
+        "The famous song",
+        "Happy Birthday to You is often called the most recognised song in the English language."
+      ],
+      [
+        "clock",
+        "Leap day babies",
+        "People born on 29 February only get a true birthday once every four years."
+      ],
+      [
+        "spark",
+        "Brand new you",
+        "Your skin renews its outer layer every few weeks, so you are always a slightly fresher edition."
+      ]
+    ],
+    "hand": "Science says you are {age}. We say you are timeless, {who}."
+  },
+  "world": {
+    "kicker": "A note from the universe",
+    "title": "Why the Next Chapter Is Lucky to Have {who}",
+    "lead": "Because {who} was brave enough to begin again, the world got:",
+    "items": [
+      "Proof that it is never too late.",
+      "A story to inspire everyone.",
+      "New friends, waiting somewhere.",
+      "Courage, beautifully done.",
+      "A fresh page, ready to fill.",
+      "A life lived on their terms.",
+      "And the one and only {who}."
+    ],
+    "close": "Here is to chapter two, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises for your new chapter",
+    "items": [
+      "To call, even across time zones.",
+      "To visit as soon as we can.",
+      "To send the care packages you need.",
+      "To keep your spot at the table.",
+      "To be cheering you on, always."
+    ],
+    "hand": "Love, {from}"
+  },
+  "awards": [
+    [
+      "Best laugh in the business",
+      "By a landslide"
+    ],
+    [
+      "Most likely to start the dancing",
+      "Every single time"
+    ],
+    [
+      "Outstanding friendship",
+      "A lifetime achievement"
+    ],
+    [
+      "Star of the year",
+      "Voted {age} years running"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Breakfast in bed",
+      "Coffee included, obviously"
+    ],
+    [
+      "A day of your choosing",
+      "Anywhere, anything"
+    ],
+    [
+      "One night out",
+      "Our treat, your playlist"
+    ],
+    [
+      "A lie in",
+      "Nobody says a word"
+    ]
+  ],
+  "vouchersTitle": "Birthday vouchers for {who}",
+  "cert": "Iconic",
+  "perfume": "Top notes of birthday candles, fizz and laughter. A heart of pure sunshine.",
+  "news": {
+    "edition": "Birthday edition",
+    "headline": "{who} turns {age} and the world celebrates",
+    "lead": "Reports are coming in from everywhere: {who} is {age} today and looking better than ever. Cake has been confirmed.",
+    "weather": "Weather: sunny, with scattered confetti"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every party",
+    "nationality": "Celebrated, everywhere",
+    "job": "Professional legend",
+    "stamps": [
+      "Birthday city",
+      "Party central",
+      "Adored"
+    ]
+  },
+  "movie": {
+    "sub": "A story of courage and hope",
+    "soon": "The sequel: the happy ever after",
+    "reviews": [
+      [
+        "Brave and beautiful",
+        "The Daily Hug"
+      ],
+      [
+        "The bravest person I know",
+        "{from}"
+      ],
+      [
+        "Worth every risk",
+        "Everyone who loves them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "What do we call the fear of change and new things?",
+      [
+        "Neophobia",
+        "Arachnophobia",
+        "Claustrophobia"
+      ],
+      0
+    ],
+    [
+      "How many hours ahead of the UK is Sydney, roughly, in winter?",
+      [
+        "Eleven",
+        "Two",
+        "Six"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CAKE",
+    "PARTY",
+    "CANDLES",
+    "WISH",
+    "LEGEND",
+    "CHEERS"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Starting again is one of the bravest things a person can do.",
+      "This magazine celebrates that courage, and sends them off with everyone's love.",
+      "{who}, this one is your fresh start.",
+      "From everything {from} told us, the next chapter is going to be wonderful."
+    ],
+    "wish": "Here is to chapter two, {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "Day One of the New Chapter",
+    "day": [
+      [
+        "6:00",
+        "Wake up",
+        "A new view out of the window. Unbelievable."
+      ],
+      [
+        "9:00",
+        "First steps",
+        "A new route, a new coffee, a new start."
+      ],
+      [
+        "14:00",
+        "Settling in",
+        "Unpacks the photos first."
+      ],
+      [
+        "19:00",
+        "Calling home",
+        "Everyone on the video call, all talking at once."
+      ]
+    ],
+    "night": [
+      "22:00",
+      "Bedtime",
+      "Tired, brave and very happy."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "Somewhere new and full of light"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Whatever the new place does best"
+      ],
+      [
+        "music",
+        "Call",
+        "\"I actually did it\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Being brave when it is scary"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Right now, at the start"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Call often. Visit soon. Cheer loudly"
+      ]
+    ],
+    "little": [
+      "You always make the leap, even when it is scary.",
+      "You make friends wherever you go.",
+      "You carry home in your heart.",
+      "You inspire all of us to be braver."
+    ],
+    "letters": "Little Things Only You Do",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "conceptWho": "friend",
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

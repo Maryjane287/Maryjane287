@@ -21559,5 +21559,1582 @@
       "The meal we will never forget",
       "moment"
     ]
+  },
+  {
+    "slug": "founder-entrepreneur-magazine",
+    "title": "The Founder",
+    "searchTitle": "Personalised Entrepreneur Business Launch Magazine",
+    "pinTitle": "The Founder: a Personalised Magazine for Entrepreneurs and Business Launches",
+    "occasion": "Business launch",
+    "short": "For the dreamer who built it: their business, their journey and the launch day everyone will remember.",
+    "description": "From a kitchen table idea to a real business. A glossy business magazine starring the founder: how it started, the first sale, the late nights, the big launch and the empire still to come. Perfect for a launch party, a business anniversary or the friend who finally took the leap.",
+    "keywords": [
+      "entrepreneur gift",
+      "business launch gift",
+      "new business gift",
+      "gift for small business owner",
+      "grand opening gift",
+      "congratulations on new business"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Mia",
+        "max": 14
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "business",
+        "label": "Name of the business",
+        "example": "Bloom and Bake",
+        "max": 30
+      },
+      {
+        "id": "idea",
+        "label": "Where the idea started",
+        "example": "Baking for friends at midnight",
+        "max": 40
+      },
+      {
+        "id": "firstsale",
+        "label": "Their very first sale",
+        "example": "Twelve cupcakes to a neighbour",
+        "max": 40
+      },
+      {
+        "id": "vision",
+        "label": "Their big vision",
+        "example": "A bakery in every town",
+        "max": 34
+      },
+      {
+        "id": "moment",
+        "label": "The moment it became real",
+        "example": "She opened the shop door on launch day and there was a queue down the street, made up of every person who ever told her to go for it",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "You took a dream and built it with your own two hands. The late nights, the doubts, the courage. We are so proud of you. This is only the beginning.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the founder",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "At work, or on launch day",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "mia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Mia",
+          "from": "Her family",
+          "business": "Bloom and Bake",
+          "idea": "Baking for friends at midnight",
+          "firstsale": "Twelve cupcakes to a neighbour",
+          "vision": "A bakery in every town",
+          "x_who": "child",
+          "x_type": "gogetter"
+        },
+        "photos": {
+          "photo1": "/assets/samples/founder-entrepreneur-magazine-0.jpg",
+          "photo2": "/assets/samples/founder-entrepreneur-magazine-0b.jpg",
+          "photo3": "/assets/samples/founder-entrepreneur-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Sam",
+          "from": "Ava",
+          "business": "Sam Builds",
+          "idea": "Fixing everyone's shelves",
+          "firstsale": "A garden fence for Mrs Leo",
+          "vision": "Building homes for families",
+          "x_who": "partner",
+          "x_type": "gogetter"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "butter",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Ava",
+          "from": "The girls",
+          "business": "Studio Ava",
+          "idea": "Doing friends' nails at uni",
+          "firstsale": "A bride and six bridesmaids",
+          "vision": "Her own salon brand",
+          "x_who": "bestie",
+          "x_type": "gogetter"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The founder issue",
+      "edition": "Founder of {business}",
+      "lines": [
+        [
+          "Exclusive",
+          "The founder story"
+        ],
+        [
+          "It started with",
+          "{idea}"
+        ],
+        [
+          "The vision",
+          "{vision}"
+        ]
+      ],
+      "badge": [
+        "Now",
+        "open",
+        "for business"
+      ],
+      "quote": "{firstsale}",
+      "credit": "The very first sale"
+    },
+    "letterTitle": "A letter to the founder",
+    "feature": [
+      "The moment it became real",
+      "moment"
+    ]
+  },
+  {
+    "slug": "boss-lady-magazine",
+    "title": "Boss Lady",
+    "searchTitle": "Personalised Boss Lady Magazine",
+    "pinTitle": "Boss Lady: a Personalised Magazine for the Woman Who Runs Things",
+    "occasion": "Boss lady",
+    "short": "For the woman who runs the meeting, the team and the group chat: her rise, her rules and her power moves.",
+    "description": "She runs the boardroom, the household and the group chat, sometimes all at once. A glossy magazine for the boss lady in your life: her career rise, her power moves, her leadership rules and the people she lifts up along the way. For a promotion, a new role or because she deserves it.",
+    "keywords": [
+      "boss lady gift",
+      "gift for female boss",
+      "promotion gift for her",
+      "girl boss gift",
+      "gift for woman manager",
+      "career woman gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Ava",
+        "max": 14
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "role",
+        "label": "Her role",
+        "example": "Head of Marketing",
+        "max": 30
+      },
+      {
+        "id": "power",
+        "label": "Her signature power move",
+        "example": "Closing the deal before lunch",
+        "max": 40
+      },
+      {
+        "id": "rule",
+        "label": "Her leadership rule",
+        "example": "Lift as you climb",
+        "max": 34
+      },
+      {
+        "id": "next",
+        "label": "Next on her list",
+        "example": "Her own company",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "Her biggest power move",
+        "example": "Walked into the board meeting, asked for the promotion with a plan in hand, and walked out with the job and a team of twelve",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want her to know? (This becomes your letter)",
+        "example": "You make leading look graceful and you never forget the people coming up behind you. We are in awe of you. Keep running the world, boss lady.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the boss",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "At work, in charge",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "ava",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 3,
+          "hair": "long",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "from": "Her team",
+          "role": "Head of Marketing",
+          "power": "Closing the deal before lunch",
+          "rule": "Lift as you climb",
+          "next": "Her own company",
+          "x_who": "friend",
+          "x_type": "gogetter"
+        },
+        "photos": {
+          "photo1": "/assets/samples/boss-lady-magazine-0.jpg",
+          "photo2": "/assets/samples/boss-lady-magazine-0b.jpg",
+          "photo3": "/assets/samples/boss-lady-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "emma",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#b5552b"
+        },
+        "values": {
+          "name": "Emma",
+          "from": "Chris",
+          "role": "Director of Operations",
+          "power": "The calm email that ends all drama",
+          "rule": "Kind but clear",
+          "next": "The board",
+          "x_who": "partner",
+          "x_type": "gogetter"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "butter",
+        "portrait": {
+          "skin": 1,
+          "hair": "bun",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Mia",
+          "from": "Her sister",
+          "role": "Head teacher",
+          "power": "One look. Silence.",
+          "rule": "Every child matters",
+          "next": "A school of her own",
+          "x_who": "sibling",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The boss issue",
+      "edition": "{role}",
+      "lines": [
+        [
+          "Exclusive",
+          "Inside the rise of {name}"
+        ],
+        [
+          "Power move",
+          "{power}"
+        ],
+        [
+          "Next",
+          "{next}"
+        ]
+      ],
+      "badge": [
+        "Boss",
+        "lady",
+        "of the year"
+      ],
+      "quote": "{rule}",
+      "credit": "Her leadership rule"
+    },
+    "letterTitle": "A letter to the boss",
+    "feature": [
+      "Her biggest power move",
+      "moment"
+    ]
+  },
+  {
+    "slug": "doctor-magazine",
+    "title": "The Doctor Is In",
+    "searchTitle": "Personalised Doctor Magazine Gift",
+    "pinTitle": "The Doctor Is In: a Personalised Magazine for Doctors and New Graduates",
+    "occasion": "Doctor",
+    "short": "For the doctor: their years of study, their long shifts and the lives they have touched.",
+    "description": "Years of study, long nights and a lifetime of caring. A glossy magazine for the doctor in your life: their journey through medical school, their speciality, the patients they will never forget and the people who are so proud of them. For graduation, a new post or a big thank you.",
+    "keywords": [
+      "gift for doctor",
+      "medical graduation gift",
+      "new doctor gift",
+      "gift for junior doctor",
+      "thank you gift for doctor",
+      "personalised doctor gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Dr Emma",
+        "max": 14
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "specialty",
+        "label": "Their speciality",
+        "example": "Paediatrics",
+        "max": 30
+      },
+      {
+        "id": "school",
+        "label": "Where they studied",
+        "example": "Edinburgh",
+        "max": 30
+      },
+      {
+        "id": "shift",
+        "label": "Their longest shift",
+        "example": "Thirty one hours, still smiling",
+        "max": 34
+      },
+      {
+        "id": "why",
+        "label": "Why they chose medicine",
+        "example": "To help children feel brave",
+        "max": 34
+      },
+      {
+        "id": "moment",
+        "label": "The moment they became a doctor",
+        "example": "Graduation day, when she stood up in her gown, found us in the crowd, and mouthed \"I did it\" while her dad cried into his programme",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "You worked harder than anyone we know to get here. Thank you for every life you touch and every family you comfort. We are so proud to call you ours, Doctor.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the doctor",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "At graduation or work",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma",
+        "palette": "sky",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Dr Emma",
+          "from": "Mum and Dad",
+          "specialty": "Paediatrics",
+          "school": "Edinburgh",
+          "shift": "Thirty one hours, still smiling",
+          "why": "To help children feel brave",
+          "x_who": "child",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/doctor-magazine-0.jpg",
+          "photo2": "/assets/samples/doctor-magazine-0b.jpg",
+          "photo3": "/assets/samples/doctor-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "mint",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Dr Sam",
+          "from": "His wife, Mia",
+          "specialty": "Emergency medicine",
+          "school": "Manchester",
+          "shift": "A whole New Year's Eve",
+          "why": "His grandad's surgeon",
+          "x_who": "partner",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "rose",
+        "portrait": {
+          "skin": 1,
+          "hair": "bun",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Dr Ava",
+          "from": "Her best friend",
+          "specialty": "General practice",
+          "school": "London",
+          "shift": "Two winters, back to back",
+          "why": "She just loves people",
+          "x_who": "bestie",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The doctor issue",
+      "edition": "{specialty}",
+      "lines": [
+        [
+          "Exclusive",
+          "The doctor is in"
+        ],
+        [
+          "Trained in",
+          "{school}"
+        ],
+        [
+          "Why medicine",
+          "{why}"
+        ]
+      ],
+      "badge": [
+        "The",
+        "doctor",
+        "is in"
+      ],
+      "quote": "{shift}",
+      "credit": "Longest shift"
+    },
+    "letterTitle": "A letter to our doctor",
+    "feature": [
+      "The moment they became a doctor",
+      "moment"
+    ]
+  },
+  {
+    "slug": "nurse-magazine",
+    "title": "Hero in Scrubs",
+    "searchTitle": "Personalised Nurse Magazine Gift",
+    "pinTitle": "Hero in Scrubs: a Personalised Magazine for Nurses and Midwives",
+    "occasion": "Nurse",
+    "short": "For the nurse or midwife: their calling, their shifts and every patient they have cared for.",
+    "description": "The heart of every hospital. A glossy magazine for the nurse or midwife in your life: why they chose nursing, the patients they will always remember, their shift survival kit and the people who are so proud of them. For qualifying, Nurses Day, retirement or a heartfelt thank you.",
+    "keywords": [
+      "gift for nurse",
+      "nurse graduation gift",
+      "midwife gift",
+      "thank you gift for nurse",
+      "nurses day gift",
+      "personalised nurse gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Mia",
+        "max": 14
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "ward",
+        "label": "Their ward or speciality",
+        "example": "Neonatal intensive care",
+        "max": 34
+      },
+      {
+        "id": "years",
+        "label": "Years nursing",
+        "example": "Twelve",
+        "max": 14
+      },
+      {
+        "id": "kit",
+        "label": "Their shift survival kit",
+        "example": "Hand cream, chocolate, a good pen",
+        "max": 40
+      },
+      {
+        "id": "why",
+        "label": "Why they became a nurse",
+        "example": "The nurse who cared for Grandma",
+        "max": 40
+      },
+      {
+        "id": "moment",
+        "label": "The moment they knew this was their calling",
+        "example": "On her first placement she sat with a frightened elderly man all night, held his hand and sang to him, and he asked for her by name every day after",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "You give so much of yourself to people you have only just met. Thank you for every hand held, every night shift and every life you made easier. You are a hero.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo in scrubs",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "At work or graduation",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "mia",
+        "palette": "mint",
+        "portrait": {
+          "skin": 0,
+          "hair": "bun",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Mia",
+          "from": "Her family",
+          "ward": "Neonatal intensive care",
+          "years": "Twelve",
+          "kit": "Hand cream, chocolate, a good pen",
+          "why": "The nurse who cared for Grandma",
+          "x_who": "child",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/nurse-magazine-0.jpg",
+          "photo2": "/assets/samples/nurse-magazine-0b.jpg",
+          "photo3": "/assets/samples/nurse-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "chris",
+        "palette": "sky",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Chris",
+          "from": "Emma",
+          "ward": "Accident and emergency",
+          "years": "Eight",
+          "kit": "Coffee, coffee, coffee",
+          "why": "He wanted to make a difference",
+          "x_who": "partner",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "rose",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "from": "The mums she helped",
+          "ward": "Midwifery",
+          "years": "Twenty",
+          "kit": "Biscuits and a calm voice",
+          "why": "She was born to do it",
+          "x_who": "friend",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The nurse issue",
+      "edition": "{ward}",
+      "lines": [
+        [
+          "Exclusive",
+          "Hero in scrubs"
+        ],
+        [
+          "Years caring",
+          "{years}"
+        ],
+        [
+          "Why nursing",
+          "{why}"
+        ]
+      ],
+      "badge": [
+        "Hero",
+        "in",
+        "scrubs"
+      ],
+      "quote": "{kit}",
+      "credit": "Shift survival kit"
+    },
+    "letterTitle": "A letter to our nurse",
+    "feature": [
+      "The moment they knew this was their calling",
+      "moment"
+    ]
+  },
+  {
+    "slug": "top-of-the-class-magazine",
+    "title": "Top of the Class",
+    "searchTitle": "Personalised Academic Achievement Magazine",
+    "pinTitle": "Top of the Class: a Personalised Magazine for Valedictorians and Top Students",
+    "occasion": "Top student",
+    "short": "For the top of the class: their grades, their late night study and the speech everyone remembers.",
+    "description": "Valedictorian, first class honours, top of the year or the exam results they worked so hard for. A glossy magazine celebrating the scholar: their subjects, the study rituals, the teachers who inspired them and the bright future ahead. For graduation, results day or a prize giving.",
+    "keywords": [
+      "valedictorian gift",
+      "top student gift",
+      "academic achievement gift",
+      "first class degree gift",
+      "exam results gift",
+      "honours graduate gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Leo",
+        "max": 14
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "achievement",
+        "label": "Their achievement",
+        "example": "Valedictorian, class of 2026",
+        "max": 40
+      },
+      {
+        "id": "subject",
+        "label": "Their favourite subject",
+        "example": "Chemistry",
+        "max": 24
+      },
+      {
+        "id": "ritual",
+        "label": "Their study ritual",
+        "example": "Flashcards, tea and lo fi beats",
+        "max": 40
+      },
+      {
+        "id": "future",
+        "label": "What comes next",
+        "example": "Medicine at university",
+        "max": 34
+      },
+      {
+        "id": "moment",
+        "label": "The moment they found out",
+        "example": "He opened his results in the car park, read them three times, then ran back into school to hug the chemistry teacher who believed in him",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "Every late night, every flashcard and every early morning has led to this. We are so proud, but more than the grades, we are proud of who you are. The world is lucky to have you.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the scholar",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "At graduation or prize giving",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "leo",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Leo",
+          "from": "Mum and Dad",
+          "achievement": "Valedictorian, class of 2026",
+          "subject": "Chemistry",
+          "ritual": "Flashcards, tea and lo fi beats",
+          "future": "Medicine at university",
+          "x_who": "child",
+          "x_type": "gogetter"
+        },
+        "photos": {
+          "photo1": "/assets/samples/top-of-the-class-magazine-0.jpg",
+          "photo2": "/assets/samples/top-of-the-class-magazine-0b.jpg",
+          "photo3": "/assets/samples/top-of-the-class-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Mia",
+          "from": "Grandma",
+          "achievement": "First class honours in Law",
+          "subject": "Human rights law",
+          "ritual": "Library until closing",
+          "future": "Training as a barrister",
+          "x_who": "grand",
+          "x_type": "gogetter"
+        },
+        "photos": {
+          "photo1": "/assets/samples/eighteenth-birthday-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "sky",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Sam",
+          "from": "His big sister",
+          "achievement": "Top of the year in maths",
+          "subject": "Maths, obviously",
+          "ritual": "Practice papers and pizza",
+          "future": "Engineering",
+          "x_who": "sibling",
+          "x_type": "builder"
+        },
+        "photos": {
+          "photo1": "/assets/samples/eighteenth-birthday-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The top of the class issue",
+      "edition": "{achievement}",
+      "lines": [
+        [
+          "Exclusive",
+          "Top of the class"
+        ],
+        [
+          "Favourite subject",
+          "{subject}"
+        ],
+        [
+          "Next",
+          "{future}"
+        ]
+      ],
+      "badge": [
+        "Top",
+        "of the",
+        "class"
+      ],
+      "quote": "{ritual}",
+      "credit": "Study ritual"
+    },
+    "letterTitle": "A letter to our top student",
+    "feature": [
+      "The moment they found out",
+      "moment"
+    ]
+  },
+  {
+    "slug": "service-and-sacrifice-magazine",
+    "title": "Service and Sacrifice",
+    "searchTitle": "Personalised Military and First Responder Magazine",
+    "pinTitle": "Service and Sacrifice: a Personalised Magazine Honouring Military and First Responders",
+    "occasion": "Service",
+    "short": "Honouring those who serve: the armed forces, firefighters, police and paramedics, and the families behind them.",
+    "description": "For the soldier, sailor, airman, firefighter, police officer or paramedic who runs towards danger. A respectful, proud and glossy magazine honouring their service: where they served, what they gave, the friends they served with and the family who waited at home. For homecomings, promotions, retirement or Remembrance.",
+    "keywords": [
+      "military gift",
+      "veteran gift",
+      "firefighter gift",
+      "police officer gift",
+      "paramedic gift",
+      "homecoming gift",
+      "army retirement gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Chris",
+        "max": 14
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "service",
+        "label": "Their service",
+        "example": "Royal Navy",
+        "max": 30
+      },
+      {
+        "id": "rank",
+        "label": "Rank or role",
+        "example": "Petty Officer",
+        "max": 30
+      },
+      {
+        "id": "years",
+        "label": "Years of service",
+        "example": "Twenty two",
+        "max": 20
+      },
+      {
+        "id": "motto",
+        "label": "Their unit motto or favourite saying",
+        "example": "Ready, aye, ready",
+        "max": 40
+      },
+      {
+        "id": "moment",
+        "label": "The moment we were proudest",
+        "example": "The day the ship came home and he walked down the gangway, scanning the crowd, until our daughter shouted \"DADDY\" and the whole dock heard",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "You gave so much so that others could be safe. The missed birthdays, the long months away, the courage. We are so proud of you, and so glad you are home.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo in uniform",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "In service",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "A family photo",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "chris",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Chris",
+          "from": "Emma and the kids",
+          "service": "Royal Navy",
+          "rank": "Petty Officer",
+          "years": "Twenty two",
+          "motto": "Ready, aye, ready",
+          "x_who": "partner",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/service-and-sacrifice-magazine-0.jpg",
+          "photo2": "/assets/samples/service-and-sacrifice-magazine-0b.jpg",
+          "photo3": "/assets/samples/service-and-sacrifice-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Sam",
+          "from": "His watch",
+          "service": "Fire and Rescue",
+          "rank": "Watch Manager",
+          "years": "Fifteen",
+          "motto": "First in, last out",
+          "x_who": "friend",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "sky",
+        "portrait": {
+          "skin": 0,
+          "hair": "bun",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Ava",
+          "from": "Mum and Dad",
+          "service": "Ambulance Service",
+          "rank": "Paramedic",
+          "years": "Ten",
+          "motto": "Every second counts",
+          "x_who": "child",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The service issue",
+      "edition": "{service}",
+      "lines": [
+        [
+          "With pride",
+          "Honouring {name}"
+        ],
+        [
+          "Rank",
+          "{rank}"
+        ],
+        [
+          "Years served",
+          "{years}"
+        ]
+      ],
+      "badge": [
+        "With",
+        "pride",
+        "and thanks"
+      ],
+      "quote": "{motto}",
+      "credit": "Motto"
+    },
+    "letterTitle": "A letter to our hero",
+    "feature": [
+      "The moment we were proudest",
+      "moment"
+    ]
+  },
+  {
+    "slug": "award-winner-magazine",
+    "title": "And the Award Goes To",
+    "searchTitle": "Personalised Award and Achievement Magazine",
+    "pinTitle": "And the Award Goes To: a Personalised Magazine Celebrating an Achievement",
+    "occasion": "Award winner",
+    "short": "For the winner: their award, their acceptance speech and the journey that got them on stage.",
+    "description": "They won. A glossy celebration magazine for the person who just picked up an award, a prize, a promotion or a title: what they won, the work behind it, the people they would thank in their speech and what comes next. For work awards, competitions, sports trophies and every big win.",
+    "keywords": [
+      "award winner gift",
+      "congratulations gift",
+      "achievement gift",
+      "work award gift",
+      "gift for winner",
+      "well done gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Emma",
+        "max": 14
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "award",
+        "label": "The award they won",
+        "example": "Teacher of the Year",
+        "max": 40
+      },
+      {
+        "id": "for",
+        "label": "What they won it for",
+        "example": "Starting the school choir",
+        "max": 40
+      },
+      {
+        "id": "thanks",
+        "label": "Who they would thank first",
+        "example": "Their mum, and the choir kids",
+        "max": 40
+      },
+      {
+        "id": "next",
+        "label": "What they will win next",
+        "example": "A national title",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "The moment they heard their name",
+        "example": "She was mid sip when they read her name, choked on her prosecco, and walked up to the stage still coughing and crying at the same time",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "We always knew you were a winner, now everyone else does too. The award is shiny, but the hard work and the heart behind it are what make us proudest.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the winner",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "With the award",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma",
+        "palette": "butter",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#b5552b"
+        },
+        "values": {
+          "name": "Emma",
+          "from": "Her family",
+          "award": "Teacher of the Year",
+          "for": "Starting the school choir",
+          "thanks": "Her mum, and the choir kids",
+          "next": "A national title",
+          "x_who": "teacher",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/award-winner-magazine-0.jpg",
+          "photo2": "/assets/samples/award-winner-magazine-0b.jpg",
+          "photo3": "/assets/samples/award-winner-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Leo",
+          "from": "The team",
+          "award": "Salesperson of the Year",
+          "for": "Smashing every target",
+          "thanks": "His wife, for the coffee",
+          "next": "Regional director",
+          "x_who": "friend",
+          "x_type": "gogetter"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Mia",
+          "from": "Ava",
+          "award": "Best Bakery in the County",
+          "for": "Her famous cinnamon buns",
+          "thanks": "Her grandma's recipe book",
+          "next": "Great British fame",
+          "x_who": "bestie",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The winner's issue",
+      "edition": "{award}",
+      "lines": [
+        [
+          "And the award goes to",
+          "{name}"
+        ],
+        [
+          "For",
+          "{for}"
+        ],
+        [
+          "Next",
+          "{next}"
+        ]
+      ],
+      "badge": [
+        "Award",
+        "winning",
+        "and proud"
+      ],
+      "quote": "{thanks}",
+      "credit": "First thank you"
+    },
+    "letterTitle": "A letter to our winner",
+    "feature": [
+      "The moment they heard their name",
+      "moment"
+    ]
+  },
+  {
+    "slug": "new-beginnings-magazine",
+    "title": "New Beginnings",
+    "searchTitle": "Personalised New Chapter Magazine",
+    "pinTitle": "New Beginnings: a Personalised Magazine for a Fresh Start or Big Life Change",
+    "occasion": "Fresh start",
+    "short": "For a fresh start: a new city, a new career, a new chapter, and all the courage it took.",
+    "description": "Moving abroad, changing careers, starting again after a hard time or simply turning the page. A hopeful, beautiful magazine for someone at the start of a new chapter: what they are leaving behind, what they are walking towards and all the people cheering them on.",
+    "keywords": [
+      "new beginnings gift",
+      "fresh start gift",
+      "moving abroad gift",
+      "career change gift",
+      "new chapter gift",
+      "good luck gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Mia",
+        "max": 14
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "chapter",
+        "label": "Their new chapter",
+        "example": "Moving to Australia",
+        "max": 34
+      },
+      {
+        "id": "leaving",
+        "label": "What they are leaving behind",
+        "example": "Grey skies and a desk job",
+        "max": 34
+      },
+      {
+        "id": "excited",
+        "label": "What they are most excited for",
+        "example": "Sunrise swims and a new career",
+        "max": 40
+      },
+      {
+        "id": "carry",
+        "label": "What they are taking with them",
+        "example": "Everyone's love, and Mum's recipes",
+        "max": 40
+      },
+      {
+        "id": "moment",
+        "label": "The moment they decided to begin again",
+        "example": "She was standing in the rain at a bus stop, looked at a travel poster, laughed out loud, and booked the flight that night",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "It takes so much courage to start again. We are going to miss you, but we are so excited for you. Go and live your best life. Home is always here.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of them, ready",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A goodbye photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "mia",
+        "palette": "sky",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Mia",
+          "from": "Everyone at home",
+          "chapter": "Moving to Australia",
+          "leaving": "Grey skies and a desk job",
+          "excited": "Sunrise swims and a new career",
+          "carry": "Everyone's love, and Mum's recipes",
+          "x_who": "friend",
+          "x_type": "adventurer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-beginnings-magazine-0.jpg",
+          "photo2": "/assets/samples/new-beginnings-magazine-0b.jpg",
+          "photo3": "/assets/samples/new-beginnings-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "chris",
+        "palette": "mint",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Chris",
+          "from": "Emma",
+          "chapter": "Retraining as a nurse at 40",
+          "leaving": "Twenty years in banking",
+          "excited": "Doing work that matters",
+          "carry": "His calm, and his sense of humour",
+          "x_who": "partner",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "rose",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "from": "Her best friend",
+          "chapter": "A brand new start",
+          "leaving": "A year she would rather forget",
+          "excited": "Her own little flat",
+          "carry": "Her strength and her friends",
+          "x_who": "bestie",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The new beginnings issue",
+      "edition": "Chapter two",
+      "lines": [
+        [
+          "Exclusive",
+          "A brand new chapter"
+        ],
+        [
+          "Next",
+          "{chapter}"
+        ],
+        [
+          "Excited for",
+          "{excited}"
+        ]
+      ],
+      "badge": [
+        "New",
+        "chapter",
+        "begins"
+      ],
+      "quote": "{carry}",
+      "credit": "What they are taking with them"
+    },
+    "letterTitle": "A letter for your new chapter",
+    "feature": [
+      "The moment they decided to begin again",
+      "moment"
+    ]
   }
 ]
