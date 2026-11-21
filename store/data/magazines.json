@@ -15906,5 +15906,1802 @@
       "quote": "{same}",
       "credit": "They both"
     }
+  },
+  {
+    "slug": "little-explorer-magazine",
+    "title": "Little Explorer",
+    "searchTitle": "Personalised Adventure Magazine for Kids",
+    "pinTitle": "Little Explorer: a Personalised Adventure Magazine for Curious Kids",
+    "occasion": "Little explorer",
+    "short": "For the child who collects bugs, climbs everything and asks why about the whole world.",
+    "description": "For the child with muddy knees, pockets full of conkers and a thousand questions. A glossy adventure magazine where they are the explorer on the cover: their discoveries, their favourite creatures and the expedition they dream of. Perfect for birthdays and for curious minds.",
+    "keywords": [
+      "gift for curious child",
+      "nature lover kids gift",
+      "explorer gift for kids",
+      "personalised kids magazine",
+      "outdoor kids gift",
+      "adventure book for child"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A comic style cover starring your child",
+      "My expert page: everything they know about their favourite thing",
+      "My favourite things, from food to animals",
+      "When I grow up",
+      "Fun facts about me",
+      "A letter from the grown ups who love them",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Leo",
+        "max": 12
+      },
+      {
+        "id": "age",
+        "label": "Age",
+        "example": "6",
+        "max": 2
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mummy and Daddy",
+        "max": 30
+      },
+      {
+        "id": "creature",
+        "label": "Favourite creature",
+        "example": "Stag beetles",
+        "max": 30
+      },
+      {
+        "id": "found",
+        "label": "Best thing they ever found",
+        "example": "A fossil on the beach",
+        "max": 40
+      },
+      {
+        "id": "place",
+        "label": "Dream expedition",
+        "example": "The Amazon rainforest",
+        "max": 34
+      },
+      {
+        "id": "kit",
+        "label": "Never leaves home without",
+        "example": "A magnifying glass",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "Their greatest discovery",
+        "example": "The day she found a real fossil on the beach, ran the length of the bay to show us and announced to everyone she was now a scientist",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "Never stop asking questions and never stop looking under rocks. The whole world is waiting for you to explore it, and we will be right behind you, carrying the snacks.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of your explorer",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "Out on an adventure",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "ava",
+        "palette": "mint",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#b5552b"
+        },
+        "values": {
+          "name": "Ava",
+          "age": "6",
+          "from": "Mummy and Daddy",
+          "creature": "Stag beetles",
+          "found": "A fossil on the beach",
+          "place": "The Amazon rainforest",
+          "kit": "A magnifying glass",
+          "x_type": "explorer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/little-explorer-magazine-0.jpg",
+          "photo2": "/assets/samples/little-explorer-magazine-0b.jpg",
+          "photo3": "/assets/samples/little-explorer-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "sky",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Leo",
+          "age": "5",
+          "from": "Grandma and Grandad",
+          "creature": "Octopuses",
+          "found": "A crab the size of a coin",
+          "place": "The bottom of the sea",
+          "kit": "His bug jar",
+          "x_type": "explorer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/kids-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "butter",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Sam",
+          "age": "7",
+          "from": "Mum",
+          "creature": "Owls",
+          "found": "A bird skull in the woods",
+          "place": "The North Pole",
+          "kit": "Binoculars, always",
+          "x_type": "builder"
+        },
+        "photos": {
+          "photo1": "/assets/samples/kids-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The explorer issue",
+      "edition": "Expedition age {age}",
+      "lines": [
+        [
+          "Exclusive",
+          "Explorer of the year"
+        ],
+        [
+          "Greatest find",
+          "{found}"
+        ],
+        [
+          "Next expedition",
+          "{place}"
+        ]
+      ],
+      "badge": [
+        "Age",
+        "{age}",
+        "explorer"
+      ],
+      "quote": "{creature}",
+      "credit": "Favourite creature"
+    },
+    "letterTitle": "A letter to our little explorer",
+    "feature": [
+      "Their greatest discovery",
+      "moment"
+    ]
+  },
+  {
+    "slug": "junior-sports-magazine",
+    "title": "Junior Sports Champion",
+    "searchTitle": "Personalised Sports Magazine for Kids",
+    "pinTitle": "Junior Sports Champion: a Personalised Sports Magazine for Kids",
+    "occasion": "Young athlete",
+    "short": "For the young athlete: their sport, their best match and the champion they are becoming.",
+    "description": "For the child who lives in their football boots, their leotard or their swimming costume. A glossy sports magazine with them on the cover: their position, their best moment, their heroes and the trophy they are dreaming of. Perfect for birthdays, end of season or a big win.",
+    "keywords": [
+      "gift for young footballer",
+      "kids sports gift",
+      "personalised football gift",
+      "gymnastics gift for girls",
+      "end of season gift",
+      "sporty kid gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A comic style cover starring your child",
+      "My expert page: everything they know about their favourite thing",
+      "My favourite things, from food to animals",
+      "When I grow up",
+      "Fun facts about me",
+      "A letter from the grown ups who love them",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Leo",
+        "max": 12
+      },
+      {
+        "id": "age",
+        "label": "Age",
+        "example": "6",
+        "max": 2
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mummy and Daddy",
+        "max": 30
+      },
+      {
+        "id": "sport",
+        "label": "Their sport",
+        "example": "Football",
+        "max": 20
+      },
+      {
+        "id": "team",
+        "label": "Team or club",
+        "example": "Riverside Rovers Under 8s",
+        "max": 30
+      },
+      {
+        "id": "hero",
+        "label": "Their sporting hero",
+        "example": "Whoever scored last weekend",
+        "max": 34
+      },
+      {
+        "id": "skill",
+        "label": "Signature move",
+        "example": "The step over, every time",
+        "max": 34
+      },
+      {
+        "id": "moment",
+        "label": "Their greatest moment",
+        "example": "The last minute of the cup final, when he scored the winner, ran straight past the team and into Grandad's arms on the touchline",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "Win or lose, rain or shine, we are proud of you every single time. You never give up, you always help your teammates up, and that makes you a true champion.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo in kit",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "In action",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "leo",
+        "palette": "sky",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Leo",
+          "age": "8",
+          "from": "Mum and Dad",
+          "sport": "Football",
+          "team": "Riverside Rovers Under 8s",
+          "hero": "Whoever scored last weekend",
+          "skill": "The step over, every time",
+          "x_type": "builder"
+        },
+        "photos": {
+          "photo1": "/assets/samples/junior-sports-magazine-0.jpg",
+          "photo2": "/assets/samples/junior-sports-magazine-0b.jpg",
+          "photo3": "/assets/samples/junior-sports-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "bun",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Mia",
+          "age": "7",
+          "from": "Mummy",
+          "sport": "Gymnastics",
+          "team": "Starlight Gym Club",
+          "hero": "Her coach, Emma",
+          "skill": "A perfect cartwheel",
+          "x_type": "performer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/kids-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "mint",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Sam",
+          "age": "9",
+          "from": "Dad",
+          "sport": "Swimming",
+          "team": "Sharks Swim Club",
+          "hero": "His big cousin Chris",
+          "skill": "The fastest tumble turn",
+          "x_type": "explorer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/kids-magazine-0.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The champion issue",
+      "edition": "{team}",
+      "lines": [
+        [
+          "Exclusive",
+          "Star of {sport}"
+        ],
+        [
+          "Signature move",
+          "{skill}"
+        ],
+        [
+          "Hero",
+          "{hero}"
+        ]
+      ],
+      "badge": [
+        "Age",
+        "{age}",
+        "champion"
+      ],
+      "quote": "Never gives up",
+      "credit": "Says the coach"
+    },
+    "letterTitle": "A letter to our champion",
+    "feature": [
+      "Their greatest moment",
+      "moment"
+    ]
+  },
+  {
+    "slug": "little-princess-magazine",
+    "title": "Little Princess",
+    "searchTitle": "Personalised Princess Magazine for Girls",
+    "pinTitle": "Little Princess: a Personalised Royal Magazine for Your Girl",
+    "occasion": "Little princess",
+    "short": "A royal magazine for your little princess: her kingdom, her castle and her kind, brave heart.",
+    "description": "For the little girl who wears her crown to the supermarket. A royal edition magazine with her on the cover: her kingdom, her royal rules, her favourite gown and the kind, brave things that make her a real princess. Perfect for birthdays and dress up days.",
+    "keywords": [
+      "princess gift for girls",
+      "personalised princess book",
+      "little princess gift",
+      "gift for girl birthday",
+      "princess party gift",
+      "girls personalised magazine"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A comic style cover starring your child",
+      "My expert page: everything they know about their favourite thing",
+      "My favourite things, from food to animals",
+      "When I grow up",
+      "Fun facts about me",
+      "A letter from the grown ups who love them",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Leo",
+        "max": 12
+      },
+      {
+        "id": "age",
+        "label": "Age",
+        "example": "6",
+        "max": 2
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mummy and Daddy",
+        "max": 30
+      },
+      {
+        "id": "kingdom",
+        "label": "Her kingdom is called",
+        "example": "Sparkleland",
+        "max": 24
+      },
+      {
+        "id": "gown",
+        "label": "Favourite royal outfit",
+        "example": "The pink dress with the cape",
+        "max": 40
+      },
+      {
+        "id": "rule",
+        "label": "Her royal rule",
+        "example": "Pudding before bedtime",
+        "max": 34
+      },
+      {
+        "id": "pet",
+        "label": "Royal pet",
+        "example": "A unicorn called Biscuit",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "The day she was a real princess",
+        "example": "She held the door for an old lady at the shops while wearing her crown, curtsied, and said \"have a lovely day, your majesty\" to her",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want her to know? (This becomes your letter)",
+        "example": "Real princesses are not about crowns. They are kind, brave and full of love, and that is exactly what you are. You will always be our princess, wherever life takes you.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the princess",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "In her royal outfit",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "mia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Mia",
+          "age": "5",
+          "from": "Mummy and Daddy",
+          "kingdom": "Sparkleland",
+          "gown": "The pink dress with the cape",
+          "rule": "Pudding before bedtime",
+          "pet": "A unicorn called Biscuit",
+          "x_type": "performer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/little-princess-magazine-0.jpg",
+          "photo2": "/assets/samples/little-princess-magazine-0b.jpg",
+          "photo3": "/assets/samples/little-princess-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "butter",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "age": "4",
+          "from": "Grandma",
+          "kingdom": "The Kingdom of Ava",
+          "gown": "Her gold party dress",
+          "rule": "Everyone must dance",
+          "pet": "A dragon called Sam",
+          "x_type": "chatterbox"
+        },
+        "photos": {
+          "photo1": "/assets/samples/kids-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "emma",
+        "palette": "mint",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Emma",
+          "age": "6",
+          "from": "Mum and Dad",
+          "kingdom": "Flowertopia",
+          "gown": "Wellies and a tiara",
+          "rule": "Be kind to every bug",
+          "pet": "Our real cat, Duchess",
+          "x_type": "explorer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/kids-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The royal issue",
+      "edition": "Princess of {kingdom}",
+      "lines": [
+        [
+          "By royal decree",
+          "Kindest princess in the land"
+        ],
+        [
+          "Royal rule",
+          "{rule}"
+        ],
+        [
+          "Royal pet",
+          "{pet}"
+        ]
+      ],
+      "badge": [
+        "Age",
+        "{age}",
+        "and royal"
+      ],
+      "quote": "{gown}",
+      "credit": "Her royal outfit"
+    },
+    "letterTitle": "A royal letter for our princess",
+    "feature": [
+      "The day she was a real princess",
+      "moment"
+    ]
+  },
+  {
+    "slug": "little-hero-magazine",
+    "title": "Little Hero",
+    "searchTitle": "Personalised Superhero Magazine for Kids",
+    "pinTitle": "Little Hero: a Personalised Superhero Magazine for Brave Kids",
+    "occasion": "Little hero",
+    "short": "A superhero magazine for your little hero: their powers, their mission and their brave heart.",
+    "description": "Every child has a superpower. This magazine is all about theirs: their hero name, their special power, the people they have helped and the brave things they have done. A brilliant birthday gift, or a celebration after something hard, like a hospital stay or a big change.",
+    "keywords": [
+      "superhero gift for kids",
+      "brave child gift",
+      "personalised superhero book",
+      "gift for brave boy",
+      "hospital gift for child",
+      "kids birthday gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A comic style cover starring your child",
+      "My expert page: everything they know about their favourite thing",
+      "My favourite things, from food to animals",
+      "When I grow up",
+      "Fun facts about me",
+      "A letter from the grown ups who love them",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Leo",
+        "max": 12
+      },
+      {
+        "id": "age",
+        "label": "Age",
+        "example": "6",
+        "max": 2
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mummy and Daddy",
+        "max": 30
+      },
+      {
+        "id": "hero",
+        "label": "Their hero name",
+        "example": "Captain Kindness",
+        "max": 24
+      },
+      {
+        "id": "power",
+        "label": "Their superpower",
+        "example": "Making everyone laugh",
+        "max": 34
+      },
+      {
+        "id": "sidekick",
+        "label": "Their sidekick",
+        "example": "Our dog, Biscuit",
+        "max": 30
+      },
+      {
+        "id": "mission",
+        "label": "Their mission",
+        "example": "To help anyone who is sad",
+        "max": 34
+      },
+      {
+        "id": "moment",
+        "label": "Their bravest moment",
+        "example": "When he had his stitches, he held the nurse's hand, told her a joke to cheer her up, and said \"I am being brave for you\"",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "You do not need a cape to be a superhero. You are brave when things are scary, kind when people are sad, and you make our whole world better. You are our hero.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of your hero",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "In hero mode",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "leo",
+        "palette": "sky",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Leo",
+          "age": "5",
+          "from": "Mummy and Daddy",
+          "hero": "Captain Kindness",
+          "power": "Making everyone laugh",
+          "sidekick": "Our dog, Biscuit",
+          "mission": "To help anyone who is sad",
+          "x_type": "giggler"
+        },
+        "photos": {
+          "photo1": "/assets/samples/little-hero-magazine-0.jpg",
+          "photo2": "/assets/samples/little-hero-magazine-0b.jpg",
+          "photo3": "/assets/samples/little-hero-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "age": "6",
+          "from": "Mum",
+          "hero": "Lightning Girl",
+          "power": "Super speed hugs",
+          "sidekick": "Her brother Sam",
+          "mission": "To protect every ladybird",
+          "x_type": "explorer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/kids-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "chris",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Chris",
+          "age": "7",
+          "from": "Grandma and Grandad",
+          "hero": "The Brave Builder",
+          "power": "Fixing anything with tape",
+          "sidekick": "Teddy, obviously",
+          "mission": "To build a rocket to the moon",
+          "x_type": "builder"
+        },
+        "photos": {
+          "photo1": "/assets/samples/kids-magazine-0.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The hero issue",
+      "edition": "Starring {hero}",
+      "lines": [
+        [
+          "Exclusive",
+          "Hero of the year"
+        ],
+        [
+          "Superpower",
+          "{power}"
+        ],
+        [
+          "Mission",
+          "{mission}"
+        ]
+      ],
+      "badge": [
+        "Age",
+        "{age}",
+        "and brave"
+      ],
+      "quote": "Brave, kind and super fast",
+      "credit": "Says everyone"
+    },
+    "letterTitle": "A letter to our little hero",
+    "feature": [
+      "Their bravest moment",
+      "moment"
+    ]
+  },
+  {
+    "slug": "childhood-chronicles-magazine",
+    "title": "Childhood Chronicles",
+    "searchTitle": "Personalised Childhood Memories Magazine",
+    "pinTitle": "Childhood Chronicles: a Personalised Magazine of Their Growing Up Years",
+    "occasion": "Growing up",
+    "short": "Their whole childhood so far, as a glossy magazine: the funny sayings, the big moments, the way they grew.",
+    "description": "The first word, the funny phrases, the tooth fairy visits, the favourite toys that went everywhere. Childhood Chronicles gathers the years in one beautiful magazine, from baby to now, so the stories never get lost. Wonderful for a big birthday, the end of primary school or a gift they will treasure when they are grown.",
+    "keywords": [
+      "childhood memory book",
+      "gift for child growing up",
+      "end of primary school gift",
+      "personalised childhood book",
+      "memory keepsake for kids",
+      "gift for 10th birthday"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A comic style cover starring your child",
+      "My expert page: everything they know about their favourite thing",
+      "My favourite things, from food to animals",
+      "When I grow up",
+      "Fun facts about me",
+      "A letter from the grown ups who love them",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Leo",
+        "max": 12
+      },
+      {
+        "id": "age",
+        "label": "Age",
+        "example": "6",
+        "max": 2
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mummy and Daddy",
+        "max": 30
+      },
+      {
+        "id": "toy",
+        "label": "Toy that went everywhere",
+        "example": "A rabbit called Mr Ears",
+        "max": 30
+      },
+      {
+        "id": "saying",
+        "label": "Funniest thing they used to say",
+        "example": "\"Hostipal\" for hospital",
+        "max": 40
+      },
+      {
+        "id": "phase",
+        "label": "Their most famous phase",
+        "example": "The year of the dinosaur",
+        "max": 34
+      },
+      {
+        "id": "now",
+        "label": "What they love now",
+        "example": "Football and baking",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "The memory we will tell forever",
+        "example": "The day she was four and gave a speech at Grandad's birthday, unplanned, standing on a chair, and made the whole room cry",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "We have loved watching every chapter of you. The baby who never slept, the toddler who said no to everything, and now this brilliant, funny, kind person. Your story is our favourite story.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of them now",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A photo from when they were little",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "A favourite in between",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#b5552b"
+        },
+        "values": {
+          "name": "Emma",
+          "age": "10",
+          "from": "Mum and Dad",
+          "toy": "A rabbit called Mr Ears",
+          "saying": "\"Hostipal\" for hospital",
+          "phase": "The year of the dinosaur",
+          "now": "Football and baking",
+          "x_type": "chatterbox"
+        },
+        "photos": {
+          "photo1": "/assets/samples/childhood-chronicles-magazine-0.jpg",
+          "photo2": "/assets/samples/childhood-chronicles-magazine-0b.jpg",
+          "photo3": "/assets/samples/childhood-chronicles-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "sky",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Leo",
+          "age": "8",
+          "from": "Grandma",
+          "toy": "His blue digger",
+          "saying": "\"Pasghetti\", every single time",
+          "phase": "Superman pants, everywhere",
+          "now": "Lego and drawing",
+          "x_type": "builder"
+        },
+        "photos": {
+          "photo1": "/assets/samples/kids-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "mint",
+        "portrait": {
+          "skin": 1,
+          "hair": "bun",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Mia",
+          "age": "11",
+          "from": "Mummy",
+          "toy": "Teddy, now one eyed",
+          "saying": "\"I am not tired, I am just resting\"",
+          "phase": "The princess years",
+          "now": "Dancing and her friends",
+          "x_type": "performer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/kids-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The chronicles issue",
+      "edition": "The first {age} years",
+      "lines": [
+        [
+          "Exclusive",
+          "The story so far"
+        ],
+        [
+          "Famous phase",
+          "{phase}"
+        ],
+        [
+          "Loves now",
+          "{now}"
+        ]
+      ],
+      "badge": [
+        "Volume",
+        "{age}",
+        "of many"
+      ],
+      "quote": "{saying}",
+      "credit": "Famous sayings"
+    },
+    "letterTitle": "A letter about your story so far",
+    "feature": [
+      "The memory we will tell forever",
+      "moment"
+    ]
+  },
+  {
+    "slug": "chosen-with-love-magazine",
+    "title": "Chosen With Love",
+    "searchTitle": "Personalised Adoption Day Magazine",
+    "pinTitle": "Chosen With Love: a Personalised Adoption Day Keepsake Magazine",
+    "occasion": "Adoption day",
+    "short": "For the day your family found each other: a glossy keepsake of gotcha day, first moments and forever love.",
+    "description": "The day you became a family is one of the biggest days of your lives. Chosen With Love tells that story gently and joyfully: the first meeting, the first night home, the funny early days and all the ways your child belongs. A keepsake for adoption day, gotcha day anniversaries, or for a child placed with you through fostering or special guardianship.",
+    "keywords": [
+      "adoption gift",
+      "gotcha day gift",
+      "adoption day keepsake",
+      "adopted child gift",
+      "forever family gift",
+      "adoption celebration"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A comic style cover starring your child",
+      "My expert page: everything they know about their favourite thing",
+      "My favourite things, from food to animals",
+      "When I grow up",
+      "Fun facts about me",
+      "A letter from the grown ups who love them",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Leo",
+        "max": 12
+      },
+      {
+        "id": "age",
+        "label": "Age",
+        "example": "6",
+        "max": 2
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mummy and Daddy",
+        "max": 30
+      },
+      {
+        "id": "day",
+        "label": "Your family day",
+        "example": "14 March 2024",
+        "max": 20
+      },
+      {
+        "id": "first",
+        "label": "Their first word to us",
+        "example": "\"Hello\", then a giant hug",
+        "max": 34
+      },
+      {
+        "id": "ritual",
+        "label": "Our family ritual",
+        "example": "Pancakes every Saturday",
+        "max": 34
+      },
+      {
+        "id": "love",
+        "label": "What they love most now",
+        "example": "Bedtime stories with Dad",
+        "max": 34
+      },
+      {
+        "id": "moment",
+        "label": "The moment we knew we were a family",
+        "example": "On the first night home he padded into our room, climbed in between us without a word and fell asleep holding both our hands",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "You were always meant to be ours. Your story is part of who you are and we will honour all of it. We chose you, we choose you every day, and we will love you for ever.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of your child",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A photo from your family day",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "A favourite family photo",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "sam",
+        "palette": "butter",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Sam",
+          "age": "6",
+          "from": "Mum and Dad",
+          "day": "14 March 2024",
+          "first": "\"Hello\", then a giant hug",
+          "ritual": "Pancakes every Saturday",
+          "love": "Bedtime stories with Dad",
+          "x_type": "giggler"
+        },
+        "photos": {
+          "photo1": "/assets/samples/chosen-with-love-magazine-0.jpg",
+          "photo2": "/assets/samples/chosen-with-love-magazine-0b.jpg",
+          "photo3": "/assets/samples/chosen-with-love-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Ava",
+          "age": "4",
+          "from": "Mummy and Mama",
+          "day": "2 June 2025",
+          "first": "\"Can I keep the cat?\"",
+          "ritual": "Dancing in the kitchen",
+          "love": "Her big new bed",
+          "x_type": "chatterbox"
+        },
+        "photos": {
+          "photo1": "/assets/samples/kids-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "sky",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Leo",
+          "age": "8",
+          "from": "Dad",
+          "day": "20 October 2023",
+          "first": "\"Is this my room?\"",
+          "ritual": "Football on Sundays",
+          "love": "Building dens",
+          "x_type": "builder"
+        },
+        "photos": {
+          "photo1": "/assets/samples/kids-magazine-0.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The family day issue",
+      "edition": "Family since {day}",
+      "lines": [
+        [
+          "Exclusive",
+          "Chosen with love"
+        ],
+        [
+          "First words",
+          "{first}"
+        ],
+        [
+          "Family ritual",
+          "{ritual}"
+        ]
+      ],
+      "badge": [
+        "Forever",
+        "family",
+        "since"
+      ],
+      "quote": "You belong here",
+      "credit": "Always"
+    },
+    "letterTitle": "A letter for our forever child",
+    "feature": [
+      "The moment we knew we were a family",
+      "moment"
+    ]
+  },
+  {
+    "slug": "christening-magazine",
+    "title": "Christening Day",
+    "searchTitle": "Personalised Christening Keepsake Magazine",
+    "pinTitle": "Christening Day Keepsake: a Personalised Magazine for Baptism",
+    "occasion": "Christening",
+    "short": "A glossy keepsake of the christening day: the blessing, the godparents and the people who promised to love them.",
+    "description": "A christening or baptism gathers everyone who will watch a little one grow. This keepsake magazine captures the day: the church, the outfit, the godparents and their promises, the blessing and the party after. A beautiful gift from godparents or grandparents, and lovely for naming days too.",
+    "keywords": [
+      "christening gift",
+      "baptism keepsake",
+      "godparent gift",
+      "christening book",
+      "naming day gift",
+      "baby baptism gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring the new arrival",
+      "A welcome letter to the world",
+      "Their first days by the numbers",
+      "A photo spread of tiny fingers and toes",
+      "The moment we first met",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter for your christening day",
+    "feature": [
+      "The moment we will remember from the service",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Baby's name",
+        "example": "Ava",
+        "max": 12
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mummy and Daddy",
+        "max": 30
+      },
+      {
+        "id": "date",
+        "label": "Christening date",
+        "example": "12 May 2026",
+        "max": 18
+      },
+      {
+        "id": "church",
+        "label": "Church or place",
+        "example": "St Mary's, Oakfield",
+        "max": 30
+      },
+      {
+        "id": "godparents",
+        "label": "Godparents",
+        "example": "Emma and Chris",
+        "max": 34
+      },
+      {
+        "id": "outfit",
+        "label": "What they wore",
+        "example": "Grandma's christening gown",
+        "max": 34
+      },
+      {
+        "id": "moment",
+        "label": "The moment we will remember from the service",
+        "example": "When the water touched her head she did not cry at all. She looked up at the vicar, gave a huge gummy smile and the whole church laughed",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know one day? (This becomes your letter)",
+        "example": "On this day everyone who loves you gathered together and promised to look after you always. You are surrounded by love and faith, and you will never walk alone.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo from the day",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A photo in the church",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "A photo with the godparents",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "ava",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Ava",
+          "from": "Mummy and Daddy",
+          "date": "12 May 2026",
+          "church": "St Mary's, Oakfield",
+          "godparents": "Emma and Chris",
+          "outfit": "Grandma's christening gown",
+          "x_type": "baby"
+        },
+        "photos": {
+          "photo1": "/assets/samples/christening-magazine-0.jpg",
+          "photo2": "/assets/samples/christening-magazine-0b.jpg",
+          "photo3": "/assets/samples/christening-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "sky",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Leo",
+          "from": "His godparents",
+          "date": "7 September 2025",
+          "church": "Holy Trinity, Brookside",
+          "godparents": "Sam and Mia",
+          "outfit": "A tiny white suit",
+          "x_type": "napper"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-baby-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "mint",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Mia",
+          "from": "Grandma and Grandad",
+          "date": "21 April 2026",
+          "church": "St Peter's by the Sea",
+          "godparents": "Ava and Leo",
+          "outfit": "Lace dress and a bonnet",
+          "x_type": "baby"
+        },
+        "photos": {
+          "photo1": "/assets/samples/first-birthday-magazine-0.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The christening issue",
+      "edition": "{church}",
+      "lines": [
+        [
+          "A blessed day",
+          "Welcome, little one"
+        ],
+        [
+          "Godparents",
+          "{godparents}"
+        ],
+        [
+          "Wore",
+          "{outfit}"
+        ]
+      ],
+      "badge": [
+        "Blessed",
+        "{date}",
+        ""
+      ],
+      "quote": "Surrounded by love",
+      "credit": "Always"
+    }
+  },
+  {
+    "slug": "new-parents-magazine",
+    "title": "New Parents",
+    "searchTitle": "Personalised Magazine for New Parents",
+    "pinTitle": "New Parents Gift: a Personalised Magazine Celebrating Mum and Dad",
+    "occasion": "New parents",
+    "short": "A glossy magazine all about the new mum and dad: the sleepless nights, the first cuddles and the love.",
+    "description": "Everyone sends gifts for the baby. This one is for the parents. A glossy magazine starring the brand new mum and dad (or mums, or dads): how they met their baby, the 3am feeds, the first nappy disaster and how amazing they already are. A thoughtful gift from grandparents, friends or each other.",
+    "keywords": [
+      "gift for new parents",
+      "new mum and dad gift",
+      "new parent keepsake",
+      "push present",
+      "gift for new dad",
+      "baby shower gift for parents"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring the new arrival",
+      "A welcome letter to the world",
+      "Their first days by the numbers",
+      "A photo spread of tiny fingers and toes",
+      "The moment we first met",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter to the new parents",
+    "feature": [
+      "The moment they became parents",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Parents' names",
+        "example": "Emma and Chris",
+        "max": 24
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mummy and Daddy",
+        "max": 30
+      },
+      {
+        "id": "baby",
+        "label": "Baby's name",
+        "example": "Ava",
+        "max": 12
+      },
+      {
+        "id": "born",
+        "label": "Baby born on",
+        "example": "3 May 2026",
+        "max": 18
+      },
+      {
+        "id": "hours",
+        "label": "Hours of sleep, on a good night",
+        "example": "Four, if we are lucky",
+        "max": 30
+      },
+      {
+        "id": "surprise",
+        "label": "Biggest surprise about parenting",
+        "example": "How much laundry one tiny person makes",
+        "max": 44
+      },
+      {
+        "id": "moment",
+        "label": "The moment they became parents",
+        "example": "Chris held her for the first time, went completely silent, then whispered \"hello, I am your dad\" and cried into his sleeve",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "You two are already the most wonderful parents. Tired, yes, but wonderful. Ava is the luckiest little girl to have you, and we are so proud of you both.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the new parents",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A photo with the baby",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma-chris",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Emma and Chris",
+          "from": "Mum and Dad",
+          "baby": "Ava",
+          "born": "3 May 2026",
+          "hours": "Four, if we are lucky",
+          "surprise": "How much laundry one tiny person makes",
+          "x_type": "team"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-parents-magazine-0.jpg",
+          "photo2": "/assets/samples/new-parents-magazine-0b.jpg",
+          "photo3": "/assets/samples/new-parents-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "mia-sam",
+        "palette": "sky",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Mia and Sam",
+          "from": "The grandparents",
+          "baby": "Leo",
+          "born": "18 June 2026",
+          "hours": "What is sleep?",
+          "surprise": "How loud a tiny burp can be",
+          "x_type": "comedians"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-baby-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "ava-leo",
+        "palette": "mint",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Ava and Leo",
+          "from": "Their best friends",
+          "baby": "Sam",
+          "born": "1 August 2026",
+          "hours": "Three, in shifts",
+          "surprise": "That we can do it all one handed",
+          "x_type": "homebodies"
+        },
+        "photos": {
+          "photo1": "/assets/samples/pregnancy-magazine-0.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The new parents issue",
+      "edition": "Parents since {born}",
+      "lines": [
+        [
+          "Exclusive",
+          "Meet the new parents"
+        ],
+        [
+          "Starring",
+          "Baby {baby}"
+        ],
+        [
+          "Sleep report",
+          "{hours}"
+        ]
+      ],
+      "badge": [
+        "New",
+        "mum and",
+        "dad"
+      ],
+      "quote": "{surprise}",
+      "credit": "Biggest surprise"
+    }
+  },
+  {
+    "slug": "tiny-steps-magazine",
+    "title": "Tiny Steps, Big Adventures",
+    "searchTitle": "Personalised Toddler Magazine",
+    "pinTitle": "Tiny Steps, Big Adventures: a Personalised Magazine for Toddlers",
+    "occasion": "Toddler",
+    "short": "For the toddler on the move: first steps, first words, first adventures and all the big little personality.",
+    "description": "One minute they were crawling, the next they are running off towards the ducks. Tiny Steps, Big Adventures is a glossy magazine for toddlers aged one to three: their first steps, favourite words, best adventures and the huge personality packed into a very small person. Perfect for a second birthday.",
+    "keywords": [
+      "toddler gift",
+      "second birthday gift",
+      "gift for 2 year old",
+      "toddler keepsake",
+      "first steps keepsake",
+      "personalised toddler book"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring the new arrival",
+      "A welcome letter to the world",
+      "Their first days by the numbers",
+      "A photo spread of tiny fingers and toes",
+      "The moment we first met",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter for our little adventurer",
+    "feature": [
+      "The adventure we will never forget",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Toddler's name",
+        "example": "Leo",
+        "max": 12
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mummy and Daddy",
+        "max": 30
+      },
+      {
+        "id": "age",
+        "label": "Age",
+        "example": "2",
+        "max": 2
+      },
+      {
+        "id": "word",
+        "label": "Favourite word right now",
+        "example": "\"Again!\"",
+        "max": 24
+      },
+      {
+        "id": "adventure",
+        "label": "Favourite adventure",
+        "example": "Feeding the ducks",
+        "max": 30
+      },
+      {
+        "id": "snack",
+        "label": "Favourite snack",
+        "example": "Raisins, one at a time",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "The adventure we will never forget",
+        "example": "He took his first steps at the park, straight towards a duck, fell on his bottom, laughed and got straight back up again",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "Every day with you is an adventure. You run, you climb, you laugh at everything and you make us see the world new again. Keep exploring, little one. We will always be right behind you.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of your toddler",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "Out on an adventure",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "leo",
+        "palette": "sky",
+        "portrait": {
+          "skin": 1,
+          "hair": "curly",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Leo",
+          "age": "2",
+          "from": "Mummy and Daddy",
+          "word": "\"Again!\"",
+          "adventure": "Feeding the ducks",
+          "snack": "Raisins, one at a time",
+          "x_type": "menace"
+        },
+        "photos": {
+          "photo1": "/assets/samples/tiny-steps-magazine-0.jpg",
+          "photo2": "/assets/samples/tiny-steps-magazine-0b.jpg",
+          "photo3": "/assets/samples/tiny-steps-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#b5552b"
+        },
+        "values": {
+          "name": "Ava",
+          "age": "1",
+          "from": "Grandma",
+          "word": "\"Dog!\"",
+          "adventure": "Splashing in puddles",
+          "snack": "Banana, always banana",
+          "x_type": "foodie"
+        },
+        "photos": {
+          "photo1": "/assets/samples/first-birthday-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "mint",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Mia",
+          "age": "3",
+          "from": "Mum and Dad",
+          "word": "\"Why?\"",
+          "adventure": "The big slide",
+          "snack": "Cheese, any cheese",
+          "x_type": "diva"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-baby-magazine-0.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The adventure issue",
+      "edition": "Age {age} and on the move",
+      "lines": [
+        [
+          "Exclusive",
+          "Small legs, big adventures"
+        ],
+        [
+          "Favourite word",
+          "{word}"
+        ],
+        [
+          "Best adventure",
+          "{adventure}"
+        ]
+      ],
+      "badge": [
+        "Age",
+        "{age}",
+        "and fast"
+      ],
+      "quote": "{word}",
+      "credit": "Their favourite word"
+    }
   }
 ]

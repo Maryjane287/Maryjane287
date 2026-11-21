@@ -1,0 +1,369 @@
+{
+  "theme": "garden",
+  "fields": [
+    {
+      "id": "s_name",
+      "label": "How they took their first steps",
+      "example": "Let go of the sofa, wobbled, then ran for the cat",
+      "max": 80,
+      "chapter": "First steps"
+    },
+    {
+      "id": "s_home",
+      "label": "Their funniest toddler moment",
+      "example": "Said \"bye bye\" to the bath water every night",
+      "max": 80,
+      "chapter": "Big personality"
+    },
+    {
+      "id": "s_dream",
+      "label": "A dream for their next adventure",
+      "example": "That you never stop being this curious",
+      "max": 80,
+      "chapter": "What we dream for you"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To always chase you round the garden",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "age": "Age",
+    "word": "Favourite word",
+    "adventure": "Favourite adventure",
+    "snack": "Favourite snack"
+  },
+  "story": {
+    "title": "The Adventures of {first}",
+    "hand": "Tiny steps, big adventures, {who}.",
+    "kicker": "On the move",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Adventure kit",
+    "kicker": "From {from}, with love",
+    "title": "Ten things every toddler adventurer needs",
+    "items": [
+      "Wellies for puddles",
+      "A snack pot",
+      "A favourite teddy",
+      "A bucket and spade",
+      "Bread for the ducks",
+      "Wet wipes, lots",
+      "A big slide",
+      "A grown up to chase",
+      "A sticky hand to hold",
+      "Bubbles",
+      "A pushchair for the way home",
+      "Cuddles after"
+    ]
+  },
+  "timeline": {
+    "kicker": "Songs for little ones",
+    "title": "The Lullabies Sung Before You",
+    "items": [
+      [
+        "1760s",
+        "Mother Goose arrives",
+        "One of the first books of nursery rhymes, Mother Goose's Melody, was printed in London for little ones."
+      ],
+      [
+        "1806",
+        "Twinkle, twinkle",
+        "Jane Taylor published a poem called The Star. We still sing it to babies all over the world."
+      ],
+      [
+        "1830",
+        "Mary had a little lamb",
+        "Sarah Josepha Hale wrote the rhyme about a lamb who followed Mary to school one day."
+      ],
+      [
+        "1868",
+        "The famous lullaby",
+        "Johannes Brahms published his Wiegenlied, the gentle cradle song still hummed at bedtime."
+      ]
+    ],
+    "today": [
+      "{born}",
+      "{first} arrives",
+      "A brand new song begins. And we will sing it to you for the rest of our lives."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Babies",
+    "items": [
+      [
+        "Every child begins the world again.",
+        "Henry David Thoreau, Walden, 1854"
+      ],
+      [
+        "A babe in a house is a well-spring of pleasure.",
+        "Martin Farquhar Tupper, 1838"
+      ],
+      [
+        "Every child comes with the message that God is not yet discouraged of man.",
+        "Rabindranath Tagore, Stray Birds, 1916"
+      ],
+      [
+        "It takes a village to raise a child.",
+        "An African proverb"
+      ]
+    ],
+    "hand": "Our village is ready, {first}. And it already adores you."
+  },
+  "facts": {
+    "kicker": "Amazing from day one",
+    "title": "The Clever Science of Being New",
+    "items": [
+      [
+        "eye",
+        "Faces first",
+        "From the very start, newborns love looking at faces more than almost anything else."
+      ],
+      [
+        "heart",
+        "Voices you knew",
+        "Newborns already know the voices they heard most often before they were born."
+      ],
+      [
+        "camera",
+        "Just close enough",
+        "New babies see best at about the distance from a cuddling arm to a loving face."
+      ],
+      [
+        "smile",
+        "The first real smile",
+        "Real smiles usually arrive at around six to eight weeks. Worth every sleepy night."
+      ],
+      [
+        "spark",
+        "Little copycats",
+        "Scientists have seen very young babies copy faces, like poking a tongue out back at a grown up."
+      ],
+      [
+        "globe",
+        "Every language",
+        "Tiny babies can hear the sounds of every language, then tune in to their family's own."
+      ]
+    ],
+    "hand": "You were born clever, {first}. You were also born loved."
+  },
+  "world": {
+    "kicker": "A thank you from the universe",
+    "title": "Why Every Day Is an Adventure With {who}",
+    "lead": "Because {who} is on the move, the world got:",
+    "items": [
+      "Very well inspected puddles.",
+      "Ducks who are never hungry.",
+      "A laugh that fills the park.",
+      "\"Again!\" said a thousand times.",
+      "Grown ups who see the world new.",
+      "Tiny wellies by the door.",
+      "And the one and only {who}."
+    ],
+    "close": "Keep exploring, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises to our little adventurer",
+    "items": [
+      "To go to the park, even in the rain.",
+      "To read it again. And again.",
+      "To let you climb, carefully.",
+      "To pick you up when you fall.",
+      "To love you to the moon and back."
+    ],
+    "hand": "All our love, {from}"
+  },
+  "awards": [
+    [
+      "Newest family member",
+      "Instantly famous"
+    ],
+    [
+      "Best yawn of the year",
+      "By a landslide"
+    ],
+    [
+      "Champion cuddler",
+      "Unbeaten"
+    ],
+    [
+      "Most loved person",
+      "Unanimous"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One bedtime story",
+      "Any book, any voice"
+    ],
+    [
+      "A lifetime of cuddles",
+      "Never expires"
+    ],
+    [
+      "One song at bedtime",
+      "Lullaby of your choice"
+    ],
+    [
+      "A big family day out",
+      "When you are a bit bigger"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {first}",
+  "cert": "The Most Wonderful Arrival",
+  "certLine": "is officially, wonderfully and forever",
+  "perfume": "Top notes of warm milk and fresh laundry. A heart of brand new wonder.",
+  "news": {
+    "edition": "Arrival edition",
+    "headline": "{first} arrives, family melts",
+    "lead": "Sources close to the family confirm that {first}, weighing in at {weight}, has taken charge of the whole household within hours.",
+    "weather": "Weather: soft and sleepy, with cuddles all day"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to a whole life of adventures",
+    "nationality": "Loved, everywhere",
+    "job": "Chief cuddle receiver",
+    "stamps": [
+      "Our arms",
+      "First night home",
+      "Everywhere next"
+    ]
+  },
+  "movie": {
+    "sub": "A small person, a very big adventure",
+    "soon": "The sequel: the big school years",
+    "reviews": [
+      [
+        "Tiny, fast and hilarious",
+        "The Daily Hug"
+      ],
+      [
+        "Our favourite adventurer",
+        "{from}"
+      ],
+      [
+        "Again! Again!",
+        "The ducks"
+      ]
+    ]
+  },
+  "quizTitle": "How much do you know about babies?",
+  "quiz": [
+    [
+      "Around what age do most toddlers take their first steps?",
+      [
+        "About twelve months",
+        "About four months",
+        "About three years"
+      ],
+      0
+    ],
+    [
+      "Roughly how many words might a two year old say?",
+      [
+        "About fifty or more",
+        "About two",
+        "About ten thousand"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "BABY",
+    "CUDDLE",
+    "LULLABY",
+    "SMILE",
+    "TINY",
+    "WELCOME"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Toddlers do not walk anywhere. They run, climb, wobble and then sit down suddenly in a puddle.",
+      "This magazine celebrates all of it: the tiny steps and the very big personality.",
+      "{who}, this is your adventure.",
+      "From everything {from} told us, it is a brilliant one."
+    ],
+    "wish": "Keep exploring, {who}."
+  },
+  "concepts": "baby",
+  "own": {
+    "dayTitle": "A Day of Big Adventures",
+    "day": [
+      [
+        "6:30",
+        "Up and running",
+        "Literally running. Straight to the window."
+      ],
+      [
+        "9:00",
+        "The park",
+        "Ducks fed. Slide conquered. Puddle found."
+      ],
+      [
+        "12:30",
+        "Lunch",
+        "Some eaten, some worn, some given to the dog."
+      ],
+      [
+        "15:00",
+        "Adventures",
+        "Unpacks a cupboard. Repacks it. Very proud."
+      ]
+    ],
+    "night": [
+      "19:00",
+      "Bedtime",
+      "Bath, story, story again, asleep mid \"again\"."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "Wherever the puddles are"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Raisins, banana and whatever you are eating"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Again!\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Going from zero to running in one second"
+      ],
+      [
+        "clock",
+        "Most active",
+        "All day, then suddenly asleep"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Childproof everything. Bring snacks. Say yes to the park"
+      ]
+    ],
+    "little": [
+      "You wave at every bus.",
+      "You say \"hello\" to the moon.",
+      "You share your raisins, one at a time.",
+      "You make every day an adventure."
+    ],
+    "letters": "Little Things Our Toddler Does"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

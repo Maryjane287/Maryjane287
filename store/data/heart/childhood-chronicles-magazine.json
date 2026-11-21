@@ -1,0 +1,370 @@
+{
+  "theme": "dawn",
+  "fields": [
+    {
+      "id": "s_laugh",
+      "label": "Something they did as a toddler that we still laugh about",
+      "example": "Hid every remote control in the washing machine",
+      "max": 80,
+      "chapter": "Then and now"
+    },
+    {
+      "id": "s_kind",
+      "label": "A time they made us really proud",
+      "example": "Gave his birthday money to the animal shelter",
+      "max": 80,
+      "chapter": "A kind heart, always"
+    },
+    {
+      "id": "s_says",
+      "label": "Something they say now",
+      "example": "\"I will do it in a minute\"",
+      "max": 80,
+      "chapter": "In their own words"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To keep writing down your story",
+      "max": 60
+    }
+  ],
+  "labels": {
+    "age": "Age now",
+    "toy": "Toy that went everywhere",
+    "saying": "Famous saying",
+    "phase": "Most famous phase",
+    "now": "Loves now"
+  },
+  "story": {
+    "title": "The Chronicles of {first}",
+    "hand": "Every chapter of you has been our favourite, {who}.",
+    "kicker": "The story so far",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "The archive",
+    "kicker": "From {from}, with love",
+    "title": "Ten things from the childhood archive",
+    "items": [
+      "The first scribble on the wall",
+      "The first lost tooth",
+      "The comfort blanket",
+      "The nativity costume",
+      "The swimming badge",
+      "The wobbly bike",
+      "The handmade cards",
+      "The dinosaur phase",
+      "The first sleepover",
+      "The school photos",
+      "The height marks on the door",
+      "The bedtime songs"
+    ]
+  },
+  "timeline": {
+    "kicker": "Childhood through the ages",
+    "title": "A Short History of Fun",
+    "items": [
+      [
+        "1837",
+        "A garden for children",
+        "Friedrich Froebel opened a school where little ones learned through play. It became the first kindergarten."
+      ],
+      [
+        "1902",
+        "Hello, teddy bear",
+        "The first teddy bears were made, named after a president called Teddy who refused to shoot a captured bear."
+      ],
+      [
+        "1958",
+        "Click, the brick",
+        "The LEGO brick we know today was patented, and children have been building towers ever since."
+      ],
+      [
+        "1969",
+        "A street full of friends",
+        "Sesame Street first came on television, teaching letters, numbers and kindness with puppets."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who}",
+      "Age {age}, expert in {expert}, and the best thing that ever happened to us."
+    ]
+  },
+  "letters": {
+    "kicker": "Big words for little people",
+    "title": "Clever Things People Have Said",
+    "items": [
+      [
+        "Why, sometimes I've believed as many as six impossible things before breakfast.",
+        "Lewis Carroll, Through the Looking-Glass, 1871"
+      ],
+      [
+        "Just living is not enough, said the butterfly. One must have sunshine, freedom and a little flower.",
+        "Hans Christian Andersen"
+      ],
+      [
+        "Imagination is more important than knowledge.",
+        "Albert Einstein, 1929"
+      ],
+      [
+        "All children, except one, grow up.",
+        "J. M. Barrie, Peter Pan"
+      ]
+    ],
+    "hand": "Grow as slowly as you like, {who}. We are enjoying every minute."
+  },
+  "facts": {
+    "kicker": "Amazing but true",
+    "title": "Fun Facts to Amaze Your Friends",
+    "items": [
+      [
+        "baby",
+        "Bonus bones",
+        "You were born with about 300 bones. Some join together as you grow, so grown ups have 206."
+      ],
+      [
+        "heart",
+        "A fist full of love",
+        "Your heart is about the same size as your fist, and it grows bigger as you do."
+      ],
+      [
+        "spark",
+        "Super brain",
+        "Your brain grows super fast when you are little. By age six it is nearly grown up sized."
+      ],
+      [
+        "paw",
+        "Three hearts",
+        "An octopus has three hearts and blue blood. Imagine how many hugs it could give!"
+      ],
+      [
+        "moon",
+        "Footprints forever",
+        "There is no wind on the Moon, so the astronauts' footprints could stay there for a very long time."
+      ],
+      [
+        "clock",
+        "Honey never goes off",
+        "Honey found in ancient Egyptian tombs, thousands of years old, was still good to eat."
+      ]
+    ],
+    "hand": "Science is amazing. But the most amazing thing of all is you, {who}."
+  },
+  "world": {
+    "kicker": "A thank you from the universe",
+    "title": "Why the World Is Better With {who}",
+    "lead": "Because {who} grew up here, the world got:",
+    "items": [
+      "A thousand funny sayings.",
+      "Drawings on every fridge.",
+      "A brilliant, kind person.",
+      "Stories we tell at every party.",
+      "Height marks on the kitchen door.",
+      "A future we cannot wait to see.",
+      "And the one and only {who}."
+    ],
+    "close": "The best is yet to come, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises for the next chapter",
+    "items": [
+      "To keep every drawing.",
+      "To embarrass you with these stories, lovingly.",
+      "To always want to hear about your day.",
+      "To cheer for every new chapter.",
+      "To love you at every age."
+    ],
+    "hand": "Always, {from}"
+  },
+  "awards": [
+    [
+      "Best giggle in the house",
+      "Voted by everyone"
+    ],
+    [
+      "Champion question asker",
+      "Why? Why? Why?"
+    ],
+    [
+      "Bravest explorer",
+      "Even in the dark"
+    ],
+    [
+      "Hug of the year",
+      "The squeeziest ever"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Your favourite dinner",
+      "You choose the menu"
+    ],
+    [
+      "Staying up late",
+      "Fifteen whole minutes"
+    ],
+    [
+      "A trip to the park",
+      "Swings first"
+    ],
+    [
+      "One giant cuddle",
+      "Use it again and again"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "Superstar of the Year",
+  "certLine": "is officially, totally and brilliantly",
+  "perfume": "Top notes of bubblegum, muddy puddles and sunshine. A heart of pure sprinkles.",
+  "news": {
+    "edition": "Superstar edition",
+    "headline": "{who} is amazing again",
+    "lead": "Reports are flooding in that {who}, aged {age}, has once again been brilliant, hilarious and the world's leading expert in {expert}.",
+    "weather": "Weather: sunny, with a 100% chance of giggles"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to adventure",
+    "nationality": "Citizen of Fun",
+    "job": "Professional giggler",
+    "stamps": [
+      "The playground",
+      "Dreamland",
+      "The Moon"
+    ]
+  },
+  "movie": {
+    "sub": "A coming of age story",
+    "soon": "The sequel: the teenage years",
+    "reviews": [
+      [
+        "Funny, kind and full of surprises",
+        "The Daily Hug"
+      ],
+      [
+        "The best story we know",
+        "{from}"
+      ],
+      [
+        "We laughed, we cried",
+        "The grandparents"
+      ]
+    ]
+  },
+  "quizTitle": "The super quiz",
+  "quiz": [
+    [
+      "At around what age do children usually lose their first tooth?",
+      [
+        "About six",
+        "About two",
+        "About ten"
+      ],
+      0
+    ],
+    [
+      "How many hours a night is recommended for a ten year old?",
+      [
+        "Nine to twelve",
+        "Five to six",
+        "Fifteen"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CANDY",
+    "SMILE",
+    "BRAVE",
+    "DREAM",
+    "PLAY",
+    "STAR"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Childhood goes by in a flash. The sayings get forgotten, the photos get buried in a phone.",
+      "This magazine keeps the whole story together, chapter by chapter.",
+      "{who}, this is your story so far.",
+      "From everything {from} told us, it is a wonderful one."
+    ],
+    "wish": "The best is yet to come, {who}."
+  },
+  "concepts": "kid",
+  "own": {
+    "dayTitle": "A Day in the Life, Then and Now",
+    "day": [
+      [
+        "Age 1",
+        "The baby years",
+        "Never slept, always smiled."
+      ],
+      [
+        "Age 3",
+        "The toddler years",
+        "Said no to everything. Hugged everyone."
+      ],
+      [
+        "Age 6",
+        "The school years",
+        "Lost teeth, found friends, learned to read."
+      ],
+      [
+        "Now",
+        "Today",
+        "Brilliant, funny and growing so fast."
+      ]
+    ],
+    "night": [
+      "Next",
+      "The next chapter",
+      "Still being written. We cannot wait."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "Wherever the snacks are"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Pasta, then more pasta"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Can I just have five more minutes?\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Growing an inch every time we blink"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Always, except before school"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Keep every drawing. Write down the funny things. Hug often"
+      ]
+    ],
+    "little": [
+      "You still need one more hug at bedtime.",
+      "You make up songs about everything.",
+      "You stick up for your friends.",
+      "You get funnier every single year."
+    ],
+    "letters": "Little Things You Have Always Done"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

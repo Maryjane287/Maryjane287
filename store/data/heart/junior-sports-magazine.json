@@ -1,0 +1,370 @@
+{
+  "theme": "ocean",
+  "fields": [
+    {
+      "id": "s_laugh",
+      "label": "Their pre match ritual",
+      "example": "Lucky socks, a banana and a very serious face",
+      "max": 80,
+      "chapter": "Before the big match"
+    },
+    {
+      "id": "s_kind",
+      "label": "A time they were a great teammate",
+      "example": "Passed instead of shooting so his friend could score",
+      "max": 80,
+      "chapter": "A true team player"
+    },
+    {
+      "id": "s_says",
+      "label": "Something they always say about their sport",
+      "example": "\"I was not tired, I was just resting my legs\"",
+      "max": 80,
+      "chapter": "Words of a champion"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To be on the touchline, every single game",
+      "max": 60
+    }
+  ],
+  "labels": {
+    "age": "Age",
+    "sport": "Sport",
+    "team": "Team",
+    "hero": "Sporting hero",
+    "skill": "Signature move"
+  },
+  "story": {
+    "title": "{first}: The Champion Story",
+    "hand": "Win or lose, always our champion, {who}.",
+    "kicker": "Match report",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Champion habits",
+    "kicker": "From {from}, with love",
+    "title": "Ten things that make a champion",
+    "items": [
+      "Lucky socks",
+      "Early mornings",
+      "Muddy kit",
+      "Practising in the garden",
+      "Listening to the coach",
+      "Helping teammates up",
+      "Never giving up",
+      "Celebrating every goal",
+      "A big post match snack",
+      "Shaking hands after",
+      "A loud cheer squad",
+      "Loving the game"
+    ]
+  },
+  "timeline": {
+    "kicker": "Childhood through the ages",
+    "title": "A Short History of Fun",
+    "items": [
+      [
+        "1837",
+        "A garden for children",
+        "Friedrich Froebel opened a school where little ones learned through play. It became the first kindergarten."
+      ],
+      [
+        "1902",
+        "Hello, teddy bear",
+        "The first teddy bears were made, named after a president called Teddy who refused to shoot a captured bear."
+      ],
+      [
+        "1958",
+        "Click, the brick",
+        "The LEGO brick we know today was patented, and children have been building towers ever since."
+      ],
+      [
+        "1969",
+        "A street full of friends",
+        "Sesame Street first came on television, teaching letters, numbers and kindness with puppets."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who}",
+      "Age {age}, expert in {expert}, and the best thing that ever happened to us."
+    ]
+  },
+  "letters": {
+    "kicker": "Big words for little people",
+    "title": "Clever Things People Have Said",
+    "items": [
+      [
+        "Why, sometimes I've believed as many as six impossible things before breakfast.",
+        "Lewis Carroll, Through the Looking-Glass, 1871"
+      ],
+      [
+        "Just living is not enough, said the butterfly. One must have sunshine, freedom and a little flower.",
+        "Hans Christian Andersen"
+      ],
+      [
+        "Imagination is more important than knowledge.",
+        "Albert Einstein, 1929"
+      ],
+      [
+        "All children, except one, grow up.",
+        "J. M. Barrie, Peter Pan"
+      ]
+    ],
+    "hand": "Grow as slowly as you like, {who}. We are enjoying every minute."
+  },
+  "facts": {
+    "kicker": "Amazing but true",
+    "title": "Fun Facts to Amaze Your Friends",
+    "items": [
+      [
+        "baby",
+        "Bonus bones",
+        "You were born with about 300 bones. Some join together as you grow, so grown ups have 206."
+      ],
+      [
+        "heart",
+        "A fist full of love",
+        "Your heart is about the same size as your fist, and it grows bigger as you do."
+      ],
+      [
+        "spark",
+        "Super brain",
+        "Your brain grows super fast when you are little. By age six it is nearly grown up sized."
+      ],
+      [
+        "paw",
+        "Three hearts",
+        "An octopus has three hearts and blue blood. Imagine how many hugs it could give!"
+      ],
+      [
+        "moon",
+        "Footprints forever",
+        "There is no wind on the Moon, so the astronauts' footprints could stay there for a very long time."
+      ],
+      [
+        "clock",
+        "Honey never goes off",
+        "Honey found in ancient Egyptian tombs, thousands of years old, was still good to eat."
+      ]
+    ],
+    "hand": "Science is amazing. But the most amazing thing of all is you, {who}."
+  },
+  "world": {
+    "kicker": "A note from the universe",
+    "title": "Why the Team Is Lucky to Have {who}",
+    "lead": "Because {who} plays, the team got:",
+    "items": [
+      "A player who never gives up.",
+      "A teammate who passes the ball.",
+      "Goal celebrations worth watching.",
+      "Muddy kit, every single week.",
+      "A future champion.",
+      "The loudest cheer squad on the touchline.",
+      "And the one and only {who}."
+    ],
+    "close": "Go on, {who}!"
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "Pinky promise",
+    "title": "Our promises to you",
+    "items": [
+      "To be on the touchline, every game.",
+      "To wash the kit. Eventually.",
+      "To cheer the loudest, win or lose.",
+      "To practise with you in the garden.",
+      "To be proud of you, always."
+    ],
+    "hand": "Your biggest fans, {from}"
+  },
+  "awards": [
+    [
+      "Best giggle in the house",
+      "Voted by everyone"
+    ],
+    [
+      "Champion question asker",
+      "Why? Why? Why?"
+    ],
+    [
+      "Bravest explorer",
+      "Even in the dark"
+    ],
+    [
+      "Hug of the year",
+      "The squeeziest ever"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Your favourite dinner",
+      "You choose the menu"
+    ],
+    [
+      "Staying up late",
+      "Fifteen whole minutes"
+    ],
+    [
+      "A trip to the park",
+      "Swings first"
+    ],
+    [
+      "One giant cuddle",
+      "Use it again and again"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "Superstar of the Year",
+  "certLine": "is officially, totally and brilliantly",
+  "perfume": "Top notes of bubblegum, muddy puddles and sunshine. A heart of pure sprinkles.",
+  "news": {
+    "edition": "Superstar edition",
+    "headline": "{who} is amazing again",
+    "lead": "Reports are flooding in that {who}, aged {age}, has once again been brilliant, hilarious and the world's leading expert in {expert}.",
+    "weather": "Weather: sunny, with a 100% chance of giggles"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to adventure",
+    "nationality": "Citizen of Fun",
+    "job": "Professional giggler",
+    "stamps": [
+      "The playground",
+      "Dreamland",
+      "The Moon"
+    ]
+  },
+  "movie": {
+    "sub": "A sports drama",
+    "soon": "The sequel: the cup final",
+    "reviews": [
+      [
+        "Fast, brave and full of heart",
+        "The Daily Hug"
+      ],
+      [
+        "Our champion, every time",
+        "{from}"
+      ],
+      [
+        "A star of the future",
+        "The coach"
+      ]
+    ]
+  },
+  "quizTitle": "The super quiz",
+  "quiz": [
+    [
+      "How many players does a football team have on the pitch?",
+      [
+        "Eleven",
+        "Nine",
+        "Fifteen"
+      ],
+      0
+    ],
+    [
+      "Which city hosted the 2024 Summer Olympics?",
+      [
+        "Paris",
+        "London",
+        "Tokyo"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CANDY",
+    "SMILE",
+    "BRAVE",
+    "DREAM",
+    "PLAY",
+    "STAR"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Every Saturday morning, rain or shine, there is a child somewhere giving it everything. This magazine is for them.",
+      "Their sport, their best moments and the champion they are becoming.",
+      "{who}, this is your match report.",
+      "From everything {from} told us, you are a true champion."
+    ],
+    "wish": "Go on, {who}!"
+  },
+  "concepts": "kid",
+  "own": {
+    "dayTitle": "Match Day With {first}",
+    "day": [
+      [
+        "7:30",
+        "Kit on",
+        "Lucky socks first. Always."
+      ],
+      [
+        "9:00",
+        "Warm up",
+        "Very serious stretching. Some of it real."
+      ],
+      [
+        "10:00",
+        "Kick off",
+        "Gives it absolutely everything for an hour."
+      ],
+      [
+        "12:00",
+        "Post match",
+        "Replays every moment in the car, twice."
+      ]
+    ],
+    "night": [
+      "19:30",
+      "Bedtime",
+      "Asleep in the kit. Dreaming of the cup."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The pitch, the pool or the garden goal"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Bananas, orange slices and a big roast after"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Did you see my goal?!\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Never, ever giving up"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Weekend mornings, in any weather"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Wash the kit. Cheer loudly. Win or lose, a hug"
+      ]
+    ],
+    "little": [
+      "You always shake hands with the other team.",
+      "You help your teammates up when they fall.",
+      "You practise in the garden until it is dark.",
+      "You never give up, even when it is hard."
+    ],
+    "letters": "Little Things Our Champion Does"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

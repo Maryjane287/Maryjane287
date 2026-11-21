@@ -1,0 +1,370 @@
+{
+  "theme": "candy",
+  "fields": [
+    {
+      "id": "s_laugh",
+      "label": "What makes her laugh the most",
+      "example": "The royal dog wearing a crown",
+      "max": 80,
+      "chapter": "Royal giggles"
+    },
+    {
+      "id": "s_kind",
+      "label": "A time she was really kind",
+      "example": "Gave her crown to her friend who was sad",
+      "max": 80,
+      "chapter": "A truly royal heart"
+    },
+    {
+      "id": "s_says",
+      "label": "Something she always says",
+      "example": "\"I am a princess AND a firefighter\"",
+      "max": 80,
+      "chapter": "Royal announcements"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to her",
+      "example": "To always treat you like royalty",
+      "max": 60
+    }
+  ],
+  "labels": {
+    "age": "Royal age",
+    "kingdom": "Her kingdom",
+    "gown": "Royal outfit",
+    "rule": "Royal rule",
+    "pet": "Royal pet"
+  },
+  "story": {
+    "title": "Princess {first} of {kingdom}",
+    "hand": "Kind, brave and royal to the core, {who}.",
+    "kicker": "Royal news",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Royal treasures",
+    "kicker": "From {from}, with love",
+    "title": "Ten things every princess needs",
+    "items": [
+      "A sparkly crown",
+      "A twirly dress",
+      "A royal pet",
+      "A kind heart",
+      "Wellies for puddles",
+      "A magic wand",
+      "A brave voice",
+      "A tea party set",
+      "A best friend",
+      "A castle made of cushions",
+      "Bedtime stories",
+      "Lots of love"
+    ]
+  },
+  "timeline": {
+    "kicker": "Childhood through the ages",
+    "title": "A Short History of Fun",
+    "items": [
+      [
+        "1837",
+        "A garden for children",
+        "Friedrich Froebel opened a school where little ones learned through play. It became the first kindergarten."
+      ],
+      [
+        "1902",
+        "Hello, teddy bear",
+        "The first teddy bears were made, named after a president called Teddy who refused to shoot a captured bear."
+      ],
+      [
+        "1958",
+        "Click, the brick",
+        "The LEGO brick we know today was patented, and children have been building towers ever since."
+      ],
+      [
+        "1969",
+        "A street full of friends",
+        "Sesame Street first came on television, teaching letters, numbers and kindness with puppets."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who}",
+      "Age {age}, expert in {expert}, and the best thing that ever happened to us."
+    ]
+  },
+  "letters": {
+    "kicker": "Big words for little people",
+    "title": "Clever Things People Have Said",
+    "items": [
+      [
+        "Why, sometimes I've believed as many as six impossible things before breakfast.",
+        "Lewis Carroll, Through the Looking-Glass, 1871"
+      ],
+      [
+        "Just living is not enough, said the butterfly. One must have sunshine, freedom and a little flower.",
+        "Hans Christian Andersen"
+      ],
+      [
+        "Imagination is more important than knowledge.",
+        "Albert Einstein, 1929"
+      ],
+      [
+        "All children, except one, grow up.",
+        "J. M. Barrie, Peter Pan"
+      ]
+    ],
+    "hand": "Grow as slowly as you like, {who}. We are enjoying every minute."
+  },
+  "facts": {
+    "kicker": "Amazing but true",
+    "title": "Fun Facts to Amaze Your Friends",
+    "items": [
+      [
+        "baby",
+        "Bonus bones",
+        "You were born with about 300 bones. Some join together as you grow, so grown ups have 206."
+      ],
+      [
+        "heart",
+        "A fist full of love",
+        "Your heart is about the same size as your fist, and it grows bigger as you do."
+      ],
+      [
+        "spark",
+        "Super brain",
+        "Your brain grows super fast when you are little. By age six it is nearly grown up sized."
+      ],
+      [
+        "paw",
+        "Three hearts",
+        "An octopus has three hearts and blue blood. Imagine how many hugs it could give!"
+      ],
+      [
+        "moon",
+        "Footprints forever",
+        "There is no wind on the Moon, so the astronauts' footprints could stay there for a very long time."
+      ],
+      [
+        "clock",
+        "Honey never goes off",
+        "Honey found in ancient Egyptian tombs, thousands of years old, was still good to eat."
+      ]
+    ],
+    "hand": "Science is amazing. But the most amazing thing of all is you, {who}."
+  },
+  "world": {
+    "kicker": "A royal proclamation",
+    "title": "Why the Kingdom Is Better With {who}",
+    "lead": "Because {who} rules {kingdom}, the kingdom got:",
+    "items": [
+      "The kindest princess in the land.",
+      "Tea parties every afternoon.",
+      "Royal dancing in the kitchen.",
+      "A princess who is also brave.",
+      "Hugs as royal decrees.",
+      "A crown worn to the supermarket.",
+      "And the one and only {who}."
+    ],
+    "close": "Long live Princess {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "Royal promises",
+    "title": "Our promises to our princess",
+    "items": [
+      "To always come to your tea parties.",
+      "To read you a story every night.",
+      "To let you be a princess and a pirate.",
+      "To tell you how brave you are.",
+      "To love you like a queen."
+    ],
+    "hand": "Your loyal subjects, {from}"
+  },
+  "awards": [
+    [
+      "Best giggle in the house",
+      "Voted by everyone"
+    ],
+    [
+      "Champion question asker",
+      "Why? Why? Why?"
+    ],
+    [
+      "Bravest explorer",
+      "Even in the dark"
+    ],
+    [
+      "Hug of the year",
+      "The squeeziest ever"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Your favourite dinner",
+      "You choose the menu"
+    ],
+    [
+      "Staying up late",
+      "Fifteen whole minutes"
+    ],
+    [
+      "A trip to the park",
+      "Swings first"
+    ],
+    [
+      "One giant cuddle",
+      "Use it again and again"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "Superstar of the Year",
+  "certLine": "is officially, totally and brilliantly",
+  "perfume": "Top notes of bubblegum, muddy puddles and sunshine. A heart of pure sprinkles.",
+  "news": {
+    "edition": "Superstar edition",
+    "headline": "{who} is amazing again",
+    "lead": "Reports are flooding in that {who}, aged {age}, has once again been brilliant, hilarious and the world's leading expert in {expert}.",
+    "weather": "Weather: sunny, with a 100% chance of giggles"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to adventure",
+    "nationality": "Citizen of Fun",
+    "job": "Professional giggler",
+    "stamps": [
+      "The playground",
+      "Dreamland",
+      "The Moon"
+    ]
+  },
+  "movie": {
+    "sub": "A royal fairy tale",
+    "soon": "The sequel: the royal ball",
+    "reviews": [
+      [
+        "Sparkly, kind and brave",
+        "The Daily Hug"
+      ],
+      [
+        "The kindest princess ever",
+        "{from}"
+      ],
+      [
+        "Happily ever after",
+        "The royal pet"
+      ]
+    ]
+  },
+  "quizTitle": "The super quiz",
+  "quiz": [
+    [
+      "What is a group of unicorns called, according to legend?",
+      [
+        "A blessing",
+        "A herd of sparkles",
+        "A rainbow"
+      ],
+      0
+    ],
+    [
+      "What do we call the home of a king or queen?",
+      [
+        "A palace",
+        "A cottage",
+        "A tower"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CANDY",
+    "SMILE",
+    "BRAVE",
+    "DREAM",
+    "PLAY",
+    "STAR"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Some girls wear their crown everywhere: to nursery, to the shops, to bed. We love that.",
+      "This magazine is a royal celebration of her, and the kind, brave heart under the crown.",
+      "{who}, this is your royal edition.",
+      "From everything {from} told us, you are a princess through and through."
+    ],
+    "wish": "Long live Princess {who}."
+  },
+  "concepts": "kid",
+  "own": {
+    "dayTitle": "A Royal Day With Princess {first}",
+    "day": [
+      [
+        "7:00",
+        "Royal wake up",
+        "Crown on before slippers."
+      ],
+      [
+        "10:00",
+        "Royal duties",
+        "Inspecting the garden. Knighting the cat."
+      ],
+      [
+        "13:00",
+        "Royal banquet",
+        "Fish fingers, served with great ceremony."
+      ],
+      [
+        "16:00",
+        "The tea party",
+        "Six teddies, one teapot, perfect manners."
+      ]
+    ],
+    "night": [
+      "19:00",
+      "Royal bedtime",
+      "One story, two songs, crown on the bedside table."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "A castle made of cushions"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Royal fish fingers and pudding first"
+      ],
+      [
+        "music",
+        "Call",
+        "\"By royal order!\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Turning any room into a palace"
+      ],
+      [
+        "clock",
+        "Most active",
+        "At tea parties and dress up time"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Bow when she enters. Come to every tea party"
+      ]
+    ],
+    "little": [
+      "You curtsy to the postman.",
+      "You share your crown with friends who are sad.",
+      "You give every teddy a royal title.",
+      "You are kind to everyone, just like a real princess."
+    ],
+    "letters": "Little Royal Things She Does"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

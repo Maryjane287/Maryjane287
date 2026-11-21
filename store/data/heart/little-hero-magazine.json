@@ -1,0 +1,370 @@
+{
+  "theme": "night",
+  "fields": [
+    {
+      "id": "s_laugh",
+      "label": "How they practise being a hero",
+      "example": "Running round the garden in a towel cape at top speed",
+      "max": 80,
+      "chapter": "Hero training"
+    },
+    {
+      "id": "s_kind",
+      "label": "A time they really helped someone",
+      "example": "Picked up the shopping a lady dropped and carried it to her car",
+      "max": 80,
+      "chapter": "A real rescue"
+    },
+    {
+      "id": "s_says",
+      "label": "Something they always say",
+      "example": "\"Do not worry, I have got this!\"",
+      "max": 80,
+      "chapter": "Hero catchphrase"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To always be your sidekick",
+      "max": 60
+    }
+  ],
+  "labels": {
+    "age": "Hero age",
+    "hero": "Hero name",
+    "power": "Superpower",
+    "sidekick": "Sidekick",
+    "mission": "Mission"
+  },
+  "story": {
+    "title": "The Legend of {hero}",
+    "hand": "No cape needed. You are our hero, {who}.",
+    "kicker": "Hero file",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Hero kit",
+    "kicker": "From {from}, with love",
+    "title": "Ten things every hero needs",
+    "items": [
+      "A cape, or a towel",
+      "A brave heart",
+      "A loyal sidekick",
+      "A secret hideout",
+      "A hero name",
+      "Super speed",
+      "A kind word",
+      "A plan",
+      "Snacks for energy",
+      "A team",
+      "A big cuddle after",
+      "Someone to save"
+    ]
+  },
+  "timeline": {
+    "kicker": "Childhood through the ages",
+    "title": "A Short History of Fun",
+    "items": [
+      [
+        "1837",
+        "A garden for children",
+        "Friedrich Froebel opened a school where little ones learned through play. It became the first kindergarten."
+      ],
+      [
+        "1902",
+        "Hello, teddy bear",
+        "The first teddy bears were made, named after a president called Teddy who refused to shoot a captured bear."
+      ],
+      [
+        "1958",
+        "Click, the brick",
+        "The LEGO brick we know today was patented, and children have been building towers ever since."
+      ],
+      [
+        "1969",
+        "A street full of friends",
+        "Sesame Street first came on television, teaching letters, numbers and kindness with puppets."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who}",
+      "Age {age}, expert in {expert}, and the best thing that ever happened to us."
+    ]
+  },
+  "letters": {
+    "kicker": "Big words for little people",
+    "title": "Clever Things People Have Said",
+    "items": [
+      [
+        "Why, sometimes I've believed as many as six impossible things before breakfast.",
+        "Lewis Carroll, Through the Looking-Glass, 1871"
+      ],
+      [
+        "Just living is not enough, said the butterfly. One must have sunshine, freedom and a little flower.",
+        "Hans Christian Andersen"
+      ],
+      [
+        "Imagination is more important than knowledge.",
+        "Albert Einstein, 1929"
+      ],
+      [
+        "All children, except one, grow up.",
+        "J. M. Barrie, Peter Pan"
+      ]
+    ],
+    "hand": "Grow as slowly as you like, {who}. We are enjoying every minute."
+  },
+  "facts": {
+    "kicker": "Amazing but true",
+    "title": "Fun Facts to Amaze Your Friends",
+    "items": [
+      [
+        "baby",
+        "Bonus bones",
+        "You were born with about 300 bones. Some join together as you grow, so grown ups have 206."
+      ],
+      [
+        "heart",
+        "A fist full of love",
+        "Your heart is about the same size as your fist, and it grows bigger as you do."
+      ],
+      [
+        "spark",
+        "Super brain",
+        "Your brain grows super fast when you are little. By age six it is nearly grown up sized."
+      ],
+      [
+        "paw",
+        "Three hearts",
+        "An octopus has three hearts and blue blood. Imagine how many hugs it could give!"
+      ],
+      [
+        "moon",
+        "Footprints forever",
+        "There is no wind on the Moon, so the astronauts' footprints could stay there for a very long time."
+      ],
+      [
+        "clock",
+        "Honey never goes off",
+        "Honey found in ancient Egyptian tombs, thousands of years old, was still good to eat."
+      ]
+    ],
+    "hand": "Science is amazing. But the most amazing thing of all is you, {who}."
+  },
+  "world": {
+    "kicker": "A note from the universe",
+    "title": "Why the World Needs {who}",
+    "lead": "Because {who} is on duty, the world got:",
+    "items": [
+      "A hero who helps without being asked.",
+      "A sidekick's best friend.",
+      "Rescued ladybirds everywhere.",
+      "Laughter when it is needed most.",
+      "Bravery in small and big moments.",
+      "Capes made from towels.",
+      "And the one and only {who}."
+    ],
+    "close": "Up, up and away, {who}!"
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "Hero pact",
+    "title": "Our promises to our hero",
+    "items": [
+      "To always be your sidekick.",
+      "To be brave with you when things are scary.",
+      "To make you a real cape.",
+      "To tell you how proud we are.",
+      "To love you to the moon and back."
+    ],
+    "hand": "Your hero team, {from}"
+  },
+  "awards": [
+    [
+      "Best giggle in the house",
+      "Voted by everyone"
+    ],
+    [
+      "Champion question asker",
+      "Why? Why? Why?"
+    ],
+    [
+      "Bravest explorer",
+      "Even in the dark"
+    ],
+    [
+      "Hug of the year",
+      "The squeeziest ever"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Your favourite dinner",
+      "You choose the menu"
+    ],
+    [
+      "Staying up late",
+      "Fifteen whole minutes"
+    ],
+    [
+      "A trip to the park",
+      "Swings first"
+    ],
+    [
+      "One giant cuddle",
+      "Use it again and again"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "Superstar of the Year",
+  "certLine": "is officially, totally and brilliantly",
+  "perfume": "Top notes of bubblegum, muddy puddles and sunshine. A heart of pure sprinkles.",
+  "news": {
+    "edition": "Superstar edition",
+    "headline": "{who} is amazing again",
+    "lead": "Reports are flooding in that {who}, aged {age}, has once again been brilliant, hilarious and the world's leading expert in {expert}.",
+    "weather": "Weather: sunny, with a 100% chance of giggles"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to adventure",
+    "nationality": "Citizen of Fun",
+    "job": "Professional giggler",
+    "stamps": [
+      "The playground",
+      "Dreamland",
+      "The Moon"
+    ]
+  },
+  "movie": {
+    "sub": "A superhero adventure",
+    "soon": "The sequel: the hero returns",
+    "reviews": [
+      [
+        "Brave, kind and super fast",
+        "The Daily Hug"
+      ],
+      [
+        "Our real life hero",
+        "{from}"
+      ],
+      [
+        "Saves the day, every day",
+        "The sidekick"
+      ]
+    ]
+  },
+  "quizTitle": "The super quiz",
+  "quiz": [
+    [
+      "Which superhero is famous for the words \"with great power comes great responsibility\"?",
+      [
+        "Spider-Man",
+        "Batman",
+        "Superman"
+      ],
+      0
+    ],
+    [
+      "What do we call a hero's helper?",
+      [
+        "A sidekick",
+        "A side salad",
+        "A backpack"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CANDY",
+    "SMILE",
+    "BRAVE",
+    "DREAM",
+    "PLAY",
+    "STAR"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Every child is brave in a hundred small ways we hardly notice. A new school, a doctor's visit, a hard goodbye.",
+      "This magazine notices all of it, and tells them so.",
+      "{who}, this is your hero file.",
+      "From everything {from} told us, you are a real life hero."
+    ],
+    "wish": "Up, up and away, {who}!"
+  },
+  "concepts": "kid",
+  "own": {
+    "dayTitle": "A Day on Duty With {hero}",
+    "day": [
+      [
+        "7:00",
+        "Suit up",
+        "Pyjamas off, cape on. Ready to save the day."
+      ],
+      [
+        "10:00",
+        "Patrol",
+        "Checks the garden for anyone who needs rescuing."
+      ],
+      [
+        "13:00",
+        "Hero fuel",
+        "Eats every vegetable for super strength. Mostly."
+      ],
+      [
+        "16:00",
+        "The big rescue",
+        "Saves a teddy from the top of the stairs."
+      ]
+    ],
+    "night": [
+      "19:00",
+      "Off duty",
+      "Cape folded. Hero tucked in. City safe."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The secret hideout behind the sofa"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Hero fuel, also known as pasta"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Never fear, I am here!\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Being brave when it really matters"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Whenever someone needs help"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Recharge with cuddles. Tell them they are brave"
+      ]
+    ],
+    "little": [
+      "You always check if your friends are OK.",
+      "You were brave at the doctor's, even with wobbly lips.",
+      "You share your snacks with your sidekick.",
+      "You make everyone feel safe."
+    ],
+    "letters": "Little Heroic Things You Do"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

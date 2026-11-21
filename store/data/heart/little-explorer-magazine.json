@@ -1,0 +1,370 @@
+{
+  "theme": "garden",
+  "fields": [
+    {
+      "id": "s_laugh",
+      "label": "The best question they have ever asked",
+      "example": "\"Do worms have best friends?\"",
+      "max": 80,
+      "chapter": "The big questions"
+    },
+    {
+      "id": "s_kind",
+      "label": "A time they were kind to an animal",
+      "example": "Carried a snail off the path so nobody would step on it",
+      "max": 80,
+      "chapter": "Kind to every creature"
+    },
+    {
+      "id": "s_says",
+      "label": "A fact they love telling everyone",
+      "example": "An octopus has three hearts. THREE.",
+      "max": 80,
+      "chapter": "Field notes"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To take you on a real expedition one day",
+      "max": 60
+    }
+  ],
+  "labels": {
+    "age": "Explorer age",
+    "creature": "Favourite creature",
+    "found": "Greatest find",
+    "place": "Dream expedition",
+    "kit": "Never leaves home without"
+  },
+  "story": {
+    "title": "The Adventures of {first}",
+    "hand": "The world is waiting for you, {who}.",
+    "kicker": "Field report",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Explorer kit",
+    "kicker": "From {from}, with love",
+    "title": "Ten things every explorer needs",
+    "items": [
+      "A magnifying glass",
+      "Wellies with holes in",
+      "A bug jar",
+      "Pockets for conkers",
+      "Binoculars",
+      "A notebook for drawings",
+      "A torch",
+      "Snacks, lots",
+      "A brave heart",
+      "A big question",
+      "Muddy knees",
+      "A grown up to carry things"
+    ]
+  },
+  "timeline": {
+    "kicker": "Childhood through the ages",
+    "title": "A Short History of Fun",
+    "items": [
+      [
+        "1837",
+        "A garden for children",
+        "Friedrich Froebel opened a school where little ones learned through play. It became the first kindergarten."
+      ],
+      [
+        "1902",
+        "Hello, teddy bear",
+        "The first teddy bears were made, named after a president called Teddy who refused to shoot a captured bear."
+      ],
+      [
+        "1958",
+        "Click, the brick",
+        "The LEGO brick we know today was patented, and children have been building towers ever since."
+      ],
+      [
+        "1969",
+        "A street full of friends",
+        "Sesame Street first came on television, teaching letters, numbers and kindness with puppets."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who}",
+      "Age {age}, expert in {expert}, and the best thing that ever happened to us."
+    ]
+  },
+  "letters": {
+    "kicker": "Big words for little people",
+    "title": "Clever Things People Have Said",
+    "items": [
+      [
+        "Why, sometimes I've believed as many as six impossible things before breakfast.",
+        "Lewis Carroll, Through the Looking-Glass, 1871"
+      ],
+      [
+        "Just living is not enough, said the butterfly. One must have sunshine, freedom and a little flower.",
+        "Hans Christian Andersen"
+      ],
+      [
+        "Imagination is more important than knowledge.",
+        "Albert Einstein, 1929"
+      ],
+      [
+        "All children, except one, grow up.",
+        "J. M. Barrie, Peter Pan"
+      ]
+    ],
+    "hand": "Grow as slowly as you like, {who}. We are enjoying every minute."
+  },
+  "facts": {
+    "kicker": "Amazing but true",
+    "title": "Fun Facts to Amaze Your Friends",
+    "items": [
+      [
+        "baby",
+        "Bonus bones",
+        "You were born with about 300 bones. Some join together as you grow, so grown ups have 206."
+      ],
+      [
+        "heart",
+        "A fist full of love",
+        "Your heart is about the same size as your fist, and it grows bigger as you do."
+      ],
+      [
+        "spark",
+        "Super brain",
+        "Your brain grows super fast when you are little. By age six it is nearly grown up sized."
+      ],
+      [
+        "paw",
+        "Three hearts",
+        "An octopus has three hearts and blue blood. Imagine how many hugs it could give!"
+      ],
+      [
+        "moon",
+        "Footprints forever",
+        "There is no wind on the Moon, so the astronauts' footprints could stay there for a very long time."
+      ],
+      [
+        "clock",
+        "Honey never goes off",
+        "Honey found in ancient Egyptian tombs, thousands of years old, was still good to eat."
+      ]
+    ],
+    "hand": "Science is amazing. But the most amazing thing of all is you, {who}."
+  },
+  "world": {
+    "kicker": "A note from the universe",
+    "title": "Why Nature Loves {who}",
+    "lead": "Because {who} goes exploring, the world got:",
+    "items": [
+      "A protector for every snail.",
+      "Rock pools properly investigated.",
+      "A thousand brilliant questions.",
+      "Very well studied beetles.",
+      "A future scientist.",
+      "Muddy boots worth every wash.",
+      "And the one and only {who}."
+    ],
+    "close": "Keep exploring, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "Pinky promise",
+    "title": "Our promises to you",
+    "items": [
+      "To always answer your why questions, or look it up.",
+      "To take you to the beach to hunt for fossils.",
+      "To never mind the mud.",
+      "To keep every treasure you bring home.",
+      "To explore the world with you."
+    ],
+    "hand": "Your expedition team, {from}"
+  },
+  "awards": [
+    [
+      "Best giggle in the house",
+      "Voted by everyone"
+    ],
+    [
+      "Champion question asker",
+      "Why? Why? Why?"
+    ],
+    [
+      "Bravest explorer",
+      "Even in the dark"
+    ],
+    [
+      "Hug of the year",
+      "The squeeziest ever"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Your favourite dinner",
+      "You choose the menu"
+    ],
+    [
+      "Staying up late",
+      "Fifteen whole minutes"
+    ],
+    [
+      "A trip to the park",
+      "Swings first"
+    ],
+    [
+      "One giant cuddle",
+      "Use it again and again"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "Superstar of the Year",
+  "certLine": "is officially, totally and brilliantly",
+  "perfume": "Top notes of bubblegum, muddy puddles and sunshine. A heart of pure sprinkles.",
+  "news": {
+    "edition": "Superstar edition",
+    "headline": "{who} is amazing again",
+    "lead": "Reports are flooding in that {who}, aged {age}, has once again been brilliant, hilarious and the world's leading expert in {expert}.",
+    "weather": "Weather: sunny, with a 100% chance of giggles"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to adventure",
+    "nationality": "Citizen of Fun",
+    "job": "Professional giggler",
+    "stamps": [
+      "The playground",
+      "Dreamland",
+      "The Moon"
+    ]
+  },
+  "movie": {
+    "sub": "A wild nature adventure",
+    "soon": "The sequel: the rainforest expedition",
+    "reviews": [
+      [
+        "Curious, brave and very muddy",
+        "The Daily Hug"
+      ],
+      [
+        "The best explorer we know",
+        "{from}"
+      ],
+      [
+        "Every rock turned over",
+        "The local snails"
+      ]
+    ]
+  },
+  "quizTitle": "The super quiz",
+  "quiz": [
+    [
+      "How many hearts does an octopus have?",
+      [
+        "Three",
+        "One",
+        "Eight"
+      ],
+      0
+    ],
+    [
+      "What is the largest rainforest in the world?",
+      [
+        "The Amazon",
+        "The Congo",
+        "The Daintree"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CANDY",
+    "SMILE",
+    "BRAVE",
+    "DREAM",
+    "PLAY",
+    "STAR"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Some children walk to the park. Explorers take an hour, because there are beetles to study and puddles to measure.",
+      "This magazine celebrates that curiosity, and every brilliant question that comes with it.",
+      "{who}, this is your field report.",
+      "From everything {from} told us, the world is lucky to have such a curious explorer."
+    ],
+    "wish": "Keep exploring, {who}."
+  },
+  "concepts": "kid",
+  "own": {
+    "dayTitle": "An Expedition With {first}",
+    "day": [
+      [
+        "8:00",
+        "Kit check",
+        "Magnifying glass, bug jar, snacks. Ready."
+      ],
+      [
+        "10:00",
+        "The woods",
+        "Every log turned over. Every beetle named."
+      ],
+      [
+        "13:00",
+        "Picnic",
+        "Sandwiches on a tree stump. A robin joins in."
+      ],
+      [
+        "15:00",
+        "The stream",
+        "One welly full of water. Totally worth it."
+      ]
+    ],
+    "night": [
+      "19:00",
+      "Bedtime",
+      "Asleep under a book about volcanoes."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "Under rocks, up trees, in puddles"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Snacks eaten mid adventure"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Come and look at this!\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Spotting a beetle from fifty metres"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Outdoors, in any weather"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Pack spare socks. Answer every question. Let them get muddy"
+      ]
+    ],
+    "little": [
+      "You say goodbye to every snail you meet.",
+      "You keep a pebble from every beach.",
+      "You know more about sharks than any grown up.",
+      "You see magic in the smallest things."
+    ],
+    "letters": "Little Things Our Explorer Does"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

@@ -1,0 +1,372 @@
+{
+  "theme": "dawn",
+  "fields": [
+    {
+      "id": "s_name",
+      "label": "What the first night home was like",
+      "example": "We stared at her for three hours instead of sleeping",
+      "max": 80,
+      "chapter": "The first night"
+    },
+    {
+      "id": "s_home",
+      "label": "A funny parenting moment so far",
+      "example": "Put the nappies in the fridge and the milk in the nappy bag",
+      "max": 80,
+      "chapter": "The new normal"
+    },
+    {
+      "id": "s_dream",
+      "label": "Something they are brilliant at already",
+      "example": "Chris can get her to sleep in under a minute",
+      "max": 80,
+      "chapter": "Already amazing"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To babysit whenever you need a nap",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "baby": "Baby's name",
+    "born": "Parents since",
+    "hours": "Sleep report",
+    "surprise": "Biggest surprise"
+  },
+  "story": {
+    "title": "Meet the Parents: {first}",
+    "hand": "Tired, brilliant and so in love, {who}.",
+    "kicker": "The new parents",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Survival kit",
+    "kicker": "From {from}, with love",
+    "title": "Ten things every new parent needs",
+    "items": [
+      "Coffee, strong",
+      "A muslin on every shoulder",
+      "Snacks you can eat one handed",
+      "Spare babygrows, many",
+      "A good burp technique",
+      "Grandparents on speed dial",
+      "Dry shampoo",
+      "A lullaby playlist",
+      "Patience at 3am",
+      "Each other",
+      "A sense of humour",
+      "Endless love"
+    ]
+  },
+  "timeline": {
+    "kicker": "Songs for little ones",
+    "title": "The Lullabies Sung Before You",
+    "items": [
+      [
+        "1760s",
+        "Mother Goose arrives",
+        "One of the first books of nursery rhymes, Mother Goose's Melody, was printed in London for little ones."
+      ],
+      [
+        "1806",
+        "Twinkle, twinkle",
+        "Jane Taylor published a poem called The Star. We still sing it to babies all over the world."
+      ],
+      [
+        "1830",
+        "Mary had a little lamb",
+        "Sarah Josepha Hale wrote the rhyme about a lamb who followed Mary to school one day."
+      ],
+      [
+        "1868",
+        "The famous lullaby",
+        "Johannes Brahms published his Wiegenlied, the gentle cradle song still hummed at bedtime."
+      ]
+    ],
+    "today": [
+      "{born}",
+      "{first} arrives",
+      "A brand new song begins. And we will sing it to you for the rest of our lives."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Babies",
+    "items": [
+      [
+        "Every child begins the world again.",
+        "Henry David Thoreau, Walden, 1854"
+      ],
+      [
+        "A babe in a house is a well-spring of pleasure.",
+        "Martin Farquhar Tupper, 1838"
+      ],
+      [
+        "Every child comes with the message that God is not yet discouraged of man.",
+        "Rabindranath Tagore, Stray Birds, 1916"
+      ],
+      [
+        "It takes a village to raise a child.",
+        "An African proverb"
+      ]
+    ],
+    "hand": "Our village is ready, {first}. And it already adores you."
+  },
+  "facts": {
+    "kicker": "Amazing from day one",
+    "title": "The Clever Science of Being New",
+    "items": [
+      [
+        "eye",
+        "Faces first",
+        "From the very start, newborns love looking at faces more than almost anything else."
+      ],
+      [
+        "heart",
+        "Voices you knew",
+        "Newborns already know the voices they heard most often before they were born."
+      ],
+      [
+        "camera",
+        "Just close enough",
+        "New babies see best at about the distance from a cuddling arm to a loving face."
+      ],
+      [
+        "smile",
+        "The first real smile",
+        "Real smiles usually arrive at around six to eight weeks. Worth every sleepy night."
+      ],
+      [
+        "spark",
+        "Little copycats",
+        "Scientists have seen very young babies copy faces, like poking a tongue out back at a grown up."
+      ],
+      [
+        "globe",
+        "Every language",
+        "Tiny babies can hear the sounds of every language, then tune in to their family's own."
+      ]
+    ],
+    "hand": "You were born clever, {first}. You were also born loved."
+  },
+  "world": {
+    "kicker": "A thank you from the universe",
+    "title": "Why {baby} Is the Luckiest Baby",
+    "lead": "Because {who} became parents, {baby} got:",
+    "items": [
+      "The safest arms in the world.",
+      "Lullabies, even the made up ones.",
+      "Two people who would do anything for them.",
+      "Very well documented first smiles.",
+      "A home full of love.",
+      "Parents who keep getting better at this.",
+      "And the one and only {who}."
+    ],
+    "close": "You are doing brilliantly, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises to the new parents",
+    "items": [
+      "To bring food without being asked.",
+      "To hold the baby while you shower.",
+      "To remind you that you are doing brilliantly.",
+      "To never say \"sleep when the baby sleeps\".",
+      "To love all three of you, always."
+    ],
+    "hand": "All our love, {from}"
+  },
+  "awards": [
+    [
+      "Newest family member",
+      "Instantly famous"
+    ],
+    [
+      "Best yawn of the year",
+      "By a landslide"
+    ],
+    [
+      "Champion cuddler",
+      "Unbeaten"
+    ],
+    [
+      "Most loved person",
+      "Unanimous"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One bedtime story",
+      "Any book, any voice"
+    ],
+    [
+      "A lifetime of cuddles",
+      "Never expires"
+    ],
+    [
+      "One song at bedtime",
+      "Lullaby of your choice"
+    ],
+    [
+      "A big family day out",
+      "When you are a bit bigger"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {first}",
+  "cert": "The Most Wonderful Arrival",
+  "certLine": "is officially, wonderfully and forever",
+  "perfume": "Top notes of warm milk and fresh laundry. A heart of brand new wonder.",
+  "news": {
+    "edition": "Arrival edition",
+    "headline": "{first} arrives, family melts",
+    "lead": "Sources close to the family confirm that {first}, weighing in at {weight}, has taken charge of the whole household within hours.",
+    "weather": "Weather: soft and sleepy, with cuddles all day"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to a whole life of adventures",
+    "nationality": "Loved, everywhere",
+    "job": "Chief cuddle receiver",
+    "stamps": [
+      "Our arms",
+      "First night home",
+      "Everywhere next"
+    ]
+  },
+  "movie": {
+    "sub": "A sleepless comedy with a happy ending",
+    "soon": "The sequel: the toddler years",
+    "reviews": [
+      [
+        "Tired, funny and full of love",
+        "The Daily Hug"
+      ],
+      [
+        "The best parents we know",
+        "{from}"
+      ],
+      [
+        "Five stars, zero hours of sleep",
+        "Baby {baby}"
+      ]
+    ]
+  },
+  "quizTitle": "How much do you know about babies?",
+  "quiz": [
+    [
+      "Roughly how many nappies does a newborn get through in a day?",
+      [
+        "About ten",
+        "About two",
+        "About thirty"
+      ],
+      0
+    ],
+    [
+      "How many hours does a newborn sleep in a day, in total?",
+      [
+        "Around sixteen",
+        "Around six",
+        "Around twenty three"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "BABY",
+    "CUDDLE",
+    "LULLABY",
+    "SMILE",
+    "TINY",
+    "WELCOME"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "When a baby arrives, all the attention goes to the baby. Quite right. But two people just became parents too.",
+      "This magazine is for them: the 3am heroes, the nappy changers, the lullaby singers.",
+      "{who}, this is your issue.",
+      "From everything {from} told us, you are already wonderful parents."
+    ],
+    "wish": "You are doing brilliantly, {who}."
+  },
+  "concepts": "couple",
+  "own": {
+    "dayTitle": "A Day in the Life of New Parents",
+    "day": [
+      [
+        "3:00",
+        "The night feed",
+        "One feeds, one makes tea. Both whisper."
+      ],
+      [
+        "7:00",
+        "Good morning",
+        "A gummy smile. Suddenly the night was worth it."
+      ],
+      [
+        "12:00",
+        "Lunch",
+        "Toast, eaten cold, one handed, standing up."
+      ],
+      [
+        "16:00",
+        "The walk",
+        "Pram, park, coffee. Feeling like heroes."
+      ]
+    ],
+    "night": [
+      "20:00",
+      "Bedtime",
+      "Baby asleep. Parents asleep on the sofa by 20:05."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The sofa, with a sleeping baby"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Cold tea and biscuits"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Shhh, she is sleeping\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Changing a nappy in the dark"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Mostly at 3am"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Bring food. Offer to hold the baby. Tell them they are doing brilliantly"
+      ]
+    ],
+    "little": [
+      "You check the baby monitor every five minutes.",
+      "You smell the baby's head when you think no one is looking.",
+      "You take turns without being asked.",
+      "You fall more in love every day."
+    ],
+    "letters": "Little Things New Parents Do",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

@@ -1,0 +1,370 @@
+{
+  "theme": "dawn",
+  "fields": [
+    {
+      "id": "s_laugh",
+      "label": "A funny moment from the first weeks together",
+      "example": "Insisted on wearing wellies to bed for a month",
+      "max": 80,
+      "chapter": "The early days"
+    },
+    {
+      "id": "s_kind",
+      "label": "Something kind they do for the family",
+      "example": "Makes everyone a cup of pretend tea after a hard day",
+      "max": 80,
+      "chapter": "A gentle heart"
+    },
+    {
+      "id": "s_says",
+      "label": "Something they say about our family",
+      "example": "\"We are a team, and the dog is the captain\"",
+      "max": 80,
+      "chapter": "In their own words"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To always tell you your story with love",
+      "max": 60
+    }
+  ],
+  "labels": {
+    "age": "Age now",
+    "day": "Family since",
+    "first": "First words to us",
+    "ritual": "Family ritual",
+    "love": "Loves most now"
+  },
+  "story": {
+    "title": "How {first} Came Home",
+    "hand": "Chosen with love, and loved for ever, {who}.",
+    "kicker": "Our story",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Forever things",
+    "kicker": "From {from}, with love",
+    "title": "Ten things that make us a family",
+    "items": [
+      "Saturday pancakes",
+      "The big bedtime hug",
+      "Our silly family dance",
+      "Your height on the door frame",
+      "The first family photo",
+      "Your own bedroom",
+      "Story time",
+      "Holding hands across the road",
+      "Family film nights",
+      "Your name on the birthday cake",
+      "Inside jokes",
+      "Home"
+    ]
+  },
+  "timeline": {
+    "kicker": "Childhood through the ages",
+    "title": "A Short History of Fun",
+    "items": [
+      [
+        "1837",
+        "A garden for children",
+        "Friedrich Froebel opened a school where little ones learned through play. It became the first kindergarten."
+      ],
+      [
+        "1902",
+        "Hello, teddy bear",
+        "The first teddy bears were made, named after a president called Teddy who refused to shoot a captured bear."
+      ],
+      [
+        "1958",
+        "Click, the brick",
+        "The LEGO brick we know today was patented, and children have been building towers ever since."
+      ],
+      [
+        "1969",
+        "A street full of friends",
+        "Sesame Street first came on television, teaching letters, numbers and kindness with puppets."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who}",
+      "Age {age}, expert in {expert}, and the best thing that ever happened to us."
+    ]
+  },
+  "letters": {
+    "kicker": "Big words for little people",
+    "title": "Clever Things People Have Said",
+    "items": [
+      [
+        "Why, sometimes I've believed as many as six impossible things before breakfast.",
+        "Lewis Carroll, Through the Looking-Glass, 1871"
+      ],
+      [
+        "Just living is not enough, said the butterfly. One must have sunshine, freedom and a little flower.",
+        "Hans Christian Andersen"
+      ],
+      [
+        "Imagination is more important than knowledge.",
+        "Albert Einstein, 1929"
+      ],
+      [
+        "All children, except one, grow up.",
+        "J. M. Barrie, Peter Pan"
+      ]
+    ],
+    "hand": "Grow as slowly as you like, {who}. We are enjoying every minute."
+  },
+  "facts": {
+    "kicker": "Amazing but true",
+    "title": "Fun Facts to Amaze Your Friends",
+    "items": [
+      [
+        "baby",
+        "Bonus bones",
+        "You were born with about 300 bones. Some join together as you grow, so grown ups have 206."
+      ],
+      [
+        "heart",
+        "A fist full of love",
+        "Your heart is about the same size as your fist, and it grows bigger as you do."
+      ],
+      [
+        "spark",
+        "Super brain",
+        "Your brain grows super fast when you are little. By age six it is nearly grown up sized."
+      ],
+      [
+        "paw",
+        "Three hearts",
+        "An octopus has three hearts and blue blood. Imagine how many hugs it could give!"
+      ],
+      [
+        "moon",
+        "Footprints forever",
+        "There is no wind on the Moon, so the astronauts' footprints could stay there for a very long time."
+      ],
+      [
+        "clock",
+        "Honey never goes off",
+        "Honey found in ancient Egyptian tombs, thousands of years old, was still good to eat."
+      ]
+    ],
+    "hand": "Science is amazing. But the most amazing thing of all is you, {who}."
+  },
+  "world": {
+    "kicker": "A thank you from the universe",
+    "title": "Why Our Family Is Complete With {who}",
+    "lead": "Because {who} came home, our family got:",
+    "items": [
+      "Laughter in every room.",
+      "A reason to make pancakes.",
+      "Bedtime stories every night.",
+      "A heart that is finally full.",
+      "Someone to build dens with.",
+      "Everything we were waiting for.",
+      "And the one and only {who}."
+    ],
+    "close": "Welcome home, for ever, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "Our forever promise",
+    "title": "Our promises to you",
+    "items": [
+      "To always be here, no matter what.",
+      "To honour every part of your story.",
+      "To listen whenever you want to talk.",
+      "To celebrate your family day every year.",
+      "To love you for ever and always."
+    ],
+    "hand": "Your forever family, {from}"
+  },
+  "awards": [
+    [
+      "Best giggle in the house",
+      "Voted by everyone"
+    ],
+    [
+      "Champion question asker",
+      "Why? Why? Why?"
+    ],
+    [
+      "Bravest explorer",
+      "Even in the dark"
+    ],
+    [
+      "Hug of the year",
+      "The squeeziest ever"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Your favourite dinner",
+      "You choose the menu"
+    ],
+    [
+      "Staying up late",
+      "Fifteen whole minutes"
+    ],
+    [
+      "A trip to the park",
+      "Swings first"
+    ],
+    [
+      "One giant cuddle",
+      "Use it again and again"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "Superstar of the Year",
+  "certLine": "is officially, totally and brilliantly",
+  "perfume": "Top notes of bubblegum, muddy puddles and sunshine. A heart of pure sprinkles.",
+  "news": {
+    "edition": "Superstar edition",
+    "headline": "{who} is amazing again",
+    "lead": "Reports are flooding in that {who}, aged {age}, has once again been brilliant, hilarious and the world's leading expert in {expert}.",
+    "weather": "Weather: sunny, with a 100% chance of giggles"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to adventure",
+    "nationality": "Citizen of Fun",
+    "job": "Professional giggler",
+    "stamps": [
+      "The playground",
+      "Dreamland",
+      "The Moon"
+    ]
+  },
+  "movie": {
+    "sub": "A heartwarming family story",
+    "soon": "The sequel: our forever years",
+    "reviews": [
+      [
+        "The best family story we know",
+        "The Daily Hug"
+      ],
+      [
+        "Our happy ever after",
+        "{from}"
+      ],
+      [
+        "We cried happy tears",
+        "The grandparents"
+      ]
+    ]
+  },
+  "quizTitle": "The super quiz",
+  "quiz": [
+    [
+      "What do many families call the day their adopted child came home?",
+      [
+        "Gotcha day",
+        "Hello day",
+        "Box day"
+      ],
+      0
+    ],
+    [
+      "Which month is National Adoption Month in the USA?",
+      [
+        "November",
+        "March",
+        "July"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CANDY",
+    "SMILE",
+    "BRAVE",
+    "DREAM",
+    "PLAY",
+    "STAR"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Some families grow in the most beautiful, unexpected ways. This magazine celebrates one of them.",
+      "It is a gentle, joyful record of the day you found each other and everything since.",
+      "{who}, this is your family story.",
+      "From everything {from} told us, you were always meant to be home."
+    ],
+    "wish": "Welcome home, for ever, {who}."
+  },
+  "concepts": "kid",
+  "own": {
+    "dayTitle": "Our Family Day",
+    "day": [
+      [
+        "9:00",
+        "Pancakes",
+        "A family day tradition. Extra syrup."
+      ],
+      [
+        "11:00",
+        "Photos",
+        "The same spot as the first family photo."
+      ],
+      [
+        "14:00",
+        "Adventure",
+        "The park, the woods or wherever you choose."
+      ],
+      [
+        "17:00",
+        "Cake",
+        "A candle for every year together."
+      ]
+    ],
+    "night": [
+      "19:00",
+      "Bedtime",
+      "Your story, told again. Your favourite one."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "Right in the middle of the family"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Saturday pancakes and anything Dad cooks"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Can we do it again?\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Making a house feel like home"
+      ],
+      [
+        "clock",
+        "Most active",
+        "All day, every day"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Listen to them. Tell their story with love. Hug lots"
+      ]
+    ],
+    "little": [
+      "You make sure everyone gets a goodnight hug.",
+      "You call the dog your brother.",
+      "You count the days until family day.",
+      "You make our family complete."
+    ],
+    "letters": "Little Things That Make You Ours"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}
