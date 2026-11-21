@@ -309,7 +309,7 @@ function slots(mag, v) {
   return {
     raw, mast: esc(raw), up: esc(raw.toUpperCase()),
     issue: esc(fill(c.issue, v)), edition: esc(fill(c.edition, v)),
-    lines: c.lines.map(([l, t]) => [esc(l), esc(fill(t, v))]),
+    lines: c.lines.map(([l, t]) => [esc(fill(l, v)), esc(fill(t, v))]),
     badge: c.badge.map(b => esc(fill(b, v))), big: fill(c.badge[1], v),
     quote: esc(fill(c.quote, v)), credit: esc(fill(c.credit, v)),
   };

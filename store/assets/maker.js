@@ -94,7 +94,7 @@ const FUN = [
 function lovePicks(m) {
   const on = String(state.values.x_loves || '').split('\n').filter(Boolean);
   const P = m.heart?.picks;
-  const items = m.love ? LOVE_PICKS : (packOf(m.heart)?.people ? PEOPLE[conceptOf(state.values, m.heart).who].picks : P.items).map(x => x.replace(/\{who\}/g, state.values.name || m.fields[0].example));
+  const items = m.love ? LOVE_PICKS : (P?.items?.length ? P.items : PEOPLE[conceptOf(state.values, m.heart).who].picks).map(x => x.replace(/\{who\}/g, state.values.name || m.fields[0].example));
   const legend = m.love ? 'Ten things you love about her' : P.legend;
   return `<fieldset class="love-picks wide"><legend>${esc(legend)} <small>(tap up to ten)</small></legend><p class="small">Tap the ones that are true. Any you leave out, we fill with lovely ones for you.</p><div class="pick-chips">${items.map(x => `<button type="button" class="chip" data-love="${esc(x)}" aria-pressed="${on.includes(x)}">${esc(x)}</button>`).join('')}</div><small class="pick-count">${on.length} of 10 chosen</small></fieldset>`;
 }
@@ -345,7 +345,7 @@ $('#fields').addEventListener('click', e => {
   const key = c.dataset.concept;
   state.values[key] = state.values[key] === c.dataset.val ? '' : c.dataset.val;
   // A new person means a new love list to tap from.
-  if (key === 'x_who') state.values.x_loves = '';
+  if (key === 'x_who' && !mag().heart?.picks?.items?.length) state.values.x_loves = '';
   store.set(`maker:${state.slug}`, state.values);
   document.querySelectorAll(`[data-concept="${key}"]`).forEach(x => x.setAttribute('aria-pressed', String(state.values[key] === x.dataset.val)));
   const picks = document.querySelector('.love-picks');

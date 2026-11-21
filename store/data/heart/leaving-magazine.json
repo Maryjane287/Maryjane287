@@ -37,23 +37,24 @@
     "words": "Them, in three words"
   },
   "picks": {
-    "legend": "Things the team will miss",
+    "legend": "Things the team will miss about them",
     "kicker": "From {from}, with love",
     "title": "Ten things we will miss about you",
     "items": [
+      "Your morning hello",
+      "The way you remembered everyone's coffee order",
+      "Your calm in every crisis",
+      "How you made meetings bearable",
       "Your brilliant ideas",
-      "How hard you work, quietly",
-      "The way you help everyone",
-      "Your calm in a crisis",
-      "Your excellent biscuit supply",
-      "The way you make meetings bearable",
-      "How you never take the credit",
-      "Your terrible jokes on Monday mornings",
-      "The way you believe in people",
-      "How you always find a way",
-      "Your patience with the printer",
-      "The way you lead by example",
-      "Simply being you"
+      "The way you helped the new starters",
+      "Your desk snacks",
+      "How you made us laugh on Mondays",
+      "Your email sign offs",
+      "The way you stayed late to help",
+      "Your Friday playlists",
+      "How you made work feel like a team",
+      "The gap you leave behind",
+      "Simply being our favourite colleague"
     ]
   },
   "timeline": {

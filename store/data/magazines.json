@@ -2907,7 +2907,7 @@
         }
       },
       {
-        "id": "grace",
+        "id": "ava",
         "palette": "coral",
         "portrait": {
           "skin": 2,
@@ -2915,7 +2915,7 @@
           "hairColor": "#1c120c"
         },
         "values": {
-          "name": "Grace",
+          "name": "Ava",
           "year": "2026",
           "subject": "Law",
           "fuel": "Highlighters and hope",
@@ -8286,7 +8286,9 @@
           "x_type": "calm"
         },
         "photos": {
-          "photo1": "/assets/samples/baby-shower-magazine-2.jpg"
+          "photo1": "/assets/samples/new-parents-magazine-0.jpg",
+          "photo2": "/assets/samples/new-parents-magazine-0b.jpg",
+          "photo3": "/assets/samples/new-parents-magazine-0c.jpg"
         }
       },
       {
@@ -9656,7 +9658,9 @@
           "x_type": "comedians"
         },
         "photos": {
-          "photo1": "/assets/samples/valentines-magazine-1.jpg"
+          "photo1": "/assets/samples/engagement-magazine-0.jpg",
+          "photo2": "/assets/samples/engagement-magazine-0b.jpg",
+          "photo3": "/assets/samples/engagement-magazine-0c.jpg"
         }
       },
       {
@@ -9678,7 +9682,9 @@
           "x_type": "adventurers"
         },
         "photos": {
-          "photo1": "/assets/samples/valentines-magazine-2.jpg"
+          "photo1": "/assets/samples/letters-to-my-love-magazine-0.jpg",
+          "photo2": "/assets/samples/letters-to-my-love-magazine-0b.jpg",
+          "photo3": "/assets/samples/letters-to-my-love-magazine-0c.jpg"
         }
       }
     ],
@@ -10597,7 +10603,9 @@
           "x_type": "party"
         },
         "photos": {
-          "photo1": "/assets/samples/best-friend-magazine-1.jpg"
+          "photo1": "/assets/samples/friend-group-magazine-0.jpg",
+          "photo2": "/assets/samples/friend-group-magazine-0b.jpg",
+          "photo3": "/assets/samples/friend-group-magazine-0c.jpg"
         }
       },
       {
@@ -10620,7 +10628,9 @@
           "x_type": "creative"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+          "photo1": "/assets/samples/best-friend-magazine-0.jpg",
+          "photo2": "/assets/samples/best-friend-magazine-0b.jpg",
+          "photo3": "/assets/samples/best-friend-magazine-0c.jpg"
         }
       },
       {
@@ -10643,7 +10653,7 @@
           "x_type": "adventurer"
         },
         "photos": {
-          "photo1": "/assets/samples/graduation-magazine-1.jpg"
+          "photo1": "/assets/samples/best-friend-magazine-1.jpg"
         }
       }
     ],
@@ -10823,7 +10833,9 @@
           "x_type": "comedians"
         },
         "photos": {
-          "photo1": "/assets/samples/valentines-magazine-1.jpg"
+          "photo1": "/assets/samples/forever-person-magazine-0.jpg",
+          "photo2": "/assets/samples/forever-person-magazine-0b.jpg",
+          "photo3": "/assets/samples/forever-person-magazine-0c.jpg"
         }
       },
       {
@@ -10845,7 +10857,9 @@
           "x_type": "adventurers"
         },
         "photos": {
-          "photo1": "/assets/samples/valentines-magazine-2.jpg"
+          "photo1": "/assets/samples/long-distance-magazine-0.jpg",
+          "photo2": "/assets/samples/long-distance-magazine-0b.jpg",
+          "photo3": "/assets/samples/long-distance-magazine-0c.jpg"
         }
       }
     ],
@@ -11855,7 +11869,9 @@
           "x_type": "adventurers"
         },
         "photos": {
-          "photo1": "/assets/samples/valentines-magazine-1.jpg"
+          "photo1": "/assets/samples/first-date-magazine-0.jpg",
+          "photo2": "/assets/samples/first-date-magazine-0b.jpg",
+          "photo3": "/assets/samples/first-date-magazine-0c.jpg"
         }
       }
     ],
@@ -12259,7 +12275,9 @@
           "x_type": "adventurer"
         },
         "photos": {
-          "photo1": "/assets/samples/graduation-magazine-0.jpg"
+          "photo1": "/assets/samples/family-heritage-magazine-0.jpg",
+          "photo2": "/assets/samples/family-heritage-magazine-0b.jpg",
+          "photo3": "/assets/samples/family-heritage-magazine-0c.jpg"
         }
       }
     ],
@@ -13245,7 +13263,7 @@
           "x_type": "adventurer"
         },
         "photos": {
-          "photo1": "/assets/samples/eighteenth-birthday-magazine-0.jpg"
+          "photo1": "/assets/samples/thank-you-magazine-2.jpg"
         }
       }
     ],
@@ -13425,7 +13443,9 @@
           "x_type": "calm"
         },
         "photos": {
-          "photo1": "/assets/samples/graduation-magazine-0.jpg"
+          "photo1": "/assets/samples/fathers-day-magazine-0.jpg",
+          "photo2": "/assets/samples/fathers-day-magazine-0b.jpg",
+          "photo3": "/assets/samples/fathers-day-magazine-0c.jpg"
         }
       },
       {
@@ -13651,7 +13671,9 @@
           "x_type": "cosy"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-1.jpg"
+          "photo1": "/assets/samples/friends-on-tour-magazine-0.jpg",
+          "photo2": "/assets/samples/friends-on-tour-magazine-0b.jpg",
+          "photo3": "/assets/samples/friends-on-tour-magazine-0c.jpg"
         }
       }
     ],
@@ -13832,7 +13854,7 @@
           "x_type": "calm"
         },
         "photos": {
-          "photo1": "/assets/samples/graduation-magazine-0.jpg"
+          "photo1": "/assets/samples/best-friend-magazine-1.jpg"
         }
       },
       {
@@ -14238,7 +14260,9 @@
           "x_type": "creative"
         },
         "photos": {
-          "photo1": "/assets/samples/bridesmaid-proposal-magazine-1.jpg"
+          "photo1": "/assets/samples/bridesmaids-magazine-0.jpg",
+          "photo2": "/assets/samples/bridesmaids-magazine-0b.jpg",
+          "photo3": "/assets/samples/bridesmaids-magazine-0c.jpg"
         }
       },
       {
@@ -14260,7 +14284,7 @@
           "x_type": "cosy"
         },
         "photos": {
-          "photo1": "/assets/samples/best-friend-magazine-1.jpg"
+          "photo1": "/assets/samples/best-friend-magazine-2.jpg"
         }
       }
     ],
@@ -14841,7 +14865,9 @@
           "x_type": "creative"
         },
         "photos": {
-          "photo1": "/assets/samples/bridesmaid-proposal-magazine-0.jpg"
+          "photo1": "/assets/samples/maid-of-honour-magazine-0.jpg",
+          "photo2": "/assets/samples/maid-of-honour-magazine-0b.jpg",
+          "photo3": "/assets/samples/maid-of-honour-magazine-0c.jpg"
         }
       },
       {
@@ -15449,7 +15475,7 @@
           "x_type": "diva"
         },
         "photos": {
-          "photo1": "/assets/samples/first-birthday-magazine-0.jpg"
+          "photo1": "/assets/samples/first-birthday-magazine-1.jpg"
         }
       },
       {
@@ -15471,7 +15497,9 @@
           "x_type": "menace"
         },
         "photos": {
-          "photo1": "/assets/samples/first-birthday-magazine-1.jpg"
+          "photo1": "/assets/samples/first-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/first-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/first-birthday-magazine-0c.jpg"
         }
       }
     ],
@@ -15833,50 +15861,6 @@
           "photo1": "/assets/samples/twins-magazine-0.jpg",
           "photo2": "/assets/samples/twins-magazine-0b.jpg",
           "photo3": "/assets/samples/twins-magazine-0c.jpg"
-        }
-      },
-      {
-        "id": "leo",
-        "palette": "sky",
-        "portrait": {
-          "skin": 1,
-          "hair": "short",
-          "hairColor": "#3b2418"
-        },
-        "values": {
-          "name": "Leo and Sam",
-          "born": "21 July 2025",
-          "from": "Mama and Papa",
-          "first": "Sam, and he has not let Leo forget",
-          "tell": "Leo is the loud one",
-          "same": "Both refuse to sleep",
-          "words": "Loud, cheeky, adored",
-          "x_type": "menace"
-        },
-        "photos": {
-          "photo1": "/assets/samples/new-baby-magazine-1.jpg"
-        }
-      },
-      {
-        "id": "emma",
-        "palette": "mint",
-        "portrait": {
-          "skin": 3,
-          "hair": "curly",
-          "hairColor": "#120c08"
-        },
-        "values": {
-          "name": "Emma and Chris",
-          "born": "1 January 2026",
-          "from": "Mummy and Daddy",
-          "first": "Emma, at one minute past midnight",
-          "tell": "Chris has more hair",
-          "same": "Hold hands in their sleep",
-          "words": "Sweet, sleepy, ours",
-          "x_type": "napper"
-        },
-        "photos": {
-          "photo1": "/assets/samples/new-baby-magazine-2.jpg"
         }
       }
     ],
@@ -16480,7 +16464,7 @@
           "x_type": "explorer"
         },
         "photos": {
-          "photo1": "/assets/samples/kids-magazine-2.jpg"
+          "photo1": "/assets/samples/kids-magazine-3.jpg"
         }
       }
     ],
@@ -17287,7 +17271,7 @@
           "x_type": "baby"
         },
         "photos": {
-          "photo1": "/assets/samples/first-birthday-magazine-0.jpg"
+          "photo1": "/assets/samples/first-birthday-magazine-1.jpg"
         }
       }
     ],
@@ -17480,7 +17464,9 @@
           "x_type": "homebodies"
         },
         "photos": {
-          "photo1": "/assets/samples/pregnancy-magazine-0.jpg"
+          "photo1": "/assets/samples/twelve-months-magazine-0.jpg",
+          "photo2": "/assets/samples/twelve-months-magazine-0b.jpg",
+          "photo3": "/assets/samples/twelve-months-magazine-0c.jpg"
         }
       }
     ],
@@ -17652,7 +17638,7 @@
           "x_type": "foodie"
         },
         "photos": {
-          "photo1": "/assets/samples/first-birthday-magazine-0.jpg"
+          "photo1": "/assets/samples/first-birthday-magazine-2.jpg"
         }
       },
       {
@@ -18058,9 +18044,7 @@
           "x_type": "sporty"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-0.jpg",
-          "photo2": "/assets/samples/birthday-magazine-0b.jpg",
-          "photo3": "/assets/samples/birthday-magazine-0c.jpg"
+          "photo1": "/assets/samples/new-job-magazine-1.jpg"
         }
       },
       {
@@ -18266,7 +18250,9 @@
           "x_type": "sporty"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+          "photo1": "/assets/samples/milestone-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/milestone-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/milestone-birthday-magazine-0c.jpg"
         }
       },
       {
@@ -18289,7 +18275,9 @@
           "x_type": "party"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+          "photo1": "/assets/samples/mothers-day-magazine-0.jpg",
+          "photo2": "/assets/samples/mothers-day-magazine-0b.jpg",
+          "photo3": "/assets/samples/mothers-day-magazine-0c.jpg"
         }
       }
     ],
@@ -18472,7 +18460,7 @@
           "x_type": "party"
         },
         "photos": {
-          "photo1": "/assets/samples/mum-birthday-magazine-0.jpg"
+          "photo1": "/assets/samples/mothers-day-magazine-2.jpg"
         }
       },
       {
@@ -18495,7 +18483,7 @@
           "x_type": "adventurer"
         },
         "photos": {
-          "photo1": "/assets/samples/milestone-birthday-magazine-0.jpg"
+          "photo1": "/assets/samples/milestone-birthday-magazine-1.jpg"
         }
       }
     ],
@@ -18690,9 +18678,7 @@
           "x_type": "carer"
         },
         "photos": {
-          "photo1": "/assets/samples/milestone-birthday-magazine-0.jpg",
-          "photo2": "/assets/samples/milestone-birthday-magazine-0b.jpg",
-          "photo3": "/assets/samples/milestone-birthday-magazine-0c.jpg"
+          "photo1": "/assets/samples/grandparents-newspaper-2.jpg"
         }
       },
       {
@@ -18906,7 +18892,9 @@
           "x_type": "carer"
         },
         "photos": {
-          "photo1": "/assets/samples/grandparents-magazine-0.jpg"
+          "photo1": "/assets/samples/grandparents-newspaper-0.jpg",
+          "photo2": "/assets/samples/grandparents-newspaper-0b.jpg",
+          "photo3": "/assets/samples/grandparents-newspaper-0c.jpg"
         }
       },
       {
@@ -19313,7 +19301,7 @@
           "x_type": "calm"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+          "photo1": "/assets/samples/fathers-day-magazine-1.jpg"
         }
       },
       {
@@ -19729,7 +19717,7 @@
           "x_type": "creative"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+          "photo1": "/assets/samples/star-sign-birthday-magazine-3.jpg"
         }
       },
       {
@@ -19751,7 +19739,9 @@
           "x_type": "gogetter"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+          "photo1": "/assets/samples/twenty-first-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/twenty-first-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/twenty-first-birthday-magazine-0c.jpg"
         }
       }
     ],
@@ -19926,7 +19916,7 @@
           "x_type": "carer"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+          "photo1": "/assets/samples/star-sign-birthday-magazine-2.jpg"
         }
       },
       {
@@ -20123,7 +20113,7 @@
           "x_type": "calm"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+          "photo1": "/assets/samples/star-sign-birthday-magazine-1.jpg"
         }
       },
       {
@@ -20145,7 +20135,9 @@
           "x_type": "adventurer"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+          "photo1": "/assets/samples/star-sign-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/star-sign-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/star-sign-birthday-magazine-0c.jpg"
         }
       }
     ],
@@ -20320,7 +20312,9 @@
           "x_type": "gogetter"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+          "photo1": "/assets/samples/luxury-lifestyle-magazine-0.jpg",
+          "photo2": "/assets/samples/luxury-lifestyle-magazine-0b.jpg",
+          "photo3": "/assets/samples/luxury-lifestyle-magazine-0c.jpg"
         }
       },
       {
@@ -20342,7 +20336,7 @@
           "x_type": "creative"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+          "photo1": "/assets/samples/new-job-magazine-2.jpg"
         }
       }
     ],
@@ -20736,7 +20730,9 @@
           "x_type": "creative"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+          "photo1": "/assets/samples/born-on-this-day-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/born-on-this-day-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/born-on-this-day-birthday-magazine-0c.jpg"
         }
       }
     ],
@@ -20933,7 +20929,9 @@
           "x_type": "gogetter"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+          "photo1": "/assets/samples/eighteenth-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/eighteenth-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/eighteenth-birthday-magazine-0c.jpg"
         }
       }
     ],
@@ -21108,7 +21106,7 @@
           "x_type": "carer"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+          "photo1": "/assets/samples/mothers-day-magazine-1.jpg"
         }
       },
       {
@@ -21130,7 +21128,7 @@
           "x_type": "calm"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+          "photo1": "/assets/samples/star-sign-birthday-magazine-3.jpg"
         }
       }
     ],
@@ -21305,7 +21303,7 @@
           "x_type": "sporty"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+          "photo1": "/assets/samples/thank-you-magazine-1.jpg"
         }
       },
       {
@@ -21327,7 +21325,9 @@
           "x_type": "calm"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+          "photo1": "/assets/samples/birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/birthday-magazine-0c.jpg"
         }
       }
     ],
@@ -21524,7 +21524,9 @@
           "x_type": "adventurer"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+          "photo1": "/assets/samples/valentines-magazine-0.jpg",
+          "photo2": "/assets/samples/valentines-magazine-0b.jpg",
+          "photo3": "/assets/samples/valentines-magazine-0c.jpg"
         }
       }
     ],
@@ -21699,7 +21701,7 @@
           "x_type": "gogetter"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+          "photo1": "/assets/samples/new-job-magazine-1.jpg"
         }
       },
       {
@@ -21721,7 +21723,9 @@
           "x_type": "gogetter"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+          "photo1": "/assets/samples/boss-lady-magazine-0.jpg",
+          "photo2": "/assets/samples/boss-lady-magazine-0b.jpg",
+          "photo3": "/assets/samples/boss-lady-magazine-0c.jpg"
         }
       }
     ],
@@ -21918,7 +21922,9 @@
           "x_type": "carer"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+          "photo1": "/assets/samples/new-job-magazine-0.jpg",
+          "photo2": "/assets/samples/new-job-magazine-0b.jpg",
+          "photo3": "/assets/samples/new-job-magazine-0c.jpg"
         }
       }
     ],
@@ -22093,7 +22099,9 @@
           "x_type": "calm"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+          "photo1": "/assets/samples/retirement-magazine-0.jpg",
+          "photo2": "/assets/samples/retirement-magazine-0b.jpg",
+          "photo3": "/assets/samples/retirement-magazine-0c.jpg"
         }
       },
       {
@@ -22115,7 +22123,7 @@
           "x_type": "carer"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+          "photo1": "/assets/samples/retirement-magazine-1.jpg"
         }
       }
     ],
@@ -22272,28 +22280,6 @@
         }
       },
       {
-        "id": "chris",
-        "palette": "sky",
-        "portrait": {
-          "skin": 1,
-          "hair": "short",
-          "hairColor": "#3b2418"
-        },
-        "values": {
-          "name": "Chris",
-          "from": "Emma",
-          "ward": "Accident and emergency",
-          "years": "Eight",
-          "kit": "Coffee, coffee, coffee",
-          "why": "He wanted to make a difference",
-          "x_who": "partner",
-          "x_type": "calm"
-        },
-        "photos": {
-          "photo1": "/assets/samples/birthday-magazine-2.jpg"
-        }
-      },
-      {
         "id": "ava",
         "palette": "rose",
         "portrait": {
@@ -22312,7 +22298,9 @@
           "x_type": "carer"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+          "photo1": "/assets/samples/thank-you-magazine-0.jpg",
+          "photo2": "/assets/samples/thank-you-magazine-0b.jpg",
+          "photo3": "/assets/samples/thank-you-magazine-0c.jpg"
         }
       }
     ],
@@ -22685,7 +22673,7 @@
           "x_type": "calm"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+          "photo1": "/assets/samples/retirement-magazine-2.jpg"
         }
       },
       {
@@ -22707,7 +22695,9 @@
           "x_type": "carer"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+          "photo1": "/assets/samples/nurse-magazine-0.jpg",
+          "photo2": "/assets/samples/nurse-magazine-0b.jpg",
+          "photo3": "/assets/samples/nurse-magazine-0c.jpg"
         }
       }
     ],
@@ -22882,7 +22872,7 @@
           "x_type": "gogetter"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+          "photo1": "/assets/samples/valentines-magazine-2.jpg"
         }
       },
       {
@@ -22904,7 +22894,9 @@
           "x_type": "creative"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+          "photo1": "/assets/samples/birthday-queen-magazine-0.jpg",
+          "photo2": "/assets/samples/birthday-queen-magazine-0b.jpg",
+          "photo3": "/assets/samples/birthday-queen-magazine-0c.jpg"
         }
       }
     ],
@@ -23079,7 +23071,7 @@
           "x_type": "carer"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+          "photo1": "/assets/samples/new-home-magazine-1.jpg"
         }
       },
       {
@@ -23101,7 +23093,7 @@
           "x_type": "calm"
         },
         "photos": {
-          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+          "photo1": "/assets/samples/valentines-magazine-1.jpg"
         }
       }
     ],

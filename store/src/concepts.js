@@ -327,7 +327,7 @@ export function applyConcept(H, v) {
   if (P) {
     if (!O.world) out.world = { ...H.world, items: [...P.world, 'And the one and only {who}.'] };
     if (!H.promises?.own && !O.promises) out.promises = { ...H.promises, items: P.promises };
-    if (!O.picks) out.picks = { ...H.picks, items: P.picks };
+    if (!O.picks && !H.picks?.items?.length) out.picks = { ...H.picks, items: P.picks };
   }
   return out;
 }
