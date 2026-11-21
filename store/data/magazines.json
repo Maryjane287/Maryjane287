@@ -15060,7 +15060,7 @@
           "born": "1 August 2025",
           "from": "Mama and Papa",
           "smile": "Week five, in the bath",
-          "word": "\"More\"",
+          "word": "More",
           "steps": "Twelve months, at the party",
           "loves": "Peekaboo, forever",
           "x_type": "foodie"
@@ -16880,7 +16880,7 @@
           "age": "11",
           "from": "Mummy",
           "toy": "Teddy, now one eyed",
-          "saying": "\"I am not tired, I am just resting\"",
+          "saying": "I am not tired, I am just resting",
           "phase": "The princess years",
           "now": "Dancing and her friends",
           "x_type": "performer"
@@ -17061,7 +17061,7 @@
           "age": "4",
           "from": "Mummy and Mama",
           "day": "2 June 2025",
-          "first": "\"Can I keep the cat?\"",
+          "first": "Can I keep the cat?",
           "ritual": "Dancing in the kitchen",
           "love": "Her big new bed",
           "x_type": "chatterbox"
@@ -17083,7 +17083,7 @@
           "age": "8",
           "from": "Dad",
           "day": "20 October 2023",
-          "first": "\"Is this my room?\"",
+          "first": "Is this my room?",
           "ritual": "Football on Sundays",
           "love": "Building dens",
           "x_type": "builder"
@@ -17565,7 +17565,7 @@
       {
         "id": "word",
         "label": "Favourite word right now",
-        "example": "\"Again!\"",
+        "example": "Again!",
         "max": 24
       },
       {
@@ -17623,7 +17623,7 @@
           "name": "Leo",
           "age": "2",
           "from": "Mummy and Daddy",
-          "word": "\"Again!\"",
+          "word": "Again!",
           "adventure": "Feeding the ducks",
           "snack": "Raisins, one at a time",
           "x_type": "menace"
@@ -17646,7 +17646,7 @@
           "name": "Ava",
           "age": "1",
           "from": "Grandma",
-          "word": "\"Dog!\"",
+          "word": "Dog!",
           "adventure": "Splashing in puddles",
           "snack": "Banana, always banana",
           "x_type": "foodie"
@@ -17667,7 +17667,7 @@
           "name": "Mia",
           "age": "3",
           "from": "Mum and Dad",
-          "word": "\"Why?\"",
+          "word": "Why?",
           "adventure": "The big slide",
           "snack": "Cheese, any cheese",
           "x_type": "diva"
@@ -19652,7 +19652,7 @@
       {
         "id": "catchphrase",
         "label": "Their catchphrase",
-        "example": "\"It is giving\"",
+        "example": "It is giving",
         "max": 30
       },
       {
@@ -19700,7 +19700,7 @@
           "entrance": "Sunglasses on, coffee in hand, ten minutes late",
           "soundtrack": "Anything with a big chorus",
           "twist": "Quit the job, moved to Lisbon",
-          "catchphrase": "\"It is giving\"",
+          "catchphrase": "It is giving",
           "x_who": "bestie",
           "x_type": "party"
         },
@@ -19724,7 +19724,7 @@
           "entrance": "Arms wide, \"I am HERE\"",
           "soundtrack": "Old school hip hop",
           "twist": "Learned to cook, finally",
-          "catchphrase": "\"Trust the process\"",
+          "catchphrase": "Trust the process",
           "x_who": "partner",
           "x_type": "creative"
         },
@@ -19746,7 +19746,7 @@
           "entrance": "Through the door laughing",
           "soundtrack": "Afrobeats, loudly",
           "twist": "Started her own brand",
-          "catchphrase": "\"We move\"",
+          "catchphrase": "We move",
           "x_who": "friend",
           "x_type": "gogetter"
         },
