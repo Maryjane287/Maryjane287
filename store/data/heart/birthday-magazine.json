@@ -308,5 +308,33 @@
     ],
     "wish": "Happy birthday, {who}. Here is to you."
   },
-  "concepts": true
+  "concepts": true,
+  "sig": {
+    "style": "cards",
+    "kicker": "The birthday brief",
+    "title": "How to celebrate {first}",
+    "intro": "A field manual for anyone lucky enough to be invited.",
+    "items": [
+      [
+        "Bring",
+        "Their obsession",
+        "{obsession}"
+      ],
+      [
+        "Expect",
+        "A hidden talent",
+        "{talent}"
+      ],
+      [
+        "Say",
+        "Three words",
+        "{words}"
+      ],
+      [
+        "Never",
+        "Let them pay",
+        "Not on their birthday. Not this year."
+      ]
+    ]
+  }
 }

@@ -91,6 +91,7 @@ p { margin: 0 0 1em; }
 
 /* Magazine cards */
 .mag-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; max-width: 1280px; margin: 0 auto; }
+.mag-more-wrap { text-align: center; margin: 28px 0 0; }
 .mag-card { text-decoration: none; background: var(--paper); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform .3s cubic-bezier(.2, .8, .2, 1), box-shadow .3s; display: flex; flex-direction: column; }
 .mag-card:hover { transform: translateY(-8px) rotate(-1deg); box-shadow: 0 30px 50px -20px rgba(29, 26, 47, .45); }
 .mag-card-cover { padding: 26px 30px 0; background: var(--tint); }
@@ -216,6 +217,9 @@ p { margin: 0 0 1em; }
 .tier-opt span { flex: 1; }
 .consent { font-size: 15px; display: flex; gap: 10px; align-items: flex-start; }
 .consent input { accent-color: var(--coral); margin-top: 5px; }
+.proof-check { padding: 14px 16px; border-radius: 14px; background: color-mix(in srgb, var(--coral) 8%, #fff); border: 1px solid color-mix(in srgb, var(--coral) 25%, transparent); font-size: 15px; }
+.proof-check ul { margin: 6px 0 6px; padding-left: 20px; }
+.proof-check small { opacity: .8; }
 .hp { position: absolute; left: -9999px; }
 .maker-preview { position: sticky; top: 86px; }
 .preview-tabs { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }

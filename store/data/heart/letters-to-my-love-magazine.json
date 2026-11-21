@@ -365,5 +365,33 @@
     "DIAMOND",
     "FOREVER",
     "ENGAGED"
-  ]
+  ],
+  "sig": {
+    "style": "statement",
+    "kicker": "The last letter",
+    "title": "{dear},",
+    "intro": "One more, for the end.",
+    "items": [
+      [
+        "",
+        "{_first}",
+        ""
+      ],
+      [
+        "",
+        "{future}",
+        ""
+      ],
+      [
+        "",
+        "Every letter in here is true.",
+        ""
+      ],
+      [
+        "",
+        "Yours, always.",
+        ""
+      ]
+    ]
+  }
 }

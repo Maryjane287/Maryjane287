@@ -295,5 +295,33 @@
     ],
     "wish": "Merry first Christmas, {who}."
   },
-  "concepts": "couple"
+  "concepts": "couple",
+  "sig": {
+    "style": "timeline",
+    "kicker": "Our first Christmas",
+    "title": "The day, hour by hour",
+    "intro": "Christmas {year}, starring {names}.",
+    "items": [
+      [
+        "Morning",
+        "Where we woke up",
+        "{where}"
+      ],
+      [
+        "Afternoon",
+        "New tradition",
+        "{tradition}"
+      ],
+      [
+        "Evening",
+        "The jumper award",
+        "{jumper}"
+      ],
+      [
+        "Midnight",
+        "Already planning",
+        "Next year, and every year after."
+      ]
+    ]
+  }
 }

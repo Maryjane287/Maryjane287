@@ -290,5 +290,33 @@
     ],
     "wish": "Happy birthday, {who}. Go and be brilliant."
   },
-  "concepts": true
+  "concepts": true,
+  "sig": {
+    "style": "cards",
+    "kicker": "Your adult starter pack",
+    "title": "Officially grown up",
+    "intro": "Everything {first} needs for life after eighteen.",
+    "items": [
+      [
+        "Most likely to",
+        "The prediction",
+        "{likely}"
+      ],
+      [
+        "The dream",
+        "Next stop",
+        "{dream}"
+      ],
+      [
+        "Hidden talent",
+        "Impressive",
+        "{talent}"
+      ],
+      [
+        "Rule one",
+        "From us",
+        "Call home. Often. We mean it."
+      ]
+    ]
+  }
 }

@@ -309,5 +309,33 @@
     ],
     "wish": "Merry Christmas, {who}. Here is to many more."
   },
-  "concepts": "family"
+  "concepts": "family",
+  "sig": {
+    "style": "timeline",
+    "kicker": "The big day",
+    "title": "Christmas Day at {family}",
+    "intro": "How the best day of the year really goes in this house.",
+    "items": [
+      [
+        "7am",
+        "The stocking raid",
+        "Someone is always up first. Nobody admits who."
+      ],
+      [
+        "11am",
+        "The tradition",
+        "{tradition}"
+      ],
+      [
+        "2pm",
+        "Dinner is served",
+        "{dinner}"
+      ],
+      [
+        "8pm",
+        "The naughty list",
+        "{naughty}"
+      ]
+    ]
+  }
 }

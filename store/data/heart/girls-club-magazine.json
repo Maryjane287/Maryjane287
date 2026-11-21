@@ -368,5 +368,33 @@
     ],
     "letters": "Little Things Our Girls Do"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "timeline",
+    "kicker": "Club history",
+    "title": "{first}, since {since}",
+    "intro": "{count} members. One group chat. Zero quiet moments.",
+    "items": [
+      [
+        "{since}",
+        "Founded",
+        "The day it all began."
+      ],
+      [
+        "The chat",
+        "Group name",
+        "{chat}"
+      ],
+      [
+        "HQ",
+        "Our spot",
+        "{spot}"
+      ],
+      [
+        "Forever",
+        "We are",
+        "{words}"
+      ]
+    ]
+  }
 }

@@ -368,5 +368,33 @@
       "You turned the flooded tent into a story, not a disaster."
     ],
     "letters": "Little Holiday Moments"
+  },
+  "sig": {
+    "style": "timeline",
+    "kicker": "The holiday diary",
+    "title": "{days} days in {place}",
+    "intro": "Starring {who}.",
+    "items": [
+      [
+        "Day one",
+        "Arrived",
+        "Car unpacked in record time. Nearly."
+      ],
+      [
+        "Best meal",
+        "Every day",
+        "{meal}"
+      ],
+      [
+        "Best view",
+        "Remember this",
+        "{view}"
+      ],
+      [
+        "The disaster",
+        "Now a legend",
+        "{lost}"
+      ]
+    ]
   }
 }

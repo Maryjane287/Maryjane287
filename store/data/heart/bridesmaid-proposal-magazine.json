@@ -297,5 +297,33 @@
     "wish": "{who}, will you be my bridesmaid?"
   },
   "concepts": true,
-  "conceptWho": "bestie"
+  "conceptWho": "bestie",
+  "sig": {
+    "style": "statement",
+    "kicker": "The question",
+    "title": "{first}, will you be my bridesmaid?",
+    "intro": "Fifteen pages of evidence, one simple ask.",
+    "items": [
+      [
+        "",
+        "Since {met}",
+        ""
+      ],
+      [
+        "",
+        "You will {trouble} at the wedding.",
+        ""
+      ],
+      [
+        "",
+        "We will sing {song}.",
+        ""
+      ],
+      [
+        "",
+        "Say yes. Please say yes.",
+        ""
+      ]
+    ]
+  }
 }

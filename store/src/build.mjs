@@ -102,11 +102,11 @@ ${body}
       <p>Personalised magazines for the people you love. Made in minutes, kept forever.</p>
       <p class="currency">Prices in <button type="button" data-cur="gbp">£ GBP</button> <button type="button" data-cur="usd">$ USD</button></p>
     </div>
-    <div class="foot-mags"><h4>Magazines</h4><div class="foot-mag-list">${mags.map(m => `<a href="/${m.slug}/">${esc(m.title)}</a>`).join('')}</div></div>
+    <div class="foot-mags"><h4>Magazines</h4><div class="foot-mag-list">${mags.slice(0, 12).map(m => `<a href="/${m.slug}/">${esc(m.title)}</a>`).join('')}<a href="/#magazines"><b>See all ${mags.length} magazines</b></a></div></div>
     <div><h4>Help</h4><a href="/help/">Delivery and FAQ</a><a href="/ideas/">Gift ideas</a><a href="/about/">About us</a><a href="/contact/">Contact us</a><a href="mailto:${esc(site.email)}">${esc(site.email)}</a></div>
     <div><h4>The small print</h4><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/refunds/">Refunds</a>${socialLinks ? `<h4 class="foot-follow">Follow us</h4>${socialLinks}` : ''}</div>
   </div>
-  <p class="legal">&copy; ${new Date().getFullYear()} ${esc(site.name)} is a trading name of ${esc(site.company)}, a company registered in the United Kingdom, number ${esc(site.companyNumber)}.</p>
+  <p class="legal">&copy; ${new Date().getFullYear()} ${esc(site.name)} is a trading name of ${esc(site.company)}, a company registered in Scotland, number ${esc(site.companyNumber)}.</p>
 </footer>
 <script src="/assets/site.js" type="module"></script>
 ${scripts}
@@ -304,6 +304,7 @@ ${tickerHtml}
   <div class="section-head"><p class="kicker">Pick a magazine</p><h2>Which story are you telling?</h2></div>
   ${filterBar}
   <div class="mag-grid">${cards}</div>
+  <p class="mag-more-wrap"><button type="button" class="btn btn-ghost mag-more" hidden>See all magazines</button></p>
 </section>
 <section class="section section-tint">
   <div class="section-head"><p class="kicker">How it works</p><h2>A gift that feels handmade, without the hours</h2></div>
@@ -479,7 +480,8 @@ async function makerPage() {
           <p class="small gift-print" hidden>Printed gifts go straight to them: just type their address at the printer's checkout.</p>
         </fieldset>
         <label class="field"><span>Where is it going?</span><select name="country" required>${countries.map(c => `<option>${c}</option>`).join('')}</select></label>
-        <label class="consent"><input type="checkbox" name="consent" required> <span>I agree to the <a href="/terms/" target="_blank">terms</a> and <a href="/privacy/" target="_blank">privacy policy</a>, and have permission to use these photos.</span></label>
+        <div class="proof-check"><b>Before you order, flip through the preview and check:</b><ul><li>Every name is spelled the way they like it</li><li>Dates, ages and numbers are right</li><li>Each photo is clear and the right way up</li></ul><small>Spot something after you order? Tell us and we fix it free.</small></div>
+        <label class="consent"><input type="checkbox" name="consent" required> <span>I agree to the <a href="/terms/" target="_blank">terms</a> and <a href="/privacy/" target="_blank">privacy policy</a>, and have permission to use these photos. I understand my magazine is made just for me and the PDF arrives straight away, so the usual 14 day cancellation right ends once it is delivered.</span></label>
         <button class="btn btn-big" type="submit">Place my order</button>
         <p class="small" id="pay-note">Next, you pay securely. Your magazine is ready to download the moment you have paid, and we email it to you too.</p>
         <p class="small order-progress" id="order-progress" hidden></p>
@@ -568,7 +570,7 @@ async function simplePages() {
       </ul>
       <h2>Talk to us</h2>
       <p>We are a small team and we read every message. Email <a href="mailto:${esc(site.email)}">${esc(site.email)}</a> and we usually reply within a day.</p>
-      <p class="small">${esc(site.name)} is a trading name of ${esc(site.company)}, a company registered in the United Kingdom (company number ${esc(site.companyNumber)}).</p>`),
+      <p class="small">${esc(site.name)} is a trading name of ${esc(site.company)}, a company registered in Scotland (company number ${esc(site.companyNumber)}).</p>`),
   }));
   await page('/privacy/', layout({
     title: 'Privacy policy', description: 'How we look after your answers, photos and details.', path: '/privacy/',
@@ -597,7 +599,7 @@ async function simplePages() {
       <p>We are a small team and we read every message ourselves. Whether you have a question before you order, want to change something, or something is not quite right, we would love to hear from you.</p>
       <h2>Email us</h2><p><a class="btn" href="mailto:${esc(site.email)}">${esc(site.email)}</a></p><p>We usually reply within one working day. If your message is about an order, please include the email address you ordered with.</p>
       <h2>Quick answers</h2><ul class="ticks"><li><a href="/help/">Delivery times and questions</a></li><li><a href="/refunds/">Refunds and reprints</a></li><li><a href="/privacy/">How we look after your photos</a></li></ul>
-      <p class="small">${esc(site.name)} is a trading name of ${esc(site.company)}, a company registered in the United Kingdom (company number ${esc(site.companyNumber)}).</p>`),
+      <p class="small">${esc(site.name)} is a trading name of ${esc(site.company)}, a company registered in Scotland (company number ${esc(site.companyNumber)}).</p>`),
   }));
   await page('/refunds/', layout({
     title: 'Refunds and reprints', description: 'Our promise if anything is wrong with your magazine: we fix it, reprint it or refund you.', path: '/refunds/',

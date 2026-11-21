@@ -289,5 +289,33 @@
     ],
     "wish": "Congratulations, {who}. Go and be brilliant."
   },
-  "concepts": true
+  "concepts": true,
+  "sig": {
+    "style": "cards",
+    "kicker": "Welcome pack",
+    "title": "{first}, {job}",
+    "intro": "Your official induction, from people who knew you would do it.",
+    "items": [
+      [
+        "Secret weapon",
+        "Brings to work",
+        "{weapon}"
+      ],
+      [
+        "Fuel",
+        "Coffee order",
+        "{coffee}"
+      ],
+      [
+        "Start date",
+        "The big day",
+        "{year}"
+      ],
+      [
+        "Reputation",
+        "Already known as",
+        "{words}"
+      ]
+    ]
+  }
 }

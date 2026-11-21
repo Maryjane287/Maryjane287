@@ -369,5 +369,33 @@
     "promises": true,
     "picks": true
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "Birth certificate",
+    "title": "{born}",
+    "intro": "The day the world got {first}.",
+    "items": [
+      [
+        "Where",
+        "Born at",
+        "{where}"
+      ],
+      [
+        "Weight",
+        "Arrived at",
+        "{weight}"
+      ],
+      [
+        "Number one",
+        "The song",
+        "{song}"
+      ],
+      [
+        "A loaf of bread",
+        "Cost",
+        "{loaf}"
+      ]
+    ]
+  }
 }

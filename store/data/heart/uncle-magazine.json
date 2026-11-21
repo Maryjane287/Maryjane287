@@ -368,5 +368,33 @@
     ],
     "letters": "Little Things That Make Him the Coolest"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "The uncle handbook",
+    "title": "How to be {first}",
+    "intro": "Learned by {kids} lucky kids.",
+    "items": [
+      [
+        "Joke",
+        "Told every visit",
+        "{joke}"
+      ],
+      [
+        "Skill",
+        "Party trick",
+        "{skill}"
+      ],
+      [
+        "Taught us",
+        "Life lesson",
+        "{taught}"
+      ],
+      [
+        "In three words",
+        "He is",
+        "{words}"
+      ]
+    ]
+  }
 }

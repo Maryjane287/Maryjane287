@@ -4,8 +4,15 @@ const store = {
   set(k, v) { try { localStorage.setItem(k, v); } catch {} },
 };
 
-// Prices show in US dollars unless the visitor picks pounds in the footer.
-function guessCurrency() { return 'usd'; }
+// Visitors in the UK see pounds, everyone else US dollars. The footer switch overrides it.
+function guessCurrency() {
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+    const langs = navigator.languages || [navigator.language || ''];
+    if (/^Europe\/(London|Belfast|Guernsey|Isle_of_Man|Jersey|Gibraltar)$/.test(tz) || langs.some(l => /-GB$/i.test(l))) return 'gbp';
+  } catch {}
+  return 'usd';
+}
 
 export function setCurrency(cur) {
   store.set('cur', cur);
@@ -72,8 +79,21 @@ if (window.PIN_TAG_ID) {
     if (!b) return;
     const f = b.dataset.f;
     bar.querySelectorAll('button').forEach(x => { const on = x === b; x.classList.toggle('on', on); x.setAttribute('aria-pressed', String(on)); });
-    cards.forEach(c => { const show = f === 'all' || c.dataset.tags.split(' ').includes(f); c.hidden = !show; if (show) { c.classList.remove('pop'); void c.offsetWidth; c.classList.add('pop'); } });
+    show(f, false);
   });
+  // Show a first handful, then everything on request, so phones are not scrolling for ever.
+  const more = document.querySelector('.mag-more');
+  const FIRST = 12;
+  let current = 'all';
+  function show(f, all) {
+    current = f;
+    const match = cards.filter(c => f === 'all' || c.dataset.tags.split(' ').includes(f));
+    cards.forEach(c => { c.hidden = true; });
+    match.forEach((c, i) => { const on = all || i < FIRST; c.hidden = !on; if (on) { c.classList.remove('pop'); void c.offsetWidth; c.classList.add('pop'); } });
+    if (more) { more.hidden = all || match.length <= FIRST; more.textContent = `See all ${match.length} magazines`; }
+  }
+  if (more) more.addEventListener('click', () => show(current, true));
+  show('all', false);
 })();
 
 // Email sign up: sends to Netlify Forms without leaving the page.

@@ -368,5 +368,33 @@
     "promises": true,
     "picks": true
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "New parent stats",
+    "title": "Life with {baby}",
+    "intro": "A survival guide, by {first}.",
+    "items": [
+      [
+        "Born",
+        "The day",
+        "{born}"
+      ],
+      [
+        "Sleep",
+        "Hours per night",
+        "{hours}"
+      ],
+      [
+        "Surprise",
+        "Nobody warned us",
+        "{surprise}"
+      ],
+      [
+        "Love",
+        "Amount",
+        "Beyond measuring"
+      ]
+    ]
+  }
 }

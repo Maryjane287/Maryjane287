@@ -302,5 +302,33 @@
     ],
     "wish": "Thank you, {who}. Enjoy every minute."
   },
-  "concepts": true
+  "concepts": true,
+  "sig": {
+    "style": "timeline",
+    "kicker": "The career",
+    "title": "{years} years of {first}",
+    "intro": "A working life, remembered by the people who shared it.",
+    "items": [
+      [
+        "The job",
+        "Known as",
+        "{job}"
+      ],
+      [
+        "The legend",
+        "Famous for",
+        "{known}"
+      ],
+      [
+        "The goodbye",
+        "What we will miss",
+        "{miss}"
+      ],
+      [
+        "Next",
+        "Retirement plans",
+        "{plans}"
+      ]
+    ]
+  }
 }

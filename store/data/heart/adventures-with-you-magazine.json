@@ -365,5 +365,33 @@
     "DIAMOND",
     "FOREVER",
     "ENGAGED"
-  ]
+  ],
+  "sig": {
+    "style": "cards",
+    "kicker": "The passport stamps",
+    "title": "{trips} trips together",
+    "intro": "The world, seen by two.",
+    "items": [
+      [
+        "Best trip",
+        "Unforgettable",
+        "{best}"
+      ],
+      [
+        "Biggest fail",
+        "We still laugh",
+        "{fail}"
+      ],
+      [
+        "Next",
+        "Already booked (nearly)",
+        "{next}"
+      ],
+      [
+        "Always",
+        "We are",
+        "{words}"
+      ]
+    ]
+  }
 }

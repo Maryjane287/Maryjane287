@@ -367,5 +367,33 @@
     "picks": true
   },
   "conceptWho": "friend",
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "The star chart",
+    "title": "{first}, written in the stars",
+    "intro": "A cosmic profile.",
+    "items": [
+      [
+        "Sun",
+        "Sign",
+        "{sign}"
+      ],
+      [
+        "Rising",
+        "Ascendant",
+        "{rising}"
+      ],
+      [
+        "Signature trait",
+        "Very {sign}",
+        "{trait}"
+      ],
+      [
+        "Perfect match",
+        "Compatible with",
+        "{match}"
+      ]
+    ]
+  }
 }

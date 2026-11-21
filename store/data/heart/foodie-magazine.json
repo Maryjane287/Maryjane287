@@ -367,5 +367,33 @@
     "picks": true
   },
   "conceptWho": "friend",
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "The menu",
+    "title": "Chef {first} recommends",
+    "intro": "Tonight's specials, from our favourite foodie.",
+    "items": [
+      [
+        "Signature dish",
+        "Main course",
+        "{dish}"
+      ],
+      [
+        "Restaurant",
+        "Favourite table",
+        "{restaurant}"
+      ],
+      [
+        "Kitchen rule",
+        "Always",
+        "{rule}"
+      ],
+      [
+        "Comfort food",
+        "Tastes like home",
+        "{home}"
+      ]
+    ]
+  }
 }

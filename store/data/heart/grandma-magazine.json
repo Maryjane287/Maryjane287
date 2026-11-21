@@ -252,11 +252,11 @@
   },
   "quiz": [
     [
-      "Grandparents Day is celebrated in the UK in which month?",
+      "In many countries, what do grandparents give more than anyone else?",
       [
-        "October",
-        "March",
-        "July"
+        "Hugs and biscuits",
+        "Homework",
+        "Parking tickets"
       ],
       0
     ],
@@ -367,5 +367,33 @@
     ],
     "letters": "Little Things That Make Her, Her",
     "hand": "Every one of them noticed, {who}."
+  },
+  "sig": {
+    "style": "statement",
+    "kicker": "Grandma says",
+    "title": "Wisdom from {first}",
+    "intro": "Words her {grandkids} grandchildren know by heart.",
+    "items": [
+      [
+        "",
+        "{says}",
+        ""
+      ],
+      [
+        "",
+        "Her famous {dish}",
+        ""
+      ],
+      [
+        "",
+        "Her gift: {power}",
+        ""
+      ],
+      [
+        "",
+        "There is always room at the table.",
+        ""
+      ]
+    ]
   }
 }

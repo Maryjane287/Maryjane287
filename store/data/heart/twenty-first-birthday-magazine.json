@@ -369,5 +369,33 @@
     "picks": true
   },
   "conceptWho": "person",
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "Twenty one things",
+    "title": "{first} at twenty one",
+    "intro": "Twenty one and taking on the world.",
+    "items": [
+      [
+        "Living",
+        "Home base",
+        "{city}"
+      ],
+      [
+        "Dream",
+        "The plan",
+        "{dream}"
+      ],
+      [
+        "Crew",
+        "Ride or die",
+        "{crew}"
+      ],
+      [
+        "Signature drink",
+        "Order",
+        "{signature}"
+      ]
+    ]
+  }
 }

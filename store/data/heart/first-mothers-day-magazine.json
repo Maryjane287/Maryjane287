@@ -297,5 +297,33 @@
     "song": "My sleepy song",
     "power": "Her new superpower",
     "words": "Her, in three words"
+  },
+  "sig": {
+    "style": "timeline",
+    "kicker": "Her first year",
+    "title": "The day she became Mummy",
+    "intro": "From the first cuddle to this very first Mother's Day.",
+    "items": [
+      [
+        "{born}",
+        "Hello, {baby}",
+        "The moment everything changed."
+      ],
+      [
+        "Every night",
+        "The lullaby",
+        "{song}"
+      ],
+      [
+        "Every day",
+        "Her new superpower",
+        "{power}"
+      ],
+      [
+        "Today",
+        "Her first Mother's Day",
+        "And the first of many."
+      ]
+    ]
   }
 }

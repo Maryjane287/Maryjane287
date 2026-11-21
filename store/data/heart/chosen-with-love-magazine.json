@@ -366,5 +366,33 @@
     ],
     "letters": "Little Things That Make You Ours"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "timeline",
+    "kicker": "Our family day",
+    "title": "The day we became a family",
+    "intro": "{day}. The best day.",
+    "items": [
+      [
+        "{day}",
+        "The first hello",
+        "{_first}"
+      ],
+      [
+        "Every week",
+        "Our ritual",
+        "{ritual}"
+      ],
+      [
+        "Every night",
+        "Favourite thing",
+        "{love}"
+      ],
+      [
+        "Forever",
+        "Chosen",
+        "Loved from the very first moment."
+      ]
+    ]
+  }
 }

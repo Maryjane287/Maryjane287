@@ -308,5 +308,33 @@
     ],
     "wish": "Thank you, {who}. For every single day. Forever loved."
   },
-  "concepts": "gentlePet"
+  "concepts": "gentlePet",
+  "sig": {
+    "style": "statement",
+    "kicker": "Paw prints",
+    "title": "Where {first} still lives",
+    "intro": "In every corner of our home.",
+    "items": [
+      [
+        "",
+        "In {spot}",
+        ""
+      ],
+      [
+        "",
+        "In {habit}",
+        ""
+      ],
+      [
+        "",
+        "In {silly}",
+        ""
+      ],
+      [
+        "",
+        "In our hearts, always.",
+        ""
+      ]
+    ]
+  }
 }

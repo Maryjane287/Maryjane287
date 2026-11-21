@@ -302,5 +302,33 @@
     ],
     "wish": "Congratulations, {who}. The world is waiting."
   },
-  "concepts": true
+  "concepts": true,
+  "sig": {
+    "style": "timeline",
+    "kicker": "The journey",
+    "title": "From first day to graduation day",
+    "intro": "How {first} got here, one deadline at a time.",
+    "items": [
+      [
+        "Year one",
+        "The subject",
+        "{subject}"
+      ],
+      [
+        "Every night",
+        "Fuelled by",
+        "{fuel}"
+      ],
+      [
+        "{year}",
+        "The gown, the cap, the photo",
+        "We were in the crowd, cheering the loudest."
+      ],
+      [
+        "Next",
+        "What comes after",
+        "{next}"
+      ]
+    ]
+  }
 }

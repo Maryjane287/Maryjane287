@@ -368,5 +368,33 @@
     "promises": true,
     "picks": true
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "The sixteen edit",
+    "title": "{first} at sixteen",
+    "intro": "Style, sound and dreams.",
+    "items": [
+      [
+        "Style",
+        "Signature look",
+        "{style}"
+      ],
+      [
+        "Soundtrack",
+        "On repeat",
+        "{song}"
+      ],
+      [
+        "Dream",
+        "One day",
+        "{dream}"
+      ],
+      [
+        "Bestie",
+        "Ride or die",
+        "{bestie}"
+      ]
+    ]
+  }
 }

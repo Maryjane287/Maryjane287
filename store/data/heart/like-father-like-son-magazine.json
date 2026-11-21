@@ -365,5 +365,33 @@
     ],
     "letters": "Little Things I Got From You"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "Side by side",
+    "title": "Two of a kind",
+    "intro": "{first} and {son}, more alike every year.",
+    "items": [
+      [
+        "Same",
+        "We both",
+        "{same}"
+      ],
+      [
+        "Taught",
+        "Best lesson",
+        "{taught}"
+      ],
+      [
+        "Team",
+        "Our ritual",
+        "{team}"
+      ],
+      [
+        "In three words",
+        "Dad is",
+        "{words}"
+      ]
+    ]
+  }
 }

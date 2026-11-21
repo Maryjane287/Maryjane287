@@ -308,5 +308,33 @@
     ],
     "wish": "Wherever you go next, go together. Bon voyage, always."
   },
-  "concepts": "trip"
+  "concepts": "trip",
+  "sig": {
+    "style": "timeline",
+    "kicker": "The itinerary",
+    "title": "{days} days in {place}",
+    "intro": "The trip, day by day, mostly as planned.",
+    "items": [
+      [
+        "Day one",
+        "Arrival",
+        "Bags dropped, shoes off, straight out exploring."
+      ],
+      [
+        "Best meal",
+        "Still dreaming of",
+        "{meal}"
+      ],
+      [
+        "Best view",
+        "Worth the climb",
+        "{view}"
+      ],
+      [
+        "Got lost",
+        "Classic",
+        "{lost}"
+      ]
+    ]
+  }
 }

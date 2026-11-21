@@ -367,5 +367,33 @@
     "promises": true,
     "picks": true
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "statement",
+    "kicker": "Dear younger me",
+    "title": "Advice from forty",
+    "intro": "{first} looks back, and forward.",
+    "items": [
+      [
+        "",
+        "{younger}",
+        ""
+      ],
+      [
+        "",
+        "Proudest of: {proud}",
+        ""
+      ],
+      [
+        "",
+        "Still: {still}",
+        ""
+      ],
+      [
+        "",
+        "Next: {next}",
+        ""
+      ]
+    ]
+  }
 }

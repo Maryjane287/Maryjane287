@@ -367,5 +367,33 @@
     "picks": true
   },
   "conceptWho": "friend",
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "The luxe list",
+    "title": "Living like {first}",
+    "intro": "Champagne taste, golden heart.",
+    "items": [
+      [
+        "Dream escape",
+        "Destination",
+        "{destination}"
+      ],
+      [
+        "Indulgence",
+        "Weakness",
+        "{indulgence}"
+      ],
+      [
+        "Perfect treat",
+        "Self care",
+        "{treat}"
+      ],
+      [
+        "Goal",
+        "The dream",
+        "{goal}"
+      ]
+    ]
+  }
 }

@@ -119,9 +119,9 @@
       0
     ],
     [
-      "Which of these is the most popular first date in the UK?",
+      "Around the world, which first date do people choose most often?",
       [
-        "Dinner or drinks",
+        "Dinner",
         "Skydiving",
         "A museum at midnight"
       ],
@@ -365,5 +365,33 @@
     "DIAMOND",
     "FOREVER",
     "ENGAGED"
-  ]
+  ],
+  "sig": {
+    "style": "timeline",
+    "kicker": "The night it began",
+    "title": "{date}",
+    "intro": "Minute by minute, the first date of {names}.",
+    "items": [
+      [
+        "7pm",
+        "The place",
+        "{where}"
+      ],
+      [
+        "7.05pm",
+        "The outfit",
+        "{wore}"
+      ],
+      [
+        "9pm",
+        "First impressions",
+        "{_first}"
+      ],
+      [
+        "Since then",
+        "Everything",
+        "It was the start of everything."
+      ]
+    ]
+  }
 }

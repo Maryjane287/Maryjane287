@@ -304,5 +304,33 @@
     ],
     "wish": "Keep shining, {who}. The world needs you."
   },
-  "concepts": "kid"
+  "concepts": "kid",
+  "sig": {
+    "style": "cards",
+    "kicker": "Top secret",
+    "title": "The {first} files",
+    "intro": "Classified information about our favourite person aged {age}.",
+    "items": [
+      [
+        "Expert in",
+        "Special subject",
+        "{expert}"
+      ],
+      [
+        "When I grow up",
+        "The big plan",
+        "{dream}"
+      ],
+      [
+        "Famous for",
+        "True story",
+        "{fact}"
+      ],
+      [
+        "Age",
+        "Officially",
+        "{age} and totally awesome"
+      ]
+    ]
+  }
 }

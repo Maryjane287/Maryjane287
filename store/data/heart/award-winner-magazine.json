@@ -367,5 +367,33 @@
     "picks": true
   },
   "conceptWho": "friend",
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "statement",
+    "kicker": "The acceptance speech",
+    "title": "And the award goes to {first}",
+    "intro": "{award}.",
+    "items": [
+      [
+        "",
+        "For {for}",
+        ""
+      ],
+      [
+        "",
+        "Thank you to {thanks}",
+        ""
+      ],
+      [
+        "",
+        "Next: {next}",
+        ""
+      ],
+      [
+        "",
+        "We always knew.",
+        ""
+      ]
+    ]
+  }
 }

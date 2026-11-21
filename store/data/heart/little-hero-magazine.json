@@ -366,5 +366,33 @@
     ],
     "letters": "Little Heroic Things You Do"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "Hero profile",
+    "title": "{hero}",
+    "intro": "Secret identity: {first}, age {age}.",
+    "items": [
+      [
+        "Superpower",
+        "Special ability",
+        "{power}"
+      ],
+      [
+        "Sidekick",
+        "Never alone",
+        "{sidekick}"
+      ],
+      [
+        "Mission",
+        "Every day",
+        "{mission}"
+      ],
+      [
+        "Age",
+        "Hero since",
+        "{age}"
+      ]
+    ]
+  }
 }

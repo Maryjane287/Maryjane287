@@ -304,5 +304,33 @@
     ],
     "wish": "Welcome to the world, {first}. It is so glad you came."
   },
-  "concepts": "baby"
+  "concepts": "baby",
+  "sig": {
+    "style": "cards",
+    "kicker": "Birth announcement",
+    "title": "Hello, {first}",
+    "intro": "The first facts about the newest person in the world.",
+    "items": [
+      [
+        "Born",
+        "Arrival",
+        "{born}"
+      ],
+      [
+        "Weight",
+        "Perfectly sized",
+        "{weight}"
+      ],
+      [
+        "Looks like",
+        "Family resemblance",
+        "{looks}"
+      ],
+      [
+        "Loves",
+        "Already",
+        "{loves}"
+      ]
+    ]
+  }
 }

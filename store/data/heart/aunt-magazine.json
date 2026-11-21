@@ -368,5 +368,33 @@
     ],
     "letters": "Little Things That Make Her the Best"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "Aunt rules",
+    "title": "The {first} rule book",
+    "intro": "As followed by her {kids} favourite people.",
+    "items": [
+      [
+        "Rule one",
+        "Always",
+        "{rule}"
+      ],
+      [
+        "Best day out",
+        "Legendary",
+        "{treat}"
+      ],
+      [
+        "Top secret",
+        "She knows",
+        "{secret}"
+      ],
+      [
+        "In three words",
+        "She is",
+        "{words}"
+      ]
+    ]
+  }
 }

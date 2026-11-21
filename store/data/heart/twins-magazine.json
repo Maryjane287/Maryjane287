@@ -259,11 +259,11 @@
   "quizTitle": "How much do you know about babies?",
   "quiz": [
     [
-      "Roughly how many births in the UK are twins?",
+      "Around the world, roughly how many births are twins?",
       [
-        "About 1 in 65",
+        "About 1 in 60 to 80",
         "About 1 in 5",
-        "About 1 in 1,000"
+        "About 1 in 10,000"
       ],
       0
     ],
@@ -366,5 +366,33 @@
     ],
     "letters": "Little Things Only Twins Do"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "Twin facts",
+    "title": "Two of a kind",
+    "intro": "How to tell {first} apart, and why you never need to.",
+    "items": [
+      [
+        "Arrived first",
+        "By a whisker",
+        "{_first}"
+      ],
+      [
+        "Tell them apart",
+        "The clue",
+        "{tell}"
+      ],
+      [
+        "They both",
+        "Twin thing",
+        "{same}"
+      ],
+      [
+        "Born",
+        "Same day",
+        "{born}"
+      ]
+    ]
+  }
 }

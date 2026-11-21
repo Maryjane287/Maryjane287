@@ -261,11 +261,11 @@
       1
     ],
     [
-      "Mothering Sunday in the UK falls during which season?",
+      "Mother's Day is celebrated in how many countries around the world?",
       [
-        "Lent",
-        "Advent",
-        "Summer"
+        "More than 50",
+        "Just 3",
+        "Only one"
       ],
       0
     ]
@@ -366,5 +366,33 @@
       "You are the first person I call, every single time."
     ],
     "letters": "Things Only Mum and I Understand"
+  },
+  "sig": {
+    "style": "cards",
+    "kicker": "Mother and daughter",
+    "title": "{first} and {daughter}",
+    "intro": "Two best friends who happen to be family.",
+    "items": [
+      [
+        "Her advice",
+        "She always says",
+        "{says}"
+      ],
+      [
+        "Our thing",
+        "Favourite pastime",
+        "{dish}"
+      ],
+      [
+        "Family legend",
+        "Never forget",
+        "{power}"
+      ],
+      [
+        "In three words",
+        "She is",
+        "{words}"
+      ]
+    ]
   }
 }

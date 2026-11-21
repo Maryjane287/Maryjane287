@@ -367,5 +367,33 @@
     "picks": true
   },
   "conceptWho": "friend",
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "statement",
+    "kicker": "Favourite lines",
+    "title": "The life of a reader",
+    "intro": "{first}, in chapters.",
+    "items": [
+      [
+        "",
+        "Favourite book: {book}",
+        ""
+      ],
+      [
+        "",
+        "Kindred spirit: {character}",
+        ""
+      ],
+      [
+        "",
+        "Reading spot: {nook}",
+        ""
+      ],
+      [
+        "",
+        "One more chapter. Always one more chapter.",
+        ""
+      ]
+    ]
+  }
 }

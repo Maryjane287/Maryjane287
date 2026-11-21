@@ -261,11 +261,11 @@
       0
     ],
     [
-      "Grandparents Day is celebrated in the UK in which month?",
+      "What do families all over the world most often gather around?",
       [
-        "October",
-        "March",
-        "July"
+        "A table full of food",
+        "The washing machine",
+        "A spreadsheet"
       ],
       0
     ]
@@ -366,5 +366,33 @@
       "You carry the family's worries so we do not have to."
     ],
     "letters": "The Little Things She Does for All of Us"
+  },
+  "sig": {
+    "style": "statement",
+    "kicker": "Her rules",
+    "title": "The house rules of {first}",
+    "intro": "Followed by {grandkids} grandchildren, mostly.",
+    "items": [
+      [
+        "",
+        "{says}",
+        ""
+      ],
+      [
+        "",
+        "{dish}",
+        ""
+      ],
+      [
+        "",
+        "{power}",
+        ""
+      ],
+      [
+        "",
+        "Love each other. That is the main one.",
+        ""
+      ]
+    ]
   }
 }

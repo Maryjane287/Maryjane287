@@ -268,13 +268,13 @@
       0
     ],
     [
-      "Which finger is the wedding ring traditionally worn on in the UK?",
+      "Why is the wedding ring often worn on the fourth finger?",
       [
-        "The middle finger",
-        "The fourth finger of the left hand",
-        "The little finger"
+        "An old belief that its vein runs to the heart",
+        "It is the strongest finger",
+        "Rings only fit there"
       ],
-      1
+      0
     ]
   ],
   "words": [
@@ -297,5 +297,33 @@
     "wish": "Here is to you, {who}. Still the one."
   },
   "concepts": true,
-  "conceptWho": "partner"
+  "conceptWho": "partner",
+  "sig": {
+    "style": "cards",
+    "kicker": "Wife of the year",
+    "title": "The winning entry",
+    "intro": "Presented to {first} after {years} years of brilliance.",
+    "items": [
+      [
+        "Category",
+        "First date",
+        "{date}"
+      ],
+      [
+        "Category",
+        "Cutest habit",
+        "{cute}"
+      ],
+      [
+        "Category",
+        "Best song",
+        "{song}"
+      ],
+      [
+        "Winner",
+        "In three words",
+        "{words}"
+      ]
+    ]
+  }
 }

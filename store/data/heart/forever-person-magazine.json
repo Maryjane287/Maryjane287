@@ -365,5 +365,33 @@
     "DIAMOND",
     "FOREVER",
     "ENGAGED"
-  ]
+  ],
+  "sig": {
+    "style": "statement",
+    "kicker": "You are",
+    "title": "Why you are my person",
+    "intro": "Since {since}.",
+    "items": [
+      [
+        "",
+        "{home}",
+        ""
+      ],
+      [
+        "",
+        "{calm}",
+        ""
+      ],
+      [
+        "",
+        "Our thing: {ours}",
+        ""
+      ],
+      [
+        "",
+        "{words}",
+        ""
+      ]
+    ]
+  }
 }

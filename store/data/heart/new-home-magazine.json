@@ -306,5 +306,33 @@
     ],
     "wish": "Welcome home, {who}. May every day here be a happy one."
   },
-  "concepts": "family"
+  "concepts": "family",
+  "sig": {
+    "style": "timeline",
+    "kicker": "Moving day",
+    "title": "The first days at home",
+    "intro": "Keys in hand, boxes everywhere, hearts full.",
+    "items": [
+      [
+        "Day one",
+        "The first meal",
+        "{_first}"
+      ],
+      [
+        "Week one",
+        "Favourite room",
+        "{room}"
+      ],
+      [
+        "One day",
+        "The dream",
+        "{dream}"
+      ],
+      [
+        "Always",
+        "This place is",
+        "{words}"
+      ]
+    ]
+  }
 }

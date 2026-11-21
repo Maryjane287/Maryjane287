@@ -365,5 +365,33 @@
       "You tell the little ones the old stories."
     ],
     "letters": "Little Things Our Ancestors Left Us"
+  },
+  "sig": {
+    "style": "timeline",
+    "kicker": "Our roots",
+    "title": "{family}, since {year}",
+    "intro": "Where we come from, and what we carry.",
+    "items": [
+      [
+        "{year}",
+        "The origin",
+        "{origin}"
+      ],
+      [
+        "Our name",
+        "It means",
+        "{meaning}"
+      ],
+      [
+        "Tradition",
+        "Still today",
+        "{tradition}"
+      ],
+      [
+        "Next",
+        "Passed on",
+        "To every generation that follows."
+      ]
+    ]
   }
 }

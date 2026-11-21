@@ -366,5 +366,33 @@
     ],
     "letters": "Little Things We Loved This Year"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "timeline",
+    "kicker": "Month by month",
+    "title": "Twelve months of {first}",
+    "intro": "Born {born}. Growing every single day.",
+    "items": [
+      [
+        "First smile",
+        "We melted",
+        "{smile}"
+      ],
+      [
+        "First word",
+        "Proud moment",
+        "{word}"
+      ],
+      [
+        "First steps",
+        "Off they go",
+        "{steps}"
+      ],
+      [
+        "Favourite thing",
+        "Pure joy",
+        "{loves}"
+      ]
+    ]
+  }
 }

@@ -303,5 +303,33 @@
     ],
     "wish": "Congratulations, {who}. Here is to the next chapter."
   },
-  "concepts": "couple"
+  "concepts": "couple",
+  "sig": {
+    "style": "statement",
+    "kicker": "The question",
+    "title": "They asked. They said yes.",
+    "intro": "{where}",
+    "items": [
+      [
+        "",
+        "Will you marry me?",
+        ""
+      ],
+      [
+        "",
+        "Yes!",
+        ""
+      ],
+      [
+        "",
+        "The nerves: {nerves}",
+        ""
+      ],
+      [
+        "",
+        "Next: {next}",
+        ""
+      ]
+    ]
+  }
 }

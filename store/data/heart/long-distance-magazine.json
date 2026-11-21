@@ -297,5 +297,33 @@
     "wish": "See you soon, {who}. Not long now."
   },
   "concepts": true,
-  "conceptWho": "partner"
+  "conceptWho": "partner",
+  "sig": {
+    "style": "cards",
+    "kicker": "Across the map",
+    "title": "The miles between us",
+    "intro": "Proof that distance is just a number.",
+    "items": [
+      [
+        "Distance",
+        "Miles apart",
+        "{miles}"
+      ],
+      [
+        "Time zones",
+        "The difference",
+        "{time}"
+      ],
+      [
+        "Record",
+        "Longest call",
+        "{call}"
+      ],
+      [
+        "Countdown",
+        "Next time I see you",
+        "{next}"
+      ]
+    ]
+  }
 }

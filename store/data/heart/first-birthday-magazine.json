@@ -304,5 +304,33 @@
     ],
     "wish": "Happy first birthday, {first}. Here is to every year after."
   },
-  "concepts": "baby"
+  "concepts": "baby",
+  "sig": {
+    "style": "timeline",
+    "kicker": "Year one",
+    "title": "Twelve months of {first}",
+    "intro": "From brand new to one whole year.",
+    "items": [
+      [
+        "Month one",
+        "Hello world",
+        "Sleeping, feeding, being adored."
+      ],
+      [
+        "Month six",
+        "First food",
+        "{food}"
+      ],
+      [
+        "Month nine",
+        "First word",
+        "{word}"
+      ],
+      [
+        "Month twelve",
+        "Favourite toy",
+        "{toy}"
+      ]
+    ]
+  }
 }

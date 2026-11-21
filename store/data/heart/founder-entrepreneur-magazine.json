@@ -367,5 +367,33 @@
     "picks": true
   },
   "conceptWho": "friend",
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "timeline",
+    "kicker": "The founding story",
+    "title": "How {business} began",
+    "intro": "From idea to empire.",
+    "items": [
+      [
+        "The idea",
+        "It started with",
+        "{idea}"
+      ],
+      [
+        "First sale",
+        "Day one",
+        "{firstsale}"
+      ],
+      [
+        "Today",
+        "Founder",
+        "{first}, running the show."
+      ],
+      [
+        "Vision",
+        "Next",
+        "{vision}"
+      ]
+    ]
+  }
 }

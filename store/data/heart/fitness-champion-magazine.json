@@ -367,5 +367,33 @@
     "picks": true
   },
   "conceptWho": "friend",
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "timeline",
+    "kicker": "Training log",
+    "title": "The making of a champion",
+    "intro": "{first}, in training.",
+    "items": [
+      [
+        "Sport",
+        "Lives for",
+        "{sport}"
+      ],
+      [
+        "Personal best",
+        "Proudest",
+        "{pb}"
+      ],
+      [
+        "Race day",
+        "Ritual",
+        "{ritual}"
+      ],
+      [
+        "Next",
+        "Target",
+        "{next}"
+      ]
+    ]
+  }
 }

@@ -290,5 +290,33 @@
     "wish": "Thank you, {who}. For everything, always."
   },
   "concepts": true,
-  "conceptWho": "mum"
+  "conceptWho": "mum",
+  "sig": {
+    "style": "statement",
+    "kicker": "In her words",
+    "title": "Things Mum always says",
+    "intro": "You can hear her voice reading these.",
+    "items": [
+      [
+        "",
+        "{says}",
+        ""
+      ],
+      [
+        "",
+        "Text me when you get home.",
+        ""
+      ],
+      [
+        "",
+        "Because I said so, that is why.",
+        ""
+      ],
+      [
+        "",
+        "I love you more.",
+        ""
+      ]
+    ]
+  }
 }

@@ -366,5 +366,33 @@
       "You look at me the way you did on day one."
     ],
     "letters": "Little Things From Our Love Story"
+  },
+  "sig": {
+    "style": "timeline",
+    "kicker": "Our story",
+    "title": "The chapters of {names}",
+    "intro": "Since {since}. Still being written.",
+    "items": [
+      [
+        "Chapter one",
+        "Where we met",
+        "{where}"
+      ],
+      [
+        "Chapter two",
+        "The first date",
+        "{date}"
+      ],
+      [
+        "Chapter three",
+        "Our song",
+        "{song}"
+      ],
+      [
+        "Still writing",
+        "We are",
+        "{words}"
+      ]
+    ]
   }
 }

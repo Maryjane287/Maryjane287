@@ -367,5 +367,33 @@
     "picks": true
   },
   "conceptWho": "person",
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "Character profile",
+    "title": "Starring {first}",
+    "intro": "Every story needs a lead.",
+    "items": [
+      [
+        "Entrance",
+        "How they arrive",
+        "{entrance}"
+      ],
+      [
+        "Soundtrack",
+        "Their theme",
+        "{soundtrack}"
+      ],
+      [
+        "Plot twist",
+        "Did not see it coming",
+        "{twist}"
+      ],
+      [
+        "Catchphrase",
+        "Always says",
+        "{catchphrase}"
+      ]
+    ]
+  }
 }

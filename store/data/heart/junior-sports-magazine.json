@@ -366,5 +366,33 @@
     ],
     "letters": "Little Things Our Champion Does"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "Player profile",
+    "title": "{first}, number one",
+    "intro": "Scouting report on the star of {team}.",
+    "items": [
+      [
+        "Sport",
+        "Plays",
+        "{sport}"
+      ],
+      [
+        "Team",
+        "Represents",
+        "{team}"
+      ],
+      [
+        "Signature move",
+        "Watch out for",
+        "{skill}"
+      ],
+      [
+        "Hero",
+        "Inspired by",
+        "{hero}"
+      ]
+    ]
+  }
 }

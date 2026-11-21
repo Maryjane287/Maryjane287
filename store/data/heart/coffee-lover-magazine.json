@@ -367,5 +367,33 @@
     "picks": true
   },
   "conceptWho": "friend",
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "The coffee menu",
+    "title": "Café {first}",
+    "intro": "House specials, served all day.",
+    "items": [
+      [
+        "House order",
+        "The usual",
+        "{order}"
+      ],
+      [
+        "Favourite café",
+        "Regular at",
+        "{cafe}"
+      ],
+      [
+        "Cups a day",
+        "Honestly",
+        "{cups}"
+      ],
+      [
+        "The mug",
+        "Nobody else may use",
+        "{mug}"
+      ]
+    ]
+  }
 }

@@ -297,5 +297,33 @@
     "wish": "Happy Valentine's Day, {who}. You are so very loved."
   },
   "concepts": true,
-  "conceptWho": "partner"
+  "conceptWho": "partner",
+  "sig": {
+    "style": "cards",
+    "kicker": "The love report",
+    "title": "Why {first} is the one",
+    "intro": "Evidence collected over {years} years.",
+    "items": [
+      [
+        "First date",
+        "Where it began",
+        "{date}"
+      ],
+      [
+        "The cute thing",
+        "Exhibit A",
+        "{cute}"
+      ],
+      [
+        "Our song",
+        "On repeat",
+        "{song}"
+      ],
+      [
+        "Verdict",
+        "In three words",
+        "{words}"
+      ]
+    ]
+  }
 }

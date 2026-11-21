@@ -366,5 +366,33 @@
       "You worry about us quietly, so we never have to see it."
     ],
     "letters": "Things We Have Always Noticed, Mum"
+  },
+  "sig": {
+    "style": "timeline",
+    "kicker": "Happy birthday, Mum",
+    "title": "{age} years of {first}",
+    "intro": "Every year with her is a good year.",
+    "items": [
+      [
+        "Every day",
+        "She says",
+        "{says}"
+      ],
+      [
+        "Every Sunday",
+        "Her famous dish",
+        "{dish}"
+      ],
+      [
+        "Every time",
+        "Her superpower",
+        "{power}"
+      ],
+      [
+        "This year",
+        "{age}",
+        "And more wonderful than ever."
+      ]
+    ]
   }
 }

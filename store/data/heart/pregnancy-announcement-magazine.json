@@ -290,5 +290,33 @@
     ],
     "wish": "Congratulations. A baby is coming!"
   },
-  "concepts": "bump"
+  "concepts": "bump",
+  "sig": {
+    "style": "cards",
+    "kicker": "Coming soon",
+    "title": "Introducing {first}",
+    "intro": "Due {due}. Already loved.",
+    "items": [
+      [
+        "Due",
+        "Arrival date",
+        "{due}"
+      ],
+      [
+        "Craving",
+        "Current obsession",
+        "{craving}"
+      ],
+      [
+        "The guess",
+        "Family predictions",
+        "{guess}"
+      ],
+      [
+        "Promoted",
+        "New titles",
+        "{nickname}"
+      ]
+    ]
+  }
 }

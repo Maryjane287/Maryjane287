@@ -296,5 +296,33 @@
     "wish": "Thank you, {who}. For everything, always."
   },
   "concepts": true,
-  "conceptWho": "dad"
+  "conceptWho": "dad",
+  "sig": {
+    "style": "statement",
+    "kicker": "Dad, quoted",
+    "title": "Things Dad always says",
+    "intro": "Read them in his voice. You cannot help it.",
+    "items": [
+      [
+        "",
+        "{says}",
+        ""
+      ],
+      [
+        "",
+        "{joke}",
+        ""
+      ],
+      [
+        "",
+        "I will just have a little look.",
+        ""
+      ],
+      [
+        "",
+        "Proud of you, you know.",
+        ""
+      ]
+    ]
+  }
 }

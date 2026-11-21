@@ -367,5 +367,33 @@
     "promises": true,
     "picks": true
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "timeline",
+    "kicker": "Goodbye twenties",
+    "title": "A decade in review",
+    "intro": "Ten years, summed up honestly.",
+    "items": [
+      [
+        "Twenties",
+        "In three words",
+        "{twenties}"
+      ],
+      [
+        "Figured out",
+        "Lesson learned",
+        "{figured}"
+      ],
+      [
+        "Thirties",
+        "The plan",
+        "{thirties}"
+      ],
+      [
+        "Birthday ritual",
+        "Every year",
+        "{ritual}"
+      ]
+    ]
+  }
 }

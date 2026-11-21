@@ -366,5 +366,33 @@
     ],
     "letters": "Little Things You Have Always Done"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "timeline",
+    "kicker": "Growing up",
+    "title": "The ages of {first}",
+    "intro": "Ten years, told in little moments.",
+    "items": [
+      [
+        "Age two",
+        "Favourite toy",
+        "{toy}"
+      ],
+      [
+        "Age four",
+        "Said it like this",
+        "{saying}"
+      ],
+      [
+        "Age seven",
+        "The phase",
+        "{phase}"
+      ],
+      [
+        "Age {age}",
+        "Now loves",
+        "{now}"
+      ]
+    ]
+  }
 }

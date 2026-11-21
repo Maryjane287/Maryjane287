@@ -304,5 +304,33 @@
     ],
     "wish": "Thank you, {who}. Good pet. The very best."
   },
-  "concepts": "pet"
+  "concepts": "pet",
+  "sig": {
+    "style": "cards",
+    "kicker": "The case file",
+    "title": "Wanted: {first}",
+    "intro": "Known to the household. Considered adorable. Approach with snacks.",
+    "items": [
+      [
+        "Award",
+        "Official title",
+        "{award}"
+      ],
+      [
+        "Crime",
+        "Last seen",
+        "{crime}"
+      ],
+      [
+        "Weakness",
+        "Can be bribed with",
+        "{snack}"
+      ],
+      [
+        "Talent",
+        "Special skill",
+        "{talent}"
+      ]
+    ]
+  }
 }

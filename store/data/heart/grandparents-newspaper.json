@@ -304,5 +304,33 @@
     "wish": "Until the next big hug, {who}. We love you."
   },
   "concepts": true,
-  "conceptWho": "grand"
+  "conceptWho": "grand",
+  "sig": {
+    "style": "cards",
+    "kicker": "The weekly round up",
+    "title": "News from home",
+    "intro": "Everything {forWho} missed this week, in one place.",
+    "items": [
+      [
+        "Headline",
+        "Big news",
+        "{headline}"
+      ],
+      [
+        "Quote of the week",
+        "Overheard",
+        "{quote}"
+      ],
+      [
+        "Forecast",
+        "The weather at ours",
+        "{weather}"
+      ],
+      [
+        "Reported by",
+        "Your correspondents",
+        "{fromWho}"
+      ]
+    ]
+  }
 }

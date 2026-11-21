@@ -367,5 +367,33 @@
     "picks": true
   },
   "conceptWho": "friend",
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "The greenhouse",
+    "title": "{first}'s jungle",
+    "intro": "A census of the household plants.",
+    "items": [
+      [
+        "Count",
+        "Plants at home",
+        "{count}"
+      ],
+      [
+        "Eldest",
+        "The elder",
+        "{oldest}"
+      ],
+      [
+        "Rescue",
+        "Saved from the brink",
+        "{rescue}"
+      ],
+      [
+        "Dream",
+        "One day",
+        "{dream}"
+      ]
+    ]
+  }
 }

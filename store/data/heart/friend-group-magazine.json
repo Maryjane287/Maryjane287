@@ -368,5 +368,33 @@
     ],
     "letters": "Little Things That Make Our Group"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "The line up",
+    "title": "Meet {first}",
+    "intro": "{count} friends since {since}, and every one a legend.",
+    "items": [
+      [
+        "The planner",
+        "Keeps us organised",
+        "{planner}"
+      ],
+      [
+        "The wild one",
+        "Keeps us young",
+        "{wild}"
+      ],
+      [
+        "The heart",
+        "Keeps us close",
+        "{heart}"
+      ],
+      [
+        "Since",
+        "Together",
+        "{since}"
+      ]
+    ]
+  }
 }

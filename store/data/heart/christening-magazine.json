@@ -365,5 +365,33 @@
     ],
     "letters": "Little Things From Your Special Day"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "timeline",
+    "kicker": "Order of service",
+    "title": "The christening of {first}",
+    "intro": "{church}, {date}.",
+    "items": [
+      [
+        "Arrival",
+        "The outfit",
+        "{outfit}"
+      ],
+      [
+        "The blessing",
+        "Welcomed",
+        "Surrounded by everyone who loves them."
+      ],
+      [
+        "The promise",
+        "Godparents",
+        "{godparents}"
+      ],
+      [
+        "After",
+        "The celebration",
+        "Cake, cuddles and a very happy family."
+      ]
+    ]
+  }
 }

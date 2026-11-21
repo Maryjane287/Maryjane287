@@ -366,5 +366,33 @@
     ],
     "letters": "Little Things From the First Day"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "My school bag",
+    "title": "Ready for {school}",
+    "intro": "Everything {first} is taking on the first day.",
+    "items": [
+      [
+        "Most excited about",
+        "Can not wait for",
+        "{excited}"
+      ],
+      [
+        "Lunch box",
+        "Packed with",
+        "{lunch}"
+      ],
+      [
+        "When I grow up",
+        "The plan",
+        "{want}"
+      ],
+      [
+        "Age",
+        "Big school at",
+        "{age}"
+      ]
+    ]
+  }
 }

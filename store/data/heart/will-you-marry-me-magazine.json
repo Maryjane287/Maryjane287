@@ -297,5 +297,33 @@
     "wish": "{who}, will you marry me?"
   },
   "concepts": true,
-  "conceptWho": "partner"
+  "conceptWho": "partner",
+  "sig": {
+    "style": "statement",
+    "kicker": "The question",
+    "title": "{first}, will you marry me?",
+    "intro": "This whole magazine was leading here.",
+    "items": [
+      [
+        "",
+        "You make every day feel like home.",
+        ""
+      ],
+      [
+        "",
+        "Since {date}, it has always been you.",
+        ""
+      ],
+      [
+        "",
+        "I want {song} at our wedding.",
+        ""
+      ],
+      [
+        "",
+        "So, will you?",
+        ""
+      ]
+    ]
+  }
 }

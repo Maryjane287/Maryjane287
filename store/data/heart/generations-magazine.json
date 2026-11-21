@@ -365,5 +365,33 @@
       "You set a place for those who are no longer here."
     ],
     "letters": "The Little Things Each Generation Passes On"
+  },
+  "sig": {
+    "style": "timeline",
+    "kicker": "The family line",
+    "title": "{count} generations of {family}",
+    "intro": "Since {year}, one family, many hearts.",
+    "items": [
+      [
+        "{year}",
+        "The first",
+        "{_first}"
+      ],
+      [
+        "Passed down",
+        "Our heirloom",
+        "{passed}"
+      ],
+      [
+        "Today",
+        "Generations",
+        "{count} generations under one roof."
+      ],
+      [
+        "Tomorrow",
+        "Still growing",
+        "The story keeps going."
+      ]
+    ]
   }
 }

@@ -303,5 +303,33 @@
     "wish": "You are the best part of {from}'s every day, {who}."
   },
   "concepts": true,
-  "conceptWho": "partner"
+  "conceptWho": "partner",
+  "sig": {
+    "style": "cards",
+    "kicker": "The boyfriend review",
+    "title": "Five stars for {first}",
+    "intro": "An honest review after {years} years. Would recommend.",
+    "items": [
+      [
+        "First date",
+        "Where it started",
+        "{date}"
+      ],
+      [
+        "Best feature",
+        "The cute thing",
+        "{cute}"
+      ],
+      [
+        "Soundtrack",
+        "Our song",
+        "{song}"
+      ],
+      [
+        "Rating",
+        "Overall",
+        "Five stars. Keeping him."
+      ]
+    ]
+  }
 }

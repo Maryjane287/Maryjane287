@@ -365,5 +365,33 @@
     "DIAMOND",
     "FOREVER",
     "ENGAGED"
-  ]
+  ],
+  "sig": {
+    "style": "cards",
+    "kicker": "Then and now",
+    "title": "{years} years of falling",
+    "intro": "Why we fell then, and why we are still falling.",
+    "items": [
+      [
+        "Then",
+        "What I fell for",
+        "{then}"
+      ],
+      [
+        "Now",
+        "What I love now",
+        "{now}"
+      ],
+      [
+        "The secret",
+        "How we did it",
+        "{secret}"
+      ],
+      [
+        "Today",
+        "Our love is",
+        "{words}"
+      ]
+    ]
+  }
 }

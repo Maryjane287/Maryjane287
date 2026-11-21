@@ -303,5 +303,33 @@
     ],
     "wish": "Happy birthday, {who}. Here is to {age}, and the best is yet to be."
   },
-  "concepts": true
+  "concepts": true,
+  "sig": {
+    "style": "timeline",
+    "kicker": "Then and now",
+    "title": "{first}, through the decades",
+    "intro": "Born in {born} and better every year.",
+    "items": [
+      [
+        "{born}",
+        "The arrival",
+        "A star was born. Nobody was ready."
+      ],
+      [
+        "Best decade",
+        "Their words",
+        "{decade}"
+      ],
+      [
+        "Famous for",
+        "Still doing it",
+        "{famous}"
+      ],
+      [
+        "Still cannot",
+        "Some things never change",
+        "{still}"
+      ]
+    ]
+  }
 }

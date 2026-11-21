@@ -368,5 +368,33 @@
       "You turned a delayed flight into a party."
     ],
     "letters": "Little Moments From the Trip"
+  },
+  "sig": {
+    "style": "timeline",
+    "kicker": "The tour diary",
+    "title": "{days} days in {place}",
+    "intro": "Starring {who}.",
+    "items": [
+      [
+        "Day one",
+        "Arrived",
+        "Sunglasses on, group chat buzzing."
+      ],
+      [
+        "Best meal",
+        "Still talking about",
+        "{meal}"
+      ],
+      [
+        "Best view",
+        "Postcard worthy",
+        "{view}"
+      ],
+      [
+        "Incident report",
+        "We do not speak of it",
+        "{lost}"
+      ]
+    ]
   }
 }

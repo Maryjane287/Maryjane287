@@ -367,5 +367,33 @@
     "picks": true
   },
   "conceptWho": "friend",
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "statement",
+    "kicker": "Note to self",
+    "title": "Dear {first},",
+    "intro": "Read this whenever you forget.",
+    "items": [
+      [
+        "",
+        "{mantra}",
+        ""
+      ],
+      [
+        "",
+        "Your strength: {strength}",
+        ""
+      ],
+      [
+        "",
+        "Proud of: {proud}",
+        ""
+      ],
+      [
+        "",
+        "Your ritual: {ritual}",
+        ""
+      ]
+    ]
+  }
 }

@@ -65,7 +65,7 @@ export function heartPages(H, { t, page, style, chapters = [], own = [], promise
     return page(`reasons${theme}`, `<p class="pg-kicker">${t(s.kicker)}</p><h3>${t(s.title)}</h3><ol class="reasons">${list.map(r => `<li>${t(r)}</li>`).join('')}</ol>`, n);
   });
 
-  sec('timeline', s => (n) => page(`lv lv-fame${theme}${s.roomy ? ' lv-roomy' : ''}`, `<p class="pg-kicker">${t(s.kicker)}</p><h3>${t(s.title)}</h3><ol class="lv-line">${s.items.map(([y, h, d]) => `<li><span class="lv-year">${t(y)}</span><b>${t(h)}</b><p>${t(d)}</p></li>`).join('')}<li class="lv-us"><span class="lv-year">${t(s.today[0] || 'Today')}</span><b>${t(s.today[1])}</b><p>${t(s.today[2])}</p></li></ol>`, n));
+  sec('timeline', s => (n) => { const len = s.items.reduce((a, [, h, d]) => a + String(t(h)).length + String(t(d)).length, 0) + String(t(s.today?.[2] || '')).length; return page(`lv lv-fame${theme}${s.roomy && len < 300 ? ' lv-roomy' : ''}${len > 380 ? ' lv-tight' : ''}`, `<p class="pg-kicker">${t(s.kicker)}</p><h3>${t(s.title)}</h3><ol class="lv-line">${s.items.map(([y, h, d]) => `<li><span class="lv-year">${t(y)}</span><b>${t(h)}</b><p>${t(d)}</p></li>`).join('')}<li class="lv-us"><span class="lv-year">${t(s.today[0] || 'Today')}</span><b>${t(s.today[1])}</b><p>${t(s.today[2])}</p></li></ol>`, n); });
 
   sec('letters', s => (n) => page(`lv lv-letters${theme}`, `<p class="pg-kicker">${t(s.kicker)}</p><h3>${t(s.title)}</h3><div class="lv-notes">${s.items.map(([q, src], i) => `<figure class="lv-note lv-n${i + 1}"><blockquote>&ldquo;${t(q)}&rdquo;</blockquote><figcaption>${t(src)}</figcaption><i class="lv-seal">${seal}</i></figure>`).join('')}</div><p class="lv-hand">${t(s.hand)}</p>`, n));
 

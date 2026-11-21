@@ -290,5 +290,33 @@
     ],
     "wish": "Happy anniversary, {who}. Here is to many more."
   },
-  "concepts": "couple"
+  "concepts": "couple",
+  "sig": {
+    "style": "timeline",
+    "kicker": "Fifty golden years",
+    "title": "From {married} to forever",
+    "intro": "Half a century of {names}.",
+    "items": [
+      [
+        "The beginning",
+        "How they met",
+        "{met}"
+      ],
+      [
+        "{married}",
+        "The wedding",
+        "A day they still talk about, every single year."
+      ],
+      [
+        "The secret",
+        "How they did it",
+        "{secret}"
+      ],
+      [
+        "Today",
+        "{years} years",
+        "Still holding hands."
+      ]
+    ]
+  }
 }

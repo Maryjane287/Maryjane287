@@ -367,5 +367,33 @@
     "picks": true
   },
   "conceptWho": "friend",
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "The style file",
+    "title": "{first}'s wardrobe",
+    "intro": "Notes from the most stylish person we know.",
+    "items": [
+      [
+        "Signature look",
+        "Always",
+        "{look}"
+      ],
+      [
+        "The rule",
+        "Never broken",
+        "{rule}"
+      ],
+      [
+        "Prized piece",
+        "Hands off",
+        "{piece}"
+      ],
+      [
+        "Muse",
+        "Inspired by",
+        "{icon}"
+      ]
+    ]
+  }
 }

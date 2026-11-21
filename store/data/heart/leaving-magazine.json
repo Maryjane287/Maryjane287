@@ -361,5 +361,33 @@
       "You helped the new starters feel welcome on day one."
     ],
     "letters": "Things the Team Will Never Forget"
+  },
+  "sig": {
+    "style": "timeline",
+    "kicker": "The farewell tour",
+    "title": "{years} years with {first}",
+    "intro": "The highlights of a brilliant chapter.",
+    "items": [
+      [
+        "At the desk",
+        "Desk companion",
+        "{desk}"
+      ],
+      [
+        "Every hour",
+        "Coffee order",
+        "{coffee}"
+      ],
+      [
+        "Known as",
+        "The team says",
+        "{words}"
+      ],
+      [
+        "Next",
+        "The new adventure",
+        "{next}"
+      ]
+    ]
   }
 }

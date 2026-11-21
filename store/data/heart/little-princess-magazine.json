@@ -366,5 +366,33 @@
     ],
     "letters": "Little Royal Things She Does"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "statement",
+    "kicker": "Royal decree",
+    "title": "By order of Princess {first}",
+    "intro": "Ruler of {kingdom}.",
+    "items": [
+      [
+        "",
+        "{rule}",
+        ""
+      ],
+      [
+        "",
+        "The royal gown: {gown}",
+        ""
+      ],
+      [
+        "",
+        "The royal pet: {pet}",
+        ""
+      ],
+      [
+        "",
+        "Everyone must be kind. Always.",
+        ""
+      ]
+    ]
+  }
 }

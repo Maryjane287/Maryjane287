@@ -304,5 +304,33 @@
     ],
     "wish": "Happy new year, {who}. May the next one be even better."
   },
-  "concepts": "family"
+  "concepts": "family",
+  "sig": {
+    "style": "timeline",
+    "kicker": "Month by month",
+    "title": "{family}: the year in moments",
+    "intro": "The highlights reel of {year}.",
+    "items": [
+      [
+        "Spring",
+        "The big adventure",
+        "{adventure}"
+      ],
+      [
+        "Summer",
+        "Proudest moment",
+        "{proud}"
+      ],
+      [
+        "Autumn",
+        "Our word for the year",
+        "{word}"
+      ],
+      [
+        "Winter",
+        "Home together",
+        "Back where we started, and happier for it."
+      ]
+    ]
+  }
 }

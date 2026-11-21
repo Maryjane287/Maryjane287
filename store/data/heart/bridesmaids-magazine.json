@@ -368,5 +368,33 @@
     ],
     "letters": "Little Things My Bridesmaids Did"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "timeline",
+    "kicker": "The road to the aisle",
+    "title": "The bridesmaids' timeline",
+    "intro": "{count} women. One bride. Countless memories.",
+    "items": [
+      [
+        "The ask",
+        "They said yes",
+        "Of course they did."
+      ],
+      [
+        "The hen do",
+        "Unforgettable",
+        "{hen}"
+      ],
+      [
+        "The colour",
+        "Wearing",
+        "{colour}"
+      ],
+      [
+        "{wedding}",
+        "The big day",
+        "Standing beside her, every step."
+      ]
+    ]
+  }
 }

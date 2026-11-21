@@ -365,5 +365,33 @@
     ],
     "letters": "Little Things Our Toddler Does"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "Toddler report",
+    "title": "The world according to {first}",
+    "intro": "Age {age}. Into everything.",
+    "items": [
+      [
+        "Favourite word",
+        "Says it all day",
+        "{word}"
+      ],
+      [
+        "Best adventure",
+        "Again and again",
+        "{adventure}"
+      ],
+      [
+        "Snack of choice",
+        "Carefully eaten",
+        "{snack}"
+      ],
+      [
+        "Age",
+        "Officially",
+        "{age}"
+      ]
+    ]
+  }
 }

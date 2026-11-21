@@ -365,5 +365,33 @@
       "You stayed to help clear up, every single one of you."
     ],
     "letters": "Little Moments From the Reunion"
+  },
+  "sig": {
+    "style": "cards",
+    "kicker": "The gathering",
+    "title": "{family}, together again",
+    "intro": "{where}, {year}.",
+    "items": [
+      [
+        "Headcount",
+        "Family members",
+        "{count}"
+      ],
+      [
+        "Furthest travelled",
+        "The award goes to",
+        "{travelled}"
+      ],
+      [
+        "Where",
+        "The venue",
+        "{where}"
+      ],
+      [
+        "Next time",
+        "Same again",
+        "Nobody is allowed to miss it."
+      ]
+    ]
   }
 }

@@ -367,5 +367,33 @@
       "You make every new person feel like family on day one."
     ],
     "letters": "The Little Things That Make Us a Family"
+  },
+  "sig": {
+    "style": "timeline",
+    "kicker": "Our family tree",
+    "title": "{family}, since {year}",
+    "intro": "How one family grew into all of us.",
+    "items": [
+      [
+        "{year}",
+        "Where it began",
+        "Two people, one home, a lot of love."
+      ],
+      [
+        "Every week",
+        "Our tradition",
+        "{adventure}"
+      ],
+      [
+        "Famous for",
+        "Our pride",
+        "{proud}"
+      ],
+      [
+        "Always",
+        "Our motto",
+        "{word}"
+      ]
+    ]
   }
 }

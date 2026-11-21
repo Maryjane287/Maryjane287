@@ -367,5 +367,33 @@
     "promises": true,
     "picks": true
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "statement",
+    "kicker": "Royal decree",
+    "title": "By order of {crown} {first}",
+    "intro": "Let it be known throughout {kingdom}.",
+    "items": [
+      [
+        "",
+        "{decree}",
+        ""
+      ],
+      [
+        "",
+        "The crown jewels: {jewels}",
+        ""
+      ],
+      [
+        "",
+        "All subjects must bring cake.",
+        ""
+      ],
+      [
+        "",
+        "Long live the {crown}.",
+        ""
+      ]
+    ]
+  }
 }

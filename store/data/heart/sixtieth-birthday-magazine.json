@@ -369,5 +369,33 @@
     "promises": true,
     "picks": true
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "timeline",
+    "kicker": "Sixty years",
+    "title": "Born in {born}",
+    "intro": "A life worth celebrating.",
+    "items": [
+      [
+        "{born}",
+        "Grew up",
+        "{grewup}"
+      ],
+      [
+        "The love",
+        "The heart of it",
+        "{love}"
+      ],
+      [
+        "Wisdom",
+        "Lives by",
+        "{wisdom}"
+      ],
+      [
+        "Next",
+        "Retirement plans",
+        "{retire}"
+      ]
+    ]
+  }
 }

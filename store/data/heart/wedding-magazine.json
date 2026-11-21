@@ -303,5 +303,33 @@
     ],
     "wish": "Congratulations, {who}. Here is to forever."
   },
-  "concepts": "couple"
+  "concepts": "couple",
+  "sig": {
+    "style": "timeline",
+    "kicker": "Order of the day",
+    "title": "The day {names} said yes",
+    "intro": "Every moment worth remembering, in the order it happened.",
+    "items": [
+      [
+        "The night before",
+        "Nerves",
+        "Neither of them slept much. Both deny it."
+      ],
+      [
+        "The ceremony",
+        "I do",
+        "Two people, one promise, not a dry eye in the room."
+      ],
+      [
+        "First dance",
+        "Our song",
+        "{song}"
+      ],
+      [
+        "Ever after",
+        "The secret",
+        "{secret}"
+      ]
+    ]
+  }
 }

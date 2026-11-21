@@ -366,5 +366,33 @@
       "You tell everyone you meet about me."
     ],
     "letters": "The Little Things You Do, Dad"
+  },
+  "sig": {
+    "style": "timeline",
+    "kicker": "Growing up with Dad",
+    "title": "From little girl to grown up",
+    "intro": "What {daughter} learned from the first man she ever loved.",
+    "items": [
+      [
+        "Age five",
+        "He taught me",
+        "{taught}"
+      ],
+      [
+        "Age fifteen",
+        "He always said",
+        "{says}"
+      ],
+      [
+        "Every time",
+        "His talent",
+        "{skill}"
+      ],
+      [
+        "Always",
+        "Dad is",
+        "{words}"
+      ]
+    ]
   }
 }

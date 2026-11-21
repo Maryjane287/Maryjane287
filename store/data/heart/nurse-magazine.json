@@ -367,5 +367,33 @@
     "picks": true
   },
   "conceptWho": "friend",
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "Shift notes",
+    "title": "A day on {ward}",
+    "intro": "Twelve hours, endless care.",
+    "items": [
+      [
+        "Ward",
+        "Where the magic happens",
+        "{ward}"
+      ],
+      [
+        "Years",
+        "Caring for",
+        "{years}"
+      ],
+      [
+        "Pocket kit",
+        "Never without",
+        "{kit}"
+      ],
+      [
+        "Why",
+        "The reason",
+        "{why}"
+      ]
+    ]
+  }
 }

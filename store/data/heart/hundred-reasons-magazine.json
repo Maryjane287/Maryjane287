@@ -365,5 +365,33 @@
     "DIAMOND",
     "FOREVER",
     "ENGAGED"
-  ]
+  ],
+  "sig": {
+    "style": "statement",
+    "kicker": "The top three",
+    "title": "If I could only say three",
+    "intro": "Out of a hundred, these come first.",
+    "items": [
+      [
+        "",
+        "{r1}",
+        ""
+      ],
+      [
+        "",
+        "{r2}",
+        ""
+      ],
+      [
+        "",
+        "{r3}",
+        ""
+      ],
+      [
+        "",
+        "And ninety seven more.",
+        ""
+      ]
+    ]
+  }
 }

@@ -298,5 +298,33 @@
     ],
     "wish": "Merry first Christmas, {who}."
   },
-  "concepts": "baby"
+  "concepts": "baby",
+  "sig": {
+    "style": "cards",
+    "kicker": "First Christmas",
+    "title": "{first}'s first Christmas",
+    "intro": "The most magical one yet.",
+    "items": [
+      [
+        "Age",
+        "Christmas at",
+        "{weight}"
+      ],
+      [
+        "Favourite present",
+        "Of course",
+        "{looks}"
+      ],
+      [
+        "Skill",
+        "Talent of the day",
+        "{skill}"
+      ],
+      [
+        "Loves",
+        "Mesmerised by",
+        "{loves}"
+      ]
+    ]
+  }
 }

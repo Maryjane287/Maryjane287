@@ -303,5 +303,33 @@
     "wish": "Here is to you, {who}, and to many more adventures."
   },
   "concepts": true,
-  "conceptWho": "bestie"
+  "conceptWho": "bestie",
+  "sig": {
+    "style": "timeline",
+    "kicker": "The friendship timeline",
+    "title": "Since {since}",
+    "intro": "The history of {first} and {from}, as told by the evidence.",
+    "items": [
+      [
+        "Day one",
+        "How we met",
+        "{met}"
+      ],
+      [
+        "The legend",
+        "Our running joke",
+        "{joke}"
+      ],
+      [
+        "Every time",
+        "Why you are the best",
+        "{best}"
+      ],
+      [
+        "Forever",
+        "The plan",
+        "Old, loud and still causing trouble together."
+      ]
+    ]
+  }
 }

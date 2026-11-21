@@ -368,5 +368,33 @@
     ],
     "letters": "The Little Things, Unfiltered"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "No filter",
+    "title": "The truth about {first}",
+    "intro": "Friends since {since}. We know everything.",
+    "items": [
+      [
+        "Habit",
+        "Always",
+        "{habit}"
+      ],
+      [
+        "Cooking",
+        "Style",
+        "{cook}"
+      ],
+      [
+        "The truth",
+        "Shocking",
+        "{truth}"
+      ],
+      [
+        "Verdict",
+        "Still love them",
+        "{words}"
+      ]
+    ]
+  }
 }

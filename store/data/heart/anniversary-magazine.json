@@ -304,5 +304,33 @@
     ],
     "wish": "Happy anniversary, {who}. Here is to forever, and a little longer."
   },
-  "concepts": "couple"
+  "concepts": "couple",
+  "sig": {
+    "style": "timeline",
+    "kicker": "Our timeline",
+    "title": "Five chapters of {names}",
+    "intro": "From the very first moment to right now.",
+    "items": [
+      [
+        "Chapter one",
+        "How it began",
+        "{met}"
+      ],
+      [
+        "Chapter two",
+        "The running joke",
+        "{joke}"
+      ],
+      [
+        "Chapter three",
+        "The years together",
+        "{years} years, and still choosing each other."
+      ],
+      [
+        "Today",
+        "Still us",
+        "Same people, a little wiser, even more in love."
+      ]
+    ]
+  }
 }

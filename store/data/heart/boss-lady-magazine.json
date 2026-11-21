@@ -256,11 +256,11 @@
   },
   "quiz": [
     [
-      "In what year did women in the UK first get the vote on equal terms with men?",
+      "Which country elected the world's first woman prime minister, in 1960?",
       [
-        "1928",
-        "1918",
-        "1945"
+        "Sri Lanka",
+        "Norway",
+        "Canada"
       ],
       0
     ],
@@ -367,5 +367,33 @@
     "picks": true
   },
   "conceptWho": "friend",
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "timeline",
+    "kicker": "Career highlights",
+    "title": "The rise of {first}",
+    "intro": "From first job to {role}.",
+    "items": [
+      [
+        "Signature move",
+        "Known for",
+        "{power}"
+      ],
+      [
+        "Leadership rule",
+        "Lives by",
+        "{rule}"
+      ],
+      [
+        "Today",
+        "Title",
+        "{role}"
+      ],
+      [
+        "Next",
+        "On her list",
+        "{next}"
+      ]
+    ]
+  }
 }

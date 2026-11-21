@@ -297,5 +297,33 @@
     "wish": "You are the best part of {from}'s every day, {who}."
   },
   "concepts": true,
-  "conceptWho": "partner"
+  "conceptWho": "partner",
+  "sig": {
+    "style": "statement",
+    "kicker": "She is",
+    "title": "All the reasons she is the one",
+    "intro": "Written by someone who knows.",
+    "items": [
+      [
+        "",
+        "Our first date: {date}",
+        ""
+      ],
+      [
+        "",
+        "The cute thing: {cute}",
+        ""
+      ],
+      [
+        "",
+        "Our song: {song}",
+        ""
+      ],
+      [
+        "",
+        "{words}",
+        ""
+      ]
+    ]
+  }
 }

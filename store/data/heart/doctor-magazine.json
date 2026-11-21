@@ -367,5 +367,33 @@
     "picks": true
   },
   "conceptWho": "friend",
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "Medical record",
+    "title": "Dr {first}",
+    "intro": "Notes from a remarkable career.",
+    "items": [
+      [
+        "Specialty",
+        "Field",
+        "{specialty}"
+      ],
+      [
+        "Trained at",
+        "School",
+        "{school}"
+      ],
+      [
+        "Longest shift",
+        "Survived",
+        "{shift}"
+      ],
+      [
+        "Why",
+        "The reason",
+        "{why}"
+      ]
+    ]
+  }
 }

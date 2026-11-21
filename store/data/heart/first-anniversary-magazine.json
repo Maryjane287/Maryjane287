@@ -297,5 +297,33 @@
     ],
     "wish": "Happy first anniversary, {who}."
   },
-  "concepts": "couple"
+  "concepts": "couple",
+  "sig": {
+    "style": "timeline",
+    "kicker": "Year one",
+    "title": "Our first year married",
+    "intro": "Twelve months of being {names}.",
+    "items": [
+      [
+        "Month one",
+        "The honeymoon",
+        "{where}"
+      ],
+      [
+        "Month six",
+        "Lessons learned",
+        "{nerves}"
+      ],
+      [
+        "Month twelve",
+        "Our golden rule",
+        "{next}"
+      ],
+      [
+        "Year two",
+        "Here we go",
+        "Same team. Same love. More adventures."
+      ]
+    ]
+  }
 }

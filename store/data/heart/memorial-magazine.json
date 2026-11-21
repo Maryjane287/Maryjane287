@@ -256,11 +256,11 @@
   },
   "quiz": [
     [
-      "Which flower do people in the UK wear to remember?",
+      "Which flower has long been a symbol of remembrance in many countries?",
       [
-        "The poppy",
-        "The tulip",
-        "The daisy"
+        "The forget me not",
+        "The sunflower",
+        "The cactus flower"
       ],
       0
     ],
@@ -293,5 +293,33 @@
     ],
     "wish": "Forever loved, {who}. Always remembered."
   },
-  "concepts": "gentle"
+  "concepts": "gentle",
+  "sig": {
+    "style": "statement",
+    "kicker": "In their own words",
+    "title": "What {first} always said",
+    "intro": "We still hear it, in every kitchen and every quiet moment.",
+    "items": [
+      [
+        "",
+        "{saying}",
+        ""
+      ],
+      [
+        "",
+        "Known for {known}",
+        ""
+      ],
+      [
+        "",
+        "Loved {loved}",
+        ""
+      ],
+      [
+        "",
+        "{years} years, and every one of them a gift.",
+        ""
+      ]
+    ]
+  }
 }

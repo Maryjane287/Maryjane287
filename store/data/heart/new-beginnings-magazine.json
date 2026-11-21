@@ -367,5 +367,33 @@
     "picks": true
   },
   "conceptWho": "friend",
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "timeline",
+    "kicker": "Chapter change",
+    "title": "A new beginning for {first}",
+    "intro": "The next chapter starts now.",
+    "items": [
+      [
+        "Leaving behind",
+        "Goodbye to",
+        "{leaving}"
+      ],
+      [
+        "The move",
+        "Next chapter",
+        "{chapter}"
+      ],
+      [
+        "Excited for",
+        "Hello to",
+        "{excited}"
+      ],
+      [
+        "Taking along",
+        "Packed with love",
+        "{carry}"
+      ]
+    ]
+  }
 }

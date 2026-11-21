@@ -256,20 +256,20 @@
   },
   "quiz": [
     [
-      "Which flower is worn in the UK to remember those who served?",
+      "Which flower is worn in many countries to remember those who served?",
       [
         "The poppy",
-        "The rose",
+        "The tulip",
         "The daisy"
       ],
       0
     ],
     [
-      "What number do you call for emergency services in the UK?",
+      "What is the international distress call used by ships and aircraft?",
       [
-        "999",
-        "911",
-        "112 only"
+        "Mayday",
+        "Hello there",
+        "Over and out"
       ],
       0
     ]
@@ -367,5 +367,33 @@
     "picks": true
   },
   "conceptWho": "friend",
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "timeline",
+    "kicker": "Service record",
+    "title": "{rank} {first}",
+    "intro": "{years} years of service. Thank you.",
+    "items": [
+      [
+        "Service",
+        "Served with",
+        "{service}"
+      ],
+      [
+        "Rank",
+        "Rose to",
+        "{rank}"
+      ],
+      [
+        "Years",
+        "Served for",
+        "{years}"
+      ],
+      [
+        "Motto",
+        "Lives by",
+        "{motto}"
+      ]
+    ]
+  }
 }

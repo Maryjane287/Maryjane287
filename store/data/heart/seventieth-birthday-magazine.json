@@ -369,5 +369,33 @@
     "promises": true,
     "picks": true
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "timeline",
+    "kicker": "Seventy years",
+    "title": "{born} to today",
+    "intro": "A life in seven decades.",
+    "items": [
+      [
+        "First job",
+        "Started out",
+        "{firstjob}"
+      ],
+      [
+        "Biggest change",
+        "Witnessed",
+        "{changed}"
+      ],
+      [
+        "Proudest",
+        "The joy",
+        "{proudest}"
+      ],
+      [
+        "The secret",
+        "To seventy",
+        "{secret}"
+      ]
+    ]
+  }
 }

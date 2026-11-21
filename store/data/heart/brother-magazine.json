@@ -366,5 +366,33 @@
       "You check my car, my locks and my life, without being asked."
     ],
     "letters": "The Little Things a Brother Does"
+  },
+  "sig": {
+    "style": "cards",
+    "kicker": "The brother files",
+    "title": "Everything about {first}",
+    "intro": "Brothers since {since}. Friends forever.",
+    "items": [
+      [
+        "Childhood",
+        "Where it began",
+        "{met}"
+      ],
+      [
+        "Family legend",
+        "Still talked about",
+        "{joke}"
+      ],
+      [
+        "Best at",
+        "Talent",
+        "{best}"
+      ],
+      [
+        "Verdict",
+        "In three words",
+        "{words}"
+      ]
+    ]
   }
 }

@@ -368,5 +368,33 @@
     ],
     "letters": "Little Things the Lads Do"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "The squad sheet",
+    "title": "{first}",
+    "intro": "{count} lads since {since}.",
+    "items": [
+      [
+        "Ritual",
+        "Every week",
+        "{ritual}"
+      ],
+      [
+        "Legend",
+        "Hall of fame",
+        "{legend}"
+      ],
+      [
+        "Since",
+        "Founded",
+        "{since}"
+      ],
+      [
+        "In three words",
+        "We are",
+        "{words}"
+      ]
+    ]
+  }
 }

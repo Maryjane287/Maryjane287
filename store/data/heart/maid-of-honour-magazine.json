@@ -368,5 +368,33 @@
     ],
     "letters": "Little Things You Did on the Day"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "timeline",
+    "kicker": "The road to {wedding}",
+    "title": "Maid of honour duties",
+    "intro": "Performed flawlessly by {first}.",
+    "items": [
+      [
+        "Since {since}",
+        "Best friends",
+        "The job was always hers."
+      ],
+      [
+        "The hen do",
+        "Organised by her",
+        "{hen}"
+      ],
+      [
+        "The save",
+        "Hero moment",
+        "{save}"
+      ],
+      [
+        "{wedding}",
+        "The big day",
+        "Beside the bride, where she belongs."
+      ]
+    ]
+  }
 }

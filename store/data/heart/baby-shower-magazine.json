@@ -291,5 +291,33 @@
     ],
     "wish": "Good luck, {who}. We cannot wait to meet {nickname}."
   },
-  "concepts": "bump"
+  "concepts": "bump",
+  "sig": {
+    "style": "timeline",
+    "kicker": "The countdown",
+    "title": "Waiting for {nickname}",
+    "intro": "Due in {due}. Everyone is very, very excited.",
+    "items": [
+      [
+        "The craving",
+        "Midnight snacks",
+        "{craving}"
+      ],
+      [
+        "The guess",
+        "Everyone has a theory",
+        "{guess}"
+      ],
+      [
+        "The bump",
+        "Growing every day",
+        "Kicks, hiccups and a lot of love."
+      ],
+      [
+        "{due}",
+        "Arrival",
+        "The best surprise is on its way."
+      ]
+    ]
+  }
 }

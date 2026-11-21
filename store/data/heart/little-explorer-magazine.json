@@ -366,5 +366,33 @@
     ],
     "letters": "Little Things Our Explorer Does"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "Expedition log",
+    "title": "Explorer {first}, age {age}",
+    "intro": "Notes from the field.",
+    "items": [
+      [
+        "Specialist in",
+        "Favourite creature",
+        "{creature}"
+      ],
+      [
+        "Discovery",
+        "Best find",
+        "{found}"
+      ],
+      [
+        "Next expedition",
+        "Destination",
+        "{place}"
+      ],
+      [
+        "Kit",
+        "Never without",
+        "{kit}"
+      ]
+    ]
+  }
 }

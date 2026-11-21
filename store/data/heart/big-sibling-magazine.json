@@ -366,5 +366,33 @@
     ],
     "letters": "Little Things a Big Sibling Does"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "Job description",
+    "title": "Wanted: one {role}",
+    "intro": "Applicant: {first}, age {age}. Hired.",
+    "items": [
+      [
+        "Duty",
+        "Will teach {baby}",
+        "{teach}"
+      ],
+      [
+        "First gift",
+        "Given with love",
+        "{gift}"
+      ],
+      [
+        "Qualifications",
+        "Age",
+        "{age} and very wise"
+      ],
+      [
+        "Start date",
+        "Immediately",
+        "Hugs required daily."
+      ]
+    ]
+  }
 }

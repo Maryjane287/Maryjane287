@@ -367,5 +367,33 @@
     ],
     "letters": "Little Moments From the Smash"
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "The smash report",
+    "title": "Cake versus {first}",
+    "intro": "The results are in. The cake did not survive.",
+    "items": [
+      [
+        "The cake",
+        "Before",
+        "{cake}"
+      ],
+      [
+        "The verdict",
+        "Taste test",
+        "{verdict}"
+      ],
+      [
+        "The damage",
+        "Cake found in",
+        "{mess}"
+      ],
+      [
+        "Final score",
+        "Winner",
+        "{first}, obviously"
+      ]
+    ]
+  }
 }

@@ -367,5 +367,33 @@
     "picks": true
   },
   "conceptWho": "friend",
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "cards",
+    "kicker": "Report card",
+    "title": "{first}: top marks",
+    "intro": "Officially brilliant.",
+    "items": [
+      [
+        "Achievement",
+        "Awarded",
+        "{achievement}"
+      ],
+      [
+        "Best subject",
+        "Star of",
+        "{subject}"
+      ],
+      [
+        "Study ritual",
+        "The secret",
+        "{ritual}"
+      ],
+      [
+        "Future",
+        "Next",
+        "{future}"
+      ]
+    ]
+  }
 }

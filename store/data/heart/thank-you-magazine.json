@@ -289,5 +289,33 @@
     ],
     "wish": "Thank you, {who}. For everything."
   },
-  "concepts": true
+  "concepts": true,
+  "sig": {
+    "style": "statement",
+    "kicker": "Thank you for",
+    "title": "The things we will never forget",
+    "intro": "Some people change everything without knowing it.",
+    "items": [
+      [
+        "",
+        "For being {role}",
+        ""
+      ],
+      [
+        "",
+        "For always: {always}",
+        ""
+      ],
+      [
+        "",
+        "For {power}",
+        ""
+      ],
+      [
+        "",
+        "For everything. Truly.",
+        ""
+      ]
+    ]
+  }
 }

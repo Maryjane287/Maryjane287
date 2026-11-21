@@ -367,5 +367,33 @@
     "promises": true,
     "picks": true
   },
-  "toc": "A one of a kind issue, made for {who} with love from {from}."
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "sig": {
+    "style": "timeline",
+    "kicker": "Fifty years",
+    "title": "The half century of {first}",
+    "intro": "Five decades, one legend.",
+    "items": [
+      [
+        "Best decade",
+        "So far",
+        "{decade}"
+      ],
+      [
+        "Best advice",
+        "Always",
+        "{advice}"
+      ],
+      [
+        "Legacy",
+        "Famous for",
+        "{legacy}"
+      ],
+      [
+        "Next",
+        "Bucket list",
+        "{bucket}"
+      ]
+    ]
+  }
 }

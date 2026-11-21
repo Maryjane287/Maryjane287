@@ -304,5 +304,33 @@
     "wish": "Thank you, {who}. For everything, always."
   },
   "concepts": true,
-  "conceptWho": "teacher"
+  "conceptWho": "teacher",
+  "sig": {
+    "style": "cards",
+    "kicker": "Report card",
+    "title": "Grades for {first}",
+    "intro": "We marked our teacher. Top marks across the board.",
+    "items": [
+      [
+        "Catchphrase",
+        "Heard daily",
+        "{says}"
+      ],
+      [
+        "Best lesson",
+        "We still talk about",
+        "{lesson}"
+      ],
+      [
+        "Superpower",
+        "Somehow always knew",
+        "{power}"
+      ],
+      [
+        "Overall",
+        "Final grade",
+        "A star, with a gold sticker"
+      ]
+    ]
+  }
 }

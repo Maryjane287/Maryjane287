@@ -367,5 +367,33 @@
     ],
     "letters": "The Little Things Only Siblings Know",
     "hand": "We noticed every single one."
+  },
+  "sig": {
+    "style": "timeline",
+    "kicker": "The sibling saga",
+    "title": "Since {since}",
+    "intro": "Growing up together, told by the people who were there.",
+    "items": [
+      [
+        "The early years",
+        "Our soundtrack",
+        "{met}"
+      ],
+      [
+        "The mystery",
+        "Still unsolved",
+        "{joke}"
+      ],
+      [
+        "Best at",
+        "Group talent",
+        "{best}"
+      ],
+      [
+        "Today",
+        "Still",
+        "{words}"
+      ]
+    ]
   }
 }

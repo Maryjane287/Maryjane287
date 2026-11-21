@@ -305,5 +305,33 @@
     ],
     "wish": "Happy birthday, {who}. Keep shining."
   },
-  "concepts": true
+  "concepts": true,
+  "sig": {
+    "style": "cards",
+    "kicker": "The birth chart",
+    "title": "{first} and the stars",
+    "intro": "What the sky was doing on {born}.",
+    "items": [
+      [
+        "Sign",
+        "Born under",
+        "{sign}"
+      ],
+      [
+        "Crystal",
+        "Lucky stone",
+        "{crystal}"
+      ],
+      [
+        "Superpower",
+        "Cosmic gift",
+        "{power}"
+      ],
+      [
+        "Prediction",
+        "The year ahead",
+        "{prediction}"
+      ]
+    ]
+  }
 }
