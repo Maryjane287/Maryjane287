@@ -1,0 +1,371 @@
+{
+  "theme": "candy",
+  "fields": [
+    {
+      "id": "s_name",
+      "label": "How they reacted when they first saw the cake",
+      "example": "Stared at it like it was a new friend",
+      "max": 80,
+      "chapter": "Before the smash"
+    },
+    {
+      "id": "s_home",
+      "label": "Who came to the party",
+      "example": "Both grandmas, three cousins and the dog, who did very well out of it",
+      "max": 80,
+      "chapter": "The party"
+    },
+    {
+      "id": "s_dream",
+      "label": "A wish for their second year",
+      "example": "More cake, more giggles, a little more sleep",
+      "max": 80,
+      "chapter": "A wish for year two"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "A cake smash every single birthday",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "born": "Birthday",
+    "cake": "The cake",
+    "verdict": "The verdict",
+    "mess": "Where the cake ended up",
+    "words": "The birthday baby, in three words"
+  },
+  "story": {
+    "title": "{first} Versus the Cake",
+    "hand": "The cake never stood a chance. Happy first birthday, {who}.",
+    "kicker": "The big day",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Smash highlights",
+    "kicker": "From {from}, with love",
+    "title": "Ten moments from the smash",
+    "items": [
+      "The first careful poke",
+      "The suspicious look",
+      "The first taste",
+      "The big grin",
+      "Both hands in",
+      "Icing in the ears",
+      "The happy dance",
+      "Feeding the dog",
+      "Sharing with Daddy",
+      "The bath straight after",
+      "The very long nap",
+      "The best photos ever"
+    ]
+  },
+  "timeline": {
+    "kicker": "Birthdays around the world",
+    "title": "How the World Celebrates Turning One",
+    "items": [
+      [
+        "Ancient",
+        "A cake like the moon",
+        "The story goes that ancient Greeks lit round honey cakes with candles for Artemis, goddess of the moon."
+      ],
+      [
+        "Korea",
+        "Choose your future",
+        "At a first birthday called a dol, babies pick an object like a pencil or thread, said to hint at their future."
+      ],
+      [
+        "1700s",
+        "A candle for each year",
+        "In Germany, children's birthday parties called Kinderfest brought a cake with a candle for every year."
+      ],
+      [
+        "1893",
+        "A song is born",
+        "Sisters Mildred and Patty Hill published the tune we now know as Happy Birthday to You."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{first} turns one",
+      "Candles, cake and a song. And a whole family singing it just for you."
+    ]
+  },
+  "letters": {
+    "kicker": "Words for little explorers",
+    "title": "Wise Words for Your Next Steps",
+    "items": [
+      [
+        "The journey of a thousand miles begins with a single step.",
+        "Lao Tzu, Tao Te Ching"
+      ],
+      [
+        "Where did you come from, baby dear? Out of the everywhere into the here.",
+        "George MacDonald, 1871"
+      ],
+      [
+        "Children are the hands by which we take hold of heaven.",
+        "Henry Ward Beecher"
+      ],
+      [
+        "Fall seven times, stand up eight.",
+        "A Japanese proverb"
+      ]
+    ],
+    "hand": "Whatever step comes next, {first}, we will be right behind you."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "How Babies Learn Absolutely Everything",
+    "items": [
+      [
+        "smile",
+        "Little copycats",
+        "Babies learn by watching our faces and copying them. Every silly face we pulled was a lesson."
+      ],
+      [
+        "music",
+        "Babble first",
+        "Long before real words, babies babble ba ba and da da, practising the sounds of their language."
+      ],
+      [
+        "book",
+        "Words in waiting",
+        "Babies understand lots of words months before they can say a single one out loud."
+      ],
+      [
+        "eye",
+        "Peekaboo magic",
+        "Peekaboo delights babies partly because they are learning that hidden things still exist."
+      ],
+      [
+        "spark",
+        "The first big laugh",
+        "Most babies laugh out loud for the first time at around three or four months old."
+      ],
+      [
+        "star",
+        "One step at a time",
+        "Lots of babies take their first steps around their first birthday. Some like to take their time."
+      ]
+    ],
+    "hand": "You learned so much this year, {first}. We watched every bit."
+  },
+  "world": {
+    "kicker": "A thank you from the universe",
+    "title": "Why the World Is Sweeter With {who}",
+    "lead": "Because {who} turned one, the world got:",
+    "items": [
+      "The best cake smash ever photographed.",
+      "A very happy dog.",
+      "Grandparents with new screensavers.",
+      "Twelve months of pure joy.",
+      "A whole new year of giggles.",
+      "Sticky cuddles for everyone.",
+      "And the one and only {who}."
+    ],
+    "close": "Happy first birthday, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises to you",
+    "items": [
+      "To always let you have cake on your birthday.",
+      "To never mind the mess.",
+      "To take photos of every candle.",
+      "To sing happy birthday very loudly.",
+      "To love you sticky or clean."
+    ],
+    "hand": "All our love, {from}"
+  },
+  "awardsKicker": "Live from the high chair",
+  "awards": [
+    [
+      "Best food face",
+      "Lemon category"
+    ],
+    [
+      "Fastest crawler",
+      "In the whole house"
+    ],
+    [
+      "Loudest giggle",
+      "Unanimous"
+    ],
+    [
+      "Baby of the year",
+      "Lifetime achievement"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One extra bedtime story",
+      "Same book again is fine"
+    ],
+    [
+      "One big puddle splash",
+      "Wellies provided"
+    ],
+    [
+      "A trip to see the ducks",
+      "Bread not included"
+    ],
+    [
+      "Endless cuddles",
+      "Never expires"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {first}",
+  "cert": "The Most Fabulous One Year Old",
+  "certLine": "is officially, joyfully and forever",
+  "perfume": "Top notes of birthday cake and bubble bath. A heart of pure giggles.",
+  "news": {
+    "edition": "First birthday edition",
+    "headline": "{first} turns one, family celebrates",
+    "lead": "Sources close to the family confirm that {first}, also known as {nick}, has completed a whole year of being utterly wonderful.",
+    "weather": "Weather: sunny, with a 100% chance of cake"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to year two and beyond",
+    "nationality": "Loved, everywhere",
+    "job": "Chief giggle officer",
+    "stamps": [
+      "Year one",
+      "First steps",
+      "Party time"
+    ]
+  },
+  "movie": {
+    "sub": "A very messy comedy",
+    "soon": "The sequel: the second birthday",
+    "reviews": [
+      [
+        "Sweet, sticky and hilarious",
+        "The Daily Hug"
+      ],
+      [
+        "Best day of the year",
+        "{from}"
+      ],
+      [
+        "The cake did not stand a chance",
+        "Grandma"
+      ]
+    ]
+  },
+  "quizTitle": "The year one quiz",
+  "quiz": [
+    [
+      "In which country did the cake smash tradition first become popular?",
+      [
+        "The United States",
+        "France",
+        "Japan"
+      ],
+      0
+    ],
+    [
+      "What is a first birthday called in Korea, celebrated with a big party?",
+      [
+        "Doljanchi",
+        "Hanbok",
+        "Kimchi"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "PARTY",
+    "CAKE",
+    "BALLOON",
+    "GIGGLE",
+    "CANDLE",
+    "ONE"
+  ],
+  "note": {
+    "title": "Why the cake smash gets a magazine",
+    "contents": "A note for you",
+    "paras": [
+      "A first birthday cake smash lasts about four minutes. The photos last forever, if they ever leave the phone.",
+      "So we put them somewhere better, with the story of a very sticky, very happy day.",
+      "{who}, this is the day you took on a cake and won.",
+      "From everything {from} told us, it was glorious."
+    ],
+    "wish": "Happy first birthday, {who}."
+  },
+  "concepts": "baby",
+  "own": {
+    "dayTitle": "The Big One: {first}'s Birthday",
+    "day": [
+      [
+        "7:00",
+        "Birthday morning",
+        "Balloons in the kitchen. Total amazement."
+      ],
+      [
+        "11:00",
+        "Presents",
+        "Ignores the presents. Loves the wrapping paper."
+      ],
+      [
+        "14:00",
+        "The smash",
+        "Cake 0, birthday baby 1."
+      ],
+      [
+        "15:00",
+        "Bath",
+        "Icing found in places icing should never be."
+      ]
+    ],
+    "night": [
+      "19:00",
+      "Asleep",
+      "Sugar crash. Smiling in their sleep."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "A high chair, behind a very big cake"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Cake, cake and more cake"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Mmmmmm!\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Getting icing into their own ears"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Right after the candles"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Lay down a sheet. Stand well back. Keep the camera ready"
+      ]
+    ],
+    "little": [
+      "You clapped when we sang to you.",
+      "You offered your cake to the dog first.",
+      "You looked so proud of the mess.",
+      "You fell asleep with icing on your nose."
+    ],
+    "letters": "Little Moments From the Smash"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

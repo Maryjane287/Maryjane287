@@ -1,0 +1,370 @@
+{
+  "theme": "dawn",
+  "fields": [
+    {
+      "id": "s_name",
+      "label": "What the first weeks were like",
+      "example": "Nobody slept, everybody cried, we were completely in love",
+      "max": 80,
+      "chapter": "The early weeks"
+    },
+    {
+      "id": "s_home",
+      "label": "Something they could do at six months",
+      "example": "Sat up for the first time, then immediately fell over laughing",
+      "max": 80,
+      "chapter": "Halfway there"
+    },
+    {
+      "id": "s_dream",
+      "label": "Something you dream for them",
+      "example": "That every year is as full of wonder as this one",
+      "max": 80,
+      "chapter": "What we dream for you"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To photograph every single first",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "born": "Born",
+    "smile": "First smile",
+    "word": "First word",
+    "steps": "First steps",
+    "loves": "Favourite thing this year"
+  },
+  "story": {
+    "title": "Twelve Months of {first}",
+    "hand": "The first year of {who}. Every month, a little more magic.",
+    "kicker": "Your first year",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Firsts this year",
+    "kicker": "From {from}, with love",
+    "title": "Twelve firsts we will never forget",
+    "items": [
+      "First smile",
+      "First laugh",
+      "First bath without crying",
+      "First taste of banana",
+      "First time rolling over",
+      "First tooth",
+      "First holiday",
+      "First crawl",
+      "First wave bye bye",
+      "First word",
+      "First steps",
+      "First birthday cake"
+    ]
+  },
+  "timeline": {
+    "kicker": "Songs for little ones",
+    "title": "The Lullabies Sung Before You",
+    "items": [
+      [
+        "1760s",
+        "Mother Goose arrives",
+        "One of the first books of nursery rhymes, Mother Goose's Melody, was printed in London for little ones."
+      ],
+      [
+        "1806",
+        "Twinkle, twinkle",
+        "Jane Taylor published a poem called The Star. We still sing it to babies all over the world."
+      ],
+      [
+        "1830",
+        "Mary had a little lamb",
+        "Sarah Josepha Hale wrote the rhyme about a lamb who followed Mary to school one day."
+      ],
+      [
+        "1868",
+        "The famous lullaby",
+        "Johannes Brahms published his Wiegenlied, the gentle cradle song still hummed at bedtime."
+      ]
+    ],
+    "today": [
+      "{born}",
+      "{first} arrives",
+      "A brand new song begins. And we will sing it to you for the rest of our lives."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Babies",
+    "items": [
+      [
+        "Every child begins the world again.",
+        "Henry David Thoreau, Walden, 1854"
+      ],
+      [
+        "A babe in a house is a well-spring of pleasure.",
+        "Martin Farquhar Tupper, 1838"
+      ],
+      [
+        "Every child comes with the message that God is not yet discouraged of man.",
+        "Rabindranath Tagore, Stray Birds, 1916"
+      ],
+      [
+        "It takes a village to raise a child.",
+        "An African proverb"
+      ]
+    ],
+    "hand": "Our village is ready, {first}. And it already adores you."
+  },
+  "facts": {
+    "kicker": "Amazing from day one",
+    "title": "The Clever Science of Being New",
+    "items": [
+      [
+        "eye",
+        "Faces first",
+        "From the very start, newborns love looking at faces more than almost anything else."
+      ],
+      [
+        "heart",
+        "Voices you knew",
+        "Newborns already know the voices they heard most often before they were born."
+      ],
+      [
+        "camera",
+        "Just close enough",
+        "New babies see best at about the distance from a cuddling arm to a loving face."
+      ],
+      [
+        "smile",
+        "The first real smile",
+        "Real smiles usually arrive at around six to eight weeks. Worth every sleepy night."
+      ],
+      [
+        "spark",
+        "Little copycats",
+        "Scientists have seen very young babies copy faces, like poking a tongue out back at a grown up."
+      ],
+      [
+        "globe",
+        "Every language",
+        "Tiny babies can hear the sounds of every language, then tune in to their family's own."
+      ]
+    ],
+    "hand": "You were born clever, {first}. You were also born loved."
+  },
+  "world": {
+    "kicker": "A thank you from the universe",
+    "title": "Why the World Got Better This Year",
+    "lead": "Because {who} arrived, the world got:",
+    "items": [
+      "A brand new laugh.",
+      "Two very tired, very happy parents.",
+      "Grandparents who visit every week now.",
+      "A new favourite person for the cat.",
+      "A year full of firsts.",
+      "More love than anyone thought possible.",
+      "And the one and only {who}."
+    ],
+    "close": "Happy first year, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises for year two",
+    "items": [
+      "To keep celebrating every first.",
+      "To read the same book a hundred times.",
+      "To let you be messy.",
+      "To dance with you in the kitchen.",
+      "To love you more every month."
+    ],
+    "hand": "All our love, {from}"
+  },
+  "awards": [
+    [
+      "Newest family member",
+      "Instantly famous"
+    ],
+    [
+      "Best yawn of the year",
+      "By a landslide"
+    ],
+    [
+      "Champion cuddler",
+      "Unbeaten"
+    ],
+    [
+      "Most loved person",
+      "Unanimous"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One bedtime story",
+      "Any book, any voice"
+    ],
+    [
+      "A lifetime of cuddles",
+      "Never expires"
+    ],
+    [
+      "One song at bedtime",
+      "Lullaby of your choice"
+    ],
+    [
+      "A big family day out",
+      "When you are a bit bigger"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {first}",
+  "cert": "The Most Wonderful Arrival",
+  "certLine": "is officially, wonderfully and forever",
+  "perfume": "Top notes of warm milk and fresh laundry. A heart of brand new wonder.",
+  "news": {
+    "edition": "Arrival edition",
+    "headline": "{first} arrives, family melts",
+    "lead": "Sources close to the family confirm that {first}, weighing in at {weight}, has taken charge of the whole household within hours.",
+    "weather": "Weather: soft and sleepy, with cuddles all day"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to a whole life of adventures",
+    "nationality": "Loved, everywhere",
+    "job": "Chief cuddle receiver",
+    "stamps": [
+      "Our arms",
+      "First night home",
+      "Everywhere next"
+    ]
+  },
+  "movie": {
+    "sub": "A year in the life of a baby",
+    "soon": "The sequel: year two, the toddler years",
+    "reviews": [
+      [
+        "The cutest twelve months ever filmed",
+        "The Daily Hug"
+      ],
+      [
+        "Our favourite year so far",
+        "{from}"
+      ],
+      [
+        "Every scene a first",
+        "Grandma"
+      ]
+    ]
+  },
+  "quizTitle": "How much do you know about babies?",
+  "quiz": [
+    [
+      "At roughly what age do most babies smile for the first time?",
+      [
+        "Six weeks",
+        "Six months",
+        "Six days"
+      ],
+      0
+    ],
+    [
+      "How many times their birth weight do babies usually weigh at their first birthday?",
+      [
+        "About three times",
+        "About ten times",
+        "The same"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "BABY",
+    "CUDDLE",
+    "LULLABY",
+    "SMILE",
+    "TINY",
+    "WELCOME"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "The first year is the fastest year. One minute they are tiny, the next they are walking off towards the biscuits.",
+      "This magazine catches it all, month by month, so it never gets lost in a camera roll.",
+      "{who}, this is your very first year.",
+      "From everything {from} told us, it was pure magic."
+    ],
+    "wish": "Happy first year, {who}."
+  },
+  "concepts": "baby",
+  "own": {
+    "dayTitle": "A Day at One Year Old",
+    "day": [
+      [
+        "6:00",
+        "Up",
+        "Standing in the cot, cheering for the morning."
+      ],
+      [
+        "9:00",
+        "Breakfast",
+        "Feeds themselves. Also feeds the floor."
+      ],
+      [
+        "13:00",
+        "Nap",
+        "Asleep mid crawl, bottom in the air."
+      ],
+      [
+        "16:00",
+        "Adventures",
+        "Unpacks every cupboard. Very proud."
+      ]
+    ],
+    "night": [
+      "19:00",
+      "Bedtime",
+      "Milk, a story, a song, one more song."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The kitchen floor, near the pans"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Banana, mostly, and everyone else's toast"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Uh oh!\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Turning a whole family into mush with one giggle"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Whenever the grown ups want to sleep"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Cuddle often. Childproof everything. Take all the photos"
+      ]
+    ],
+    "little": [
+      "You wave at every dog you see.",
+      "You clap for yourself when you do something clever.",
+      "You light up when Grandma walks in.",
+      "You fall asleep holding our finger."
+    ],
+    "letters": "Little Things We Loved This Year"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

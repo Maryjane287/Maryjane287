@@ -1,0 +1,370 @@
+{
+  "theme": "candy",
+  "fields": [
+    {
+      "id": "s_laugh",
+      "label": "What they said when they found out about the baby",
+      "example": "\"Can it be a puppy instead?\" Then: \"OK, a baby is fine\"",
+      "max": 80,
+      "chapter": "When they found out"
+    },
+    {
+      "id": "s_kind",
+      "label": "Something kind they have done for the baby",
+      "example": "Sings to her every time she cries",
+      "max": 80,
+      "chapter": "Already a great big sibling"
+    },
+    {
+      "id": "s_says",
+      "label": "Their rules for the baby",
+      "example": "No touching the dinosaurs. Cuddles are allowed",
+      "max": 80,
+      "chapter": "Big sibling rules"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To always make special time just for you",
+      "max": 60
+    }
+  ],
+  "labels": {
+    "age": "Age at promotion",
+    "baby": "The new baby",
+    "role": "New job title",
+    "teach": "Will teach the baby",
+    "gift": "First gift to the baby"
+  },
+  "story": {
+    "title": "The Best Big Sibling in the World",
+    "hand": "You will always be our first, {who}.",
+    "kicker": "Big news",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Big sibling skills",
+    "kicker": "From {from}, with love",
+    "title": "Ten things only a big sibling can do",
+    "items": [
+      "Make the baby laugh",
+      "Fetch the nappies",
+      "Sing lullabies",
+      "Show the baby the garden",
+      "Share their toys, sometimes",
+      "Give gentle cuddles",
+      "Tell the baby stories",
+      "Help at bath time",
+      "Be the baby's hero",
+      "Teach the baby to wave",
+      "Keep an eye on things",
+      "Love the baby lots"
+    ]
+  },
+  "timeline": {
+    "kicker": "Childhood through the ages",
+    "title": "A Short History of Fun",
+    "items": [
+      [
+        "1837",
+        "A garden for children",
+        "Friedrich Froebel opened a school where little ones learned through play. It became the first kindergarten."
+      ],
+      [
+        "1902",
+        "Hello, teddy bear",
+        "The first teddy bears were made, named after a president called Teddy who refused to shoot a captured bear."
+      ],
+      [
+        "1958",
+        "Click, the brick",
+        "The LEGO brick we know today was patented, and children have been building towers ever since."
+      ],
+      [
+        "1969",
+        "A street full of friends",
+        "Sesame Street first came on television, teaching letters, numbers and kindness with puppets."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who}",
+      "Age {age}, expert in {expert}, and the best thing that ever happened to us."
+    ]
+  },
+  "letters": {
+    "kicker": "Big words for little people",
+    "title": "Clever Things People Have Said",
+    "items": [
+      [
+        "Why, sometimes I've believed as many as six impossible things before breakfast.",
+        "Lewis Carroll, Through the Looking-Glass, 1871"
+      ],
+      [
+        "Just living is not enough, said the butterfly. One must have sunshine, freedom and a little flower.",
+        "Hans Christian Andersen"
+      ],
+      [
+        "Imagination is more important than knowledge.",
+        "Albert Einstein, 1929"
+      ],
+      [
+        "All children, except one, grow up.",
+        "J. M. Barrie, Peter Pan"
+      ]
+    ],
+    "hand": "Grow as slowly as you like, {who}. We are enjoying every minute."
+  },
+  "facts": {
+    "kicker": "Amazing but true",
+    "title": "Fun Facts to Amaze Your Friends",
+    "items": [
+      [
+        "baby",
+        "Bonus bones",
+        "You were born with about 300 bones. Some join together as you grow, so grown ups have 206."
+      ],
+      [
+        "heart",
+        "A fist full of love",
+        "Your heart is about the same size as your fist, and it grows bigger as you do."
+      ],
+      [
+        "spark",
+        "Super brain",
+        "Your brain grows super fast when you are little. By age six it is nearly grown up sized."
+      ],
+      [
+        "paw",
+        "Three hearts",
+        "An octopus has three hearts and blue blood. Imagine how many hugs it could give!"
+      ],
+      [
+        "moon",
+        "Footprints forever",
+        "There is no wind on the Moon, so the astronauts' footprints could stay there for a very long time."
+      ],
+      [
+        "clock",
+        "Honey never goes off",
+        "Honey found in ancient Egyptian tombs, thousands of years old, was still good to eat."
+      ]
+    ],
+    "hand": "Science is amazing. But the most amazing thing of all is you, {who}."
+  },
+  "world": {
+    "kicker": "A note from the universe",
+    "title": "Why {baby} Is the Luckiest Baby",
+    "lead": "Because {who} is the big sibling, the new baby got:",
+    "items": [
+      "A best friend for life.",
+      "A personal entertainer.",
+      "Someone to look up to.",
+      "A protector, always.",
+      "All the best songs.",
+      "Hand me down dinosaurs.",
+      "And the one and only {who}."
+    ],
+    "close": "The best big sibling ever, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "Pinky promise",
+    "title": "Our promises to you",
+    "items": [
+      "To always make time just for you.",
+      "To love you every bit as much.",
+      "To let you help, whenever you want.",
+      "To still read your bedtime story.",
+      "To remember you were our first."
+    ],
+    "hand": "All our love, {from}"
+  },
+  "awards": [
+    [
+      "Best giggle in the house",
+      "Voted by everyone"
+    ],
+    [
+      "Champion question asker",
+      "Why? Why? Why?"
+    ],
+    [
+      "Bravest explorer",
+      "Even in the dark"
+    ],
+    [
+      "Hug of the year",
+      "The squeeziest ever"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Your favourite dinner",
+      "You choose the menu"
+    ],
+    [
+      "Staying up late",
+      "Fifteen whole minutes"
+    ],
+    [
+      "A trip to the park",
+      "Swings first"
+    ],
+    [
+      "One giant cuddle",
+      "Use it again and again"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "Superstar of the Year",
+  "certLine": "is officially, totally and brilliantly",
+  "perfume": "Top notes of bubblegum, muddy puddles and sunshine. A heart of pure sprinkles.",
+  "news": {
+    "edition": "Superstar edition",
+    "headline": "{who} is amazing again",
+    "lead": "Reports are flooding in that {who}, aged {age}, has once again been brilliant, hilarious and the world's leading expert in {expert}.",
+    "weather": "Weather: sunny, with a 100% chance of giggles"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to adventure",
+    "nationality": "Citizen of Fun",
+    "job": "Professional giggler",
+    "stamps": [
+      "The playground",
+      "Dreamland",
+      "The Moon"
+    ]
+  },
+  "movie": {
+    "sub": "A family adventure",
+    "soon": "The sequel: when the baby can walk",
+    "reviews": [
+      [
+        "Heartwarming and hilarious",
+        "The Daily Hug"
+      ],
+      [
+        "Our proudest moment",
+        "{from}"
+      ],
+      [
+        "A born hero",
+        "The new baby"
+      ]
+    ]
+  },
+  "quizTitle": "The super quiz",
+  "quiz": [
+    [
+      "On average, how many hours a day does a newborn baby sleep?",
+      [
+        "About 16",
+        "About 6",
+        "About 24"
+      ],
+      0
+    ],
+    [
+      "What is the special day for brothers and sisters celebrated on 10 April?",
+      [
+        "Siblings Day",
+        "Family Day",
+        "Baby Day"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CANDY",
+    "SMILE",
+    "BRAVE",
+    "DREAM",
+    "PLAY",
+    "STAR"
+  ],
+  "note": {
+    "title": "Why the big sibling gets a magazine",
+    "contents": "A note for you",
+    "paras": [
+      "When a new baby comes home, everyone looks at the baby. The big sibling notices.",
+      "So this magazine is all about them: their new job, their big heart and how proud we are.",
+      "{who}, this one is just for you.",
+      "From everything {from} told us, you are already the best big sibling in the world."
+    ],
+    "wish": "Congratulations, {who}."
+  },
+  "concepts": "kid",
+  "own": {
+    "dayTitle": "A Day as the New Big Sibling",
+    "day": [
+      [
+        "7:00",
+        "Morning check",
+        "Runs in to see if the baby is still there. She is."
+      ],
+      [
+        "10:00",
+        "Nappy duty",
+        "Fetches the nappy. Refuses to go any closer."
+      ],
+      [
+        "14:00",
+        "Show and tell",
+        "Shows the baby every single toy, one by one."
+      ],
+      [
+        "17:30",
+        "Bath time helper",
+        "In charge of the rubber duck. Takes it very seriously."
+      ]
+    ],
+    "night": [
+      "19:00",
+      "Goodnight",
+      "Kisses the baby's head. \"Night night, little one.\""
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "Right next to the baby, watching"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Snacks, shared with nobody, especially not the baby"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Shhh, the baby is sleeping!\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Making the baby smile when nobody else can"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Whenever the baby cries"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Give them special time. Tell them they are brilliant"
+      ]
+    ],
+    "little": [
+      "You whisper so you do not wake the baby.",
+      "You tell everyone at nursery about your new job.",
+      "You share your favourite blanket.",
+      "You still need cuddles too, and that is perfect."
+    ],
+    "letters": "Little Things a Big Sibling Does"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

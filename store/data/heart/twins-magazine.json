@@ -1,0 +1,370 @@
+{
+  "theme": "dawn",
+  "fields": [
+    {
+      "id": "s_name",
+      "label": "How they are different",
+      "example": "One is a night owl, the other is up at five",
+      "max": 80,
+      "chapter": "How they are different"
+    },
+    {
+      "id": "s_home",
+      "label": "What life with two is really like",
+      "example": "Two of everything, half the sleep, twice the joy",
+      "max": 80,
+      "chapter": "Life with two"
+    },
+    {
+      "id": "s_dream",
+      "label": "Something you dream for them",
+      "example": "That they always have each other",
+      "max": 80,
+      "chapter": "What we dream for them"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To love you both exactly the same and completely differently",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "born": "Born",
+    "first": "Arrived first",
+    "tell": "How to tell them apart",
+    "same": "They both",
+    "words": "Them, in three words"
+  },
+  "story": {
+    "title": "Two Hearts, One Story",
+    "hand": "Two of you, and twice the love. {who}.",
+    "kicker": "Your story",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Twin facts",
+    "kicker": "From {from}, with love",
+    "title": "Ten things only twins do",
+    "items": [
+      "Hold hands in their sleep",
+      "Wake each other up",
+      "Laugh at the same time",
+      "Steal each other's dummies",
+      "Have their own language",
+      "Cry in harmony",
+      "Share a cot by choice",
+      "Copy each other",
+      "Look for each other",
+      "Need the same cuddle",
+      "Make strangers stop and stare",
+      "Love each other most"
+    ]
+  },
+  "timeline": {
+    "kicker": "Songs for little ones",
+    "title": "The Lullabies Sung Before You",
+    "items": [
+      [
+        "1760s",
+        "Mother Goose arrives",
+        "One of the first books of nursery rhymes, Mother Goose's Melody, was printed in London for little ones."
+      ],
+      [
+        "1806",
+        "Twinkle, twinkle",
+        "Jane Taylor published a poem called The Star. We still sing it to babies all over the world."
+      ],
+      [
+        "1830",
+        "Mary had a little lamb",
+        "Sarah Josepha Hale wrote the rhyme about a lamb who followed Mary to school one day."
+      ],
+      [
+        "1868",
+        "The famous lullaby",
+        "Johannes Brahms published his Wiegenlied, the gentle cradle song still hummed at bedtime."
+      ]
+    ],
+    "today": [
+      "{born}",
+      "{first} arrives",
+      "A brand new song begins. And we will sing it to you for the rest of our lives."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Babies",
+    "items": [
+      [
+        "Every child begins the world again.",
+        "Henry David Thoreau, Walden, 1854"
+      ],
+      [
+        "A babe in a house is a well-spring of pleasure.",
+        "Martin Farquhar Tupper, 1838"
+      ],
+      [
+        "Every child comes with the message that God is not yet discouraged of man.",
+        "Rabindranath Tagore, Stray Birds, 1916"
+      ],
+      [
+        "It takes a village to raise a child.",
+        "An African proverb"
+      ]
+    ],
+    "hand": "Our village is ready, {first}. And it already adores you."
+  },
+  "facts": {
+    "kicker": "Amazing from day one",
+    "title": "The Clever Science of Being New",
+    "items": [
+      [
+        "eye",
+        "Faces first",
+        "From the very start, newborns love looking at faces more than almost anything else."
+      ],
+      [
+        "heart",
+        "Voices you knew",
+        "Newborns already know the voices they heard most often before they were born."
+      ],
+      [
+        "camera",
+        "Just close enough",
+        "New babies see best at about the distance from a cuddling arm to a loving face."
+      ],
+      [
+        "smile",
+        "The first real smile",
+        "Real smiles usually arrive at around six to eight weeks. Worth every sleepy night."
+      ],
+      [
+        "spark",
+        "Little copycats",
+        "Scientists have seen very young babies copy faces, like poking a tongue out back at a grown up."
+      ],
+      [
+        "globe",
+        "Every language",
+        "Tiny babies can hear the sounds of every language, then tune in to their family's own."
+      ]
+    ],
+    "hand": "You were born clever, {first}. You were also born loved."
+  },
+  "world": {
+    "kicker": "A thank you from the universe",
+    "title": "Why the World Got Twice as Lucky",
+    "lead": "Because {who} arrived together, the world got:",
+    "items": [
+      "Twice the giggles.",
+      "Two best friends from day one.",
+      "Parents who can now do anything one handed.",
+      "Grandparents with double the photos.",
+      "Twice the cuddles.",
+      "A matching pair, completely unique.",
+      "And both of {who}."
+    ],
+    "close": "Double the love, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises to you both",
+    "items": [
+      "To love you both, always, the same.",
+      "To let you be two different people.",
+      "To never call you \"the twins\" when you hate it.",
+      "To give you each your own special time.",
+      "To keep you close, together."
+    ],
+    "hand": "All our love, {from}"
+  },
+  "awards": [
+    [
+      "Newest family member",
+      "Instantly famous"
+    ],
+    [
+      "Best yawn of the year",
+      "By a landslide"
+    ],
+    [
+      "Champion cuddler",
+      "Unbeaten"
+    ],
+    [
+      "Most loved person",
+      "Unanimous"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One bedtime story",
+      "Any book, any voice"
+    ],
+    [
+      "A lifetime of cuddles",
+      "Never expires"
+    ],
+    [
+      "One song at bedtime",
+      "Lullaby of your choice"
+    ],
+    [
+      "A big family day out",
+      "When you are a bit bigger"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {first}",
+  "cert": "The Most Wonderful Arrival",
+  "certLine": "is officially, wonderfully and forever",
+  "perfume": "Top notes of warm milk and fresh laundry. A heart of brand new wonder.",
+  "news": {
+    "edition": "Arrival edition",
+    "headline": "{first} arrives, family melts",
+    "lead": "Sources close to the family confirm that {first}, weighing in at {weight}, has taken charge of the whole household within hours.",
+    "weather": "Weather: soft and sleepy, with cuddles all day"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to a whole life of adventures",
+    "nationality": "Loved, everywhere",
+    "job": "Chief cuddle receiver",
+    "stamps": [
+      "Our arms",
+      "First night home",
+      "Everywhere next"
+    ]
+  },
+  "movie": {
+    "sub": "A double act",
+    "soon": "The sequel: double trouble, the toddler years",
+    "reviews": [
+      [
+        "Twice as cute as any baby",
+        "The Daily Hug"
+      ],
+      [
+        "Double the love, half the sleep",
+        "{from}"
+      ],
+      [
+        "A perfect pair",
+        "Everyone who meets them"
+      ]
+    ]
+  },
+  "quizTitle": "How much do you know about babies?",
+  "quiz": [
+    [
+      "Roughly how many births in the UK are twins?",
+      [
+        "About 1 in 65",
+        "About 1 in 5",
+        "About 1 in 1,000"
+      ],
+      0
+    ],
+    [
+      "Which type of twins comes from a single egg?",
+      [
+        "Identical twins",
+        "Fraternal twins",
+        "Both"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "BABY",
+    "CUDDLE",
+    "LULLABY",
+    "SMILE",
+    "TINY",
+    "WELCOME"
+  ],
+  "note": {
+    "title": "Why twins get a magazine",
+    "contents": "A note for you",
+    "paras": [
+      "Twins arrive as a pair, but they are two whole people from the very start.",
+      "This magazine celebrates both: what makes them the same, what makes them different and the beautiful chaos of having two.",
+      "{who}, this is your story, together.",
+      "From everything {from} told us, you are twice the joy."
+    ],
+    "wish": "Double the love, {who}."
+  },
+  "concepts": "baby",
+  "own": {
+    "dayTitle": "A Day With {first}",
+    "day": [
+      [
+        "5:30",
+        "Wake up one",
+        "One wakes up. Wakes the other. Team work."
+      ],
+      [
+        "9:00",
+        "Breakfast",
+        "Two high chairs, two spoons, one very messy floor."
+      ],
+      [
+        "13:00",
+        "Nap",
+        "Both asleep at once. A miracle. Nobody move."
+      ],
+      [
+        "17:00",
+        "Playtime",
+        "Babbling at each other in their secret language."
+      ]
+    ],
+    "night": [
+      "19:00",
+      "Bedtime",
+      "Side by side, holding hands, asleep."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "A double buggy, side by side"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Milk, times two, at the same time"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Ba ba ba!\" \"Ba ba!\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Making each other laugh until they hiccup"
+      ],
+      [
+        "clock",
+        "Most active",
+        "At exactly the same time, always"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Cuddle both. Sleep when they sleep. Ask for help"
+      ]
+    ],
+    "little": [
+      "You reach for each other in your sleep.",
+      "You laugh when the other one laughs.",
+      "You share everything, mostly.",
+      "You are completely, wonderfully different."
+    ],
+    "letters": "Little Things Only Twins Do"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

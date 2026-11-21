@@ -1,0 +1,370 @@
+{
+  "theme": "candy",
+  "fields": [
+    {
+      "id": "s_laugh",
+      "label": "What they said the night before",
+      "example": "\"Will they have a sandpit and will I be allowed in it?\"",
+      "max": 80,
+      "chapter": "The night before"
+    },
+    {
+      "id": "s_kind",
+      "label": "What they said when you picked them up",
+      "example": "\"I had the best day and I need a snack immediately\"",
+      "max": 80,
+      "chapter": "After school"
+    },
+    {
+      "id": "s_says",
+      "label": "The first friend they made",
+      "example": "A boy called Chris, because he also likes sharks",
+      "max": 80,
+      "chapter": "Their new best friend"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To always be at the gate at home time",
+      "max": 60
+    }
+  ],
+  "labels": {
+    "age": "Age on the first day",
+    "school": "School and class",
+    "excited": "Most excited about",
+    "want": "When I grow up",
+    "lunch": "In my lunchbox"
+  },
+  "story": {
+    "title": "{first} Goes to School",
+    "hand": "The first day of so many, {who}. We are so proud.",
+    "kicker": "The big day",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "First day facts",
+    "kicker": "From {from}, with love",
+    "title": "Ten things about the first day",
+    "items": [
+      "The new shoes",
+      "The too big jumper",
+      "The book bag",
+      "The name labels on everything",
+      "The photo by the front door",
+      "The walk to school",
+      "The wave at the gate",
+      "The first new friend",
+      "The painting that came home",
+      "The very big snack after school",
+      "The early bedtime",
+      "The proud grown ups"
+    ]
+  },
+  "timeline": {
+    "kicker": "Childhood through the ages",
+    "title": "A Short History of Fun",
+    "items": [
+      [
+        "1837",
+        "A garden for children",
+        "Friedrich Froebel opened a school where little ones learned through play. It became the first kindergarten."
+      ],
+      [
+        "1902",
+        "Hello, teddy bear",
+        "The first teddy bears were made, named after a president called Teddy who refused to shoot a captured bear."
+      ],
+      [
+        "1958",
+        "Click, the brick",
+        "The LEGO brick we know today was patented, and children have been building towers ever since."
+      ],
+      [
+        "1969",
+        "A street full of friends",
+        "Sesame Street first came on television, teaching letters, numbers and kindness with puppets."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who}",
+      "Age {age}, expert in {expert}, and the best thing that ever happened to us."
+    ]
+  },
+  "letters": {
+    "kicker": "Big words for little people",
+    "title": "Clever Things People Have Said",
+    "items": [
+      [
+        "Why, sometimes I've believed as many as six impossible things before breakfast.",
+        "Lewis Carroll, Through the Looking-Glass, 1871"
+      ],
+      [
+        "Just living is not enough, said the butterfly. One must have sunshine, freedom and a little flower.",
+        "Hans Christian Andersen"
+      ],
+      [
+        "Imagination is more important than knowledge.",
+        "Albert Einstein, 1929"
+      ],
+      [
+        "All children, except one, grow up.",
+        "J. M. Barrie, Peter Pan"
+      ]
+    ],
+    "hand": "Grow as slowly as you like, {who}. We are enjoying every minute."
+  },
+  "facts": {
+    "kicker": "Amazing but true",
+    "title": "Fun Facts to Amaze Your Friends",
+    "items": [
+      [
+        "baby",
+        "Bonus bones",
+        "You were born with about 300 bones. Some join together as you grow, so grown ups have 206."
+      ],
+      [
+        "heart",
+        "A fist full of love",
+        "Your heart is about the same size as your fist, and it grows bigger as you do."
+      ],
+      [
+        "spark",
+        "Super brain",
+        "Your brain grows super fast when you are little. By age six it is nearly grown up sized."
+      ],
+      [
+        "paw",
+        "Three hearts",
+        "An octopus has three hearts and blue blood. Imagine how many hugs it could give!"
+      ],
+      [
+        "moon",
+        "Footprints forever",
+        "There is no wind on the Moon, so the astronauts' footprints could stay there for a very long time."
+      ],
+      [
+        "clock",
+        "Honey never goes off",
+        "Honey found in ancient Egyptian tombs, thousands of years old, was still good to eat."
+      ]
+    ],
+    "hand": "Science is amazing. But the most amazing thing of all is you, {who}."
+  },
+  "world": {
+    "kicker": "A note from the universe",
+    "title": "Why School Is Lucky to Have {who}",
+    "lead": "Because {who} started school today, the classroom got:",
+    "items": [
+      "A brand new friend for everyone.",
+      "Very good questions.",
+      "Excellent painting skills.",
+      "A big, brave smile.",
+      "Someone who shares their snacks.",
+      "A future dinosaur doctor.",
+      "And the one and only {who}."
+    ],
+    "close": "Go get them, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "Pinky promise",
+    "title": "Our promises to you",
+    "items": [
+      "To be at the gate every home time.",
+      "To listen to every story about your day.",
+      "To help with every reading book.",
+      "To pin every painting on the fridge.",
+      "To be proud of you, always."
+    ],
+    "hand": "Love you to the moon, {from}"
+  },
+  "awards": [
+    [
+      "Best giggle in the house",
+      "Voted by everyone"
+    ],
+    [
+      "Champion question asker",
+      "Why? Why? Why?"
+    ],
+    [
+      "Bravest explorer",
+      "Even in the dark"
+    ],
+    [
+      "Hug of the year",
+      "The squeeziest ever"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Your favourite dinner",
+      "You choose the menu"
+    ],
+    [
+      "Staying up late",
+      "Fifteen whole minutes"
+    ],
+    [
+      "A trip to the park",
+      "Swings first"
+    ],
+    [
+      "One giant cuddle",
+      "Use it again and again"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "Superstar of the Year",
+  "certLine": "is officially, totally and brilliantly",
+  "perfume": "Top notes of bubblegum, muddy puddles and sunshine. A heart of pure sprinkles.",
+  "news": {
+    "edition": "Superstar edition",
+    "headline": "{who} is amazing again",
+    "lead": "Reports are flooding in that {who}, aged {age}, has once again been brilliant, hilarious and the world's leading expert in {expert}.",
+    "weather": "Weather: sunny, with a 100% chance of giggles"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to adventure",
+    "nationality": "Citizen of Fun",
+    "job": "Professional giggler",
+    "stamps": [
+      "The playground",
+      "Dreamland",
+      "The Moon"
+    ]
+  },
+  "movie": {
+    "sub": "A first day adventure",
+    "soon": "The sequel: Year One",
+    "reviews": [
+      [
+        "Brave, adorable and very small",
+        "The Daily Hug"
+      ],
+      [
+        "The proudest day of our lives",
+        "{from}"
+      ],
+      [
+        "A star is born, in a book bag",
+        "Their teacher"
+      ]
+    ]
+  },
+  "quizTitle": "The super quiz",
+  "quiz": [
+    [
+      "How many days a year do children in England usually go to school?",
+      [
+        "190",
+        "365",
+        "100"
+      ],
+      0
+    ],
+    [
+      "What do we call the first year of school in England?",
+      [
+        "Reception",
+        "Nursery",
+        "Year Zero"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CANDY",
+    "SMILE",
+    "BRAVE",
+    "DREAM",
+    "PLAY",
+    "STAR"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "The first day of school is a day the grown ups remember forever, and the children forget by teatime.",
+      "So we wrote it all down: the shoes, the wave, the very brave smile.",
+      "{who}, this is the start of something wonderful.",
+      "From everything {from} told us, you were the bravest one there."
+    ],
+    "wish": "Have the best time, {who}."
+  },
+  "concepts": "kid",
+  "own": {
+    "dayTitle": "{first}'s Very First School Day",
+    "day": [
+      [
+        "7:00",
+        "Up early",
+        "Uniform on. Shoes on the wrong feet. Fixed."
+      ],
+      [
+        "8:30",
+        "The gate",
+        "One big hug. One brave wave. In they go."
+      ],
+      [
+        "12:00",
+        "Lunch",
+        "Eats the jam sandwich. Saves the crisps for a friend."
+      ],
+      [
+        "15:15",
+        "Home time",
+        "Runs out with a painting and a hundred stories."
+      ]
+    ],
+    "night": [
+      "18:30",
+      "Bedtime",
+      "Asleep before the story finishes. Big day."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The carpet, near the book corner"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Jam sandwiches and a very big snack after school"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Guess what I did today!\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Making a friend in under five minutes"
+      ],
+      [
+        "clock",
+        "Most active",
+        "At playtime, and the second they get home"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Ask about their day. Pin up the paintings. Early night"
+      ]
+    ],
+    "little": [
+      "You held our hand tight, then let go when you were ready.",
+      "You told us every single thing about the hamster.",
+      "You were kind to the boy who was crying.",
+      "You were so brave, even with wobbly knees."
+    ],
+    "letters": "Little Things From the First Day"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

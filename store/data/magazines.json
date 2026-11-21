@@ -14894,5 +14894,1017 @@
       "credit": "The bride agrees"
     },
     "group": true
+  },
+  {
+    "slug": "twelve-months-magazine",
+    "title": "Twelve Months of Magic",
+    "searchTitle": "Baby First Year Personalised Magazine",
+    "pinTitle": "Baby's First Year Keepsake: Twelve Months of Magic Magazine",
+    "occasion": "First year",
+    "short": "Baby's first year, month by month: every first, every smile, in one glossy keepsake.",
+    "description": "The first smile, the first giggle, the first wobbly step and the first word that was definitely 'Dada'. A month by month magazine of your baby's first year, with your photos and your words, made into a keepsake to treasure. Perfect for a first birthday, or for the grandparents.",
+    "keywords": [
+      "baby first year book",
+      "first birthday keepsake",
+      "baby memory book",
+      "first year photo book",
+      "gift for new parents",
+      "baby month by month"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring the new arrival",
+      "A welcome letter to the world",
+      "Their first days by the numbers",
+      "A photo spread of tiny fingers and toes",
+      "The moment we first met",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter for your first birthday",
+    "feature": [
+      "The moment from this year we never want to forget",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Baby's name",
+        "example": "Ava",
+        "max": 12
+      },
+      {
+        "id": "born",
+        "label": "Date of birth",
+        "example": "3 May 2025",
+        "max": 18
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mummy and Daddy",
+        "max": 30
+      },
+      {
+        "id": "smile",
+        "label": "First smile",
+        "example": "Week six, at the cat",
+        "max": 30
+      },
+      {
+        "id": "word",
+        "label": "First word",
+        "example": "\"Dog\", pointing at a horse",
+        "max": 34
+      },
+      {
+        "id": "steps",
+        "label": "First steps",
+        "example": "Eleven months, straight to the biscuits",
+        "max": 40
+      },
+      {
+        "id": "loves",
+        "label": "Favourite thing this year",
+        "example": "Bath time splashing",
+        "max": 40
+      },
+      {
+        "id": "moment",
+        "label": "The moment from this year you never want to forget",
+        "example": "Her first proper belly laugh, at Daddy sneezing, and how we spent the next hour pretending to sneeze just to hear it again",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know one day? (This becomes your letter)",
+        "example": "Your first year went by in a blur of milk, giggles and very little sleep, and it was the best year of our lives. Every month you became more you. We cannot wait for all the years to come.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo at one year old",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A photo from the early weeks",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "A favourite from this year",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "ava",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Ava",
+          "born": "3 May 2025",
+          "from": "Mummy and Daddy",
+          "smile": "Week six, at the cat",
+          "word": "\"Dog\", pointing at a horse",
+          "steps": "Eleven months, straight to the biscuits",
+          "loves": "Bath time splashing",
+          "x_type": "baby"
+        },
+        "photos": {
+          "photo1": "/assets/samples/twelve-months-magazine-0.jpg",
+          "photo2": "/assets/samples/twelve-months-magazine-0b.jpg",
+          "photo3": "/assets/samples/twelve-months-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "sky",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Leo",
+          "born": "18 June 2025",
+          "from": "Mum and Dad",
+          "smile": "Day ten, at Grandma",
+          "word": "\"Uh oh\", constantly",
+          "steps": "Ten months, then never stopped",
+          "loves": "Banging pans",
+          "x_type": "menace"
+        },
+        "photos": {
+          "photo1": "/assets/samples/first-birthday-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "mint",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Sam",
+          "born": "1 August 2025",
+          "from": "Mama and Papa",
+          "smile": "Week five, in the bath",
+          "word": "\"More\"",
+          "steps": "Twelve months, at the party",
+          "loves": "Peekaboo, forever",
+          "x_type": "foodie"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-baby-magazine-0.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The first year issue",
+      "edition": "Born {born}",
+      "lines": [
+        [
+          "Exclusive",
+          "Twelve months of {name}"
+        ],
+        [
+          "First smile",
+          "{smile}"
+        ],
+        [
+          "First word",
+          "{word}"
+        ]
+      ],
+      "badge": [
+        "Twelve",
+        "months",
+        "of magic"
+      ],
+      "quote": "{steps}",
+      "credit": "First steps"
+    }
+  },
+  {
+    "slug": "first-day-school-magazine",
+    "title": "My First Day of School",
+    "searchTitle": "First Day of School Personalised Keepsake Magazine",
+    "pinTitle": "First Day of School Keepsake: a Magazine for Starting School",
+    "occasion": "First day at school",
+    "short": "The big first day: new uniform, brave smile and the questions they answered that morning.",
+    "description": "The new uniform, the too big book bag, the brave wave at the gate. A keepsake magazine for starting school, with their answers in their own words, photos from the big day and a letter they will read again on their last day. Lovely for Reception, a new school or back to school each year.",
+    "keywords": [
+      "first day of school keepsake",
+      "starting school gift",
+      "back to school gift",
+      "reception keepsake",
+      "first day at school book",
+      "gift for school starter"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A comic style cover starring your child",
+      "My expert page: everything they know about their favourite thing",
+      "My favourite things, from food to animals",
+      "When I grow up",
+      "Fun facts about me",
+      "A letter from the grown ups who love them",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Leo",
+        "max": 12
+      },
+      {
+        "id": "age",
+        "label": "Age",
+        "example": "6",
+        "max": 2
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mummy and Daddy",
+        "max": 30
+      },
+      {
+        "id": "school",
+        "label": "School or class",
+        "example": "Oak Class, Rose Hill",
+        "max": 24
+      },
+      {
+        "id": "excited",
+        "label": "What they are most excited about",
+        "example": "The big climbing frame",
+        "max": 40
+      },
+      {
+        "id": "want",
+        "label": "What they want to be",
+        "example": "A dinosaur doctor",
+        "max": 30
+      },
+      {
+        "id": "lunch",
+        "label": "Packed lunch",
+        "example": "Jam sandwiches, no crusts",
+        "max": 34
+      },
+      {
+        "id": "moment",
+        "label": "The moment at the school gate",
+        "example": "He let go of my hand, turned round twice to check I was still there, then ran in shouting \"BYE MUMMY\" so the whole playground heard",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter) (This becomes your letter)",
+        "example": "Today you walked into school all by yourself and we have never been prouder. Be kind, ask lots of questions and remember we are thinking about you every single minute until home time.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo in uniform",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "At the school gate",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "leo",
+        "palette": "sky",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Leo",
+          "age": "4",
+          "from": "Mummy and Daddy",
+          "school": "Oak Class, Rose Hill",
+          "excited": "The big climbing frame",
+          "want": "A dinosaur doctor",
+          "lunch": "Jam sandwiches, no crusts",
+          "x_type": "explorer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/first-day-school-magazine-0.jpg",
+          "photo2": "/assets/samples/first-day-school-magazine-0b.jpg",
+          "photo3": "/assets/samples/first-day-school-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Mia",
+          "age": "5",
+          "from": "Mum and Grandma",
+          "school": "Year One, St Mary's",
+          "excited": "Painting every day",
+          "want": "A singing vet",
+          "lunch": "Cheese and grapes",
+          "x_type": "chatterbox"
+        },
+        "photos": {
+          "photo1": "/assets/samples/kids-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "mint",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Sam",
+          "age": "4",
+          "from": "Mama and Papa",
+          "school": "Robins, Hilltop Primary",
+          "excited": "Making new friends",
+          "want": "An astronaut chef",
+          "lunch": "Pasta, always pasta",
+          "x_type": "builder"
+        },
+        "photos": {
+          "photo1": "/assets/samples/kids-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The first day issue",
+      "edition": "{school}",
+      "lines": [
+        [
+          "Exclusive",
+          "Big school, big smile"
+        ],
+        [
+          "Most excited about",
+          "{excited}"
+        ],
+        [
+          "When I grow up",
+          "{want}"
+        ]
+      ],
+      "badge": [
+        "Age",
+        "{age}",
+        "and ready"
+      ],
+      "quote": "{lunch}",
+      "credit": "In my lunchbox"
+    },
+    "letterTitle": "A letter for your first day",
+    "feature": [
+      "The moment at the school gate",
+      "moment"
+    ]
+  },
+  {
+    "slug": "cake-smash-magazine",
+    "title": "The Cake Smash Edition",
+    "searchTitle": "Cake Smash First Birthday Keepsake Magazine",
+    "pinTitle": "Cake Smash Keepsake: a First Birthday Magazine",
+    "occasion": "Cake smash",
+    "short": "The cake smash photos deserve better than a phone: a glossy first birthday magazine.",
+    "description": "Icing in the hair, cake on the ceiling and the biggest grin you have ever seen. Turn your cake smash photos into a glossy first birthday magazine with their first year in your words. Grandparents will want their own copy.",
+    "keywords": [
+      "cake smash keepsake",
+      "first birthday keepsake",
+      "cake smash photo book",
+      "baby first birthday gift",
+      "1st birthday magazine",
+      "cake smash album"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring the birthday baby",
+      "A letter for their first birthday",
+      "Year one by the numbers",
+      "A photo spread of the best firsts",
+      "The moment that made us melt",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter for your first birthday",
+    "feature": [
+      "The cake smash, blow by blow",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Baby's name",
+        "example": "Sam",
+        "max": 12
+      },
+      {
+        "id": "born",
+        "label": "Birthday",
+        "example": "12 April 2025",
+        "max": 18
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mummy and Daddy",
+        "max": 30
+      },
+      {
+        "id": "cake",
+        "label": "The cake",
+        "example": "Strawberry, pink icing, enormous",
+        "max": 40
+      },
+      {
+        "id": "verdict",
+        "label": "Their verdict",
+        "example": "Ate the candle holder first",
+        "max": 40
+      },
+      {
+        "id": "mess",
+        "label": "Where the cake ended up",
+        "example": "Hair, ears, the dog",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Them in three words",
+        "example": "Sticky, giggly, perfect",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The cake smash, blow by blow",
+        "example": "He poked it once, looked at us very seriously, then put both hands in and smeared it all over his face, laughing so hard he fell over backwards",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "You are one! A whole year of you, and every day has been better than the last. You were covered in cake and absolutely perfect. Happy first birthday, little one.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo with the cake",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "Mid smash",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "The aftermath",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "sam",
+        "palette": "sky",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Sam",
+          "born": "12 April 2025",
+          "from": "Mummy and Daddy",
+          "cake": "Strawberry, pink icing, enormous",
+          "verdict": "Ate the candle holder first",
+          "mess": "Hair, ears, the dog",
+          "words": "Sticky, giggly, perfect",
+          "x_type": "foodie"
+        },
+        "photos": {
+          "photo1": "/assets/samples/cake-smash-magazine-0.jpg",
+          "photo2": "/assets/samples/cake-smash-magazine-0b.jpg",
+          "photo3": "/assets/samples/cake-smash-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "rose",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "born": "2 June 2025",
+          "from": "Mama and Dada",
+          "cake": "Lemon with rainbow sprinkles",
+          "verdict": "One lick, then pure joy",
+          "mess": "Everywhere, including Dad",
+          "words": "Sweet, messy, magic",
+          "x_type": "diva"
+        },
+        "photos": {
+          "photo1": "/assets/samples/first-birthday-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "butter",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Leo",
+          "born": "30 August 2025",
+          "from": "Mum and Dad",
+          "cake": "Chocolate, with a dinosaur on top",
+          "verdict": "Ate the dinosaur",
+          "mess": "Up his nose, somehow",
+          "words": "Cheeky, chocolatey, ours",
+          "x_type": "menace"
+        },
+        "photos": {
+          "photo1": "/assets/samples/first-birthday-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The cake smash issue",
+      "edition": "One today",
+      "lines": [
+        [
+          "Exclusive",
+          "The cake did not survive"
+        ],
+        [
+          "The cake",
+          "{cake}"
+        ],
+        [
+          "The verdict",
+          "{verdict}"
+        ]
+      ],
+      "badge": [
+        "Turning",
+        "1",
+        "and sticky"
+      ],
+      "quote": "{words}",
+      "credit": "The birthday baby"
+    }
+  },
+  {
+    "slug": "big-sibling-magazine",
+    "title": "Promoted to Big Brother or Sister",
+    "searchTitle": "Big Brother Big Sister Personalised Magazine",
+    "pinTitle": "Big Brother or Big Sister Gift: a Magazine for the New Big Sibling",
+    "occasion": "New big sibling",
+    "short": "For the brand new big brother or big sister: a magazine all about their big promotion.",
+    "description": "When a new baby arrives, the big sibling needs some attention too. This magazine is all about them: their new job, what they will teach the baby and how proud everyone is. Give it on the day they meet the baby, so they feel like the star they are.",
+    "keywords": [
+      "big sister gift",
+      "big brother gift",
+      "new sibling gift",
+      "gift for older sibling",
+      "big sister book",
+      "promoted to big brother"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A comic style cover starring your child",
+      "My expert page: everything they know about their favourite thing",
+      "My favourite things, from food to animals",
+      "When I grow up",
+      "Fun facts about me",
+      "A letter from the grown ups who love them",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Leo",
+        "max": 12
+      },
+      {
+        "id": "age",
+        "label": "Age",
+        "example": "6",
+        "max": 2
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mummy and Daddy",
+        "max": 30
+      },
+      {
+        "id": "baby",
+        "label": "The new baby's name",
+        "example": "Ava",
+        "max": 12
+      },
+      {
+        "id": "role",
+        "label": "Big brother or big sister?",
+        "example": "big brother",
+        "max": 14
+      },
+      {
+        "id": "teach",
+        "label": "First thing they will teach the baby",
+        "example": "How to roar like a T rex",
+        "max": 40
+      },
+      {
+        "id": "gift",
+        "label": "What they gave the baby",
+        "example": "His favourite blue blanket",
+        "max": 40
+      },
+      {
+        "id": "moment",
+        "label": "The moment they met the baby",
+        "example": "He tiptoed in, looked at her for a very long time, then whispered \"hello, I am your brother and I will look after you\" and we all cried",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter) (This becomes your letter)",
+        "example": "Our family just got bigger, and so did our love. There is more than enough to go round, and you will always be our first baby. Thank you for being the best big brother already.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the big sibling",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "Meeting the baby",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "leo",
+        "palette": "sky",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Leo",
+          "age": "4",
+          "from": "Mummy and Daddy",
+          "baby": "Ava",
+          "role": "big brother",
+          "teach": "How to roar like a T rex",
+          "gift": "His favourite blue blanket",
+          "x_type": "builder"
+        },
+        "photos": {
+          "photo1": "/assets/samples/big-sibling-magazine-0.jpg",
+          "photo2": "/assets/samples/big-sibling-magazine-0b.jpg",
+          "photo3": "/assets/samples/big-sibling-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#b5552b"
+        },
+        "values": {
+          "name": "Mia",
+          "age": "6",
+          "from": "Mum and Dad",
+          "baby": "Sam",
+          "role": "big sister",
+          "teach": "All the words to every song",
+          "gift": "A drawing of the whole family",
+          "x_type": "chatterbox"
+        },
+        "photos": {
+          "photo1": "/assets/samples/kids-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "chris",
+        "palette": "mint",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Chris",
+          "age": "3",
+          "from": "Mama and Papa",
+          "baby": "Emma",
+          "role": "big brother",
+          "teach": "How to give the best cuddles",
+          "gift": "One slightly chewed teddy",
+          "x_type": "giggler"
+        },
+        "photos": {
+          "photo1": "/assets/samples/kids-magazine-0.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The big promotion issue",
+      "edition": "New job: {role}",
+      "lines": [
+        [
+          "Exclusive",
+          "{name} has been promoted"
+        ],
+        [
+          "Will teach {baby}",
+          "{teach}"
+        ],
+        [
+          "First gift",
+          "{gift}"
+        ]
+      ],
+      "badge": [
+        "Promoted",
+        "to",
+        "{role}"
+      ],
+      "quote": "The best {role} ever",
+      "credit": "Everyone agrees"
+    },
+    "letterTitle": "A letter to our new big sibling",
+    "feature": [
+      "The moment they met the baby",
+      "moment"
+    ]
+  },
+  {
+    "slug": "twins-magazine",
+    "title": "Double the Trouble, Double the Love",
+    "searchTitle": "Twins Personalised Keepsake Magazine",
+    "pinTitle": "Gift for Twins: Double the Trouble, Double the Love Magazine",
+    "occasion": "Twins",
+    "short": "Two babies, one magazine: the story of your twins, double everything.",
+    "description": "Two cots, two of everything and twice the love. A keepsake magazine for twins: how they arrived, how they are different, how they are the same and the chaos of life with two. Lovely for new twins, a twins birthday or Twins Day.",
+    "keywords": [
+      "twins gift",
+      "gift for twins",
+      "twin baby keepsake",
+      "new twins gift",
+      "twins birthday gift",
+      "gift for parents of twins"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring the new arrival",
+      "A welcome letter to the world",
+      "Their first days by the numbers",
+      "A photo spread of tiny fingers and toes",
+      "The moment we first met",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter to our twins",
+    "feature": [
+      "The moment we found out it was twins",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "The twins' names",
+        "example": "Mia and Ava",
+        "max": 20
+      },
+      {
+        "id": "born",
+        "label": "Born",
+        "example": "9 March 2026",
+        "max": 18
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mum and Dad",
+        "max": 30
+      },
+      {
+        "id": "first",
+        "label": "Who arrived first",
+        "example": "Mia, by four minutes",
+        "max": 44
+      },
+      {
+        "id": "tell",
+        "label": "How to tell them apart",
+        "example": "Ava has the dimple",
+        "max": 40
+      },
+      {
+        "id": "same",
+        "label": "What they both do",
+        "example": "Laugh at the exact same time",
+        "max": 40
+      },
+      {
+        "id": "words",
+        "label": "Them in three words",
+        "example": "Double, trouble, love",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment you found out it was twins",
+        "example": "The sonographer went quiet, then smiled and said \"there is someone else in here\", and your dad sat down on the floor",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "You arrived together and you made our hearts twice as big. You are two completely different people and the best of friends. We are so lucky to be your mum and dad.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the twins",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "The twins together",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "mia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Mia and Ava",
+          "born": "9 March 2026",
+          "from": "Mum and Dad",
+          "first": "Mia, by four minutes",
+          "tell": "Ava has the dimple",
+          "same": "Laugh at the exact same time",
+          "words": "Double, trouble, love",
+          "x_type": "baby"
+        },
+        "photos": {
+          "photo1": "/assets/samples/twins-magazine-0.jpg",
+          "photo2": "/assets/samples/twins-magazine-0b.jpg",
+          "photo3": "/assets/samples/twins-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "sky",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Leo and Sam",
+          "born": "21 July 2025",
+          "from": "Mama and Papa",
+          "first": "Sam, and he has not let Leo forget",
+          "tell": "Leo is the loud one",
+          "same": "Both refuse to sleep",
+          "words": "Loud, cheeky, adored",
+          "x_type": "menace"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-baby-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "emma",
+        "palette": "mint",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Emma and Chris",
+          "born": "1 January 2026",
+          "from": "Mummy and Daddy",
+          "first": "Emma, at one minute past midnight",
+          "tell": "Chris has more hair",
+          "same": "Hold hands in their sleep",
+          "words": "Sweet, sleepy, ours",
+          "x_type": "napper"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-baby-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The twins issue",
+      "edition": "Born {born}",
+      "lines": [
+        [
+          "Exclusive",
+          "Double the love"
+        ],
+        [
+          "Arrived first",
+          "{first}"
+        ],
+        [
+          "How to tell them apart",
+          "{tell}"
+        ]
+      ],
+      "badge": [
+        "Two",
+        "of",
+        "a kind"
+      ],
+      "quote": "{same}",
+      "credit": "They both"
+    }
   }
 ]
