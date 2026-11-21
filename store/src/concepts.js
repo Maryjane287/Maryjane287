@@ -315,17 +315,19 @@ export function applyConcept(H, v) {
   const gentle = !!pack.gentle;
   // A person's own answers beat our words wherever they fit.
   const P = who ? PEOPLE[who] : null;
-  const guide = P?.guide || T.guide || [['home', 'Habitat', T.habitat], ['apple', 'Diet', T.diet, ['obsession', 'fuel', 'coffee', 'dish', 'food']], ['music', 'Call', T.call, ['says']], ['spark', 'Special ability', T.special, ['talent', 'power', 'skill', 'weapon', 'best']], ['clock', 'Most active', T.active], ['heart', 'Care instructions', T.care]];
-  const day = (P?.day || T.day).map(([a, b, c, f]) => [a, b, f && brace(v[f]) ? brace(v[f]) : c]);
-  out.timeline = { kicker: gentle ? 'As we remember it' : 'A day in the life', title: pack.day || (gentle ? 'A Day with {first}, Remembered' : '24 Hours with {first}'), items: day, today: P?.night || T.night, roomy: true };
-  out.facts = { kicker: gentle ? 'Always them' : 'A field guide', title: pack.guide || (gentle ? 'The Things That Were So {first}' : 'A Field Guide to {first}'), items: guide.map(([i, h, x, f]) => [i, h, f ? ans(f, x) : x]), hand: gentle ? 'Nobody else was ever quite like {first}.' : 'Rare, precious and impossible to replace. Handle with love.', roomy: true };
-  const little = (P ? P.little : T.little).slice(0, 4);
+  // A magazine's own written pages (H.own) beat the shared packs, so every issue reads as its own.
+  const O = H.own || {};
+  const guide = O.guide || P?.guide || T.guide || [['home', 'Habitat', T.habitat], ['apple', 'Diet', T.diet, ['obsession', 'fuel', 'coffee', 'dish', 'food']], ['music', 'Call', T.call, ['says']], ['spark', 'Special ability', T.special, ['talent', 'power', 'skill', 'weapon', 'best']], ['clock', 'Most active', T.active], ['heart', 'Care instructions', T.care]];
+  const day = (O.day || P?.day || T.day).map(([a, b, c, f]) => [a, b, f && brace(v[f]) ? brace(v[f]) : c]);
+  out.timeline = { kicker: gentle ? 'As we remember it' : 'A day in the life', title: O.dayTitle || pack.day || (gentle ? 'A Day with {first}, Remembered' : '24 Hours with {first}'), items: day, today: O.night || P?.night || T.night, roomy: true };
+  out.facts = { kicker: gentle ? 'Always them' : 'A field guide', title: O.guideTitle || pack.guide || (gentle ? 'The Things That Were So {first}' : 'A Field Guide to {first}'), items: guide.map(([i, h, x, f]) => [i, h, f ? ans(f, x) : x]), hand: O.guideHand || (gentle ? 'Nobody else was ever quite like {first}.' : 'Rare, precious and impossible to replace. Handle with love.'), roomy: true };
+  const little = (O.little || (P ? P.little : T.little)).slice(0, 4);
   const noted = gentle ? GENTLE_NOTED : pack.noted || NOTED;
-  out.letters = { kicker: 'The little things', title: pack.letters || (gentle ? 'The Little Things We Will Always Remember' : 'The Things You Think Nobody Notices'), items: little.map((x, i) => [x, noted[i]]), hand: gentle ? 'Every one of them, kept safe in our hearts.' : P ? '{from} noticed every single one, {who}.' : 'We noticed every single one.' };
+  out.letters = { kicker: 'The little things', title: O.letters || pack.letters || (gentle ? 'The Little Things We Will Always Remember' : 'The Things You Think Nobody Notices'), items: little.map((x, i) => [x, noted[i]]), hand: O.hand || (gentle ? 'Every one of them, kept safe in our hearts.' : P ? '{from} noticed every single one, {who}.' : 'We noticed every single one.') };
   if (P) {
-    out.world = { ...H.world, items: [...P.world, 'And the one and only {who}.'] };
-    if (!H.promises?.own) out.promises = { ...H.promises, items: P.promises };
-    out.picks = { ...H.picks, items: P.picks };
+    if (!O.world) out.world = { ...H.world, items: [...P.world, 'And the one and only {who}.'] };
+    if (!H.promises?.own && !O.promises) out.promises = { ...H.promises, items: P.promises };
+    if (!O.picks) out.picks = { ...H.picks, items: P.picks };
   }
   return out;
 }

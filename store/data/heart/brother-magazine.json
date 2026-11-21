@@ -303,5 +303,74 @@
     "wish": "Love you, {who}. Even when you are annoying."
   },
   "concepts": true,
-  "conceptWho": "sibling"
+  "conceptWho": "sibling",
+  "own": {
+    "dayTitle": "A Day in the Life of {first}",
+    "day": [
+      [
+        "7:30",
+        "Alarm",
+        "Snoozed three times. Somehow still on time."
+      ],
+      [
+        "12:00",
+        "Lunch",
+        "Sends the group chat a video nobody asked for. Everybody watches it."
+      ],
+      [
+        "18:00",
+        "After work",
+        "Fixes a friend's shelf. Says it is \"no bother\"."
+      ],
+      [
+        "21:00",
+        "Evening",
+        "Rings to say hello. Mostly just to wind me up."
+      ]
+    ],
+    "night": [
+      "23:00",
+      "Lights out",
+      "One last terrible joke in the family chat."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The sofa, holding the remote hostage"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Anything left in the fridge, without asking"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Nah, you will be fine.\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Turning up exactly when it matters"
+      ],
+      [
+        "clock",
+        "Most active",
+        "At family dinners, when the old stories come out"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Laugh at the jokes, feed him well, tell him he is the favourite"
+      ]
+    ],
+    "little": [
+      "You still tease me about the haircut from 2003.",
+      "You pretend you are not soft, then give the best hugs.",
+      "You always know how to make Mum laugh when she is cross.",
+      "You check my car, my locks and my life, without being asked."
+    ],
+    "letters": "The Little Things a Brother Does"
+  }
 }

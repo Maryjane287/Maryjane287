@@ -6537,7 +6537,7 @@
   },
   {
     "slug": "husband-magazine",
-    "title": "The Husband Issue",
+    "title": "Husband of the Year",
     "searchTitle": "Personalised Magazine for Husband",
     "pinTitle": "Personalised Husband Magazine Gift",
     "occasion": "For my husband",
@@ -6739,7 +6739,7 @@
   },
   {
     "slug": "wife-magazine",
-    "title": "The Wife Issue",
+    "title": "Wife of the Year",
     "searchTitle": "Personalised Magazine for Wife",
     "pinTitle": "Personalised Wife Magazine Gift",
     "occasion": "For my wife",
@@ -6941,7 +6941,7 @@
   },
   {
     "slug": "will-you-marry-me-magazine",
-    "title": "The Question",
+    "title": "The Proposal Edition",
     "searchTitle": "Personalised Proposal Magazine",
     "pinTitle": "Will You Marry Me Magazine, a Proposal Idea",
     "occasion": "A proposal",
@@ -7749,7 +7749,7 @@
   },
   {
     "slug": "long-distance-magazine",
-    "title": "Miles Apart",
+    "title": "Miles Apart, Hearts Together",
     "searchTitle": "Long Distance Relationship Gift Magazine",
     "pinTitle": "Long Distance Relationship Gift: a Personalised Magazine",
     "occasion": "Long distance love",
@@ -9510,6 +9510,1166 @@
       ],
       "quote": "{words}",
       "credit": "The team agrees"
+    }
+  },
+  {
+    "slug": "our-love-story-magazine",
+    "title": "Our Love Story",
+    "searchTitle": "Our Love Story Personalised Magazine",
+    "pinTitle": "Our Love Story: a Personalised Magazine for Your Partner",
+    "occasion": "Our love story",
+    "short": "Your whole relationship, from the first hello to right now, told like a cover story.",
+    "description": "How you met, the first date, the song that is yours and the moment you just knew. Tell us your story and we turn it into a glossy magazine starring the two of you, with photos on almost every page. For an anniversary, Valentine's Day, or simply because they should know how it reads from your side.",
+    "keywords": [
+      "our love story gift",
+      "personalised couple gift",
+      "relationship timeline gift",
+      "anniversary gift for her",
+      "anniversary gift for him",
+      "how we met keepsake"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring them"
+    ],
+    "letterTitle": "A love letter",
+    "feature": [
+      "The moment I knew",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "names",
+        "label": "Your names",
+        "example": "Emma & Leo",
+        "max": 16
+      },
+      {
+        "id": "since",
+        "label": "Together since",
+        "example": "2019",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Leo",
+        "max": 34
+      },
+      {
+        "id": "where",
+        "label": "Where you met",
+        "example": "Spilling coffee on each other",
+        "max": 34
+      },
+      {
+        "id": "date",
+        "label": "Your first date",
+        "example": "Pizza, then a five hour walk",
+        "max": 34
+      },
+      {
+        "id": "song",
+        "label": "Your song",
+        "example": "The one from the kitchen dance",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Your love in three words",
+        "example": "Easy, silly, forever",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment you knew",
+        "example": "She laughed so hard at my terrible joke that she snorted, then went bright red, and I thought: oh no, I am going to marry this person",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your love letter)",
+        "example": "Of all the luck I have ever had, meeting you is the best by a mile. Thank you for every ordinary day you have made extraordinary. I would choose you again, every time.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of you both",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "An early photo of you two",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "A favourite from now",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma-leo",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "names": "Emma & Leo",
+          "since": "2019",
+          "from": "Leo",
+          "where": "Spilling coffee on each other",
+          "date": "Pizza, then a five hour walk",
+          "song": "The one from the kitchen dance",
+          "words": "Easy, silly, forever",
+          "x_type": "romantics"
+        },
+        "photos": {
+          "photo1": "/assets/samples/anniversary-magazine-0.jpg",
+          "photo2": "/assets/samples/anniversary-magazine-0b.jpg",
+          "photo3": "/assets/samples/anniversary-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "mia-sam",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#2a1a10"
+        },
+        "values": {
+          "names": "Mia & Sam",
+          "since": "2015",
+          "from": "Mia",
+          "where": "A friend's terrible party",
+          "date": "Mini golf. He cheated",
+          "song": "Anything by our band",
+          "words": "Loud, loyal, ours",
+          "x_type": "comedians"
+        },
+        "photos": {
+          "photo1": "/assets/samples/valentines-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "ava-chris",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "names": "Ava & Chris",
+          "since": "2021",
+          "from": "Chris",
+          "where": "Same train, every morning",
+          "date": "Tapas and far too much talking",
+          "song": "Our first dance, on repeat",
+          "words": "Warm, wild, home",
+          "x_type": "adventurers"
+        },
+        "photos": {
+          "photo1": "/assets/samples/valentines-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{names}",
+      "issue": "The love story issue",
+      "edition": "Together since {since}",
+      "lines": [
+        [
+          "Exclusive",
+          "How they met, finally told"
+        ],
+        [
+          "Where it began",
+          "{where}"
+        ],
+        [
+          "First date",
+          "{date}"
+        ]
+      ],
+      "badge": [
+        "Together",
+        "since",
+        "{since}"
+      ],
+      "quote": "{words}",
+      "credit": "A love story"
+    }
+  },
+  {
+    "slug": "daddys-little-girl-magazine",
+    "title": "Daddy's Little Girl",
+    "searchTitle": "Daddy's Little Girl Personalised Magazine for Dad",
+    "pinTitle": "Gift for Dad From Daughter: a Daddy's Little Girl Magazine",
+    "occasion": "From his daughter",
+    "short": "A daughter's love letter to her dad, made into a magazine he will keep forever.",
+    "description": "From shoulder rides to walking her down the aisle. A daughter answers a few questions about her dad: what he taught her, the thing he always says, the moment she knew he would always be there. We turn it into a glossy magazine where he is the cover star. Perfect for Father's Day, his birthday or her wedding day.",
+    "keywords": [
+      "gift for dad from daughter",
+      "daddys little girl gift",
+      "fathers day gift from daughter",
+      "dad birthday gift from daughter",
+      "father of the bride gift",
+      "personalised dad gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring them"
+    ],
+    "letterTitle": "A letter from your little girl",
+    "feature": [
+      "The moment I knew you would always be there",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "What you call him",
+        "example": "Dad",
+        "max": 12
+      },
+      {
+        "id": "daughter",
+        "label": "His little girl's name",
+        "example": "Mia",
+        "max": 16
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mia",
+        "max": 34
+      },
+      {
+        "id": "taught",
+        "label": "He taught me",
+        "example": "How to ride a bike, and to be brave",
+        "max": 40
+      },
+      {
+        "id": "says",
+        "label": "He always says",
+        "example": "Text me when you are home",
+        "max": 40
+      },
+      {
+        "id": "skill",
+        "label": "His secret talent",
+        "example": "Fixing anything with a butter knife",
+        "max": 36
+      },
+      {
+        "id": "words",
+        "label": "Three words that are so him",
+        "example": "Strong, soft, silly",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "The moment you knew he would always be there",
+        "example": "He drove four hours in the snow to fetch me from university when I was homesick, and never once asked why",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want him to know? (This becomes your letter)",
+        "example": "Whatever I do and wherever I go, I will always be your little girl. Thank you for every shoulder ride, every lift and every time you believed in me first. I love you, Dad.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of him",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "The two of you",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "An old photo of you both",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "dad",
+        "palette": "sky",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Dad",
+          "daughter": "Mia",
+          "from": "Mia",
+          "taught": "How to ride a bike, and to be brave",
+          "says": "Text me when you are home",
+          "skill": "Fixing anything with a butter knife",
+          "words": "Strong, soft, silly",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/fathers-day-magazine-0b.jpg",
+          "photo2": "/assets/samples/fathers-day-magazine-0.jpg",
+          "photo3": "/assets/samples/fathers-day-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "daddy",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Daddy",
+          "daughter": "Ava",
+          "from": "Ava",
+          "taught": "To always stand up for others",
+          "says": "You can do anything",
+          "skill": "The best bedtime stories",
+          "words": "Kind, wise, mine",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/fathers-day-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "papa",
+        "palette": "mint",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#5a4a3a"
+        },
+        "values": {
+          "name": "Papa",
+          "daughter": "Emma",
+          "from": "Emma",
+          "taught": "How to change a tyre",
+          "says": "Did you check the oil?",
+          "skill": "Dancing at weddings",
+          "words": "Funny, fierce, golden",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/fathers-day-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The daddy's girl issue",
+      "edition": "Best dad in the world",
+      "lines": [
+        [
+          "Exclusive",
+          "His little girl tells all"
+        ],
+        [
+          "He taught me",
+          "{taught}"
+        ],
+        [
+          "He always says",
+          "{says}"
+        ]
+      ],
+      "badge": [
+        "Her",
+        "hero",
+        "forever"
+      ],
+      "quote": "{words}",
+      "credit": "Love, {daughter}"
+    }
+  },
+  {
+    "slug": "mum-best-friend-magazine",
+    "title": "My First Best Friend",
+    "searchTitle": "Mum My First Best Friend Personalised Magazine",
+    "pinTitle": "Gift for Mum From Daughter: My First Best Friend Magazine",
+    "occasion": "Mother and daughter",
+    "short": "For the mum who was your very first best friend, and still is.",
+    "description": "Shopping trips, kitchen dances, the late night phone calls. A daughter tells the story of her mum, her very first best friend: the advice that stuck, the things only they find funny and the moment she realised they were more alike than she thought. We make it into a glossy magazine with photos of the two of them.",
+    "keywords": [
+      "gift for mum from daughter",
+      "mother daughter gift",
+      "mum best friend gift",
+      "mothers day gift from daughter",
+      "mum birthday gift from daughter",
+      "personalised mum gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring them"
+    ],
+    "letterTitle": "A letter for my first best friend",
+    "feature": [
+      "The moment I realised we are the same",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "What you call her",
+        "example": "Mum",
+        "max": 12
+      },
+      {
+        "id": "daughter",
+        "label": "Her daughter's name",
+        "example": "Emma",
+        "max": 16
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 34
+      },
+      {
+        "id": "says",
+        "label": "Her best advice",
+        "example": "Never apologise for taking up space",
+        "max": 40
+      },
+      {
+        "id": "dish",
+        "label": "Our favourite thing to do",
+        "example": "Coffee and people watching",
+        "max": 34
+      },
+      {
+        "id": "power",
+        "label": "Only we find this funny",
+        "example": "The sat nav lady incident",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Three words that are so her",
+        "example": "Glamorous, wise, hilarious",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment you realised you are just like her",
+        "example": "I heard myself tell my friend to take a coat because it might turn later, and I laughed so hard I had to call her straight away",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want her to know? (This becomes your letter)",
+        "example": "You were my first best friend and you are still the first person I want to call. Thank you for the advice, the laughs and for always being in my corner. I love you, Mum.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of her",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "The two of you",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "An old photo of you together",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "mum",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#5a3a22"
+        },
+        "values": {
+          "name": "Mum",
+          "daughter": "Emma",
+          "from": "Emma",
+          "says": "Never apologise for taking up space",
+          "dish": "Coffee and people watching",
+          "power": "The sat nav lady incident",
+          "words": "Glamorous, wise, hilarious",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/mothers-day-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "mama",
+        "palette": "butter",
+        "portrait": {
+          "skin": 1,
+          "hair": "bun",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Mama",
+          "daughter": "Mia",
+          "from": "Mia",
+          "says": "Be kind, but do not be a doormat",
+          "dish": "Sunday shopping and cake",
+          "power": "Our fake posh accents",
+          "words": "Brave, funny, mine",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/mothers-day-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "mummy",
+        "palette": "mint",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Mummy",
+          "daughter": "Ava",
+          "from": "Ava",
+          "says": "You are enough, always",
+          "dish": "Dancing in the kitchen",
+          "power": "The great cake disaster",
+          "words": "Warm, wise, wonderful",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/mothers-day-magazine-0.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The best friends issue",
+      "edition": "Mother and daughter edition",
+      "lines": [
+        [
+          "Exclusive",
+          "My very first best friend"
+        ],
+        [
+          "Her best advice",
+          "{says}"
+        ],
+        [
+          "Our favourite thing",
+          "{dish}"
+        ]
+      ],
+      "badge": [
+        "Best",
+        "friends",
+        "forever"
+      ],
+      "quote": "{words}",
+      "credit": "Love, {daughter}"
+    }
+  },
+  {
+    "slug": "our-family-magazine",
+    "title": "Our Beautiful Family",
+    "searchTitle": "Personalised Family Legacy Magazine",
+    "pinTitle": "Family Keepsake: Our Beautiful Family, a Personalised Magazine",
+    "occasion": "Our family",
+    "short": "Your family, its people, traditions and stories, made into a keepsake magazine.",
+    "description": "Who is who, the traditions you never skip, the stories that get told at every gathering and the recipe everyone fights over. Tell us about your family and we make a glossy keepsake magazine about all of you, with notes and voice messages from everyone through one shared link. A legacy you can hand down.",
+    "keywords": [
+      "family keepsake gift",
+      "family legacy book",
+      "personalised family gift",
+      "family history gift",
+      "gift for the whole family",
+      "family christmas gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring them"
+    ],
+    "fields": [
+      {
+        "id": "family",
+        "label": "Your family name",
+        "example": "The Taylors",
+        "max": 22
+      },
+      {
+        "id": "year",
+        "label": "Family since",
+        "example": "1988",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "adventure",
+        "label": "A tradition we never skip",
+        "example": "Pancakes every Sunday, no matter what",
+        "max": 70
+      },
+      {
+        "id": "proud",
+        "label": "The recipe everyone fights over",
+        "example": "Grandma's roast potatoes",
+        "max": 60
+      },
+      {
+        "id": "word",
+        "label": "Our family motto",
+        "example": "Always room for one more",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "The story told at every gathering",
+        "example": "The Christmas the oven broke and Dad cooked the whole turkey on the barbecue in the snow, wearing a paper crown",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want your family to know? (This becomes your letter)",
+        "example": "We are loud, a bit chaotic and always late, and I would not swap any of you. Thank you for the dinners, the laughs and for always being home. I love this family more than anything.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the family",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite family day",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "An old family photo",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "taylors",
+        "palette": "butter",
+        "portrait": {
+          "skin": 1,
+          "hair": "curly",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "family": "The Taylors",
+          "year": "1988",
+          "from": "Emma",
+          "adventure": "Pancakes every Sunday, no matter what",
+          "proud": "Grandma's roast potatoes",
+          "word": "Always room for one more",
+          "x_type": "lively"
+        },
+        "photos": {
+          "photo1": "/assets/samples/year-in-review-magazine-0.jpg",
+          "photo2": "/assets/samples/year-in-review-magazine-0b.jpg",
+          "photo3": "/assets/samples/year-in-review-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "bennetts",
+        "palette": "mint",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#5a3a22"
+        },
+        "values": {
+          "family": "The Bennetts",
+          "year": "1995",
+          "from": "Sam",
+          "adventure": "A beach walk every Boxing Day",
+          "proud": "Mum's lemon drizzle",
+          "word": "Together is best",
+          "x_type": "cosy"
+        },
+        "photos": {
+          "photo1": "/assets/samples/year-in-review-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "clarkes",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "family": "The Clarkes",
+          "year": "2002",
+          "from": "Ava",
+          "adventure": "Family quiz night, fiercely fought",
+          "proud": "Dad's famous curry",
+          "word": "Love loudly",
+          "x_type": "sporty"
+        },
+        "photos": {
+          "photo1": "/assets/samples/year-in-review-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{family}",
+      "issue": "The family issue",
+      "edition": "Family since {year}",
+      "lines": [
+        [
+          "Exclusive",
+          "The family behind the legend"
+        ],
+        [
+          "Never skipped",
+          "{adventure}"
+        ],
+        [
+          "Everyone fights over",
+          "{proud}"
+        ]
+      ],
+      "badge": [
+        "Family",
+        "since",
+        "{year}"
+      ],
+      "quote": "{word}",
+      "credit": "Our family motto"
+    },
+    "letterTitle": "A letter to our family",
+    "feature": [
+      "The story we tell at every gathering",
+      "moment"
+    ]
+  },
+  {
+    "slug": "matriarch-magazine",
+    "title": "The Matriarch",
+    "searchTitle": "Family Matriarch Tribute Magazine",
+    "pinTitle": "Gift for the Family Matriarch: a Tribute Magazine From Everyone",
+    "occasion": "The family matriarch",
+    "short": "A tribute to the woman who holds the whole family together.",
+    "description": "Every family has one: the woman who remembers every birthday, hosts every gathering and knows exactly what to say. Her children, grandchildren and everyone she has looked after add notes, photos and voice messages through one link, and we make her a glossy tribute magazine where she is the cover star. Perfect for a big birthday, a family reunion or Mother's Day.",
+    "keywords": [
+      "family matriarch gift",
+      "gift for grandmother",
+      "tribute gift for mum",
+      "80th birthday gift for her",
+      "90th birthday gift for grandma",
+      "family reunion gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring them"
+    ],
+    "letterTitle": "A letter from all of us",
+    "feature": [
+      "The moment we saw how strong she is",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "What the family calls her",
+        "example": "Grandma Rose",
+        "max": 16
+      },
+      {
+        "id": "grandkids",
+        "label": "Family members she looks after",
+        "example": "23",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "All of us",
+        "max": 34
+      },
+      {
+        "id": "says",
+        "label": "Her golden rule",
+        "example": "Family first, always",
+        "max": 34
+      },
+      {
+        "id": "dish",
+        "label": "The table she sets",
+        "example": "Sunday lunch for twenty",
+        "max": 34
+      },
+      {
+        "id": "power",
+        "label": "Her superpower",
+        "example": "Remembering every birthday",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Three words that are so her",
+        "example": "Strong, gracious, ours",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment you saw how strong she is",
+        "example": "The winter everything went wrong, she kept the whole family going with soup, phone calls and that calm voice, and never once let us see her worry",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What does the family want her to know? (This becomes your letter)",
+        "example": "Everything good about this family started with you. Thank you for holding us together, for every meal and every word of wisdom. We love you more than we could ever say.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of her",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "With the family",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "An old favourite photo",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "rose",
+        "palette": "rose",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#d9d4cc"
+        },
+        "values": {
+          "name": "Grandma Rose",
+          "grandkids": "23",
+          "from": "All of us",
+          "says": "Family first, always",
+          "dish": "Sunday lunch for twenty",
+          "power": "Remembering every birthday",
+          "words": "Strong, gracious, ours",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/grandparents-newspaper-0.jpg",
+          "photo2": "/assets/samples/grandparents-newspaper-0b.jpg",
+          "photo3": "/assets/samples/grandparents-newspaper-0c.jpg"
+        }
+      },
+      {
+        "id": "nan",
+        "palette": "butter",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#d9d4cc"
+        },
+        "values": {
+          "name": "Nan",
+          "grandkids": "15",
+          "from": "The whole family",
+          "says": "Never go to bed angry",
+          "dish": "A pot that never ends",
+          "power": "Knowing what everyone needs",
+          "words": "Wise, warm, fierce",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/grandparents-newspaper-2.jpg"
+        }
+      },
+      {
+        "id": "mum",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "bun",
+          "hairColor": "#f0ede6"
+        },
+        "values": {
+          "name": "Mum",
+          "grandkids": "11",
+          "from": "Her children",
+          "says": "Hold your head high",
+          "dish": "Every Christmas dinner",
+          "power": "Calm in every storm",
+          "words": "Elegant, brave, loving",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/memorial-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The matriarch issue",
+      "edition": "The heart of the family",
+      "lines": [
+        [
+          "Exclusive",
+          "The woman who holds us together"
+        ],
+        [
+          "Her golden rule",
+          "{says}"
+        ],
+        [
+          "Her superpower",
+          "{power}"
+        ]
+      ],
+      "badge": [
+        "Loved by",
+        "{grandkids}",
+        "of us"
+      ],
+      "quote": "{words}",
+      "credit": "Her whole family agrees"
+    }
+  },
+  {
+    "slug": "siblings-magazine",
+    "title": "The Sibling Edition",
+    "searchTitle": "Personalised Sibling Magazine for Brothers and Sisters",
+    "pinTitle": "Gift for Siblings: The Sibling Edition Magazine",
+    "occasion": "Brothers and sisters",
+    "short": "For brothers and sisters: the childhood, the chaos and the bond, in one magazine.",
+    "description": "The fights in the back of the car, the secret languages, the way you still crack each other up. The Sibling Edition celebrates brothers and sisters together, with notes and voice messages from the whole family. Perfect for a reunion, a big birthday or a sibling who lives far away.",
+    "keywords": [
+      "sibling gift",
+      "gift for brothers and sisters",
+      "siblings keepsake",
+      "sibling birthday gift",
+      "gift for sister and brother",
+      "personalised sibling gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring them"
+    ],
+    "letterTitle": "A letter for my sister",
+    "feature": [
+      "The moment I knew you would always have my back",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their names",
+        "example": "Emma, Leo & Sam",
+        "max": 18
+      },
+      {
+        "id": "since",
+        "label": "Siblings since",
+        "example": "1992",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mum and Dad",
+        "max": 30
+      },
+      {
+        "id": "met",
+        "label": "Best childhood memory",
+        "example": "Car singalongs to the coast",
+        "max": 34
+      },
+      {
+        "id": "joke",
+        "label": "The family inside joke",
+        "example": "Who broke the lamp?",
+        "max": 34
+      },
+      {
+        "id": "best",
+        "label": "Together they are best at",
+        "example": "Making everyone cry laughing",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Three words for them together",
+        "example": "Loud, loyal, legendary",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment you saw how close they are",
+        "example": "When Leo got bad news, Emma and Sam turned up at his door within an hour with pizza, blankets and the old board games",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "You have fought, laughed, stolen each other's things and always, always had each other's backs. Watching you grow up together has been the joy of our lives. Never stop being this close.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of them together",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A childhood photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "taylors",
+        "palette": "coral",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Emma, Leo & Sam",
+          "since": "1992",
+          "from": "Mum and Dad",
+          "met": "Car singalongs to the coast",
+          "joke": "Who broke the lamp?",
+          "best": "Making everyone cry laughing",
+          "words": "Loud, loyal, legendary",
+          "x_who": "sibling",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/best-friend-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "mia-ava",
+        "palette": "rose",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Mia & Ava",
+          "since": "2001",
+          "from": "Grandma",
+          "met": "Midnight feasts in the tent",
+          "joke": "The blue hair dye",
+          "best": "Finishing each other's sentences",
+          "words": "Sparkly, silly, close",
+          "x_who": "sibling",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "chris-leo",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Chris & Leo",
+          "since": "1996",
+          "from": "Their sister",
+          "met": "Football until it got dark",
+          "joke": "The haunted shed",
+          "best": "Winning every quiz",
+          "words": "Funny, kind, brothers",
+          "x_who": "sibling",
+          "x_type": "adventurer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/graduation-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The sibling edition",
+      "edition": "Partners in crime",
+      "lines": [
+        [
+          "Exclusive",
+          "The siblings tell all"
+        ],
+        [
+          "Best memory",
+          "{met}"
+        ],
+        [
+          "Family inside joke",
+          "{joke}"
+        ]
+      ],
+      "badge": [
+        "Siblings since",
+        "{since}",
+        "and forever"
+      ],
+      "quote": "{words}",
+      "credit": "With love, {from}"
     }
   }
 ]

@@ -1,0 +1,377 @@
+{
+  "theme": "garden",
+  "fields": [
+    {
+      "id": "s_ordinary",
+      "label": "How your family began",
+      "example": "Mum and Dad met at a bus stop in the rain in 1986",
+      "max": 80,
+      "chapter": "Where it all began"
+    },
+    {
+      "id": "s_firsts",
+      "label": "Who is the funniest, the bossiest and the best cook?",
+      "example": "Leo is the funniest, Mum is the boss, Grandad is the chef",
+      "max": 80,
+      "chapter": "The family characters"
+    },
+    {
+      "id": "s_learned",
+      "label": "Something your family taught you",
+      "example": "That home is people, not a place",
+      "max": 80,
+      "chapter": "What this family taught us"
+    },
+    {
+      "id": "s_wish",
+      "label": "A wish for your family",
+      "example": "Many more loud Sunday dinners, all together",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "year": "Family since",
+    "adventure": "A tradition we never skip",
+    "proud": "Everyone fights over",
+    "word": "Our family motto"
+  },
+  "toc": "A one of a kind family keepsake, made for {who} with love from {from}.",
+  "story": {
+    "legend": "A few more things about your family",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "kicker": "Our story",
+    "title": "The Story of {who}",
+    "hand": "And every year, the story of {who} gets a little bit longer."
+  },
+  "picks": {
+    "legend": "Things you love about your family",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we love about us",
+    "items": [
+      "Sunday mornings in pyjamas",
+      "Our terrible singing in the car",
+      "Kitchen dance parties",
+      "Every muddy walk",
+      "Film nights under one blanket",
+      "The jokes nobody else gets",
+      "Birthday breakfasts",
+      "Laughing until we cried",
+      "Board games that ended in drama",
+      "Rainy day pancakes",
+      "Everyone talking at once",
+      "How we cheered each other on",
+      "Long dinners nobody wanted to end",
+      "Sleepy car journeys home",
+      "Hugs at the front door",
+      "Always saving each other a seat",
+      "The plans that went wrong",
+      "Lazy days with nowhere to be",
+      "The photos we will keep forever",
+      "Simply being us"
+    ]
+  },
+  "timeline": {
+    "kicker": "New years through the ages",
+    "title": "A Short History of New Year",
+    "items": [
+      [
+        "c. 2000 BC",
+        "The first resolutions",
+        "In ancient Babylon, people welcomed the new year by promising the gods to pay debts and return what they borrowed."
+      ],
+      [
+        "45 BC",
+        "Hello, January",
+        "The Julian calendar began the year on 1 January, named after Janus, the god who looks back and forward."
+      ],
+      [
+        "1788",
+        "Auld Lang Syne",
+        "Robert Burns sent off the words of a song about old friends and days gone by. Now the world sings it at midnight."
+      ],
+      [
+        "1927",
+        "A year in one name",
+        "A magazine first chose one person to sum up a whole year. The tradition still runs today."
+      ]
+    ],
+    "today": [
+      "{year}",
+      "{who}",
+      "Not in the history books yet. But for us, the year that mattered most."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Time",
+    "items": [
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Write it on your heart that every day is the best day in the year.",
+        "Ralph Waldo Emerson"
+      ],
+      [
+        "Ring out the old, ring in the new, ring, happy bells, across the snow.",
+        "Alfred, Lord Tennyson, In Memoriam, 1850"
+      ],
+      [
+        "Life can only be understood backwards; but it must be lived forwards.",
+        "Søren Kierkegaard"
+      ]
+    ],
+    "hand": "They all say it beautifully. We just say: what a year."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of a Year",
+    "items": [
+      [
+        "globe",
+        "A long way round",
+        "In one year, the Earth carried you all about 940 million kilometres around the sun."
+      ],
+      [
+        "heart",
+        "Busy hearts",
+        "A heart beats roughly 35 million times a year. Plenty of those were for each other."
+      ],
+      [
+        "smile",
+        "Better together",
+        "People are far more likely to laugh with others than alone. Laughter is made for sharing."
+      ],
+      [
+        "clock",
+        "Why new things matter",
+        "Busy years full of new experiences feel longer when we look back. So every adventure counts."
+      ],
+      [
+        "leaf",
+        "A smell, a memory",
+        "Smell is closely tied to memory. One scent can bring back a moment from years ago."
+      ],
+      [
+        "sun",
+        "The extra quarter",
+        "A year is about 365 and a quarter days long. That is why we get a leap year every four years."
+      ]
+    ],
+    "hand": "Science can measure a year. It cannot measure how much happened in this one."
+  },
+  "world": {
+    "kicker": "A toast from all of us",
+    "title": "Why the World Is Better With This Family In It",
+    "lead": "Because of {who}, the world got:",
+    "items": [
+      "A kitchen that was never quiet.",
+      "More laughter than any year deserves.",
+      "Muddy boots by the door, and happy faces.",
+      "People who turned up for each other.",
+      "Small kindnesses nobody else noticed.",
+      "Stories that will be told for years.",
+      "And proof that the best things are done together."
+    ],
+    "close": "Here is to {who}, and every chapter still to come."
+  },
+  "promises": {
+    "field": "s_wish",
+    "kicker": "For the years ahead",
+    "title": "Our family promises",
+    "items": [
+      "To say yes to more adventures.",
+      "To laugh at ourselves, often.",
+      "To put the phones down at dinner.",
+      "To keep turning up for each other.",
+      "To make next year even better."
+    ],
+    "hand": "Signed with love, {from}"
+  },
+  "awardsKicker": "Live from the {year} awards",
+  "awards": [
+    [
+      "Best laugh of the year",
+      "Heard from next door"
+    ],
+    [
+      "Most dramatic board game",
+      "Still not over it"
+    ],
+    [
+      "Team of the year",
+      "Unanimous"
+    ],
+    [
+      "Lifetime achievement",
+      "In being wonderful"
+    ]
+  ],
+  "vouchers": [
+    [
+      "A family film night",
+      "Snacks and blankets included"
+    ],
+    [
+      "One lazy Sunday",
+      "No plans, no alarms"
+    ],
+    [
+      "A day out together",
+      "Your choice, our treat"
+    ],
+    [
+      "Breakfast for everyone",
+      "Pancakes, obviously"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "certLine": "officially made {year}",
+  "cert": "The Best Year Yet",
+  "perfume": "Top notes of muddy walks, hot chocolate and laughter. A heart of pure togetherness.",
+  "news": {
+    "edition": "Year in review edition",
+    "headline": "{who} have a year to remember",
+    "lead": "Sources confirm that {year} was full of adventures, giggles and at least one disaster everyone now finds hilarious.",
+    "weather": "Weather: bright, with a 100% chance of another great year"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to the year ahead",
+    "nationality": "Loved, everywhere",
+    "job": "Making memories",
+    "stamps": [
+      "{year}",
+      "Home",
+      "Next adventure"
+    ]
+  },
+  "movie": {
+    "sub": "A family saga",
+    "soon": "Showing every Sunday dinner, forever",
+    "reviews": [
+      [
+        "Loud, funny and full of love",
+        "The Daily Hug"
+      ],
+      [
+        "The best cast ever assembled",
+        "{from}"
+      ],
+      [
+        "A legend in every scene",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Which is the most common surname in England and Wales?",
+      [
+        "Smith",
+        "Jones",
+        "Taylor"
+      ],
+      0
+    ],
+    [
+      "What do you call your parent's cousin?",
+      [
+        "Your first cousin once removed",
+        "Your second cousin",
+        "Your great aunt or uncle"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "YEAR",
+    "FAMILY",
+    "MEMORIES",
+    "CHEERS",
+    "LAUGH",
+    "TOGETHER"
+  ],
+  "note": {
+    "title": "Why every family deserves a magazine",
+    "contents": "A note for the family",
+    "paras": [
+      "Every family has its legends: the story told at every gathering, the recipe nobody can match, the motto someone said once and everyone repeats.",
+      "They usually live in memories and old photo boxes. We think they deserve better.",
+      "{who}, this is your family, written down and printed beautifully, to keep and to hand down.",
+      "From everything {from} told us, it is a family to be very proud of."
+    ],
+    "wish": "Here is to {who}, always."
+  },
+  "concepts": "family",
+  "own": {
+    "dayTitle": "A Sunday With {first}",
+    "day": [
+      [
+        "9:00",
+        "Pancakes",
+        "Someone flips one onto the ceiling. A tradition is born."
+      ],
+      [
+        "12:00",
+        "The walk",
+        "Everyone complains about going. Everyone loves it."
+      ],
+      [
+        "15:00",
+        "Sunday lunch",
+        "Fourteen people, one table, everyone talking at once."
+      ],
+      [
+        "18:00",
+        "Games",
+        "The board game comes out. Old rivalries return."
+      ]
+    ],
+    "night": [
+      "21:00",
+      "Home time",
+      "Coats on, still chatting in the doorway for half an hour."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "Around the kitchen table, all talking at once"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Big dishes, passed around, seconds for everyone"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Who wants a cup of tea?\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Making room for one more, always"
+      ],
+      [
+        "clock",
+        "Most active",
+        "On birthdays, holidays and Sunday afternoons"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Keep the table big and the door open"
+      ]
+    ],
+    "little": [
+      "You always lay an extra place, just in case.",
+      "You tell the same stories every year, and we love them more each time.",
+      "You turn up for each other, no matter what.",
+      "You make every new person feel like family on day one."
+    ],
+    "letters": "The Little Things That Make Us a Family"
+  }
+}

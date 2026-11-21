@@ -303,5 +303,74 @@
     "wish": "Love you always, {who}."
   },
   "concepts": true,
-  "conceptWho": "sibling"
+  "conceptWho": "sibling",
+  "own": {
+    "dayTitle": "A Day Being Sisters",
+    "day": [
+      [
+        "8:00",
+        "Morning",
+        "Voice note number one. It is four minutes long."
+      ],
+      [
+        "12:30",
+        "Lunch break",
+        "Sends a photo of an outfit. Needs an opinion now."
+      ],
+      [
+        "18:00",
+        "After work",
+        "A phone call that was meant to be quick. Two hours."
+      ],
+      [
+        "21:00",
+        "Night in",
+        "Watching the same show, in different houses, texting the whole time."
+      ]
+    ],
+    "night": [
+      "23:30",
+      "Bedtime",
+      "One last meme. Laughing alone in the dark."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The other end of a very long phone call"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Whatever is on my plate, apparently"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Can I borrow it?\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Knowing exactly what I am thinking from one look"
+      ],
+      [
+        "clock",
+        "Most active",
+        "When there is gossip, or a crisis"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Return her clothes. Answer her calls. Laugh at the old stories"
+      ]
+    ],
+    "little": [
+      "You still steal my clothes and swear they were always yours.",
+      "You remember every embarrassing thing I did, and only tell the best ones.",
+      "You are the first person I tell, good news or bad.",
+      "You defend me to anyone, then tell me off in private."
+    ],
+    "letters": "The Little Things Only a Sister Knows"
+  }
 }

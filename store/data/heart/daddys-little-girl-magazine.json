@@ -1,0 +1,376 @@
+{
+  "theme": "ocean",
+  "fields": [
+    {
+      "id": "s_taught",
+      "label": "A favourite memory from when you were small",
+      "example": "Sitting on his shoulders at the fair so I could see everything",
+      "max": 80,
+      "chapter": "The shoulder ride years"
+    },
+    {
+      "id": "s_fix",
+      "label": "A time he came to your rescue",
+      "example": "Turning up at 2am when my car broke down, in his slippers",
+      "max": 80,
+      "chapter": "The day he saved me"
+    },
+    {
+      "id": "s_sound",
+      "label": "Something you inherited from him",
+      "example": "His laugh, his stubbornness and his terrible puns",
+      "max": 80,
+      "chapter": "What I got from him"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to him",
+      "example": "To call every Sunday, and to let you win at cards",
+      "max": 70
+    }
+  ],
+  "story": {
+    "legend": "A few more things about him",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "kicker": "Their story",
+    "title": "Everything You Gave Me, Dad",
+    "hand": "However grown up {daughter} gets, she is still your little girl."
+  },
+  "labels": {
+    "daughter": "His little girl",
+    "taught": "He taught me",
+    "says": "He always says",
+    "skill": "His secret talent",
+    "words": "Him, in three words"
+  },
+  "picks": {
+    "legend": "Ten things you love about him",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we love about you",
+    "items": [
+      "His terrible jokes",
+      "The way he can fix anything",
+      "His big bear hugs",
+      "How he always has a plan",
+      "His questionable dance moves",
+      "The lifts at any hour",
+      "His calm in a crisis",
+      "How he cheers the loudest",
+      "His famous breakfasts",
+      "The way he says I am proud of you",
+      "His endless patience",
+      "How he makes us feel safe",
+      "His stories from the old days",
+      "The way he never gives up",
+      "How he lets us win sometimes",
+      "His laugh that fills the room",
+      "The way he teaches without lectures",
+      "His love of a good nap",
+      "How he always shows up",
+      "Simply being our dad"
+    ]
+  },
+  "timeline": {
+    "kicker": "Dads through the ages",
+    "title": "A Short History of Celebrating Dad",
+    "items": [
+      [
+        "1908",
+        "A town remembers",
+        "Fairmont, West Virginia, held a church service for the fathers lost in a mining disaster the year before."
+      ],
+      [
+        "1910",
+        "A daughter's idea",
+        "Sonora Smart Dodd, raised by her widowed father, organised a Father's Day in Spokane in his honour."
+      ],
+      [
+        "1966",
+        "The third Sunday",
+        "President Lyndon Johnson declared the third Sunday of June a day to honour fathers."
+      ],
+      [
+        "1972",
+        "Here to stay",
+        "Father's Day became a permanent national holiday in the United States, and the idea kept spreading."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who}",
+      "Not in the history books yet. But to us, the greatest dad there ever was."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Dads",
+    "items": [
+      [
+        "One father is more than a hundred schoolmasters.",
+        "George Herbert, 1640"
+      ],
+      [
+        "It is a wise father that knows his own child.",
+        "William Shakespeare, The Merchant of Venice"
+      ],
+      [
+        "Any man can be a father, but it takes someone special to be a dad.",
+        "An old saying"
+      ],
+      [
+        "A father is a banker provided by nature.",
+        "An old French saying"
+      ]
+    ],
+    "hand": "Wise words, all of them. Ours are simpler: thank you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Being a Dad",
+    "items": [
+      [
+        "music",
+        "A familiar voice",
+        "Late in pregnancy, babies can hear voices outside the womb, so Dad sounds familiar early."
+      ],
+      [
+        "pulse",
+        "Built to care",
+        "Many new dads see their testosterone dip, which scientists link to being more caring and hands on."
+      ],
+      [
+        "hands",
+        "The cuddle hormone",
+        "Dads release oxytocin too, the bonding hormone, especially during play and cuddles."
+      ],
+      [
+        "smile",
+        "Rough and tumble",
+        "Researchers think playful wrestling with dads helps children learn confidence and when to stop."
+      ],
+      [
+        "heart",
+        "Seahorse dads",
+        "In seahorses it is the father who carries the eggs in a pouch and gives birth to the babies."
+      ],
+      [
+        "moon",
+        "Penguin night shift",
+        "Emperor penguin dads keep their egg warm on their feet for about two months of Antarctic winter."
+      ]
+    ],
+    "hand": "Science can explain a lot. It still cannot explain how {who} finds the funny side of everything."
+  },
+  "world": {
+    "kicker": "A thank you from all of us",
+    "title": "Why the World Is Better With You in It",
+    "lead": "Because of you, the world got:",
+    "items": [
+      "A hug that makes everything feel safe.",
+      "Someone who can fix almost anything.",
+      "Jokes so bad they became good again.",
+      "A taxi service that never once sent a bill.",
+      "Advice that turned out to be right. Annoyingly.",
+      "The loudest cheer at every big moment.",
+      "And the best dad we could ever have asked for."
+    ],
+    "close": "The world is better because of you, {who}. Ours most of all."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises to you",
+    "items": [
+      "To laugh at your jokes. Most of them.",
+      "To call you just to say hello.",
+      "To remember everything you taught us.",
+      "To make you as proud as you make us.",
+      "To love you, always, wherever we are."
+    ],
+    "hand": "Signed with love, {from}"
+  },
+  "awards": [
+    [
+      "Worst joke, best delivery",
+      "Unanimous groans"
+    ],
+    [
+      "Chief fixer of things",
+      "Tape not included"
+    ],
+    [
+      "Best hugs in the house",
+      "By a landslide"
+    ],
+    [
+      "Lifetime achievement",
+      "In being Dad"
+    ]
+  ],
+  "vouchers": [
+    [
+      "A lie in, no questions",
+      "We will keep it quiet"
+    ],
+    [
+      "Full control of the remote",
+      "For one whole evening"
+    ],
+    [
+      "Breakfast made for you",
+      "Served with a cup of tea"
+    ],
+    [
+      "A day out together",
+      "Your choice, our treat"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "The Best Dad in the World",
+  "perfume": "Top notes of fresh coffee, cut grass and bad jokes. A heart of pure gold.",
+  "news": {
+    "edition": "Father's Day edition",
+    "headline": "{who} saves the day again",
+    "lead": "Sources close to the family confirm that {who} has, once again, fixed the unfixable, told the same joke twice and made everyone feel safe.",
+    "weather": "Weather: sunny spells, with a high chance of dad jokes"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to everywhere, with love",
+    "nationality": "Loved, everywhere",
+    "job": "Chief fixer of things",
+    "stamps": [
+      "The school gate",
+      "Every match day",
+      "Always home"
+    ]
+  },
+  "movie": {
+    "sub": "A father and daughter story",
+    "soon": "Showing every day, in her heart",
+    "reviews": [
+      [
+        "The hero of every chapter",
+        "The Daily Hug"
+      ],
+      [
+        "I cried at every scene",
+        "{from}"
+      ],
+      [
+        "Strong, gentle and very funny",
+        "Everyone who knows him"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Which animal dad gives birth to the babies?",
+      [
+        "The seahorse",
+        "The lion",
+        "The eagle"
+      ],
+      0
+    ],
+    [
+      "Who organised a Father's Day in 1910 to honour her own dad?",
+      [
+        "Florence Nightingale",
+        "Sonora Smart Dodd",
+        "Amelia Earhart"
+      ],
+      1
+    ]
+  ],
+  "words": [
+    "DAD",
+    "HERO",
+    "JOKES",
+    "HUGS",
+    "PROUD",
+    "LEGEND"
+  ],
+  "note": {
+    "title": "Why we made this for him",
+    "contents": "A note for you",
+    "paras": [
+      "Dads are famous for saying they do not need anything. What they really want is to know it all mattered: the lifts, the lessons, the shoulder rides.",
+      "So his daughter told us everything, and we turned it into the magazine he will keep on the shelf forever.",
+      "{who}, every page of this was written with love by your little girl.",
+      "From everything {from} told us, you are her hero. You always have been."
+    ],
+    "wish": "With love from your little girl, {who}."
+  },
+  "concepts": true,
+  "conceptWho": "dad",
+  "own": {
+    "dayTitle": "A Day With My Dad",
+    "day": [
+      [
+        "7:00",
+        "Morning",
+        "Already up, already on his second cup of tea."
+      ],
+      [
+        "9:00",
+        "The lift",
+        "Drives me anywhere, at any hour, with the radio too loud."
+      ],
+      [
+        "13:00",
+        "Lunch",
+        "Makes the best cheese toastie in the world. Will not share the secret."
+      ],
+      [
+        "17:00",
+        "Fix it time",
+        "Arrives with a toolbox before I have finished explaining."
+      ]
+    ],
+    "night": [
+      "22:00",
+      "Goodnight",
+      "Still texts to check I got home. I am thirty two."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The garage, the garden or the driver's seat"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Tea, toast and whatever is left on my plate"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Text me when you are home.\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Making me feel safe just by being there"
+      ],
+      [
+        "clock",
+        "Most active",
+        "The second I need him"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Call him on Sundays. Let him fix things. Tell him he is still my hero"
+      ]
+    ],
+    "little": [
+      "You still call me your little girl, and I still love it.",
+      "You check my tyres every single time I visit.",
+      "You pretend you are not crying at the sad bits of films.",
+      "You tell everyone you meet about me."
+    ],
+    "letters": "The Little Things You Do, Dad"
+  }
+}

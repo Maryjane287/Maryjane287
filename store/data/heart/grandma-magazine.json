@@ -303,5 +303,75 @@
     "dish": "Nobody makes it like her",
     "power": "Her secret superpower",
     "words": "Her, in three words"
+  },
+  "own": {
+    "dayTitle": "A Day at {first}'s House",
+    "day": [
+      [
+        "7:00",
+        "Up with the birds",
+        "Kettle on, radio on, a look at the garden."
+      ],
+      [
+        "10:00",
+        "Baking",
+        "Something is always in the oven, just in case."
+      ],
+      [
+        "15:00",
+        "The grandchildren arrive",
+        "The biscuit tin opens. The rules relax."
+      ],
+      [
+        "18:00",
+        "Tea time",
+        "Three courses. \"It is only a little something.\""
+      ]
+    ],
+    "night": [
+      "20:30",
+      "Story time",
+      "The old photo albums come out. Again. Nobody minds."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "A cosy armchair with a blanket and a biscuit tin"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Tea, cake and whatever we leave on our plates"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Come here and give me a cuddle.\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Spoiling us and getting away with it"
+      ],
+      [
+        "clock",
+        "Most active",
+        "When the grandchildren visit"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Visit often. Ask for the stories. Always take the second biscuit"
+      ]
+    ],
+    "little": [
+      "You always have our favourite biscuits in, just in case.",
+      "You know every one of our friends by name.",
+      "You slip us a little something when Mum is not looking.",
+      "You tell us we have grown every single time, even when we have not."
+    ],
+    "letters": "The Little Things That Make Grandma, Grandma",
+    "hand": "Every one of them noticed, {who}."
   }
 }

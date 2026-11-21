@@ -869,7 +869,7 @@
 .ed-f-ph { position: absolute; left: 0; right: 0; top: 0; height: 74cqw; overflow: hidden; }
 .ed-f-shade { position: absolute; left: 0; right: 0; top: 0; height: 74cqw; background: linear-gradient(180deg, rgba(10,8,20,.35), transparent 30%, transparent 55%, rgba(10,8,20,.7)); }
 .ed-f-k { position: absolute; left: 7cqw; top: 7cqw; }
-.ed-f-name { position: absolute; left: 6cqw; right: 6cqw; top: 54cqw; margin: 0; font: 400 20cqw/.9 'Anton', Impact, sans-serif !important; font-style: normal !important; color: #fff; letter-spacing: .01em; }
+.ed-f-name { position: absolute; left: 6cqw; right: 6cqw; top: 54cqw; margin: 0; font-family: 'Anton', Impact, sans-serif !important; font-weight: 400 !important; line-height: .9; white-space: nowrap; font-style: normal !important; color: #fff; letter-spacing: .01em; }
 .ed-fl { position: absolute; left: 7cqw; right: 7cqw; top: 80cqw; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 3.4cqw 5cqw; }
 .ed-fl div { border-top: .5cqw solid #1d1a2f; padding-top: 1.6cqw; }
 .ed-fl dt { font: 800 2.1cqw/1.2 'Outfit', sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--edk); opacity: 1; }

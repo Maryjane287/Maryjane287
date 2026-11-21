@@ -303,5 +303,74 @@
     "dish": "Nobody makes it like her",
     "power": "Her secret superpower",
     "words": "Her, in three words"
+  },
+  "own": {
+    "dayTitle": "A Birthday in the Life of {first}",
+    "day": [
+      [
+        "7:00",
+        "Birthday morning",
+        "Says \"no fuss, please\". Secretly hopes for a little fuss."
+      ],
+      [
+        "10:00",
+        "The phone calls",
+        "Every one of her children rings. She acts surprised each time."
+      ],
+      [
+        "14:00",
+        "Cake",
+        "Insists everyone else has the biggest slice."
+      ],
+      [
+        "18:00",
+        "Dinner",
+        "Somebody else cooks, for once. She still clears the plates."
+      ]
+    ],
+    "night": [
+      "22:00",
+      "Feet up",
+      "Reads every card twice and keeps them all in a drawer."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The heart of the kitchen, with the radio on"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Tea, toast and the crusts we left"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Have you eaten?\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Making any house feel like home in five minutes"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Whenever one of us needs her"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Let her sit down. Bring the tea. Say thank you, often"
+      ]
+    ],
+    "little": [
+      "You still keep every card we ever made you.",
+      "You save us the best bits and pretend you prefer the burnt ones.",
+      "You know something is wrong from one word on the phone.",
+      "You worry about us quietly, so we never have to see it."
+    ],
+    "letters": "Things We Have Always Noticed, Mum"
   }
 }

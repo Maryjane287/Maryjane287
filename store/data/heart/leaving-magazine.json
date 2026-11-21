@@ -291,5 +291,74 @@
     "wish": "Good luck, {who}. Go and be brilliant."
   },
   "concepts": true,
-  "conceptWho": "friend"
+  "conceptWho": "friend",
+  "own": {
+    "dayTitle": "A Day at Work With {first}",
+    "day": [
+      [
+        "8:45",
+        "Arrives",
+        "Coffee in one hand, a plan for everyone in the other."
+      ],
+      [
+        "11:00",
+        "The meeting",
+        "Says the thing everyone was thinking. Kindly."
+      ],
+      [
+        "13:00",
+        "Lunch",
+        "Somehow knows it is someone's birthday. There is cake."
+      ],
+      [
+        "16:30",
+        "The final push",
+        "Helps three people finish their work before starting their own."
+      ]
+    ],
+    "night": [
+      "18:00",
+      "Logs off",
+      "Says \"see you tomorrow\". Tomorrow will feel very different now."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The desk with the plant and the good pens"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Oat flat whites and the office biscuits"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Leave it with me.\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Calming down any crisis in under ten minutes"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Right before a big deadline"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Give them a great new team. Tell them they will be missed"
+      ]
+    ],
+    "little": [
+      "You remembered everyone's birthday, and the cake.",
+      "You always had a spare charger, pen and kind word.",
+      "You made the Monday meeting bearable.",
+      "You helped the new starters feel welcome on day one."
+    ],
+    "letters": "Things the Team Will Never Forget"
+  }
 }

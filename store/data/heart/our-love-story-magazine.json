@@ -1,0 +1,376 @@
+{
+  "theme": "ruby",
+  "fields": [
+    {
+      "id": "s_heard",
+      "label": "What you remember about the first time you met",
+      "example": "Thinking he was far too confident, and secretly hoping he would ask for my number",
+      "max": 80,
+      "chapter": "The very first hello"
+    },
+    {
+      "id": "s_knew",
+      "label": "A tough time you got through together",
+      "example": "The year we lived in different cities and wore out the phone",
+      "max": 80,
+      "chapter": "The hard bit we got through"
+    },
+    {
+      "id": "s_guess",
+      "label": "A dream for your future together",
+      "example": "A little house by the sea, and a dog called Biscuit",
+      "max": 80,
+      "chapter": "Where we go next"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To keep making you laugh until we are ninety",
+      "max": 70
+    }
+  ],
+  "story": {
+    "legend": "A few more things about your story",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "kicker": "Our story",
+    "title": "How It All Began",
+    "hand": "And the best chapters of {who} are still being written."
+  },
+  "labels": {
+    "since": "Together since",
+    "where": "Where we met",
+    "date": "Our first date",
+    "song": "Our song",
+    "words": "In three words"
+  },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten reasons you are perfect together",
+    "items": [
+      "The way you light up together",
+      "How you make each other laugh",
+      "Your equally terrible jokes",
+      "How you share your chips",
+      "The way you look at each other",
+      "How you cheer each other on",
+      "Your epic road trip playlists",
+      "How at home you make everyone feel",
+      "The way you hold hands",
+      "How calm you are together",
+      "Your shared love of snacks",
+      "How you finish each other's sentences",
+      "Your big plans and bigger dreams",
+      "How easy you make love look",
+      "The way you just fit",
+      "How brave you are together",
+      "Your kindness to everyone",
+      "How you always show up",
+      "The love that inspires us all",
+      "Simply being you two"
+    ]
+  },
+  "timeline": {
+    "kicker": "Proposals through the ages",
+    "title": "A Short History of Saying Yes",
+    "items": [
+      [
+        "Ancient Rome",
+        "A ring to promise",
+        "Romans marked a promise to marry with a ring, sometimes a simple band of iron."
+      ],
+      [
+        "1477",
+        "A famous diamond",
+        "Archduke Maximilian gave Mary of Burgundy a diamond ring, and a sparkly tradition began."
+      ],
+      [
+        "1839",
+        "The queen proposes",
+        "As queen, Victoria had to do the asking. She proposed to Prince Albert, and he happily said yes."
+      ],
+      [
+        "1947",
+        "A diamond is forever",
+        "A copywriter dreamed up the famous line, and it became one of the best known slogans ever written."
+      ]
+    ],
+    "today": [
+      "{year}",
+      "{who}",
+      "The newest yes in the history of yeses. And our favourite by far."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Beautiful Words for New Beginnings",
+    "items": [
+      [
+        "Yes I said yes I will Yes.",
+        "James Joyce, Ulysses, 1922"
+      ],
+      [
+        "I have found the one whom my soul loves.",
+        "Song of Solomon 3:4"
+      ],
+      [
+        "Two are better than one.",
+        "Ecclesiastes 4:9"
+      ],
+      [
+        "Well begun is half done.",
+        "An old proverb"
+      ]
+    ],
+    "hand": "Lovely words, all of them. Ours are simpler: we are so happy for you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "Fun Facts for the Newly Engaged",
+    "items": [
+      [
+        "ring",
+        "The vein of love",
+        "Rings go on the fourth finger because people once believed a vein ran from it straight to the heart."
+      ],
+      [
+        "star",
+        "Older than dinosaurs",
+        "Most diamonds formed deep underground well over a billion years ago. Talk about lasting."
+      ],
+      [
+        "key",
+        "Hard to break",
+        "Diamond is the hardest natural material on Earth. A very good sign for a promise."
+      ],
+      [
+        "paw",
+        "Penguin proposals",
+        "Some penguins woo their partner with the perfect pebble for the nest. The original ring."
+      ],
+      [
+        "music",
+        "Dance first",
+        "Albatrosses perform long courtship dances, and often stay with one partner for life."
+      ],
+      [
+        "pulse",
+        "Nerves or joy",
+        "Nerves and excitement feel almost the same in the body: racing heart, quick breath, shaky hands."
+      ]
+    ],
+    "hand": "Science can explain the sparkle. It cannot explain how perfect {who} are together."
+  },
+  "world": {
+    "kicker": "A toast from all of us",
+    "title": "Why the World Is Better Because You Two Met",
+    "lead": "The day {who} found each other, the world got:",
+    "items": [
+      "A love story everyone wants to hear.",
+      "Two people who bring out the best in each other.",
+      "Laughter that fills every room they walk into.",
+      "Proof that the right person is worth the wait.",
+      "A home full of kitchen dances.",
+      "A future worth looking forward to.",
+      "And the one and only {who}."
+    ],
+    "close": "Lucky you, {who}. Lucky everyone who knows you."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From me to you",
+    "title": "My promises to you",
+    "items": [
+      "To keep choosing you, every single day.",
+      "To dance in the kitchen, even badly.",
+      "To hold your hand through the hard bits.",
+      "To keep planning adventures, and actually go.",
+      "To love you a little more every year."
+    ],
+    "hand": "All my love, always, {from}"
+  },
+  "awards": [
+    [
+      "Proposal of the year",
+      "By a landslide"
+    ],
+    [
+      "Best kept secret",
+      "Almost nobody knew"
+    ],
+    [
+      "Most adorable couple",
+      "Unanimous"
+    ],
+    [
+      "Bravest question asked",
+      "And the best answer"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One planning night",
+      "We bring snacks and big ideas"
+    ],
+    [
+      "A cake tasting buddy",
+      "We will try every slice"
+    ],
+    [
+      "One stress free evening",
+      "No wedding talk allowed"
+    ],
+    [
+      "First dance practice",
+      "We promise not to laugh"
+    ]
+  ],
+  "vouchersTitle": "Engagement vouchers for {who}",
+  "cert": "Meant to Be",
+  "certLine": "are officially, undeniably and forever",
+  "perfume": "Top notes of happy tears and champagne, with a sparkling heart of yes.",
+  "news": {
+    "edition": "Engagement edition",
+    "headline": "{who} are engaged",
+    "lead": "Friends and family are celebrating after {who} confirmed the news everyone was hoping for: there will be a wedding.",
+    "weather": "Weather: sunny, with a 100% chance of happy tears"
+  },
+  "passport": {
+    "kicker": "Next stop, the wedding",
+    "head": "Passport to forever",
+    "nationality": "Engaged, everywhere",
+    "job": "Happily engaged",
+    "stamps": [
+      "The proposal",
+      "The planning",
+      "The big day"
+    ]
+  },
+  "movie": {
+    "sub": "A love story",
+    "soon": "Still showing, forever",
+    "reviews": [
+      [
+        "The love story of the decade",
+        "The Daily Hug"
+      ],
+      [
+        "I fall for it every single time",
+        "{from}"
+      ],
+      [
+        "Funny, tender and impossibly romantic",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "In which country did the tradition of the engagement ring become popular after 1477?",
+      [
+        "Austria",
+        "France",
+        "Spain"
+      ],
+      0
+    ],
+    [
+      "Which finger is called the ring finger because of a vein said to run to the heart?",
+      [
+        "The fourth finger",
+        "The index finger",
+        "The thumb"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "RING",
+    "YES",
+    "LOVE",
+    "DIAMOND",
+    "FOREVER",
+    "ENGAGED"
+  ],
+  "note": {
+    "title": "Why your love story matters",
+    "contents": "A note for you both",
+    "paras": [
+      "Every couple has a story they tell at parties: how they met, the first date, the moment they knew. It is usually told in a hurry, interrupted, a little different each time.",
+      "So we wrote it down properly, with photos, the way a great magazine would tell it.",
+      "{who}, this is your story so far, from the very first hello.",
+      "From everything {from} told us, the best part is still to come."
+    ],
+    "wish": "Here is to your love story, {who}."
+  },
+  "concepts": "couple",
+  "own": {
+    "dayTitle": "A Perfect Day for {first}",
+    "day": [
+      [
+        "8:00",
+        "Slow morning",
+        "Coffee in bed, made exactly how the other one likes it."
+      ],
+      [
+        "11:00",
+        "Out and about",
+        "A walk to the place where it all started."
+      ],
+      [
+        "15:00",
+        "Afternoon",
+        "Getting lost on purpose, finding the best little café."
+      ],
+      [
+        "19:00",
+        "Dinner",
+        "The same table, the same order, the same giggles."
+      ]
+    ],
+    "night": [
+      "23:00",
+      "Last dance",
+      "Our song in the kitchen, socks on the wooden floor."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "Anywhere, as long as it is together"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Shared plates and stolen chips"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Love you.\" \"Love you more.\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Saying a whole sentence with one look"
+      ],
+      [
+        "clock",
+        "Most active",
+        "On anniversaries, and every ordinary Tuesday"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Play their song. Book the table. Let them talk for hours"
+      ]
+    ],
+    "little": [
+      "You still hold my hand in the supermarket.",
+      "You remember the exact table from our first date.",
+      "You hum our song when you think I cannot hear.",
+      "You look at me the way you did on day one."
+    ],
+    "letters": "Little Things From Our Love Story"
+  }
+}
