@@ -264,9 +264,9 @@ async function home() {
   const FILTERS = [
     ['birthday', 'Birthdays', /birthday|kids/],
     ['love', 'Love and weddings', /anniversary|wedding|engagement|valentines|boyfriend|girlfriend|husband|wife|marry|bridesmaid|christmas-together|long-distance/],
-    ['family', 'Family and baby', /grandparents|baby|mothers|fathers|kids|year-in-review/],
+    ['family', 'Family and baby', /grandparents|grandma|baby|mothers|mum-|fathers|sister|brother|pregnancy|kids|year-in-review/],
     ['christmas', 'Christmas', /christmas|year-in-review/],
-    ['thanks', 'Friends and big moments', /best-friend|teacher|thank-you|retirement|graduation|new-job|new-home|travel/],
+    ['thanks', 'Friends and big moments', /best-friend|teacher|thank-you|retirement|graduation|new-job|new-home|travel|leaving/],
     ['memory', 'Pets and memories', /pet|memorial/],
   ];
   const tagsFor = m => FILTERS.filter(([, , re]) => re.test(m.slug)).map(([id]) => id).join(' ');

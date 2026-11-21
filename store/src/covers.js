@@ -711,7 +711,7 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
     const slot = (j, few) => pool.length > 3 ? j : few;
     const ed = (cls, inner) => `<div class="pg ed ${cls}" ${style}>${inner}</div>`;
     const L = H.labels || {};
-    const greet = greetName(who, from);
+    const greet = (mag.letterTo && String(v[mag.letterTo] || '').trim()) || greetName(who, from);
     const msg = String(v.message || '');
     const words = s.quote || esc(v.words || '');
     const knew = gentle ? 'knew' : 'knows';

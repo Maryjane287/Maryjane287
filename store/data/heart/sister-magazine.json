@@ -1,0 +1,307 @@
+{
+  "theme": "ruby",
+  "fields": [
+    {
+      "id": "s_first",
+      "label": "A favourite story from when you were little",
+      "example": "Selling worms to the neighbours for ten pence each",
+      "max": 70,
+      "chapter": "When we were little"
+    },
+    {
+      "id": "s_rescue",
+      "label": "A time she was there for you",
+      "example": "Talked me through my first heartbreak with ice cream",
+      "max": 70,
+      "chapter": "The time you saved me"
+    },
+    {
+      "id": "s_song",
+      "label": "The song that is so you two",
+      "example": "Anything we can scream in the car",
+      "max": 70,
+      "chapter": "Our song"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to her",
+      "example": "To always give back your jumpers, eventually",
+      "max": 70
+    }
+  ],
+  "story": {
+    "legend": "A few more things about her",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "kicker": "Their story",
+    "title": "Sisters, From the Very Start",
+    "hand": "And there are so many more chapters still to come for {who} and {from}."
+  },
+  "labels": {
+    "since": "Sisters since",
+    "met": "Best childhood memory",
+    "joke": "Our inside joke",
+    "best": "She is the best at",
+    "words": "Her, in three words"
+  },
+  "picks": {
+    "legend": "Ten things you love about them",
+    "kicker": "From {from}, with love",
+    "title": "Ten things I love about you",
+    "items": [
+      "Your laugh that sets me off",
+      "How you always pick up",
+      "Our inside jokes",
+      "The way you hype me up",
+      "Your terrible dance moves",
+      "How you tell me the truth",
+      "Our late night chats",
+      "The way you know my order",
+      "How brave you are",
+      "Your snack supply",
+      "How you remember the little things",
+      "The way we can sit in silence",
+      "How you make bad days better",
+      "Your loyalty",
+      "How we pick up where we left off",
+      "Your brilliant ideas",
+      "Our road trip playlists",
+      "How you never judge me",
+      "The way you love my weirdness",
+      "Simply being my best friend"
+    ]
+  },
+  "timeline": {
+    "kicker": "Friendship through the ages",
+    "title": "A Short History of Best Friends",
+    "items": [
+      [
+        "About 350 BC",
+        "A philosopher agrees",
+        "Aristotle wrote that true friendship is one of the most important things in a good life."
+      ],
+      [
+        "1926",
+        "Pooh and Piglet",
+        "A. A. Milne published Winnie the Pooh, and the world met its most famous pair of best friends."
+      ],
+      [
+        "1994",
+        "I'll be there for you",
+        "The TV show Friends began, and a group of pals on a sofa became family for millions."
+      ],
+      [
+        "2011",
+        "A day for friends",
+        "The United Nations made 30 July the International Day of Friendship."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who}",
+      "Not in the history books yet. But in mine, the best friend anyone has ever had."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Friendship",
+    "items": [
+      [
+        "What! You too? I thought I was the only one.",
+        "C. S. Lewis, The Four Loves"
+      ],
+      [
+        "A friend is a single soul dwelling in two bodies.",
+        "Aristotle"
+      ],
+      [
+        "The only way to have a friend is to be one.",
+        "Ralph Waldo Emerson, 1841"
+      ],
+      [
+        "Shared joy is a double joy, shared sorrow is half a sorrow.",
+        "An old Swedish saying"
+      ]
+    ],
+    "hand": "They all say it beautifully. I just say: thank you for being you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Best Friends",
+    "items": [
+      [
+        "smile",
+        "Laughing together",
+        "One researcher found we are around thirty times more likely to laugh with others than alone."
+      ],
+      [
+        "spark",
+        "Brains in sync",
+        "Close friends' brains react in strikingly similar ways when they watch the same videos."
+      ],
+      [
+        "leaf",
+        "Smaller hills",
+        "In one study, a hill looked less steep to people standing next to a friend."
+      ],
+      [
+        "clock",
+        "Hours of hanging out",
+        "One study suggests it takes about 200 hours together to become close friends. Worth every minute."
+      ],
+      [
+        "hands",
+        "The inner circle",
+        "Most of us have room for only about five very closest friends. You made the cut."
+      ],
+      [
+        "pulse",
+        "Good for your health",
+        "Strong friendships are linked to lower stress and longer, healthier lives."
+      ]
+    ],
+    "hand": "Science can explain a lot. It still cannot explain how {who} always knows exactly what to say."
+  },
+  "world": {
+    "kicker": "A thank you from the universe",
+    "title": "Why the World Is Better Because of You",
+    "lead": "Because {who} is a sister, the world got:",
+    "close": "Lucky me, {who}. Lucky everyone.",
+    "items": [
+      "A laugh that makes strangers laugh too.",
+      "Someone who answers the phone at any hour.",
+      "The best advice, and the worst ideas. Both fun.",
+      "A loyal heart that never keeps score.",
+      "Stories we will be telling when we are ninety.",
+      "Proof that you can choose your family.",
+      "And the best friend I could ever have asked for."
+    ]
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From me to you",
+    "title": "My promises to you",
+    "items": [
+      "To always pick up when you call.",
+      "To keep every secret, forever.",
+      "To tell you if there is food in your teeth.",
+      "To cheer the loudest for every win.",
+      "To be your friend, always, wherever we are."
+    ],
+    "hand": "Signed with love, {from}"
+  },
+  "awards": [
+    [
+      "Best friend of the year",
+      "Every year since {since}"
+    ],
+    [
+      "Funniest human alive",
+      "By a landslide"
+    ],
+    [
+      "Keeper of all secrets",
+      "Locked forever"
+    ],
+    [
+      "Lifetime achievement",
+      "In being iconic"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One emergency chat",
+      "Any time, no questions"
+    ],
+    [
+      "A movie night in",
+      "Snacks on me"
+    ],
+    [
+      "Your choice of brunch",
+      "My treat"
+    ],
+    [
+      "One big adventure",
+      "Destination to be argued over"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "The Best Friend in the World",
+  "perfume": "Top notes of late night laughter, shared fries and loyalty. A heart of pure gold.",
+  "news": {
+    "edition": "The best friend edition",
+    "headline": "{who} named best friend of the century",
+    "lead": "Sources close to the friendship confirm that {who} has, once again, been there at exactly the right moment with snacks, jokes and a hug.",
+    "weather": "Weather: sunny, with a 100% chance of inside jokes"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every adventure",
+    "nationality": "Loved, everywhere",
+    "job": "Professional best friend",
+    "stamps": [
+      "Every road trip",
+      "Late night chats",
+      "Friends forever"
+    ]
+  },
+  "movie": {
+    "sub": "A sister story",
+    "soon": "Showing every family gathering, forever",
+    "reviews": [
+      [
+        "Funny, loud and full of heart",
+        "The Daily Hug"
+      ],
+      [
+        "I have seen every episode",
+        "{from}"
+      ],
+      [
+        "The best supporting role ever",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "About how many very closest friends do most people have room for?",
+      [
+        "Five",
+        "Fifty",
+        "Five hundred"
+      ],
+      0
+    ],
+    [
+      "Which TV show about a group of pals began in 1994?",
+      [
+        "Seinfeld",
+        "Friends",
+        "The Simpsons"
+      ],
+      1
+    ]
+  ],
+  "words": [
+    "BESTIE",
+    "LAUGH",
+    "LOYAL",
+    "FOREVER",
+    "SECRETS",
+    "FRIENDS"
+  ],
+  "note": {
+    "title": "Why we made this for her",
+    "contents": "A note for you",
+    "paras": [
+      "Sisters are our favourite magazines to make, because the stories go back so far. Dens behind the sofa, borrowed clothes, secrets kept for years.",
+      "A sister is the only person who remembers your childhood exactly as you do, and still loves you anyway.",
+      "{who}, someone wanted to tell you what you mean to them, properly, in pages full of you.",
+      "That someone is {from}. And from everything they told us, you are their favourite person in the world."
+    ],
+    "wish": "Love you always, {who}."
+  },
+  "concepts": true,
+  "conceptWho": "sibling"
+}

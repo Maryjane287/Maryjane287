@@ -18,6 +18,16 @@ export const PEOPLE = {
     promises: ['To call more, and not just when I need something.', 'To finally learn your recipe properly.', 'To take you out for the day, my treat.', 'To listen when you say "take a coat".', 'To make you as proud as you make me.'],
     picks: ['Your hugs', 'Your cooking', 'How you always know when something is wrong', 'Your advice', 'How you make every house a home', 'Your laugh', 'How strong you are', 'How you never miss a birthday', 'Your patience', 'The way you say my name', 'Your terrible jokes', 'How you believe in me'],
   },
+  newmum: {
+    label: 'A brand new mum', hidden: true,
+    little: ['You sing to me at 3am, even when you are tired.', 'You know which cry means hungry and which means cuddle.', 'You smell my head when you think nobody is looking.', 'You check on me while I sleep. Every single time.', 'You do everything one handed now, and you are brilliant at it.', 'You smile at me like I am the best thing in the world.'],
+    world: ['A brand new mum, doing beautifully.', 'Lullabies, even the made up ones.', 'The softest, safest arms in the world.', 'Patience at 3am that nobody else saw.', 'A heart that grew twice as big overnight.', 'A tiny person who thinks you are everything.'],
+    promises: ['To sleep through the night. One day. Probably.', 'To give you the biggest gummy smiles.', 'To hold your finger extra tight.', 'To keep you laughing, and a little bit tired.', 'To love you forever, starting now.'],
+    day: [['3:00', 'The night feed', 'Sings the same lullaby for the ninth time. Means it every time.'], ['7:00', 'Good morning', 'A gummy smile, and suddenly the whole night was worth it.'], ['11:00', 'Out for a walk', 'Pram, bag, snacks, spare clothes, spare spare clothes.'], ['16:00', 'Cuddle o\'clock', 'Tea goes cold. Nobody minds.']],
+    night: ['20:00', 'Bedtime', 'Checks the monitor. Then checks it again. Then once more.'],
+    guide: [['home', 'Habitat', 'The sofa, with a sleeping baby on her chest'], ['apple', 'Diet', 'Cold tea and toast eaten one handed'], ['music', 'Call', 'A made up lullaby, every single night'], ['spark', 'Special ability', 'Hearing the tiniest sound from two rooms away'], ['clock', 'Most active', 'At 3am, which is the new 9am'], ['heart', 'Care instructions', 'Bring her a hot drink and hold the baby while she drinks it']],
+    picks: ['Your voice', 'Your cuddles', 'Your lullabies', 'How you smell', 'Your smile', 'Bath time with you', 'How you rock me to sleep', 'Your warm hands', 'How you talk to me', 'Feeding time snuggles', 'Your silly faces', 'Simply being my mum'],
+  },
   dad: {
     label: 'My dad',
     little: ['You still check my tyres every time I visit.', 'You pretend you are not proud, then tell everyone.', 'You always know a shortcut. It is never shorter.', 'You fix things before anyone notices they were broken.', 'You leave the last piece for us and say you have had enough.', 'You end every call with "right then", and it still makes me smile.'],
@@ -44,6 +54,8 @@ export const PEOPLE = {
     little: ['You always keep biscuits in the tin, just in case.', 'You remember the story behind every photo in the house.', 'You say "look how you have grown" every single time.', 'You slip a little something into our pockets when nobody is looking.', 'You make the best of everything, even the weather.', 'You love us in a way that makes us feel ten feet tall.'],
     world: ['Stories nobody else can tell.', 'The best biscuit tin in the world.', 'Cuddles that make everything better.', 'Wisdom from a lifetime of living.', 'A home that feels like a hug.', 'A whole family that began with you.'],
     promises: ['To visit more, and stay longer.', 'To ask about the old days, and really listen.', 'To learn your famous recipe.', 'To bring the little ones round as often as we can.', 'To pass your stories on.'],
+    day: [['7:00', 'Up with the birds', 'Kettle on, radio on, a look at the garden to see what has grown.'], ['10:00', 'Morning rounds', 'Calls everyone in the family. Somehow knows all the news by eleven.'], ['13:00', 'Lunch', 'Made enough for six, just in case anyone pops round.'], ['16:00', 'The grandchildren arrive', 'The biscuit tin opens. The rules relax.']],
+    night: ['21:00', 'Settles down', 'Puts the photos back in order and says what a lovely day it was.'],
     picks: ['Your stories', 'Your biscuit tin', 'Your cuddles', 'Your wisdom', 'How you always have time for us', 'Your cooking', 'Your garden', 'How you make us laugh', 'How proud you are of us', 'Sunday visits', 'Your kindness', 'How your house feels like home'],
   },
   child: {
@@ -302,17 +314,17 @@ export function applyConcept(H, v) {
   const out = { ...H };
   const gentle = !!pack.gentle;
   // A person's own answers beat our words wherever they fit.
-  const guide = T.guide || [['home', 'Habitat', T.habitat], ['apple', 'Diet', T.diet, ['obsession', 'fuel', 'coffee', 'dish', 'food']], ['music', 'Call', T.call, ['says']], ['spark', 'Special ability', T.special, ['talent', 'power', 'skill', 'weapon', 'best']], ['clock', 'Most active', T.active], ['heart', 'Care instructions', T.care]];
-  const day = T.day.map(([a, b, c, f]) => [a, b, f && brace(v[f]) ? brace(v[f]) : c]);
-  out.timeline = { kicker: gentle ? 'As we remember it' : 'A day in the life', title: pack.day || (gentle ? 'A Day with {first}, Remembered' : '24 Hours with {first}'), items: day, today: T.night, roomy: true };
-  out.facts = { kicker: gentle ? 'Always them' : 'A field guide', title: pack.guide || (gentle ? 'The Things That Were So {first}' : 'A Field Guide to {first}'), items: guide.map(([i, h, x, f]) => [i, h, f ? ans(f, x) : x]), hand: gentle ? 'Nobody else was ever quite like {first}.' : 'Rare, precious and impossible to replace. Handle with love.', roomy: true };
   const P = who ? PEOPLE[who] : null;
+  const guide = P?.guide || T.guide || [['home', 'Habitat', T.habitat], ['apple', 'Diet', T.diet, ['obsession', 'fuel', 'coffee', 'dish', 'food']], ['music', 'Call', T.call, ['says']], ['spark', 'Special ability', T.special, ['talent', 'power', 'skill', 'weapon', 'best']], ['clock', 'Most active', T.active], ['heart', 'Care instructions', T.care]];
+  const day = (P?.day || T.day).map(([a, b, c, f]) => [a, b, f && brace(v[f]) ? brace(v[f]) : c]);
+  out.timeline = { kicker: gentle ? 'As we remember it' : 'A day in the life', title: pack.day || (gentle ? 'A Day with {first}, Remembered' : '24 Hours with {first}'), items: day, today: P?.night || T.night, roomy: true };
+  out.facts = { kicker: gentle ? 'Always them' : 'A field guide', title: pack.guide || (gentle ? 'The Things That Were So {first}' : 'A Field Guide to {first}'), items: guide.map(([i, h, x, f]) => [i, h, f ? ans(f, x) : x]), hand: gentle ? 'Nobody else was ever quite like {first}.' : 'Rare, precious and impossible to replace. Handle with love.', roomy: true };
   const little = (P ? P.little : T.little).slice(0, 4);
   const noted = gentle ? GENTLE_NOTED : pack.noted || NOTED;
   out.letters = { kicker: 'The little things', title: pack.letters || (gentle ? 'The Little Things We Will Always Remember' : 'The Things You Think Nobody Notices'), items: little.map((x, i) => [x, noted[i]]), hand: gentle ? 'Every one of them, kept safe in our hearts.' : P ? '{from} noticed every single one, {who}.' : 'We noticed every single one.' };
   if (P) {
     out.world = { ...H.world, items: [...P.world, 'And the one and only {who}.'] };
-    out.promises = { ...H.promises, items: P.promises };
+    if (!H.promises?.own) out.promises = { ...H.promises, items: P.promises };
     out.picks = { ...H.picks, items: P.picks };
   }
   return out;

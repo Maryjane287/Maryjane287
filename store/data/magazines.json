@@ -7946,5 +7946,1570 @@
       "quote": "{words}",
       "credit": "Missing you"
     }
+  },
+  {
+    "slug": "mum-birthday-magazine",
+    "title": "The Mum Issue",
+    "searchTitle": "Personalised Birthday Magazine for Mum",
+    "pinTitle": "Birthday Gift for Mum: a Magazine All About Her",
+    "occasion": "Mum's birthday",
+    "short": "Her birthday, her magazine: everything her children never quite say out loud.",
+    "description": "For the mum who says she wants nothing for her birthday. Her children answer a few questions: what she always says, the dinner nobody makes like her, the moment they realised she is a superhero. We turn it into a glossy magazine where she is the cover star, with notes and voice messages from the whole family.",
+    "keywords": [
+      "birthday gift for mum",
+      "mum birthday present",
+      "gift for mum from kids",
+      "personalised gift for mum",
+      "mum 60th birthday gift",
+      "mum 50th birthday gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring them"
+    ],
+    "letterTitle": "A birthday letter for Mum",
+    "feature": [
+      "The moment we knew you were a superhero",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "What you call her",
+        "example": "Mum",
+        "max": 12
+      },
+      {
+        "id": "age",
+        "label": "Her new age",
+        "example": "60",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Chris, Emma and Sam",
+        "max": 34
+      },
+      {
+        "id": "says",
+        "label": "She always says",
+        "example": "Have you eaten?",
+        "max": 34
+      },
+      {
+        "id": "dish",
+        "label": "Nobody makes it like her",
+        "example": "Sunday roast, extra gravy",
+        "max": 34
+      },
+      {
+        "id": "power",
+        "label": "Her secret superpower",
+        "example": "Knowing when something is wrong",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Three words that are so her",
+        "example": "Warm, wise, wonderful",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment you realised she is a superhero",
+        "example": "The year she worked two jobs and still never missed a single school play, and still sang in the car on the way home",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you wish you told her more often? (This becomes your letter)",
+        "example": "Everything good in us started with you. Thank you for every packed lunch, every late night lift and every hug that fixed everything. Happy birthday, Mum. We love you.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of her",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite day with her",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "mum",
+        "palette": "rose",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#5a3a22"
+        },
+        "values": {
+          "name": "Mum",
+          "age": "60",
+          "from": "Chris, Emma and Sam",
+          "says": "Have you eaten?",
+          "dish": "Sunday roast, extra gravy",
+          "power": "Knowing when something is wrong",
+          "words": "Warm, wise, wonderful",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/mothers-day-magazine-0.jpg",
+          "photo2": "/assets/samples/mothers-day-magazine-0b.jpg",
+          "photo3": "/assets/samples/mothers-day-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "mama",
+        "palette": "coral",
+        "portrait": {
+          "skin": 0,
+          "hair": "bun",
+          "hairColor": "#b5552b"
+        },
+        "values": {
+          "name": "Mama",
+          "age": "45",
+          "from": "Leo and Mia",
+          "says": "Coat. Now.",
+          "dish": "Pancakes shaped like letters",
+          "power": "Finding anything we lose",
+          "words": "Funny, fierce, ours",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/mothers-day-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "mummy",
+        "palette": "mint",
+        "portrait": {
+          "skin": 0,
+          "hair": "bun",
+          "hairColor": "#8a2f1a"
+        },
+        "values": {
+          "name": "Mummy",
+          "age": "40",
+          "from": "Ava",
+          "says": "I love you more",
+          "dish": "Her famous lasagne",
+          "power": "Kissing knees better",
+          "words": "Kind, cosy, magic",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/mothers-day-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The birthday issue",
+      "edition": "Best mum ever edition",
+      "lines": [
+        [
+          "Exclusive",
+          "The real superhero of the house"
+        ],
+        [
+          "She always says",
+          "{says}"
+        ],
+        [
+          "Nobody makes it like her",
+          "{dish}"
+        ]
+      ],
+      "badge": [
+        "Turning",
+        "{age}",
+        "and iconic"
+      ],
+      "quote": "{words}",
+      "credit": "Her biggest fans"
+    }
+  },
+  {
+    "slug": "first-mothers-day-magazine",
+    "title": "Her First Mother's Day",
+    "searchTitle": "First Mother's Day Gift Magazine",
+    "pinTitle": "First Mother's Day Gift: a Magazine for the New Mum",
+    "occasion": "First Mother's Day",
+    "short": "Her first Mother's Day, from the little one who made her a mum.",
+    "description": "The sleepless nights, the first smile, the moment she became a mum. Write it from the baby (with a little help) and we turn it into a glossy magazine where she is the cover star. A keepsake she will read again when the baby is all grown up.",
+    "keywords": [
+      "first mothers day gift",
+      "new mum gift",
+      "first mothers day from baby",
+      "personalised gift for new mum",
+      "mothers day keepsake",
+      "gift for wife first mothers day"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring them"
+    ],
+    "letterTitle": "A letter from your baby",
+    "feature": [
+      "The moment you became my mum",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "What baby will call her",
+        "example": "Mummy",
+        "max": 12
+      },
+      {
+        "id": "baby",
+        "label": "Baby's name",
+        "example": "Leo",
+        "max": 16
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Leo and Daddy",
+        "max": 34
+      },
+      {
+        "id": "born",
+        "label": "Baby was born",
+        "example": "March 2026",
+        "max": 20
+      },
+      {
+        "id": "song",
+        "label": "The song that gets me to sleep",
+        "example": "Twinkle twinkle, on repeat",
+        "max": 34
+      },
+      {
+        "id": "power",
+        "label": "Her new superpower",
+        "example": "Changing nappies in the dark",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Three words that are so her",
+        "example": "Gentle, brave, tired",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment she became a mum",
+        "example": "When she held me for the first time and said hello like she had known me forever, and everyone in the room cried",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What would the baby say if they could? (This becomes your letter)",
+        "example": "Dear Mummy, I know I keep you up at night. But I want you to know I love your voice, your cuddles and the way you sing to me even when you are tired. Thank you for being mine.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of her, or the two of you",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite moment",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "mummy",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#5a3a22"
+        },
+        "values": {
+          "name": "Mummy",
+          "baby": "Leo",
+          "from": "Leo and Daddy",
+          "born": "March 2026",
+          "song": "Twinkle twinkle, on repeat",
+          "power": "Changing nappies in the dark",
+          "words": "Gentle, brave, tired",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-baby-magazine-0b.jpg",
+          "photo2": "/assets/samples/new-baby-magazine-0.jpg",
+          "photo3": "/assets/samples/new-baby-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "mama",
+        "palette": "mint",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Mama",
+          "baby": "Ava",
+          "from": "Ava and Papa",
+          "born": "June 2026",
+          "song": "Anything Mama hums",
+          "power": "Sleeping standing up",
+          "words": "Strong, soft, ours",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/baby-shower-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "mum",
+        "palette": "butter",
+        "portrait": {
+          "skin": 1,
+          "hair": "bun",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Mum",
+          "baby": "Sam",
+          "from": "Sam and Dad",
+          "born": "January 2026",
+          "song": "The washing machine",
+          "power": "Feeding me one handed",
+          "words": "Calm, kind, magic",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-baby-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The first Mother's Day issue",
+      "edition": "A brand new mum",
+      "lines": [
+        [
+          "Exclusive",
+          "Meet the new mum"
+        ],
+        [
+          "Her new superpower",
+          "{power}"
+        ],
+        [
+          "The song that gets me to sleep",
+          "{song}"
+        ]
+      ],
+      "badge": [
+        "Mum",
+        "No. 1",
+        "since day one"
+      ],
+      "quote": "{words}",
+      "credit": "Signed, {baby}"
+    }
+  },
+  {
+    "slug": "sister-magazine",
+    "title": "The Sister Issue",
+    "searchTitle": "Personalised Magazine for Sister",
+    "pinTitle": "Gift for Sister: a Personalised Magazine All About Her",
+    "occasion": "For my sister",
+    "short": "For the sister who has known you longest: all the stories, finally in print.",
+    "description": "For the sister who borrowed your clothes, kept your secrets and still knows exactly how to wind you up. Tell us the childhood stories, the inside jokes and what she means to you now, and we make her a glossy magazine where she is the cover star. Perfect for her birthday, or just because.",
+    "keywords": [
+      "gift for sister",
+      "sister birthday gift",
+      "personalised sister gift",
+      "big sister gift",
+      "little sister gift",
+      "sister keepsake"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring them"
+    ],
+    "letterTitle": "A letter for my sister",
+    "feature": [
+      "The moment I knew you would always have my back",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Her name",
+        "example": "Emma",
+        "max": 12
+      },
+      {
+        "id": "since",
+        "label": "Sisters since",
+        "example": "1994",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mia",
+        "max": 30
+      },
+      {
+        "id": "met",
+        "label": "Best childhood memory",
+        "example": "Building dens behind the sofa",
+        "max": 34
+      },
+      {
+        "id": "joke",
+        "label": "Your inside joke",
+        "example": "The great hamster escape",
+        "max": 34
+      },
+      {
+        "id": "best",
+        "label": "She is the best at",
+        "example": "Telling me the truth, kindly",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Three words that are so her",
+        "example": "Loyal, loud, lovely",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment you knew she would always have your back",
+        "example": "She drove through the night to sit with me in the hospital and did not even mention it afterwards, she just brought biscuits",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you wish you told her more often? (This becomes your letter)",
+        "example": "You were my first friend and you are still my favourite. Thank you for every borrowed jumper, every secret kept and every time you stood up for me. I love you, sis.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of her",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "The two of you",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Emma",
+          "since": "1994",
+          "from": "Mia",
+          "met": "Building dens behind the sofa",
+          "joke": "The great hamster escape",
+          "best": "Telling me the truth, kindly",
+          "words": "Loyal, loud, lovely",
+          "x_who": "sibling",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/best-friend-magazine-0.jpg",
+          "photo2": "/assets/samples/best-friend-magazine-0b.jpg",
+          "photo3": "/assets/samples/best-friend-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "since": "1999",
+          "from": "Sam",
+          "met": "Dancing in the kitchen",
+          "joke": "Never trust the blue sauce",
+          "best": "Making everyone laugh",
+          "words": "Bright, brave, mine",
+          "x_who": "sibling",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#b5552b"
+        },
+        "values": {
+          "name": "Mia",
+          "since": "2008",
+          "from": "Emma",
+          "met": "Sharing a bunk bed",
+          "joke": "The caravan holiday",
+          "best": "Giving the best hugs",
+          "words": "Sparkly, silly, sweet",
+          "x_who": "sibling",
+          "x_type": "adventurer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/eighteenth-birthday-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The sister issue",
+      "edition": "Sister of the year",
+      "lines": [
+        [
+          "Exclusive",
+          "The best sister in the world"
+        ],
+        [
+          "Best memory",
+          "{met}"
+        ],
+        [
+          "Inside joke",
+          "{joke}"
+        ]
+      ],
+      "badge": [
+        "Sisters since",
+        "{since}",
+        "and forever"
+      ],
+      "quote": "{words}",
+      "credit": "Her sister tells all"
+    }
+  },
+  {
+    "slug": "brother-magazine",
+    "title": "The Brother Issue",
+    "searchTitle": "Personalised Magazine for Brother",
+    "pinTitle": "Gift for Brother: a Personalised Magazine All About Him",
+    "occasion": "For my brother",
+    "short": "For the brother who drives you mad and would still do anything for you.",
+    "description": "For the brother who teased you endlessly and would still drop everything for you. Tell us the childhood stories, the inside jokes and what he means to you now, and we make him a glossy magazine where he is the cover star. Funny, a little bit emotional, and nothing like a pair of socks.",
+    "keywords": [
+      "gift for brother",
+      "brother birthday gift",
+      "personalised brother gift",
+      "big brother gift",
+      "little brother gift",
+      "gift for brother who has everything"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring them"
+    ],
+    "letterTitle": "A letter for my brother",
+    "feature": [
+      "The moment I knew you would always have my back",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "His name",
+        "example": "Sam",
+        "max": 12
+      },
+      {
+        "id": "since",
+        "label": "Brothers since",
+        "example": "1990",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "met",
+        "label": "Best childhood memory",
+        "example": "Racing bikes down the big hill",
+        "max": 34
+      },
+      {
+        "id": "joke",
+        "label": "Your inside joke",
+        "example": "The tent that blew away",
+        "max": 34
+      },
+      {
+        "id": "best",
+        "label": "He is the best at",
+        "example": "Fixing anything with tape",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Three words that are so him",
+        "example": "Daft, loyal, golden",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment you knew he would always have your back",
+        "example": "He turned up to help me move house with a van, a toolbox and pizza, even though he had a broken toe",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you wish you told him more often? (This becomes your letter)",
+        "example": "You drive me mad and I would not change a single thing. Thank you for every lift, every terrible joke and every time you looked out for me. Love you, bro.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of him",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "The two of you",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "sam",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Sam",
+          "since": "1990",
+          "from": "Emma",
+          "met": "Racing bikes down the big hill",
+          "joke": "The tent that blew away",
+          "best": "Fixing anything with tape",
+          "words": "Daft, loyal, golden",
+          "x_who": "sibling",
+          "x_type": "adventurer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/fathers-day-magazine-0.jpg",
+          "photo2": "/assets/samples/fathers-day-magazine-0b.jpg",
+          "photo3": "/assets/samples/fathers-day-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Leo",
+          "since": "1996",
+          "from": "Mia",
+          "met": "Football in the garden",
+          "joke": "Who ate the cake?",
+          "best": "Cheering me up",
+          "words": "Funny, kind, legend",
+          "x_who": "sibling",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-job-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "chris",
+        "palette": "mint",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#5a4a3a"
+        },
+        "values": {
+          "name": "Chris",
+          "since": "2003",
+          "from": "Ava",
+          "met": "Building a wonky treehouse",
+          "joke": "The caravan incident",
+          "best": "Giving terrible advice",
+          "words": "Clever, calm, mine",
+          "x_who": "sibling",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/graduation-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The brother issue",
+      "edition": "Brother of the year",
+      "lines": [
+        [
+          "Exclusive",
+          "The best brother in the world"
+        ],
+        [
+          "Best memory",
+          "{met}"
+        ],
+        [
+          "Inside joke",
+          "{joke}"
+        ]
+      ],
+      "badge": [
+        "Brothers since",
+        "{since}",
+        "and forever"
+      ],
+      "quote": "{words}",
+      "credit": "His sister tells all"
+    }
+  },
+  {
+    "slug": "grandma-magazine",
+    "title": "The Grandma Issue",
+    "searchTitle": "Personalised Magazine for Grandma",
+    "pinTitle": "Gift for Grandma: a Magazine Made by the Grandchildren",
+    "occasion": "For Grandma",
+    "short": "Made by the grandchildren, starring the best grandma in the world.",
+    "description": "For the grandma with the biscuit tin, the stories and the softest hugs. The grandchildren answer a few questions, add their notes and voice messages, and we make her a glossy magazine where she is the cover star. The gift she will show everyone she knows.",
+    "keywords": [
+      "gift for grandma",
+      "grandma birthday gift",
+      "personalised gift for nan",
+      "gift from grandchildren",
+      "gift for nana",
+      "grandma keepsake"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring them"
+    ],
+    "letterTitle": "A letter from your grandchildren",
+    "feature": [
+      "Our favourite day with Grandma",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "What the grandchildren call her",
+        "example": "Nana",
+        "max": 12
+      },
+      {
+        "id": "grandkids",
+        "label": "Number of grandchildren",
+        "example": "5",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Leo, Mia and the gang",
+        "max": 34
+      },
+      {
+        "id": "says",
+        "label": "She always says",
+        "example": "Have another biscuit",
+        "max": 34
+      },
+      {
+        "id": "dish",
+        "label": "Nobody makes it like her",
+        "example": "Apple crumble and custard",
+        "max": 34
+      },
+      {
+        "id": "power",
+        "label": "Her secret superpower",
+        "example": "Spoiling us rotten",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Three words that are so her",
+        "example": "Cosy, clever, magic",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "Your favourite day with her",
+        "example": "Baking in her kitchen all afternoon, flour everywhere, and eating the whole tray before anyone else got home",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do the grandchildren want her to know? (This becomes your letter)",
+        "example": "Your house is our favourite place in the world. Thank you for the stories, the biscuits and the cuddles. We love you to the moon and back, Nana.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of her",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "With the grandchildren",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "nana",
+        "palette": "rose",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#d9d4cc"
+        },
+        "values": {
+          "name": "Nana",
+          "grandkids": "5",
+          "from": "Leo, Mia and the gang",
+          "says": "Have another biscuit",
+          "dish": "Apple crumble and custard",
+          "power": "Spoiling us rotten",
+          "words": "Cosy, clever, magic",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/grandparents-newspaper-0.jpg",
+          "photo2": "/assets/samples/grandparents-newspaper-0b.jpg",
+          "photo3": "/assets/samples/grandparents-newspaper-0c.jpg"
+        }
+      },
+      {
+        "id": "grandma",
+        "palette": "butter",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#e8e2d8"
+        },
+        "values": {
+          "name": "Grandma",
+          "grandkids": "3",
+          "from": "Emma, Sam and Ava",
+          "says": "You have grown again!",
+          "dish": "Sunday roast, every week",
+          "power": "Winning every card game",
+          "words": "Sharp, sweet, ours",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/grandparents-newspaper-2.jpg"
+        }
+      },
+      {
+        "id": "granny",
+        "palette": "mint",
+        "portrait": {
+          "skin": 0,
+          "hair": "bun",
+          "hairColor": "#f0ede6"
+        },
+        "values": {
+          "name": "Granny",
+          "grandkids": "8",
+          "from": "All eight of us",
+          "says": "Wrap up warm",
+          "dish": "Jam tarts",
+          "power": "Knitting while watching quiz shows",
+          "words": "Gentle, wise, funny",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/memorial-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The grandma issue",
+      "edition": "Best grandma ever edition",
+      "lines": [
+        [
+          "Exclusive",
+          "The best grandma in the world"
+        ],
+        [
+          "She always says",
+          "{says}"
+        ],
+        [
+          "Nobody makes it like her",
+          "{dish}"
+        ]
+      ],
+      "badge": [
+        "Grandma to",
+        "{grandkids}",
+        "lucky ones"
+      ],
+      "quote": "{words}",
+      "credit": "Her grandchildren agree"
+    }
+  },
+  {
+    "slug": "pregnancy-announcement-magazine",
+    "title": "Big News",
+    "searchTitle": "Pregnancy Announcement Magazine",
+    "pinTitle": "Pregnancy Announcement Idea: a Magazine for the Grandparents to Be",
+    "occasion": "Baby announcement",
+    "short": "The sweetest way to tell the family: a magazine that reveals your big news.",
+    "description": "Tell the grandparents, or the whole family, in a way they will never forget. They open what looks like a magazine about the two of you, and every page leads to the big news: a baby is on the way. Add a scan photo and a voice note, and watch their faces.",
+    "keywords": [
+      "pregnancy announcement",
+      "pregnancy announcement to grandparents",
+      "baby announcement idea",
+      "we are expecting",
+      "pregnancy reveal gift",
+      "grandparents to be gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring them"
+    ],
+    "letterTitle": "A letter with some news",
+    "feature": [
+      "The moment we found out",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Baby's nickname for now",
+        "example": "Bean",
+        "max": 16
+      },
+      {
+        "id": "due",
+        "label": "Due",
+        "example": "June 2027",
+        "max": 14
+      },
+      {
+        "id": "from",
+        "label": "From the parents to be",
+        "example": "Emma & Chris",
+        "max": 34
+      },
+      {
+        "id": "nickname",
+        "label": "Who are you telling?",
+        "example": "Nana and Grandad",
+        "max": 30
+      },
+      {
+        "id": "craving",
+        "label": "First craving",
+        "example": "Pickles and ice cream",
+        "max": 34
+      },
+      {
+        "id": "guess",
+        "label": "Everyone will guess",
+        "example": "Twins, obviously",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Three words for how you feel",
+        "example": "Thrilled, scared, ready",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment you found out",
+        "example": "Two lines on the test at six in the morning, then sitting on the bathroom floor laughing and crying at the same time",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want to tell them? (This becomes your letter)",
+        "example": "We have some news, and we wanted you to be the first to know. Next summer, there will be someone new for you to spoil. We cannot wait to watch you become grandparents.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo, the bump or the two of you",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "The scan photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "bean",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#5a3a22"
+        },
+        "values": {
+          "name": "Bean",
+          "due": "June 2027",
+          "from": "Emma & Chris",
+          "nickname": "Nana and Grandad",
+          "craving": "Pickles and ice cream",
+          "guess": "Twins, obviously",
+          "words": "Thrilled, scared, ready"
+        },
+        "photos": {
+          "photo1": "/assets/samples/baby-shower-magazine-0.jpg",
+          "photo2": "/assets/samples/baby-shower-magazine-0c.jpg",
+          "photo3": "/assets/samples/baby-shower-magazine-0b.jpg"
+        }
+      },
+      {
+        "id": "peanut",
+        "palette": "sky",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Peanut",
+          "due": "March 2027",
+          "from": "Mia & Leo",
+          "nickname": "The whole family",
+          "craving": "Lemons, all of them",
+          "guess": "A little footballer",
+          "words": "Over the moon",
+          "x_type": "bump"
+        },
+        "photos": {
+          "photo1": "/assets/samples/baby-shower-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "bump",
+        "palette": "butter",
+        "portrait": {
+          "skin": 3,
+          "hair": "bun",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Sprout",
+          "due": "October 2027",
+          "from": "Ava & Sam",
+          "nickname": "Grandma and Grandpa",
+          "craving": "Toast at midnight",
+          "guess": "Already bossy",
+          "words": "Happy, grateful, giddy"
+        },
+        "photos": {
+          "photo1": "/assets/samples/baby-shower-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The big news issue",
+      "edition": "Exclusive announcement",
+      "lines": [
+        [
+          "Exclusive",
+          "Big news for {nickname}"
+        ],
+        [
+          "First craving",
+          "{craving}"
+        ],
+        [
+          "Everyone will guess",
+          "{guess}"
+        ]
+      ],
+      "badge": [
+        "Arriving",
+        "{due}",
+        "with love"
+      ],
+      "quote": "{words}",
+      "credit": "Love, {from}"
+    },
+    "letterTo": "nickname"
+  },
+  {
+    "slug": "babys-first-christmas-magazine",
+    "title": "Baby's First Christmas",
+    "searchTitle": "Baby's First Christmas Keepsake Magazine",
+    "pinTitle": "Baby's First Christmas: a Personalised Keepsake Magazine",
+    "occasion": "Baby's first Christmas",
+    "short": "Their very first Christmas, kept forever in a cosy little magazine.",
+    "description": "The first stocking, the first taste of Christmas dinner, the first time they ate the wrapping paper. Tell us about baby's first Christmas and we make a cosy keepsake magazine starring the littlest member of the family. Lovely to give to grandparents too.",
+    "keywords": [
+      "babys first christmas",
+      "baby first christmas keepsake",
+      "first christmas gift for baby",
+      "personalised baby christmas",
+      "new parents christmas gift",
+      "grandparents christmas gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring them"
+    ],
+    "letterTitle": "A Christmas letter for you",
+    "feature": [
+      "Our favourite moment this Christmas",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Baby's name",
+        "example": "Leo",
+        "max": 12
+      },
+      {
+        "id": "weight",
+        "label": "Age this Christmas",
+        "example": "6 months",
+        "max": 12
+      },
+      {
+        "id": "born",
+        "label": "Year",
+        "example": "2026",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mummy and Daddy",
+        "max": 34
+      },
+      {
+        "id": "looks",
+        "label": "Favourite present",
+        "example": "The box it came in",
+        "max": 34
+      },
+      {
+        "id": "skill",
+        "label": "First Christmas trick",
+        "example": "Eating the wrapping paper",
+        "max": 34
+      },
+      {
+        "id": "loves",
+        "label": "Loved most",
+        "example": "The twinkly tree lights",
+        "max": 34
+      },
+      {
+        "id": "moment",
+        "label": "Your favourite moment this Christmas",
+        "example": "Watching you stare at the fairy lights for ten whole minutes with your mouth open, completely amazed",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know one day? (This becomes your letter)",
+        "example": "Your first Christmas was our favourite one ever, and you will not remember a thing. So we wrote it all down for you. We love you more than all the stars on the tree.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of baby",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A Christmas photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "leo",
+        "palette": "festive",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#c9a27a"
+        },
+        "values": {
+          "name": "Leo",
+          "weight": "6 months",
+          "born": "2026",
+          "from": "Mummy and Daddy",
+          "looks": "The box it came in",
+          "skill": "Eating the wrapping paper",
+          "loves": "The twinkly tree lights"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-baby-magazine-0.jpg",
+          "photo2": "/assets/samples/new-baby-magazine-0b.jpg",
+          "photo3": "/assets/samples/new-baby-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "cranberry",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "weight": "3 months",
+          "born": "2026",
+          "from": "Mama and Papa",
+          "looks": "A very crinkly book",
+          "skill": "Sleeping through the King's speech",
+          "loves": "Grandma's singing"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-baby-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "snow",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#5a3a22"
+        },
+        "values": {
+          "name": "Sam",
+          "weight": "9 months",
+          "born": "2026",
+          "from": "Mum and Dad",
+          "looks": "Grandad's car keys",
+          "skill": "Pulling every bauble off",
+          "loves": "The dog's Christmas jumper"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-baby-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The first Christmas issue",
+      "edition": "Baby's first Christmas {born}",
+      "lines": [
+        [
+          "Exclusive",
+          "{name}'s very first Christmas"
+        ],
+        [
+          "Favourite present",
+          "{looks}"
+        ],
+        [
+          "Loved most",
+          "{loves}"
+        ]
+      ],
+      "badge": [
+        "First",
+        "Christmas",
+        "{born}"
+      ],
+      "quote": "{skill}",
+      "credit": "First Christmas trick"
+    }
+  },
+  {
+    "slug": "leaving-magazine",
+    "title": "The Farewell Issue",
+    "searchTitle": "Personalised Leaving Gift Magazine for a Colleague",
+    "pinTitle": "Leaving Gift for a Colleague: a Magazine From the Whole Team",
+    "occasion": "Leaving work",
+    "short": "Send them off in style, with a magazine written by the whole team.",
+    "description": "Better than a card everyone signs in a hurry. The whole team adds a note, a photo and a voice message through one link, and we make a glossy magazine about the colleague who is leaving: their legendary moments, their desk habits and what everyone will miss. Ready in minutes, even if the leaving do is tomorrow.",
+    "keywords": [
+      "leaving gift for colleague",
+      "farewell gift",
+      "coworker leaving gift",
+      "goodbye gift for boss",
+      "leaving card alternative",
+      "team gift for colleague"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring them"
+    ],
+    "letterTitle": "A letter from the team",
+    "feature": [
+      "The moment that became office legend",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Emma",
+        "max": 12
+      },
+      {
+        "id": "years",
+        "label": "Years on the team",
+        "example": "6",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Everyone at the office",
+        "max": 34
+      },
+      {
+        "id": "next",
+        "label": "Off to",
+        "example": "A big new job in Sydney",
+        "max": 34
+      },
+      {
+        "id": "desk",
+        "label": "Desk essential",
+        "example": "A plant called Kevin",
+        "max": 34
+      },
+      {
+        "id": "coffee",
+        "label": "Fuelled by",
+        "example": "Oat flat whites, hourly",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Three words that are so them",
+        "example": "Calm, kind, brilliant",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment that became office legend",
+        "example": "When the projector died before the biggest pitch of the year and they presented the whole thing from memory, with drawings on a napkin, and won",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What does the team want them to know? (This becomes your letter)",
+        "example": "The office will be so much quieter without you, and nowhere near as well organised. Thank you for the laughs, the help and the cake. Go and be brilliant. We will miss you.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of them",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "With the team",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Emma",
+          "years": "6",
+          "from": "Everyone at the office",
+          "next": "A big new job in Sydney",
+          "desk": "A plant called Kevin",
+          "coffee": "Oat flat whites, hourly",
+          "words": "Calm, kind, brilliant",
+          "x_who": "friend",
+          "x_type": "gogetter"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-job-magazine-0.jpg",
+          "photo2": "/assets/samples/new-job-magazine-0b.jpg",
+          "photo3": "/assets/samples/new-job-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "chris",
+        "palette": "coral",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Chris",
+          "years": "12",
+          "from": "The whole sales team",
+          "next": "Retirement and golf",
+          "desk": "Three framed dog photos",
+          "coffee": "Builder's tea",
+          "words": "Legend, mentor, friend",
+          "x_who": "friend",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-job-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "mint",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#5a3a22"
+        },
+        "values": {
+          "name": "Sam",
+          "years": "3",
+          "from": "Team Blue",
+          "next": "Travelling the world",
+          "desk": "Snack drawer for everyone",
+          "coffee": "Iced lattes, all year",
+          "words": "Funny, generous, loud",
+          "x_who": "friend",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/thank-you-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The farewell issue",
+      "edition": "We will miss you",
+      "lines": [
+        [
+          "Exclusive",
+          "Off to {next}"
+        ],
+        [
+          "Desk essential",
+          "{desk}"
+        ],
+        [
+          "Fuelled by",
+          "{coffee}"
+        ]
+      ],
+      "badge": [
+        "On the team",
+        "{years}",
+        "years"
+      ],
+      "quote": "{words}",
+      "credit": "The team agrees"
+    }
   }
 ]
