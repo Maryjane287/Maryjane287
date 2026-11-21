@@ -1,0 +1,372 @@
+{
+  "theme": "ocean",
+  "fields": [
+    {
+      "id": "s_song",
+      "label": "The song you played all holiday",
+      "example": "The one the kids sang every car journey, badly",
+      "max": 80,
+      "chapter": "The holiday soundtrack"
+    },
+    {
+      "id": "s_word",
+      "label": "Everyone's favourite bit, in their own words",
+      "example": "Mia: the dolphins. Leo: the pool. Sam: the chips",
+      "max": 80,
+      "chapter": "Each child's highlight"
+    },
+    {
+      "id": "s_again",
+      "label": "What you would go back for",
+      "example": "That little bakery, and the rock pools",
+      "max": 80,
+      "chapter": "We would go back for"
+    },
+    {
+      "id": "s_next",
+      "label": "Where the family goes next",
+      "example": "Somewhere with snow, the kids have decided",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "place": "Where we went",
+    "days": "Days of fun",
+    "meal": "Best thing we ate",
+    "view": "Best view",
+    "lost": "Holiday disaster"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "quizTitle": "How well do you remember {place}?",
+  "story": {
+    "title": "Our Family Holiday",
+    "hand": "Same time next year, {who}?",
+    "kicker": "Our holiday",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Holiday highlights",
+    "kicker": "Holiday highlights",
+    "title": "Ten best bits of our holiday",
+    "items": [
+      "Rock pooling",
+      "Ice cream for breakfast",
+      "The beach cricket",
+      "Spotting dolphins",
+      "Sandcastle competition",
+      "The pool slide",
+      "Fish and chips on the harbour",
+      "Late nights, no bedtimes",
+      "The rainy day board games",
+      "Building a den in the dunes",
+      "Sunset on the cliffs",
+      "All of us together"
+    ]
+  },
+  "timeline": {
+    "kicker": "Travel through the ages",
+    "title": "A Short History of Going Away",
+    "items": [
+      [
+        "1271",
+        "The great journey",
+        "Marco Polo set out from Venice for Asia. He did not get home for about 24 years. Some holiday."
+      ],
+      [
+        "1700s",
+        "The Grand Tour",
+        "Young travellers crossed Europe for months, chasing art, music, ruins and sunshine."
+      ],
+      [
+        "1841",
+        "The first package trip",
+        "Thomas Cook took hundreds of people on a day trip by train, and the group holiday was born."
+      ],
+      [
+        "1970",
+        "The jumbo jet",
+        "The first Boeing 747 passenger flight took off, and flying abroad began to open up for millions."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who}",
+      "{days} days in {place}. Not in the history books yet, but the best trip ever taken, if you ask us."
+    ]
+  },
+  "letters": {
+    "kicker": "Words for the road",
+    "title": "What the World Has Said About Travel",
+    "items": [
+      [
+        "The world is a book, and those who do not travel read only one page.",
+        "Saint Augustine"
+      ],
+      [
+        "I travel not to go anywhere, but to go. I travel for travel's sake.",
+        "Robert Louis Stevenson, 1879"
+      ],
+      [
+        "A journey of a thousand miles begins with a single step.",
+        "Laozi, Tao Te Ching"
+      ],
+      [
+        "A good companion shortens the longest road.",
+        "An old proverb"
+      ]
+    ],
+    "hand": "They all say it beautifully. We just say: where to next?"
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Adventure",
+    "items": [
+      [
+        "spark",
+        "New is good for you",
+        "New places light up the brain's reward system, the same one that makes good news feel so good."
+      ],
+      [
+        "clock",
+        "The joy of waiting",
+        "Studies suggest just looking forward to a trip can make people happier for weeks before they go."
+      ],
+      [
+        "gift",
+        "Better than things",
+        "Research shows experiences bring longer lasting happiness than things. Memories never go out of style."
+      ],
+      [
+        "eye",
+        "That view",
+        "A breathtaking view sparks awe, which studies link to feeling kinder and more connected."
+      ],
+      [
+        "plane",
+        "Short but sweet",
+        "The first powered aeroplane flight, in 1903, lasted just 12 seconds."
+      ],
+      [
+        "moon",
+        "Catching up",
+        "After a long flight, the body clock catches up at roughly one time zone a day."
+      ]
+    ],
+    "hand": "Science can explain a lot. It cannot explain why holiday food always tastes better."
+  },
+  "world": {
+    "kicker": "A postcard from the world",
+    "title": "Why Holidays Are Better With {who}",
+    "lead": "When {who} go on holiday, the world gets:",
+    "items": [
+      "Very happy ice cream sellers.",
+      "Sandcastles with real moats.",
+      "Laughter in every restaurant.",
+      "Postcards for everyone back home.",
+      "Kids who will remember this forever.",
+      "A family closer than ever.",
+      "And all of {who}."
+    ],
+    "close": "Wish you were here. Love, {who}."
+  },
+  "promises": {
+    "field": "s_next",
+    "kicker": "Until next holiday",
+    "title": "Holiday promises",
+    "items": [
+      "To pack the suncream, every time.",
+      "To let the kids choose one day.",
+      "To leave the phones in the bag.",
+      "To go back to the bakery.",
+      "To make every holiday this good."
+    ],
+    "hand": "With love, {from}"
+  },
+  "awardsKicker": "Live from the departure lounge",
+  "awards": [
+    [
+      "Best travel buddies",
+      "No contest"
+    ],
+    [
+      "Most photos of breakfast",
+      "A new record"
+    ],
+    [
+      "Chief map holder",
+      "Upside down, mostly"
+    ],
+    [
+      "Adventurers of the year",
+      "Unanimous"
+    ]
+  ],
+  "awardsFoot": "The envelope, please. It came with a postcard stamp.",
+  "vouchers": [
+    [
+      "The window seat",
+      "Valid on any journey"
+    ],
+    [
+      "A day with no plans",
+      "Wander wherever you like"
+    ],
+    [
+      "One more holiday breakfast",
+      "Recreated at home"
+    ],
+    [
+      "Planning the next trip",
+      "Maps and snacks included"
+    ]
+  ],
+  "vouchersTitle": "Travel vouchers for {who}",
+  "certLine": "officially and forever qualify as",
+  "cert": "World Class Travellers",
+  "perfume": "Top notes of sea air, sun cream and strong coffee. A heart of pure wanderlust.",
+  "news": {
+    "edition": "Travel edition",
+    "headline": "{who} back from {place}",
+    "lead": "Sources close to the travellers confirm {days} days in {place}, far too many photos and not one single regret.",
+    "weather": "Weather: sunny, wherever you go together"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to everywhere, together",
+    "nationality": "Citizens of the world",
+    "job": "Professional explorers",
+    "stamps": [
+      "{place}",
+      "Somewhere new",
+      "Next stop: anywhere"
+    ]
+  },
+  "movie": {
+    "sub": "A family holiday adventure",
+    "soon": "The sequel: next summer",
+    "reviews": [
+      [
+        "Sunny, chaotic and joyful",
+        "The Daily Hug"
+      ],
+      [
+        "Best holiday ever",
+        "The kids"
+      ],
+      [
+        "Five stars, sand everywhere",
+        "Everyone who was there"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Which country is the most visited holiday destination in the world?",
+      [
+        "France",
+        "Spain",
+        "Italy"
+      ],
+      0
+    ],
+    [
+      "On average, how many days of annual holiday do UK workers get by law?",
+      [
+        "28",
+        "14",
+        "40"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "TRAVEL",
+    "PASSPORT",
+    "SUNSET",
+    "JOURNEY",
+    "EXPLORE",
+    "POSTCARD"
+  ],
+  "note": {
+    "title": "Why family holidays matter",
+    "contents": "A note for the family",
+    "paras": [
+      "Children rarely remember the expensive day out. They remember the rock pools, the ice cream and the rainy afternoon of board games.",
+      "So we gathered the whole holiday, through everyone's eyes, into one magazine.",
+      "{who}, this is the holiday you will talk about for years.",
+      "From everything {from} told us, it was the best one yet."
+    ],
+    "wish": "Wish you were here, {who}."
+  },
+  "concepts": "trip",
+  "own": {
+    "dayTitle": "A Perfect Holiday Day in {place}",
+    "day": [
+      [
+        "7:00",
+        "Up early",
+        "The kids are awake. Everyone is awake."
+      ],
+      [
+        "10:00",
+        "The beach",
+        "Buckets, spades and one very important sandcastle."
+      ],
+      [
+        "13:00",
+        "Lunch",
+        "Chips on the sea wall. A seagull tries its luck."
+      ],
+      [
+        "16:00",
+        "Ice cream",
+        "Second one of the day. Holiday rules."
+      ]
+    ],
+    "night": [
+      "21:00",
+      "Bedtime, sort of",
+      "Sandy feet, sunburnt noses, and nobody wants to sleep."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "A beach towel, a bucket and a very big bag"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Ice cream, chips and holiday rules"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Are we nearly there yet?\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Turning a rainy day into the best day"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Before breakfast and long after bedtime"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Pack the suncream. Plan nothing. Enjoy everything"
+      ]
+    ],
+    "little": [
+      "You let the kids stay up to watch the stars.",
+      "You built the best sandcastle on the beach.",
+      "You found the bakery everyone still talks about.",
+      "You turned the flooded tent into a story, not a disaster."
+    ],
+    "letters": "Little Holiday Moments"
+  }
+}

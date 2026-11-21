@@ -1,0 +1,369 @@
+{
+  "theme": "sunset",
+  "fields": [
+    {
+      "id": "s_ordinary",
+      "label": "Someone you had not seen in years",
+      "example": "Cousin Ava, who now has three children and a tattoo",
+      "max": 80,
+      "chapter": "Who you had not seen in years"
+    },
+    {
+      "id": "s_firsts",
+      "label": "The moment that made everyone laugh",
+      "example": "Grandad falling asleep mid speech, then waking up and finishing it",
+      "max": 80,
+      "chapter": "The biggest laugh"
+    },
+    {
+      "id": "s_learned",
+      "label": "Something you found out about the family",
+      "example": "We have a distant cousin who was a famous magician",
+      "max": 80,
+      "chapter": "Things we found out"
+    },
+    {
+      "id": "s_wish",
+      "label": "Plans for the next reunion",
+      "example": "Same time in two years, and someone else does the barbecue",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "year": "Reunion year",
+    "where": "Where it happened",
+    "count": "How many came",
+    "travelled": "Came the furthest"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "story": {
+    "title": "The Day {who} Came Together",
+    "hand": "Until next time, {who}.",
+    "kicker": "The reunion",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Highlights of the day",
+    "kicker": "From {from}, with love",
+    "title": "Ten highlights of the reunion",
+    "items": [
+      "The big group photo",
+      "The aunties' dance off",
+      "Cousins meeting cousins",
+      "Grandad's speech",
+      "The cake",
+      "The football match",
+      "Old photos on the table",
+      "The family tree on the wall",
+      "The singalong",
+      "The babies being passed around",
+      "The rain that did not stop us",
+      "Nobody wanting to leave"
+    ]
+  },
+  "timeline": {
+    "kicker": "New years through the ages",
+    "title": "A Short History of New Year",
+    "items": [
+      [
+        "c. 2000 BC",
+        "The first resolutions",
+        "In ancient Babylon, people welcomed the new year by promising the gods to pay debts and return what they borrowed."
+      ],
+      [
+        "45 BC",
+        "Hello, January",
+        "The Julian calendar began the year on 1 January, named after Janus, the god who looks back and forward."
+      ],
+      [
+        "1788",
+        "Auld Lang Syne",
+        "Robert Burns sent off the words of a song about old friends and days gone by. Now the world sings it at midnight."
+      ],
+      [
+        "1927",
+        "A year in one name",
+        "A magazine first chose one person to sum up a whole year. The tradition still runs today."
+      ]
+    ],
+    "today": [
+      "{year}",
+      "{who}",
+      "Not in the history books yet. But for us, the year that mattered most."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Time",
+    "items": [
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Write it on your heart that every day is the best day in the year.",
+        "Ralph Waldo Emerson"
+      ],
+      [
+        "Ring out the old, ring in the new, ring, happy bells, across the snow.",
+        "Alfred, Lord Tennyson, In Memoriam, 1850"
+      ],
+      [
+        "Life can only be understood backwards; but it must be lived forwards.",
+        "Søren Kierkegaard"
+      ]
+    ],
+    "hand": "They all say it beautifully. We just say: what a year."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of a Year",
+    "items": [
+      [
+        "globe",
+        "A long way round",
+        "In one year, the Earth carried you all about 940 million kilometres around the sun."
+      ],
+      [
+        "heart",
+        "Busy hearts",
+        "A heart beats roughly 35 million times a year. Plenty of those were for each other."
+      ],
+      [
+        "smile",
+        "Better together",
+        "People are far more likely to laugh with others than alone. Laughter is made for sharing."
+      ],
+      [
+        "clock",
+        "Why new things matter",
+        "Busy years full of new experiences feel longer when we look back. So every adventure counts."
+      ],
+      [
+        "leaf",
+        "A smell, a memory",
+        "Smell is closely tied to memory. One scent can bring back a moment from years ago."
+      ],
+      [
+        "sun",
+        "The extra quarter",
+        "A year is about 365 and a quarter days long. That is why we get a leap year every four years."
+      ]
+    ],
+    "hand": "Science can measure a year. It cannot measure how much happened in this one."
+  },
+  "world": {
+    "kicker": "A toast to the family",
+    "title": "Why the World Is Better When {who} Get Together",
+    "lead": "When {who} are all in one place, the world gets:",
+    "items": [
+      "The loudest laugh in the county.",
+      "Cousins who become friends.",
+      "Babies meeting their elders.",
+      "Stories that would otherwise be lost.",
+      "Food for at least three days.",
+      "A photo worth framing.",
+      "And every single one of {who}."
+    ],
+    "close": "Same time next time, {who}?"
+  },
+  "promises": {
+    "field": "s_wish",
+    "kicker": "Until next time",
+    "title": "Reunion promises",
+    "items": [
+      "To keep in touch, properly this time.",
+      "To share every photo.",
+      "To meet the new babies sooner.",
+      "To start the group chat. And reply.",
+      "To come back, all of us, next time."
+    ],
+    "hand": "See you soon, {from}"
+  },
+  "awardsKicker": "Live from the {year} awards",
+  "awards": [
+    [
+      "Best laugh of the year",
+      "Heard from next door"
+    ],
+    [
+      "Most dramatic board game",
+      "Still not over it"
+    ],
+    [
+      "Team of the year",
+      "Unanimous"
+    ],
+    [
+      "Lifetime achievement",
+      "In being wonderful"
+    ]
+  ],
+  "vouchers": [
+    [
+      "A family film night",
+      "Snacks and blankets included"
+    ],
+    [
+      "One lazy Sunday",
+      "No plans, no alarms"
+    ],
+    [
+      "A day out together",
+      "Your choice, our treat"
+    ],
+    [
+      "Breakfast for everyone",
+      "Pancakes, obviously"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "certLine": "officially made {year}",
+  "cert": "The Best Year Yet",
+  "perfume": "Top notes of muddy walks, hot chocolate and laughter. A heart of pure togetherness.",
+  "news": {
+    "edition": "Year in review edition",
+    "headline": "{who} have a year to remember",
+    "lead": "Sources confirm that {year} was full of adventures, giggles and at least one disaster everyone now finds hilarious.",
+    "weather": "Weather: bright, with a 100% chance of another great year"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to the year ahead",
+    "nationality": "Loved, everywhere",
+    "job": "Making memories",
+    "stamps": [
+      "{year}",
+      "Home",
+      "Next adventure"
+    ]
+  },
+  "movie": {
+    "sub": "A family reunion",
+    "soon": "The sequel: the next reunion",
+    "reviews": [
+      [
+        "Loud, joyful and full of hugs",
+        "The Daily Hug"
+      ],
+      [
+        "Best day of the year",
+        "{from}"
+      ],
+      [
+        "A cast of hundreds, every one a star",
+        "Everyone who was there"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "What is a first cousin once removed?",
+      [
+        "Your cousin's child",
+        "Your aunt",
+        "Your second cousin"
+      ],
+      0
+    ],
+    [
+      "Roughly how many living relatives can a typical person trace back to the same great great grandparents?",
+      [
+        "Dozens to hundreds",
+        "Exactly ten",
+        "Fewer than five"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "YEAR",
+    "FAMILY",
+    "MEMORIES",
+    "CHEERS",
+    "LAUGH",
+    "TOGETHER"
+  ],
+  "note": {
+    "title": "Why the reunion deserves a magazine",
+    "contents": "A note for the family",
+    "paras": [
+      "Family reunions take months of planning, and the day goes by in a blur of hugs and photos.",
+      "So we caught it: who came, who came furthest and the moments everyone will talk about for years.",
+      "{who}, this is the day you were all together again.",
+      "From everything {from} told us, it was worth every mile."
+    ],
+    "wish": "Until next time, {who}."
+  },
+  "concepts": "family",
+  "own": {
+    "dayTitle": "The Reunion, Hour by Hour",
+    "day": [
+      [
+        "11:00",
+        "Arrivals",
+        "Name badges, squeals and \"look how tall you are!\""
+      ],
+      [
+        "13:00",
+        "The feast",
+        "Every family brought their signature dish. There was far too much."
+      ],
+      [
+        "15:00",
+        "Games",
+        "A cousins versus aunties football match. Nobody kept score."
+      ],
+      [
+        "18:00",
+        "The group photo",
+        "Forty attempts. Someone always blinked."
+      ]
+    ],
+    "night": [
+      "22:00",
+      "Still here",
+      "Nobody wants to leave. The music gets louder."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "A big garden, a long table and a gazebo"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Everyone's signature dish, all at once"
+      ],
+      [
+        "music",
+        "Call",
+        "\"How are you all related again?\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Making forty eight people feel like one family"
+      ],
+      [
+        "clock",
+        "Most active",
+        "From arrival until well after dark"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Feed them, photograph them, plan the next one"
+      ]
+    ],
+    "little": [
+      "You all still argue over the same family recipe.",
+      "You made the cousins feel like they had never been apart.",
+      "You brought out the old photo albums at just the right moment.",
+      "You stayed to help clear up, every single one of you."
+    ],
+    "letters": "Little Moments From the Reunion"
+  }
+}

@@ -12085,5 +12085,1378 @@
       "quote": "{words}",
       "credit": "Love, {from}"
     }
+  },
+  {
+    "slug": "like-father-like-son-magazine",
+    "title": "Like Father, Like Son",
+    "searchTitle": "Like Father Like Son Personalised Magazine",
+    "pinTitle": "Gift for Dad From Son: Like Father, Like Son Magazine",
+    "occasion": "Father and son",
+    "short": "The same laugh, the same stubborn streak: a magazine about a father and son.",
+    "description": "The same laugh, the same terrible jokes, the same way of standing with their hands in their pockets. A son tells the story of his dad: what he taught him, what they share and the moment he realised he had become just like him. We turn it into a glossy magazine where Dad is the cover star.",
+    "keywords": [
+      "gift for dad from son",
+      "like father like son gift",
+      "fathers day gift from son",
+      "dad birthday gift from son",
+      "father son keepsake",
+      "personalised dad gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring Dad",
+      "A thank you letter",
+      "Dad by the numbers",
+      "A photo spread of the best days",
+      "His most legendary moment",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter from your son",
+    "feature": [
+      "The moment I realised I am just like you",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "What you call him",
+        "example": "Dad",
+        "max": 12
+      },
+      {
+        "id": "son",
+        "label": "His son's name",
+        "example": "Leo",
+        "max": 16
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Leo",
+        "max": 34
+      },
+      {
+        "id": "same",
+        "label": "What you both do the same",
+        "example": "Laugh at our own jokes first",
+        "max": 40
+      },
+      {
+        "id": "taught",
+        "label": "The best thing he taught you",
+        "example": "Always finish what you start",
+        "max": 40
+      },
+      {
+        "id": "team",
+        "label": "Your shared obsession",
+        "example": "Sunday football, rain or shine",
+        "max": 40
+      },
+      {
+        "id": "words",
+        "label": "Him in three words",
+        "example": "Steady, funny, proud",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "The moment you realised you are just like him",
+        "example": "I caught myself checking the locks three times before bed, then rattling the back door, exactly like he does, and I had to ring him to laugh about it",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want him to know? (This becomes your letter)",
+        "example": "Everything good in me, I learned from watching you. Thank you for the football, the lifts and for showing me what a good man looks like. I am proud to be your son.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of him",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "The two of you",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "An old photo of you both",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "dad",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Dad",
+          "son": "Leo",
+          "from": "Leo",
+          "same": "Laugh at our own jokes first",
+          "taught": "Always finish what you start",
+          "team": "Sunday football, rain or shine",
+          "words": "Steady, funny, proud",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/fathers-day-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "papa",
+        "palette": "sky",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Papa",
+          "son": "Sam",
+          "from": "Sam",
+          "same": "Fall asleep in every film",
+          "taught": "How to treat people kindly",
+          "team": "Fixing up old cars",
+          "words": "Wise, strong, gentle",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/fathers-day-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "dad2",
+        "palette": "mint",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#5a4a3a"
+        },
+        "values": {
+          "name": "Dad",
+          "son": "Chris",
+          "from": "Chris",
+          "same": "Terrible at directions",
+          "taught": "To never give up",
+          "team": "Fishing at dawn",
+          "words": "Patient, daft, golden",
+          "x_type": "adventurer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/graduation-magazine-0.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The father and son issue",
+      "edition": "Like father, like son",
+      "lines": [
+        [
+          "Exclusive",
+          "Two of a kind"
+        ],
+        [
+          "We both",
+          "{same}"
+        ],
+        [
+          "He taught me",
+          "{taught}"
+        ]
+      ],
+      "badge": [
+        "Like",
+        "father",
+        "like son"
+      ],
+      "quote": "{words}",
+      "credit": "Love, {son}"
+    }
+  },
+  {
+    "slug": "generations-magazine",
+    "title": "Generations of Love",
+    "searchTitle": "Personalised Generations Family Keepsake Magazine",
+    "pinTitle": "Generations of Love: a Family Keepsake for Grandparents, Parents and Children",
+    "occasion": "Generations",
+    "short": "Grandparents, parents and children: three generations in one beautiful magazine.",
+    "description": "Grandparents, parents, children and the grandchildren too. A keepsake that celebrates every generation of your family: who started it all, what has been passed down and what each generation says to the next. Everyone adds notes and voice messages through one link.",
+    "keywords": [
+      "generations gift",
+      "gift for grandparents",
+      "three generations keepsake",
+      "family heritage gift",
+      "grandparents anniversary gift",
+      "family gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A double issue cover with your year and your family",
+      "Editor's note: your message about the year",
+      "The year by numbers, in funny facts",
+      "The family awards ceremony",
+      "A photo spread of the best bits",
+      "The moment you will laugh about forever",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "family",
+        "label": "Your family name",
+        "example": "The Bennetts",
+        "max": 22
+      },
+      {
+        "id": "year",
+        "label": "Where it began",
+        "example": "1962",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mia",
+        "max": 30
+      },
+      {
+        "id": "first",
+        "label": "Who started it all",
+        "example": "Grandma Rose and Grandad Sam",
+        "max": 40
+      },
+      {
+        "id": "passed",
+        "label": "Passed down through every generation",
+        "example": "Grandad's pancake recipe",
+        "max": 60
+      },
+      {
+        "id": "count",
+        "label": "Generations in this family",
+        "example": "4",
+        "max": 2
+      },
+      {
+        "id": "moment",
+        "label": "The moment all the generations were together",
+        "example": "Grandad's ninetieth, four generations around one table, the youngest asleep on the oldest's lap, and everyone went quiet just to look",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want every generation to know? (This becomes your letter)",
+        "example": "Every one of us is here because of the ones who came before. Thank you for the stories, the recipes and the love that keeps getting passed down. May it keep going for a hundred years more.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the generations together",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "An old family photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "A favourite from now",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "bennetts",
+        "palette": "butter",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#d9d4cc"
+        },
+        "values": {
+          "family": "The Bennetts",
+          "year": "1962",
+          "from": "Mia",
+          "first": "Grandma Rose and Grandad Sam",
+          "passed": "Grandad's pancake recipe",
+          "count": "4",
+          "x_type": "cosy"
+        },
+        "photos": {
+          "photo1": "/assets/samples/grandparents-newspaper-1.jpg"
+        }
+      },
+      {
+        "id": "clarkes",
+        "palette": "rose",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "family": "The Clarkes",
+          "year": "1970",
+          "from": "Ava",
+          "first": "Nana Grace and Pop Leo",
+          "passed": "Singing at every party",
+          "count": "3",
+          "x_type": "lively"
+        },
+        "photos": {
+          "photo1": "/assets/samples/golden-anniversary-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "taylors",
+        "palette": "mint",
+        "portrait": {
+          "skin": 1,
+          "hair": "curly",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "family": "The Taylors",
+          "year": "1958",
+          "from": "Chris",
+          "first": "Great Grandma Emma",
+          "passed": "Her wedding ring",
+          "count": "5",
+          "x_type": "cosy"
+        },
+        "photos": {
+          "photo1": "/assets/samples/year-in-review-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{family}",
+      "issue": "The generations issue",
+      "edition": "Since {year}",
+      "lines": [
+        [
+          "Exclusive",
+          "{count} generations, one family"
+        ],
+        [
+          "Where it began",
+          "{first}"
+        ],
+        [
+          "Passed down",
+          "{passed}"
+        ]
+      ],
+      "badge": [
+        "Gener",
+        "{count}",
+        "ations"
+      ],
+      "quote": "Generations of love",
+      "credit": "Since {year}"
+    },
+    "letterTitle": "A letter to every generation",
+    "feature": [
+      "The moment all the generations were together",
+      "moment"
+    ]
+  },
+  {
+    "slug": "family-reunion-magazine",
+    "title": "The Family Reunion Edition",
+    "searchTitle": "Family Reunion Personalised Keepsake Magazine",
+    "pinTitle": "Family Reunion Keepsake: a Magazine Everyone Helps Write",
+    "occasion": "Family reunion",
+    "short": "The day the whole family came together, captured in a magazine everyone helps write.",
+    "description": "Cousins you had not seen in years, the aunties' dance off, the massive group photo. Everyone at the reunion adds a note, photo and voice message through one link, and we make a glossy magazine of the whole day. Order copies for every branch of the family.",
+    "keywords": [
+      "family reunion gift",
+      "family reunion keepsake",
+      "family reunion souvenir",
+      "gift for the whole family",
+      "cousins reunion",
+      "family gathering memories"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A double issue cover with your year and your family",
+      "Editor's note: your message about the year",
+      "The year by numbers, in funny facts",
+      "The family awards ceremony",
+      "A photo spread of the best bits",
+      "The moment you will laugh about forever",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "family",
+        "label": "Your family name",
+        "example": "The Clarkes",
+        "max": 22
+      },
+      {
+        "id": "year",
+        "label": "Reunion year",
+        "example": "2026",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "The organisers",
+        "max": 30
+      },
+      {
+        "id": "where",
+        "label": "Where it happened",
+        "example": "Aunt Mia's garden, in a heatwave",
+        "max": 60
+      },
+      {
+        "id": "count",
+        "label": "How many came",
+        "example": "48",
+        "max": 3
+      },
+      {
+        "id": "travelled",
+        "label": "Furthest anyone travelled",
+        "example": "Cousin Sam, all the way from Sydney",
+        "max": 60
+      },
+      {
+        "id": "moment",
+        "label": "The best moment of the reunion",
+        "example": "The aunties started a dance off at sunset, the grandchildren joined in, and by the end three generations were doing the same terrible routine",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want everyone to know? (This becomes your letter)",
+        "example": "Thank you for coming from near and far. It meant the world to see everyone together in one place, laughing like no time had passed. Let us not leave it so long next time.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo: the big group shot",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite moment",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "clarkes",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "family": "The Clarkes",
+          "year": "2026",
+          "from": "The organisers",
+          "where": "Aunt Mia's garden, in a heatwave",
+          "count": "48",
+          "travelled": "Cousin Sam, all the way from Sydney",
+          "x_type": "lively"
+        },
+        "photos": {
+          "photo1": "/assets/samples/year-in-review-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "bennetts",
+        "palette": "sky",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#5a3a22"
+        },
+        "values": {
+          "family": "The Bennetts",
+          "year": "2026",
+          "from": "Emma",
+          "where": "A farmhouse in Wales",
+          "count": "31",
+          "travelled": "Uncle Leo, from Canada",
+          "x_type": "cosy"
+        },
+        "photos": {
+          "photo1": "/assets/samples/year-in-review-magazine-3.jpg"
+        }
+      },
+      {
+        "id": "taylors",
+        "palette": "butter",
+        "portrait": {
+          "skin": 1,
+          "hair": "curly",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "family": "The Taylors",
+          "year": "2027",
+          "from": "Grandma",
+          "where": "The old village hall",
+          "count": "62",
+          "travelled": "The cousins from Texas",
+          "x_type": "sporty"
+        },
+        "photos": {
+          "photo1": "/assets/samples/year-in-review-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{family}",
+      "issue": "The reunion issue",
+      "edition": "Reunited, {year}",
+      "lines": [
+        [
+          "Exclusive",
+          "The whole family, together again"
+        ],
+        [
+          "Where it happened",
+          "{where}"
+        ],
+        [
+          "Came the furthest",
+          "{travelled}"
+        ]
+      ],
+      "badge": [
+        "Together",
+        "{count}",
+        "of us"
+      ],
+      "quote": "Together again",
+      "credit": "The {year} reunion"
+    },
+    "letterTitle": "A letter to everyone who came",
+    "feature": [
+      "The best moment of the reunion",
+      "moment"
+    ]
+  },
+  {
+    "slug": "family-holiday-magazine",
+    "title": "The Family Vacation Edition",
+    "searchTitle": "Personalised Family Holiday Magazine",
+    "pinTitle": "Family Holiday Keepsake: The Family Vacation Edition Magazine",
+    "occasion": "Family holiday",
+    "short": "Your family holiday, from the packing chaos to the last sunset, in a glossy travel magazine.",
+    "description": "The packing chaos, the 'are we there yet', the best ice cream of the trip and the sunset everyone went quiet for. Tell us about your family holiday and we make a glossy travel magazine starring the whole family, with every child's highlight in their own words.",
+    "keywords": [
+      "family holiday keepsake",
+      "family vacation gift",
+      "family holiday memory book",
+      "kids holiday souvenir",
+      "travel gift for family",
+      "holiday photo magazine"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring your trip",
+      "A postcard letter",
+      "The trip by the numbers",
+      "A photo spread of the best views",
+      "The moment we will laugh about forever",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter about our holiday",
+    "feature": [
+      "The moment everyone went quiet",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "place",
+        "label": "Where you went",
+        "example": "Cornwall",
+        "max": 18
+      },
+      {
+        "id": "days",
+        "label": "How many days",
+        "example": "10",
+        "max": 3
+      },
+      {
+        "id": "who",
+        "label": "The family",
+        "example": "The Taylors, all five",
+        "max": 28
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mum and Dad",
+        "max": 30
+      },
+      {
+        "id": "meal",
+        "label": "The best thing anyone ate",
+        "example": "Ice cream, three times a day",
+        "max": 60
+      },
+      {
+        "id": "view",
+        "label": "The best view",
+        "example": "The cliffs at sunset",
+        "max": 60
+      },
+      {
+        "id": "lost",
+        "label": "The holiday disaster",
+        "example": "The tent that flooded on night one",
+        "max": 60
+      },
+      {
+        "id": "moment",
+        "label": "The moment everyone went quiet",
+        "example": "Sitting on the harbour wall eating chips as the sun went down, all five of us, nobody on a phone, nobody arguing, just watching the boats come in",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want the family to remember? (This becomes your letter)",
+        "example": "Years from now you will not remember the traffic or the rain. You will remember the rock pools, the ice cream and the five of us squashed on one bench. Best holiday ever.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the family on holiday",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "Your favourite place",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another holiday favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "taylors",
+        "palette": "sky",
+        "portrait": {
+          "skin": 1,
+          "hair": "curly",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "place": "Cornwall",
+          "days": "10",
+          "who": "The Taylors, all five",
+          "from": "Mum and Dad",
+          "meal": "Ice cream, three times a day",
+          "view": "The cliffs at sunset",
+          "lost": "The tent that flooded on night one"
+        },
+        "photos": {
+          "photo1": "/assets/samples/travel-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "clarkes",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "place": "Lanzarote",
+          "days": "7",
+          "who": "The Clarkes",
+          "from": "Grandma",
+          "meal": "Paella by the pool",
+          "view": "The volcano from the boat",
+          "lost": "Leo's one flip flop"
+        },
+        "photos": {
+          "photo1": "/assets/samples/travel-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "bennetts",
+        "palette": "mint",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#5a3a22"
+        },
+        "values": {
+          "place": "The Lake District",
+          "days": "5",
+          "who": "The Bennetts",
+          "from": "Emma",
+          "meal": "Hot chocolate after every walk",
+          "view": "Mist on the lake at dawn",
+          "lost": "The car keys, in the lake"
+        },
+        "photos": {
+          "photo1": "/assets/samples/travel-magazine-0.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{place}",
+      "issue": "The family holiday issue",
+      "edition": "{who}",
+      "lines": [
+        [
+          "Exclusive",
+          "{days} days in {place}"
+        ],
+        [
+          "Best thing we ate",
+          "{meal}"
+        ],
+        [
+          "Holiday disaster",
+          "{lost}"
+        ]
+      ],
+      "badge": [
+        "Days",
+        "{days}",
+        "of fun"
+      ],
+      "quote": "{view}",
+      "credit": "Best view"
+    }
+  },
+  {
+    "slug": "family-heritage-magazine",
+    "title": "Our Family Heritage",
+    "searchTitle": "Family Heritage and History Personalised Magazine",
+    "pinTitle": "Our Family Heritage: a Magazine About Where Your Family Comes From",
+    "occasion": "Family heritage",
+    "short": "Where your family comes from: the origins, the surname, the traditions, in print.",
+    "description": "Where your family began, what your surname means, the journey that brought you here and the traditions you have kept alive. We turn your family's heritage into a glossy keepsake magazine, with photos old and new, for every generation to treasure.",
+    "keywords": [
+      "family history gift",
+      "family heritage book",
+      "ancestry gift",
+      "surname history gift",
+      "family roots keepsake",
+      "gift for family historian"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A double issue cover with your year and your family",
+      "Editor's note: your message about the year",
+      "The year by numbers, in funny facts",
+      "The family awards ceremony",
+      "A photo spread of the best bits",
+      "The moment you will laugh about forever",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "family",
+        "label": "Your family name",
+        "example": "The Taylors",
+        "max": 22
+      },
+      {
+        "id": "year",
+        "label": "Earliest year you know of",
+        "example": "1846",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Sam",
+        "max": 30
+      },
+      {
+        "id": "origin",
+        "label": "Where the family comes from",
+        "example": "A fishing village in Cornwall",
+        "max": 60
+      },
+      {
+        "id": "meaning",
+        "label": "What the surname means",
+        "example": "Someone who made clothes",
+        "max": 60
+      },
+      {
+        "id": "tradition",
+        "label": "A tradition you keep alive",
+        "example": "Saffron buns every Easter",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "The story of how your family came to be here",
+        "example": "Great great grandad Leo left the fishing village with one suitcase and a fiddle, played his way across the country and met Emma at a dance in the city",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want the family to know about its roots? (This becomes your letter)",
+        "example": "We come from brave, stubborn, music loving people who crossed counties with one suitcase. Never forget where you come from. It is the best part of who you are.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the family",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "The oldest family photo you have",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Where the family comes from",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "taylors",
+        "palette": "paper",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "family": "The Taylors",
+          "year": "1846",
+          "from": "Sam",
+          "origin": "A fishing village in Cornwall",
+          "meaning": "Someone who made clothes",
+          "tradition": "Saffron buns every Easter",
+          "x_type": "cosy"
+        },
+        "photos": {
+          "photo1": "/assets/samples/grandparents-newspaper-3.jpg"
+        }
+      },
+      {
+        "id": "clarkes",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "family": "The Clarkes",
+          "year": "1901",
+          "from": "Ava",
+          "origin": "Kingston, Jamaica",
+          "meaning": "A clerk, someone who could read",
+          "tradition": "Sunday rice and peas",
+          "x_type": "lively"
+        },
+        "photos": {
+          "photo1": "/assets/samples/golden-anniversary-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "bennetts",
+        "palette": "butter",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#5a3a22"
+        },
+        "values": {
+          "family": "The Bennetts",
+          "year": "1880",
+          "from": "Emma",
+          "origin": "The hills of County Cork",
+          "meaning": "Blessed",
+          "tradition": "A song at every wedding",
+          "x_type": "cosy"
+        },
+        "photos": {
+          "photo1": "/assets/samples/memorial-magazine-0.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{family}",
+      "issue": "The heritage issue",
+      "edition": "Since {year}",
+      "lines": [
+        [
+          "Exclusive",
+          "Where we come from"
+        ],
+        [
+          "Our roots",
+          "{origin}"
+        ],
+        [
+          "Our name means",
+          "{meaning}"
+        ]
+      ],
+      "badge": [
+        "Since",
+        "{year}",
+        "and proud"
+      ],
+      "quote": "{tradition}",
+      "credit": "A tradition we keep"
+    },
+    "letterTitle": "A letter about where we come from",
+    "feature": [
+      "The story of how we came to be here",
+      "moment"
+    ]
+  },
+  {
+    "slug": "aunt-magazine",
+    "title": "The World's Best Aunt",
+    "searchTitle": "Personalised Magazine for Aunt",
+    "pinTitle": "Gift for Aunt: The World's Best Aunt Personalised Magazine",
+    "occasion": "For my aunt",
+    "short": "For the aunt who is part second mum, part best friend, part bad influence.",
+    "description": "The aunt who lets you stay up late, gives the best advice and is always on your side. Her nieces and nephews answer a few questions, add their notes and voice messages, and we make her a glossy magazine where she is the cover star. Perfect for her birthday, Christmas or just because.",
+    "keywords": [
+      "gift for aunt",
+      "auntie birthday gift",
+      "best aunt ever gift",
+      "gift from niece",
+      "gift from nephew",
+      "personalised aunt gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring Mum",
+      "A thank you letter",
+      "Mum by the numbers",
+      "A photo spread of favourite memories",
+      "The moment we will never forget",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter for my favourite aunt",
+    "feature": [
+      "The moment I knew she was the best aunt in the world",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "What you call her",
+        "example": "Auntie Mia",
+        "max": 14
+      },
+      {
+        "id": "kids",
+        "label": "Nieces and nephews",
+        "example": "6",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Leo and Ava",
+        "max": 34
+      },
+      {
+        "id": "rule",
+        "label": "Her house rule",
+        "example": "Dessert first, always",
+        "max": 40
+      },
+      {
+        "id": "treat",
+        "label": "Best day out with her",
+        "example": "The theme park, twice in one day",
+        "max": 40
+      },
+      {
+        "id": "secret",
+        "label": "The secret she kept for us",
+        "example": "Who really broke the vase",
+        "max": 40
+      },
+      {
+        "id": "words",
+        "label": "Her in three words",
+        "example": "Fun, fierce, fabulous",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment you knew she was the best aunt in the world",
+        "example": "She drove three hours to watch my school play, sat in the front row in a giant hat and cheered so loudly the teacher had to pause the show",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want her to know? (This becomes your letter)",
+        "example": "You are the best aunt in the whole world, and we have checked. Thank you for the sleepovers, the secrets and the advice that Mum and Dad would never give. We love you lots.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of her",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "With her nieces and nephews",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "mia",
+        "palette": "coral",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#b5552b"
+        },
+        "values": {
+          "name": "Auntie Mia",
+          "kids": "6",
+          "from": "Leo and Ava",
+          "rule": "Dessert first, always",
+          "treat": "The theme park, twice in one day",
+          "secret": "Who really broke the vase",
+          "words": "Fun, fierce, fabulous",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "emma",
+        "palette": "rose",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Aunty Emma",
+          "kids": "3",
+          "from": "Sam",
+          "rule": "Shoes off, music on",
+          "treat": "Shopping and pancakes",
+          "secret": "My first crush",
+          "words": "Glamorous, kind, hilarious",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/best-friend-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "mint",
+        "portrait": {
+          "skin": 1,
+          "hair": "bun",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Auntie Ava",
+          "kids": "9",
+          "from": "All nine of us",
+          "rule": "Bedtime is optional",
+          "treat": "Camping in her garden",
+          "secret": "The midnight feasts",
+          "words": "Wild, warm, wonderful",
+          "x_type": "adventurer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/eighteenth-birthday-magazine-0.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The best aunt issue",
+      "edition": "Aunt of the year",
+      "lines": [
+        [
+          "Exclusive",
+          "The world's best aunt"
+        ],
+        [
+          "Her house rule",
+          "{rule}"
+        ],
+        [
+          "She kept our secret",
+          "{secret}"
+        ]
+      ],
+      "badge": [
+        "Aunt to",
+        "{kids}",
+        "lucky ones"
+      ],
+      "quote": "{words}",
+      "credit": "Her nieces and nephews agree"
+    }
+  },
+  {
+    "slug": "uncle-magazine",
+    "title": "The Coolest Uncle",
+    "searchTitle": "Personalised Magazine for Uncle",
+    "pinTitle": "Gift for Uncle: The Coolest Uncle Personalised Magazine",
+    "occasion": "For my uncle",
+    "short": "For the uncle with the best jokes, the worst dance moves and the biggest heart.",
+    "description": "The uncle who taught you to ride a bike, slipped you money at Christmas and tells the worst jokes in the family. His nieces and nephews answer a few questions and add their notes and voice messages, and we make him a glossy magazine where he is the cover star. Funny, sentimental and nothing like socks.",
+    "keywords": [
+      "gift for uncle",
+      "uncle birthday gift",
+      "best uncle ever gift",
+      "gift from nephew",
+      "gift from niece",
+      "personalised uncle gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring Dad",
+      "A thank you letter",
+      "Dad by the numbers",
+      "A photo spread of the best days",
+      "His most legendary moment",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter for the coolest uncle",
+    "feature": [
+      "The moment I knew he was the coolest uncle",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "What you call him",
+        "example": "Uncle Sam",
+        "max": 14
+      },
+      {
+        "id": "kids",
+        "label": "Nieces and nephews",
+        "example": "5",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mia and Leo",
+        "max": 34
+      },
+      {
+        "id": "joke",
+        "label": "His worst joke",
+        "example": "Why did the cow cross the road?",
+        "max": 40
+      },
+      {
+        "id": "skill",
+        "label": "His legendary skill",
+        "example": "Juggling, badly",
+        "max": 40
+      },
+      {
+        "id": "taught",
+        "label": "He taught us",
+        "example": "How to skim stones",
+        "max": 40
+      },
+      {
+        "id": "words",
+        "label": "Him in three words",
+        "example": "Cool, kind, ridiculous",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "The moment you knew he was the coolest uncle",
+        "example": "He turned up to my birthday in a full dinosaur costume, stayed in it all afternoon and refused to admit it was him",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want him to know? (This becomes your letter)",
+        "example": "You are the coolest uncle in the world, even with those jokes. Thank you for the football, the fun and for always making us feel like the most important people at every party. We love you.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of him",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "With his nieces and nephews",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "sam",
+        "palette": "sky",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Uncle Sam",
+          "kids": "5",
+          "from": "Mia and Leo",
+          "joke": "Why did the cow cross the road?",
+          "skill": "Juggling, badly",
+          "taught": "How to skim stones",
+          "words": "Cool, kind, ridiculous",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-job-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "chris",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Uncle Chris",
+          "kids": "4",
+          "from": "Ava",
+          "joke": "Anything about cheese",
+          "skill": "Best barbecue in town",
+          "taught": "How to ride a bike",
+          "words": "Funny, loyal, legend",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/graduation-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "coral",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#5a4a3a"
+        },
+        "values": {
+          "name": "Uncle Leo",
+          "kids": "7",
+          "from": "All seven of us",
+          "joke": "The one about the penguin",
+          "skill": "Winning every water fight",
+          "taught": "How to fish",
+          "words": "Daft, generous, golden",
+          "x_type": "adventurer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/fathers-day-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The coolest uncle issue",
+      "edition": "Uncle of the year",
+      "lines": [
+        [
+          "Exclusive",
+          "The coolest uncle alive"
+        ],
+        [
+          "His worst joke",
+          "{joke}"
+        ],
+        [
+          "Legendary skill",
+          "{skill}"
+        ]
+      ],
+      "badge": [
+        "Uncle to",
+        "{kids}",
+        "lucky ones"
+      ],
+      "quote": "{words}",
+      "credit": "His nieces and nephews agree"
+    }
   }
 ]

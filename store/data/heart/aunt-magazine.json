@@ -1,0 +1,372 @@
+{
+  "theme": "candy",
+  "fields": [
+    {
+      "id": "s_taught",
+      "label": "A favourite memory of staying at hers",
+      "example": "Midnight pancakes and a film we were definitely too young for",
+      "max": 80,
+      "chapter": "The sleepover years"
+    },
+    {
+      "id": "s_sad",
+      "label": "The best advice she ever gave",
+      "example": "Never change yourself to make someone like you",
+      "max": 80,
+      "chapter": "The advice she gave"
+    },
+    {
+      "id": "s_home",
+      "label": "What makes her different from every other grown up",
+      "example": "She talks to us like we are her friends",
+      "max": 80,
+      "chapter": "Why she is different"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to her",
+      "example": "To always save her a seat at our table",
+      "max": 70
+    }
+  ],
+  "story": {
+    "title": "Everything We Love About {first}",
+    "hand": "Part second mum, part best friend, all {who}.",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "kicker": "Their story",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Things you love about her",
+    "kicker": "From {from}, with love",
+    "title": "Ten reasons she is the best aunt",
+    "items": [
+      "Her sleepovers",
+      "She never tells on us",
+      "Her amazing presents",
+      "Her laugh",
+      "She lets us stay up late",
+      "Her advice",
+      "She always plays the games",
+      "Her car singalongs",
+      "She remembers everything about us",
+      "Her cooking, or her takeaways",
+      "She is always on our side",
+      "She is just the best"
+    ]
+  },
+  "timeline": {
+    "kicker": "Mums through the ages",
+    "title": "A Short History of Celebrating Mum",
+    "items": [
+      [
+        "1600s",
+        "Mothering Sunday",
+        "In England, young people working away were given a day off to go home to their mothers, often with flowers picked on the way."
+      ],
+      [
+        "1870",
+        "A call for peace",
+        "Julia Ward Howe wrote a Mother's Day Proclamation, asking mothers everywhere to unite for peace."
+      ],
+      [
+        "1908",
+        "A daughter remembers",
+        "Anna Jarvis held a service for her own mother and handed out carnations, her mother's favourite flower."
+      ],
+      [
+        "1914",
+        "A day for every mum",
+        "Mother's Day became a national holiday in the United States, and the idea spread around the world."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who}",
+      "Not in the history books yet. But to us, the most important mum who ever lived."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Mums",
+    "items": [
+      [
+        "Mother is the name for God in the lips and hearts of little children.",
+        "William Makepeace Thackeray, Vanity Fair, 1848"
+      ],
+      [
+        "A mother is the truest friend we have.",
+        "Washington Irving, 1820"
+      ],
+      [
+        "All that I am, or hope to be, I owe to my angel mother.",
+        "Abraham Lincoln"
+      ],
+      [
+        "An ounce of mother is worth a pound of clergy.",
+        "An old Spanish saying"
+      ]
+    ],
+    "hand": "They all say it beautifully. We just say: thank you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of a Mother's Love",
+    "items": [
+      [
+        "heart",
+        "Before hello",
+        "Babies can recognise their mother's voice before they are even born."
+      ],
+      [
+        "eye",
+        "Her face first",
+        "Newborns can pick out their mother's face from others within days of birth."
+      ],
+      [
+        "pulse",
+        "The calming voice",
+        "Just hearing mum's voice can lower a child's stress and release oxytocin, the cuddle hormone."
+      ],
+      [
+        "spark",
+        "Part of her forever",
+        "A few of a child's cells can stay in their mother's body for decades. Scientists call it microchimerism."
+      ],
+      [
+        "smile",
+        "The first smile",
+        "Babies begin smiling back at the people who love them at around six weeks old."
+      ],
+      [
+        "moon",
+        "The night shift",
+        "In a baby's first year, mums give up hundreds of hours of sleep. Most would do it all again."
+      ]
+    ],
+    "hand": "Science can explain a lot. It still cannot explain how {who} always knows."
+  },
+  "world": {
+    "kicker": "A thank you from the universe",
+    "title": "Why the World Is Better With {who} In It",
+    "lead": "Because {who} is an aunt, the world got:",
+    "items": [
+      "Sleepovers worth remembering.",
+      "A grown up who always listens.",
+      "Secrets kept safe forever.",
+      "Presents chosen with real thought.",
+      "A second home, always open.",
+      "Children who know they are adored.",
+      "And the one and only {who}."
+    ],
+    "close": "Lucky us, {who}. The luckiest."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From all of us",
+    "title": "Our promises to you",
+    "items": [
+      "To always tell you our news first.",
+      "To visit, even when we are grown up.",
+      "To keep your secrets too.",
+      "To save you a seat at every big day.",
+      "To be as amazing to someone as you are to us."
+    ],
+    "hand": "With love from your nieces and nephews, {from}"
+  },
+  "awards": [
+    [
+      "Best hugs in the world",
+      "By a landslide"
+    ],
+    [
+      "Chief worry solver",
+      "Unanimous"
+    ],
+    [
+      "The kitchen legend",
+      "Ten years running"
+    ],
+    [
+      "Lifetime achievement",
+      "In being Mum"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Breakfast in bed",
+      "Served with a cup of tea"
+    ],
+    [
+      "A whole day off",
+      "We do everything"
+    ],
+    [
+      "A long phone call",
+      "No rushing, just talking"
+    ],
+    [
+      "One day out together",
+      "Your choice, our treat"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "The Best Mum in the World",
+  "perfume": "Top notes of warm hugs, fresh bread and kindness. A heart of pure gold.",
+  "news": {
+    "edition": "Mother's Day edition",
+    "headline": "{who} does it all again",
+    "lead": "Sources close to the family confirm that {who} has, once again, held everything together with love, patience and a cup of tea.",
+    "weather": "Weather: warm, with a 100% chance of hugs"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to everywhere, with love",
+    "nationality": "Loved, everywhere",
+    "job": "Chief hug officer",
+    "stamps": [
+      "Our kitchen",
+      "Every school play",
+      "Always home"
+    ]
+  },
+  "movie": {
+    "sub": "A family favourite",
+    "soon": "Showing at every sleepover",
+    "reviews": [
+      [
+        "Funny, generous and glamorous",
+        "The Daily Hug"
+      ],
+      [
+        "The best aunt in the universe",
+        "{from}"
+      ],
+      [
+        "Steals every scene",
+        "Everyone who knows her"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "In many countries, which day celebrates aunts and uncles in late July?",
+      [
+        "Aunt and Uncle Day",
+        "Cousins Day",
+        "Family Day"
+      ],
+      0
+    ],
+    [
+      "What do you call your aunt's husband?",
+      [
+        "Your uncle",
+        "Your cousin",
+        "Your godfather"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "MUM",
+    "LOVE",
+    "HUGS",
+    "HOME",
+    "KIND",
+    "HEART"
+  ],
+  "note": {
+    "title": "Why we made this for her",
+    "contents": "A note for you",
+    "paras": [
+      "Aunts are a special kind of person: part second mum, part best friend, part bad influence.",
+      "They take you places your parents would not, and tell you things your parents never would.",
+      "{who}, your nieces and nephews wanted to tell you exactly how much you mean to them.",
+      "From everything {from} told us, you are the best aunt in the world."
+    ],
+    "wish": "Love you lots, {who}."
+  },
+  "concepts": true,
+  "labels": {
+    "kids": "Nieces and nephews",
+    "rule": "Her house rule",
+    "treat": "Best day out with her",
+    "secret": "The secret she kept",
+    "words": "Her, in three words"
+  },
+  "conceptWho": "friend",
+  "own": {
+    "world": true,
+    "promises": true,
+    "picks": true,
+    "dayTitle": "A Sleepover at {first}'s",
+    "day": [
+      [
+        "16:00",
+        "Arrival",
+        "Bags dropped. Shoes off. Rules forgotten."
+      ],
+      [
+        "18:00",
+        "Tea",
+        "Pizza, then pudding, then another pudding."
+      ],
+      [
+        "20:00",
+        "The film",
+        "Definitely the one Mum said no to."
+      ],
+      [
+        "22:00",
+        "Midnight feast",
+        "Two hours early, so it counts."
+      ]
+    ],
+    "night": [
+      "00:30",
+      "Still awake",
+      "Whispering, giggling and absolutely not asleep."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "Her sofa, covered in blankets and nieces"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Pizza, pick and mix and dessert first"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Do not tell your mum.\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Keeping secrets and giving perfect advice"
+      ],
+      [
+        "clock",
+        "Most active",
+        "At sleepovers and on birthdays"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Visit often. Bring snacks. Tell her she is the favourite"
+      ]
+    ],
+    "little": [
+      "You always remember our best friends' names.",
+      "You keep our secrets, even the big ones.",
+      "You never forget a birthday, or a big exam.",
+      "You make us feel like the most important people in the room."
+    ],
+    "letters": "Little Things That Make Her the Best"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

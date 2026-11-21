@@ -1,0 +1,369 @@
+{
+  "theme": "paper",
+  "fields": [
+    {
+      "id": "s_ordinary",
+      "label": "The oldest family story you know",
+      "example": "A great grandmother who ran the village shop and the village gossip",
+      "max": 80,
+      "chapter": "The oldest story we know"
+    },
+    {
+      "id": "s_firsts",
+      "label": "A big journey or move in your family's history",
+      "example": "Three brothers who sailed to Liverpool in 1903",
+      "max": 80,
+      "chapter": "The journey"
+    },
+    {
+      "id": "s_learned",
+      "label": "What your heritage means to you",
+      "example": "That we come from people who never gave up",
+      "max": 80,
+      "chapter": "What our roots taught us"
+    },
+    {
+      "id": "s_wish",
+      "label": "A wish for future generations",
+      "example": "That they visit the village one day",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "year": "Earliest year we know",
+    "origin": "Where we come from",
+    "meaning": "Our name means",
+    "tradition": "A tradition we keep"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "story": {
+    "title": "Where {who} Come From",
+    "hand": "Roots run deep in {who}.",
+    "kicker": "Our heritage",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Heritage treasures",
+    "kicker": "From {from}, with love",
+    "title": "Ten family treasures",
+    "items": [
+      "Great grandad's fiddle",
+      "The family Bible",
+      "Grandma's recipe book",
+      "Old letters in a tin",
+      "A wedding ring, three generations old",
+      "The village photo",
+      "Our family song",
+      "A hand drawn family tree",
+      "Medals in a drawer",
+      "The old suitcase",
+      "Our surname",
+      "The stories"
+    ]
+  },
+  "timeline": {
+    "kicker": "New years through the ages",
+    "title": "A Short History of New Year",
+    "items": [
+      [
+        "c. 2000 BC",
+        "The first resolutions",
+        "In ancient Babylon, people welcomed the new year by promising the gods to pay debts and return what they borrowed."
+      ],
+      [
+        "45 BC",
+        "Hello, January",
+        "The Julian calendar began the year on 1 January, named after Janus, the god who looks back and forward."
+      ],
+      [
+        "1788",
+        "Auld Lang Syne",
+        "Robert Burns sent off the words of a song about old friends and days gone by. Now the world sings it at midnight."
+      ],
+      [
+        "1927",
+        "A year in one name",
+        "A magazine first chose one person to sum up a whole year. The tradition still runs today."
+      ]
+    ],
+    "today": [
+      "{year}",
+      "{who}",
+      "Not in the history books yet. But for us, the year that mattered most."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Time",
+    "items": [
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Write it on your heart that every day is the best day in the year.",
+        "Ralph Waldo Emerson"
+      ],
+      [
+        "Ring out the old, ring in the new, ring, happy bells, across the snow.",
+        "Alfred, Lord Tennyson, In Memoriam, 1850"
+      ],
+      [
+        "Life can only be understood backwards; but it must be lived forwards.",
+        "Søren Kierkegaard"
+      ]
+    ],
+    "hand": "They all say it beautifully. We just say: what a year."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of a Year",
+    "items": [
+      [
+        "globe",
+        "A long way round",
+        "In one year, the Earth carried you all about 940 million kilometres around the sun."
+      ],
+      [
+        "heart",
+        "Busy hearts",
+        "A heart beats roughly 35 million times a year. Plenty of those were for each other."
+      ],
+      [
+        "smile",
+        "Better together",
+        "People are far more likely to laugh with others than alone. Laughter is made for sharing."
+      ],
+      [
+        "clock",
+        "Why new things matter",
+        "Busy years full of new experiences feel longer when we look back. So every adventure counts."
+      ],
+      [
+        "leaf",
+        "A smell, a memory",
+        "Smell is closely tied to memory. One scent can bring back a moment from years ago."
+      ],
+      [
+        "sun",
+        "The extra quarter",
+        "A year is about 365 and a quarter days long. That is why we get a leap year every four years."
+      ]
+    ],
+    "hand": "Science can measure a year. It cannot measure how much happened in this one."
+  },
+  "world": {
+    "kicker": "A thank you to the ancestors",
+    "title": "Why the World Is Better Because {who} Kept Going",
+    "lead": "Because the first {who} were brave enough to start, the world got:",
+    "items": [
+      "A family that never gave up.",
+      "Traditions worth keeping.",
+      "Stories worth telling.",
+      "Recipes from another century.",
+      "A name to be proud of.",
+      "Every generation since.",
+      "And all of {who}."
+    ],
+    "close": "Thank you to everyone who came before."
+  },
+  "promises": {
+    "field": "s_wish",
+    "kicker": "To the ones who came before",
+    "title": "Our promises to our ancestors",
+    "items": [
+      "To remember your names.",
+      "To keep your traditions alive.",
+      "To tell your stories to our children.",
+      "To visit where it all began.",
+      "To make you proud."
+    ],
+    "hand": "With love and gratitude, {from}"
+  },
+  "awardsKicker": "Live from the {year} awards",
+  "awards": [
+    [
+      "Best laugh of the year",
+      "Heard from next door"
+    ],
+    [
+      "Most dramatic board game",
+      "Still not over it"
+    ],
+    [
+      "Team of the year",
+      "Unanimous"
+    ],
+    [
+      "Lifetime achievement",
+      "In being wonderful"
+    ]
+  ],
+  "vouchers": [
+    [
+      "A family film night",
+      "Snacks and blankets included"
+    ],
+    [
+      "One lazy Sunday",
+      "No plans, no alarms"
+    ],
+    [
+      "A day out together",
+      "Your choice, our treat"
+    ],
+    [
+      "Breakfast for everyone",
+      "Pancakes, obviously"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "certLine": "officially made {year}",
+  "cert": "The Best Year Yet",
+  "perfume": "Top notes of muddy walks, hot chocolate and laughter. A heart of pure togetherness.",
+  "news": {
+    "edition": "Year in review edition",
+    "headline": "{who} have a year to remember",
+    "lead": "Sources confirm that {year} was full of adventures, giggles and at least one disaster everyone now finds hilarious.",
+    "weather": "Weather: bright, with a 100% chance of another great year"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to the year ahead",
+    "nationality": "Loved, everywhere",
+    "job": "Making memories",
+    "stamps": [
+      "{year}",
+      "Home",
+      "Next adventure"
+    ]
+  },
+  "movie": {
+    "sub": "A family history epic",
+    "soon": "Two centuries in the making",
+    "reviews": [
+      [
+        "Sweeping and deeply moving",
+        "The Daily Hug"
+      ],
+      [
+        "I finally know where I come from",
+        "{from}"
+      ],
+      [
+        "A story of courage and love",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "In which year did the first full UK census that listed everyone by name take place?",
+      [
+        "1841",
+        "1741",
+        "1941"
+      ],
+      0
+    ],
+    [
+      "Surnames like Smith, Taylor and Baker usually came from what?",
+      [
+        "Jobs",
+        "Animals",
+        "Colours"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "YEAR",
+    "FAMILY",
+    "MEMORIES",
+    "CHEERS",
+    "LAUGH",
+    "TOGETHER"
+  ],
+  "note": {
+    "title": "Why heritage matters",
+    "contents": "A note for the family",
+    "paras": [
+      "Every family has a beginning. Usually it is hidden in old letters, half remembered stories and photos nobody can name.",
+      "We think those beginnings deserve a beautiful home, so the next generation knows exactly where they come from.",
+      "{who}, this is your heritage, written down and printed to last.",
+      "From everything {from} told us, it is a story of brave, loving people."
+    ],
+    "wish": "Roots and wings, {who}."
+  },
+  "concepts": "family",
+  "own": {
+    "dayTitle": "A Day in the Old Village",
+    "day": [
+      [
+        "6:00",
+        "Dawn",
+        "Boats going out, just as they did in 1846."
+      ],
+      [
+        "10:00",
+        "The market",
+        "Where great great grandma sold bread and swapped news."
+      ],
+      [
+        "14:00",
+        "The church",
+        "Our name, carved in the old stone, again and again."
+      ],
+      [
+        "18:00",
+        "The pub",
+        "Where the fiddle played every Friday, for a hundred years."
+      ]
+    ],
+    "night": [
+      "22:00",
+      "Home",
+      "Stories told by the fire, passed down to us."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The old village, and every home since"
+      ],
+      [
+        "apple",
+        "Diet",
+        "The family recipe, unchanged for a century"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Never forget where you come from.\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Surviving anything, together"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Whenever the old stories are told"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Keep the photos labelled. Ask the elders. Visit the village"
+      ]
+    ],
+    "little": [
+      "You still make the old recipe on the same day every year.",
+      "You keep great grandad's fiddle polished.",
+      "You say our surname with pride.",
+      "You tell the little ones the old stories."
+    ],
+    "letters": "Little Things Our Ancestors Left Us"
+  }
+}

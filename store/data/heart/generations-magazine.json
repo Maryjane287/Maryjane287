@@ -1,0 +1,369 @@
+{
+  "theme": "garden",
+  "fields": [
+    {
+      "id": "s_ordinary",
+      "label": "A story about the oldest generation",
+      "example": "Grandad cycled ten miles every Sunday to court Grandma",
+      "max": 80,
+      "chapter": "The first generation"
+    },
+    {
+      "id": "s_firsts",
+      "label": "Something that changed, and something that never did",
+      "example": "Phones changed. Sunday lunch at two never did",
+      "max": 80,
+      "chapter": "What changed, and what never did"
+    },
+    {
+      "id": "s_learned",
+      "label": "The best advice passed down",
+      "example": "Never let the sun set on an argument",
+      "max": 80,
+      "chapter": "Wisdom passed down"
+    },
+    {
+      "id": "s_wish",
+      "label": "A wish for the next generation",
+      "example": "That they always know where they come from",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "year": "Where it began",
+    "first": "Who started it all",
+    "passed": "Passed down",
+    "count": "Generations"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "story": {
+    "title": "Every Generation of {who}",
+    "hand": "From the first generation to the newest, this is {who}.",
+    "kicker": "Our story",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Things passed down",
+    "kicker": "From {from}, with love",
+    "title": "Ten things passed down in our family",
+    "items": [
+      "Grandma's recipes",
+      "The family laugh",
+      "Stubbornness, mostly",
+      "Our love of music",
+      "The Sunday lunch",
+      "Old photo albums",
+      "Family sayings",
+      "Kindness to strangers",
+      "A love of the sea",
+      "The big family hug",
+      "Our nose",
+      "Always making room for one more"
+    ]
+  },
+  "timeline": {
+    "kicker": "New years through the ages",
+    "title": "A Short History of New Year",
+    "items": [
+      [
+        "c. 2000 BC",
+        "The first resolutions",
+        "In ancient Babylon, people welcomed the new year by promising the gods to pay debts and return what they borrowed."
+      ],
+      [
+        "45 BC",
+        "Hello, January",
+        "The Julian calendar began the year on 1 January, named after Janus, the god who looks back and forward."
+      ],
+      [
+        "1788",
+        "Auld Lang Syne",
+        "Robert Burns sent off the words of a song about old friends and days gone by. Now the world sings it at midnight."
+      ],
+      [
+        "1927",
+        "A year in one name",
+        "A magazine first chose one person to sum up a whole year. The tradition still runs today."
+      ]
+    ],
+    "today": [
+      "{year}",
+      "{who}",
+      "Not in the history books yet. But for us, the year that mattered most."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Time",
+    "items": [
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Write it on your heart that every day is the best day in the year.",
+        "Ralph Waldo Emerson"
+      ],
+      [
+        "Ring out the old, ring in the new, ring, happy bells, across the snow.",
+        "Alfred, Lord Tennyson, In Memoriam, 1850"
+      ],
+      [
+        "Life can only be understood backwards; but it must be lived forwards.",
+        "Søren Kierkegaard"
+      ]
+    ],
+    "hand": "They all say it beautifully. We just say: what a year."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of a Year",
+    "items": [
+      [
+        "globe",
+        "A long way round",
+        "In one year, the Earth carried you all about 940 million kilometres around the sun."
+      ],
+      [
+        "heart",
+        "Busy hearts",
+        "A heart beats roughly 35 million times a year. Plenty of those were for each other."
+      ],
+      [
+        "smile",
+        "Better together",
+        "People are far more likely to laugh with others than alone. Laughter is made for sharing."
+      ],
+      [
+        "clock",
+        "Why new things matter",
+        "Busy years full of new experiences feel longer when we look back. So every adventure counts."
+      ],
+      [
+        "leaf",
+        "A smell, a memory",
+        "Smell is closely tied to memory. One scent can bring back a moment from years ago."
+      ],
+      [
+        "sun",
+        "The extra quarter",
+        "A year is about 365 and a quarter days long. That is why we get a leap year every four years."
+      ]
+    ],
+    "hand": "Science can measure a year. It cannot measure how much happened in this one."
+  },
+  "world": {
+    "kicker": "A toast across the generations",
+    "title": "Why the World Is Better Because This Family Grew",
+    "lead": "Because {who} kept growing, the world got:",
+    "items": [
+      "Stories that span a century.",
+      "Recipes worth protecting.",
+      "Children who know where they come from.",
+      "Grandparents with a full table.",
+      "Wisdom that keeps being passed on.",
+      "Love that multiplies.",
+      "And every generation of {who}."
+    ],
+    "close": "Here is to every generation still to come."
+  },
+  "promises": {
+    "field": "s_wish",
+    "kicker": "To the next generation",
+    "title": "Our promises to those who come next",
+    "items": [
+      "To tell you the old stories.",
+      "To teach you the family recipes.",
+      "To keep the old photos safe.",
+      "To show you where we come from.",
+      "To love you the way we were loved."
+    ],
+    "hand": "With love from every generation, {from}"
+  },
+  "awardsKicker": "Live from the {year} awards",
+  "awards": [
+    [
+      "Best laugh of the year",
+      "Heard from next door"
+    ],
+    [
+      "Most dramatic board game",
+      "Still not over it"
+    ],
+    [
+      "Team of the year",
+      "Unanimous"
+    ],
+    [
+      "Lifetime achievement",
+      "In being wonderful"
+    ]
+  ],
+  "vouchers": [
+    [
+      "A family film night",
+      "Snacks and blankets included"
+    ],
+    [
+      "One lazy Sunday",
+      "No plans, no alarms"
+    ],
+    [
+      "A day out together",
+      "Your choice, our treat"
+    ],
+    [
+      "Breakfast for everyone",
+      "Pancakes, obviously"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "certLine": "officially made {year}",
+  "cert": "The Best Year Yet",
+  "perfume": "Top notes of muddy walks, hot chocolate and laughter. A heart of pure togetherness.",
+  "news": {
+    "edition": "Year in review edition",
+    "headline": "{who} have a year to remember",
+    "lead": "Sources confirm that {year} was full of adventures, giggles and at least one disaster everyone now finds hilarious.",
+    "weather": "Weather: bright, with a 100% chance of another great year"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to the year ahead",
+    "nationality": "Loved, everywhere",
+    "job": "Making memories",
+    "stamps": [
+      "{year}",
+      "Home",
+      "Next adventure"
+    ]
+  },
+  "movie": {
+    "sub": "A family saga across generations",
+    "soon": "Showing for generations to come",
+    "reviews": [
+      [
+        "Sweeping, warm and full of love",
+        "The Daily Hug"
+      ],
+      [
+        "The greatest family epic",
+        "{from}"
+      ],
+      [
+        "Every generation steals the show",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "What is the word for a family tree diagram's study of ancestors?",
+      [
+        "Genealogy",
+        "Geology",
+        "Geography"
+      ],
+      0
+    ],
+    [
+      "How many great great grandparents does each person have?",
+      [
+        "Sixteen",
+        "Eight",
+        "Thirty two"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "YEAR",
+    "FAMILY",
+    "MEMORIES",
+    "CHEERS",
+    "LAUGH",
+    "TOGETHER"
+  ],
+  "note": {
+    "title": "Why every generation matters",
+    "contents": "A note for the family",
+    "paras": [
+      "Families are like rivers. Every generation adds something new, and carries something old.",
+      "This magazine catches the whole river: the ones who started it, the ones in the middle and the newest arrivals.",
+      "{who}, this is every generation of you, together on the same pages.",
+      "From everything {from} told us, it is a family to be very proud of."
+    ],
+    "wish": "To every generation of {who}."
+  },
+  "concepts": "family",
+  "own": {
+    "dayTitle": "When the Generations Get Together",
+    "day": [
+      [
+        "11:00",
+        "Arrivals",
+        "Grandad at the door, counting heads as everyone comes in."
+      ],
+      [
+        "13:00",
+        "Lunch",
+        "Three generations, one recipe, endless debate about how it should be made."
+      ],
+      [
+        "15:00",
+        "The old albums",
+        "Little ones learning whose curly hair they inherited."
+      ],
+      [
+        "17:00",
+        "The photo",
+        "Everyone squeezed in, oldest in the middle, youngest on a lap."
+      ]
+    ],
+    "night": [
+      "20:00",
+      "Goodbyes",
+      "A hug for every generation, and a promise to do it again soon."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The big table at the oldest's house"
+      ],
+      [
+        "apple",
+        "Diet",
+        "The family recipe, unchanged since 1962"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Do you remember when?\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Making a toddler and a ninety year old laugh at the same joke"
+      ],
+      [
+        "clock",
+        "Most active",
+        "At birthdays, christenings and every Christmas"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Keep the albums safe. Keep the recipes going"
+      ]
+    ],
+    "little": [
+      "You always ask the oldest to tell the story again.",
+      "You let the little ones sit on the oldest laps.",
+      "You keep every family photo, labelled.",
+      "You set a place for those who are no longer here."
+    ],
+    "letters": "The Little Things Each Generation Passes On"
+  }
+}

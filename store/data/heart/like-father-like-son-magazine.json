@@ -1,0 +1,369 @@
+{
+  "theme": "ocean",
+  "fields": [
+    {
+      "id": "s_taught",
+      "label": "Something he taught you that you still use",
+      "example": "How to change a tyre, and how to apologise properly",
+      "max": 80,
+      "chapter": "The things he taught me"
+    },
+    {
+      "id": "s_fix",
+      "label": "Your best day together",
+      "example": "The cup final, soaked to the skin, hugging strangers",
+      "max": 80,
+      "chapter": "Our best day together"
+    },
+    {
+      "id": "s_sound",
+      "label": "Something of his you want to pass on",
+      "example": "His patience, and his barbecue sauce recipe",
+      "max": 80,
+      "chapter": "What I will pass on"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to him",
+      "example": "To keep our Sunday tradition going, forever",
+      "max": 70
+    }
+  ],
+  "story": {
+    "title": "Two of a Kind",
+    "hand": "Like father, like son. {son} would not have it any other way.",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "kicker": "Their story",
+    "legend": "A few more things about them"
+  },
+  "labels": {
+    "son": "His son",
+    "same": "We both",
+    "taught": "He taught me",
+    "team": "Our shared obsession",
+    "words": "Him, in three words"
+  },
+  "picks": {
+    "legend": "Things you share",
+    "kicker": "From {from}, with love",
+    "title": "Ten things we have in common",
+    "items": [
+      "Our laugh",
+      "Our terrible jokes",
+      "Falling asleep in films",
+      "Shouting at the telly",
+      "Our big hands",
+      "Being stubborn",
+      "Loving a fry up",
+      "Never asking for directions",
+      "Our walk",
+      "Being soft underneath",
+      "Our love for Mum",
+      "Being proud of each other"
+    ]
+  },
+  "timeline": {
+    "kicker": "Dads through the ages",
+    "title": "A Short History of Celebrating Dad",
+    "items": [
+      [
+        "1908",
+        "A town remembers",
+        "Fairmont, West Virginia, held a church service for the fathers lost in a mining disaster the year before."
+      ],
+      [
+        "1910",
+        "A daughter's idea",
+        "Sonora Smart Dodd, raised by her widowed father, organised a Father's Day in Spokane in his honour."
+      ],
+      [
+        "1966",
+        "The third Sunday",
+        "President Lyndon Johnson declared the third Sunday of June a day to honour fathers."
+      ],
+      [
+        "1972",
+        "Here to stay",
+        "Father's Day became a permanent national holiday in the United States, and the idea kept spreading."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who}",
+      "Not in the history books yet. But to us, the greatest dad there ever was."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "What the World Has Said About Dads",
+    "items": [
+      [
+        "One father is more than a hundred schoolmasters.",
+        "George Herbert, 1640"
+      ],
+      [
+        "It is a wise father that knows his own child.",
+        "William Shakespeare, The Merchant of Venice"
+      ],
+      [
+        "Any man can be a father, but it takes someone special to be a dad.",
+        "An old saying"
+      ],
+      [
+        "A father is a banker provided by nature.",
+        "An old French saying"
+      ]
+    ],
+    "hand": "Wise words, all of them. Ours are simpler: thank you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Being a Dad",
+    "items": [
+      [
+        "music",
+        "A familiar voice",
+        "Late in pregnancy, babies can hear voices outside the womb, so Dad sounds familiar early."
+      ],
+      [
+        "pulse",
+        "Built to care",
+        "Many new dads see their testosterone dip, which scientists link to being more caring and hands on."
+      ],
+      [
+        "hands",
+        "The cuddle hormone",
+        "Dads release oxytocin too, the bonding hormone, especially during play and cuddles."
+      ],
+      [
+        "smile",
+        "Rough and tumble",
+        "Researchers think playful wrestling with dads helps children learn confidence and when to stop."
+      ],
+      [
+        "heart",
+        "Seahorse dads",
+        "In seahorses it is the father who carries the eggs in a pouch and gives birth to the babies."
+      ],
+      [
+        "moon",
+        "Penguin night shift",
+        "Emperor penguin dads keep their egg warm on their feet for about two months of Antarctic winter."
+      ]
+    ],
+    "hand": "Science can explain a lot. It still cannot explain how {who} finds the funny side of everything."
+  },
+  "world": {
+    "kicker": "A thank you from the universe",
+    "title": "Why the World Is Better With Two of You",
+    "lead": "Because {who} raised a son just like him, the world got:",
+    "items": [
+      "Twice the terrible jokes.",
+      "Two people who always help.",
+      "A tradition that will carry on.",
+      "A lesson in being a good man.",
+      "Twice the fixing skills.",
+      "A bond worth celebrating.",
+      "And the one and only {who}."
+    ],
+    "close": "Like father, like son. Lucky world."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From me to you",
+    "title": "My promises to you, Dad",
+    "items": [
+      "To keep our Sunday tradition going.",
+      "To pass on everything you taught me.",
+      "To laugh at your jokes, even the old ones.",
+      "To call more, and visit more.",
+      "To make you as proud as you make me."
+    ],
+    "hand": "Your son, always, {from}"
+  },
+  "awards": [
+    [
+      "Worst joke, best delivery",
+      "Unanimous groans"
+    ],
+    [
+      "Chief fixer of things",
+      "Tape not included"
+    ],
+    [
+      "Best hugs in the house",
+      "By a landslide"
+    ],
+    [
+      "Lifetime achievement",
+      "In being Dad"
+    ]
+  ],
+  "vouchers": [
+    [
+      "A lie in, no questions",
+      "We will keep it quiet"
+    ],
+    [
+      "Full control of the remote",
+      "For one whole evening"
+    ],
+    [
+      "Breakfast made for you",
+      "Served with a cup of tea"
+    ],
+    [
+      "A day out together",
+      "Your choice, our treat"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "The Best Dad in the World",
+  "perfume": "Top notes of fresh coffee, cut grass and bad jokes. A heart of pure gold.",
+  "news": {
+    "edition": "Father's Day edition",
+    "headline": "{who} saves the day again",
+    "lead": "Sources close to the family confirm that {who} has, once again, fixed the unfixable, told the same joke twice and made everyone feel safe.",
+    "weather": "Weather: sunny spells, with a high chance of dad jokes"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to everywhere, with love",
+    "nationality": "Loved, everywhere",
+    "job": "Chief fixer of things",
+    "stamps": [
+      "The school gate",
+      "Every match day",
+      "Always home"
+    ]
+  },
+  "movie": {
+    "sub": "A father and son story",
+    "soon": "The sequel is already in production",
+    "reviews": [
+      [
+        "Two of a kind, and both hilarious",
+        "The Daily Hug"
+      ],
+      [
+        "My hero in every scene",
+        "{from}"
+      ],
+      [
+        "The best double act there is",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Which country gave the world Father's Day, first celebrated in 1910?",
+      [
+        "The United States",
+        "France",
+        "Australia"
+      ],
+      0
+    ],
+    [
+      "What percentage of their DNA does a son share with his father?",
+      [
+        "About 50 percent",
+        "About 10 percent",
+        "About 90 percent"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "DAD",
+    "HERO",
+    "JOKES",
+    "HUGS",
+    "PROUD",
+    "LEGEND"
+  ],
+  "note": {
+    "title": "Why we made this for him",
+    "contents": "A note for you",
+    "paras": [
+      "Sons and dads are not always great at saying the big things. There is usually football to watch instead.",
+      "So this magazine says it: what he taught you, what you share and how proud you are to be like him.",
+      "{who}, every page of this comes from your son.",
+      "From everything {from} told us, you are the man he wants to be."
+    ],
+    "wish": "Like father, like son, {who}."
+  },
+  "concepts": true,
+  "conceptWho": "dad",
+  "own": {
+    "dayTitle": "A Saturday With {first}",
+    "day": [
+      [
+        "7:00",
+        "Early start",
+        "Up first, kettle on, already planning the day."
+      ],
+      [
+        "10:00",
+        "The car wash",
+        "Somehow a twenty minute job becomes three hours together."
+      ],
+      [
+        "15:00",
+        "Kick off",
+        "Two armchairs, same team, same shouting."
+      ],
+      [
+        "18:00",
+        "The barbecue",
+        "Two men, one grill, many opinions."
+      ]
+    ],
+    "night": [
+      "22:00",
+      "Last word",
+      "A handshake that turns into a hug."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The garage, or the shed, or the touchline"
+      ],
+      [
+        "apple",
+        "Diet",
+        "A fry up, then a second one"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Right then.\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Teaching without ever seeming to teach"
+      ],
+      [
+        "clock",
+        "Most active",
+        "On Saturdays, near a football"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Give him the remote and a cup of tea. Tell him he was right"
+      ]
+    ],
+    "little": [
+      "You still hold the door for everyone.",
+      "You still say \"right then\" before every big decision.",
+      "You still check my tyres when I visit.",
+      "You still pretend you are not proud, then tell everyone."
+    ],
+    "letters": "Little Things I Got From You"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}
