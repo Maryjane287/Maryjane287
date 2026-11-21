@@ -1,0 +1,371 @@
+{
+  "theme": "dawn",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "Something hard they got through",
+      "example": "A year of starting over, and they did it with grace",
+      "max": 80,
+      "chapter": "How far you have come"
+    },
+    {
+      "id": "s_two",
+      "label": "Something wonderful about them they forget",
+      "example": "How gently they listen",
+      "max": 80,
+      "chapter": "What makes them shine"
+    },
+    {
+      "id": "s_three",
+      "label": "What you wish they would say to themselves",
+      "example": "You are doing better than you think",
+      "max": 80,
+      "chapter": "Kind words"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To remind you how loved you are, often",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "strength": "Greatest strength",
+    "ritual": "Self care ritual",
+    "mantra": "Mantra",
+    "proud": "Proud of"
+  },
+  "story": {
+    "title": "All the Reasons to Love {first}",
+    "hand": "You are enough, {who}. You always were.",
+    "kicker": "A love letter",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Self care",
+    "kicker": "From {from}, with love",
+    "title": "Ten ways to be kind to yourself",
+    "items": [
+      "Rest without guilt",
+      "Say no kindly",
+      "A long walk",
+      "Your favourite song, loud",
+      "Fresh sheets",
+      "A good cry",
+      "Water and sunshine",
+      "A phone free hour",
+      "Celebrate small wins",
+      "Call someone who loves you",
+      "Wear the nice thing",
+      "Speak to yourself like a friend"
+    ]
+  },
+  "timeline": {
+    "kicker": "Birthdays through the ages",
+    "title": "A Short History of Birthdays",
+    "items": [
+      [
+        "Ancient Rome",
+        "A day worth a feast",
+        "Romans marked the birthdays of friends and family with feasts, gifts and wishes for good luck."
+      ],
+      [
+        "1700s",
+        "Cake and candles",
+        "In Germany, children's birthday parties called Kinderfeste had a cake with a candle for every year."
+      ],
+      [
+        "1893",
+        "The tune we all know",
+        "Sisters Mildred and Patty Hill published Good Morning to All. Its melody became Happy Birthday to You."
+      ],
+      [
+        "2015",
+        "A song for everyone",
+        "A judge ruled the old copyright claim on Happy Birthday invalid. Now it belongs to all of us."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who} turns {age}",
+      "The most important birthday in the history books. Well, in ours."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words for Your Birthday",
+    "items": [
+      [
+        "Let us celebrate the occasion with wine and sweet words.",
+        "Plautus"
+      ],
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Wrinkles should merely indicate where the smiles have been.",
+        "Mark Twain, Following the Equator, 1897"
+      ],
+      [
+        "A joy that is shared is a joy made double.",
+        "An old English proverb"
+      ]
+    ],
+    "hand": "Every one of them is true. Especially the bit about smiles, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Birthdays",
+    "items": [
+      [
+        "sun",
+        "A lap of the Sun",
+        "Every birthday marks one more trip around the Sun, about 940 million kilometres. Well travelled."
+      ],
+      [
+        "globe",
+        "Birthday twins",
+        "Around twenty million people share your birthday. None of them are quite as good at it as you."
+      ],
+      [
+        "smile",
+        "The party trick",
+        "In a room of just 23 people, there is a better than even chance two of them share a birthday."
+      ],
+      [
+        "music",
+        "The famous song",
+        "Happy Birthday to You is often called the most recognised song in the English language."
+      ],
+      [
+        "clock",
+        "Leap day babies",
+        "People born on 29 February only get a true birthday once every four years."
+      ],
+      [
+        "spark",
+        "Brand new you",
+        "Your skin renews its outer layer every few weeks, so you are always a slightly fresher edition."
+      ]
+    ],
+    "hand": "Science says you are {age}. We say you are timeless, {who}."
+  },
+  "world": {
+    "kicker": "A note from the universe",
+    "title": "Why the World Needs {who}",
+    "lead": "Because {who} is here, the world got:",
+    "items": [
+      "A kindness that ripples outwards.",
+      "Someone who never gives up.",
+      "A heart that heals other hearts.",
+      "Strength that does not need to shout.",
+      "Laughter that came back stronger.",
+      "Proof that starting again is brave.",
+      "And the one and only {who}."
+    ],
+    "close": "Love yourself loudly, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "Promises",
+    "title": "Promises to yourself",
+    "items": [
+      "To rest when you are tired.",
+      "To be as kind to yourself as you are to others.",
+      "To celebrate every small win.",
+      "To ask for help when you need it.",
+      "To love yourself, a little more every day."
+    ],
+    "hand": "With love, {from}"
+  },
+  "awards": [
+    [
+      "Best laugh in the business",
+      "By a landslide"
+    ],
+    [
+      "Most likely to start the dancing",
+      "Every single time"
+    ],
+    [
+      "Outstanding friendship",
+      "A lifetime achievement"
+    ],
+    [
+      "Star of the year",
+      "Voted {age} years running"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Breakfast in bed",
+      "Coffee included, obviously"
+    ],
+    [
+      "A day of your choosing",
+      "Anywhere, anything"
+    ],
+    [
+      "One night out",
+      "Our treat, your playlist"
+    ],
+    [
+      "A lie in",
+      "Nobody says a word"
+    ]
+  ],
+  "vouchersTitle": "Birthday vouchers for {who}",
+  "cert": "Iconic",
+  "perfume": "Top notes of birthday candles, fizz and laughter. A heart of pure sunshine.",
+  "news": {
+    "edition": "Birthday edition",
+    "headline": "{who} turns {age} and the world celebrates",
+    "lead": "Reports are coming in from everywhere: {who} is {age} today and looking better than ever. Cake has been confirmed.",
+    "weather": "Weather: sunny, with scattered confetti"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every party",
+    "nationality": "Celebrated, everywhere",
+    "job": "Professional legend",
+    "stamps": [
+      "Birthday city",
+      "Party central",
+      "Adored"
+    ]
+  },
+  "movie": {
+    "sub": "A story of strength and softness",
+    "soon": "The sequel: the glow up continues",
+    "reviews": [
+      [
+        "Brave, gentle and glowing",
+        "The Daily Hug"
+      ],
+      [
+        "The strongest person I know",
+        "{from}"
+      ],
+      [
+        "A love story, with yourself",
+        "Everyone who loves them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "What is it called when you treat yourself with the same kindness as a friend?",
+      [
+        "Self compassion",
+        "Self promotion",
+        "Self service"
+      ],
+      0
+    ],
+    [
+      "Which simple habit is linked to better mood in many studies?",
+      [
+        "A daily walk outside",
+        "Skipping breakfast",
+        "Less sleep"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CAKE",
+    "PARTY",
+    "CANDLES",
+    "WISH",
+    "LEGEND",
+    "CHEERS"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "We spend so much time loving other people. Sometimes we forget to turn that love around.",
+      "This magazine is a reminder, printed and glossy, of how wonderful you are.",
+      "{who}, this one is all about you.",
+      "From everything {from} told us, you are so very loved."
+    ],
+    "wish": "Love yourself loudly, {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "A Perfect Day of Looking After {first}",
+    "day": [
+      [
+        "8:00",
+        "Slow morning",
+        "No alarm. Tea in bed. Phone stays off."
+      ],
+      [
+        "11:00",
+        "A walk",
+        "Fresh air, a favourite route, no rush."
+      ],
+      [
+        "15:00",
+        "Something lovely",
+        "A book, a bath or a nap. All three is fine."
+      ],
+      [
+        "19:00",
+        "Comfort food",
+        "Their favourite meal, made with love."
+      ]
+    ],
+    "night": [
+      "21:30",
+      "Early night",
+      "Fresh sheets. A gentle \"well done, you\"."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "A cosy corner with a candle"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Good food, water and the occasional chocolate"
+      ],
+      [
+        "music",
+        "Call",
+        "\"I am OK, honestly\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Being stronger than anyone realises"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Quiet mornings and golden hour"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Remind them they are loved. Often"
+      ]
+    ],
+    "little": [
+      "You check on everyone else first.",
+      "You keep going when it is hard.",
+      "You light up when you talk about the things you love.",
+      "You are softer and stronger than you know."
+    ],
+    "letters": "Little Things That Make You Wonderful",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "conceptWho": "friend",
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

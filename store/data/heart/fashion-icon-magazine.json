@@ -1,0 +1,371 @@
+{
+  "theme": "candy",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "Their earliest fashion moment",
+      "example": "Wore wellies and a tutu to every party, age four",
+      "max": 80,
+      "chapter": "Born stylish"
+    },
+    {
+      "id": "s_two",
+      "label": "What their wardrobe says about them",
+      "example": "Bold, a little bit vintage and absolutely sure of itself",
+      "max": 80,
+      "chapter": "The wardrobe"
+    },
+    {
+      "id": "s_three",
+      "label": "The outfit you want to see them in next",
+      "example": "Head to toe white linen on a yacht",
+      "max": 80,
+      "chapter": "Style forever"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To always ask your opinion before buying anything",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "look": "Signature look",
+    "rule": "Style rule",
+    "piece": "Cannot live without",
+    "icon": "Style icon"
+  },
+  "story": {
+    "title": "Inside the Wardrobe of {first}",
+    "hand": "Effortless, iconic, unforgettable, {who}.",
+    "kicker": "The style story",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Wardrobe essentials",
+    "kicker": "From {from}, with love",
+    "title": "Ten pieces every style icon owns",
+    "items": [
+      "A perfect trench",
+      "The little black dress",
+      "Statement earrings",
+      "White trainers, spotless",
+      "A vintage find",
+      "One great handbag",
+      "Red lipstick",
+      "A tailored blazer",
+      "Sunglasses for every mood",
+      "A silk scarf",
+      "Shoes that hurt but are worth it",
+      "Confidence, always"
+    ]
+  },
+  "timeline": {
+    "kicker": "Birthdays through the ages",
+    "title": "A Short History of Birthdays",
+    "items": [
+      [
+        "Ancient Rome",
+        "A day worth a feast",
+        "Romans marked the birthdays of friends and family with feasts, gifts and wishes for good luck."
+      ],
+      [
+        "1700s",
+        "Cake and candles",
+        "In Germany, children's birthday parties called Kinderfeste had a cake with a candle for every year."
+      ],
+      [
+        "1893",
+        "The tune we all know",
+        "Sisters Mildred and Patty Hill published Good Morning to All. Its melody became Happy Birthday to You."
+      ],
+      [
+        "2015",
+        "A song for everyone",
+        "A judge ruled the old copyright claim on Happy Birthday invalid. Now it belongs to all of us."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who} turns {age}",
+      "The most important birthday in the history books. Well, in ours."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words for Your Birthday",
+    "items": [
+      [
+        "Let us celebrate the occasion with wine and sweet words.",
+        "Plautus"
+      ],
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Wrinkles should merely indicate where the smiles have been.",
+        "Mark Twain, Following the Equator, 1897"
+      ],
+      [
+        "A joy that is shared is a joy made double.",
+        "An old English proverb"
+      ]
+    ],
+    "hand": "Every one of them is true. Especially the bit about smiles, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Birthdays",
+    "items": [
+      [
+        "sun",
+        "A lap of the Sun",
+        "Every birthday marks one more trip around the Sun, about 940 million kilometres. Well travelled."
+      ],
+      [
+        "globe",
+        "Birthday twins",
+        "Around twenty million people share your birthday. None of them are quite as good at it as you."
+      ],
+      [
+        "smile",
+        "The party trick",
+        "In a room of just 23 people, there is a better than even chance two of them share a birthday."
+      ],
+      [
+        "music",
+        "The famous song",
+        "Happy Birthday to You is often called the most recognised song in the English language."
+      ],
+      [
+        "clock",
+        "Leap day babies",
+        "People born on 29 February only get a true birthday once every four years."
+      ],
+      [
+        "spark",
+        "Brand new you",
+        "Your skin renews its outer layer every few weeks, so you are always a slightly fresher edition."
+      ]
+    ],
+    "hand": "Science says you are {age}. We say you are timeless, {who}."
+  },
+  "world": {
+    "kicker": "A note from the universe",
+    "title": "Why the World Is More Stylish With {who}",
+    "lead": "Because {who} gets dressed every day, the world got:",
+    "items": [
+      "Outfits worth photographing.",
+      "The best second opinion going.",
+      "Charity shop finds turned couture.",
+      "Proof that confidence is the best accessory.",
+      "A friend who always lends the good jacket.",
+      "Style that never follows the rules.",
+      "And the one and only {who}."
+    ],
+    "close": "Stay iconic, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From me to you",
+    "title": "My promises to the style icon",
+    "items": [
+      "To never wear the same outfit to your party.",
+      "To return everything I borrow. Eventually.",
+      "To be your honest changing room friend.",
+      "To shop with you, and carry the bags.",
+      "To love you in every outfit."
+    ],
+    "hand": "Love, {from}"
+  },
+  "awards": [
+    [
+      "Best laugh in the business",
+      "By a landslide"
+    ],
+    [
+      "Most likely to start the dancing",
+      "Every single time"
+    ],
+    [
+      "Outstanding friendship",
+      "A lifetime achievement"
+    ],
+    [
+      "Star of the year",
+      "Voted {age} years running"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Breakfast in bed",
+      "Coffee included, obviously"
+    ],
+    [
+      "A day of your choosing",
+      "Anywhere, anything"
+    ],
+    [
+      "One night out",
+      "Our treat, your playlist"
+    ],
+    [
+      "A lie in",
+      "Nobody says a word"
+    ]
+  ],
+  "vouchersTitle": "Birthday vouchers for {who}",
+  "cert": "Iconic",
+  "perfume": "Top notes of birthday candles, fizz and laughter. A heart of pure sunshine.",
+  "news": {
+    "edition": "Birthday edition",
+    "headline": "{who} turns {age} and the world celebrates",
+    "lead": "Reports are coming in from everywhere: {who} is {age} today and looking better than ever. Cake has been confirmed.",
+    "weather": "Weather: sunny, with scattered confetti"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every party",
+    "nationality": "Celebrated, everywhere",
+    "job": "Professional legend",
+    "stamps": [
+      "Birthday city",
+      "Party central",
+      "Adored"
+    ]
+  },
+  "movie": {
+    "sub": "A fashion story",
+    "soon": "The sequel: the next collection",
+    "reviews": [
+      [
+        "Effortlessly iconic",
+        "The Daily Hug"
+      ],
+      [
+        "The best dressed person I know",
+        "{from}"
+      ],
+      [
+        "Front row worthy",
+        "The group chat"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Which city is often called the fashion capital of the world?",
+      [
+        "Paris",
+        "Madrid",
+        "Berlin"
+      ],
+      0
+    ],
+    [
+      "Which designer created the little black dress in the 1920s?",
+      [
+        "Coco Chanel",
+        "Christian Dior",
+        "Gucci"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CAKE",
+    "PARTY",
+    "CANDLES",
+    "WISH",
+    "LEGEND",
+    "CHEERS"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Some people get dressed. Others make every outfit a statement.",
+      "This magazine is their style bible: the looks, the rules and the iconic moments.",
+      "{who}, the runway is yours.",
+      "From everything {from} told us, you are a true icon."
+    ],
+    "wish": "Stay iconic, {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "A Day in the Life of a Style Icon",
+    "day": [
+      [
+        "8:00",
+        "The outfit",
+        "Three options, one mirror, a final decision."
+      ],
+      [
+        "12:00",
+        "Lunch",
+        "Somewhere chic. Every head turns."
+      ],
+      [
+        "16:00",
+        "Shopping",
+        "One perfect find. Never a bad buy."
+      ],
+      [
+        "20:00",
+        "Dinner",
+        "A second outfit. Obviously."
+      ]
+    ],
+    "night": [
+      "23:00",
+      "Bedtime",
+      "Outfit for tomorrow already planned."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The changing room, or a sunny terrace"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Espresso and very small plates"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Do you think this works?\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Making anything look expensive"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Whenever there is an occasion to dress for"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Compliment the outfit. Never ask where it is from, they will not tell"
+      ]
+    ],
+    "little": [
+      "You always know if something suits me.",
+      "You can find gold in a charity shop.",
+      "You lend your best jacket without asking.",
+      "You make every room more beautiful."
+    ],
+    "letters": "Little Things Only You Do",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "conceptWho": "friend",
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

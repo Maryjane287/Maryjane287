@@ -19589,5 +19589,1975 @@
       "quote": "{weight} of pure joy",
       "credit": "Birth weight"
     }
+  },
+  {
+    "slug": "main-character-magazine",
+    "title": "Main Character",
+    "searchTitle": "Personalised Main Character Energy Magazine",
+    "pinTitle": "Main Character Energy: a Personalised Magazine Starring Them",
+    "occasion": "Main character",
+    "short": "For the person who walks into every room like the opening scene: their life, as the leading role.",
+    "description": "Some people were born to be the lead. A glossy magazine that treats their life like the blockbuster it is: their signature entrance, their soundtrack, their plot twists and the supporting cast who adore them. Funny, flattering and perfect for birthdays or just because.",
+    "keywords": [
+      "main character gift",
+      "gift for her who has everything",
+      "funny personalised gift",
+      "gift for best friend",
+      "birthday magazine",
+      "personalised gift for him"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Mia",
+        "max": 14
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "entrance",
+        "label": "Their signature entrance",
+        "example": "Sunglasses on, coffee in hand, ten minutes late",
+        "max": 48
+      },
+      {
+        "id": "soundtrack",
+        "label": "Their walking soundtrack",
+        "example": "Anything with a big chorus",
+        "max": 34
+      },
+      {
+        "id": "twist",
+        "label": "Their best plot twist",
+        "example": "Quit the job, moved to Lisbon",
+        "max": 34
+      },
+      {
+        "id": "catchphrase",
+        "label": "Their catchphrase",
+        "example": "\"It is giving\"",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "Their most main character moment",
+        "example": "Walking out of the rain into her own birthday party in a red coat, while the exact right song started playing. She says she did not plan it. Nobody believes her",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "You make life feel like a film, and I am so glad I got cast in it. Thank you for the drama, the laughter and the plot twists. Never stop being the lead.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the star",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A scene stealing moment",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "mia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Mia",
+          "from": "Emma",
+          "entrance": "Sunglasses on, coffee in hand, ten minutes late",
+          "soundtrack": "Anything with a big chorus",
+          "twist": "Quit the job, moved to Lisbon",
+          "catchphrase": "\"It is giving\"",
+          "x_who": "bestie",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/main-character-magazine-0.jpg",
+          "photo2": "/assets/samples/main-character-magazine-0b.jpg",
+          "photo3": "/assets/samples/main-character-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Leo",
+          "from": "Ava",
+          "entrance": "Arms wide, \"I am HERE\"",
+          "soundtrack": "Old school hip hop",
+          "twist": "Learned to cook, finally",
+          "catchphrase": "\"Trust the process\"",
+          "x_who": "partner",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "from": "The group chat",
+          "entrance": "Through the door laughing",
+          "soundtrack": "Afrobeats, loudly",
+          "twist": "Started her own brand",
+          "catchphrase": "\"We move\"",
+          "x_who": "friend",
+          "x_type": "gogetter"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The main character issue",
+      "edition": "Now showing",
+      "lines": [
+        [
+          "Exclusive",
+          "Starring {name}"
+        ],
+        [
+          "Plot twist",
+          "{twist}"
+        ],
+        [
+          "Soundtrack",
+          "{soundtrack}"
+        ]
+      ],
+      "badge": [
+        "Main",
+        "character",
+        "energy"
+      ],
+      "quote": "{catchphrase}",
+      "credit": "Their catchphrase"
+    },
+    "letterTitle": "A letter to the main character",
+    "feature": [
+      "Their most main character moment",
+      "moment"
+    ]
+  },
+  {
+    "slug": "self-love-magazine",
+    "title": "Love, Me",
+    "searchTitle": "Personalised Self Love Magazine",
+    "pinTitle": "Love, Me: a Personalised Self Love and Self Care Magazine",
+    "occasion": "Self love",
+    "short": "A gift to yourself, or to someone who needs reminding: a magazine all about how wonderful they are.",
+    "description": "Sometimes the person who needs a love letter is you. Love, Me is a gentle, beautiful magazine all about one person: their strengths, their journey, the hard things they got through and all the reasons they deserve to be celebrated. A gift to yourself, or to someone who needs reminding how loved they are.",
+    "keywords": [
+      "self love gift",
+      "self care gift for her",
+      "gift to myself",
+      "encouragement gift",
+      "gift for friend going through hard time",
+      "you are amazing gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Emma",
+        "max": 14
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "strength",
+        "label": "Their greatest strength",
+        "example": "Getting back up, every time",
+        "max": 34
+      },
+      {
+        "id": "ritual",
+        "label": "Favourite self care ritual",
+        "example": "A bath, a candle, no phone",
+        "max": 34
+      },
+      {
+        "id": "mantra",
+        "label": "Their mantra",
+        "example": "I am allowed to take up space",
+        "max": 40
+      },
+      {
+        "id": "proud",
+        "label": "Something they should be proud of",
+        "example": "Starting again, and doing it well",
+        "max": 40
+      },
+      {
+        "id": "moment",
+        "label": "The moment they were braver than they knew",
+        "example": "The year everything fell apart, she rebuilt it slowly, piece by piece, and somehow still showed up for everyone else",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "You are enough. You have always been enough. Look how far you have come, look how kind you are, look how much you are loved. This magazine is proof.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of them, glowing",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A photo where they look happy",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#b5552b"
+        },
+        "values": {
+          "name": "Emma",
+          "from": "Me, to me",
+          "strength": "Getting back up, every time",
+          "ritual": "A bath, a candle, no phone",
+          "mantra": "I am allowed to take up space",
+          "proud": "Starting again, and doing it well",
+          "x_who": "friend",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/self-love-magazine-0.jpg",
+          "photo2": "/assets/samples/self-love-magazine-0b.jpg",
+          "photo3": "/assets/samples/self-love-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "mint",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "from": "Her sister",
+          "strength": "Her huge heart",
+          "ritual": "Sunday morning walks",
+          "mantra": "Soft is strong",
+          "proud": "Her first year sober",
+          "x_who": "sibling",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "sky",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Sam",
+          "from": "Mum",
+          "strength": "Never giving up",
+          "ritual": "Running at sunrise",
+          "mantra": "One day at a time",
+          "proud": "Finishing his degree",
+          "x_who": "child",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The self love issue",
+      "edition": "Love, me",
+      "lines": [
+        [
+          "Exclusive",
+          "You are enough"
+        ],
+        [
+          "Greatest strength",
+          "{strength}"
+        ],
+        [
+          "Proud of",
+          "{proud}"
+        ]
+      ],
+      "badge": [
+        "Love",
+        "yourself",
+        "first"
+      ],
+      "quote": "{mantra}",
+      "credit": "Their mantra"
+    },
+    "letterTitle": "A love letter to you",
+    "feature": [
+      "The moment they were braver than they knew",
+      "moment"
+    ]
+  },
+  {
+    "slug": "zodiac-personality-magazine",
+    "title": "Written in the Stars",
+    "searchTitle": "Personalised Zodiac Personality Magazine",
+    "pinTitle": "Written in the Stars: a Personalised Zodiac Personality Magazine",
+    "occasion": "Zodiac",
+    "short": "Their star sign, their personality and why the universe made them exactly this way.",
+    "description": "Are they the most Leo Leo who ever lived? A glossy zodiac magazine all about their sign and how perfectly they fit it: their cosmic traits, their rising sign, their love language and the funny ways they are totally their sign. For the friend who checks their horoscope every morning, any time of year.",
+    "keywords": [
+      "zodiac gift",
+      "star sign gift",
+      "astrology gift for her",
+      "horoscope gift",
+      "personalised zodiac magazine",
+      "gift for astrology lover"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Ava",
+        "max": 14
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "sign",
+        "label": "Their star sign",
+        "example": "Leo",
+        "max": 14
+      },
+      {
+        "id": "rising",
+        "label": "Their rising sign, if they know",
+        "example": "Libra rising",
+        "max": 20
+      },
+      {
+        "id": "trait",
+        "label": "Their most star sign trait",
+        "example": "Needs applause after every story",
+        "max": 40
+      },
+      {
+        "id": "match",
+        "label": "Their cosmic match",
+        "example": "Whoever brings snacks",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "The most typical star sign thing they have done",
+        "example": "Booked herself a birthday month, not a birthday day, and sent the group chat a schedule with dress codes",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "The stars must have been showing off the day you were born. You are bold, warm and completely yourself, and the universe got it exactly right when it made you.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of them",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A photo that sums up their sign",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "ava",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Ava",
+          "from": "Mia",
+          "sign": "Leo",
+          "rising": "Libra rising",
+          "trait": "Needs applause after every story",
+          "match": "Whoever brings snacks",
+          "x_who": "bestie",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/zodiac-personality-magazine-0.jpg",
+          "photo2": "/assets/samples/zodiac-personality-magazine-0b.jpg",
+          "photo3": "/assets/samples/zodiac-personality-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "chris",
+        "palette": "sky",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Chris",
+          "from": "Emma",
+          "sign": "Virgo",
+          "rising": "Capricorn rising",
+          "trait": "Labels the labels",
+          "match": "A tidy Taurus",
+          "x_who": "partner",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Mia",
+          "from": "Her sister",
+          "sign": "Sagittarius",
+          "rising": "No idea, Gemini?",
+          "trait": "Books flights at midnight",
+          "match": "Anyone with a passport",
+          "x_who": "sibling",
+          "x_type": "adventurer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The zodiac issue",
+      "edition": "A true {sign}",
+      "lines": [
+        [
+          "Written in the stars",
+          "The most {sign} {sign} ever"
+        ],
+        [
+          "Rising",
+          "{rising}"
+        ],
+        [
+          "Cosmic match",
+          "{match}"
+        ]
+      ],
+      "badge": [
+        "Born a",
+        "{sign}",
+        "and proud"
+      ],
+      "quote": "{trait}",
+      "credit": "Their most star sign trait"
+    },
+    "letterTitle": "A letter written in the stars",
+    "feature": [
+      "The most typical star sign thing they have done",
+      "moment"
+    ]
+  },
+  {
+    "slug": "fashion-icon-magazine",
+    "title": "Fashion Icon",
+    "searchTitle": "Personalised Fashion Magazine Gift",
+    "pinTitle": "Fashion Icon: a Personalised Style Magazine for the Most Stylish Person You Know",
+    "occasion": "Fashion lover",
+    "short": "For the most stylish person you know: their signature look, their iconic outfits and their style rules.",
+    "description": "They never just get dressed, they make an entrance. A glossy fashion magazine starring them: their signature look, the outfits everyone still talks about, their style rules and their dream wardrobe. Feels like a real style bible, made all about them.",
+    "keywords": [
+      "gift for fashion lover",
+      "stylish friend gift",
+      "fashion magazine personalised",
+      "gift for her who loves clothes",
+      "fashionista gift",
+      "style icon gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Mia",
+        "max": 14
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "look",
+        "label": "Their signature look",
+        "example": "Trench coat, gold hoops, red lip",
+        "max": 40
+      },
+      {
+        "id": "rule",
+        "label": "Their style rule",
+        "example": "Never underdressed, ever",
+        "max": 34
+      },
+      {
+        "id": "piece",
+        "label": "The piece they cannot live without",
+        "example": "Her vintage leather jacket",
+        "max": 34
+      },
+      {
+        "id": "icon",
+        "label": "Their style icon",
+        "example": "Every French woman ever",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "Their most iconic outfit moment",
+        "example": "Turned up to a casual barbecue in a silk slip dress and heels, and somehow made everyone else look underdressed",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "You make getting dressed look like art. But the most stylish thing about you has always been your confidence, your kindness and that laugh. Stay iconic.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the icon",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "An iconic outfit",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite look",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "mia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Mia",
+          "from": "Ava",
+          "look": "Trench coat, gold hoops, red lip",
+          "rule": "Never underdressed, ever",
+          "piece": "Her vintage leather jacket",
+          "icon": "Every French woman ever",
+          "x_who": "bestie",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/fashion-icon-magazine-0.jpg",
+          "photo2": "/assets/samples/fashion-icon-magazine-0b.jpg",
+          "photo3": "/assets/samples/fashion-icon-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 3,
+          "hair": "long",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "from": "Her sister",
+          "look": "All black, statement shoes",
+          "rule": "Comfort is chic",
+          "piece": "Her mum's gold chain",
+          "icon": "Her grandma, honestly",
+          "x_who": "sibling",
+          "x_type": "gogetter"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "butter",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Leo",
+          "from": "Sam",
+          "look": "Tailored everything",
+          "rule": "The shoes make the man",
+          "piece": "His grandad's watch",
+          "icon": "Old Hollywood",
+          "x_who": "friend",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The style issue",
+      "edition": "The fashion edition",
+      "lines": [
+        [
+          "Exclusive",
+          "Inside the wardrobe of {name}"
+        ],
+        [
+          "Style rule",
+          "{rule}"
+        ],
+        [
+          "Cannot live without",
+          "{piece}"
+        ]
+      ],
+      "badge": [
+        "Style",
+        "icon",
+        "of the year"
+      ],
+      "quote": "{look}",
+      "credit": "The signature look"
+    },
+    "letterTitle": "A letter to our style icon",
+    "feature": [
+      "Their most iconic outfit moment",
+      "moment"
+    ]
+  },
+  {
+    "slug": "luxury-lifestyle-magazine",
+    "title": "The Luxe Life",
+    "searchTitle": "Personalised Luxury Lifestyle Magazine",
+    "pinTitle": "The Luxe Life: a Personalised Luxury Lifestyle Magazine",
+    "occasion": "Luxury lover",
+    "short": "For the one with expensive taste: their dream holidays, favourite indulgences and their life in the luxe lane.",
+    "description": "Champagne taste and a first class heart. A glossy luxury lifestyle magazine all about them: their dream destinations, their favourite indulgences, the treat they always say yes to and the life they are building. Glamorous, aspirational and full of love.",
+    "keywords": [
+      "luxury gift for her",
+      "gift for someone with expensive taste",
+      "glamorous birthday gift",
+      "personalised luxury gift",
+      "gift for him who has everything",
+      "champagne lover gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Ava",
+        "max": 14
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "destination",
+        "label": "Dream destination",
+        "example": "A villa on the Amalfi Coast",
+        "max": 34
+      },
+      {
+        "id": "indulgence",
+        "label": "Favourite indulgence",
+        "example": "Champagne on a Tuesday",
+        "max": 34
+      },
+      {
+        "id": "treat",
+        "label": "The treat they always say yes to",
+        "example": "Room service and a robe",
+        "max": 34
+      },
+      {
+        "id": "goal",
+        "label": "Their big life goal",
+        "example": "Their own house by the sea",
+        "max": 34
+      },
+      {
+        "id": "moment",
+        "label": "Their most luxe moment",
+        "example": "Booked a spa day for herself on her birthday, wore the robe all day, ordered lobster by the pool and called it self care",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "You deserve every beautiful thing in life, because you work so hard and you give so much. Here is to the villas, the champagne and the dreams coming true.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo, looking expensive",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A glamorous moment",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "ava",
+        "palette": "butter",
+        "portrait": {
+          "skin": 3,
+          "hair": "long",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "from": "Mia",
+          "destination": "A villa on the Amalfi Coast",
+          "indulgence": "Champagne on a Tuesday",
+          "treat": "Room service and a robe",
+          "goal": "Their own house by the sea",
+          "x_who": "bestie",
+          "x_type": "gogetter"
+        },
+        "photos": {
+          "photo1": "/assets/samples/luxury-lifestyle-magazine-0.jpg",
+          "photo2": "/assets/samples/luxury-lifestyle-magazine-0b.jpg",
+          "photo3": "/assets/samples/luxury-lifestyle-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "emma",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Emma",
+          "from": "Chris",
+          "destination": "The Maldives, overwater villa",
+          "indulgence": "A good handbag",
+          "treat": "Afternoon tea at the Ritz",
+          "goal": "First class, just once",
+          "x_who": "partner",
+          "x_type": "romantics"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "sky",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Sam",
+          "from": "The lads",
+          "destination": "Monaco for the Grand Prix",
+          "indulgence": "A really good steak",
+          "treat": "A new watch",
+          "goal": "A boat. Any boat.",
+          "x_who": "friend",
+          "x_type": "gogetter"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The luxe issue",
+      "edition": "The luxury edition",
+      "lines": [
+        [
+          "Exclusive",
+          "Life in the luxe lane"
+        ],
+        [
+          "Next stop",
+          "{destination}"
+        ],
+        [
+          "Indulgence",
+          "{indulgence}"
+        ]
+      ],
+      "badge": [
+        "Living",
+        "the",
+        "luxe life"
+      ],
+      "quote": "{treat}",
+      "credit": "Always says yes to"
+    },
+    "letterTitle": "A letter for the life you deserve",
+    "feature": [
+      "Their most luxe moment",
+      "moment"
+    ]
+  },
+  {
+    "slug": "book-lover-magazine",
+    "title": "The Book Lover",
+    "searchTitle": "Personalised Book Lover Magazine",
+    "pinTitle": "The Book Lover: a Personalised Literary Magazine for Readers",
+    "occasion": "Book lover",
+    "short": "For the reader who has lived a thousand lives: their favourite books, characters and reading nook.",
+    "description": "For the one who always has a book in their bag and a pile by the bed. A beautiful literary magazine all about their reading life: the book that changed them, their favourite characters, their dream library and the quotes they live by. A love letter to a reader.",
+    "keywords": [
+      "gift for book lover",
+      "gift for reader",
+      "bookworm gift",
+      "literary gift",
+      "book club gift",
+      "personalised gift for reader"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Emma",
+        "max": 14
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "book",
+        "label": "The book that changed them",
+        "example": "Little Women",
+        "max": 34
+      },
+      {
+        "id": "character",
+        "label": "Their favourite character",
+        "example": "Jo March, obviously",
+        "max": 30
+      },
+      {
+        "id": "nook",
+        "label": "Their favourite reading spot",
+        "example": "The window seat with a blanket",
+        "max": 40
+      },
+      {
+        "id": "genre",
+        "label": "Their favourite genre",
+        "example": "Historical romance",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "Their most book lover moment",
+        "example": "Missed her train stop because she was on the last chapter, rode to the end of the line, and said it was completely worth it",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "You have read a thousand stories, but yours is my favourite. Thank you for every book you pressed into my hands and every story you told me. Keep reading, keep dreaming.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the reader",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "Lost in a book",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma",
+        "palette": "mint",
+        "portrait": {
+          "skin": 0,
+          "hair": "bun",
+          "hairColor": "#b5552b"
+        },
+        "values": {
+          "name": "Emma",
+          "from": "Mia",
+          "book": "Little Women",
+          "character": "Jo March, obviously",
+          "nook": "The window seat with a blanket",
+          "genre": "Historical romance",
+          "x_who": "bestie",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/book-lover-magazine-0.jpg",
+          "photo2": "/assets/samples/book-lover-magazine-0b.jpg",
+          "photo3": "/assets/samples/book-lover-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Sam",
+          "from": "Ava",
+          "book": "The Hobbit",
+          "character": "Samwise, of course",
+          "nook": "The bath, dangerously",
+          "genre": "Fantasy",
+          "x_who": "partner",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Mia",
+          "from": "Her book club",
+          "book": "Pride and Prejudice",
+          "character": "Elizabeth Bennet",
+          "nook": "The café on the corner",
+          "genre": "Anything with a twist",
+          "x_who": "friend",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The book lover issue",
+      "edition": "The literary edition",
+      "lines": [
+        [
+          "Exclusive",
+          "A life in books"
+        ],
+        [
+          "The book that changed them",
+          "{book}"
+        ],
+        [
+          "Favourite character",
+          "{character}"
+        ]
+      ],
+      "badge": [
+        "Just",
+        "one more",
+        "chapter"
+      ],
+      "quote": "{nook}",
+      "credit": "Favourite reading spot"
+    },
+    "letterTitle": "A letter to our favourite reader",
+    "feature": [
+      "Their most book lover moment",
+      "moment"
+    ]
+  },
+  {
+    "slug": "coffee-lover-magazine",
+    "title": "But First, Coffee",
+    "searchTitle": "Personalised Coffee Lover Magazine",
+    "pinTitle": "But First, Coffee: a Personalised Magazine for Coffee Lovers",
+    "occasion": "Coffee lover",
+    "short": "For the one who is not a morning person until the first sip: their order, their café and their caffeine life.",
+    "description": "Some people run on love. They run on love and flat whites. A fun, glossy magazine all about the coffee lover in your life: their perfect order, their favourite café, their mug collection and the person they become after the first sip. Warm, funny and caffeinated.",
+    "keywords": [
+      "gift for coffee lover",
+      "coffee gift for her",
+      "coffee gift for him",
+      "funny coffee gift",
+      "personalised coffee gift",
+      "gift for barista"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Sam",
+        "max": 14
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "order",
+        "label": "Their exact order",
+        "example": "Oat flat white, extra hot",
+        "max": 34
+      },
+      {
+        "id": "cafe",
+        "label": "Their favourite café",
+        "example": "The little one by the station",
+        "max": 34
+      },
+      {
+        "id": "cups",
+        "label": "Cups a day, honestly",
+        "example": "Four. Officially two.",
+        "max": 24
+      },
+      {
+        "id": "mug",
+        "label": "Their favourite mug",
+        "example": "The chipped one from Lisbon",
+        "max": 34
+      },
+      {
+        "id": "moment",
+        "label": "Their most coffee obsessed moment",
+        "example": "Packed a travel grinder, beans and a tiny kettle for a weekend camping trip, and made us all proper coffee at sunrise",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "You are my favourite person, after coffee and before coffee. Thank you for every brew, every café adventure and every early morning you made bearable. Love you a latte.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo with a coffee",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "At their favourite café",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "sam",
+        "palette": "butter",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Sam",
+          "from": "Emma",
+          "order": "Oat flat white, extra hot",
+          "cafe": "The little one by the station",
+          "cups": "Four. Officially two.",
+          "mug": "The chipped one from Lisbon",
+          "x_who": "partner",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/coffee-lover-magazine-0.jpg",
+          "photo2": "/assets/samples/coffee-lover-magazine-0b.jpg",
+          "photo3": "/assets/samples/coffee-lover-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Ava",
+          "from": "Mia",
+          "order": "Iced caramel latte, always",
+          "cafe": "Wherever has the best cake",
+          "cups": "Three, then decaf",
+          "mug": "The one that says Boss",
+          "x_who": "bestie",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "chris",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Chris",
+          "from": "The office",
+          "order": "Double espresso, no talking",
+          "cafe": "His own kitchen",
+          "cups": "We stopped counting",
+          "mug": "His dad's old army mug",
+          "x_who": "friend",
+          "x_type": "gogetter"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The coffee issue",
+      "edition": "Freshly brewed",
+      "lines": [
+        [
+          "Exclusive",
+          "But first, coffee"
+        ],
+        [
+          "Usual order",
+          "{order}"
+        ],
+        [
+          "Cups a day",
+          "{cups}"
+        ]
+      ],
+      "badge": [
+        "But",
+        "first",
+        "coffee"
+      ],
+      "quote": "{order}",
+      "credit": "The usual"
+    },
+    "letterTitle": "A letter to my favourite coffee lover",
+    "feature": [
+      "Their most coffee obsessed moment",
+      "moment"
+    ]
+  },
+  {
+    "slug": "plant-parent-magazine",
+    "title": "Plant Parent",
+    "searchTitle": "Personalised Plant Lover Magazine",
+    "pinTitle": "Plant Parent: a Personalised Magazine for Plant Lovers",
+    "occasion": "Plant lover",
+    "short": "For the one with a jungle for a living room: their plant babies, their green fingers and their happy place.",
+    "description": "They do not have houseplants, they have a family. A fresh, joyful magazine all about the plant parent in your life: their oldest plant baby, the one they rescued, their garden dreams and the names they gave every leafy friend. Green, gorgeous and full of love.",
+    "keywords": [
+      "gift for plant lover",
+      "plant parent gift",
+      "gardener gift",
+      "houseplant lover gift",
+      "gift for gardener",
+      "personalised gardening gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Emma",
+        "max": 14
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "count",
+        "label": "How many plants, honestly",
+        "example": "Forty seven, and counting",
+        "max": 30
+      },
+      {
+        "id": "oldest",
+        "label": "Their oldest plant baby",
+        "example": "A monstera called Monty",
+        "max": 34
+      },
+      {
+        "id": "rescue",
+        "label": "The plant they saved",
+        "example": "A supermarket orchid, now thriving",
+        "max": 40
+      },
+      {
+        "id": "dream",
+        "label": "Their garden dream",
+        "example": "A greenhouse of their own",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "Their greenest moment",
+        "example": "Went on holiday and left a three page care guide for the plant sitter, with a diagram, a watering timetable and a photo of each plant",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "You make everything around you grow, the plants, the people and the love. Thank you for filling our home with green and our lives with care.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo with their plants",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "In the garden or jungle",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma",
+        "palette": "mint",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#b5552b"
+        },
+        "values": {
+          "name": "Emma",
+          "from": "Chris",
+          "count": "Forty seven, and counting",
+          "oldest": "A monstera called Monty",
+          "rescue": "A supermarket orchid, now thriving",
+          "dream": "A greenhouse of their own",
+          "x_who": "partner",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/plant-parent-magazine-0.jpg",
+          "photo2": "/assets/samples/plant-parent-magazine-0b.jpg",
+          "photo3": "/assets/samples/plant-parent-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "butter",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Mia",
+          "from": "Her sister",
+          "count": "Every windowsill",
+          "oldest": "Grandma's spider plant",
+          "rescue": "A fern from a skip",
+          "dream": "An allotment",
+          "x_who": "sibling",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+        }
+      },
+      {
+        "id": "chris",
+        "palette": "sky",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Chris",
+          "from": "Sam",
+          "count": "Twelve cactuses",
+          "oldest": "A cactus called Kevin",
+          "rescue": "The office yucca",
+          "dream": "A desert garden",
+          "x_who": "friend",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The green issue",
+      "edition": "Plant parent of the year",
+      "lines": [
+        [
+          "Exclusive",
+          "Inside the jungle"
+        ],
+        [
+          "Oldest plant baby",
+          "{oldest}"
+        ],
+        [
+          "The rescue",
+          "{rescue}"
+        ]
+      ],
+      "badge": [
+        "Plant",
+        "parent",
+        "of the year"
+      ],
+      "quote": "{count}",
+      "credit": "Plants at home"
+    },
+    "letterTitle": "A letter to our favourite plant parent",
+    "feature": [
+      "Their greenest moment",
+      "moment"
+    ]
+  },
+  {
+    "slug": "fitness-champion-magazine",
+    "title": "Fitness Champion",
+    "searchTitle": "Personalised Fitness Magazine Gift",
+    "pinTitle": "Fitness Champion: a Personalised Fitness and Sport Magazine for Adults",
+    "occasion": "Fitness lover",
+    "short": "For the runner, the lifter, the yogi: their training, their personal bests and how far they have come.",
+    "description": "From couch to marathon, or just their first ever 5k. A glossy fitness magazine all about their journey: their personal bests, their training rituals, the race that made them cry and the goal they are chasing next. Motivating, proud and made for a celebration.",
+    "keywords": [
+      "gift for runner",
+      "fitness gift for her",
+      "gym lover gift",
+      "marathon gift",
+      "personalised fitness gift",
+      "gift for him who loves the gym"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Ava",
+        "max": 14
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "sport",
+        "label": "Their sport",
+        "example": "Running",
+        "max": 20
+      },
+      {
+        "id": "pb",
+        "label": "Their proudest personal best",
+        "example": "A marathon in 3 hours 58",
+        "max": 34
+      },
+      {
+        "id": "ritual",
+        "label": "Their pre training ritual",
+        "example": "Banana, playlist, laces double knotted",
+        "max": 44
+      },
+      {
+        "id": "next",
+        "label": "Their next big goal",
+        "example": "The Berlin Marathon",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "Their proudest finish line",
+        "example": "Mile twenty two of the London Marathon, she saw us holding a giant photo of her face, started crying, then sprinted the last four miles",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "Every early morning, every rainy run, every time you wanted to stop and did not. We saw it all, and we are so proud. You are a champion in every way.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo in action",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "At a race or the gym",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "ava",
+        "palette": "coral",
+        "portrait": {
+          "skin": 0,
+          "hair": "bun",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Ava",
+          "from": "Mum and Dad",
+          "sport": "Running",
+          "pb": "A marathon in 3 hours 58",
+          "ritual": "Banana, playlist, laces double knotted",
+          "next": "The Berlin Marathon",
+          "x_who": "child",
+          "x_type": "sporty"
+        },
+        "photos": {
+          "photo1": "/assets/samples/fitness-champion-magazine-0.jpg",
+          "photo2": "/assets/samples/fitness-champion-magazine-0b.jpg",
+          "photo3": "/assets/samples/fitness-champion-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Leo",
+          "from": "Emma",
+          "sport": "Weightlifting",
+          "pb": "Deadlift, 180 kilos",
+          "ritual": "Pre workout and a pep talk",
+          "next": "His first competition",
+          "x_who": "partner",
+          "x_type": "sporty"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "mint",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Mia",
+          "from": "Her yoga girls",
+          "sport": "Yoga and swimming",
+          "pb": "A mile in open water",
+          "ritual": "Deep breaths and a green juice",
+          "next": "Teaching her own class",
+          "x_who": "friend",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The champion issue",
+      "edition": "The fitness edition",
+      "lines": [
+        [
+          "Exclusive",
+          "Inside the training"
+        ],
+        [
+          "Personal best",
+          "{pb}"
+        ],
+        [
+          "Next goal",
+          "{next}"
+        ]
+      ],
+      "badge": [
+        "Never",
+        "give",
+        "up"
+      ],
+      "quote": "{ritual}",
+      "credit": "Pre training ritual"
+    },
+    "letterTitle": "A letter to our champion",
+    "feature": [
+      "Their proudest finish line",
+      "moment"
+    ]
+  },
+  {
+    "slug": "foodie-magazine",
+    "title": "The Foodie",
+    "searchTitle": "Personalised Foodie Magazine Gift",
+    "pinTitle": "The Foodie: a Personalised Food Magazine for Food Lovers and Home Cooks",
+    "occasion": "Food lover",
+    "short": "For the one who plans holidays around restaurants: their signature dish, favourite places and food memories.",
+    "description": "For the home cook, the restaurant hunter and the one who always knows where to eat. A delicious glossy food magazine all about them: their signature dish, the meal they will never forget, their kitchen rules and the food that tastes like home.",
+    "keywords": [
+      "gift for foodie",
+      "gift for home cook",
+      "food lover gift",
+      "gift for chef",
+      "personalised cooking gift",
+      "gift for someone who loves food"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Chris",
+        "max": 14
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "dish",
+        "label": "Their signature dish",
+        "example": "Slow cooked lamb with rosemary",
+        "max": 40
+      },
+      {
+        "id": "restaurant",
+        "label": "Their favourite restaurant",
+        "example": "The little Italian on the corner",
+        "max": 40
+      },
+      {
+        "id": "rule",
+        "label": "Their kitchen rule",
+        "example": "Taste as you go",
+        "max": 30
+      },
+      {
+        "id": "home",
+        "label": "The food that tastes like home",
+        "example": "Mum's Sunday roast",
+        "max": 34
+      },
+      {
+        "id": "moment",
+        "label": "The meal we will never forget",
+        "example": "Christmas when the oven broke, so he cooked the entire dinner on a camping stove and a barbecue in the snow, and it was the best one ever",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "You feed us with so much love. Every meal you make is a hug on a plate, and our happiest memories all happened around your table. Thank you, chef.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo in the kitchen",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite food moment",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "chris",
+        "palette": "butter",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Chris",
+          "from": "The family",
+          "dish": "Slow cooked lamb with rosemary",
+          "restaurant": "The little Italian on the corner",
+          "rule": "Taste as you go",
+          "home": "Mum's Sunday roast",
+          "x_who": "dad",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/foodie-magazine-0.jpg",
+          "photo2": "/assets/samples/foodie-magazine-0b.jpg",
+          "photo3": "/assets/samples/foodie-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Mia",
+          "from": "Ava",
+          "dish": "Her famous lasagne",
+          "restaurant": "Anywhere with a tasting menu",
+          "rule": "More garlic",
+          "home": "Grandma's apple crumble",
+          "x_who": "bestie",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Sam",
+          "from": "His wife, Emma",
+          "dish": "Jerk chicken, the real way",
+          "restaurant": "The street food market",
+          "rule": "Never rush the marinade",
+          "home": "His nan's rice and peas",
+          "x_who": "partner",
+          "x_type": "adventurer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The food issue",
+      "edition": "The foodie edition",
+      "lines": [
+        [
+          "Exclusive",
+          "Inside the kitchen of {name}"
+        ],
+        [
+          "Signature dish",
+          "{dish}"
+        ],
+        [
+          "Kitchen rule",
+          "{rule}"
+        ]
+      ],
+      "badge": [
+        "Chef",
+        "of the",
+        "year"
+      ],
+      "quote": "{home}",
+      "credit": "Tastes like home"
+    },
+    "letterTitle": "A letter to our favourite cook",
+    "feature": [
+      "The meal we will never forget",
+      "moment"
+    ]
   }
 ]

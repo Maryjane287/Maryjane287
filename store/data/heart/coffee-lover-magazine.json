@@ -1,0 +1,371 @@
+{
+  "theme": "dawn",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "What they are like before their first cup",
+      "example": "A grumpy little cloud who should not be spoken to",
+      "max": 80,
+      "chapter": "Before coffee"
+    },
+    {
+      "id": "s_two",
+      "label": "What they are like after it",
+      "example": "Sunshine. Plans. Jokes. A whole new person",
+      "max": 80,
+      "chapter": "After coffee"
+    },
+    {
+      "id": "s_three",
+      "label": "Their dream coffee moment",
+      "example": "A cappuccino in a Roman piazza at 8am",
+      "max": 80,
+      "chapter": "The perfect brew"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To always make the first cup",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "order": "Exact order",
+    "cafe": "Favourite café",
+    "cups": "Cups a day",
+    "mug": "Favourite mug"
+  },
+  "story": {
+    "title": "{first}, Fully Caffeinated",
+    "hand": "Love you a latte, {who}.",
+    "kicker": "Freshly brewed",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "The coffee kit",
+    "kicker": "From {from}, with love",
+    "title": "Ten things every coffee lover needs",
+    "items": [
+      "A favourite mug",
+      "Fresh beans",
+      "A loyalty card, nearly full",
+      "A café with a window seat",
+      "Oat milk in the fridge",
+      "A good grinder",
+      "A reusable cup",
+      "A quiet first five minutes",
+      "A biscuit to dunk",
+      "Barista friends",
+      "A cafetière for guests",
+      "Patience before the first sip"
+    ]
+  },
+  "timeline": {
+    "kicker": "Birthdays through the ages",
+    "title": "A Short History of Birthdays",
+    "items": [
+      [
+        "Ancient Rome",
+        "A day worth a feast",
+        "Romans marked the birthdays of friends and family with feasts, gifts and wishes for good luck."
+      ],
+      [
+        "1700s",
+        "Cake and candles",
+        "In Germany, children's birthday parties called Kinderfeste had a cake with a candle for every year."
+      ],
+      [
+        "1893",
+        "The tune we all know",
+        "Sisters Mildred and Patty Hill published Good Morning to All. Its melody became Happy Birthday to You."
+      ],
+      [
+        "2015",
+        "A song for everyone",
+        "A judge ruled the old copyright claim on Happy Birthday invalid. Now it belongs to all of us."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who} turns {age}",
+      "The most important birthday in the history books. Well, in ours."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words for Your Birthday",
+    "items": [
+      [
+        "Let us celebrate the occasion with wine and sweet words.",
+        "Plautus"
+      ],
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Wrinkles should merely indicate where the smiles have been.",
+        "Mark Twain, Following the Equator, 1897"
+      ],
+      [
+        "A joy that is shared is a joy made double.",
+        "An old English proverb"
+      ]
+    ],
+    "hand": "Every one of them is true. Especially the bit about smiles, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Birthdays",
+    "items": [
+      [
+        "sun",
+        "A lap of the Sun",
+        "Every birthday marks one more trip around the Sun, about 940 million kilometres. Well travelled."
+      ],
+      [
+        "globe",
+        "Birthday twins",
+        "Around twenty million people share your birthday. None of them are quite as good at it as you."
+      ],
+      [
+        "smile",
+        "The party trick",
+        "In a room of just 23 people, there is a better than even chance two of them share a birthday."
+      ],
+      [
+        "music",
+        "The famous song",
+        "Happy Birthday to You is often called the most recognised song in the English language."
+      ],
+      [
+        "clock",
+        "Leap day babies",
+        "People born on 29 February only get a true birthday once every four years."
+      ],
+      [
+        "spark",
+        "Brand new you",
+        "Your skin renews its outer layer every few weeks, so you are always a slightly fresher edition."
+      ]
+    ],
+    "hand": "Science says you are {age}. We say you are timeless, {who}."
+  },
+  "world": {
+    "kicker": "A note from the universe",
+    "title": "Why Mornings Are Better With {who}",
+    "lead": "Because {who} loves coffee, the world got:",
+    "items": [
+      "The best café recommendations in town.",
+      "A friend who always knows the order.",
+      "Mornings made bearable.",
+      "Kept local cafés in business.",
+      "Excellent conversation, after cup two.",
+      "A mug collection worth a museum.",
+      "And the one and only {who}."
+    ],
+    "close": "Love you a latte, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From me to you",
+    "title": "My promises to the coffee lover",
+    "items": [
+      "To never talk to you before your first cup.",
+      "To remember your order, exactly.",
+      "To find the best café wherever we go.",
+      "To bring coffee when you need it most.",
+      "To love you a latte, always."
+    ],
+    "hand": "Love, {from}"
+  },
+  "awards": [
+    [
+      "Best laugh in the business",
+      "By a landslide"
+    ],
+    [
+      "Most likely to start the dancing",
+      "Every single time"
+    ],
+    [
+      "Outstanding friendship",
+      "A lifetime achievement"
+    ],
+    [
+      "Star of the year",
+      "Voted {age} years running"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Breakfast in bed",
+      "Coffee included, obviously"
+    ],
+    [
+      "A day of your choosing",
+      "Anywhere, anything"
+    ],
+    [
+      "One night out",
+      "Our treat, your playlist"
+    ],
+    [
+      "A lie in",
+      "Nobody says a word"
+    ]
+  ],
+  "vouchersTitle": "Birthday vouchers for {who}",
+  "cert": "Iconic",
+  "perfume": "Top notes of birthday candles, fizz and laughter. A heart of pure sunshine.",
+  "news": {
+    "edition": "Birthday edition",
+    "headline": "{who} turns {age} and the world celebrates",
+    "lead": "Reports are coming in from everywhere: {who} is {age} today and looking better than ever. Cake has been confirmed.",
+    "weather": "Weather: sunny, with scattered confetti"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every party",
+    "nationality": "Celebrated, everywhere",
+    "job": "Professional legend",
+    "stamps": [
+      "Birthday city",
+      "Party central",
+      "Adored"
+    ]
+  },
+  "movie": {
+    "sub": "A caffeinated comedy",
+    "soon": "The sequel: the decaf years (never)",
+    "reviews": [
+      [
+        "Strong, smooth and full of energy",
+        "The Daily Hug"
+      ],
+      [
+        "My favourite morning person, after coffee",
+        "{from}"
+      ],
+      [
+        "Worth getting up for",
+        "The barista"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Which country is the largest coffee producer in the world?",
+      [
+        "Brazil",
+        "Italy",
+        "Kenya"
+      ],
+      0
+    ],
+    [
+      "What is a flat white?",
+      [
+        "Espresso with velvety steamed milk",
+        "Black coffee with ice",
+        "Tea with milk"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CAKE",
+    "PARTY",
+    "CANDLES",
+    "WISH",
+    "LEGEND",
+    "CHEERS"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Some people run on love. Some run on coffee. The best people run on both.",
+      "This magazine celebrates their perfect order, their favourite cafés and the person they become after the first sip.",
+      "{who}, this one is freshly brewed for you.",
+      "From everything {from} told us, you are the best thing about any morning."
+    ],
+    "wish": "Love you a latte, {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "A Day in the Life of {first}, by the Cup",
+    "day": [
+      [
+        "7:00",
+        "Cup one",
+        "Do not speak. Do not make eye contact."
+      ],
+      [
+        "10:00",
+        "Cup two",
+        "Human again. Making plans."
+      ],
+      [
+        "13:00",
+        "Cup three",
+        "At the café. \"Just a small one.\""
+      ],
+      [
+        "15:30",
+        "Cup four",
+        "The one they will deny later."
+      ]
+    ],
+    "night": [
+      "23:00",
+      "Bedtime",
+      "Wide awake. Wonders why."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The window seat at their favourite café"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Coffee, and a pastry if it is a good day"
+      ],
+      [
+        "music",
+        "Call",
+        "\"I just need a coffee first\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Finding good coffee in any city"
+      ],
+      [
+        "clock",
+        "Most active",
+        "After the first cup"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Bring coffee. Do not talk before it. Learn their order"
+      ]
+    ],
+    "little": [
+      "You know every barista by name.",
+      "You make the best coffee in the house.",
+      "You always bring me one too.",
+      "You become sunshine after the first sip."
+    ],
+    "letters": "Little Things Only You Do",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "conceptWho": "friend",
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

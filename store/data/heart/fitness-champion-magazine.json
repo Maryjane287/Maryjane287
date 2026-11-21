@@ -1,0 +1,371 @@
+{
+  "theme": "ocean",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "How their fitness journey started",
+      "example": "A New Year promise that actually stuck",
+      "max": 80,
+      "chapter": "Where it began"
+    },
+    {
+      "id": "s_two",
+      "label": "A time they kept going when it was tough",
+      "example": "Ran in a storm because the plan said so",
+      "max": 80,
+      "chapter": "The hard days"
+    },
+    {
+      "id": "s_three",
+      "label": "Their dream race or goal",
+      "example": "Every major marathon in the world",
+      "max": 80,
+      "chapter": "Finish line"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To be at the finish line with a sign",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "sport": "Sport",
+    "pb": "Personal best",
+    "ritual": "Pre training ritual",
+    "next": "Next goal"
+  },
+  "story": {
+    "title": "{first}: The Champion Story",
+    "hand": "Every mile, every rep, so proud of you, {who}.",
+    "kicker": "The training diary",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Kit bag",
+    "kicker": "From {from}, with love",
+    "title": "Ten things every champion needs",
+    "items": [
+      "Good trainers",
+      "A killer playlist",
+      "A water bottle",
+      "Rest days, honestly",
+      "A training plan",
+      "A cheer squad",
+      "Protein snacks",
+      "Early alarms",
+      "A foam roller",
+      "Medals on the wall",
+      "Bad weather gear",
+      "A reason why"
+    ]
+  },
+  "timeline": {
+    "kicker": "Birthdays through the ages",
+    "title": "A Short History of Birthdays",
+    "items": [
+      [
+        "Ancient Rome",
+        "A day worth a feast",
+        "Romans marked the birthdays of friends and family with feasts, gifts and wishes for good luck."
+      ],
+      [
+        "1700s",
+        "Cake and candles",
+        "In Germany, children's birthday parties called Kinderfeste had a cake with a candle for every year."
+      ],
+      [
+        "1893",
+        "The tune we all know",
+        "Sisters Mildred and Patty Hill published Good Morning to All. Its melody became Happy Birthday to You."
+      ],
+      [
+        "2015",
+        "A song for everyone",
+        "A judge ruled the old copyright claim on Happy Birthday invalid. Now it belongs to all of us."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who} turns {age}",
+      "The most important birthday in the history books. Well, in ours."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words for Your Birthday",
+    "items": [
+      [
+        "Let us celebrate the occasion with wine and sweet words.",
+        "Plautus"
+      ],
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Wrinkles should merely indicate where the smiles have been.",
+        "Mark Twain, Following the Equator, 1897"
+      ],
+      [
+        "A joy that is shared is a joy made double.",
+        "An old English proverb"
+      ]
+    ],
+    "hand": "Every one of them is true. Especially the bit about smiles, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Birthdays",
+    "items": [
+      [
+        "sun",
+        "A lap of the Sun",
+        "Every birthday marks one more trip around the Sun, about 940 million kilometres. Well travelled."
+      ],
+      [
+        "globe",
+        "Birthday twins",
+        "Around twenty million people share your birthday. None of them are quite as good at it as you."
+      ],
+      [
+        "smile",
+        "The party trick",
+        "In a room of just 23 people, there is a better than even chance two of them share a birthday."
+      ],
+      [
+        "music",
+        "The famous song",
+        "Happy Birthday to You is often called the most recognised song in the English language."
+      ],
+      [
+        "clock",
+        "Leap day babies",
+        "People born on 29 February only get a true birthday once every four years."
+      ],
+      [
+        "spark",
+        "Brand new you",
+        "Your skin renews its outer layer every few weeks, so you are always a slightly fresher edition."
+      ]
+    ],
+    "hand": "Science says you are {age}. We say you are timeless, {who}."
+  },
+  "world": {
+    "kicker": "A note from the universe",
+    "title": "Why the World Is Stronger With {who}",
+    "lead": "Because {who} trains, the world got:",
+    "items": [
+      "Proof that anything is possible.",
+      "A finish line hug worth waiting for.",
+      "An inspiration to everyone watching.",
+      "Early mornings, conquered.",
+      "A medal collection to be proud of.",
+      "Strength, inside and out.",
+      "And the one and only {who}."
+    ],
+    "close": "Keep going, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From me to you",
+    "title": "My promises to the champion",
+    "items": [
+      "To be at every finish line.",
+      "To carry the snacks and the spare socks.",
+      "To never moan about early starts. Out loud.",
+      "To make the loudest sign.",
+      "To be proud of you, always."
+    ],
+    "hand": "Your cheer squad, {from}"
+  },
+  "awards": [
+    [
+      "Best laugh in the business",
+      "By a landslide"
+    ],
+    [
+      "Most likely to start the dancing",
+      "Every single time"
+    ],
+    [
+      "Outstanding friendship",
+      "A lifetime achievement"
+    ],
+    [
+      "Star of the year",
+      "Voted {age} years running"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Breakfast in bed",
+      "Coffee included, obviously"
+    ],
+    [
+      "A day of your choosing",
+      "Anywhere, anything"
+    ],
+    [
+      "One night out",
+      "Our treat, your playlist"
+    ],
+    [
+      "A lie in",
+      "Nobody says a word"
+    ]
+  ],
+  "vouchersTitle": "Birthday vouchers for {who}",
+  "cert": "Iconic",
+  "perfume": "Top notes of birthday candles, fizz and laughter. A heart of pure sunshine.",
+  "news": {
+    "edition": "Birthday edition",
+    "headline": "{who} turns {age} and the world celebrates",
+    "lead": "Reports are coming in from everywhere: {who} is {age} today and looking better than ever. Cake has been confirmed.",
+    "weather": "Weather: sunny, with scattered confetti"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every party",
+    "nationality": "Celebrated, everywhere",
+    "job": "Professional legend",
+    "stamps": [
+      "Birthday city",
+      "Party central",
+      "Adored"
+    ]
+  },
+  "movie": {
+    "sub": "A sports drama",
+    "soon": "The sequel: the next finish line",
+    "reviews": [
+      [
+        "Strong, brave and unstoppable",
+        "The Daily Hug"
+      ],
+      [
+        "My favourite athlete",
+        "{from}"
+      ],
+      [
+        "A real champion",
+        "The running club"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "How long is a marathon?",
+      [
+        "26.2 miles",
+        "13.1 miles",
+        "30 miles"
+      ],
+      0
+    ],
+    [
+      "In which country did the original marathon legend take place?",
+      [
+        "Greece",
+        "Italy",
+        "Egypt"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CAKE",
+    "PARTY",
+    "CANDLES",
+    "WISH",
+    "LEGEND",
+    "CHEERS"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Every medal has a story behind it: the early alarms, the rainy runs, the days they almost stopped.",
+      "This magazine tells that story, and celebrates every step.",
+      "{who}, this is your victory lap.",
+      "From everything {from} told us, you are a true champion."
+    ],
+    "wish": "Keep going, {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "Training Day With {first}",
+    "day": [
+      [
+        "5:30",
+        "Alarm",
+        "Up before the sun. No snooze. Mostly."
+      ],
+      [
+        "6:00",
+        "Training",
+        "Rain, wind, whatever. Plan is the plan."
+      ],
+      [
+        "8:00",
+        "Fuel",
+        "Porridge, banana, coffee. Very serious."
+      ],
+      [
+        "18:00",
+        "Stretch",
+        "Foam roller and a lot of groaning."
+      ]
+    ],
+    "night": [
+      "21:00",
+      "Bedtime",
+      "Kit laid out for tomorrow."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The track, the gym or the open road"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Porridge, protein and the occasional pizza"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Just a quick 10k\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Never, ever giving up"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Before sunrise"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Cheer loudly. Feed them carbs. Never ask how far"
+      ]
+    ],
+    "little": [
+      "You always finish what you start.",
+      "You make early mornings look easy.",
+      "You cheer for every runner, not just us.",
+      "You inspire everyone around you."
+    ],
+    "letters": "Little Things Only You Do",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "conceptWho": "friend",
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

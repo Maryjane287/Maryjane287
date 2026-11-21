@@ -1,0 +1,371 @@
+{
+  "theme": "garden",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "How their plant obsession started",
+      "example": "One little succulent on a desk. Then it all got out of hand",
+      "max": 80,
+      "chapter": "Green fingers"
+    },
+    {
+      "id": "s_two",
+      "label": "How they look after people too",
+      "example": "Waters you with tea and good advice",
+      "max": 80,
+      "chapter": "Growing love"
+    },
+    {
+      "id": "s_three",
+      "label": "Their dream garden",
+      "example": "A cottage garden full of roses and herbs",
+      "max": 80,
+      "chapter": "In full bloom"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To water your plants when you are away, properly",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "count": "Plants at home",
+    "oldest": "Oldest plant baby",
+    "rescue": "The rescue",
+    "dream": "Garden dream"
+  },
+  "story": {
+    "title": "The Green World of {first}",
+    "hand": "Everything you touch grows, {who}.",
+    "kicker": "In full bloom",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "The potting shed",
+    "kicker": "From {from}, with love",
+    "title": "Ten things every plant parent needs",
+    "items": [
+      "A good watering can",
+      "A misting bottle",
+      "Fresh compost",
+      "A sunny windowsill",
+      "Plant names",
+      "A care spreadsheet",
+      "Secateurs",
+      "A propagation jar",
+      "A plant shop on speed dial",
+      "Gardening gloves",
+      "Patience",
+      "A greenhouse, one day"
+    ]
+  },
+  "timeline": {
+    "kicker": "Birthdays through the ages",
+    "title": "A Short History of Birthdays",
+    "items": [
+      [
+        "Ancient Rome",
+        "A day worth a feast",
+        "Romans marked the birthdays of friends and family with feasts, gifts and wishes for good luck."
+      ],
+      [
+        "1700s",
+        "Cake and candles",
+        "In Germany, children's birthday parties called Kinderfeste had a cake with a candle for every year."
+      ],
+      [
+        "1893",
+        "The tune we all know",
+        "Sisters Mildred and Patty Hill published Good Morning to All. Its melody became Happy Birthday to You."
+      ],
+      [
+        "2015",
+        "A song for everyone",
+        "A judge ruled the old copyright claim on Happy Birthday invalid. Now it belongs to all of us."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who} turns {age}",
+      "The most important birthday in the history books. Well, in ours."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words for Your Birthday",
+    "items": [
+      [
+        "Let us celebrate the occasion with wine and sweet words.",
+        "Plautus"
+      ],
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Wrinkles should merely indicate where the smiles have been.",
+        "Mark Twain, Following the Equator, 1897"
+      ],
+      [
+        "A joy that is shared is a joy made double.",
+        "An old English proverb"
+      ]
+    ],
+    "hand": "Every one of them is true. Especially the bit about smiles, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Birthdays",
+    "items": [
+      [
+        "sun",
+        "A lap of the Sun",
+        "Every birthday marks one more trip around the Sun, about 940 million kilometres. Well travelled."
+      ],
+      [
+        "globe",
+        "Birthday twins",
+        "Around twenty million people share your birthday. None of them are quite as good at it as you."
+      ],
+      [
+        "smile",
+        "The party trick",
+        "In a room of just 23 people, there is a better than even chance two of them share a birthday."
+      ],
+      [
+        "music",
+        "The famous song",
+        "Happy Birthday to You is often called the most recognised song in the English language."
+      ],
+      [
+        "clock",
+        "Leap day babies",
+        "People born on 29 February only get a true birthday once every four years."
+      ],
+      [
+        "spark",
+        "Brand new you",
+        "Your skin renews its outer layer every few weeks, so you are always a slightly fresher edition."
+      ]
+    ],
+    "hand": "Science says you are {age}. We say you are timeless, {who}."
+  },
+  "world": {
+    "kicker": "A note from the universe",
+    "title": "Why the World Is Greener With {who}",
+    "lead": "Because {who} grows things, the world got:",
+    "items": [
+      "Rescued plants given a second chance.",
+      "Cuttings shared with every friend.",
+      "Homes full of fresh green life.",
+      "Bees and butterflies, very well fed.",
+      "Someone who notices what needs care.",
+      "A jungle where a living room used to be.",
+      "And the one and only {who}."
+    ],
+    "close": "Keep growing, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From me to you",
+    "title": "My promises to the plant parent",
+    "items": [
+      "To never overwater Monty.",
+      "To learn every plant's name.",
+      "To take you to every garden centre.",
+      "To bring cuttings back from holidays.",
+      "To love you as much as you love your plants."
+    ],
+    "hand": "Love, {from}"
+  },
+  "awards": [
+    [
+      "Best laugh in the business",
+      "By a landslide"
+    ],
+    [
+      "Most likely to start the dancing",
+      "Every single time"
+    ],
+    [
+      "Outstanding friendship",
+      "A lifetime achievement"
+    ],
+    [
+      "Star of the year",
+      "Voted {age} years running"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Breakfast in bed",
+      "Coffee included, obviously"
+    ],
+    [
+      "A day of your choosing",
+      "Anywhere, anything"
+    ],
+    [
+      "One night out",
+      "Our treat, your playlist"
+    ],
+    [
+      "A lie in",
+      "Nobody says a word"
+    ]
+  ],
+  "vouchersTitle": "Birthday vouchers for {who}",
+  "cert": "Iconic",
+  "perfume": "Top notes of birthday candles, fizz and laughter. A heart of pure sunshine.",
+  "news": {
+    "edition": "Birthday edition",
+    "headline": "{who} turns {age} and the world celebrates",
+    "lead": "Reports are coming in from everywhere: {who} is {age} today and looking better than ever. Cake has been confirmed.",
+    "weather": "Weather: sunny, with scattered confetti"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every party",
+    "nationality": "Celebrated, everywhere",
+    "job": "Professional legend",
+    "stamps": [
+      "Birthday city",
+      "Party central",
+      "Adored"
+    ]
+  },
+  "movie": {
+    "sub": "A story of growth",
+    "soon": "The sequel: the greenhouse years",
+    "reviews": [
+      [
+        "Lush, green and lovely",
+        "The Daily Hug"
+      ],
+      [
+        "The best gardener I know",
+        "{from}"
+      ],
+      [
+        "Thriving",
+        "Monty the monstera"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "What do plants mainly need to make their food through photosynthesis?",
+      [
+        "Sunlight, water and air",
+        "Only soil",
+        "Darkness"
+      ],
+      0
+    ],
+    [
+      "Which popular houseplant has leaves with natural holes?",
+      [
+        "Monstera",
+        "Cactus",
+        "Aloe vera"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CAKE",
+    "PARTY",
+    "CANDLES",
+    "WISH",
+    "LEGEND",
+    "CHEERS"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Some people keep plants. Others raise them, name them and talk to them every morning.",
+      "This magazine celebrates their green world and the love they pour into everything they grow.",
+      "{who}, this one is in full bloom for you.",
+      "From everything {from} told us, everything you touch grows."
+    ],
+    "wish": "Keep growing, {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "A Day in the Jungle With {first}",
+    "day": [
+      [
+        "7:00",
+        "Rounds",
+        "Says good morning to every plant. By name."
+      ],
+      [
+        "10:00",
+        "Watering",
+        "Each one exactly how it likes it."
+      ],
+      [
+        "14:00",
+        "Garden centre",
+        "Went for compost. Came back with three plants."
+      ],
+      [
+        "17:00",
+        "Repotting",
+        "Soil everywhere. Total joy."
+      ]
+    ],
+    "night": [
+      "21:00",
+      "Bedtime",
+      "One last check on the new baby."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "A sunny windowsill surrounded by green"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Tea and homegrown herbs"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Do not touch, it is propagating\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Bringing any dying plant back to life"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Watering day and weekends"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Ask about their plants. Never overwater"
+      ]
+    ],
+    "little": [
+      "You save every sad plant you see.",
+      "You give cuttings to everyone you love.",
+      "You know exactly what each plant needs.",
+      "You make every home feel alive."
+    ],
+    "letters": "Little Things Only You Do",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "conceptWho": "friend",
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

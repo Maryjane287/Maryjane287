@@ -267,6 +267,8 @@ async function home() {
     ['family', 'Family and baby', /grandparents|like-father|generations|reunion|heritage|aunt|uncle|grandma|baby|mothers|mum-|fathers|daddys|sister|brother-mag|sibling|family|matriarch|pregnancy|kids|year-in-review|twelve-months|first-day-school|cake-smash|twins|little-explorer|junior-sports|little-princess|little-hero|childhood|chosen-with|christening|new-parents|tiny-steps/],
     ['christmas', 'Christmas', /christmas|year-in-review/],
     ['thanks', 'Friends and big moments', /best-friend|girls-club|brotherhood|friend-group|maid-of-honour|friends-on-tour|unfiltered|bridesmaids|teacher|thank-you|retirement|graduation|new-job|new-home|travel|leaving/],
+    ['you', 'All about them', /main-character|self-love|zodiac|fashion-icon|luxury|book-lover|coffee-lover|plant-parent|fitness|foodie/],
+    ['career', 'Career and achievements', /entrepreneur|boss-|doctor|nurse|valedictorian|service-|business-launch|award|new-beginnings|graduation|new-job|retirement/],
     ['memory', 'Pets and memories', /pet|memorial/],
   ];
   const tagsFor = m => FILTERS.filter(([, , re]) => re.test(m.slug)).map(([id]) => id).join(' ');

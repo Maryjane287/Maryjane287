@@ -1,0 +1,371 @@
+{
+  "theme": "night",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "When they first showed their expensive taste",
+      "example": "Asked for a cashmere jumper aged nine",
+      "max": 80,
+      "chapter": "Expensive taste"
+    },
+    {
+      "id": "s_two",
+      "label": "How they treat the people they love",
+      "example": "Like VIPs, every single time",
+      "max": 80,
+      "chapter": "Generous heart"
+    },
+    {
+      "id": "s_three",
+      "label": "The luxury you hope they have one day",
+      "example": "A sunrise breakfast on their own terrace",
+      "max": 80,
+      "chapter": "The dream"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To bring the champagne to every celebration",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "destination": "Dream destination",
+    "indulgence": "Favourite indulgence",
+    "treat": "Always says yes to",
+    "goal": "Big life goal"
+  },
+  "story": {
+    "title": "The Luxe Life of {first}",
+    "hand": "You deserve every beautiful thing, {who}.",
+    "kicker": "Life in the luxe lane",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "The luxe list",
+    "kicker": "From {from}, with love",
+    "title": "Ten luxuries they deserve",
+    "items": [
+      "A suite with a view",
+      "Champagne on ice",
+      "A spa day",
+      "Fresh flowers, weekly",
+      "Silk pillowcases",
+      "A first class seat",
+      "A good perfume",
+      "Breakfast in bed",
+      "A sunset cruise",
+      "The good olive oil",
+      "A cashmere jumper",
+      "Time to enjoy it all"
+    ]
+  },
+  "timeline": {
+    "kicker": "Birthdays through the ages",
+    "title": "A Short History of Birthdays",
+    "items": [
+      [
+        "Ancient Rome",
+        "A day worth a feast",
+        "Romans marked the birthdays of friends and family with feasts, gifts and wishes for good luck."
+      ],
+      [
+        "1700s",
+        "Cake and candles",
+        "In Germany, children's birthday parties called Kinderfeste had a cake with a candle for every year."
+      ],
+      [
+        "1893",
+        "The tune we all know",
+        "Sisters Mildred and Patty Hill published Good Morning to All. Its melody became Happy Birthday to You."
+      ],
+      [
+        "2015",
+        "A song for everyone",
+        "A judge ruled the old copyright claim on Happy Birthday invalid. Now it belongs to all of us."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who} turns {age}",
+      "The most important birthday in the history books. Well, in ours."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words for Your Birthday",
+    "items": [
+      [
+        "Let us celebrate the occasion with wine and sweet words.",
+        "Plautus"
+      ],
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Wrinkles should merely indicate where the smiles have been.",
+        "Mark Twain, Following the Equator, 1897"
+      ],
+      [
+        "A joy that is shared is a joy made double.",
+        "An old English proverb"
+      ]
+    ],
+    "hand": "Every one of them is true. Especially the bit about smiles, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Birthdays",
+    "items": [
+      [
+        "sun",
+        "A lap of the Sun",
+        "Every birthday marks one more trip around the Sun, about 940 million kilometres. Well travelled."
+      ],
+      [
+        "globe",
+        "Birthday twins",
+        "Around twenty million people share your birthday. None of them are quite as good at it as you."
+      ],
+      [
+        "smile",
+        "The party trick",
+        "In a room of just 23 people, there is a better than even chance two of them share a birthday."
+      ],
+      [
+        "music",
+        "The famous song",
+        "Happy Birthday to You is often called the most recognised song in the English language."
+      ],
+      [
+        "clock",
+        "Leap day babies",
+        "People born on 29 February only get a true birthday once every four years."
+      ],
+      [
+        "spark",
+        "Brand new you",
+        "Your skin renews its outer layer every few weeks, so you are always a slightly fresher edition."
+      ]
+    ],
+    "hand": "Science says you are {age}. We say you are timeless, {who}."
+  },
+  "world": {
+    "kicker": "A note from the universe",
+    "title": "Why Life Is More Glamorous With {who}",
+    "lead": "Because {who} has expensive taste, the world got:",
+    "items": [
+      "The best restaurant recommendations.",
+      "Champagne at every celebration.",
+      "Generosity with a capital G.",
+      "Holidays worth the envy.",
+      "Someone who treats friends like royalty.",
+      "Big dreams with five stars.",
+      "And the one and only {who}."
+    ],
+    "close": "Here is to the luxe life, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From me to you",
+    "title": "My promises to you",
+    "items": [
+      "To toast every win with something sparkling.",
+      "To plan the dream holiday together.",
+      "To remind you that you have earned it.",
+      "To treat you like the VIP you are.",
+      "To love you in first class and economy."
+    ],
+    "hand": "Love, {from}"
+  },
+  "awards": [
+    [
+      "Best laugh in the business",
+      "By a landslide"
+    ],
+    [
+      "Most likely to start the dancing",
+      "Every single time"
+    ],
+    [
+      "Outstanding friendship",
+      "A lifetime achievement"
+    ],
+    [
+      "Star of the year",
+      "Voted {age} years running"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Breakfast in bed",
+      "Coffee included, obviously"
+    ],
+    [
+      "A day of your choosing",
+      "Anywhere, anything"
+    ],
+    [
+      "One night out",
+      "Our treat, your playlist"
+    ],
+    [
+      "A lie in",
+      "Nobody says a word"
+    ]
+  ],
+  "vouchersTitle": "Birthday vouchers for {who}",
+  "cert": "Iconic",
+  "perfume": "Top notes of birthday candles, fizz and laughter. A heart of pure sunshine.",
+  "news": {
+    "edition": "Birthday edition",
+    "headline": "{who} turns {age} and the world celebrates",
+    "lead": "Reports are coming in from everywhere: {who} is {age} today and looking better than ever. Cake has been confirmed.",
+    "weather": "Weather: sunny, with scattered confetti"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every party",
+    "nationality": "Celebrated, everywhere",
+    "job": "Professional legend",
+    "stamps": [
+      "Birthday city",
+      "Party central",
+      "Adored"
+    ]
+  },
+  "movie": {
+    "sub": "A glamorous life story",
+    "soon": "The sequel: the villa years",
+    "reviews": [
+      [
+        "Five stars, every scene",
+        "The Daily Hug"
+      ],
+      [
+        "Living their best life",
+        "{from}"
+      ],
+      [
+        "Pure glamour",
+        "The group chat"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Which French region gives its name to the famous sparkling wine?",
+      [
+        "Champagne",
+        "Burgundy",
+        "Provence"
+      ],
+      0
+    ],
+    [
+      "Which coast in Italy is famous for its clifftop villages like Positano?",
+      [
+        "The Amalfi Coast",
+        "The Riviera Maya",
+        "The Gold Coast"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CAKE",
+    "PARTY",
+    "CANDLES",
+    "WISH",
+    "LEGEND",
+    "CHEERS"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Some people were simply born for the finer things, and for sharing them generously.",
+      "This magazine celebrates their luxe life, and the even more glamorous one still to come.",
+      "{who}, this one is first class.",
+      "From everything {from} told us, you deserve it all."
+    ],
+    "wish": "Here is to the luxe life, {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "A Five Star Day With {first}",
+    "day": [
+      [
+        "9:00",
+        "Breakfast",
+        "In bed, with fresh orange juice and no rush."
+      ],
+      [
+        "11:00",
+        "The spa",
+        "Robe on. Phone off. Bliss."
+      ],
+      [
+        "15:00",
+        "Shopping",
+        "Just looking. Then not just looking."
+      ],
+      [
+        "20:00",
+        "Dinner",
+        "The best table, the good champagne."
+      ]
+    ],
+    "night": [
+      "23:00",
+      "Bedtime",
+      "Silk pillowcase. Dreaming of villas."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "A sun lounger with a view"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Oysters, champagne and anything truffle"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Shall we just get the bottle?\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Finding the best hotel in any city"
+      ],
+      [
+        "clock",
+        "Most active",
+        "On holiday and at brunch"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Spoil them. Book the nice place. Toast them often"
+      ]
+    ],
+    "little": [
+      "You make every occasion feel special.",
+      "You always pick the best restaurant.",
+      "You treat your friends like VIPs.",
+      "You make dreaming big look easy."
+    ],
+    "letters": "Little Things Only You Do",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "conceptWho": "friend",
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

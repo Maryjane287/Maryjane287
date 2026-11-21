@@ -1,0 +1,371 @@
+{
+  "theme": "garden",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "How they fell in love with reading",
+      "example": "Hid under the covers with a torch every night",
+      "max": 80,
+      "chapter": "First chapter"
+    },
+    {
+      "id": "s_two",
+      "label": "A book they recommend to everyone",
+      "example": "The one about the lighthouse, it made us all cry",
+      "max": 80,
+      "chapter": "Between the pages"
+    },
+    {
+      "id": "s_three",
+      "label": "A book you wish they would write",
+      "example": "Their own story, every bit as good",
+      "max": 80,
+      "chapter": "The next chapter"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To never interrupt you mid chapter",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "book": "The book that changed them",
+    "character": "Favourite character",
+    "nook": "Reading spot",
+    "genre": "Favourite genre"
+  },
+  "story": {
+    "title": "The Reading Life of {first}",
+    "hand": "Your story is my favourite, {who}.",
+    "kicker": "A life in books",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "The reading list",
+    "kicker": "From {from}, with love",
+    "title": "Ten things every book lover needs",
+    "items": [
+      "A to be read pile",
+      "A cosy blanket",
+      "A cup of tea going cold",
+      "A good bookmark",
+      "A library card",
+      "A window seat",
+      "A book club",
+      "A reading lamp",
+      "A bookshop on holiday",
+      "A bag big enough for a book",
+      "A rainy Sunday",
+      "Just one more chapter"
+    ]
+  },
+  "timeline": {
+    "kicker": "Birthdays through the ages",
+    "title": "A Short History of Birthdays",
+    "items": [
+      [
+        "Ancient Rome",
+        "A day worth a feast",
+        "Romans marked the birthdays of friends and family with feasts, gifts and wishes for good luck."
+      ],
+      [
+        "1700s",
+        "Cake and candles",
+        "In Germany, children's birthday parties called Kinderfeste had a cake with a candle for every year."
+      ],
+      [
+        "1893",
+        "The tune we all know",
+        "Sisters Mildred and Patty Hill published Good Morning to All. Its melody became Happy Birthday to You."
+      ],
+      [
+        "2015",
+        "A song for everyone",
+        "A judge ruled the old copyright claim on Happy Birthday invalid. Now it belongs to all of us."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who} turns {age}",
+      "The most important birthday in the history books. Well, in ours."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words for Your Birthday",
+    "items": [
+      [
+        "Let us celebrate the occasion with wine and sweet words.",
+        "Plautus"
+      ],
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Wrinkles should merely indicate where the smiles have been.",
+        "Mark Twain, Following the Equator, 1897"
+      ],
+      [
+        "A joy that is shared is a joy made double.",
+        "An old English proverb"
+      ]
+    ],
+    "hand": "Every one of them is true. Especially the bit about smiles, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Birthdays",
+    "items": [
+      [
+        "sun",
+        "A lap of the Sun",
+        "Every birthday marks one more trip around the Sun, about 940 million kilometres. Well travelled."
+      ],
+      [
+        "globe",
+        "Birthday twins",
+        "Around twenty million people share your birthday. None of them are quite as good at it as you."
+      ],
+      [
+        "smile",
+        "The party trick",
+        "In a room of just 23 people, there is a better than even chance two of them share a birthday."
+      ],
+      [
+        "music",
+        "The famous song",
+        "Happy Birthday to You is often called the most recognised song in the English language."
+      ],
+      [
+        "clock",
+        "Leap day babies",
+        "People born on 29 February only get a true birthday once every four years."
+      ],
+      [
+        "spark",
+        "Brand new you",
+        "Your skin renews its outer layer every few weeks, so you are always a slightly fresher edition."
+      ]
+    ],
+    "hand": "Science says you are {age}. We say you are timeless, {who}."
+  },
+  "world": {
+    "kicker": "A note from the universe",
+    "title": "Why the World Is Better With {who} in It",
+    "lead": "Because {who} reads, the world got:",
+    "items": [
+      "The best book recommendations.",
+      "A thousand stories retold.",
+      "Someone who knows every ending.",
+      "Bookshops kept in business.",
+      "Empathy learned from every page.",
+      "A friend who lends the good ones.",
+      "And the one and only {who}."
+    ],
+    "close": "Keep reading, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From me to you",
+    "title": "My promises to the reader",
+    "items": [
+      "To give back every book I borrow.",
+      "To never spoil an ending.",
+      "To read the one you keep recommending.",
+      "To find you the best bookshops.",
+      "To love you every chapter."
+    ],
+    "hand": "Love, {from}"
+  },
+  "awards": [
+    [
+      "Best laugh in the business",
+      "By a landslide"
+    ],
+    [
+      "Most likely to start the dancing",
+      "Every single time"
+    ],
+    [
+      "Outstanding friendship",
+      "A lifetime achievement"
+    ],
+    [
+      "Star of the year",
+      "Voted {age} years running"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Breakfast in bed",
+      "Coffee included, obviously"
+    ],
+    [
+      "A day of your choosing",
+      "Anywhere, anything"
+    ],
+    [
+      "One night out",
+      "Our treat, your playlist"
+    ],
+    [
+      "A lie in",
+      "Nobody says a word"
+    ]
+  ],
+  "vouchersTitle": "Birthday vouchers for {who}",
+  "cert": "Iconic",
+  "perfume": "Top notes of birthday candles, fizz and laughter. A heart of pure sunshine.",
+  "news": {
+    "edition": "Birthday edition",
+    "headline": "{who} turns {age} and the world celebrates",
+    "lead": "Reports are coming in from everywhere: {who} is {age} today and looking better than ever. Cake has been confirmed.",
+    "weather": "Weather: sunny, with scattered confetti"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every party",
+    "nationality": "Celebrated, everywhere",
+    "job": "Professional legend",
+    "stamps": [
+      "Birthday city",
+      "Party central",
+      "Adored"
+    ]
+  },
+  "movie": {
+    "sub": "A literary adaptation",
+    "soon": "The sequel: the next chapter",
+    "reviews": [
+      [
+        "A real page turner",
+        "The Daily Hug"
+      ],
+      [
+        "My favourite reader",
+        "{from}"
+      ],
+      [
+        "Better than the book",
+        "The book club"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Who wrote Pride and Prejudice?",
+      [
+        "Jane Austen",
+        "Charlotte Bronte",
+        "Virginia Woolf"
+      ],
+      0
+    ],
+    [
+      "What is a person who loves books sometimes called?",
+      [
+        "A bibliophile",
+        "A philatelist",
+        "An oenophile"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CAKE",
+    "PARTY",
+    "CANDLES",
+    "WISH",
+    "LEGEND",
+    "CHEERS"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "A reader lives a thousand lives. This magazine is about the one that matters most: theirs.",
+      "Their books, their characters and the reading nook that is all their own.",
+      "{who}, this is your story.",
+      "From everything {from} told us, it is a page turner."
+    ],
+    "wish": "Keep reading, {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "A Perfect Reading Day",
+    "day": [
+      [
+        "8:00",
+        "First chapter",
+        "Tea in bed, book open before the curtains."
+      ],
+      [
+        "11:00",
+        "The bookshop",
+        "Went in for one. Came out with four."
+      ],
+      [
+        "14:00",
+        "The nook",
+        "Blanket, window, rain. Perfect."
+      ],
+      [
+        "18:00",
+        "Book club",
+        "Strong opinions and stronger wine."
+      ]
+    ],
+    "night": [
+      "00:30",
+      "Bedtime",
+      "Just one more chapter. Then another."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "A window seat with a blanket"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Tea, gone cold, and biscuits"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Just let me finish this chapter\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Reading a whole book in one sitting"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Rainy afternoons and late at night"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Do not interrupt. Bring tea. Recommend a book"
+      ]
+    ],
+    "little": [
+      "You always have a book in your bag.",
+      "You cry at the best bits and do not hide it.",
+      "You remember every character's name.",
+      "You lend books like they are hugs."
+    ],
+    "letters": "Little Things Only You Do",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "conceptWho": "friend",
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}
