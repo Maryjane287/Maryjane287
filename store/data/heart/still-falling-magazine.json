@@ -1,0 +1,369 @@
+{
+  "theme": "ruby",
+  "fields": [
+    {
+      "id": "s_heard",
+      "label": "A memory from your early years together",
+      "example": "A tiny flat, one saucepan and dancing to the radio",
+      "max": 80,
+      "chapter": "The early days"
+    },
+    {
+      "id": "s_knew",
+      "label": "A hard time you got through together",
+      "example": "The year we lost my dad, and you held the whole family up",
+      "max": 80,
+      "chapter": "The storm we weathered"
+    },
+    {
+      "id": "s_guess",
+      "label": "A ritual you have kept for years",
+      "example": "Tea in bed every Sunday, without fail",
+      "max": 80,
+      "chapter": "Our little rituals"
+    },
+    {
+      "id": "s_promise",
+      "label": "A wish for the years ahead",
+      "example": "To keep falling for you, year after year",
+      "max": 70
+    }
+  ],
+  "story": {
+    "title": "All the Years, All the Love",
+    "hand": "After all these years, {who} are still falling.",
+    "kicker": "Our story",
+    "legend": "A few more things about your years together",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them."
+  },
+  "labels": {
+    "years": "Years together",
+    "then": "What I loved first",
+    "now": "What I love most now",
+    "secret": "The secret to lasting love",
+    "words": "In three words"
+  },
+  "picks": {
+    "legend": "Things you love more now than ever",
+    "kicker": "From {from}, with love",
+    "title": "Ten things I love more every year",
+    "items": [
+      "Your hand in mine",
+      "Your laugh, after all this time",
+      "Your patience with me",
+      "Our quiet evenings",
+      "How you still make me tea",
+      "The family we made",
+      "Your stories, even the repeats",
+      "How you look after everyone",
+      "Our silly rituals",
+      "How you still dance with me",
+      "Your kindness",
+      "That we are still us"
+    ]
+  },
+  "world": {
+    "kicker": "A toast to the years",
+    "title": "Why the World Is Better Because You Two Stayed",
+    "lead": "Because {who} kept choosing each other, the world got:",
+    "items": [
+      "A family built on love.",
+      "Proof that real love lasts.",
+      "A home everyone loves to visit.",
+      "Stories for the grandchildren.",
+      "A love that inspires everyone around them.",
+      "Years of laughter, still going.",
+      "And the one and only {who}."
+    ],
+    "close": "Here is to all the years, {who}, and all the years to come."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "For the years ahead",
+    "title": "Promises, all over again",
+    "items": [
+      "To keep holding your hand, everywhere.",
+      "To laugh at the same old jokes.",
+      "To make you tea in bed on Sundays.",
+      "To take the trip we keep talking about.",
+      "To fall for you again, every single year."
+    ],
+    "hand": "Still falling for you, {from}"
+  },
+  "movie": {
+    "sub": "A love that lasts",
+    "soon": "Still showing, after all these years",
+    "reviews": [
+      [
+        "The love story everyone hopes for",
+        "The Daily Hug"
+      ],
+      [
+        "Better with every year",
+        "{from}"
+      ],
+      [
+        "A classic, simply",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Which wedding anniversary is traditionally the ruby one?",
+      [
+        "The fortieth",
+        "The twentieth",
+        "The sixtieth"
+      ],
+      0
+    ],
+    [
+      "Which wedding anniversary is traditionally the pearl one?",
+      [
+        "The thirtieth",
+        "The fifteenth",
+        "The fiftieth"
+      ],
+      0
+    ]
+  ],
+  "note": {
+    "title": "Why long love deserves a magazine",
+    "contents": "A note for you both",
+    "paras": [
+      "New love gets all the songs. Long love gets far fewer. We think that is the wrong way round.",
+      "Staying in love through the years, the hard ones and the happy ones, is the real romance.",
+      "{who}, this magazine celebrates all of it: the early days, the storms and the little rituals.",
+      "From everything {from} told us, you are still falling for each other."
+    ],
+    "wish": "Still falling, {who}."
+  },
+  "concepts": "couple",
+  "own": {
+    "dayTitle": "A Day in the Life of {first}",
+    "day": [
+      [
+        "7:00",
+        "Tea in bed",
+        "The same two mugs, every morning for years."
+      ],
+      [
+        "10:00",
+        "The crossword",
+        "One reads the clues. The other knows the answers."
+      ],
+      [
+        "15:00",
+        "A walk",
+        "Holding hands, the same as on the first walk."
+      ],
+      [
+        "19:00",
+        "Dinner",
+        "A favourite recipe, made a thousand times, perfect every time."
+      ]
+    ],
+    "night": [
+      "22:30",
+      "Goodnight",
+      "\"Love you.\" \"Love you more.\" Every night, no exceptions."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "Two armchairs side by side, slightly too close"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Tea, toast and the same Sunday roast for years"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Love you more.\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Finishing each other's sentences, and stories"
+      ],
+      [
+        "clock",
+        "Most active",
+        "At family gatherings, telling the old stories"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Give them a quiet evening, a good film and each other"
+      ]
+    ],
+    "little": [
+      "You still save me the last biscuit.",
+      "You still reach for my hand at night.",
+      "You still laugh at the joke from our first year.",
+      "You still look at me like you did back then."
+    ],
+    "letters": "Little Things That Never Changed"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "timeline": {
+    "kicker": "Proposals through the ages",
+    "title": "A Short History of Saying Yes",
+    "items": [
+      [
+        "Ancient Rome",
+        "A ring to promise",
+        "Romans marked a promise to marry with a ring, sometimes a simple band of iron."
+      ],
+      [
+        "1477",
+        "A famous diamond",
+        "Archduke Maximilian gave Mary of Burgundy a diamond ring, and a sparkly tradition began."
+      ],
+      [
+        "1839",
+        "The queen proposes",
+        "As queen, Victoria had to do the asking. She proposed to Prince Albert, and he happily said yes."
+      ],
+      [
+        "1947",
+        "A diamond is forever",
+        "A copywriter dreamed up the famous line, and it became one of the best known slogans ever written."
+      ]
+    ],
+    "today": [
+      "{year}",
+      "{who}",
+      "The newest yes in the history of yeses. And our favourite by far."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Beautiful Words for New Beginnings",
+    "items": [
+      [
+        "Yes I said yes I will Yes.",
+        "James Joyce, Ulysses, 1922"
+      ],
+      [
+        "I have found the one whom my soul loves.",
+        "Song of Solomon 3:4"
+      ],
+      [
+        "Two are better than one.",
+        "Ecclesiastes 4:9"
+      ],
+      [
+        "Well begun is half done.",
+        "An old proverb"
+      ]
+    ],
+    "hand": "Lovely words, all of them. Ours are simpler: we are so happy for you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "Fun Facts for the Newly Engaged",
+    "items": [
+      [
+        "ring",
+        "The vein of love",
+        "Rings go on the fourth finger because people once believed a vein ran from it straight to the heart."
+      ],
+      [
+        "star",
+        "Older than dinosaurs",
+        "Most diamonds formed deep underground well over a billion years ago. Talk about lasting."
+      ],
+      [
+        "key",
+        "Hard to break",
+        "Diamond is the hardest natural material on Earth. A very good sign for a promise."
+      ],
+      [
+        "paw",
+        "Penguin proposals",
+        "Some penguins woo their partner with the perfect pebble for the nest. The original ring."
+      ],
+      [
+        "music",
+        "Dance first",
+        "Albatrosses perform long courtship dances, and often stay with one partner for life."
+      ],
+      [
+        "pulse",
+        "Nerves or joy",
+        "Nerves and excitement feel almost the same in the body: racing heart, quick breath, shaky hands."
+      ]
+    ],
+    "hand": "Science can explain the sparkle. It cannot explain how perfect {who} are together."
+  },
+  "awards": [
+    [
+      "Proposal of the year",
+      "By a landslide"
+    ],
+    [
+      "Best kept secret",
+      "Almost nobody knew"
+    ],
+    [
+      "Most adorable couple",
+      "Unanimous"
+    ],
+    [
+      "Bravest question asked",
+      "And the best answer"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One planning night",
+      "We bring snacks and big ideas"
+    ],
+    [
+      "A cake tasting buddy",
+      "We will try every slice"
+    ],
+    [
+      "One stress free evening",
+      "No wedding talk allowed"
+    ],
+    [
+      "First dance practice",
+      "We promise not to laugh"
+    ]
+  ],
+  "vouchersTitle": "Engagement vouchers for {who}",
+  "cert": "Meant to Be",
+  "certLine": "are officially, undeniably and forever",
+  "perfume": "Top notes of happy tears and champagne, with a sparkling heart of yes.",
+  "news": {
+    "edition": "Engagement edition",
+    "headline": "{who} are engaged",
+    "lead": "Friends and family are celebrating after {who} confirmed the news everyone was hoping for: there will be a wedding.",
+    "weather": "Weather: sunny, with a 100% chance of happy tears"
+  },
+  "passport": {
+    "kicker": "Next stop, the wedding",
+    "head": "Passport to forever",
+    "nationality": "Engaged, everywhere",
+    "job": "Happily engaged",
+    "stamps": [
+      "The proposal",
+      "The planning",
+      "The big day"
+    ]
+  },
+  "words": [
+    "RING",
+    "YES",
+    "LOVE",
+    "DIAMOND",
+    "FOREVER",
+    "ENGAGED"
+  ]
+}

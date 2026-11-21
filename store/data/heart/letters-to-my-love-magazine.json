@@ -1,0 +1,369 @@
+{
+  "theme": "ruby",
+  "fields": [
+    {
+      "id": "s_heard",
+      "label": "A line for the hard days",
+      "example": "When it all goes wrong, I am still on your side, always",
+      "max": 90,
+      "chapter": "A letter for the hard days"
+    },
+    {
+      "id": "s_knew",
+      "label": "A line about how you feel today",
+      "example": "Today I love you more than yesterday, and that keeps happening",
+      "max": 90,
+      "chapter": "A letter for right now"
+    },
+    {
+      "id": "s_guess",
+      "label": "A line for ten years from now",
+      "example": "I hope we are still laughing at the same silly things",
+      "max": 90,
+      "chapter": "A letter I will open in ten years"
+    },
+    {
+      "id": "s_promise",
+      "label": "Your sign off",
+      "example": "Yours, always and completely",
+      "max": 70
+    }
+  ],
+  "story": {
+    "title": "Letters to My Love",
+    "hand": "Every word is true, {who}.",
+    "kicker": "The letters",
+    "legend": "A few more letters",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them."
+  },
+  "labels": {
+    "since": "Together since",
+    "dear": "My love",
+    "first": "The day we met",
+    "future": "Our future",
+    "words": "In three words"
+  },
+  "picks": {
+    "legend": "Things you would write a letter about",
+    "kicker": "From {from}, with love",
+    "title": "Ten things I could write letters about",
+    "items": [
+      "Your laugh",
+      "The way you hold me",
+      "Our first kiss",
+      "The night we talked until dawn",
+      "How you take care of me",
+      "Your hands",
+      "The home we made",
+      "The way you say goodnight",
+      "How you believe in me",
+      "Our quiet Sundays",
+      "Every adventure",
+      "The future with you"
+    ]
+  },
+  "world": {
+    "kicker": "Love, in writing",
+    "title": "Why the World Needs More Love Letters",
+    "lead": "Because {who} wrote it all down, the world got:",
+    "items": [
+      "Words that will be read for years.",
+      "Proof that love is worth saying out loud.",
+      "A keepsake for the grandchildren.",
+      "Romance, the old fashioned way.",
+      "A reminder for the hard days.",
+      "Pages full of happy tears.",
+      "And the one and only {who}."
+    ],
+    "close": "With all our love, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From me to you",
+    "title": "Promises, in writing",
+    "items": [
+      "To tell you I love you, every day.",
+      "To write you a letter every anniversary.",
+      "To keep every note you ever leave me.",
+      "To say it out loud, even when it is hard.",
+      "To love you for the rest of my life."
+    ],
+    "hand": "All my love, in ink, {from}"
+  },
+  "movie": {
+    "sub": "A love story in letters",
+    "soon": "More letters coming soon",
+    "reviews": [
+      [
+        "Impossibly tender",
+        "The Daily Hug"
+      ],
+      [
+        "I read it every night",
+        "{from}"
+      ],
+      [
+        "Romance at its most beautiful",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Which famous composer wrote letters to his \"Immortal Beloved\"?",
+      [
+        "Beethoven",
+        "Mozart",
+        "Bach"
+      ],
+      0
+    ],
+    [
+      "Roughly how old is the oldest known love poem?",
+      [
+        "About 4,000 years",
+        "About 400 years",
+        "About 40 years"
+      ],
+      0
+    ]
+  ],
+  "note": {
+    "title": "Why love letters still matter",
+    "contents": "A note for you both",
+    "paras": [
+      "Texts get lost. Letters get kept, in shoeboxes and drawers, and read again years later.",
+      "So we made your love letters into something beautiful enough to keep forever.",
+      "{who}, every word in here was written for you.",
+      "From everything {from} told us, these letters were a long time coming."
+    ],
+    "wish": "With all my love, {who}."
+  },
+  "concepts": "couple",
+  "own": {
+    "dayTitle": "A Day in Love Letters",
+    "day": [
+      [
+        "7:00",
+        "Morning note",
+        "A sticky note on the kettle: \"Have a good day, beautiful.\""
+      ],
+      [
+        "12:00",
+        "Midday",
+        "A text that says more than it seems to."
+      ],
+      [
+        "18:00",
+        "Coming home",
+        "A hug at the door that says everything."
+      ],
+      [
+        "21:00",
+        "Evening",
+        "A quiet sofa, two cups of tea, nothing needing to be said."
+      ]
+    ],
+    "night": [
+      "23:00",
+      "The last word",
+      "\"Goodnight, my love.\" The best letter of all."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "Somewhere quiet, with a pen and a cup of tea"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Tea, chocolate and old letters"
+      ],
+      [
+        "music",
+        "Call",
+        "\"I love you, and here is why.\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Saying in writing what is hard to say out loud"
+      ],
+      [
+        "clock",
+        "Most active",
+        "On anniversaries, and late at night"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Read the letters slowly. Keep them forever"
+      ]
+    ],
+    "little": [
+      "You keep every note I have ever left you.",
+      "You read my texts twice and pretend you did not.",
+      "You still write my name on my coffee.",
+      "You say \"I love you\" with every cup of tea."
+    ],
+    "letters": "Little Love Letters You Did Not Know You Wrote"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "timeline": {
+    "kicker": "Proposals through the ages",
+    "title": "A Short History of Saying Yes",
+    "items": [
+      [
+        "Ancient Rome",
+        "A ring to promise",
+        "Romans marked a promise to marry with a ring, sometimes a simple band of iron."
+      ],
+      [
+        "1477",
+        "A famous diamond",
+        "Archduke Maximilian gave Mary of Burgundy a diamond ring, and a sparkly tradition began."
+      ],
+      [
+        "1839",
+        "The queen proposes",
+        "As queen, Victoria had to do the asking. She proposed to Prince Albert, and he happily said yes."
+      ],
+      [
+        "1947",
+        "A diamond is forever",
+        "A copywriter dreamed up the famous line, and it became one of the best known slogans ever written."
+      ]
+    ],
+    "today": [
+      "{year}",
+      "{who}",
+      "The newest yes in the history of yeses. And our favourite by far."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Beautiful Words for New Beginnings",
+    "items": [
+      [
+        "Yes I said yes I will Yes.",
+        "James Joyce, Ulysses, 1922"
+      ],
+      [
+        "I have found the one whom my soul loves.",
+        "Song of Solomon 3:4"
+      ],
+      [
+        "Two are better than one.",
+        "Ecclesiastes 4:9"
+      ],
+      [
+        "Well begun is half done.",
+        "An old proverb"
+      ]
+    ],
+    "hand": "Lovely words, all of them. Ours are simpler: we are so happy for you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "Fun Facts for the Newly Engaged",
+    "items": [
+      [
+        "ring",
+        "The vein of love",
+        "Rings go on the fourth finger because people once believed a vein ran from it straight to the heart."
+      ],
+      [
+        "star",
+        "Older than dinosaurs",
+        "Most diamonds formed deep underground well over a billion years ago. Talk about lasting."
+      ],
+      [
+        "key",
+        "Hard to break",
+        "Diamond is the hardest natural material on Earth. A very good sign for a promise."
+      ],
+      [
+        "paw",
+        "Penguin proposals",
+        "Some penguins woo their partner with the perfect pebble for the nest. The original ring."
+      ],
+      [
+        "music",
+        "Dance first",
+        "Albatrosses perform long courtship dances, and often stay with one partner for life."
+      ],
+      [
+        "pulse",
+        "Nerves or joy",
+        "Nerves and excitement feel almost the same in the body: racing heart, quick breath, shaky hands."
+      ]
+    ],
+    "hand": "Science can explain the sparkle. It cannot explain how perfect {who} are together."
+  },
+  "awards": [
+    [
+      "Proposal of the year",
+      "By a landslide"
+    ],
+    [
+      "Best kept secret",
+      "Almost nobody knew"
+    ],
+    [
+      "Most adorable couple",
+      "Unanimous"
+    ],
+    [
+      "Bravest question asked",
+      "And the best answer"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One planning night",
+      "We bring snacks and big ideas"
+    ],
+    [
+      "A cake tasting buddy",
+      "We will try every slice"
+    ],
+    [
+      "One stress free evening",
+      "No wedding talk allowed"
+    ],
+    [
+      "First dance practice",
+      "We promise not to laugh"
+    ]
+  ],
+  "vouchersTitle": "Engagement vouchers for {who}",
+  "cert": "Meant to Be",
+  "certLine": "are officially, undeniably and forever",
+  "perfume": "Top notes of happy tears and champagne, with a sparkling heart of yes.",
+  "news": {
+    "edition": "Engagement edition",
+    "headline": "{who} are engaged",
+    "lead": "Friends and family are celebrating after {who} confirmed the news everyone was hoping for: there will be a wedding.",
+    "weather": "Weather: sunny, with a 100% chance of happy tears"
+  },
+  "passport": {
+    "kicker": "Next stop, the wedding",
+    "head": "Passport to forever",
+    "nationality": "Engaged, everywhere",
+    "job": "Happily engaged",
+    "stamps": [
+      "The proposal",
+      "The planning",
+      "The big day"
+    ]
+  },
+  "words": [
+    "RING",
+    "YES",
+    "LOVE",
+    "DIAMOND",
+    "FOREVER",
+    "ENGAGED"
+  ]
+}

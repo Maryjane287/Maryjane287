@@ -1,0 +1,369 @@
+{
+  "theme": "garden",
+  "fields": [
+    {
+      "id": "s_heard",
+      "label": "The moment you first imagined a future together",
+      "example": "Arguing happily about paint colours for a house we did not own",
+      "max": 80,
+      "chapter": "How we got here"
+    },
+    {
+      "id": "s_knew",
+      "label": "Something you have already built together",
+      "example": "A Sunday routine, a shared playlist and a very spoilt cat",
+      "max": 80,
+      "chapter": "What we have built already"
+    },
+    {
+      "id": "s_guess",
+      "label": "Where you see yourselves in ten years",
+      "example": "Still dancing in the kitchen, with a slightly bigger kitchen",
+      "max": 80,
+      "chapter": "In ten years we will"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise for your forever",
+      "example": "To always come home to each other",
+      "max": 70
+    }
+  ],
+  "story": {
+    "title": "The Life We Are Building",
+    "hand": "Forever looks good on you, {who}.",
+    "kicker": "Our story",
+    "legend": "A few more things about your future",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them."
+  },
+  "labels": {
+    "year": "Forever starts",
+    "promise": "The big promise",
+    "dream": "Our dream future",
+    "first": "First on the bucket list",
+    "words": "In three words"
+  },
+  "picks": {
+    "legend": "Things you want to do together",
+    "kicker": "Our bucket list",
+    "title": "Ten things we will do together",
+    "items": [
+      "See the northern lights",
+      "Plant a tree and watch it grow",
+      "Learn to cook one perfect dish",
+      "Take the long road trip",
+      "Dance at every wedding",
+      "Grow tomatoes, badly",
+      "Get a dog, then another dog",
+      "Watch the sunrise somewhere new",
+      "Renew our promises one day",
+      "Keep a jar of our best days",
+      "Laugh until we are ninety",
+      "Choose each other, every day"
+    ]
+  },
+  "world": {
+    "kicker": "A toast to your future",
+    "title": "Why the Future Looks Brighter With You Two In It",
+    "lead": "Because {who} chose forever, the world got:",
+    "items": [
+      "A home full of laughter.",
+      "A love that makes others believe in love.",
+      "Big dreams, shared.",
+      "A team that can handle anything.",
+      "A front door always open to friends.",
+      "A future worth celebrating.",
+      "And the one and only {who}."
+    ],
+    "close": "Here is to forever, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From me to you",
+    "title": "My promises for our forever",
+    "items": [
+      "To build a home where you always feel safe.",
+      "To dream big with you, and make plans real.",
+      "To hold your hand through every hard bit.",
+      "To keep you laughing, every single day.",
+      "To choose you, again and again, forever."
+    ],
+    "hand": "Forever yours, {from}"
+  },
+  "movie": {
+    "sub": "A love story about the future",
+    "soon": "Forever, starting now",
+    "reviews": [
+      [
+        "Hopeful, warm and deeply romantic",
+        "The Daily Hug"
+      ],
+      [
+        "The best decision I ever made",
+        "{from}"
+      ],
+      [
+        "A love story with a happy ever after",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Which wedding anniversary is traditionally celebrated with silver?",
+      [
+        "The twenty fifth",
+        "The tenth",
+        "The fortieth"
+      ],
+      0
+    ],
+    [
+      "In which ancient culture did couples first exchange rings as a promise of forever?",
+      [
+        "Ancient Egypt",
+        "The Vikings",
+        "The Aztecs"
+      ],
+      0
+    ]
+  ],
+  "note": {
+    "title": "Why forever deserves a magazine",
+    "contents": "A note for you both",
+    "paras": [
+      "Some promises are too big for a card. Moving in, a new home, a vow, a decision that this is it.",
+      "We wanted to capture that moment of starting: the hope, the plans and the slightly terrifying excitement.",
+      "{who}, this is the first chapter of your forever.",
+      "From everything {from} told us, it is going to be a beautiful one."
+    ],
+    "wish": "Forever starts now, {who}."
+  },
+  "concepts": "couple",
+  "own": {
+    "dayTitle": "A Day in Our Forever",
+    "day": [
+      [
+        "7:30",
+        "Two coffees",
+        "One kitchen, two mugs, a shared playlist."
+      ],
+      [
+        "10:00",
+        "Plans",
+        "A list of dreams on the fridge, slowly being ticked off."
+      ],
+      [
+        "15:00",
+        "Building",
+        "A shelf, a garden, a life. Some assembly required."
+      ],
+      [
+        "19:00",
+        "Dinner",
+        "Cooking together. Mostly arguing about the salt."
+      ]
+    ],
+    "night": [
+      "23:00",
+      "Home",
+      "Locking the door on another good day, together."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The home they are building, room by room"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Takeaway on moving day, home cooking after"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Shall we?\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Turning big dreams into actual plans"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Every weekend, at the hardware shop"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Give them a key, a kettle and time to dream"
+      ]
+    ],
+    "little": [
+      "You already talk about \"our\" future without thinking.",
+      "You leave little notes on the fridge.",
+      "You make every new place feel like home.",
+      "You hold my hand every time we sign something scary."
+    ],
+    "letters": "Little Signs It Was Always Forever"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "timeline": {
+    "kicker": "Proposals through the ages",
+    "title": "A Short History of Saying Yes",
+    "items": [
+      [
+        "Ancient Rome",
+        "A ring to promise",
+        "Romans marked a promise to marry with a ring, sometimes a simple band of iron."
+      ],
+      [
+        "1477",
+        "A famous diamond",
+        "Archduke Maximilian gave Mary of Burgundy a diamond ring, and a sparkly tradition began."
+      ],
+      [
+        "1839",
+        "The queen proposes",
+        "As queen, Victoria had to do the asking. She proposed to Prince Albert, and he happily said yes."
+      ],
+      [
+        "1947",
+        "A diamond is forever",
+        "A copywriter dreamed up the famous line, and it became one of the best known slogans ever written."
+      ]
+    ],
+    "today": [
+      "{year}",
+      "{who}",
+      "The newest yes in the history of yeses. And our favourite by far."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Beautiful Words for New Beginnings",
+    "items": [
+      [
+        "Yes I said yes I will Yes.",
+        "James Joyce, Ulysses, 1922"
+      ],
+      [
+        "I have found the one whom my soul loves.",
+        "Song of Solomon 3:4"
+      ],
+      [
+        "Two are better than one.",
+        "Ecclesiastes 4:9"
+      ],
+      [
+        "Well begun is half done.",
+        "An old proverb"
+      ]
+    ],
+    "hand": "Lovely words, all of them. Ours are simpler: we are so happy for you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "Fun Facts for the Newly Engaged",
+    "items": [
+      [
+        "ring",
+        "The vein of love",
+        "Rings go on the fourth finger because people once believed a vein ran from it straight to the heart."
+      ],
+      [
+        "star",
+        "Older than dinosaurs",
+        "Most diamonds formed deep underground well over a billion years ago. Talk about lasting."
+      ],
+      [
+        "key",
+        "Hard to break",
+        "Diamond is the hardest natural material on Earth. A very good sign for a promise."
+      ],
+      [
+        "paw",
+        "Penguin proposals",
+        "Some penguins woo their partner with the perfect pebble for the nest. The original ring."
+      ],
+      [
+        "music",
+        "Dance first",
+        "Albatrosses perform long courtship dances, and often stay with one partner for life."
+      ],
+      [
+        "pulse",
+        "Nerves or joy",
+        "Nerves and excitement feel almost the same in the body: racing heart, quick breath, shaky hands."
+      ]
+    ],
+    "hand": "Science can explain the sparkle. It cannot explain how perfect {who} are together."
+  },
+  "awards": [
+    [
+      "Proposal of the year",
+      "By a landslide"
+    ],
+    [
+      "Best kept secret",
+      "Almost nobody knew"
+    ],
+    [
+      "Most adorable couple",
+      "Unanimous"
+    ],
+    [
+      "Bravest question asked",
+      "And the best answer"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One planning night",
+      "We bring snacks and big ideas"
+    ],
+    [
+      "A cake tasting buddy",
+      "We will try every slice"
+    ],
+    [
+      "One stress free evening",
+      "No wedding talk allowed"
+    ],
+    [
+      "First dance practice",
+      "We promise not to laugh"
+    ]
+  ],
+  "vouchersTitle": "Engagement vouchers for {who}",
+  "cert": "Meant to Be",
+  "certLine": "are officially, undeniably and forever",
+  "perfume": "Top notes of happy tears and champagne, with a sparkling heart of yes.",
+  "news": {
+    "edition": "Engagement edition",
+    "headline": "{who} are engaged",
+    "lead": "Friends and family are celebrating after {who} confirmed the news everyone was hoping for: there will be a wedding.",
+    "weather": "Weather: sunny, with a 100% chance of happy tears"
+  },
+  "passport": {
+    "kicker": "Next stop, the wedding",
+    "head": "Passport to forever",
+    "nationality": "Engaged, everywhere",
+    "job": "Happily engaged",
+    "stamps": [
+      "The proposal",
+      "The planning",
+      "The big day"
+    ]
+  },
+  "words": [
+    "RING",
+    "YES",
+    "LOVE",
+    "DIAMOND",
+    "FOREVER",
+    "ENGAGED"
+  ]
+}

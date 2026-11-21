@@ -1,0 +1,369 @@
+{
+  "theme": "ruby",
+  "fields": [
+    {
+      "id": "s_heard",
+      "label": "A reason from the very first week",
+      "example": "You remembered my coffee order after one date",
+      "max": 80,
+      "chapter": "Reasons from the very beginning"
+    },
+    {
+      "id": "s_knew",
+      "label": "A reason from a hard time",
+      "example": "You sat on the bathroom floor with me all night and never let go",
+      "max": 80,
+      "chapter": "Reasons from the hard days"
+    },
+    {
+      "id": "s_guess",
+      "label": "A reason that makes no sense to anyone else",
+      "example": "The way you say \"yoghurt\"",
+      "max": 80,
+      "chapter": "Reasons I cannot explain"
+    },
+    {
+      "id": "s_promise",
+      "label": "A reason you love them more every year",
+      "example": "You keep getting kinder, and funnier, and more you",
+      "max": 70
+    }
+  ],
+  "story": {
+    "title": "All the Reasons, One by One",
+    "hand": "And that is not even all of them, {who}.",
+    "kicker": "The reasons",
+    "legend": "A few more reasons",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them."
+  },
+  "labels": {
+    "since": "Together since",
+    "r1": "Reason number one",
+    "r2": "A tiny reason",
+    "r3": "A silly reason",
+    "words": "In three words"
+  },
+  "picks": {
+    "legend": "Even more reasons",
+    "kicker": "From {from}, with love",
+    "title": "Reasons 11 to 20",
+    "items": [
+      "Your morning hair",
+      "The way you say my name",
+      "How you hold my hand in crowds",
+      "Your laugh on the phone",
+      "How you always offer the last bite",
+      "The way you talk to dogs",
+      "How you plan surprises badly",
+      "Your playlists",
+      "How you look at me across a room",
+      "That you always come back with snacks",
+      "Your sleepy goodnight",
+      "How you make every place feel like home"
+    ]
+  },
+  "world": {
+    "kicker": "Reasons the whole world agrees with",
+    "title": "Why Everyone Loves {who}",
+    "lead": "Ask anyone who knows them, and you will hear:",
+    "items": [
+      "They light up every room.",
+      "They make people feel seen.",
+      "They are funnier than they know.",
+      "They give the best hugs, by a mile.",
+      "They turn ordinary days into stories.",
+      "They love with their whole heart.",
+      "And they chose each other."
+    ],
+    "close": "One hundred reasons, and counting, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "Reasons still to come",
+    "title": "The next hundred reasons",
+    "items": [
+      "All the mornings we have not had yet.",
+      "The trips we keep talking about.",
+      "Every new inside joke.",
+      "Growing old and silly together.",
+      "Finding a new reason to love you every single day."
+    ],
+    "hand": "Always, {from}"
+  },
+  "movie": {
+    "sub": "One hundred reasons, one love story",
+    "soon": "Reason 101: coming soon",
+    "reviews": [
+      [
+        "Every single reason is true",
+        "The Daily Hug"
+      ],
+      [
+        "I cried at reason forty two",
+        "{from}"
+      ],
+      [
+        "Impossibly romantic",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "In which century were paper Valentine cards first sold widely in Britain?",
+      [
+        "The 1800s",
+        "The 1500s",
+        "The 1950s"
+      ],
+      0
+    ],
+    [
+      "Roughly how many times a day does a person smile when they are in love, according to happiness studies?",
+      [
+        "Far more than usual",
+        "Exactly ten times",
+        "Less than usual"
+      ],
+      0
+    ]
+  ],
+  "note": {
+    "title": "Why one hundred reasons",
+    "contents": "A note for you both",
+    "paras": [
+      "Most of us say \"I love you\" every day. Almost nobody says why.",
+      "One hundred reasons sounds like a lot, until you start writing. Then it is not nearly enough.",
+      "{who}, every reason in this magazine is real, noticed and remembered.",
+      "From everything {from} told us, they could have written a thousand."
+    ],
+    "wish": "For all the reasons, {who}."
+  },
+  "concepts": "couple",
+  "own": {
+    "dayTitle": "A Day Full of Reasons",
+    "day": [
+      [
+        "7:00",
+        "Reason at breakfast",
+        "Making the tea exactly right without being asked."
+      ],
+      [
+        "12:00",
+        "Reason at lunch",
+        "A text that just says \"thinking of you\"."
+      ],
+      [
+        "18:00",
+        "Reason at dinner",
+        "Laughing so hard the pasta goes cold."
+      ],
+      [
+        "21:00",
+        "Reason at night",
+        "Sharing the blanket. Mostly."
+      ]
+    ],
+    "night": [
+      "23:00",
+      "The last reason",
+      "A sleepy \"love you\" from the other pillow."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "Wherever the other one is"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Shared desserts, two spoons"
+      ],
+      [
+        "music",
+        "Call",
+        "\"I love you.\" \"I know.\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Finding a new reason every single day"
+      ],
+      [
+        "clock",
+        "Most active",
+        "On ordinary Tuesdays, mostly"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Read them one reason a day. Repeat forever"
+      ]
+    ],
+    "little": [
+      "You still smile when my name lights up your phone.",
+      "You save me the warm side of the bed.",
+      "You remember every small thing I mention.",
+      "You laugh at my jokes, even the fifth time."
+    ],
+    "letters": "Little Reasons Nobody Else Sees"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "timeline": {
+    "kicker": "Proposals through the ages",
+    "title": "A Short History of Saying Yes",
+    "items": [
+      [
+        "Ancient Rome",
+        "A ring to promise",
+        "Romans marked a promise to marry with a ring, sometimes a simple band of iron."
+      ],
+      [
+        "1477",
+        "A famous diamond",
+        "Archduke Maximilian gave Mary of Burgundy a diamond ring, and a sparkly tradition began."
+      ],
+      [
+        "1839",
+        "The queen proposes",
+        "As queen, Victoria had to do the asking. She proposed to Prince Albert, and he happily said yes."
+      ],
+      [
+        "1947",
+        "A diamond is forever",
+        "A copywriter dreamed up the famous line, and it became one of the best known slogans ever written."
+      ]
+    ],
+    "today": [
+      "{year}",
+      "{who}",
+      "The newest yes in the history of yeses. And our favourite by far."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Beautiful Words for New Beginnings",
+    "items": [
+      [
+        "Yes I said yes I will Yes.",
+        "James Joyce, Ulysses, 1922"
+      ],
+      [
+        "I have found the one whom my soul loves.",
+        "Song of Solomon 3:4"
+      ],
+      [
+        "Two are better than one.",
+        "Ecclesiastes 4:9"
+      ],
+      [
+        "Well begun is half done.",
+        "An old proverb"
+      ]
+    ],
+    "hand": "Lovely words, all of them. Ours are simpler: we are so happy for you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "Fun Facts for the Newly Engaged",
+    "items": [
+      [
+        "ring",
+        "The vein of love",
+        "Rings go on the fourth finger because people once believed a vein ran from it straight to the heart."
+      ],
+      [
+        "star",
+        "Older than dinosaurs",
+        "Most diamonds formed deep underground well over a billion years ago. Talk about lasting."
+      ],
+      [
+        "key",
+        "Hard to break",
+        "Diamond is the hardest natural material on Earth. A very good sign for a promise."
+      ],
+      [
+        "paw",
+        "Penguin proposals",
+        "Some penguins woo their partner with the perfect pebble for the nest. The original ring."
+      ],
+      [
+        "music",
+        "Dance first",
+        "Albatrosses perform long courtship dances, and often stay with one partner for life."
+      ],
+      [
+        "pulse",
+        "Nerves or joy",
+        "Nerves and excitement feel almost the same in the body: racing heart, quick breath, shaky hands."
+      ]
+    ],
+    "hand": "Science can explain the sparkle. It cannot explain how perfect {who} are together."
+  },
+  "awards": [
+    [
+      "Proposal of the year",
+      "By a landslide"
+    ],
+    [
+      "Best kept secret",
+      "Almost nobody knew"
+    ],
+    [
+      "Most adorable couple",
+      "Unanimous"
+    ],
+    [
+      "Bravest question asked",
+      "And the best answer"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One planning night",
+      "We bring snacks and big ideas"
+    ],
+    [
+      "A cake tasting buddy",
+      "We will try every slice"
+    ],
+    [
+      "One stress free evening",
+      "No wedding talk allowed"
+    ],
+    [
+      "First dance practice",
+      "We promise not to laugh"
+    ]
+  ],
+  "vouchersTitle": "Engagement vouchers for {who}",
+  "cert": "Meant to Be",
+  "certLine": "are officially, undeniably and forever",
+  "perfume": "Top notes of happy tears and champagne, with a sparkling heart of yes.",
+  "news": {
+    "edition": "Engagement edition",
+    "headline": "{who} are engaged",
+    "lead": "Friends and family are celebrating after {who} confirmed the news everyone was hoping for: there will be a wedding.",
+    "weather": "Weather: sunny, with a 100% chance of happy tears"
+  },
+  "passport": {
+    "kicker": "Next stop, the wedding",
+    "head": "Passport to forever",
+    "nationality": "Engaged, everywhere",
+    "job": "Happily engaged",
+    "stamps": [
+      "The proposal",
+      "The planning",
+      "The big day"
+    ]
+  },
+  "words": [
+    "RING",
+    "YES",
+    "LOVE",
+    "DIAMOND",
+    "FOREVER",
+    "ENGAGED"
+  ]
+}

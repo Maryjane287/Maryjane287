@@ -1123,7 +1123,7 @@
   {
     "slug": "kids-magazine",
     "layout": "kids",
-    "title": "All About Me",
+    "title": "Little Superstar",
     "searchTitle": "Personalised Kids Magazine",
     "pinTitle": "Personalised Kids Magazine",
     "occasion": "Children",
@@ -2171,7 +2171,7 @@
   },
   {
     "slug": "new-baby-magazine",
-    "title": "The Arrival",
+    "title": "Welcome to the World",
     "searchTitle": "Personalised New Baby Magazine",
     "pinTitle": "Personalised New Baby Magazine",
     "occasion": "New baby",
@@ -2958,7 +2958,7 @@
   },
   {
     "slug": "mothers-day-magazine",
-    "title": "Best Mum Ever",
+    "title": "A Mother's Greatest Love",
     "searchTitle": "Personalised Mother's Day Magazine",
     "pinTitle": "Personalised Mother's Day Magazine",
     "occasion": "Mother's Day",
@@ -3148,7 +3148,7 @@
   },
   {
     "slug": "fathers-day-magazine",
-    "title": "Dad Weekly",
+    "title": "My First Hero: Dad",
     "searchTitle": "Personalised Father's Day Magazine",
     "pinTitle": "Personalised Father's Day Magazine",
     "occasion": "Father's Day",
@@ -3338,7 +3338,7 @@
   },
   {
     "slug": "best-friend-magazine",
-    "title": "Bestie Weekly",
+    "title": "Partners in Crime",
     "searchTitle": "Personalised Best Friend Magazine",
     "pinTitle": "Personalised Best Friend Magazine",
     "occasion": "Best friends",
@@ -3537,7 +3537,7 @@
   },
   {
     "slug": "teacher-magazine",
-    "title": "Teacher of the Year",
+    "title": "Educator of the Year",
     "searchTitle": "Personalised Teacher Thank You Magazine",
     "pinTitle": "Personalised Teacher Thank You Magazine",
     "occasion": "Teacher thank you",
@@ -3938,7 +3938,7 @@
   },
   {
     "slug": "engagement-magazine",
-    "title": "We Said Yes",
+    "title": "The Yes! Edition",
     "searchTitle": "Personalised Engagement Magazine",
     "pinTitle": "Personalised Engagement Magazine",
     "occasion": "Engagements",
@@ -5132,7 +5132,7 @@
   },
   {
     "slug": "baby-shower-magazine",
-    "title": "Baby on the Way",
+    "title": "The Pregnancy Journey",
     "searchTitle": "Personalised Baby Shower Magazine",
     "pinTitle": "Personalised Baby Shower Magazine",
     "occasion": "Baby shower",
@@ -6133,7 +6133,7 @@
   },
   {
     "slug": "boyfriend-magazine",
-    "title": "The Boyfriend Issue",
+    "title": "The Man Who Stole My Heart",
     "searchTitle": "Personalised Magazine for Boyfriend",
     "pinTitle": "Personalised Boyfriend Magazine Gift",
     "occasion": "For him",
@@ -6335,7 +6335,7 @@
   },
   {
     "slug": "girlfriend-magazine",
-    "title": "The Girlfriend Issue",
+    "title": "The Woman of My Dreams",
     "searchTitle": "Personalised Magazine for Girlfriend",
     "pinTitle": "Personalised Girlfriend Magazine Gift",
     "occasion": "For her",
@@ -7064,9 +7064,9 @@
           "x_type": "calm"
         },
         "photos": {
-          "photo1": "/assets/samples/engagement-magazine-0.jpg",
-          "photo2": "/assets/samples/engagement-magazine-0c.jpg",
-          "photo3": "/assets/samples/engagement-magazine-0b.jpg"
+          "photo1": "/assets/samples/will-you-marry-me-magazine-0.jpg",
+          "photo2": "/assets/samples/will-you-marry-me-magazine-0b.jpg",
+          "photo3": "/assets/samples/will-you-marry-me-magazine-0c.jpg"
         }
       },
       {
@@ -7468,9 +7468,9 @@
           "x_type": "homebodies"
         },
         "photos": {
-          "photo1": "/assets/samples/anniversary-magazine-0b.jpg",
-          "photo2": "/assets/samples/anniversary-magazine-0.jpg",
-          "photo3": "/assets/samples/anniversary-magazine-0c.jpg"
+          "photo1": "/assets/samples/first-christmas-together-magazine-0.jpg",
+          "photo2": "/assets/samples/first-christmas-together-magazine-0b.jpg",
+          "photo3": "/assets/samples/first-christmas-together-magazine-0c.jpg"
         }
       },
       {
@@ -7670,9 +7670,9 @@
           "x_type": "romantics"
         },
         "photos": {
-          "photo1": "/assets/samples/wedding-magazine-0.jpg",
-          "photo2": "/assets/samples/wedding-magazine-0b.jpg",
-          "photo3": "/assets/samples/wedding-magazine-0c.jpg"
+          "photo1": "/assets/samples/first-anniversary-magazine-0.jpg",
+          "photo2": "/assets/samples/first-anniversary-magazine-0b.jpg",
+          "photo3": "/assets/samples/first-anniversary-magazine-0c.jpg"
         }
       },
       {
@@ -7872,7 +7872,9 @@
           "x_type": "calm"
         },
         "photos": {
-          "photo1": "/assets/samples/anniversary-magazine-2.jpg"
+          "photo1": "/assets/samples/long-distance-magazine-0.jpg",
+          "photo2": "/assets/samples/long-distance-magazine-0b.jpg",
+          "photo3": "/assets/samples/long-distance-magazine-0c.jpg"
         }
       },
       {
@@ -10670,6 +10672,1418 @@
       ],
       "quote": "{words}",
       "credit": "With love, {from}"
+    }
+  },
+  {
+    "slug": "hundred-reasons-magazine",
+    "title": "100 Reasons I Love You",
+    "searchTitle": "100 Reasons I Love You Personalised Magazine",
+    "pinTitle": "100 Reasons I Love You: a Magazine Gift for Your Partner",
+    "occasion": "100 reasons I love you",
+    "short": "A hundred reasons you love them, beautifully set across a glossy magazine.",
+    "description": "Big reasons, tiny reasons, silly reasons. Tell us your favourites and we set them across a glossy magazine full of your photos, alongside reasons from everyone who loves them too. The way they laugh, the tea they make, the night they drove across town in their slippers. The romantic gift they will read again and again.",
+    "keywords": [
+      "100 reasons why i love you",
+      "reasons i love you gift",
+      "romantic gift for her",
+      "romantic gift for him",
+      "anniversary gift",
+      "valentines gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring the couple",
+      "A letter to the happy couple",
+      "Their love story by the numbers",
+      "A photo spread of the proposal",
+      "The proposal, as it happened",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A love letter",
+    "feature": [
+      "The reason I fell first",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "names",
+        "label": "Your names",
+        "example": "Mia & Leo",
+        "max": 16
+      },
+      {
+        "id": "since",
+        "label": "Together since",
+        "example": "2020",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mia",
+        "max": 34
+      },
+      {
+        "id": "r1",
+        "label": "Reason number one",
+        "example": "The way you laugh at your own jokes",
+        "max": 40
+      },
+      {
+        "id": "r2",
+        "label": "A tiny reason",
+        "example": "You warm my side of the bed",
+        "max": 34
+      },
+      {
+        "id": "r3",
+        "label": "A silly reason",
+        "example": "Your terrible dancing, all of it",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Them in three words",
+        "example": "Kind, daft, mine",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The reason you fell first",
+        "example": "You gave your umbrella to a stranger in the rain and walked home soaked, whistling, and I thought: that is the kindest person I have ever met",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "Reason number one hundred (This becomes your love letter)",
+        "example": "Reason one hundred is simple: you are my favourite person in the whole world, and every day with you is better than the last. I love you for all of these reasons, and a thousand more.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of you both",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite of the two of you",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "mia-leo",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#5a3a22"
+        },
+        "values": {
+          "names": "Mia & Leo",
+          "since": "2020",
+          "from": "Mia",
+          "r1": "The way you laugh at your own jokes",
+          "r2": "You warm my side of the bed",
+          "r3": "Your terrible dancing, all of it",
+          "words": "Kind, daft, mine",
+          "x_type": "romantics"
+        },
+        "photos": {
+          "photo1": "/assets/samples/valentines-magazine-0.jpg",
+          "photo2": "/assets/samples/valentines-magazine-0b.jpg",
+          "photo3": "/assets/samples/valentines-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "emma-sam",
+        "palette": "coral",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#2a1a10"
+        },
+        "values": {
+          "names": "Emma & Sam",
+          "since": "2017",
+          "from": "Sam",
+          "r1": "Your face when you see a dog",
+          "r2": "You always save me a chip",
+          "r3": "Your three alarm clocks",
+          "words": "Bright, brave, lovely",
+          "x_type": "comedians"
+        },
+        "photos": {
+          "photo1": "/assets/samples/valentines-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "ava-chris",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "names": "Ava & Chris",
+          "since": "2022",
+          "from": "Chris",
+          "r1": "How you believe in me",
+          "r2": "Your cold feet, every night",
+          "r3": "You sing in the shower",
+          "words": "Warm, wild, wonderful",
+          "x_type": "adventurers"
+        },
+        "photos": {
+          "photo1": "/assets/samples/valentines-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{names}",
+      "issue": "The 100 reasons issue",
+      "edition": "Together since {since}",
+      "lines": [
+        [
+          "Reason no. 1",
+          "{r1}"
+        ],
+        [
+          "A tiny reason",
+          "{r2}"
+        ],
+        [
+          "A silly reason",
+          "{r3}"
+        ]
+      ],
+      "badge": [
+        "Reasons",
+        "100",
+        "and counting"
+      ],
+      "quote": "{words}",
+      "credit": "Reason no. 100 is inside"
+    }
+  },
+  {
+    "slug": "first-date-magazine",
+    "title": "The First Date Edition",
+    "searchTitle": "Our First Date Personalised Magazine",
+    "pinTitle": "The First Date Edition: Your Love Story From the Very First Hello",
+    "occasion": "Our first date",
+    "short": "The night it all began: the nerves, the outfit, the moment you knew there would be a second.",
+    "description": "Where you went, what they wore, the joke that broke the ice and the moment you knew you wanted a second date. We turn the story of your very first date into a glossy magazine, complete with first impressions from both sides. A gorgeous anniversary or Valentine's gift.",
+    "keywords": [
+      "first date gift",
+      "how we met gift",
+      "anniversary gift for girlfriend",
+      "anniversary gift for boyfriend",
+      "first date anniversary",
+      "couple keepsake"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring the couple",
+      "A letter to the happy couple",
+      "Their love story by the numbers",
+      "A photo spread of the proposal",
+      "The proposal, as it happened",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter about that night",
+    "feature": [
+      "The moment I knew I wanted a second date",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "names",
+        "label": "Your names",
+        "example": "Emma & Chris",
+        "max": 16
+      },
+      {
+        "id": "date",
+        "label": "Date of your first date",
+        "example": "June 2021",
+        "max": 14
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 34
+      },
+      {
+        "id": "where",
+        "label": "Where you went",
+        "example": "A tiny Italian place, booked late",
+        "max": 34
+      },
+      {
+        "id": "wore",
+        "label": "What they wore",
+        "example": "A blue shirt, ironed twice",
+        "max": 34
+      },
+      {
+        "id": "first",
+        "label": "Your first impression",
+        "example": "Nervous, funny, very tall",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "That night in three words",
+        "example": "Nervous, giddy, magic",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment you knew you wanted a second date",
+        "example": "He knocked his whole glass of water over, went bright red, then laughed so hard the waiter joined in, and I thought: I could do this every week",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What would you tell them about that night? (This becomes your letter)",
+        "example": "I nearly cancelled that night. I am so glad I did not. Thank you for the spilled water, the five hour conversation and every date since. You were worth the nerves.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of you both",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A photo from early on",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "A favourite from now",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma-chris",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "names": "Emma & Chris",
+          "date": "June 2021",
+          "from": "Emma",
+          "where": "A tiny Italian place, booked late",
+          "wore": "A blue shirt, ironed twice",
+          "first": "Nervous, funny, very tall",
+          "words": "Nervous, giddy, magic",
+          "x_type": "romantics"
+        },
+        "photos": {
+          "photo1": "/assets/samples/anniversary-magazine-0.jpg",
+          "photo2": "/assets/samples/anniversary-magazine-0b.jpg",
+          "photo3": "/assets/samples/anniversary-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "mia-sam",
+        "palette": "butter",
+        "portrait": {
+          "skin": 1,
+          "hair": "curly",
+          "hairColor": "#2a1a10"
+        },
+        "values": {
+          "names": "Mia & Sam",
+          "date": "March 2018",
+          "from": "Sam",
+          "where": "Mini golf, then chips",
+          "wore": "Her yellow raincoat",
+          "first": "Far too clever for me",
+          "words": "Silly, easy, right",
+          "x_type": "comedians"
+        },
+        "photos": {
+          "photo1": "/assets/samples/anniversary-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "ava-leo",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "names": "Ava & Leo",
+          "date": "October 2022",
+          "from": "Leo",
+          "where": "A rooftop bar in the rain",
+          "wore": "A red dress, stunning",
+          "first": "Out of my league",
+          "words": "Bold, warm, unforgettable",
+          "x_type": "adventurers"
+        },
+        "photos": {
+          "photo1": "/assets/samples/anniversary-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{names}",
+      "issue": "The first date issue",
+      "edition": "Where it all began, {date}",
+      "lines": [
+        [
+          "Exclusive",
+          "The night it all began"
+        ],
+        [
+          "Where they went",
+          "{where}"
+        ],
+        [
+          "First impression",
+          "{first}"
+        ]
+      ],
+      "badge": [
+        "First",
+        "date",
+        "{date}"
+      ],
+      "quote": "{words}",
+      "credit": "And there was a second date"
+    }
+  },
+  {
+    "slug": "forever-starts-magazine",
+    "title": "Forever Starts With You",
+    "searchTitle": "Personalised Commitment Keepsake Magazine for Couples",
+    "pinTitle": "Forever Starts With You: a Keepsake for Your Future Together",
+    "occasion": "Our future together",
+    "short": "For couples making a big commitment: moving in, a new home, a vow, a forever.",
+    "description": "Moving in, buying your first home, a commitment ceremony or simply deciding this is forever. Tell us about the promise you are making and the future you are planning, and we turn it into a glossy keepsake magazine about the two of you and the life you are building.",
+    "keywords": [
+      "commitment gift for couples",
+      "moving in together gift",
+      "vow renewal gift",
+      "couples future gift",
+      "romantic keepsake",
+      "forever gift for partner"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring the couple",
+      "A letter to the happy couple",
+      "Their love story by the numbers",
+      "A photo spread of the proposal",
+      "The proposal, as it happened",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter about forever",
+    "feature": [
+      "The moment I knew it was forever",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "names",
+        "label": "Your names",
+        "example": "Chris & Ava",
+        "max": 16
+      },
+      {
+        "id": "year",
+        "label": "Forever starts",
+        "example": "2026",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Chris",
+        "max": 34
+      },
+      {
+        "id": "promise",
+        "label": "The big promise",
+        "example": "Moving in together, finally",
+        "max": 34
+      },
+      {
+        "id": "dream",
+        "label": "Your dream future",
+        "example": "A house with a red door and a dog",
+        "max": 34
+      },
+      {
+        "id": "first",
+        "label": "First thing on the bucket list",
+        "example": "Northern lights, wrapped in blankets",
+        "max": 40
+      },
+      {
+        "id": "words",
+        "label": "Your future in three words",
+        "example": "Cosy, brave, ours",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment you knew it was forever",
+        "example": "We were stuck in a broken down car in the rain for six hours and it was somehow the best day of my life",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want to promise them? (This becomes your letter)",
+        "example": "Forever is a big word, but with you it feels easy. I promise to build a home with you, to keep laughing with you and to choose you on every ordinary day. Our forever starts now.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of you both",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite of the two of you",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "chris-ava",
+        "palette": "sky",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "names": "Chris & Ava",
+          "year": "2026",
+          "from": "Chris",
+          "promise": "Moving in together, finally",
+          "dream": "A house with a red door and a dog",
+          "first": "Northern lights, wrapped in blankets",
+          "words": "Cosy, brave, ours",
+          "x_type": "team"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-home-magazine-0.jpg",
+          "photo2": "/assets/samples/new-home-magazine-0b.jpg",
+          "photo3": "/assets/samples/new-home-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "mia-leo",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "names": "Mia & Leo",
+          "year": "2026",
+          "from": "Mia",
+          "promise": "Our commitment ceremony",
+          "dream": "A cottage full of books",
+          "first": "A road trip with no plan",
+          "words": "Gentle, steady, forever",
+          "x_type": "homebodies"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-home-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "emma-sam",
+        "palette": "mint",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#5a3a22"
+        },
+        "values": {
+          "names": "Emma & Sam",
+          "year": "2027",
+          "from": "Sam",
+          "promise": "Our very first home",
+          "dream": "A garden and three kids",
+          "first": "Learning to dance properly",
+          "words": "Happy, hopeful, home",
+          "x_type": "romantics"
+        },
+        "photos": {
+          "photo1": "/assets/samples/new-home-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{names}",
+      "issue": "The forever issue",
+      "edition": "Forever starts {year}",
+      "lines": [
+        [
+          "Exclusive",
+          "Building a life together"
+        ],
+        [
+          "The big promise",
+          "{promise}"
+        ],
+        [
+          "The dream",
+          "{dream}"
+        ]
+      ],
+      "badge": [
+        "Forever",
+        "starts",
+        "{year}"
+      ],
+      "quote": "{words}",
+      "credit": "Our future, together"
+    }
+  },
+  {
+    "slug": "still-falling-magazine",
+    "title": "Still Falling for You",
+    "searchTitle": "Personalised Long Marriage Anniversary Magazine",
+    "pinTitle": "Still Falling for You: a Magazine for Couples Who Have Loved for Years",
+    "occasion": "Love through the years",
+    "short": "For couples who have loved for years, and still fall for each other every day.",
+    "description": "Ten years, twenty, forty. For couples whose love has grown deeper with every year: the early days, the hard times you got through and the little ways you still make each other smile. Children and friends can add notes and voice messages through one link. Beautiful for a big anniversary.",
+    "keywords": [
+      "anniversary gift for parents",
+      "25th anniversary gift",
+      "40th anniversary gift",
+      "10 year anniversary gift",
+      "long marriage gift",
+      "couples anniversary keepsake"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring the couple",
+      "A letter to the happy couple",
+      "Their love story by the numbers",
+      "A photo spread of the proposal",
+      "The proposal, as it happened",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter after all these years",
+    "feature": [
+      "The moment I fell for you all over again",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "names",
+        "label": "Your names",
+        "example": "Sam & Mia",
+        "max": 16
+      },
+      {
+        "id": "years",
+        "label": "Years together",
+        "example": "25",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Sam",
+        "max": 34
+      },
+      {
+        "id": "then",
+        "label": "What you loved first",
+        "example": "Her laugh across a crowded room",
+        "max": 34
+      },
+      {
+        "id": "now",
+        "label": "What you love most now",
+        "example": "How she makes everything calm",
+        "max": 34
+      },
+      {
+        "id": "secret",
+        "label": "The secret to lasting love",
+        "example": "Never go to bed cross",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Your love in three words",
+        "example": "Deeper, kinder, ours",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment you fell for them all over again",
+        "example": "Watching her teach our grandson to bake, flour on her nose, singing the same song her mum sang to her",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know after all these years? (This becomes your letter)",
+        "example": "After all these years, you still make my heart jump when you walk into a room. Thank you for every year, the easy ones and the hard ones. I would do every single one again.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of you both now",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A photo from your early years",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "A favourite from the years between",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "sam-mia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#d9d4cc"
+        },
+        "values": {
+          "names": "Sam & Mia",
+          "years": "25",
+          "from": "Sam",
+          "then": "Her laugh across a crowded room",
+          "now": "How she makes everything calm",
+          "secret": "Never go to bed cross",
+          "words": "Deeper, kinder, ours",
+          "x_type": "team"
+        },
+        "photos": {
+          "photo1": "/assets/samples/golden-anniversary-magazine-0.jpg",
+          "photo2": "/assets/samples/golden-anniversary-magazine-0b.jpg",
+          "photo3": "/assets/samples/golden-anniversary-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "leo-emma",
+        "palette": "butter",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#8a7a6a"
+        },
+        "values": {
+          "names": "Leo & Emma",
+          "years": "40",
+          "from": "Their children",
+          "then": "His dancing, terrible and bold",
+          "now": "His patience with everyone",
+          "secret": "Laugh at yourselves daily",
+          "words": "Steady, silly, golden",
+          "x_type": "comedians"
+        },
+        "photos": {
+          "photo1": "/assets/samples/golden-anniversary-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "chris-ava",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "names": "Chris & Ava",
+          "years": "10",
+          "from": "Ava",
+          "then": "His kindness to strangers",
+          "now": "The dad he has become",
+          "secret": "Keep dating each other",
+          "words": "Strong, warm, true",
+          "x_type": "romantics"
+        },
+        "photos": {
+          "photo1": "/assets/samples/golden-anniversary-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{names}",
+      "issue": "The still falling issue",
+      "edition": "{years} years and counting",
+      "lines": [
+        [
+          "Exclusive",
+          "Still in love after all these years"
+        ],
+        [
+          "What I loved first",
+          "{then}"
+        ],
+        [
+          "The secret",
+          "{secret}"
+        ]
+      ],
+      "badge": [
+        "Years",
+        "{years}",
+        "and falling"
+      ],
+      "quote": "{words}",
+      "credit": "Still falling, every day"
+    }
+  },
+  {
+    "slug": "adventures-with-you-magazine",
+    "title": "Adventures With You",
+    "searchTitle": "Personalised Couples Travel Magazine",
+    "pinTitle": "Adventures With You: a Couples Travel Memories Magazine",
+    "occasion": "Couples adventures",
+    "short": "All your trips together, from the first weekend away to the big one, in a glossy travel magazine.",
+    "description": "The first weekend away, the trip where everything went wrong, the sunset you still talk about. Tell us about your adventures as a couple and we make a glossy travel magazine starring the two of you, full of your favourite places and the moments that made them.",
+    "keywords": [
+      "couples travel gift",
+      "travel anniversary gift",
+      "adventure gift for couples",
+      "gift for travel lovers",
+      "honeymoon keepsake",
+      "travel memory book"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring the couple",
+      "A letter to the happy couple",
+      "Their love story by the numbers",
+      "A photo spread of the proposal",
+      "The proposal, as it happened",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter from the road",
+    "feature": [
+      "The moment I knew you were my favourite travel partner",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "names",
+        "label": "Your names",
+        "example": "Leo & Ava",
+        "max": 16
+      },
+      {
+        "id": "trips",
+        "label": "Trips together so far",
+        "example": "14",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Ava",
+        "max": 34
+      },
+      {
+        "id": "best",
+        "label": "Favourite place so far",
+        "example": "Sunset in Santorini",
+        "max": 34
+      },
+      {
+        "id": "fail",
+        "label": "The trip that went wrong",
+        "example": "The ferry we missed in Croatia",
+        "max": 34
+      },
+      {
+        "id": "next",
+        "label": "Next on the list",
+        "example": "Japan in cherry blossom season",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Your adventures in three words",
+        "example": "Lost, happy, together",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment you knew they were your favourite travel partner",
+        "example": "Our bags got lost in Lisbon and instead of panicking he bought us matching tourist T shirts and declared it the best holiday ever",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What would you tell them about your adventures? (This becomes your letter)",
+        "example": "Every place is better with you in it. Thank you for the missed trains, the wrong turns and every sunset we have watched together. Wherever we go next, I just want to be beside you.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of you both on a trip",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "Your favourite place",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another adventure",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "leo-ava",
+        "palette": "sky",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "names": "Leo & Ava",
+          "trips": "14",
+          "from": "Ava",
+          "best": "Sunset in Santorini",
+          "fail": "The ferry we missed in Croatia",
+          "next": "Japan in cherry blossom season",
+          "words": "Lost, happy, together",
+          "x_type": "adventurers"
+        },
+        "photos": {
+          "photo1": "/assets/samples/travel-magazine-0.jpg",
+          "photo2": "/assets/samples/travel-magazine-0b.jpg",
+          "photo3": "/assets/samples/travel-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "emma-chris",
+        "palette": "coral",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "names": "Emma & Chris",
+          "trips": "9",
+          "from": "Chris",
+          "best": "A cabin in the Highlands",
+          "fail": "Camping in a storm",
+          "next": "Iceland, finally",
+          "words": "Muddy, cosy, ours",
+          "x_type": "homebodies"
+        },
+        "photos": {
+          "photo1": "/assets/samples/travel-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "mia-sam",
+        "palette": "mint",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#5a3a22"
+        },
+        "values": {
+          "names": "Mia & Sam",
+          "trips": "22",
+          "from": "Mia",
+          "best": "Street food in Bangkok",
+          "fail": "The wrong Paris, in Texas",
+          "next": "A road trip across Italy",
+          "words": "Spicy, sunny, silly",
+          "x_type": "comedians"
+        },
+        "photos": {
+          "photo1": "/assets/samples/travel-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{names}",
+      "issue": "The adventures issue",
+      "edition": "{trips} trips and counting",
+      "lines": [
+        [
+          "Exclusive",
+          "Around the world, together"
+        ],
+        [
+          "Favourite place",
+          "{best}"
+        ],
+        [
+          "Next stop",
+          "{next}"
+        ]
+      ],
+      "badge": [
+        "Trips",
+        "{trips}",
+        "together"
+      ],
+      "quote": "{words}",
+      "credit": "Wherever we go next"
+    }
+  },
+  {
+    "slug": "letters-to-my-love-magazine",
+    "title": "Letters to My Love",
+    "searchTitle": "Personalised Love Letters Magazine",
+    "pinTitle": "Letters to My Love: a Magazine of Love Letters for Your Partner",
+    "occasion": "Love letters",
+    "short": "A magazine of love letters: for the first time you met, the hard days, the future, and right now.",
+    "description": "The letters you never got round to writing. One for the day you met, one for the hard times, one for the future and one for right now. We set your words beautifully across a glossy magazine with your photos, and you can add your voice reading them through a scan code. The most romantic thing you can give.",
+    "keywords": [
+      "love letters gift",
+      "romantic letters for her",
+      "romantic letters for him",
+      "anniversary love letter",
+      "valentines love letter",
+      "personalised love letter keepsake"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring the couple",
+      "A letter to the happy couple",
+      "Their love story by the numbers",
+      "A photo spread of the proposal",
+      "The proposal, as it happened",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "My love letter to you",
+    "feature": [
+      "The letter I have wanted to write for years",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "names",
+        "label": "Your names",
+        "example": "Ava & Sam",
+        "max": 16
+      },
+      {
+        "id": "since",
+        "label": "Together since",
+        "example": "2016",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Sam",
+        "max": 34
+      },
+      {
+        "id": "dear",
+        "label": "What you call them",
+        "example": "My darling Ava",
+        "max": 20
+      },
+      {
+        "id": "first",
+        "label": "A line for the day you met",
+        "example": "I knew before you said hello",
+        "max": 34
+      },
+      {
+        "id": "future",
+        "label": "A line for the future",
+        "example": "I cannot wait to grow old with you",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Your love in three words",
+        "example": "Deep, true, endless",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The letter you have wanted to write for years",
+        "example": "I have never told you about the night I watched you sleep after our worst day, and promised myself I would spend my whole life making you as happy as you make me",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "Your main love letter",
+        "example": "My darling, I am better at saying it with cups of tea than with words, so here it is in writing. You are my best friend, my home and my favourite person. Every day with you is a gift I never take for granted.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of you both",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite of the two of you",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "ava-sam",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "names": "Ava & Sam",
+          "since": "2016",
+          "from": "Sam",
+          "dear": "My darling Ava",
+          "first": "I knew before you said hello",
+          "future": "I cannot wait to grow old with you",
+          "words": "Deep, true, endless",
+          "x_type": "romantics"
+        },
+        "photos": {
+          "photo1": "/assets/samples/valentines-magazine-0c.jpg",
+          "photo2": "/assets/samples/valentines-magazine-0.jpg",
+          "photo3": "/assets/samples/valentines-magazine-0b.jpg"
+        }
+      },
+      {
+        "id": "emma-leo",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "names": "Emma & Leo",
+          "since": "2012",
+          "from": "Emma",
+          "dear": "My Leo",
+          "first": "You made me laugh first",
+          "future": "Every year better than the last",
+          "words": "Kind, safe, home",
+          "x_type": "homebodies"
+        },
+        "photos": {
+          "photo1": "/assets/samples/anniversary-magazine-3.jpg"
+        }
+      },
+      {
+        "id": "mia-chris",
+        "palette": "butter",
+        "portrait": {
+          "skin": 1,
+          "hair": "long",
+          "hairColor": "#5a3a22"
+        },
+        "values": {
+          "names": "Mia & Chris",
+          "since": "2023",
+          "from": "Chris",
+          "dear": "Beautiful Mia",
+          "first": "You stole my seat and my heart",
+          "future": "All our adventures still to come",
+          "words": "Bright, bold, mine",
+          "x_type": "adventurers"
+        },
+        "photos": {
+          "photo1": "/assets/samples/valentines-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{names}",
+      "issue": "The love letters issue",
+      "edition": "Together since {since}",
+      "lines": [
+        [
+          "Exclusive",
+          "The letters, finally written"
+        ],
+        [
+          "The day we met",
+          "{first}"
+        ],
+        [
+          "Our future",
+          "{future}"
+        ]
+      ],
+      "badge": [
+        "Love",
+        "letters",
+        "inside"
+      ],
+      "quote": "{words}",
+      "credit": "Written with love"
+    }
+  },
+  {
+    "slug": "forever-person-magazine",
+    "title": "To My Forever Person",
+    "searchTitle": "Soulmate Personalised Magazine Gift",
+    "pinTitle": "To My Forever Person: a Soulmate Magazine Gift",
+    "occasion": "My soulmate",
+    "short": "For your soulmate: the person who feels like home, celebrated in a glossy magazine.",
+    "description": "Some people just feel like home. For your soulmate and lifelong companion: how you found each other, what makes them your person and the life you share. We turn it into a deeply personal magazine where they are the cover star, with your photos on almost every page.",
+    "keywords": [
+      "soulmate gift",
+      "gift for my person",
+      "romantic gift for wife",
+      "romantic gift for husband",
+      "anniversary gift for soulmate",
+      "personalised soulmate gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover starring the couple",
+      "A letter to the happy couple",
+      "Their love story by the numbers",
+      "A photo spread of the proposal",
+      "The proposal, as it happened",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter to my person",
+    "feature": [
+      "The moment I knew you were my person",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Leo",
+        "max": 12
+      },
+      {
+        "id": "since",
+        "label": "My person since",
+        "example": "2014",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 34
+      },
+      {
+        "id": "home",
+        "label": "They feel like home because",
+        "example": "They know me without asking",
+        "max": 34
+      },
+      {
+        "id": "calm",
+        "label": "They make me calm when",
+        "example": "The whole world is too loud",
+        "max": 34
+      },
+      {
+        "id": "ours",
+        "label": "Something that is just ours",
+        "example": "Pancakes at midnight",
+        "max": 34
+      },
+      {
+        "id": "words",
+        "label": "Them in three words",
+        "example": "Safe, steady, mine",
+        "max": 28
+      },
+      {
+        "id": "moment",
+        "label": "The moment you knew they were your person",
+        "example": "I was crying in a car park after the worst day and he did not say a word, he just sat on the cold ground next to me until I was ready",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want your person to know? (This becomes your letter)",
+        "example": "You are my person. My calm, my home, my best friend. Out of everyone in the world, I would choose you every time, in every lifetime. Thank you for being mine.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of them",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "The two of you",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "leo",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Leo",
+          "since": "2014",
+          "from": "Emma",
+          "home": "They know me without asking",
+          "calm": "The whole world is too loud",
+          "ours": "Pancakes at midnight",
+          "words": "Safe, steady, mine",
+          "x_type": "romantics"
+        },
+        "photos": {
+          "photo1": "/assets/samples/engagement-magazine-1.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "rose",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "since": "2019",
+          "from": "Chris",
+          "home": "Her laugh fills every room",
+          "calm": "I overthink everything",
+          "ours": "Our secret café",
+          "words": "Bright, gentle, home",
+          "x_type": "homebodies"
+        },
+        "photos": {
+          "photo1": "/assets/samples/engagement-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "butter",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#b5552b"
+        },
+        "values": {
+          "name": "Mia",
+          "since": "2010",
+          "from": "Sam",
+          "home": "She remembers everything",
+          "calm": "Life gets messy",
+          "ours": "Sunday crosswords",
+          "words": "Wise, warm, forever",
+          "x_type": "team"
+        },
+        "photos": {
+          "photo1": "/assets/samples/star-sign-birthday-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The forever person issue",
+      "edition": "My person since {since}",
+      "lines": [
+        [
+          "Exclusive",
+          "Meet my forever person"
+        ],
+        [
+          "They feel like home",
+          "{home}"
+        ],
+        [
+          "Just ours",
+          "{ours}"
+        ]
+      ],
+      "badge": [
+        "My",
+        "person",
+        "forever"
+      ],
+      "quote": "{words}",
+      "credit": "Love, {from}"
     }
   }
 ]

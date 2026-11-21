@@ -1,0 +1,369 @@
+{
+  "theme": "night",
+  "fields": [
+    {
+      "id": "s_heard",
+      "label": "How you found each other",
+      "example": "A wrong number, then a three hour conversation",
+      "max": 80,
+      "chapter": "How I found my person"
+    },
+    {
+      "id": "s_knew",
+      "label": "Who you are when you are with them",
+      "example": "Braver, sillier and completely myself",
+      "max": 80,
+      "chapter": "Who I am with them"
+    },
+    {
+      "id": "s_guess",
+      "label": "What you would do in another lifetime together",
+      "example": "Run a tiny bookshop by the sea",
+      "max": 80,
+      "chapter": "Every lifetime"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to your person",
+      "example": "To be your home, wherever we are",
+      "max": 70
+    }
+  ],
+  "story": {
+    "title": "My Person, My Home",
+    "hand": "In every lifetime, {from} would choose {who}.",
+    "kicker": "Our story",
+    "legend": "A few more things about your person",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them."
+  },
+  "labels": {
+    "since": "My person since",
+    "home": "They feel like home",
+    "calm": "They calm me when",
+    "ours": "Just ours",
+    "words": "In three words"
+  },
+  "picks": {
+    "legend": "Why they are your person",
+    "kicker": "From {from}, with love",
+    "title": "Ten reasons you are my person",
+    "items": [
+      "You know me better than I do",
+      "Your hugs fix everything",
+      "You never let me give up",
+      "Your laugh is my favourite sound",
+      "You make silence comfortable",
+      "You are honest, always kindly",
+      "You make me braver",
+      "You remember the little things",
+      "You are my calm",
+      "You make me laugh on bad days",
+      "You feel like home",
+      "You chose me too"
+    ]
+  },
+  "world": {
+    "kicker": "A toast to your person",
+    "title": "Why the World Is Better With {who} In It",
+    "lead": "Because {who} exists, the world got:",
+    "items": [
+      "Someone who makes everyone feel safe.",
+      "A laugh that fixes bad days.",
+      "Kindness, without a second thought.",
+      "A home that is a person, not a place.",
+      "A best friend, and then some.",
+      "Proof that soulmates are real.",
+      "And the one and only {who}."
+    ],
+    "close": "Lucky me, {who}. Lucky everyone."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From me to you",
+    "title": "Promises to my person",
+    "items": [
+      "To always be your safe place.",
+      "To sit on the cold ground with you, whenever you need.",
+      "To laugh with you until we are old and grey.",
+      "To choose you, in every lifetime.",
+      "To love you, completely, forever."
+    ],
+    "hand": "Forever yours, {from}"
+  },
+  "movie": {
+    "sub": "A soulmate story",
+    "soon": "Showing in every lifetime",
+    "reviews": [
+      [
+        "The kind of love everyone hopes for",
+        "The Daily Hug"
+      ],
+      [
+        "My favourite person, my favourite story",
+        "{from}"
+      ],
+      [
+        "Gentle, deep and forever",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "In Greek myth, who said humans were split in two and search for their other half?",
+      [
+        "Aristophanes",
+        "Homer",
+        "Achilles"
+      ],
+      0
+    ],
+    [
+      "What do the Japanese call the invisible red thread said to connect soulmates?",
+      [
+        "The red thread of fate",
+        "The golden rope",
+        "The silver chain"
+      ],
+      0
+    ]
+  ],
+  "note": {
+    "title": "Why we made this for your person",
+    "contents": "A note for you",
+    "paras": [
+      "Everyone deserves one person who feels like home. Not many get told so, properly.",
+      "This magazine is for that person: the calm in the storm, the laugh on bad days, the one who just knows.",
+      "{who}, every page is about you.",
+      "From everything {from} told us, you are their person, in every lifetime."
+    ],
+    "wish": "To my forever person, {who}."
+  },
+  "concepts": "couple",
+  "own": {
+    "dayTitle": "A Day With My Person",
+    "day": [
+      [
+        "7:30",
+        "Morning",
+        "Two coffees, made exactly right, without asking."
+      ],
+      [
+        "13:00",
+        "Midday",
+        "A message about nothing that means everything."
+      ],
+      [
+        "18:00",
+        "Home",
+        "A hug at the door. The day melts away."
+      ],
+      [
+        "20:00",
+        "Evening",
+        "Feet tangled on the sofa, talking about everything and nothing."
+      ]
+    ],
+    "night": [
+      "23:00",
+      "Goodnight",
+      "Falling asleep holding hands, every single night."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "Right next to me, wherever that is"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Midnight pancakes and second helpings"
+      ],
+      [
+        "music",
+        "Call",
+        "\"I am here.\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Making the whole world feel quiet and safe"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Exactly when I need them most"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Hold their hand. Tell them they are your person. Often"
+      ]
+    ],
+    "little": [
+      "You know what kind of day I had from one look.",
+      "You sit with me in silence when words are not enough.",
+      "You still make me laugh until I cry.",
+      "You make wherever we are feel like home."
+    ],
+    "letters": "The Little Ways You Are My Person"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "timeline": {
+    "kicker": "Proposals through the ages",
+    "title": "A Short History of Saying Yes",
+    "items": [
+      [
+        "Ancient Rome",
+        "A ring to promise",
+        "Romans marked a promise to marry with a ring, sometimes a simple band of iron."
+      ],
+      [
+        "1477",
+        "A famous diamond",
+        "Archduke Maximilian gave Mary of Burgundy a diamond ring, and a sparkly tradition began."
+      ],
+      [
+        "1839",
+        "The queen proposes",
+        "As queen, Victoria had to do the asking. She proposed to Prince Albert, and he happily said yes."
+      ],
+      [
+        "1947",
+        "A diamond is forever",
+        "A copywriter dreamed up the famous line, and it became one of the best known slogans ever written."
+      ]
+    ],
+    "today": [
+      "{year}",
+      "{who}",
+      "The newest yes in the history of yeses. And our favourite by far."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Beautiful Words for New Beginnings",
+    "items": [
+      [
+        "Yes I said yes I will Yes.",
+        "James Joyce, Ulysses, 1922"
+      ],
+      [
+        "I have found the one whom my soul loves.",
+        "Song of Solomon 3:4"
+      ],
+      [
+        "Two are better than one.",
+        "Ecclesiastes 4:9"
+      ],
+      [
+        "Well begun is half done.",
+        "An old proverb"
+      ]
+    ],
+    "hand": "Lovely words, all of them. Ours are simpler: we are so happy for you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "Fun Facts for the Newly Engaged",
+    "items": [
+      [
+        "ring",
+        "The vein of love",
+        "Rings go on the fourth finger because people once believed a vein ran from it straight to the heart."
+      ],
+      [
+        "star",
+        "Older than dinosaurs",
+        "Most diamonds formed deep underground well over a billion years ago. Talk about lasting."
+      ],
+      [
+        "key",
+        "Hard to break",
+        "Diamond is the hardest natural material on Earth. A very good sign for a promise."
+      ],
+      [
+        "paw",
+        "Penguin proposals",
+        "Some penguins woo their partner with the perfect pebble for the nest. The original ring."
+      ],
+      [
+        "music",
+        "Dance first",
+        "Albatrosses perform long courtship dances, and often stay with one partner for life."
+      ],
+      [
+        "pulse",
+        "Nerves or joy",
+        "Nerves and excitement feel almost the same in the body: racing heart, quick breath, shaky hands."
+      ]
+    ],
+    "hand": "Science can explain the sparkle. It cannot explain how perfect {who} are together."
+  },
+  "awards": [
+    [
+      "Proposal of the year",
+      "By a landslide"
+    ],
+    [
+      "Best kept secret",
+      "Almost nobody knew"
+    ],
+    [
+      "Most adorable couple",
+      "Unanimous"
+    ],
+    [
+      "Bravest question asked",
+      "And the best answer"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One planning night",
+      "We bring snacks and big ideas"
+    ],
+    [
+      "A cake tasting buddy",
+      "We will try every slice"
+    ],
+    [
+      "One stress free evening",
+      "No wedding talk allowed"
+    ],
+    [
+      "First dance practice",
+      "We promise not to laugh"
+    ]
+  ],
+  "vouchersTitle": "Engagement vouchers for {who}",
+  "cert": "Meant to Be",
+  "certLine": "are officially, undeniably and forever",
+  "perfume": "Top notes of happy tears and champagne, with a sparkling heart of yes.",
+  "news": {
+    "edition": "Engagement edition",
+    "headline": "{who} are engaged",
+    "lead": "Friends and family are celebrating after {who} confirmed the news everyone was hoping for: there will be a wedding.",
+    "weather": "Weather: sunny, with a 100% chance of happy tears"
+  },
+  "passport": {
+    "kicker": "Next stop, the wedding",
+    "head": "Passport to forever",
+    "nationality": "Engaged, everywhere",
+    "job": "Happily engaged",
+    "stamps": [
+      "The proposal",
+      "The planning",
+      "The big day"
+    ]
+  },
+  "words": [
+    "RING",
+    "YES",
+    "LOVE",
+    "DIAMOND",
+    "FOREVER",
+    "ENGAGED"
+  ]
+}

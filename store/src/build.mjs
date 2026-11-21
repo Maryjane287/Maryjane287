@@ -263,7 +263,7 @@ async function home() {
   ].map(([m, ex], i) => `<a class="hero-cover hc-${i}" href="/${m.slug}/" aria-label="${esc(m.title)}">${coverFor(m, ex)}</a>`).join('');
   const FILTERS = [
     ['birthday', 'Birthdays', /birthday|kids/],
-    ['love', 'Love and weddings', /anniversary|wedding|engagement|valentines|boyfriend|girlfriend|husband|wife|marry|bridesmaid|christmas-together|long-distance|love-story/],
+    ['love', 'Love and weddings', /anniversary|wedding|engagement|valentines|boyfriend|girlfriend|husband|wife|marry|bridesmaid|christmas-together|long-distance|love-story|hundred-reasons|first-date|forever|still-falling|adventures-with|letters-to/],
     ['family', 'Family and baby', /grandparents|grandma|baby|mothers|mum-|fathers|daddys|sister|brother|sibling|family|matriarch|pregnancy|kids|year-in-review/],
     ['christmas', 'Christmas', /christmas|year-in-review/],
     ['thanks', 'Friends and big moments', /best-friend|teacher|thank-you|retirement|graduation|new-job|new-home|travel|leaving/],

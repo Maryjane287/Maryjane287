@@ -1,0 +1,369 @@
+{
+  "theme": "ruby",
+  "fields": [
+    {
+      "id": "s_heard",
+      "label": "How you got ready, or how nervous you were",
+      "example": "Three outfit changes and a pep talk from my sister",
+      "max": 80,
+      "chapter": "Getting ready"
+    },
+    {
+      "id": "s_knew",
+      "label": "What you talked about all night",
+      "example": "Our worst holidays, and whether pineapple belongs on pizza",
+      "max": 80,
+      "chapter": "The conversation"
+    },
+    {
+      "id": "s_guess",
+      "label": "How the night ended",
+      "example": "A slightly awkward hug, then a text within ten minutes",
+      "max": 80,
+      "chapter": "The goodbye"
+    },
+    {
+      "id": "s_promise",
+      "label": "A wish for your next date",
+      "example": "That every date feels as exciting as the first",
+      "max": 70
+    }
+  ],
+  "story": {
+    "title": "The Night It All Began",
+    "hand": "And to think, {who} nearly cancelled.",
+    "kicker": "Our story",
+    "legend": "A few more things about that night",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them."
+  },
+  "labels": {
+    "date": "Our first date",
+    "where": "Where we went",
+    "wore": "What they wore",
+    "first": "First impression",
+    "words": "In three words"
+  },
+  "picks": {
+    "legend": "Things you noticed that night",
+    "kicker": "From {from}, with love",
+    "title": "Ten things I noticed on our first date",
+    "items": [
+      "Your nervous laugh",
+      "How you were kind to the waiter",
+      "Your eyes when you talked about your family",
+      "That you let me have the last bite",
+      "Your terrible joke about the menu",
+      "How fast the time went",
+      "That you asked about me, properly",
+      "Your smile when I laughed",
+      "How you walked me to the door",
+      "That you texted first",
+      "How easy it felt",
+      "That I did not want it to end"
+    ]
+  },
+  "world": {
+    "kicker": "A toast to that night",
+    "title": "Why the World Is Glad You Said Yes to That Date",
+    "lead": "Because {who} went on that first date, the world got:",
+    "items": [
+      "A love story worth telling.",
+      "Two people who make each other laugh daily.",
+      "Proof that nerves are worth it.",
+      "A table for two, booked forever.",
+      "A lot of very happy friends.",
+      "A future full of second dates.",
+      "And the one and only {who}."
+    ],
+    "close": "Here is to the first date, {who}, and every date since."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From me to you",
+    "title": "Promises for every date to come",
+    "items": [
+      "To keep dating you, always.",
+      "To still get nervous before a big night out.",
+      "To let you choose the restaurant, sometimes.",
+      "To never stop asking you questions.",
+      "To make every date feel like the first."
+    ],
+    "hand": "See you on our next date, {from}"
+  },
+  "movie": {
+    "sub": "A first date story",
+    "soon": "The sequel: date number two",
+    "reviews": [
+      [
+        "Awkward, sweet and unforgettable",
+        "The Daily Hug"
+      ],
+      [
+        "Best night of my life",
+        "{from}"
+      ],
+      [
+        "The meet cute of the year",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "In a survey, how long do most people say it takes to know if a first date is going well?",
+      [
+        "A few minutes",
+        "Two days",
+        "A week"
+      ],
+      0
+    ],
+    [
+      "Which of these is the most popular first date in the UK?",
+      [
+        "Dinner or drinks",
+        "Skydiving",
+        "A museum at midnight"
+      ],
+      0
+    ]
+  ],
+  "note": {
+    "title": "Why your first date matters",
+    "contents": "A note for you both",
+    "paras": [
+      "Every love story has a first page. Usually it is a slightly nervous one.",
+      "The outfit, the table, the joke that broke the ice. It all happened once, and it led to everything since.",
+      "{who}, this is your first page, written down properly.",
+      "From everything {from} told us, they knew it was special before the bill came."
+    ],
+    "wish": "Here is to date number one, {who}."
+  },
+  "concepts": "couple",
+  "own": {
+    "dayTitle": "The First Date, Hour by Hour",
+    "day": [
+      [
+        "17:00",
+        "Getting ready",
+        "Three outfits. Two pep talks. One very full wardrobe floor."
+      ],
+      [
+        "19:00",
+        "Hello",
+        "A slightly awkward hug. A very big smile."
+      ],
+      [
+        "20:30",
+        "The conversation",
+        "Somewhere between the starters and dessert, the nerves just went."
+      ],
+      [
+        "22:30",
+        "The walk",
+        "The long way home. On purpose."
+      ]
+    ],
+    "night": [
+      "23:15",
+      "The text",
+      "\"I had such a lovely time.\" Sent in under ten minutes."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "A small table for two by the window"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Shared starters and one dessert, two spoons"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Shall we get another drink?\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Making five hours feel like five minutes"
+      ],
+      [
+        "clock",
+        "Most active",
+        "After the first nervous ten minutes"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Book the table. Wear the blue shirt. Laugh at the spilled water"
+      ]
+    ],
+    "little": [
+      "You still remember what I ordered that night.",
+      "You still get the same nervous laugh.",
+      "You tell the story of our first date better than I do.",
+      "You still open the door for me, like you did that night."
+    ],
+    "letters": "Little Things From Our First Date"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "timeline": {
+    "kicker": "Proposals through the ages",
+    "title": "A Short History of Saying Yes",
+    "items": [
+      [
+        "Ancient Rome",
+        "A ring to promise",
+        "Romans marked a promise to marry with a ring, sometimes a simple band of iron."
+      ],
+      [
+        "1477",
+        "A famous diamond",
+        "Archduke Maximilian gave Mary of Burgundy a diamond ring, and a sparkly tradition began."
+      ],
+      [
+        "1839",
+        "The queen proposes",
+        "As queen, Victoria had to do the asking. She proposed to Prince Albert, and he happily said yes."
+      ],
+      [
+        "1947",
+        "A diamond is forever",
+        "A copywriter dreamed up the famous line, and it became one of the best known slogans ever written."
+      ]
+    ],
+    "today": [
+      "{year}",
+      "{who}",
+      "The newest yes in the history of yeses. And our favourite by far."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Beautiful Words for New Beginnings",
+    "items": [
+      [
+        "Yes I said yes I will Yes.",
+        "James Joyce, Ulysses, 1922"
+      ],
+      [
+        "I have found the one whom my soul loves.",
+        "Song of Solomon 3:4"
+      ],
+      [
+        "Two are better than one.",
+        "Ecclesiastes 4:9"
+      ],
+      [
+        "Well begun is half done.",
+        "An old proverb"
+      ]
+    ],
+    "hand": "Lovely words, all of them. Ours are simpler: we are so happy for you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "Fun Facts for the Newly Engaged",
+    "items": [
+      [
+        "ring",
+        "The vein of love",
+        "Rings go on the fourth finger because people once believed a vein ran from it straight to the heart."
+      ],
+      [
+        "star",
+        "Older than dinosaurs",
+        "Most diamonds formed deep underground well over a billion years ago. Talk about lasting."
+      ],
+      [
+        "key",
+        "Hard to break",
+        "Diamond is the hardest natural material on Earth. A very good sign for a promise."
+      ],
+      [
+        "paw",
+        "Penguin proposals",
+        "Some penguins woo their partner with the perfect pebble for the nest. The original ring."
+      ],
+      [
+        "music",
+        "Dance first",
+        "Albatrosses perform long courtship dances, and often stay with one partner for life."
+      ],
+      [
+        "pulse",
+        "Nerves or joy",
+        "Nerves and excitement feel almost the same in the body: racing heart, quick breath, shaky hands."
+      ]
+    ],
+    "hand": "Science can explain the sparkle. It cannot explain how perfect {who} are together."
+  },
+  "awards": [
+    [
+      "Proposal of the year",
+      "By a landslide"
+    ],
+    [
+      "Best kept secret",
+      "Almost nobody knew"
+    ],
+    [
+      "Most adorable couple",
+      "Unanimous"
+    ],
+    [
+      "Bravest question asked",
+      "And the best answer"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One planning night",
+      "We bring snacks and big ideas"
+    ],
+    [
+      "A cake tasting buddy",
+      "We will try every slice"
+    ],
+    [
+      "One stress free evening",
+      "No wedding talk allowed"
+    ],
+    [
+      "First dance practice",
+      "We promise not to laugh"
+    ]
+  ],
+  "vouchersTitle": "Engagement vouchers for {who}",
+  "cert": "Meant to Be",
+  "certLine": "are officially, undeniably and forever",
+  "perfume": "Top notes of happy tears and champagne, with a sparkling heart of yes.",
+  "news": {
+    "edition": "Engagement edition",
+    "headline": "{who} are engaged",
+    "lead": "Friends and family are celebrating after {who} confirmed the news everyone was hoping for: there will be a wedding.",
+    "weather": "Weather: sunny, with a 100% chance of happy tears"
+  },
+  "passport": {
+    "kicker": "Next stop, the wedding",
+    "head": "Passport to forever",
+    "nationality": "Engaged, everywhere",
+    "job": "Happily engaged",
+    "stamps": [
+      "The proposal",
+      "The planning",
+      "The big day"
+    ]
+  },
+  "words": [
+    "RING",
+    "YES",
+    "LOVE",
+    "DIAMOND",
+    "FOREVER",
+    "ENGAGED"
+  ]
+}

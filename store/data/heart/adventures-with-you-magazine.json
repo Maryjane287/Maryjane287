@@ -1,0 +1,369 @@
+{
+  "theme": "ocean",
+  "fields": [
+    {
+      "id": "s_heard",
+      "label": "Your very first trip together",
+      "example": "A rainy weekend in Bath, and we never left the hotel café",
+      "max": 80,
+      "chapter": "Our first trip together"
+    },
+    {
+      "id": "s_knew",
+      "label": "The best meal you ever had together",
+      "example": "Fresh pasta in a tiny village with no menu",
+      "max": 80,
+      "chapter": "The best meal we ever had"
+    },
+    {
+      "id": "s_guess",
+      "label": "Your big dream trip",
+      "example": "Driving Route 66 in a convertible",
+      "max": 80,
+      "chapter": "Where we will go one day"
+    },
+    {
+      "id": "s_promise",
+      "label": "A wish for your next adventure",
+      "example": "Fewer missed trains, more sunsets",
+      "max": 70
+    }
+  ],
+  "story": {
+    "title": "Our Adventures, So Far",
+    "hand": "And the map is still mostly empty, {who}.",
+    "kicker": "Our story",
+    "legend": "A few more things about your adventures",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them."
+  },
+  "labels": {
+    "trips": "Trips together",
+    "best": "Favourite place",
+    "fail": "The trip that went wrong",
+    "next": "Next on the list",
+    "words": "In three words"
+  },
+  "picks": {
+    "legend": "Your travel favourites",
+    "kicker": "From {from}, with love",
+    "title": "Ten things I love about travelling with you",
+    "items": [
+      "How you always find the best café",
+      "Your terrible map reading",
+      "Sharing headphones on long trains",
+      "How you try every local food",
+      "Your holiday shirts",
+      "Sunsets with you",
+      "How you make friends everywhere",
+      "Getting lost on purpose",
+      "Your packing lists",
+      "Airport snacks, always",
+      "How you stay calm when it all goes wrong",
+      "Coming home together"
+    ]
+  },
+  "world": {
+    "kicker": "A toast from everywhere",
+    "title": "Why the World Is Better With You Two Exploring It",
+    "lead": "Wherever {who} go, the world gets:",
+    "items": [
+      "Two very happy tourists.",
+      "Great tips for everyone back home.",
+      "Holiday photos worth seeing.",
+      "Local friends made in every town.",
+      "A love story with a passport.",
+      "Proof that getting lost is fun.",
+      "And the one and only {who}."
+    ],
+    "close": "Bon voyage, {who}. Wherever next."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "For every trip to come",
+    "title": "Travel promises",
+    "items": [
+      "To always share the window seat.",
+      "To check the ferry times. Twice.",
+      "To say yes to the unexpected detour.",
+      "To carry the heavy bag, sometimes.",
+      "To explore the whole world with you."
+    ],
+    "hand": "Your travel partner forever, {from}"
+  },
+  "movie": {
+    "sub": "A love story on the road",
+    "soon": "Next destination: coming soon",
+    "reviews": [
+      [
+        "Sun, laughter and missed ferries",
+        "The Daily Hug"
+      ],
+      [
+        "The best trips of my life",
+        "{from}"
+      ],
+      [
+        "A romantic road movie",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Which is the most visited city in the world, by international arrivals, in many recent years?",
+      [
+        "Bangkok",
+        "Rome",
+        "Sydney"
+      ],
+      0
+    ],
+    [
+      "Which country has the most UNESCO World Heritage Sites?",
+      [
+        "Italy",
+        "Brazil",
+        "Canada"
+      ],
+      0
+    ]
+  ],
+  "note": {
+    "title": "Why your adventures matter",
+    "contents": "A note for you both",
+    "paras": [
+      "Holiday photos live on phones and get lost in the scroll. The best stories behind them get lost too.",
+      "So we gathered your adventures, the sunsets and the missed ferries, into one beautiful travel magazine.",
+      "{who}, this is your map so far.",
+      "From everything {from} told us, the best adventures are still ahead."
+    ],
+    "wish": "Happy travels, {who}."
+  },
+  "concepts": "couple",
+  "own": {
+    "dayTitle": "A Perfect Travel Day for {first}",
+    "day": [
+      [
+        "7:00",
+        "Up early",
+        "One wants the sunrise. The other wants breakfast. Both win."
+      ],
+      [
+        "11:00",
+        "Exploring",
+        "No map. Just a feeling and a very good café."
+      ],
+      [
+        "15:00",
+        "The detour",
+        "A wrong turn becomes the best part of the trip."
+      ],
+      [
+        "19:30",
+        "Dinner",
+        "A table outside, local food, holding hands under the table."
+      ]
+    ],
+    "night": [
+      "23:00",
+      "Back at the hotel",
+      "Planning tomorrow, already planning the next trip."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "A window seat, somewhere new"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Street food, local wine and airport snacks"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Shall we just go?\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Turning any disaster into a holiday story"
+      ],
+      [
+        "clock",
+        "Most active",
+        "The moment a long weekend appears"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Give them a passport, a map and no fixed plans"
+      ]
+    ],
+    "little": [
+      "You always save me the window seat.",
+      "You pack my phone charger when I forget it.",
+      "You learn \"thank you\" in every language.",
+      "You hold my hand on every take off."
+    ],
+    "letters": "Little Things From Our Travels"
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}.",
+  "timeline": {
+    "kicker": "Proposals through the ages",
+    "title": "A Short History of Saying Yes",
+    "items": [
+      [
+        "Ancient Rome",
+        "A ring to promise",
+        "Romans marked a promise to marry with a ring, sometimes a simple band of iron."
+      ],
+      [
+        "1477",
+        "A famous diamond",
+        "Archduke Maximilian gave Mary of Burgundy a diamond ring, and a sparkly tradition began."
+      ],
+      [
+        "1839",
+        "The queen proposes",
+        "As queen, Victoria had to do the asking. She proposed to Prince Albert, and he happily said yes."
+      ],
+      [
+        "1947",
+        "A diamond is forever",
+        "A copywriter dreamed up the famous line, and it became one of the best known slogans ever written."
+      ]
+    ],
+    "today": [
+      "{year}",
+      "{who}",
+      "The newest yes in the history of yeses. And our favourite by far."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Beautiful Words for New Beginnings",
+    "items": [
+      [
+        "Yes I said yes I will Yes.",
+        "James Joyce, Ulysses, 1922"
+      ],
+      [
+        "I have found the one whom my soul loves.",
+        "Song of Solomon 3:4"
+      ],
+      [
+        "Two are better than one.",
+        "Ecclesiastes 4:9"
+      ],
+      [
+        "Well begun is half done.",
+        "An old proverb"
+      ]
+    ],
+    "hand": "Lovely words, all of them. Ours are simpler: we are so happy for you, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "Fun Facts for the Newly Engaged",
+    "items": [
+      [
+        "ring",
+        "The vein of love",
+        "Rings go on the fourth finger because people once believed a vein ran from it straight to the heart."
+      ],
+      [
+        "star",
+        "Older than dinosaurs",
+        "Most diamonds formed deep underground well over a billion years ago. Talk about lasting."
+      ],
+      [
+        "key",
+        "Hard to break",
+        "Diamond is the hardest natural material on Earth. A very good sign for a promise."
+      ],
+      [
+        "paw",
+        "Penguin proposals",
+        "Some penguins woo their partner with the perfect pebble for the nest. The original ring."
+      ],
+      [
+        "music",
+        "Dance first",
+        "Albatrosses perform long courtship dances, and often stay with one partner for life."
+      ],
+      [
+        "pulse",
+        "Nerves or joy",
+        "Nerves and excitement feel almost the same in the body: racing heart, quick breath, shaky hands."
+      ]
+    ],
+    "hand": "Science can explain the sparkle. It cannot explain how perfect {who} are together."
+  },
+  "awards": [
+    [
+      "Proposal of the year",
+      "By a landslide"
+    ],
+    [
+      "Best kept secret",
+      "Almost nobody knew"
+    ],
+    [
+      "Most adorable couple",
+      "Unanimous"
+    ],
+    [
+      "Bravest question asked",
+      "And the best answer"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One planning night",
+      "We bring snacks and big ideas"
+    ],
+    [
+      "A cake tasting buddy",
+      "We will try every slice"
+    ],
+    [
+      "One stress free evening",
+      "No wedding talk allowed"
+    ],
+    [
+      "First dance practice",
+      "We promise not to laugh"
+    ]
+  ],
+  "vouchersTitle": "Engagement vouchers for {who}",
+  "cert": "Meant to Be",
+  "certLine": "are officially, undeniably and forever",
+  "perfume": "Top notes of happy tears and champagne, with a sparkling heart of yes.",
+  "news": {
+    "edition": "Engagement edition",
+    "headline": "{who} are engaged",
+    "lead": "Friends and family are celebrating after {who} confirmed the news everyone was hoping for: there will be a wedding.",
+    "weather": "Weather: sunny, with a 100% chance of happy tears"
+  },
+  "passport": {
+    "kicker": "Next stop, the wedding",
+    "head": "Passport to forever",
+    "nationality": "Engaged, everywhere",
+    "job": "Happily engaged",
+    "stamps": [
+      "The proposal",
+      "The planning",
+      "The big day"
+    ]
+  },
+  "words": [
+    "RING",
+    "YES",
+    "LOVE",
+    "DIAMOND",
+    "FOREVER",
+    "ENGAGED"
+  ]
+}
