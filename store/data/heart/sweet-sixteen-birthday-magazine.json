@@ -1,0 +1,372 @@
+{
+  "theme": "candy",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "Something they did as a little one that sums them up",
+      "example": "Wore fairy wings to the supermarket for a whole year",
+      "max": 80,
+      "chapter": "From tiny to sixteen"
+    },
+    {
+      "id": "s_two",
+      "label": "Something about them that makes you proud",
+      "example": "Always sticks up for anyone being left out",
+      "max": 80,
+      "chapter": "Who they are now"
+    },
+    {
+      "id": "s_three",
+      "label": "What you hope they never lose",
+      "example": "Their sparkle and their kindness",
+      "max": 80,
+      "chapter": "The future is yours"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To always be your safe place",
+      "max": 70
+    }
+  ],
+  "story": {
+    "title": "Sweet Sixteen: {first}",
+    "hand": "Never dim your sparkle, {who}.",
+    "kicker": "The cover star",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "labels": {
+    "age": "Turning",
+    "style": "Their style",
+    "song": "On repeat",
+    "dream": "Dream job",
+    "bestie": "Best friend"
+  },
+  "picks": {
+    "legend": "Sixteen essentials",
+    "kicker": "From {from}, with love",
+    "title": "Ten things every sixteen year old needs",
+    "items": [
+      "A best friend who gets it",
+      "A playlist for every mood",
+      "A signature look",
+      "Lip balm, always",
+      "A phone charger, always",
+      "A big dream",
+      "Permission to be themselves",
+      "Snacks after school",
+      "A cosy hoodie",
+      "A safe place to come home to",
+      "A bit of independence",
+      "Lots of love"
+    ]
+  },
+  "timeline": {
+    "kicker": "Growing up through the ages",
+    "title": "A Short History of Coming of Age",
+    "items": [
+      [
+        "Ancient Rome",
+        "A new toga",
+        "Roman boys swapped their childhood toga for a plain white adult one, and the whole family celebrated."
+      ],
+      [
+        "Long ago",
+        "The key of the door",
+        "In Britain, turning 21 traditionally meant being trusted with your own front door key. People still give silver keys today."
+      ],
+      [
+        "1970",
+        "The vote at 18",
+        "For the first time, 18 year olds in the UK could vote. Many countries soon did the same."
+      ],
+      [
+        "1971",
+        "Across the ocean",
+        "The United States lowered its voting age to 18 too, and a whole generation got a say."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who} turns {age}",
+      "Not in the history books yet. Give it a few years."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Advice for the Road Ahead",
+    "items": [
+      [
+        "It takes courage to grow up and become who you really are.",
+        "E. E. Cummings"
+      ],
+      [
+        "Be yourself; everyone else is already taken.",
+        "Often credited to Oscar Wilde"
+      ],
+      [
+        "The future belongs to those who believe in the beauty of their dreams.",
+        "Often credited to Eleanor Roosevelt"
+      ],
+      [
+        "Do not go where the path may lead, go instead where there is no path and leave a trail.",
+        "Often credited to Ralph Waldo Emerson"
+      ]
+    ],
+    "hand": "Good advice, all of it. Ours is simpler: go and be brilliant, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Turning {age}",
+    "items": [
+      [
+        "spark",
+        "Still growing",
+        "The brain keeps building its planning and decision making parts until around the mid twenties."
+      ],
+      [
+        "star",
+        "Well travelled",
+        "By now you have ridden the Earth around the Sun {age} times, and every lap is nearly a billion kilometres."
+      ],
+      [
+        "heart",
+        "Busy heart",
+        "By your 18th birthday, your heart has beaten more than 700 million times."
+      ],
+      [
+        "moon",
+        "Night owl, officially",
+        "Teenagers really are wired to fall asleep later. Their body clock can shift by up to two hours."
+      ],
+      [
+        "music",
+        "Songs for life",
+        "The music we love as teenagers stays with us more strongly than almost any other."
+      ],
+      [
+        "eye",
+        "One of a kind",
+        "Nobody in history has ever had your fingerprints, or your laugh."
+      ]
+    ],
+    "hand": "Science can explain a lot. It cannot explain how {who} got this grown up, this fast."
+  },
+  "world": {
+    "kicker": "A thank you from the universe",
+    "title": "Why the World Is Better With {who} at Sixteen",
+    "lead": "Because {who} is sixteen, the world got:",
+    "items": [
+      "A style icon in the making.",
+      "The best friend anyone could ask for.",
+      "A playlist worth stealing.",
+      "Big dreams and the brains to match.",
+      "A kind heart, every single day.",
+      "A sparkle that lights up every room.",
+      "And the one and only {who}."
+    ],
+    "close": "Happy sixteenth, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises to you",
+    "items": [
+      "To give you space, and a hug when you need it.",
+      "To always pick you up, no questions asked.",
+      "To cheer for every dream.",
+      "To only embarrass you a little.",
+      "To love you always."
+    ],
+    "hand": "Love, {from}"
+  },
+  "awards": [
+    [
+      "Most likely to succeed",
+      "Obviously"
+    ],
+    [
+      "Best laugh in the family",
+      "Heard for miles"
+    ],
+    [
+      "Champion sleeper",
+      "Through every alarm"
+    ],
+    [
+      "Lifetime achievement",
+      "In growing up brilliant"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One free lift",
+      "Any time, no questions"
+    ],
+    [
+      "A home cooked favourite dinner",
+      "You choose the menu"
+    ],
+    [
+      "One lie in",
+      "Nobody says a word"
+    ],
+    [
+      "Emergency snack delivery",
+      "Valid during exams"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "A Grown Up, Sort Of",
+  "awardsKicker": "Live from the red carpet",
+  "perfume": "Top notes of birthday cake, fresh trainers and big dreams. A heart of pure gold.",
+  "news": {
+    "edition": "Coming of age edition",
+    "headline": "{who} turns {age}, world braces itself",
+    "lead": "Sources close to the family confirm that {who} is now officially a grown up, though the laundry situation suggests otherwise.",
+    "weather": "Weather: bright, with a 100% chance of confetti"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to the rest of your life",
+    "nationality": "Loved, everywhere",
+    "job": "Professional legend in training",
+    "stamps": [
+      "Age {age}",
+      "The world",
+      "Home, always"
+    ]
+  },
+  "movie": {
+    "sub": "A coming of age story",
+    "soon": "The sequel: officially eighteen",
+    "reviews": [
+      [
+        "Sixteen and absolutely iconic",
+        "The Daily Hug"
+      ],
+      [
+        "Our favourite star",
+        "{from}"
+      ],
+      [
+        "The future looks bright",
+        "Their best friend"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "In which country is the sweet sixteen party tradition most famous?",
+      [
+        "The USA",
+        "France",
+        "Japan"
+      ],
+      0
+    ],
+    [
+      "What is sixteen in binary code?",
+      [
+        "10000",
+        "1111",
+        "1600"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "BIRTHDAY",
+    "DREAMS",
+    "PARTY",
+    "FUTURE",
+    "CHEERS",
+    "LEGEND"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Sixteen is when someone starts becoming exactly who they are meant to be.",
+      "This magazine treats them like the cover star they are, with notes from everyone who loves them.",
+      "{who}, this one is all about you.",
+      "From everything {from} told us, you are absolutely iconic."
+    ],
+    "wish": "Happy sixteenth, {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "A Day in the Life of {first} at Sixteen",
+    "day": [
+      [
+        "8:00",
+        "Snooze",
+        "Alarm one, alarm two, alarm three."
+      ],
+      [
+        "12:00",
+        "Lunch",
+        "With the best friend. Full debrief."
+      ],
+      [
+        "16:00",
+        "After school",
+        "Snacks and a very important group chat."
+      ],
+      [
+        "20:00",
+        "Evening",
+        "Headphones on. Do not disturb. Unless food."
+      ]
+    ],
+    "night": [
+      "23:00",
+      "Bedtime",
+      "Supposedly. Still messaging, probably."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "Their bedroom, door closed, music on"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Snacks, toast and any takeaway"
+      ],
+      [
+        "music",
+        "Call",
+        "\"I am FINE\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Knowing every word of every song"
+      ],
+      [
+        "clock",
+        "Most active",
+        "After 4pm and at night"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Feed them. Respect the closed door. Hug anyway"
+      ]
+    ],
+    "little": [
+      "You still let us hug you, sometimes.",
+      "You stick up for your friends.",
+      "You make the best playlists.",
+      "You are kinder than you let on."
+    ],
+    "letters": "Little Things We Love About You",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

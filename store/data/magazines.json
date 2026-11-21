@@ -17703,5 +17703,1891 @@
       "quote": "{word}",
       "credit": "Their favourite word"
     }
+  },
+  {
+    "slug": "twenty-first-birthday-magazine",
+    "title": "Twenty One",
+    "searchTitle": "Personalised 21st Birthday Magazine",
+    "pinTitle": "21st Birthday Gift: a Personalised Magazine for Twenty One",
+    "occasion": "21st birthday",
+    "short": "Twenty one and fabulous: a glossy magazine about who they are now and everything ahead.",
+    "description": "Twenty one is the birthday where life opens up: the first flat, the big plans, the friends who became family. A glossy magazine starring them, with notes from everyone who loves them, their wildest dreams and the stories from the last twenty one years that deserve to be told.",
+    "keywords": [
+      "21st birthday gift",
+      "gift for 21 year old",
+      "21st birthday ideas for her",
+      "21st birthday gift for him",
+      "personalised 21st gift",
+      "twenty first keepsake"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A glossy cover starring them",
+      "A birthday letter",
+      "Their story so far",
+      "A photo spread, baby photos welcome",
+      "Our advice for the next chapter",
+      "A front page, perfume ad, movie poster and pull out poster",
+      "A quiz and word search made from your answers",
+      "Awards, a passport, a certificate and a notes page"
+    ],
+    "letterTitle": "A letter for your twenty first",
+    "feature": [
+      "The story everyone tells about them",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Ava",
+        "max": 14
+      },
+      {
+        "id": "age",
+        "label": "Age they are turning",
+        "example": "30",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "city",
+        "label": "Where they live now",
+        "example": "A tiny flat in Manchester",
+        "max": 34
+      },
+      {
+        "id": "dream",
+        "label": "Their big dream",
+        "example": "To open her own studio",
+        "max": 34
+      },
+      {
+        "id": "crew",
+        "label": "Their people",
+        "example": "The uni girls and her sister",
+        "max": 34
+      },
+      {
+        "id": "signature",
+        "label": "Signature drink or dish",
+        "example": "Espresso martini, obviously",
+        "max": 34
+      },
+      {
+        "id": "moment",
+        "label": "The story everyone tells about them",
+        "example": "At her eighteenth she gave a speech thanking everyone individually, cried, made everyone else cry, then started the conga",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "Twenty one years ago you arrived and turned our whole world upside down in the best way. Go and chase every dream. We will be cheering, and we will always be home.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of them now",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite from this year",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "A photo with their people",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "ava",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Ava",
+          "age": "21",
+          "from": "Mum and Dad",
+          "city": "A tiny flat in Manchester",
+          "dream": "To open her own studio",
+          "crew": "The uni girls and her sister",
+          "signature": "Espresso martini, obviously",
+          "x_who": "child",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/twenty-first-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/twenty-first-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/twenty-first-birthday-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Leo",
+          "age": "21",
+          "from": "The lads",
+          "city": "Back home, for now",
+          "dream": "To play at Wembley, or watch",
+          "crew": "Five idiots from school",
+          "signature": "His famous cheese toastie",
+          "x_who": "friend",
+          "x_type": "sporty"
+        },
+        "photos": {
+          "photo1": "/assets/samples/eighteenth-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/eighteenth-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/eighteenth-birthday-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Mia",
+          "age": "21",
+          "from": "Grandma",
+          "city": "London, living the dream",
+          "dream": "To see every continent",
+          "crew": "Her cousins, always",
+          "signature": "Rum punch in the garden",
+          "x_who": "grand",
+          "x_type": "adventurer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/eighteenth-birthday-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The twenty one issue",
+      "edition": "Living in {city}",
+      "lines": [
+        [
+          "Exclusive",
+          "{name} turns 21"
+        ],
+        [
+          "The big dream",
+          "{dream}"
+        ],
+        [
+          "Their people",
+          "{crew}"
+        ]
+      ],
+      "badge": [
+        "Twenty",
+        "one",
+        "and fab"
+      ],
+      "quote": "{signature}",
+      "credit": "Signature order"
+    }
+  },
+  {
+    "slug": "thirtieth-birthday-magazine",
+    "title": "Hello Thirty",
+    "searchTitle": "Personalised 30th Birthday Magazine",
+    "pinTitle": "30th Birthday Gift: Hello Thirty Personalised Magazine",
+    "occasion": "30th birthday",
+    "short": "Hello thirty: a glossy magazine celebrating the decade they finally figured it all out. Mostly.",
+    "description": "Thirty is the age you stop pretending and start enjoying. A glossy birthday magazine starring them: their twenties in review, the friends who were there for all of it, the things they have finally figured out and the adventures waiting in their thirties. Friends and family can add notes through one link.",
+    "keywords": [
+      "30th birthday gift",
+      "30th birthday gift for her",
+      "30th birthday gift for him",
+      "thirtieth birthday ideas",
+      "dirty thirty gift",
+      "personalised 30th gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Mia",
+        "max": 14
+      },
+      {
+        "id": "age",
+        "label": "Age they are turning",
+        "example": "30",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "twenties",
+        "label": "Their twenties in three words",
+        "example": "Chaotic, brave, unforgettable",
+        "max": 40
+      },
+      {
+        "id": "figured",
+        "label": "Something they finally figured out",
+        "example": "How to say no, nicely",
+        "max": 40
+      },
+      {
+        "id": "thirties",
+        "label": "Their plan for their thirties",
+        "example": "More travel, less ironing",
+        "max": 34
+      },
+      {
+        "id": "ritual",
+        "label": "Their self care ritual",
+        "example": "A long bath and a good book",
+        "max": 34
+      },
+      {
+        "id": "moment",
+        "label": "Their twenties in one story",
+        "example": "The year she quit her job, booked a one way ticket to Lisbon, came home six months later with a new career and a dog called Pasteis",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "Your twenties were a wild, brilliant ride and I was lucky to be in the passenger seat. Your thirties are going to be even better, because now you know exactly who you are. Happy birthday.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the birthday star",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite from their twenties",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "mia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Mia",
+          "age": "30",
+          "from": "Emma",
+          "twenties": "Chaotic, brave, unforgettable",
+          "figured": "How to say no, nicely",
+          "thirties": "More travel, less ironing",
+          "ritual": "A long bath and a good book",
+          "x_who": "bestie",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/thirtieth-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/thirtieth-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/thirtieth-birthday-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "chris",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Chris",
+          "age": "30",
+          "from": "Ava",
+          "twenties": "Football, flat shares, falling in love",
+          "figured": "That vegetables are fine actually",
+          "thirties": "A house with a garden",
+          "ritual": "A Sunday run, then a fry up",
+          "x_who": "partner",
+          "x_type": "sporty"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/birthday-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "mint",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Sam",
+          "age": "30",
+          "from": "His sister",
+          "twenties": "Late nights and big dreams",
+          "figured": "How to cook more than pasta",
+          "thirties": "Start the business",
+          "ritual": "Vinyl and a coffee",
+          "x_who": "sibling",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The thirty issue",
+      "edition": "Hello thirty",
+      "lines": [
+        [
+          "Exclusive",
+          "Their twenties, reviewed"
+        ],
+        [
+          "Finally figured out",
+          "{figured}"
+        ],
+        [
+          "Next decade",
+          "{thirties}"
+        ]
+      ],
+      "badge": [
+        "Hello",
+        "30",
+        "and thriving"
+      ],
+      "quote": "{twenties}",
+      "credit": "Their twenties"
+    },
+    "letterTitle": "A letter for your thirtieth",
+    "feature": [
+      "Their twenties in one story",
+      "moment"
+    ]
+  },
+  {
+    "slug": "fortieth-birthday-magazine",
+    "title": "Fabulous at Forty",
+    "searchTitle": "Personalised 40th Birthday Magazine",
+    "pinTitle": "40th Birthday Gift: Fabulous at Forty Personalised Magazine",
+    "occasion": "40th birthday",
+    "short": "Fabulous at forty: their life so far as a glossy magazine, with notes from everyone who loves them.",
+    "description": "Forty years of stories, friendships, adventures and wisdom. A glossy birthday magazine starring them, with their life in highlights, the people who matter most, the lessons they would tell their younger self and a big toast to the next forty. Everyone can add a note through one link.",
+    "keywords": [
+      "40th birthday gift",
+      "40th birthday gift for her",
+      "40th birthday gift for him",
+      "fabulous at forty",
+      "personalised 40th gift",
+      "fortieth birthday ideas"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Emma",
+        "max": 14
+      },
+      {
+        "id": "age",
+        "label": "Age they are turning",
+        "example": "30",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "younger",
+        "label": "Advice to their younger self",
+        "example": "Wear the dress. Book the trip.",
+        "max": 40
+      },
+      {
+        "id": "proud",
+        "label": "Their proudest achievement",
+        "example": "Raising two kind children",
+        "max": 34
+      },
+      {
+        "id": "still",
+        "label": "Still young enough to",
+        "example": "Dance until the lights come on",
+        "max": 34
+      },
+      {
+        "id": "next",
+        "label": "Next on the list",
+        "example": "Learning to surf, finally",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "The highlight of their life so far",
+        "example": "The summer we drove around Italy in a tiny car with no air conditioning, singing the same three songs, and decided to get married on the way home",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "Forty looks incredible on you. You are wiser, kinder and funnier than ever, and every year with you is better than the last. Here is to the next forty, my love.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the birthday star",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite from the last ten years",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma",
+        "palette": "butter",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#b5552b"
+        },
+        "values": {
+          "name": "Emma",
+          "age": "40",
+          "from": "Chris",
+          "younger": "Wear the dress. Book the trip.",
+          "proud": "Raising two kind children",
+          "still": "Dance until the lights come on",
+          "next": "Learning to surf, finally",
+          "x_who": "partner",
+          "x_type": "gogetter"
+        },
+        "photos": {
+          "photo1": "/assets/samples/fortieth-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/fortieth-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/fortieth-birthday-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Leo",
+          "age": "40",
+          "from": "The kids",
+          "younger": "Relax, it all works out",
+          "proud": "Building the business",
+          "still": "Win at five a side",
+          "next": "The marathon",
+          "x_who": "dad",
+          "x_type": "sporty"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "rose",
+        "portrait": {
+          "skin": 3,
+          "hair": "long",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "age": "40",
+          "from": "Mia",
+          "younger": "You are enough, always",
+          "proud": "Her own salon",
+          "still": "Out dance everyone",
+          "next": "Bali with the girls",
+          "x_who": "bestie",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-3.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The forty issue",
+      "edition": "Fabulous at forty",
+      "lines": [
+        [
+          "Exclusive",
+          "Forty years of brilliance"
+        ],
+        [
+          "Proudest moment",
+          "{proud}"
+        ],
+        [
+          "Next on the list",
+          "{next}"
+        ]
+      ],
+      "badge": [
+        "Fab",
+        "40",
+        "and fierce"
+      ],
+      "quote": "{younger}",
+      "credit": "Advice to their younger self"
+    },
+    "letterTitle": "A letter for your fortieth",
+    "feature": [
+      "The highlight of their life so far",
+      "moment"
+    ]
+  },
+  {
+    "slug": "fiftieth-birthday-magazine",
+    "title": "Fifty and Fearless",
+    "searchTitle": "Personalised 50th Birthday Magazine",
+    "pinTitle": "50th Birthday Gift: Fifty and Fearless Personalised Magazine",
+    "occasion": "50th birthday",
+    "short": "Half a century of brilliance: a glossy 50th birthday magazine of their life, their people and their legacy.",
+    "description": "Fifty years of living, loving and laughing. A glossy 50th birthday magazine starring them: five decades in highlights, the people who shaped them, the best advice they ever gave and a toast to the fearless years ahead. Family and friends add notes through one link.",
+    "keywords": [
+      "50th birthday gift",
+      "50th birthday gift for mum",
+      "50th birthday gift for dad",
+      "fifty and fabulous",
+      "personalised 50th gift",
+      "fiftieth birthday ideas"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Chris",
+        "max": 14
+      },
+      {
+        "id": "age",
+        "label": "Age they are turning",
+        "example": "30",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "decade",
+        "label": "Their best decade so far",
+        "example": "Their thirties, by a mile",
+        "max": 34
+      },
+      {
+        "id": "advice",
+        "label": "Best advice they ever gave",
+        "example": "Always take the coat",
+        "max": 40
+      },
+      {
+        "id": "legacy",
+        "label": "What they are known for",
+        "example": "The Sunday roast. Legendary.",
+        "max": 40
+      },
+      {
+        "id": "bucket",
+        "label": "Top of their bucket list",
+        "example": "See the Northern Lights",
+        "max": 34
+      },
+      {
+        "id": "moment",
+        "label": "The moment we will always remember about them",
+        "example": "When the kids were small he built a full pirate ship in the garden from pallets, in one weekend, and the whole street came to play",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "Fifty years of you and the world is so much better for it. You have taught us how to be brave, how to laugh at ourselves and how to love properly. Happy fiftieth, Dad.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the birthday star",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A photo from years ago",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "A favourite from now",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "chris",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#8a8a8a"
+        },
+        "values": {
+          "name": "Chris",
+          "age": "50",
+          "from": "Mia and Leo",
+          "decade": "Their thirties, by a mile",
+          "advice": "Always take the coat",
+          "legacy": "The Sunday roast. Legendary.",
+          "bucket": "See the Northern Lights",
+          "x_who": "dad",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/fiftieth-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/fiftieth-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/fiftieth-birthday-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Ava",
+          "age": "50",
+          "from": "Sam",
+          "decade": "Right now, honestly",
+          "advice": "Never apologise for taking up space",
+          "legacy": "Throwing the best parties",
+          "bucket": "A month in Japan",
+          "x_who": "partner",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/mum-birthday-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "emma",
+        "palette": "butter",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Emma",
+          "age": "50",
+          "from": "Her sisters",
+          "decade": "Her twenties in London",
+          "advice": "Feed people and they will stay",
+          "legacy": "Her laugh, heard three streets away",
+          "bucket": "Swim with dolphins",
+          "x_who": "sibling",
+          "x_type": "adventurer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/milestone-birthday-magazine-0.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The fifty issue",
+      "edition": "Half a century of {name}",
+      "lines": [
+        [
+          "Exclusive",
+          "Fifty and fearless"
+        ],
+        [
+          "Known for",
+          "{legacy}"
+        ],
+        [
+          "Bucket list",
+          "{bucket}"
+        ]
+      ],
+      "badge": [
+        "Fifty",
+        "50",
+        "and fearless"
+      ],
+      "quote": "{advice}",
+      "credit": "Best advice they ever gave"
+    },
+    "letterTitle": "A letter for your fiftieth",
+    "feature": [
+      "The moment we will always remember about them",
+      "moment"
+    ]
+  },
+  {
+    "slug": "sixtieth-birthday-magazine",
+    "title": "Sixty and Sensational",
+    "searchTitle": "Personalised 60th Birthday Magazine",
+    "pinTitle": "60th Birthday Gift: Sixty and Sensational Personalised Magazine",
+    "occasion": "60th birthday",
+    "short": "Sixty years of stories, in a glossy magazine full of photos and notes from everyone who loves them.",
+    "description": "Sixty years of memories deserve more than a card. A glossy 60th birthday magazine of their life: where they grew up, the love of their life, the family they built, the wisdom they share and the adventures still to come. Children and grandchildren can all add notes and photos through one link.",
+    "keywords": [
+      "60th birthday gift",
+      "60th birthday gift for mum",
+      "60th birthday gift for dad",
+      "sixtieth birthday ideas",
+      "personalised 60th gift",
+      "gift for grandma 60"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A vintage cover starring them",
+      "A birthday letter",
+      "Their life by the numbers",
+      "A photo spread through the years",
+      "The story everyone still tells",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter for your sixtieth",
+    "feature": [
+      "The story the whole family tells",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Sam",
+        "max": 14
+      },
+      {
+        "id": "age",
+        "label": "Age they are turning",
+        "example": "60",
+        "max": 3
+      },
+      {
+        "id": "born",
+        "label": "Year they were born",
+        "example": "1966",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "The whole family",
+        "max": 30
+      },
+      {
+        "id": "grewup",
+        "label": "Where they grew up",
+        "example": "A seaside town in Cornwall",
+        "max": 34
+      },
+      {
+        "id": "love",
+        "label": "The love of their life",
+        "example": "Mia, married forty years",
+        "max": 34
+      },
+      {
+        "id": "wisdom",
+        "label": "Their words of wisdom",
+        "example": "Worry less, dance more",
+        "max": 34
+      },
+      {
+        "id": "retire",
+        "label": "Their next adventure",
+        "example": "A camper van and no plans",
+        "max": 34
+      },
+      {
+        "id": "moment",
+        "label": "The story the whole family tells",
+        "example": "The night of the great power cut, when he lit every candle in the house and told ghost stories until we were all too scared to go to bed",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "Sixty years old and still the heart of our family. Everything good in us, we learned from you. Thank you for every story, every hug and every Sunday lunch. We love you more than words.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the birthday star",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A photo from when they were young",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "A family favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "sam",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#c8c8c8"
+        },
+        "values": {
+          "name": "Sam",
+          "age": "60",
+          "born": "1966",
+          "from": "The whole family",
+          "grewup": "A seaside town in Cornwall",
+          "love": "Mia, married forty years",
+          "wisdom": "Worry less, dance more",
+          "retire": "A camper van and no plans",
+          "x_who": "dad",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/sixtieth-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/sixtieth-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/sixtieth-birthday-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "mia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 1,
+          "hair": "bun",
+          "hairColor": "#cfcfcf"
+        },
+        "values": {
+          "name": "Mia",
+          "age": "60",
+          "born": "1966",
+          "from": "Her children",
+          "grewup": "A little village near York",
+          "love": "Chris, her first dance",
+          "wisdom": "Always have cake in",
+          "retire": "Learning Italian, in Italy",
+          "x_who": "mum",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/milestone-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/milestone-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/milestone-birthday-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "emma",
+        "palette": "butter",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#8a8a8a"
+        },
+        "values": {
+          "name": "Emma",
+          "age": "60",
+          "born": "1966",
+          "from": "Her best friends",
+          "grewup": "South London",
+          "love": "Her garden and her grandkids",
+          "wisdom": "Say yes to the adventure",
+          "retire": "Every beach in Greece",
+          "x_who": "bestie",
+          "x_type": "adventurer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/milestone-birthday-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The sixty issue",
+      "edition": "Born in {born}",
+      "lines": [
+        [
+          "Exclusive",
+          "Sixty and sensational"
+        ],
+        [
+          "Grew up in",
+          "{grewup}"
+        ],
+        [
+          "Next adventure",
+          "{retire}"
+        ]
+      ],
+      "badge": [
+        "Sixty",
+        "60",
+        "and sensational"
+      ],
+      "quote": "{wisdom}",
+      "credit": "Words of wisdom"
+    }
+  },
+  {
+    "slug": "seventieth-birthday-magazine",
+    "title": "Seventy Years Young",
+    "searchTitle": "Personalised 70th Birthday Magazine",
+    "pinTitle": "70th Birthday Gift: Seventy Years Young Personalised Magazine",
+    "occasion": "70th birthday",
+    "short": "Seventy years young: a glossy magazine of a remarkable life, with notes from the whole family.",
+    "description": "Seventy years of history, love and stories that deserve to be kept. A glossy 70th birthday magazine of their remarkable life: where it began, the people they loved, the world they saw change and the wisdom they pass on. The whole family adds notes and photos through one link. A gift they will keep by their chair.",
+    "keywords": [
+      "70th birthday gift",
+      "70th birthday gift for grandma",
+      "70th birthday gift for grandad",
+      "seventieth birthday ideas",
+      "personalised 70th gift",
+      "70th birthday keepsake"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A vintage cover starring them",
+      "A birthday letter",
+      "Their life by the numbers",
+      "A photo spread through the years",
+      "The story everyone still tells",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter for your seventieth",
+    "feature": [
+      "The story of their life we love most",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Grandad Leo",
+        "max": 16
+      },
+      {
+        "id": "age",
+        "label": "Age they are turning",
+        "example": "70",
+        "max": 3
+      },
+      {
+        "id": "born",
+        "label": "Year they were born",
+        "example": "1956",
+        "max": 4
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "All the grandchildren",
+        "max": 30
+      },
+      {
+        "id": "firstjob",
+        "label": "Their very first job",
+        "example": "Paper round, age twelve",
+        "max": 34
+      },
+      {
+        "id": "changed",
+        "label": "The biggest change they have seen",
+        "example": "Phones you carry in your pocket",
+        "max": 40
+      },
+      {
+        "id": "proudest",
+        "label": "What they are proudest of",
+        "example": "Five grandchildren",
+        "max": 34
+      },
+      {
+        "id": "secret",
+        "label": "Their secret to a happy life",
+        "example": "A walk every day, rain or shine",
+        "max": 34
+      },
+      {
+        "id": "moment",
+        "label": "The story of their life we love most",
+        "example": "How he cycled ten miles in the snow to take Grandma to the dance in 1975, arrived soaked, and she said yes to marrying him anyway",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "Seventy years, and you are still the one we all run to. Thank you for the stories, the wisdom and the endless love. We are so lucky to have you, Grandad. Happy birthday.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the birthday star",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A photo from long ago",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "A family favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "leo",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 0,
+          "hair": "short",
+          "hairColor": "#dcdcdc"
+        },
+        "values": {
+          "name": "Grandad Leo",
+          "age": "70",
+          "born": "1956",
+          "from": "All the grandchildren",
+          "firstjob": "Paper round, age twelve",
+          "changed": "Phones you carry in your pocket",
+          "proudest": "Five grandchildren",
+          "secret": "A walk every day, rain or shine",
+          "x_who": "grand",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/seventieth-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/seventieth-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/seventieth-birthday-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "rose",
+        "portrait": {
+          "skin": 1,
+          "hair": "bun",
+          "hairColor": "#e0e0e0"
+        },
+        "values": {
+          "name": "Nana Ava",
+          "age": "70",
+          "born": "1956",
+          "from": "Her family",
+          "firstjob": "Saturday girl at the bakery",
+          "changed": "Women running the country",
+          "proudest": "Her three children",
+          "secret": "Laugh every day",
+          "x_who": "grand",
+          "x_type": "carer"
+        },
+        "photos": {
+          "photo1": "/assets/samples/grandparents-magazine-0.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "butter",
+        "portrait": {
+          "skin": 3,
+          "hair": "short",
+          "hairColor": "#b0b0b0"
+        },
+        "values": {
+          "name": "Sam",
+          "age": "70",
+          "born": "1956",
+          "from": "His wife, Emma",
+          "firstjob": "Apprentice carpenter",
+          "changed": "The whole world, online",
+          "proudest": "Fifty years married",
+          "secret": "Never go to bed angry",
+          "x_who": "partner",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/milestone-birthday-magazine-2.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The seventy issue",
+      "edition": "Born in {born}",
+      "lines": [
+        [
+          "Exclusive",
+          "Seventy years young"
+        ],
+        [
+          "Proudest of",
+          "{proudest}"
+        ],
+        [
+          "First job",
+          "{firstjob}"
+        ]
+      ],
+      "badge": [
+        "Seventy",
+        "70",
+        "years young"
+      ],
+      "quote": "{secret}",
+      "credit": "Secret to a happy life"
+    }
+  },
+  {
+    "slug": "sweet-sixteen-birthday-magazine",
+    "title": "Sweet Sixteen",
+    "searchTitle": "Personalised Sweet 16 Birthday Magazine",
+    "pinTitle": "Sweet 16 Birthday Gift: a Personalised Magazine for Her Sixteenth",
+    "occasion": "16th birthday",
+    "short": "Sixteen and shining: a glossy magazine for their sixteenth, starring them like the icon they are.",
+    "description": "Sixteen is a big one: new independence, big dreams and the best friends in the world. A glossy magazine starring them like a real cover star, with their style, their playlist, their dreams and notes from family and friends. Perfect for a sweet sixteen party or a sixteenth for him too.",
+    "keywords": [
+      "sweet 16 gift",
+      "16th birthday gift for girl",
+      "16th birthday gift for boy",
+      "sweet sixteen ideas",
+      "teenage girl gift",
+      "personalised 16th gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A glossy cover starring them",
+      "A birthday letter",
+      "Their story so far",
+      "A photo spread, baby photos welcome",
+      "Our advice for the next chapter",
+      "A front page, perfume ad, movie poster and pull out poster",
+      "A quiz and word search made from your answers",
+      "Awards, a passport, a certificate and a notes page"
+    ],
+    "letterTitle": "A letter for your sixteenth",
+    "feature": [
+      "The moment we knew they were growing up",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Mia",
+        "max": 14
+      },
+      {
+        "id": "age",
+        "label": "Age they are turning",
+        "example": "30",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "style",
+        "label": "Their style in three words",
+        "example": "Vintage, sparkly, fearless",
+        "max": 34
+      },
+      {
+        "id": "song",
+        "label": "Song on repeat",
+        "example": "Anything from the summer playlist",
+        "max": 34
+      },
+      {
+        "id": "dream",
+        "label": "Their dream job",
+        "example": "Fashion designer in Paris",
+        "max": 34
+      },
+      {
+        "id": "bestie",
+        "label": "Their best friend",
+        "example": "Ava, since nursery",
+        "max": 30
+      },
+      {
+        "id": "moment",
+        "label": "The moment we knew they were growing up",
+        "example": "She organised her own birthday party, made a spreadsheet, booked the venue and asked us very politely to stay upstairs",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "Sixteen years ago you arrived and lit up our lives. Now look at you: kind, clever, funny and completely yourself. Never dim your sparkle for anyone. We are so proud of you.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the birthday star",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A photo with their best friend",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "mia",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Mia",
+          "age": "16",
+          "from": "Mum and Dad",
+          "style": "Vintage, sparkly, fearless",
+          "song": "Anything from the summer playlist",
+          "dream": "Fashion designer in Paris",
+          "bestie": "Ava, since nursery",
+          "x_who": "child",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/sweet-sixteen-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/sweet-sixteen-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/sweet-sixteen-birthday-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "sky",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Sam",
+          "age": "16",
+          "from": "His big sister",
+          "style": "Trainers, hoodies, repeat",
+          "song": "Whatever is loudest",
+          "dream": "Game designer",
+          "bestie": "Leo, his teammate",
+          "x_who": "sibling",
+          "x_type": "sporty"
+        },
+        "photos": {
+          "photo1": "/assets/samples/eighteenth-birthday-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "ava",
+        "palette": "coral",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "age": "16",
+          "from": "Grandma",
+          "style": "Bold colours, big hoops",
+          "song": "Her own singing, mostly",
+          "dream": "A doctor who sings",
+          "bestie": "Her cousin Emma",
+          "x_who": "grand",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/eighteenth-birthday-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The sweet sixteen issue",
+      "edition": "Sixteen and shining",
+      "lines": [
+        [
+          "Exclusive",
+          "{name} turns sixteen"
+        ],
+        [
+          "Dream job",
+          "{dream}"
+        ],
+        [
+          "On repeat",
+          "{song}"
+        ]
+      ],
+      "badge": [
+        "Sweet",
+        "16",
+        "and iconic"
+      ],
+      "quote": "{style}",
+      "credit": "Their style"
+    }
+  },
+  {
+    "slug": "birthday-queen-magazine",
+    "title": "The Birthday Royal",
+    "searchTitle": "Personalised Birthday Queen or King Magazine",
+    "pinTitle": "Birthday Queen or Birthday King: a Personalised Royal Birthday Magazine",
+    "occasion": "Birthday royal",
+    "short": "For the birthday queen or king: a royal edition magazine with their reign, their decrees and their loyal subjects.",
+    "description": "Some people do not have a birthday, they have a reign. A royal edition magazine for the birthday queen or king: their royal decrees, their kingdom, their crown jewels and notes from all their loyal subjects. Funny, glamorous and perfect for anyone who loves to be celebrated. Choose Queen or King in the title.",
+    "keywords": [
+      "birthday queen gift",
+      "birthday king gift",
+      "funny birthday gift",
+      "birthday gift for her",
+      "birthday gift for him",
+      "personalised birthday magazine"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A cover with their photo and headlines all about them",
+      "Editor's letter: your message, beautifully set",
+      "By the numbers: their life in funny facts",
+      "The iconic moments hall of fame",
+      "A photo spread of your favourite pictures",
+      "Their birthday horoscope (it is extremely positive)",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Ava",
+        "max": 14
+      },
+      {
+        "id": "age",
+        "label": "Age they are turning",
+        "example": "30",
+        "max": 3
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Emma",
+        "max": 30
+      },
+      {
+        "id": "crown",
+        "label": "Queen or King",
+        "example": "Queen",
+        "max": 6
+      },
+      {
+        "id": "kingdom",
+        "label": "Their kingdom",
+        "example": "The sofa, the group chat and the kitchen",
+        "max": 44
+      },
+      {
+        "id": "decree",
+        "label": "Their royal decree",
+        "example": "Birthday week, not birthday day",
+        "max": 40
+      },
+      {
+        "id": "jewels",
+        "label": "Their crown jewels",
+        "example": "Her gold hoops and good handbag",
+        "max": 34
+      },
+      {
+        "id": "moment",
+        "label": "The most royal thing they have ever done",
+        "example": "Declared a three day birthday weekend, sent an itinerary to the group chat and expected everyone to wear gold. Everyone did",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "Long live the queen. You deserve every bit of fuss, every candle and every toast. Thank you for ruling our lives with so much love, style and laughter. Happy birthday, your majesty.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the royal",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A favourite birthday photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "Another favourite",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "ava",
+        "palette": "butter",
+        "portrait": {
+          "skin": 3,
+          "hair": "long",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Ava",
+          "age": "35",
+          "from": "Her loyal subjects",
+          "crown": "Queen",
+          "kingdom": "The sofa, the group chat and the kitchen",
+          "decree": "Birthday week, not birthday day",
+          "jewels": "Her gold hoops and good handbag",
+          "x_who": "bestie",
+          "x_type": "party"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-queen-magazine-0.jpg",
+          "photo2": "/assets/samples/birthday-queen-magazine-0b.jpg",
+          "photo3": "/assets/samples/birthday-queen-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "leo",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#3b2418"
+        },
+        "values": {
+          "name": "Leo",
+          "age": "45",
+          "from": "The family",
+          "crown": "King",
+          "kingdom": "The barbecue and the remote",
+          "decree": "Nobody touches the thermostat",
+          "jewels": "His vintage watch",
+          "x_who": "dad",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-2.jpg"
+        }
+      },
+      {
+        "id": "emma",
+        "palette": "rose",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#d9b38c"
+        },
+        "values": {
+          "name": "Emma",
+          "age": "28",
+          "from": "Chris",
+          "crown": "Queen",
+          "kingdom": "Our flat, entirely",
+          "decree": "Breakfast in bed, all week",
+          "jewels": "Her engagement ring",
+          "x_who": "partner",
+          "x_type": "romantics"
+        },
+        "photos": {
+          "photo1": "/assets/samples/birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/birthday-magazine-0c.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The royal birthday issue",
+      "edition": "Birthday {crown}",
+      "lines": [
+        [
+          "By royal decree",
+          "{decree}"
+        ],
+        [
+          "Ruler of",
+          "{kingdom}"
+        ],
+        [
+          "Crown jewels",
+          "{jewels}"
+        ]
+      ],
+      "badge": [
+        "Birthday",
+        "{crown}",
+        "long may they reign"
+      ],
+      "quote": "Long live the birthday {crown}",
+      "credit": "Their loyal subjects"
+    },
+    "letterTitle": "A royal letter for your birthday",
+    "feature": [
+      "The most royal thing they have ever done",
+      "moment"
+    ]
+  },
+  {
+    "slug": "born-on-this-day-birthday-magazine",
+    "title": "Born on This Day",
+    "searchTitle": "Personalised Born on This Day Birthday Magazine",
+    "pinTitle": "Born on This Day: a Personalised Birthday Magazine About the Day They Arrived",
+    "occasion": "Born on this day",
+    "short": "The day they were born, as a glossy magazine: the news, the music, the prices and the story of their arrival.",
+    "description": "What was happening in the world on the day they arrived? A glossy birthday magazine about their exact birthday: the headlines, the number one song, the price of a loaf, the weather and the story of their birth told by the people who were there. Perfect for any milestone birthday.",
+    "keywords": [
+      "born on this day gift",
+      "birthday year gift",
+      "what happened the day you were born",
+      "milestone birthday gift",
+      "personalised birthday newspaper",
+      "nostalgia birthday gift"
+    ],
+    "inside": [
+      "24 full pages, all about them",
+      "A vintage cover starring them",
+      "A birthday letter",
+      "Their life by the numbers",
+      "A photo spread through the years",
+      "The story everyone still tells",
+      "The big interview and a pull out poster",
+      "A quiz and word search made from your answers",
+      "An official certificate, vouchers and a notes page"
+    ],
+    "letterTitle": "A letter about the day you arrived",
+    "feature": [
+      "The story of the day they were born",
+      "moment"
+    ],
+    "fields": [
+      {
+        "id": "name",
+        "label": "Their name",
+        "example": "Emma",
+        "max": 14
+      },
+      {
+        "id": "age",
+        "label": "Age they are turning",
+        "example": "40",
+        "max": 3
+      },
+      {
+        "id": "born",
+        "label": "Their date of birth",
+        "example": "14 March 1986",
+        "max": 18
+      },
+      {
+        "id": "from",
+        "label": "Who is it from?",
+        "example": "Mum",
+        "max": 30
+      },
+      {
+        "id": "where",
+        "label": "Where they were born",
+        "example": "St Mary's, Leeds, at 4.12am",
+        "max": 40
+      },
+      {
+        "id": "weight",
+        "label": "Birth weight",
+        "example": "7lb 2oz",
+        "max": 14
+      },
+      {
+        "id": "song",
+        "label": "Number one song that week",
+        "example": "Your mum will know",
+        "max": 40
+      },
+      {
+        "id": "loaf",
+        "label": "Price of a loaf back then",
+        "example": "About 40p",
+        "max": 18
+      },
+      {
+        "id": "moment",
+        "label": "The story of the day they were born",
+        "example": "It snowed for the first time that year. Dad got lost on the way to the hospital, arrived just in time, and cried so much the midwife made him a cup of tea first",
+        "max": 220,
+        "type": "textarea"
+      },
+      {
+        "id": "message",
+        "label": "What do you want them to know? (This becomes your letter)",
+        "example": "On the day you were born, the world kept spinning, the news kept happening, but for us everything stopped. You were the only headline that mattered. Happy birthday, my darling.",
+        "max": 400,
+        "type": "textarea"
+      },
+      {
+        "id": "photo1",
+        "label": "Cover photo of the birthday star",
+        "type": "photo"
+      },
+      {
+        "id": "photo2",
+        "label": "A baby photo",
+        "type": "photo"
+      },
+      {
+        "id": "photo3",
+        "label": "A favourite photo now",
+        "type": "photo"
+      }
+    ],
+    "examples": [
+      {
+        "id": "emma",
+        "palette": "butter",
+        "portrait": {
+          "skin": 0,
+          "hair": "long",
+          "hairColor": "#b5552b"
+        },
+        "values": {
+          "name": "Emma",
+          "age": "40",
+          "born": "14 March 1986",
+          "from": "Mum",
+          "where": "St Mary's, Leeds, at 4.12am",
+          "weight": "7lb 2oz",
+          "song": "Your mum will know",
+          "loaf": "About 40p",
+          "x_who": "child",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/born-on-this-day-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/born-on-this-day-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/born-on-this-day-birthday-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "chris",
+        "palette": "midnight",
+        "portrait": {
+          "skin": 1,
+          "hair": "short",
+          "hairColor": "#8a8a8a"
+        },
+        "values": {
+          "name": "Chris",
+          "age": "60",
+          "born": "2 July 1966",
+          "from": "His wife, Mia",
+          "where": "At home, in a hurry",
+          "weight": "8lb exactly",
+          "song": "A summer classic",
+          "loaf": "About 5p",
+          "x_who": "partner",
+          "x_type": "calm"
+        },
+        "photos": {
+          "photo1": "/assets/samples/milestone-birthday-magazine-0.jpg",
+          "photo2": "/assets/samples/milestone-birthday-magazine-0b.jpg",
+          "photo3": "/assets/samples/milestone-birthday-magazine-0c.jpg"
+        }
+      },
+      {
+        "id": "sam",
+        "palette": "sky",
+        "portrait": {
+          "skin": 3,
+          "hair": "curly",
+          "hairColor": "#120c08"
+        },
+        "values": {
+          "name": "Sam",
+          "age": "30",
+          "born": "9 October 1996",
+          "from": "His sister",
+          "where": "A London hospital, two weeks late",
+          "weight": "9lb 1oz",
+          "song": "A nineties pop anthem",
+          "loaf": "About 50p",
+          "x_who": "sibling",
+          "x_type": "creative"
+        },
+        "photos": {
+          "photo1": "/assets/samples/milestone-birthday-magazine-1.jpg"
+        }
+      }
+    ],
+    "cover": {
+      "mast": "{name}",
+      "issue": "The birthday edition",
+      "edition": "Born {born}",
+      "lines": [
+        [
+          "Breaking news",
+          "{name} arrives"
+        ],
+        [
+          "Born at",
+          "{where}"
+        ],
+        [
+          "A loaf cost",
+          "{loaf}"
+        ]
+      ],
+      "badge": [
+        "Born",
+        "on this",
+        "day"
+      ],
+      "quote": "{weight} of pure joy",
+      "credit": "Birth weight"
+    }
   }
 ]

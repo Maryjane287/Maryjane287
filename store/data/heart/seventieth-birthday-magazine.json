@@ -1,0 +1,373 @@
+{
+  "theme": "dawn",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "What life was like when they were young",
+      "example": "One telly, no central heating and playing out until dark",
+      "max": 80,
+      "chapter": "Where it began"
+    },
+    {
+      "id": "s_two",
+      "label": "How they met the love of their life",
+      "example": "At a dance hall, both too shy to ask, until the last song",
+      "max": 80,
+      "chapter": "A life of love"
+    },
+    {
+      "id": "s_three",
+      "label": "The wisdom they have passed on",
+      "example": "Be kind, work hard and always write a thank you card",
+      "max": 80,
+      "chapter": "What they taught us"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To keep telling your stories",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "age": "Turning",
+    "born": "Born",
+    "firstjob": "First job",
+    "changed": "Biggest change seen",
+    "proudest": "Proudest of",
+    "secret": "Secret to a happy life"
+  },
+  "story": {
+    "title": "Seventy Years of {first}",
+    "hand": "Seventy years young, and the heart of us all, {who}.",
+    "kicker": "A remarkable life",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Seventy years of",
+    "kicker": "From {from}, with love",
+    "title": "Ten treasures from seventy years",
+    "items": [
+      "The wedding photo",
+      "The first house",
+      "The family car",
+      "The old record player",
+      "The recipe book",
+      "The garden shed",
+      "The holiday snaps",
+      "The letters",
+      "The grandchildren's drawings",
+      "The favourite chair",
+      "The stories",
+      "The love"
+    ]
+  },
+  "timeline": {
+    "kicker": "Marking the years",
+    "title": "A Short History of Milestones",
+    "items": [
+      [
+        "Ancient Rome",
+        "The first milestones",
+        "Romans set stone markers along their roads, one every Roman mile, so travellers knew how far they had come."
+      ],
+      [
+        "Ancient times",
+        "The first jubilee",
+        "In ancient Hebrew tradition, every fiftieth year was a jubilee: a time of freedom, rest and celebration."
+      ],
+      [
+        "1900 to now",
+        "More birthdays for all",
+        "Average life expectancy around the world has more than doubled, so there are more big birthdays to enjoy."
+      ],
+      [
+        "1997",
+        "The record holder",
+        "Jeanne Calment of France died aged 122, the oldest person whose age has ever been verified."
+      ]
+    ],
+    "today": [
+      "Born {born}",
+      "{who} turns {age}",
+      "Not a record breaker yet. But already a legend to everyone here."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words on Growing Older",
+    "items": [
+      [
+        "Grow old along with me! The best is yet to be.",
+        "Robert Browning, Rabbi Ben Ezra, 1864"
+      ],
+      [
+        "For age is opportunity no less than youth itself, though in another dress.",
+        "Henry Wadsworth Longfellow, 1875"
+      ],
+      [
+        "Old friends and old wine are best.",
+        "An old English proverb"
+      ],
+      [
+        "The older the fiddle, the sweeter the tune.",
+        "An old saying"
+      ]
+    ],
+    "hand": "They knew what they were talking about. Just look at {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Getting Better",
+    "items": [
+      [
+        "sun",
+        "Seasoned traveller",
+        "{age} trips around the Sun, each one about 940 million kilometres. That is a lot of air miles."
+      ],
+      [
+        "pulse",
+        "A hard working heart",
+        "Your heart beats around 35 million times a year, without ever asking for a day off."
+      ],
+      [
+        "smile",
+        "Happier with age",
+        "Many studies find people grow happier and calmer from middle age onwards. The best really is ahead."
+      ],
+      [
+        "book",
+        "A growing vocabulary",
+        "Your vocabulary can keep growing for decades, and often peaks later in life."
+      ],
+      [
+        "spark",
+        "Still learning",
+        "The brain keeps making new connections at every age. Old dogs, new tricks: confirmed."
+      ],
+      [
+        "moon",
+        "Sweet dreams",
+        "We spend roughly a third of our lives asleep, so some of your best years were spent dreaming."
+      ]
+    ],
+    "hand": "Science agrees: {who} is not getting older, just getting better."
+  },
+  "world": {
+    "kicker": "A thank you from the universe",
+    "title": "Why the World Is Better After Seventy Years of {who}",
+    "lead": "Because of seventy years of {who}, the world got:",
+    "items": [
+      "A family that spans generations.",
+      "Stories nobody else can tell.",
+      "The safest lap for every grandchild.",
+      "Wisdom earned the long way.",
+      "Seventy years of kindness.",
+      "A love story worth retelling.",
+      "And the one and only {who}."
+    ],
+    "close": "Happy seventieth, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From all of us",
+    "title": "Our promises to you",
+    "items": [
+      "To visit, phone and write more.",
+      "To keep your stories alive.",
+      "To bring the grandchildren round often.",
+      "To learn your recipes properly.",
+      "To love you always."
+    ],
+    "hand": "All our love, {from}"
+  },
+  "awards": [
+    [
+      "Lifetime achievement",
+      "{age} years in the making"
+    ],
+    [
+      "Best storyteller",
+      "Again and again"
+    ],
+    [
+      "Aged to perfection",
+      "Like a fine wine"
+    ],
+    [
+      "Most loved",
+      "A unanimous decision"
+    ]
+  ],
+  "vouchers": [
+    [
+      "A long lunch",
+      "No clock watching"
+    ],
+    [
+      "A trip down memory lane",
+      "Old photos and good tea"
+    ],
+    [
+      "One day of adventure",
+      "Your pick, our treat"
+    ],
+    [
+      "Your favourite meal",
+      "Cooked with love"
+    ]
+  ],
+  "vouchersTitle": "Milestone vouchers for {who}",
+  "cert": "Vintage, Classic and One of a Kind",
+  "certLine": "having reached {age} in magnificent style, is officially",
+  "perfume": "Top notes of vinyl records, old photographs and good stories. A heart of pure gold.",
+  "news": {
+    "edition": "Collector's edition",
+    "headline": "{who} hits {age} in style",
+    "lead": "In news that surprised absolutely no one, {who} has reached {age} looking fabulous. Celebrations are expected to go on for some time.",
+    "weather": "Weather: golden, with a warm glow all day"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport through the decades",
+    "nationality": "Vintage, and proud",
+    "job": "Keeper of the best stories",
+    "stamps": [
+      "Born {born}",
+      "Every decade",
+      "Still going strong"
+    ]
+  },
+  "movie": {
+    "sub": "A remarkable true story",
+    "soon": "The sequel: eighty and still going strong",
+    "reviews": [
+      [
+        "Seventy years and still the star",
+        "The Daily Hug"
+      ],
+      [
+        "The best of all of us",
+        "{from}"
+      ],
+      [
+        "A life to be proud of",
+        "The grandchildren"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "What is a seventieth wedding anniversary traditionally known as?",
+      [
+        "Platinum",
+        "Diamond",
+        "Oak"
+      ],
+      0
+    ],
+    [
+      "In what year did a person first walk on the Moon?",
+      [
+        "1969",
+        "1972",
+        "1959"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "VINTAGE",
+    "CLASSIC",
+    "LEGEND",
+    "CHEERS",
+    "DECADE",
+    "GOLDEN"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Seventy years is a life full of history: things seen, people loved and lessons learned.",
+      "This magazine keeps those stories safe, for the family now and the family still to come.",
+      "{who}, this one is all about you.",
+      "From everything {from} told us, it has been a truly remarkable life."
+    ],
+    "wish": "Happy seventieth, {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "A Perfect Day at Seventy",
+    "day": [
+      [
+        "7:00",
+        "Up early",
+        "Always have been. The best part of the day."
+      ],
+      [
+        "9:00",
+        "The walk",
+        "Same route, same bench, same robin."
+      ],
+      [
+        "13:00",
+        "Family lunch",
+        "Three generations around one table."
+      ],
+      [
+        "16:00",
+        "Stories",
+        "The grandchildren ask for the old ones."
+      ]
+    ],
+    "night": [
+      "21:00",
+      "Bedtime",
+      "A cup of cocoa and a heart full of love."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The favourite armchair by the window"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Tea, a biscuit and a proper dinner at 5"
+      ],
+      [
+        "music",
+        "Call",
+        "\"In my day...\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Remembering every family story perfectly"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Early mornings and family gatherings"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Visit. Listen. Ask for the stories"
+      ]
+    ],
+    "little": [
+      "You still slip us a fiver when nobody is looking.",
+      "You remember every one of our birthdays.",
+      "You tell the best stories in the world.",
+      "You make every one of us feel loved."
+    ],
+    "letters": "Little Things We Love About You",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

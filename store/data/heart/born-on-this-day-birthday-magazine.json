@@ -1,0 +1,373 @@
+{
+  "theme": "dawn",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "What the world was like the day they were born",
+      "example": "No mobile phones, one telly in the house and a heatwave",
+      "max": 80,
+      "chapter": "The day you arrived"
+    },
+    {
+      "id": "s_two",
+      "label": "A memory from their first weeks",
+      "example": "Everyone on the street came round with knitted hats",
+      "max": 80,
+      "chapter": "The first days"
+    },
+    {
+      "id": "s_three",
+      "label": "How they have changed the world since",
+      "example": "Made it a kinder, funnier place to live",
+      "max": 80,
+      "chapter": "All these years later"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To celebrate this day every single year",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "age": "Turning",
+    "born": "Born",
+    "where": "Born at",
+    "weight": "Birth weight",
+    "song": "Number one that week",
+    "loaf": "Price of a loaf"
+  },
+  "story": {
+    "title": "The Day {first} Arrived",
+    "hand": "You were the only headline that mattered, {who}.",
+    "kicker": "Breaking news",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "From the archive",
+    "kicker": "From {from}, with love",
+    "title": "Ten things from the year they were born",
+    "items": [
+      "The number one song",
+      "The biggest film",
+      "The price of a pint of milk",
+      "The most popular baby names",
+      "The weather that day",
+      "The biggest news story",
+      "The toy everyone wanted",
+      "The hit TV show",
+      "The fashion",
+      "The cars on the road",
+      "The price of a stamp",
+      "The newest gadget"
+    ]
+  },
+  "timeline": {
+    "kicker": "Marking the years",
+    "title": "A Short History of Milestones",
+    "items": [
+      [
+        "Ancient Rome",
+        "The first milestones",
+        "Romans set stone markers along their roads, one every Roman mile, so travellers knew how far they had come."
+      ],
+      [
+        "Ancient times",
+        "The first jubilee",
+        "In ancient Hebrew tradition, every fiftieth year was a jubilee: a time of freedom, rest and celebration."
+      ],
+      [
+        "1900 to now",
+        "More birthdays for all",
+        "Average life expectancy around the world has more than doubled, so there are more big birthdays to enjoy."
+      ],
+      [
+        "1997",
+        "The record holder",
+        "Jeanne Calment of France died aged 122, the oldest person whose age has ever been verified."
+      ]
+    ],
+    "today": [
+      "Born {born}",
+      "{who} turns {age}",
+      "Not a record breaker yet. But already a legend to everyone here."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words on Growing Older",
+    "items": [
+      [
+        "Grow old along with me! The best is yet to be.",
+        "Robert Browning, Rabbi Ben Ezra, 1864"
+      ],
+      [
+        "For age is opportunity no less than youth itself, though in another dress.",
+        "Henry Wadsworth Longfellow, 1875"
+      ],
+      [
+        "Old friends and old wine are best.",
+        "An old English proverb"
+      ],
+      [
+        "The older the fiddle, the sweeter the tune.",
+        "An old saying"
+      ]
+    ],
+    "hand": "They knew what they were talking about. Just look at {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Getting Better",
+    "items": [
+      [
+        "sun",
+        "Seasoned traveller",
+        "{age} trips around the Sun, each one about 940 million kilometres. That is a lot of air miles."
+      ],
+      [
+        "pulse",
+        "A hard working heart",
+        "Your heart beats around 35 million times a year, without ever asking for a day off."
+      ],
+      [
+        "smile",
+        "Happier with age",
+        "Many studies find people grow happier and calmer from middle age onwards. The best really is ahead."
+      ],
+      [
+        "book",
+        "A growing vocabulary",
+        "Your vocabulary can keep growing for decades, and often peaks later in life."
+      ],
+      [
+        "spark",
+        "Still learning",
+        "The brain keeps making new connections at every age. Old dogs, new tricks: confirmed."
+      ],
+      [
+        "moon",
+        "Sweet dreams",
+        "We spend roughly a third of our lives asleep, so some of your best years were spent dreaming."
+      ]
+    ],
+    "hand": "Science agrees: {who} is not getting older, just getting better."
+  },
+  "world": {
+    "kicker": "Breaking news",
+    "title": "Why the World Changed on the Day {who} Was Born",
+    "lead": "Because {who} arrived, the world got:",
+    "items": [
+      "A brand new laugh.",
+      "Parents who did not sleep for a year.",
+      "Grandparents with a new favourite.",
+      "A future full of stories.",
+      "Someone the world was missing.",
+      "The best birthday on the calendar.",
+      "And the one and only {who}."
+    ],
+    "close": "Happy birthday, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises to you",
+    "items": [
+      "To always remember the day you arrived.",
+      "To tell the story every birthday.",
+      "To keep the baby photos safe.",
+      "To make every birthday special.",
+      "To love you every day after."
+    ],
+    "hand": "Love, {from}"
+  },
+  "awards": [
+    [
+      "Lifetime achievement",
+      "{age} years in the making"
+    ],
+    [
+      "Best storyteller",
+      "Again and again"
+    ],
+    [
+      "Aged to perfection",
+      "Like a fine wine"
+    ],
+    [
+      "Most loved",
+      "A unanimous decision"
+    ]
+  ],
+  "vouchers": [
+    [
+      "A long lunch",
+      "No clock watching"
+    ],
+    [
+      "A trip down memory lane",
+      "Old photos and good tea"
+    ],
+    [
+      "One day of adventure",
+      "Your pick, our treat"
+    ],
+    [
+      "Your favourite meal",
+      "Cooked with love"
+    ]
+  ],
+  "vouchersTitle": "Milestone vouchers for {who}",
+  "cert": "Vintage, Classic and One of a Kind",
+  "certLine": "having reached {age} in magnificent style, is officially",
+  "perfume": "Top notes of vinyl records, old photographs and good stories. A heart of pure gold.",
+  "news": {
+    "edition": "Collector's edition",
+    "headline": "{who} hits {age} in style",
+    "lead": "In news that surprised absolutely no one, {who} has reached {age} looking fabulous. Celebrations are expected to go on for some time.",
+    "weather": "Weather: golden, with a warm glow all day"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport through the decades",
+    "nationality": "Vintage, and proud",
+    "job": "Keeper of the best stories",
+    "stamps": [
+      "Born {born}",
+      "Every decade",
+      "Still going strong"
+    ]
+  },
+  "movie": {
+    "sub": "A true story, based on real events",
+    "soon": "The sequel: the next big birthday",
+    "reviews": [
+      [
+        "The best news of the year",
+        "The Daily Hug"
+      ],
+      [
+        "The day everything changed",
+        "{from}"
+      ],
+      [
+        "Worth every minute of labour",
+        "Mum"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Which famous newspaper column often lists who was born on this day?",
+      [
+        "The birthdays column",
+        "The weather",
+        "The crossword"
+      ],
+      0
+    ],
+    [
+      "Roughly how many babies are born in the world every day?",
+      [
+        "About 385,000",
+        "About 3,000",
+        "About 10 million"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "VINTAGE",
+    "CLASSIC",
+    "LEGEND",
+    "CHEERS",
+    "DECADE",
+    "GOLDEN"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "On the day you were born, the world was busy with its own news. But one family had only one headline.",
+      "This magazine tells both stories: what was happening in the world, and what was happening in that room.",
+      "{who}, this one is all about the day you arrived.",
+      "From everything {from} told us, it was the best day of their lives."
+    ],
+    "wish": "Happy birthday, {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "The Day {first} Was Born",
+    "day": [
+      [
+        "Early",
+        "The waiting",
+        "Bags packed. Everyone pacing."
+      ],
+      [
+        "Morning",
+        "The dash",
+        "A car, a hospital, a lot of breathing."
+      ],
+      [
+        "The moment",
+        "Hello",
+        "First cry. Everyone else cries too."
+      ],
+      [
+        "Later",
+        "The news",
+        "Phone calls to everyone. Cake at the nurses' station."
+      ]
+    ],
+    "night": [
+      "That night",
+      "Home",
+      "Nobody slept. Nobody minded."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "Swaddled in the hospital blanket"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Milk, every two hours"
+      ],
+      [
+        "music",
+        "Call",
+        "A tiny, very loud cry"
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Making grown ups cry at first sight"
+      ],
+      [
+        "clock",
+        "Most active",
+        "At 3am, mostly"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Hold them close. Count their fingers. Love them for ever"
+      ]
+    ],
+    "little": [
+      "You held a finger the moment you were born.",
+      "You had a full head of hair, or none at all.",
+      "You made everyone in the room cry.",
+      "You changed everything, just by arriving."
+    ],
+    "letters": "Little Things From the Day You Arrived",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

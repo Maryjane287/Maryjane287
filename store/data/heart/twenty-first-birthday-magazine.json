@@ -1,0 +1,373 @@
+{
+  "theme": "candy",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "Something they were like as a child that is still true",
+      "example": "Bossy, brilliant and always the one organising the game",
+      "max": 80,
+      "chapter": "Twenty one years in the making"
+    },
+    {
+      "id": "s_two",
+      "label": "A moment you realised they were all grown up",
+      "example": "When she phoned to ask how to cook a roast, then did it better than me",
+      "max": 80,
+      "chapter": "The year they grew up"
+    },
+    {
+      "id": "s_three",
+      "label": "Something you hope the next ten years bring them",
+      "example": "A life as big and bright as they are",
+      "max": 80,
+      "chapter": "Out into the world"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To always pick up the phone",
+      "max": 70
+    }
+  ],
+  "story": {
+    "title": "Twenty One Things About {first}",
+    "hand": "The world is yours, {who}. Go and get it.",
+    "kicker": "The story so far",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "labels": {
+    "age": "Turning",
+    "city": "Living in",
+    "dream": "The big dream",
+    "crew": "Their people",
+    "signature": "Signature order"
+  },
+  "picks": {
+    "legend": "Twenty one essentials",
+    "kicker": "From {from}, with love",
+    "title": "Ten things every twenty one year old needs",
+    "items": [
+      "A friend who always answers",
+      "A good coat",
+      "A signature dish",
+      "Their mum's number on speed dial",
+      "A big dream",
+      "A passport with stamps in",
+      "A night out playlist",
+      "A cheap but good bottle of wine",
+      "Permission to make mistakes",
+      "A plant they keep alive",
+      "Somewhere to call home",
+      "Someone cheering for them"
+    ]
+  },
+  "timeline": {
+    "kicker": "Growing up through the ages",
+    "title": "A Short History of Coming of Age",
+    "items": [
+      [
+        "Ancient Rome",
+        "A new toga",
+        "Roman boys swapped their childhood toga for a plain white adult one, and the whole family celebrated."
+      ],
+      [
+        "Long ago",
+        "The key of the door",
+        "In Britain, turning 21 traditionally meant being trusted with your own front door key. People still give silver keys today."
+      ],
+      [
+        "1970",
+        "The vote at 18",
+        "For the first time, 18 year olds in the UK could vote. Many countries soon did the same."
+      ],
+      [
+        "1971",
+        "Across the ocean",
+        "The United States lowered its voting age to 18 too, and a whole generation got a say."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who} turns {age}",
+      "Not in the history books yet. Give it a few years."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Advice for the Road Ahead",
+    "items": [
+      [
+        "It takes courage to grow up and become who you really are.",
+        "E. E. Cummings"
+      ],
+      [
+        "Be yourself; everyone else is already taken.",
+        "Often credited to Oscar Wilde"
+      ],
+      [
+        "The future belongs to those who believe in the beauty of their dreams.",
+        "Often credited to Eleanor Roosevelt"
+      ],
+      [
+        "Do not go where the path may lead, go instead where there is no path and leave a trail.",
+        "Often credited to Ralph Waldo Emerson"
+      ]
+    ],
+    "hand": "Good advice, all of it. Ours is simpler: go and be brilliant, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Turning {age}",
+    "items": [
+      [
+        "spark",
+        "Still growing",
+        "The brain keeps building its planning and decision making parts until around the mid twenties."
+      ],
+      [
+        "star",
+        "Well travelled",
+        "By now you have ridden the Earth around the Sun {age} times, and every lap is nearly a billion kilometres."
+      ],
+      [
+        "heart",
+        "Busy heart",
+        "By your 18th birthday, your heart has beaten more than 700 million times."
+      ],
+      [
+        "moon",
+        "Night owl, officially",
+        "Teenagers really are wired to fall asleep later. Their body clock can shift by up to two hours."
+      ],
+      [
+        "music",
+        "Songs for life",
+        "The music we love as teenagers stays with us more strongly than almost any other."
+      ],
+      [
+        "eye",
+        "One of a kind",
+        "Nobody in history has ever had your fingerprints, or your laugh."
+      ]
+    ],
+    "hand": "Science can explain a lot. It cannot explain how {who} got this grown up, this fast."
+  },
+  "world": {
+    "kicker": "A thank you from the universe",
+    "title": "Why the World Got Lucky Twenty One Years Ago",
+    "lead": "Because {who} was born, the world got:",
+    "items": [
+      "A laugh you can hear across a room.",
+      "The friend everyone calls in a crisis.",
+      "Big dreams, and the nerve to chase them.",
+      "Twenty one years of stories.",
+      "A heart much bigger than they let on.",
+      "Excellent playlists.",
+      "And the one and only {who}."
+    ],
+    "close": "Happy twenty first, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises for the next twenty one",
+    "items": [
+      "To always have a bed for you at home.",
+      "To answer every \"how do I\" phone call.",
+      "To come to every big moment.",
+      "To be proud of you, loudly.",
+      "To love you at every age."
+    ],
+    "hand": "Always, {from}"
+  },
+  "awards": [
+    [
+      "Most likely to succeed",
+      "Obviously"
+    ],
+    [
+      "Best laugh in the family",
+      "Heard for miles"
+    ],
+    [
+      "Champion sleeper",
+      "Through every alarm"
+    ],
+    [
+      "Lifetime achievement",
+      "In growing up brilliant"
+    ]
+  ],
+  "vouchers": [
+    [
+      "One free lift",
+      "Any time, no questions"
+    ],
+    [
+      "A home cooked favourite dinner",
+      "You choose the menu"
+    ],
+    [
+      "One lie in",
+      "Nobody says a word"
+    ],
+    [
+      "Emergency snack delivery",
+      "Valid during exams"
+    ]
+  ],
+  "vouchersTitle": "Vouchers for {who}",
+  "cert": "A Grown Up, Sort Of",
+  "awardsKicker": "Live from the red carpet",
+  "perfume": "Top notes of birthday cake, fresh trainers and big dreams. A heart of pure gold.",
+  "news": {
+    "edition": "Coming of age edition",
+    "headline": "{who} turns {age}, world braces itself",
+    "lead": "Sources close to the family confirm that {who} is now officially a grown up, though the laundry situation suggests otherwise.",
+    "weather": "Weather: bright, with a 100% chance of confetti"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to the rest of your life",
+    "nationality": "Loved, everywhere",
+    "job": "Professional legend in training",
+    "stamps": [
+      "Age {age}",
+      "The world",
+      "Home, always"
+    ]
+  },
+  "movie": {
+    "sub": "A coming of age story",
+    "soon": "The sequel: the roaring twenties",
+    "reviews": [
+      [
+        "Twenty one years of brilliance",
+        "The Daily Hug"
+      ],
+      [
+        "Our favourite person to watch grow",
+        "{from}"
+      ],
+      [
+        "The best is clearly still to come",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "In which year did the world wide web become publicly available?",
+      [
+        "1991",
+        "1985",
+        "1999"
+      ],
+      0
+    ],
+    [
+      "How many cards are there in a game of twenty one, also called blackjack, per deck?",
+      [
+        "Fifty two",
+        "Forty",
+        "Sixty"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "BIRTHDAY",
+    "DREAMS",
+    "PARTY",
+    "FUTURE",
+    "CHEERS",
+    "LEGEND"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Twenty one is a doorway. Behind you, a whole childhood. In front of you, everything.",
+      "This magazine celebrates both: the story so far, and all the adventures still to come.",
+      "{who}, this one is all about you.",
+      "From everything {from} told us, the next chapter is going to be brilliant."
+    ],
+    "wish": "Happy twenty first, {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "A Day in the Life of {first} at Twenty One",
+    "day": [
+      [
+        "10:00",
+        "Up",
+        "Not early. Never early. Coffee first."
+      ],
+      [
+        "13:00",
+        "Brunch",
+        "Avocado, gossip and a big plan."
+      ],
+      [
+        "18:00",
+        "Getting ready",
+        "Three outfits, one mirror, the best playlist."
+      ],
+      [
+        "22:00",
+        "Out",
+        "Dancing like nobody is watching. Everyone is."
+      ]
+    ],
+    "night": [
+      "03:00",
+      "Home",
+      "Toast, a voice note to the group and bed."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "Wherever the good music is"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Brunch, chips and anything Mum cooks when they visit"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Who is coming out?\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Being everyone's favourite person in the room"
+      ],
+      [
+        "clock",
+        "Most active",
+        "After 10pm, mostly"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Feed them, phone them, believe in them"
+      ]
+    ],
+    "little": [
+      "You still text \"home safe\" to your mum.",
+      "You remember everyone's birthday.",
+      "You make every room more fun.",
+      "You chase your dreams like they are already yours."
+    ],
+    "letters": "Little Things That Make You, You",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "conceptWho": "person",
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

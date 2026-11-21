@@ -1,0 +1,371 @@
+{
+  "theme": "candy",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "Their most iconic twenties moment",
+      "example": "Dancing on a table in Ibiza, then apologising to the table",
+      "max": 80,
+      "chapter": "The twenties, reviewed"
+    },
+    {
+      "id": "s_two",
+      "label": "The most grown up thing they have done",
+      "example": "Bought a sofa that was not from a charity shop",
+      "max": 80,
+      "chapter": "Growing up, sort of"
+    },
+    {
+      "id": "s_three",
+      "label": "What you hope their thirties bring",
+      "example": "Calm mornings, wild holidays and lots of love",
+      "max": 80,
+      "chapter": "Hello thirties"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To still go out dancing at forty",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "age": "Turning",
+    "twenties": "Their twenties",
+    "figured": "Finally figured out",
+    "thirties": "Plan for their thirties",
+    "ritual": "Self care ritual"
+  },
+  "story": {
+    "title": "Hello Thirty, Hello {first}",
+    "hand": "Thirty looks ridiculously good on you, {who}.",
+    "kicker": "The twenties in review",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Thirty and thriving",
+    "kicker": "From {from}, with love",
+    "title": "Ten signs they are officially thirty",
+    "items": [
+      "A favourite candle",
+      "Strong opinions on sofas",
+      "A bedtime before midnight",
+      "A plant that is still alive",
+      "Two day hangovers",
+      "A savings account",
+      "A good coat",
+      "Knowing their wine",
+      "Saying no to plans, happily",
+      "A skincare routine",
+      "A friend group that survived",
+      "Liking who they are"
+    ]
+  },
+  "timeline": {
+    "kicker": "Birthdays through the ages",
+    "title": "A Short History of Birthdays",
+    "items": [
+      [
+        "Ancient Rome",
+        "A day worth a feast",
+        "Romans marked the birthdays of friends and family with feasts, gifts and wishes for good luck."
+      ],
+      [
+        "1700s",
+        "Cake and candles",
+        "In Germany, children's birthday parties called Kinderfeste had a cake with a candle for every year."
+      ],
+      [
+        "1893",
+        "The tune we all know",
+        "Sisters Mildred and Patty Hill published Good Morning to All. Its melody became Happy Birthday to You."
+      ],
+      [
+        "2015",
+        "A song for everyone",
+        "A judge ruled the old copyright claim on Happy Birthday invalid. Now it belongs to all of us."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who} turns {age}",
+      "The most important birthday in the history books. Well, in ours."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words for Your Birthday",
+    "items": [
+      [
+        "Let us celebrate the occasion with wine and sweet words.",
+        "Plautus"
+      ],
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Wrinkles should merely indicate where the smiles have been.",
+        "Mark Twain, Following the Equator, 1897"
+      ],
+      [
+        "A joy that is shared is a joy made double.",
+        "An old English proverb"
+      ]
+    ],
+    "hand": "Every one of them is true. Especially the bit about smiles, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Birthdays",
+    "items": [
+      [
+        "sun",
+        "A lap of the Sun",
+        "Every birthday marks one more trip around the Sun, about 940 million kilometres. Well travelled."
+      ],
+      [
+        "globe",
+        "Birthday twins",
+        "Around twenty million people share your birthday. None of them are quite as good at it as you."
+      ],
+      [
+        "smile",
+        "The party trick",
+        "In a room of just 23 people, there is a better than even chance two of them share a birthday."
+      ],
+      [
+        "music",
+        "The famous song",
+        "Happy Birthday to You is often called the most recognised song in the English language."
+      ],
+      [
+        "clock",
+        "Leap day babies",
+        "People born on 29 February only get a true birthday once every four years."
+      ],
+      [
+        "spark",
+        "Brand new you",
+        "Your skin renews its outer layer every few weeks, so you are always a slightly fresher edition."
+      ]
+    ],
+    "hand": "Science says you are {age}. We say you are timeless, {who}."
+  },
+  "world": {
+    "kicker": "A thank you from the universe",
+    "title": "Why the World Is Better With {who} at Thirty",
+    "lead": "Because {who} made it to thirty, the world got:",
+    "items": [
+      "A decade of brilliant stories.",
+      "A friend who has seen it all.",
+      "Wisdom, with a side of chaos.",
+      "Someone who finally owns a toolbox.",
+      "Better taste in wine.",
+      "A whole new decade of adventures.",
+      "And the one and only {who}."
+    ],
+    "close": "Happy thirtieth, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From me to you",
+    "title": "My promises for your thirties",
+    "items": [
+      "To still dance with you at weddings.",
+      "To remind you how far you have come.",
+      "To keep every embarrassing photo, safely.",
+      "To book the holiday, not just talk about it.",
+      "To be there for the next thirty years."
+    ],
+    "hand": "Love, {from}"
+  },
+  "awards": [
+    [
+      "Best laugh in the business",
+      "By a landslide"
+    ],
+    [
+      "Most likely to start the dancing",
+      "Every single time"
+    ],
+    [
+      "Outstanding friendship",
+      "A lifetime achievement"
+    ],
+    [
+      "Star of the year",
+      "Voted {age} years running"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Breakfast in bed",
+      "Coffee included, obviously"
+    ],
+    [
+      "A day of your choosing",
+      "Anywhere, anything"
+    ],
+    [
+      "One night out",
+      "Our treat, your playlist"
+    ],
+    [
+      "A lie in",
+      "Nobody says a word"
+    ]
+  ],
+  "vouchersTitle": "Birthday vouchers for {who}",
+  "cert": "Iconic",
+  "perfume": "Top notes of birthday candles, fizz and laughter. A heart of pure sunshine.",
+  "news": {
+    "edition": "Birthday edition",
+    "headline": "{who} turns {age} and the world celebrates",
+    "lead": "Reports are coming in from everywhere: {who} is {age} today and looking better than ever. Cake has been confirmed.",
+    "weather": "Weather: sunny, with scattered confetti"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every party",
+    "nationality": "Celebrated, everywhere",
+    "job": "Professional legend",
+    "stamps": [
+      "Birthday city",
+      "Party central",
+      "Adored"
+    ]
+  },
+  "movie": {
+    "sub": "A comedy about growing up, eventually",
+    "soon": "The sequel: fabulous at forty",
+    "reviews": [
+      [
+        "Thirty years, zero regrets",
+        "The Daily Hug"
+      ],
+      [
+        "Better with every year",
+        "{from}"
+      ],
+      [
+        "Funny, brave and brilliant",
+        "The group chat"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "What is a thirtieth wedding anniversary traditionally known as?",
+      [
+        "Pearl",
+        "Ruby",
+        "Silver"
+      ],
+      0
+    ],
+    [
+      "How many days are there in thirty years, roughly?",
+      [
+        "About 10,950",
+        "About 3,000",
+        "About 50,000"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CAKE",
+    "PARTY",
+    "CANDLES",
+    "WISH",
+    "LEGEND",
+    "CHEERS"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Thirty is when the chaos settles and the confidence arrives. Mostly.",
+      "This magazine celebrates the brilliant twenties behind them and the even better thirties ahead.",
+      "{who}, this one is all about you.",
+      "From everything {from} told us, thirty is going to suit you perfectly."
+    ],
+    "wish": "Happy thirtieth, {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "A Day in the Life of {first} at Thirty",
+    "day": [
+      [
+        "7:30",
+        "Up",
+        "Voluntarily. Who even are you?"
+      ],
+      [
+        "12:00",
+        "Lunch",
+        "A salad you actually wanted."
+      ],
+      [
+        "18:00",
+        "Plans",
+        "Dinner with friends. Home by eleven. Bliss."
+      ],
+      [
+        "21:00",
+        "Wind down",
+        "Candle lit, skincare done, very smug."
+      ]
+    ],
+    "night": [
+      "23:00",
+      "Bedtime",
+      "Asleep before the party you said no to even starts."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The good end of the sofa"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Brunch, good wine and someone else's cooking"
+      ],
+      [
+        "music",
+        "Call",
+        "\"I cannot, I have plans with my sofa\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Knowing exactly who they are"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Weekends, and before 11pm"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Bring wine. Remind them they look twenty five"
+      ]
+    ],
+    "little": [
+      "You still answer the phone at 2am for a friend.",
+      "You have a favourite candle and are not ashamed.",
+      "You make everyone feel welcome.",
+      "You get more yourself every year."
+    ],
+    "letters": "Little Things We Love About You",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

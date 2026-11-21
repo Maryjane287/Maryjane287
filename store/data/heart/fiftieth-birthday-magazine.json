@@ -1,0 +1,371 @@
+{
+  "theme": "dawn",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "The biggest adventure of their life so far",
+      "example": "Moving the whole family to the seaside on a whim, and never regretting it",
+      "max": 80,
+      "chapter": "Five decades"
+    },
+    {
+      "id": "s_two",
+      "label": "The most important thing they taught you",
+      "example": "That kindness is never wasted",
+      "max": 80,
+      "chapter": "What they taught us"
+    },
+    {
+      "id": "s_three",
+      "label": "What you hope the next fifty bring",
+      "example": "Long holidays, grandchildren and lie ins",
+      "max": 80,
+      "chapter": "Fearless from here"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To come home for Sunday roast, always",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "age": "Turning",
+    "decade": "Best decade so far",
+    "advice": "Best advice",
+    "legacy": "Known for",
+    "bucket": "Bucket list"
+  },
+  "story": {
+    "title": "Fifty Years of {first}",
+    "hand": "Fifty, fearless and so very loved, {who}.",
+    "kicker": "Half a century",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Fifty and fearless",
+    "kicker": "From {from}, with love",
+    "title": "Ten things fifty years taught them",
+    "items": [
+      "Take the coat",
+      "Call your mum",
+      "Buy the good olive oil",
+      "Never skip dessert",
+      "Dance at weddings",
+      "Say sorry first",
+      "Keep your friends close",
+      "Travel while you can",
+      "Laugh at yourself",
+      "Read before bed",
+      "Look after your back",
+      "Love loudly"
+    ]
+  },
+  "timeline": {
+    "kicker": "Birthdays through the ages",
+    "title": "A Short History of Birthdays",
+    "items": [
+      [
+        "Ancient Rome",
+        "A day worth a feast",
+        "Romans marked the birthdays of friends and family with feasts, gifts and wishes for good luck."
+      ],
+      [
+        "1700s",
+        "Cake and candles",
+        "In Germany, children's birthday parties called Kinderfeste had a cake with a candle for every year."
+      ],
+      [
+        "1893",
+        "The tune we all know",
+        "Sisters Mildred and Patty Hill published Good Morning to All. Its melody became Happy Birthday to You."
+      ],
+      [
+        "2015",
+        "A song for everyone",
+        "A judge ruled the old copyright claim on Happy Birthday invalid. Now it belongs to all of us."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who} turns {age}",
+      "The most important birthday in the history books. Well, in ours."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words for Your Birthday",
+    "items": [
+      [
+        "Let us celebrate the occasion with wine and sweet words.",
+        "Plautus"
+      ],
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Wrinkles should merely indicate where the smiles have been.",
+        "Mark Twain, Following the Equator, 1897"
+      ],
+      [
+        "A joy that is shared is a joy made double.",
+        "An old English proverb"
+      ]
+    ],
+    "hand": "Every one of them is true. Especially the bit about smiles, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Birthdays",
+    "items": [
+      [
+        "sun",
+        "A lap of the Sun",
+        "Every birthday marks one more trip around the Sun, about 940 million kilometres. Well travelled."
+      ],
+      [
+        "globe",
+        "Birthday twins",
+        "Around twenty million people share your birthday. None of them are quite as good at it as you."
+      ],
+      [
+        "smile",
+        "The party trick",
+        "In a room of just 23 people, there is a better than even chance two of them share a birthday."
+      ],
+      [
+        "music",
+        "The famous song",
+        "Happy Birthday to You is often called the most recognised song in the English language."
+      ],
+      [
+        "clock",
+        "Leap day babies",
+        "People born on 29 February only get a true birthday once every four years."
+      ],
+      [
+        "spark",
+        "Brand new you",
+        "Your skin renews its outer layer every few weeks, so you are always a slightly fresher edition."
+      ]
+    ],
+    "hand": "Science says you are {age}. We say you are timeless, {who}."
+  },
+  "world": {
+    "kicker": "A thank you from the universe",
+    "title": "Why the World Is Better After Fifty Years of {who}",
+    "lead": "Because of fifty years of {who}, the world got:",
+    "items": [
+      "Advice that is always right, eventually.",
+      "The best Sunday roast going.",
+      "A family full of love.",
+      "Fifty years of terrible jokes.",
+      "Someone who shows up, every time.",
+      "A legend in their own lunchtime.",
+      "And the one and only {who}."
+    ],
+    "close": "Happy fiftieth, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From us to you",
+    "title": "Our promises for the next fifty",
+    "items": [
+      "To visit more and phone even more.",
+      "To finally take your advice.",
+      "To tick off that bucket list with you.",
+      "To keep every tradition going.",
+      "To love you always."
+    ],
+    "hand": "Love, {from}"
+  },
+  "awards": [
+    [
+      "Best laugh in the business",
+      "By a landslide"
+    ],
+    [
+      "Most likely to start the dancing",
+      "Every single time"
+    ],
+    [
+      "Outstanding friendship",
+      "A lifetime achievement"
+    ],
+    [
+      "Star of the year",
+      "Voted {age} years running"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Breakfast in bed",
+      "Coffee included, obviously"
+    ],
+    [
+      "A day of your choosing",
+      "Anywhere, anything"
+    ],
+    [
+      "One night out",
+      "Our treat, your playlist"
+    ],
+    [
+      "A lie in",
+      "Nobody says a word"
+    ]
+  ],
+  "vouchersTitle": "Birthday vouchers for {who}",
+  "cert": "Iconic",
+  "perfume": "Top notes of birthday candles, fizz and laughter. A heart of pure sunshine.",
+  "news": {
+    "edition": "Birthday edition",
+    "headline": "{who} turns {age} and the world celebrates",
+    "lead": "Reports are coming in from everywhere: {who} is {age} today and looking better than ever. Cake has been confirmed.",
+    "weather": "Weather: sunny, with scattered confetti"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every party",
+    "nationality": "Celebrated, everywhere",
+    "job": "Professional legend",
+    "stamps": [
+      "Birthday city",
+      "Party central",
+      "Adored"
+    ]
+  },
+  "movie": {
+    "sub": "An epic family saga",
+    "soon": "The sequel: sixty and sensational",
+    "reviews": [
+      [
+        "Fifty years, still the star",
+        "The Daily Hug"
+      ],
+      [
+        "The heart of our family",
+        "{from}"
+      ],
+      [
+        "A true original",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "What is a fiftieth wedding anniversary traditionally known as?",
+      [
+        "Golden",
+        "Diamond",
+        "Silver"
+      ],
+      0
+    ],
+    [
+      "How many US states are there?",
+      [
+        "Fifty",
+        "Forty eight",
+        "Fifty two"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CAKE",
+    "PARTY",
+    "CANDLES",
+    "WISH",
+    "LEGEND",
+    "CHEERS"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Fifty years is a whole library of stories. Too many to fit in a card, so we made a magazine.",
+      "This one celebrates half a century of brilliance, and the fearless years still to come.",
+      "{who}, this one is all about you.",
+      "From everything {from} told us, the first fifty were just the warm up."
+    ],
+    "wish": "Happy fiftieth, {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "A Perfect Day at Fifty",
+    "day": [
+      [
+        "8:00",
+        "Breakfast",
+        "Cooked by someone else for once."
+      ],
+      [
+        "11:00",
+        "A walk",
+        "Somewhere with a view and a café."
+      ],
+      [
+        "14:00",
+        "Family",
+        "Everyone together, everyone talking at once."
+      ],
+      [
+        "19:00",
+        "The party",
+        "A speech, a cake and a very long toast."
+      ]
+    ],
+    "night": [
+      "23:00",
+      "Bedtime",
+      "Feet up, card read twice, fully content."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The armchair with the best view of the telly"
+      ],
+      [
+        "apple",
+        "Diet",
+        "The Sunday roast and second helpings"
+      ],
+      [
+        "music",
+        "Call",
+        "\"Have you got a coat?\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Fixing anything, given time and a biscuit"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Sunday afternoons"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Phone them. Visit them. Laugh at their jokes"
+      ]
+    ],
+    "little": [
+      "You always walk us to the car.",
+      "You know the way everywhere without a map.",
+      "You make every visit feel like coming home.",
+      "You get funnier with every year."
+    ],
+    "letters": "Little Things We Love About You",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

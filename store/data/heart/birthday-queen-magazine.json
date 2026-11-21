@@ -1,0 +1,371 @@
+{
+  "theme": "candy",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "The most iconic birthday they have ever had",
+      "example": "The surprise party where she surprised us by arriving in a tiara",
+      "max": 80,
+      "chapter": "The reign so far"
+    },
+    {
+      "id": "s_two",
+      "label": "How they look after their kingdom",
+      "example": "Remembers every birthday and always brings a gift",
+      "max": 80,
+      "chapter": "Royal duties"
+    },
+    {
+      "id": "s_three",
+      "label": "Your toast to the birthday royal",
+      "example": "To the one who makes every day feel like a party",
+      "max": 80,
+      "chapter": "A royal toast"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To bow, curtsy and bring cake, always",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "age": "Years on the throne",
+    "crown": "Title",
+    "kingdom": "Ruler of",
+    "decree": "Royal decree",
+    "jewels": "Crown jewels"
+  },
+  "story": {
+    "title": "Long Live {first}",
+    "hand": "Long may you reign, {who}.",
+    "kicker": "The royal story",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Royal treasures",
+    "kicker": "From {from}, with love",
+    "title": "Ten things every birthday royal deserves",
+    "items": [
+      "A crown, real or paper",
+      "Breakfast in bed",
+      "A birthday week",
+      "Their favourite cake",
+      "A royal toast",
+      "The good champagne",
+      "Loyal subjects singing",
+      "No washing up",
+      "A red carpet, even a towel",
+      "Balloons, gold ones",
+      "Every candle lit",
+      "Endless adoration"
+    ]
+  },
+  "timeline": {
+    "kicker": "Birthdays through the ages",
+    "title": "A Short History of Birthdays",
+    "items": [
+      [
+        "Ancient Rome",
+        "A day worth a feast",
+        "Romans marked the birthdays of friends and family with feasts, gifts and wishes for good luck."
+      ],
+      [
+        "1700s",
+        "Cake and candles",
+        "In Germany, children's birthday parties called Kinderfeste had a cake with a candle for every year."
+      ],
+      [
+        "1893",
+        "The tune we all know",
+        "Sisters Mildred and Patty Hill published Good Morning to All. Its melody became Happy Birthday to You."
+      ],
+      [
+        "2015",
+        "A song for everyone",
+        "A judge ruled the old copyright claim on Happy Birthday invalid. Now it belongs to all of us."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who} turns {age}",
+      "The most important birthday in the history books. Well, in ours."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words for Your Birthday",
+    "items": [
+      [
+        "Let us celebrate the occasion with wine and sweet words.",
+        "Plautus"
+      ],
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Wrinkles should merely indicate where the smiles have been.",
+        "Mark Twain, Following the Equator, 1897"
+      ],
+      [
+        "A joy that is shared is a joy made double.",
+        "An old English proverb"
+      ]
+    ],
+    "hand": "Every one of them is true. Especially the bit about smiles, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Birthdays",
+    "items": [
+      [
+        "sun",
+        "A lap of the Sun",
+        "Every birthday marks one more trip around the Sun, about 940 million kilometres. Well travelled."
+      ],
+      [
+        "globe",
+        "Birthday twins",
+        "Around twenty million people share your birthday. None of them are quite as good at it as you."
+      ],
+      [
+        "smile",
+        "The party trick",
+        "In a room of just 23 people, there is a better than even chance two of them share a birthday."
+      ],
+      [
+        "music",
+        "The famous song",
+        "Happy Birthday to You is often called the most recognised song in the English language."
+      ],
+      [
+        "clock",
+        "Leap day babies",
+        "People born on 29 February only get a true birthday once every four years."
+      ],
+      [
+        "spark",
+        "Brand new you",
+        "Your skin renews its outer layer every few weeks, so you are always a slightly fresher edition."
+      ]
+    ],
+    "hand": "Science says you are {age}. We say you are timeless, {who}."
+  },
+  "world": {
+    "kicker": "A royal proclamation",
+    "title": "Why the Kingdom Is Blessed With {who}",
+    "lead": "Because {who} rules, the kingdom got:",
+    "items": [
+      "The best parties in the land.",
+      "A ruler who remembers every birthday.",
+      "Style worthy of a palace.",
+      "Laughter in every royal hall.",
+      "Loyal subjects who adore them.",
+      "Birthday weeks, by royal decree.",
+      "And the one and only {who}."
+    ],
+    "close": "Long live {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "Royal promises",
+    "title": "Our promises to the birthday royal",
+    "items": [
+      "To obey every birthday decree.",
+      "To bring cake and not ask questions.",
+      "To toast you at every chance.",
+      "To remember you deserve the fuss.",
+      "To love you for your whole reign."
+    ],
+    "hand": "Your loyal subjects, {from}"
+  },
+  "awards": [
+    [
+      "Best laugh in the business",
+      "By a landslide"
+    ],
+    [
+      "Most likely to start the dancing",
+      "Every single time"
+    ],
+    [
+      "Outstanding friendship",
+      "A lifetime achievement"
+    ],
+    [
+      "Star of the year",
+      "Voted {age} years running"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Breakfast in bed",
+      "Coffee included, obviously"
+    ],
+    [
+      "A day of your choosing",
+      "Anywhere, anything"
+    ],
+    [
+      "One night out",
+      "Our treat, your playlist"
+    ],
+    [
+      "A lie in",
+      "Nobody says a word"
+    ]
+  ],
+  "vouchersTitle": "Birthday vouchers for {who}",
+  "cert": "Iconic",
+  "perfume": "Top notes of birthday candles, fizz and laughter. A heart of pure sunshine.",
+  "news": {
+    "edition": "Birthday edition",
+    "headline": "{who} turns {age} and the world celebrates",
+    "lead": "Reports are coming in from everywhere: {who} is {age} today and looking better than ever. Cake has been confirmed.",
+    "weather": "Weather: sunny, with scattered confetti"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every party",
+    "nationality": "Celebrated, everywhere",
+    "job": "Professional legend",
+    "stamps": [
+      "Birthday city",
+      "Party central",
+      "Adored"
+    ]
+  },
+  "movie": {
+    "sub": "A royal comedy",
+    "soon": "The sequel: the birthday returns",
+    "reviews": [
+      [
+        "Absolutely regal",
+        "The Daily Hug"
+      ],
+      [
+        "Long may they reign",
+        "{from}"
+      ],
+      [
+        "Crowned for a reason",
+        "The loyal subjects"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "Which British monarch reigned the longest?",
+      [
+        "Queen Elizabeth II",
+        "Queen Victoria",
+        "King George III"
+      ],
+      0
+    ],
+    [
+      "How many points does a classic paper party crown usually have?",
+      [
+        "Five to seven",
+        "Two",
+        "Twenty"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CAKE",
+    "PARTY",
+    "CANDLES",
+    "WISH",
+    "LEGEND",
+    "CHEERS"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Some people treat their birthday like a national holiday. We think they are completely right.",
+      "This royal edition gives them the fuss they deserve, from all their loyal subjects.",
+      "{who}, this one is all about you.",
+      "From everything {from} told us, the crown fits perfectly."
+    ],
+    "wish": "Long live {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "A Royal Birthday With {first}",
+    "day": [
+      [
+        "9:00",
+        "Royal breakfast",
+        "Served in bed by loyal subjects."
+      ],
+      [
+        "12:00",
+        "Royal duties",
+        "Opening presents. Very carefully. Very slowly."
+      ],
+      [
+        "15:00",
+        "Royal pampering",
+        "Nails, hair, nap. In that order."
+      ],
+      [
+        "20:00",
+        "The royal ball",
+        "Dancing, cake and many toasts."
+      ]
+    ],
+    "night": [
+      "01:00",
+      "Royal bedtime",
+      "Crown on the bedside table. Already planning next year."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "The throne, also known as the comfy chair"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Cake, champagne and breakfast in bed"
+      ],
+      [
+        "music",
+        "Call",
+        "\"It is my birthday week\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Making every celebration iconic"
+      ],
+      [
+        "clock",
+        "Most active",
+        "All of birthday week"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Bow. Bring cake. Never forget the date"
+      ]
+    ],
+    "little": [
+      "You plan everyone else's birthday too.",
+      "You always look like a million pounds.",
+      "You make every party better.",
+      "You deserve all the fuss, every year."
+    ],
+    "letters": "Little Royal Things You Do",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}

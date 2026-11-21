@@ -1,0 +1,371 @@
+{
+  "theme": "dawn",
+  "fields": [
+    {
+      "id": "s_one",
+      "label": "The moment that shaped who they are",
+      "example": "Moving abroad alone at twenty two",
+      "max": 80,
+      "chapter": "Forty years in the making"
+    },
+    {
+      "id": "s_two",
+      "label": "Who they are to the people who love them",
+      "example": "The one we call first, for good news and bad",
+      "max": 80,
+      "chapter": "Their people"
+    },
+    {
+      "id": "s_three",
+      "label": "What you wish for their next decade",
+      "example": "Adventure, rest and lots of laughter",
+      "max": 80,
+      "chapter": "The next forty"
+    },
+    {
+      "id": "s_promise",
+      "label": "A promise to them",
+      "example": "To celebrate every birthday like this one",
+      "max": 70
+    }
+  ],
+  "labels": {
+    "age": "Turning",
+    "younger": "Advice to their younger self",
+    "proud": "Proudest achievement",
+    "still": "Still young enough to",
+    "next": "Next on the list"
+  },
+  "story": {
+    "title": "Forty and Fabulous: {first}",
+    "hand": "The best is yet to come, {who}.",
+    "kicker": "Forty years of you",
+    "hint": "Only if you have a minute. Skip any and we fill those pages with lovely words we have written for them.",
+    "legend": "A few more things about them"
+  },
+  "picks": {
+    "legend": "Forty and fabulous",
+    "kicker": "From {from}, with love",
+    "title": "Ten things forty brings",
+    "items": [
+      "Knowing what you like",
+      "Not caring what anyone thinks",
+      "Friends who are family",
+      "A favourite wine",
+      "Comfortable shoes, unashamedly",
+      "Wisdom",
+      "Laughter lines worth every laugh",
+      "Stories for every occasion",
+      "Confidence",
+      "A great haircut",
+      "Afternoon naps",
+      "Big plans for the next forty"
+    ]
+  },
+  "timeline": {
+    "kicker": "Birthdays through the ages",
+    "title": "A Short History of Birthdays",
+    "items": [
+      [
+        "Ancient Rome",
+        "A day worth a feast",
+        "Romans marked the birthdays of friends and family with feasts, gifts and wishes for good luck."
+      ],
+      [
+        "1700s",
+        "Cake and candles",
+        "In Germany, children's birthday parties called Kinderfeste had a cake with a candle for every year."
+      ],
+      [
+        "1893",
+        "The tune we all know",
+        "Sisters Mildred and Patty Hill published Good Morning to All. Its melody became Happy Birthday to You."
+      ],
+      [
+        "2015",
+        "A song for everyone",
+        "A judge ruled the old copyright claim on Happy Birthday invalid. Now it belongs to all of us."
+      ]
+    ],
+    "today": [
+      "Today",
+      "{who} turns {age}",
+      "The most important birthday in the history books. Well, in ours."
+    ]
+  },
+  "letters": {
+    "kicker": "Words worth keeping",
+    "title": "Wise Words for Your Birthday",
+    "items": [
+      [
+        "Let us celebrate the occasion with wine and sweet words.",
+        "Plautus"
+      ],
+      [
+        "We do not remember days, we remember moments.",
+        "Cesare Pavese"
+      ],
+      [
+        "Wrinkles should merely indicate where the smiles have been.",
+        "Mark Twain, Following the Equator, 1897"
+      ],
+      [
+        "A joy that is shared is a joy made double.",
+        "An old English proverb"
+      ]
+    ],
+    "hand": "Every one of them is true. Especially the bit about smiles, {who}."
+  },
+  "facts": {
+    "kicker": "Fun facts",
+    "title": "The Science of Birthdays",
+    "items": [
+      [
+        "sun",
+        "A lap of the Sun",
+        "Every birthday marks one more trip around the Sun, about 940 million kilometres. Well travelled."
+      ],
+      [
+        "globe",
+        "Birthday twins",
+        "Around twenty million people share your birthday. None of them are quite as good at it as you."
+      ],
+      [
+        "smile",
+        "The party trick",
+        "In a room of just 23 people, there is a better than even chance two of them share a birthday."
+      ],
+      [
+        "music",
+        "The famous song",
+        "Happy Birthday to You is often called the most recognised song in the English language."
+      ],
+      [
+        "clock",
+        "Leap day babies",
+        "People born on 29 February only get a true birthday once every four years."
+      ],
+      [
+        "spark",
+        "Brand new you",
+        "Your skin renews its outer layer every few weeks, so you are always a slightly fresher edition."
+      ]
+    ],
+    "hand": "Science says you are {age}. We say you are timeless, {who}."
+  },
+  "world": {
+    "kicker": "A thank you from the universe",
+    "title": "Why the World Is Better After Forty Years of {who}",
+    "lead": "Because of forty years of {who}, the world got:",
+    "items": [
+      "Advice that is always right.",
+      "The best laugh in any room.",
+      "A friend who turns up.",
+      "Stories worth retelling.",
+      "Kindness that spreads.",
+      "Style that only gets better.",
+      "And the one and only {who}."
+    ],
+    "close": "Happy fortieth, {who}."
+  },
+  "promises": {
+    "field": "s_promise",
+    "kicker": "From me to you",
+    "title": "My promises for the next forty",
+    "items": [
+      "To book the trips we keep talking about.",
+      "To dance with you at every party.",
+      "To remind you how amazing you are.",
+      "To grow older with you, disgracefully.",
+      "To love you every year a little more."
+    ],
+    "hand": "Always, {from}"
+  },
+  "awards": [
+    [
+      "Best laugh in the business",
+      "By a landslide"
+    ],
+    [
+      "Most likely to start the dancing",
+      "Every single time"
+    ],
+    [
+      "Outstanding friendship",
+      "A lifetime achievement"
+    ],
+    [
+      "Star of the year",
+      "Voted {age} years running"
+    ]
+  ],
+  "vouchers": [
+    [
+      "Breakfast in bed",
+      "Coffee included, obviously"
+    ],
+    [
+      "A day of your choosing",
+      "Anywhere, anything"
+    ],
+    [
+      "One night out",
+      "Our treat, your playlist"
+    ],
+    [
+      "A lie in",
+      "Nobody says a word"
+    ]
+  ],
+  "vouchersTitle": "Birthday vouchers for {who}",
+  "cert": "Iconic",
+  "perfume": "Top notes of birthday candles, fizz and laughter. A heart of pure sunshine.",
+  "news": {
+    "edition": "Birthday edition",
+    "headline": "{who} turns {age} and the world celebrates",
+    "lead": "Reports are coming in from everywhere: {who} is {age} today and looking better than ever. Cake has been confirmed.",
+    "weather": "Weather: sunny, with scattered confetti"
+  },
+  "passport": {
+    "kicker": "Official documents",
+    "head": "Passport to every party",
+    "nationality": "Celebrated, everywhere",
+    "job": "Professional legend",
+    "stamps": [
+      "Birthday city",
+      "Party central",
+      "Adored"
+    ]
+  },
+  "movie": {
+    "sub": "A life well lived, so far",
+    "soon": "The sequel: fifty and fearless",
+    "reviews": [
+      [
+        "Forty years and better than ever",
+        "The Daily Hug"
+      ],
+      [
+        "Our favourite person, at any age",
+        "{from}"
+      ],
+      [
+        "Truly fabulous",
+        "Everyone who knows them"
+      ]
+    ]
+  },
+  "quiz": [
+    [
+      "What is a fortieth wedding anniversary traditionally known as?",
+      [
+        "Ruby",
+        "Pearl",
+        "Gold"
+      ],
+      0
+    ],
+    [
+      "How many weeks are there in forty years, roughly?",
+      [
+        "About 2,080",
+        "About 500",
+        "About 10,000"
+      ],
+      0
+    ]
+  ],
+  "words": [
+    "CAKE",
+    "PARTY",
+    "CANDLES",
+    "WISH",
+    "LEGEND",
+    "CHEERS"
+  ],
+  "note": {
+    "title": "Why we made this",
+    "contents": "A note for you",
+    "paras": [
+      "Forty is not a number to whisper. It is a celebration of everything you have lived, loved and learned.",
+      "This magazine gathers it all: the highlights, the people and the next big adventures.",
+      "{who}, this one is all about you.",
+      "From everything {from} told us, you are truly fabulous at forty."
+    ],
+    "wish": "Happy fortieth, {who}."
+  },
+  "concepts": true,
+  "own": {
+    "dayTitle": "A Perfect Day for {first} at Forty",
+    "day": [
+      [
+        "8:00",
+        "Lie in",
+        "Breakfast in bed. Nobody needs anything."
+      ],
+      [
+        "11:00",
+        "Treats",
+        "A long walk, a good coffee, no rush at all."
+      ],
+      [
+        "15:00",
+        "Celebrate",
+        "Lunch with the people who matter."
+      ],
+      [
+        "20:00",
+        "The party",
+        "Dancing to the songs from their twenties."
+      ]
+    ],
+    "night": [
+      "23:30",
+      "Bedtime",
+      "Feet up, heart full, already planning fifty."
+    ],
+    "guide": [
+      [
+        "home",
+        "Habitat",
+        "At the head of the table"
+      ],
+      [
+        "apple",
+        "Diet",
+        "Good food, better wine"
+      ],
+      [
+        "music",
+        "Call",
+        "\"I am not forty, I am thirty ten\""
+      ],
+      [
+        "spark",
+        "Special ability",
+        "Making everyone feel like family"
+      ],
+      [
+        "clock",
+        "Most active",
+        "Weekends and birthdays, very loudly"
+      ],
+      [
+        "heart",
+        "Care instructions",
+        "Pour a glass, tell a story, give a hug"
+      ]
+    ],
+    "little": [
+      "You always know the right thing to say.",
+      "You never forget a birthday.",
+      "You make the best hosts look lazy.",
+      "You get more beautiful every year."
+    ],
+    "letters": "Little Things We Love About You",
+    "world": true,
+    "promises": true,
+    "picks": true
+  },
+  "toc": "A one of a kind issue, made for {who} with love from {from}."
+}
