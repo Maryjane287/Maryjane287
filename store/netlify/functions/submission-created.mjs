@@ -2,6 +2,8 @@
 // (footer, welcome card and the checkout tick box) are copied into MailerLite,
 // so the monthly reminder emails can be sent from there. Without
 // MAILERLITE_API_KEY it does nothing and the emails stay in Netlify Forms.
+import site from '../../data/site.json' with { type: 'json' };
+
 export default async req => {
   const key = process.env.MAILERLITE_API_KEY;
   const { payload } = await req.json().catch(() => ({}));
@@ -9,7 +11,8 @@ export default async req => {
   const email = String(payload.data?.email || '').trim().toLowerCase();
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return new Response('no email');
   const body = { email };
-  if (process.env.MAILERLITE_GROUP_ID) body.groups = [process.env.MAILERLITE_GROUP_ID];
+  const group = process.env.MAILERLITE_GROUP_ID || site.mailerliteGroup;
+  if (group) body.groups = [String(group)];
   const res = await fetch('https://connect.mailerlite.com/api/subscribers', {
     method: 'POST',
     headers: { 'content-type': 'application/json', accept: 'application/json', authorization: `Bearer ${key}` },
