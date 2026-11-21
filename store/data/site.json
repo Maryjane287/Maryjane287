@@ -6,6 +6,7 @@
   "email": "graceandloannesofficial@gmail.com",
   "company": "Grace and Loannes Ltd",
   "companyNumber": "SC899696",
+  "office": "5 South Charlotte Street, Edinburgh, Scotland",
   "pinterestDomainVerify": "c34b640fddc5572ca6d8e32b76436aef",
   "pinterestTagId": "",
   "christmasOrderBy": "10 December",
@@ -50,6 +51,12 @@
       "usd": 27.99
     }
   ],
+  "extraCopy": {
+    "gbp": 9.99,
+    "usd": 12.99,
+    "hardcoverGbp": 17.99,
+    "hardcoverUsd": 22.99
+  },
   "peecho": {
     "offerings": {
       "glossy": 7380360,

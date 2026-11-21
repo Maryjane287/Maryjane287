@@ -106,7 +106,7 @@ ${body}
     <div><h4>Help</h4><a href="/help/">Delivery and FAQ</a><a href="/ideas/">Gift ideas</a><a href="/about/">About us</a><a href="/contact/">Contact us</a><a href="mailto:${esc(site.email)}">${esc(site.email)}</a></div>
     <div><h4>The small print</h4><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/refunds/">Refunds</a>${socialLinks ? `<h4 class="foot-follow">Follow us</h4>${socialLinks}` : ''}</div>
   </div>
-  <p class="legal">&copy; ${new Date().getFullYear()} ${esc(site.name)} is a trading name of ${esc(site.company)}, a company registered in Scotland, number ${esc(site.companyNumber)}.</p>
+  <p class="legal">&copy; ${new Date().getFullYear()} ${esc(site.name)} is a trading name of ${esc(site.company)}, a company registered in Scotland, number ${esc(site.companyNumber)}. Registered office: ${esc(site.office)}.</p>
 </footer>
 <script src="/assets/site.js" type="module"></script>
 ${scripts}
@@ -236,6 +236,7 @@ const faq = [
   ['What is the hardcover keepsake book like?', 'It is the same 24 pages as the magazine, bound as a thick A4 hardcover book with a square spine, printed on thick, premium paper. It stands on a shelf like a real book, so it is perfect for grandparents, weddings, new babies and memories you want to keep forever. It is printed near them and posted, with shipping added at checkout.'],
   ['Can you send it straight to them as a surprise?', 'Yes. Tick "It\'s a gift, send it to them for me" when you order, add their name and email, and pick the day. We email the finished magazine to them with your name on it, and you get your own copy first so you can see it. For a printed copy, just type their address at the printer\'s checkout.'],
   ['Where do you deliver?', 'Everywhere. Your magazine arrives by email, so you can send it to anyone in the world in seconds. Want it printed? Choose a printed magazine and it is printed near them and posted to their door, with shipping added at checkout.'],
+  ['Can I order extra printed copies?', `Yes, so the whole family can have one. Once your order is in, email us and we send you a link for extra copies of the same magazine: £${site.extraCopy.gbp} each for printed magazines and £${site.extraCopy.hardcoverGbp} each for hardcover books (US$${site.extraCopy.usd} and US$${site.extraCopy.hardcoverUsd}), posted to any address with shipping added.`],
   ['Can I see it before I pay?', 'Yes. You see a live preview of the cover and pages while you fill in the form.'],
   ['What happens to my photos?', 'They are used only to make your magazine and are deleted 30 days after your order (or 30 days after your gift is delivered). We never share or post them anywhere.'],
   ['What if something is wrong?', 'If anything in your magazine is not right, email us and we will fix it for free.'],
@@ -570,7 +571,7 @@ async function simplePages() {
       </ul>
       <h2>Talk to us</h2>
       <p>We are a small team and we read every message. Email <a href="mailto:${esc(site.email)}">${esc(site.email)}</a> and we usually reply within a day.</p>
-      <p class="small">${esc(site.name)} is a trading name of ${esc(site.company)}, a company registered in Scotland (company number ${esc(site.companyNumber)}).</p>`),
+      <p class="small">${esc(site.name)} is a trading name of ${esc(site.company)}, a company registered in Scotland (company number ${esc(site.companyNumber)}), registered office ${esc(site.office)}.</p>`),
   }));
   await page('/privacy/', layout({
     title: 'Privacy policy', description: 'How we look after your answers, photos and details.', path: '/privacy/',
@@ -586,7 +587,7 @@ async function simplePages() {
   await page('/terms/', layout({
     title: 'Terms', description: 'The terms for ordering a personalised magazine.', path: '/terms/',
     body: wrap('The small print', 'Terms of sale', `
-      <p>These terms apply when you order from ${esc(site.name)}, a trading name of ${esc(site.company)}, company number ${esc(site.companyNumber)}.</p>
+      <p>These terms apply when you order from ${esc(site.name)}, a trading name of ${esc(site.company)}, company number ${esc(site.companyNumber)}, registered office ${esc(site.office)}.</p>
       <h2>Your magazine</h2><p>Each magazine is made just for you from your answers and photos, so please check spelling in your preview and proof. You confirm you have permission to use the photos you upload.</p>
       <h2>Prices and payment</h2><p>Prices are shown before you pay. For printed copies, shipping is worked out for the delivery country and shown at our print partner's checkout before you pay. You may see prices in your own currency.</p>
       <h2>Cancellations and refunds</h2><p>Because every magazine is personalised, we cannot accept returns for a change of mind once your magazine has been made. If there is a mistake we can fix, a printing fault, or your magazine arrives damaged, we will put it right free, by fixing it, reprinting it or refunding you. This does not affect your legal rights.</p>
@@ -599,7 +600,7 @@ async function simplePages() {
       <p>We are a small team and we read every message ourselves. Whether you have a question before you order, want to change something, or something is not quite right, we would love to hear from you.</p>
       <h2>Email us</h2><p><a class="btn" href="mailto:${esc(site.email)}">${esc(site.email)}</a></p><p>We usually reply within one working day. If your message is about an order, please include the email address you ordered with.</p>
       <h2>Quick answers</h2><ul class="ticks"><li><a href="/help/">Delivery times and questions</a></li><li><a href="/refunds/">Refunds and reprints</a></li><li><a href="/privacy/">How we look after your photos</a></li></ul>
-      <p class="small">${esc(site.name)} is a trading name of ${esc(site.company)}, a company registered in Scotland (company number ${esc(site.companyNumber)}).</p>`),
+      <p class="small">${esc(site.name)} is a trading name of ${esc(site.company)}, a company registered in Scotland (company number ${esc(site.companyNumber)}), registered office ${esc(site.office)}.</p>`),
   }));
   await page('/refunds/', layout({
     title: 'Refunds and reprints', description: 'Our promise if anything is wrong with your magazine: we fix it, reprint it or refund you.', path: '/refunds/',
