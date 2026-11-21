@@ -652,3 +652,17 @@ p { margin: 0 0 1em; }
 .talk-head { margin: 0 0 10px; font-size: 14px; color: var(--soft); }
 .talk-head b { display: block; color: var(--ink); font-size: 15px; }
 .talk-saved { font-weight: 700; color: var(--coral-dk); }
+
+.news-ok span { font-size: 14px; color: #6b4a57; }
+.welcome { position: fixed; right: 20px; bottom: 20px; z-index: 90; width: min(380px, calc(100vw - 32px)); padding: 26px 24px 22px; border-radius: 24px; background: linear-gradient(140deg, #fff, #fde8ee); box-shadow: 0 30px 60px -20px rgba(31, 15, 23, .45); border: 1px solid #f3c4d2; transform: translateY(30px); opacity: 0; transition: transform .5s cubic-bezier(.2, .9, .3, 1.2), opacity .4s; }
+.welcome.in { transform: none; opacity: 1; }
+.welcome .kicker { margin: 0 0 6px; font-size: 12px; }
+.welcome h3 { margin: 0 0 8px; font-size: 26px; line-height: 1.15; }
+.welcome p { margin: 0 0 14px; font-size: 15px; line-height: 1.5; }
+.welcome-form { display: flex; gap: 8px; }
+.welcome-form input { flex: 1; min-width: 0; padding: 12px 14px; border-radius: 999px; border: 1px solid #e9b6c6; font: inherit; font-size: 15px; }
+.welcome-form .btn { white-space: nowrap; padding: 12px 16px; font-size: 15px; }
+.welcome-done { margin: 0; }
+.welcome-x { position: absolute; top: 10px; right: 12px; width: 34px; height: 34px; border: 0; border-radius: 50%; background: transparent; font-size: 26px; line-height: 1; color: #6b4a57; cursor: pointer; }
+.welcome-x:hover { background: #fbd7e2; }
+@media (max-width: 520px) { .welcome { right: 16px; bottom: 16px; } .welcome-form { flex-direction: column; } }

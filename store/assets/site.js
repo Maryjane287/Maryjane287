@@ -109,9 +109,51 @@ if (window.PIN_TAG_ID) {
       if (!r.ok) throw new Error(r.status);
       f.querySelector('.news-form').hidden = true;
       f.querySelector('.news-done').hidden = false;
+      try { localStorage.setItem('cs-joined', '1'); } catch {}
     } catch {
       btn.disabled = false;
       btn.textContent = 'Try again';
     }
   });
+})();
+
+// A gentle welcome card: once, after a while on the page, never on the maker
+// or checkout pages. Joining gives a 10% welcome code that the maker adds at checkout.
+(() => {
+  const foot = document.querySelector('form.news');
+  const code = foot?.dataset.welcome;
+  if (!foot || !code || /^\/(make|review|thanks|order)/.test(location.pathname)) return;
+  const get = k => { try { return localStorage.getItem(k); } catch { return '1'; } };
+  const set = (k, v) => { try { localStorage.setItem(k, v); } catch {} };
+  if (get('cs-joined') || get('cs-welcome-seen')) return;
+  const open = () => {
+    if (document.querySelector('.welcome') || get('cs-welcome-seen')) return;
+    set('cs-welcome-seen', '1');
+    const box = document.createElement('aside');
+    box.className = 'welcome';
+    box.setAttribute('role', 'dialog');
+    box.setAttribute('aria-label', 'Welcome offer');
+    box.innerHTML = `<button class="welcome-x" type="button" aria-label="Close">&times;</button>
+      <p class="kicker">A little welcome gift</p><h3>10% off your first digital magazine</h3>
+      <p>Join our list for a gentle reminder before birthdays, Mother's Day, Valentine's and Christmas. About one email a month.</p>
+      <form class="welcome-form"><label class="sr-only" for="welcome-email">Your email</label><input id="welcome-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com"><button class="btn" type="submit">Send my code</button></form>
+      <p class="welcome-done" hidden role="status">You are in! Your code is <b>${code}</b>. We have saved it for you, so it is added at checkout automatically.</p>`;
+    document.body.appendChild(box);
+    requestAnimationFrame(() => box.classList.add('in'));
+    box.querySelector('.welcome-x').addEventListener('click', () => box.remove());
+    box.querySelector('form').addEventListener('submit', async e => {
+      e.preventDefault();
+      const btn = box.querySelector('form button');
+      btn.disabled = true;
+      try {
+        const r = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ 'form-name': 'newsletter', email: e.target.email.value, source: 'welcome' }).toString() });
+        if (!r.ok) throw new Error(r.status);
+        set('cs-joined', '1'); set('cs-welcome', code);
+        box.querySelector('form').hidden = true;
+        box.querySelector('.welcome-done').hidden = false;
+      } catch { btn.disabled = false; btn.textContent = 'Try again'; }
+    });
+  };
+  setTimeout(open, 30000);
+  document.addEventListener('mouseout', e => { if (!e.relatedTarget && e.clientY < 10) open(); });
 })();

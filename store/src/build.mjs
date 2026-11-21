@@ -89,8 +89,8 @@ ${site.christmasOrderBy ? `<p class="promo-bar"><span aria-hidden="true">&#12787
 ${body}
 </main>
 <footer class="foot">
-  <form class="news" name="newsletter" method="POST" action="/" data-netlify="true" netlify-honeypot="company">
-    <input type="hidden" name="form-name" value="newsletter">
+  <form class="news" name="newsletter" method="POST" action="/" data-netlify="true" netlify-honeypot="company" data-welcome="${esc(site.welcomeCode || '')}">
+    <input type="hidden" name="form-name" value="newsletter"><input type="hidden" name="source" value="footer">
     <p class="hp"><label>Leave this empty <input name="company"></label></p>
     <div class="news-text"><h3>Never miss a big day</h3><p>Gentle reminders before Mother's Day, Father's Day, Valentine's and Christmas, plus new magazines first. About one email a month, and you can leave any time.</p></div>
     <div class="news-form"><label class="sr-only" for="news-email">Your email</label><input id="news-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com"><button class="btn" type="submit">Remind me</button></div>
@@ -483,6 +483,7 @@ async function makerPage() {
         <label class="field"><span>Where is it going?</span><select name="country" required>${countries.map(c => `<option>${c}</option>`).join('')}</select></label>
         <div class="proof-check"><b>Before you order, flip through the preview and check:</b><ul><li>Every name is spelled the way they like it</li><li>Dates, ages and numbers are right</li><li>Each photo is clear and the right way up</li></ul><small>Spot something after you order? Tell us and we fix it free.</small></div>
         <label class="consent"><input type="checkbox" name="consent" required> <span>I agree to the <a href="/terms/" target="_blank">terms</a> and <a href="/privacy/" target="_blank">privacy policy</a>, and have permission to use these photos. I understand my magazine is made just for me and the PDF arrives straight away, so the usual 14 day cancellation right ends once it is delivered.</span></label>
+        <label class="consent news-ok"><input type="checkbox" name="news_ok"> <span>Yes, send me a gentle reminder before birthdays, Mother's Day, Valentine's and Christmas, plus new magazines first. About one email a month, leave any time. <small>(optional)</small></span></label>
         <button class="btn btn-big" type="submit">Place my order</button>
         <p class="small" id="pay-note">Next, you pay securely. Your magazine is ready to download the moment you have paid, and we email it to you too.</p>
         <p class="small order-progress" id="order-progress" hidden></p>

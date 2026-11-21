@@ -13,6 +13,7 @@ const params = new URLSearchParams(location.search);
 const giftEnds = Date.parse(JSON.parse(document.getElementById('gift-expires')?.textContent || '""'));
 if (params.get('code') && giftEnds && Date.now() > giftEnds) { params.delete('code'); params.delete('m'); }
 const $ = s => document.querySelector(s);
+const welcome = (() => { try { return localStorage.getItem('cs-welcome') || ''; } catch { return ''; } })();
 const form = $('#order');
 
 const store = {
@@ -475,6 +476,8 @@ form.addEventListener('submit', async e => {
     say('Sending your story...');
     const res = window.PREVIEW ? { ok: true } : await fetch('/', { method: 'POST', body: new FormData(form) });
     if (!res.ok) throw new Error(res.status);
+    // Buyers who ticked the reminder box join the same list as the footer sign up.
+    if (form.news_ok?.checked) await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ 'form-name': 'newsletter', email: form.email.value, source: 'checkout' }).toString() }).catch(() => {});
     if (printed && made?.checkout) { location.href = made.checkout; return; }
     const pay = checkout[tier];
     if (pay) {
@@ -485,6 +488,8 @@ form.addEventListener('submit', async e => {
       if (made?.id && url.hostname.endsWith('lemonsqueezy.com')) url.searchParams.set('checkout[custom][order_id]', made.id);
       // A discount code in the maker link (?code=...) is filled in at checkout; Lemon Squeezy checks it.
       if (params.get('code') && url.hostname.endsWith('lemonsqueezy.com')) url.searchParams.set('checkout[discount_code]', params.get('code').trim().slice(0, 40));
+      // Otherwise the welcome code from the email sign up, if they have one.
+      else if (welcome && url.hostname.endsWith('lemonsqueezy.com')) url.searchParams.set('checkout[discount_code]', welcome);
       location.href = url.href;
     } else {
       location.href = new URL(form.getAttribute('action'), location.href).href;
@@ -498,6 +503,7 @@ form.addEventListener('submit', async e => {
 choose(state.slug);
 
 // A gift link carries a code: say so, so the price shown never worries anyone.
+if (!params.get('code') && welcome) $('#pay-note')?.insertAdjacentHTML('afterend', `<p class="small code-note">Your welcome code <b>${esc(welcome)}</b> takes 10% off digital magazines at checkout.</p>`);
 if (params.get('code')) $('#pay-note')?.insertAdjacentHTML('afterend', `<p class="small code-note">Your gift code <b>${esc(params.get('code').trim().slice(0, 40))}</b> is added at checkout, so the total comes to nothing.</p>`);
 
 // Flip through the whole finished magazine, with their answers, before paying.
