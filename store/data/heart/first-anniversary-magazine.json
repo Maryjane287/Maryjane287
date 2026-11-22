@@ -10,7 +10,7 @@
     },
     {
       "id": "s_knew",
-      "label": "Something about your first married home",
+      "label": "Your first married home, described honestly",
       "example": "A tiny flat, one good pan and a lot of laughing",
       "max": 80,
       "chapter": "Our first home as a married couple"
@@ -325,5 +325,45 @@
         "Same team. Same love. More adventures."
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "s_heard"
+      ],
+      "text": "A year ago they said yes in front of everyone they love. The memory that still glows? {s_heard}."
+    },
+    {
+      "need": [
+        "moment"
+      ],
+      "text": "It took a while to feel real. Then, suddenly, it did. {moment}."
+    },
+    {
+      "need": [
+        "s_knew"
+      ],
+      "text": "Their first married home was {s_knew|low}. Exactly as it should be."
+    },
+    {
+      "need": [
+        "where"
+      ],
+      "text": "The best day of the year? {where}. Ask either of them and they will smile before they answer."
+    },
+    {
+      "need": [
+        "nerves"
+      ],
+      "text": "There have been disagreements, of course. The silliest was about {nerves|low}. It remains unresolved."
+    },
+    {
+      "need": [
+        "next"
+      ],
+      "text": "And the most important lesson of year one: {next|low}. Wise words. Hard won."
+    }
+  ],
+  "weaveTitle": "Year one",
+  "weaveKicker": "The first anniversary"
 }

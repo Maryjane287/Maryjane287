@@ -4,14 +4,14 @@
     {
       "id": "s_advice",
       "chapter": "Our best advice",
-      "label": "Your best advice for them",
+      "label": "Your best piece of grown up advice",
       "example": "Always carry a phone charger and a snack",
       "max": 80
     },
     {
       "id": "s_proud",
       "chapter": "Our proudest moment",
-      "label": "Your proudest moment of them",
+      "label": "The moment you were proudest of them",
       "example": "Standing up for a friend when nobody else would",
       "max": 80
     },
@@ -318,5 +318,38 @@
         "Call home. Often. We mean it."
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "moment"
+      ],
+      "text": "Before the keys and the passport and the plans, there was a small person who did things like this. {moment}. The family has never let it go. The family never will."
+    },
+    {
+      "need": [
+        "talent"
+      ],
+      "text": "Now look. {first} is grown, and still in possession of a rare gift: {talent|low}. Some skills improve with age."
+    },
+    {
+      "need": [
+        "s_proud"
+      ],
+      "text": "But ask {from} about the proudest moment and the joking stops. {s_proud}. That is the person {first} has become."
+    },
+    {
+      "need": [
+        "dream"
+      ],
+      "text": "And the dream? {dream}. Go and get it."
+    },
+    {
+      "need": [
+        "s_advice"
+      ],
+      "text": "One last piece of advice, folded small and slipped in here: {s_advice|low}."
+    }
+  ],
+  "weaveTitle": "{first} at eighteen"
 }

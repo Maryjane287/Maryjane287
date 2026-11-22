@@ -4,14 +4,14 @@
     {
       "id": "s_did",
       "chapter": "What you did for us",
-      "label": "Something they did for you",
+      "label": "Something they did that they probably do not even remember",
       "example": "Called every evening to check we were all right",
       "max": 80
     },
     {
       "id": "s_changed",
       "chapter": "How you changed things",
-      "label": "How they changed things for you",
+      "label": "How did they change things for you?",
       "example": "We stopped feeling alone",
       "max": 80
     },
@@ -317,5 +317,39 @@
         ""
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "role"
+      ],
+      "text": "To most people, {first} is {role|low}. To {from}, {first} is the reason the hardest time became bearable."
+    },
+    {
+      "need": [
+        "always"
+      ],
+      "text": "They always {always|low}. Small things, done every day, add up to something enormous."
+    },
+    {
+      "need": [
+        "s_did"
+      ],
+      "text": "{first} probably does not even remember this. {s_did}. {from} will never forget it."
+    },
+    {
+      "need": [
+        "moment"
+      ],
+      "text": "And there was one moment above all. {moment}."
+    },
+    {
+      "need": [
+        "s_changed"
+      ],
+      "text": "What changed? {s_changed}. That is the thing about kindness. It travels much further than you think."
+    }
+  ],
+  "weaveTitle": "Thank you, {first}",
+  "weaveKicker": "A thank you feature"
 }

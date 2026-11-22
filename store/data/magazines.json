@@ -5165,49 +5165,49 @@
     "fields": [
       {
         "id": "name",
-        "label": "Mum or parents to be",
+        "label": "The mum, or parents, to be",
         "example": "Emma",
         "max": 20
       },
       {
         "id": "due",
-        "label": "When is baby due?",
+        "label": "When is the little one due?",
         "example": "March",
         "max": 14
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is showering them with love?",
         "example": "All your friends",
         "max": 30
       },
       {
         "id": "nickname",
-        "label": "The bump's nickname",
+        "label": "What does everyone call the bump?",
         "example": "Little Bean",
         "max": 20
       },
       {
         "id": "craving",
-        "label": "Biggest craving",
+        "label": "The strangest craving so far",
         "example": "Pickles dipped in ice cream",
         "max": 36
       },
       {
         "id": "guess",
-        "label": "Everyone's guess",
+        "label": "Your guess about the baby, based on the evidence",
         "example": "Definitely a footballer, judging by the kicks",
         "max": 50
       },
       {
         "id": "words",
-        "label": "Three words that are so them",
+        "label": "Three words for them right now",
         "example": "Glowing, brave, ready",
         "max": 28
       },
       {
         "id": "moment",
-        "label": "The moment we found out",
+        "label": "How did you find out? Tell it like a story",
         "example": "You handed us a tiny pair of socks over dinner and it took us a full minute to understand",
         "type": "textarea",
         "max": 220
@@ -5361,37 +5361,37 @@
     "fields": [
       {
         "id": "name",
-        "label": "Their name",
+        "label": "The new grown up",
         "example": "Leo",
         "max": 12
       },
       {
         "id": "age",
-        "label": "Age they are turning",
+        "label": "The big number",
         "example": "18",
         "max": 3
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who has watched them grow?",
         "example": "Mum and Dad",
         "max": 30
       },
       {
         "id": "likely",
-        "label": "Most likely to",
+        "label": "Most likely to...",
         "example": "Become famous for something nobody expected",
         "max": 46
       },
       {
         "id": "dream",
-        "label": "Their big dream",
+        "label": "Their big dream, the one they say out loud",
         "example": "Travelling the world with one backpack",
         "max": 40
       },
       {
         "id": "talent",
-        "label": "Secret talent",
+        "label": "A secret talent the world should know about",
         "example": "Sleeping through any alarm",
         "max": 36
       },
@@ -5403,14 +5403,14 @@
       },
       {
         "id": "moment",
-        "label": "The childhood moment we still talk about",
+        "label": "The childhood moment the family still tells",
         "example": "Age five, when you announced at a wedding that you would be marrying the cake",
         "type": "textarea",
         "max": 220
       },
       {
         "id": "message",
-        "label": "What do you wish you told them more often? (This becomes your letter)",
+        "label": "What do you want them to know as they step into adulthood? (This becomes your letter)",
         "example": "Watching you grow up has been the best adventure of our lives. Go and be brilliant. We will always be here, with snacks and lifts.",
         "type": "textarea",
         "max": 400
@@ -5762,37 +5762,37 @@
     "fields": [
       {
         "id": "name",
-        "label": "Their name",
+        "label": "The person you want to thank",
         "example": "Nurse Mia",
         "max": 16
       },
       {
         "id": "role",
-        "label": "Who they are to you",
+        "label": "Who are they to you?",
         "example": "The nurse who looked after Grandad",
         "max": 40
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is saying thank you?",
         "example": "The Taylor family",
         "max": 30
       },
       {
         "id": "always",
-        "label": "They always",
+        "label": "They always...",
         "example": "Had a smile, even at 3am",
         "max": 36
       },
       {
         "id": "power",
-        "label": "Their superpower",
+        "label": "Their quiet superpower",
         "example": "Making scary days feel calm",
         "max": 40
       },
       {
         "id": "year",
-        "label": "Year",
+        "label": "The year they made a difference",
         "example": "2026",
         "max": 4
       },
@@ -5804,7 +5804,7 @@
       },
       {
         "id": "moment",
-        "label": "The moment we will never forget",
+        "label": "The moment you will never forget",
         "example": "The night you sat with Grandad and sang his favourite song so he would not be on his own",
         "type": "textarea",
         "max": 220
@@ -5964,37 +5964,37 @@
     "fields": [
       {
         "id": "name",
-        "label": "Their name",
+        "label": "The new starter",
         "example": "Emma",
         "max": 12
       },
       {
         "id": "job",
-        "label": "New job title",
+        "label": "The shiny new job title",
         "example": "Head of Design",
         "max": 32
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is cheering them on?",
         "example": "The whole team",
         "max": 30
       },
       {
         "id": "year",
-        "label": "Year",
+        "label": "The year it happened",
         "example": "2026",
         "max": 4
       },
       {
         "id": "weapon",
-        "label": "Secret weapon at work",
+        "label": "Their secret weapon at work",
         "example": "A spreadsheet for everything",
         "max": 40
       },
       {
         "id": "coffee",
-        "label": "Fuelled by",
+        "label": "What fuels them, honestly?",
         "example": "Oat flat whites, four a day",
         "max": 34
       },
@@ -6006,14 +6006,14 @@
       },
       {
         "id": "moment",
-        "label": "The moment we knew you would make it",
+        "label": "The moment you knew they would make it",
         "example": "When the projector died before the big pitch and you drew the whole thing on a whiteboard and won the client anyway",
         "type": "textarea",
         "max": 220
       },
       {
         "id": "message",
-        "label": "What do you wish you told them more often? (This becomes your letter)",
+        "label": "What do you want them to know on day one? (This becomes your letter)",
         "example": "Nobody deserves this more. Thank you for the laughs, the patience and the emergency biscuits. Go and be brilliant, boss.",
         "type": "textarea",
         "max": 400
@@ -6368,37 +6368,37 @@
     "fields": [
       {
         "id": "name",
-        "label": "Her name",
+        "label": "Her name, or what you call her when nobody is listening",
         "example": "Mia",
         "max": 12
       },
       {
         "id": "years",
-        "label": "Years together",
+        "label": "How long has she been yours?",
         "example": "2",
         "max": 3
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "And this is from...?",
         "example": "Chris",
         "max": 30
       },
       {
         "id": "date",
-        "label": "Your first date",
+        "label": "Your first date, including the wobbly bits",
         "example": "Ice skating, mostly falling over",
         "max": 34
       },
       {
         "id": "cute",
-        "label": "Her cutest habit",
+        "label": "The little habit of hers you could watch all day",
         "example": "Dancing as she brushes her teeth",
         "max": 34
       },
       {
         "id": "song",
-        "label": "Your song",
+        "label": "The song that will always be her",
         "example": "The one she sings in the shower",
         "max": 34
       },
@@ -6570,37 +6570,37 @@
     "fields": [
       {
         "id": "name",
-        "label": "His name",
+        "label": "Your husband's name, or the one you use",
         "example": "Sam",
         "max": 12
       },
       {
         "id": "years",
-        "label": "Years married",
+        "label": "How many years married?",
         "example": "12",
         "max": 3
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "From his wife, with love",
         "example": "Emma",
         "max": 30
       },
       {
         "id": "date",
-        "label": "Where you met",
+        "label": "Where did you first meet?",
         "example": "A friend's very loud party",
         "max": 34
       },
       {
         "id": "cute",
-        "label": "The habit you would miss most",
+        "label": "The little habit of his you would miss the most",
         "example": "Warming my side of the bed",
         "max": 34
       },
       {
         "id": "song",
-        "label": "Your wedding song",
+        "label": "The song you danced to as newlyweds",
         "example": "The one we still dance to",
         "max": 34
       },
@@ -6612,7 +6612,7 @@
       },
       {
         "id": "moment",
-        "label": "Why you would marry him all over again",
+        "label": "Why would you marry him all over again?",
         "example": "Because after twelve years he still saves me the crispy potato, still checks I got home safe, and still makes me laugh until I snort",
         "max": 220,
         "type": "textarea"
@@ -6772,37 +6772,37 @@
     "fields": [
       {
         "id": "name",
-        "label": "Her name",
+        "label": "Your wife's name, or what you call her",
         "example": "Emma",
         "max": 12
       },
       {
         "id": "years",
-        "label": "Years married",
+        "label": "How many years married?",
         "example": "10",
         "max": 3
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "From her husband, with love",
         "example": "Chris",
         "max": 30
       },
       {
         "id": "date",
-        "label": "Where you met",
+        "label": "Where did you first meet?",
         "example": "Queueing for the same taxi",
         "max": 34
       },
       {
         "id": "cute",
-        "label": "The habit you would miss most",
+        "label": "The little habit of hers you would miss the most",
         "example": "Reading the end of a book first",
         "max": 34
       },
       {
         "id": "song",
-        "label": "Your wedding song",
+        "label": "The song you still slow dance to",
         "example": "The one we still slow dance to",
         "max": 34
       },
@@ -6814,7 +6814,7 @@
       },
       {
         "id": "moment",
-        "label": "Why you would marry her all over again",
+        "label": "Why would you marry her all over again?",
         "example": "Because she still laughs at my worst jokes, still holds my hand at the scary bits of films, and still makes every house we live in feel like home",
         "max": 220,
         "type": "textarea"
@@ -6974,43 +6974,43 @@
     "fields": [
       {
         "id": "name",
-        "label": "Their name",
+        "label": "The one you are asking",
         "example": "Emma",
         "max": 12
       },
       {
         "id": "years",
-        "label": "Years together",
+        "label": "How long have you been together?",
         "example": "4",
         "max": 3
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is asking? (That is you)",
         "example": "Leo",
         "max": 30
       },
       {
         "id": "date",
-        "label": "Your first date",
+        "label": "Your first date, every detail you remember",
         "example": "Chips on the beach in the cold",
         "max": 34
       },
       {
         "id": "cute",
-        "label": "Their cutest habit",
+        "label": "Their sweetest little habit",
         "example": "Saying goodnight to the moon",
         "max": 34
       },
       {
         "id": "song",
-        "label": "Your song",
+        "label": "The song you will ask them to dance to",
         "example": "The one I will ask you to dance to",
         "max": 34
       },
       {
         "id": "words",
-        "label": "Three words that are so them",
+        "label": "Three words for what they are to you",
         "example": "My whole heart",
         "max": 28
       },
@@ -7176,37 +7176,37 @@
     "fields": [
       {
         "id": "name",
-        "label": "Her name",
+        "label": "Your future bridesmaid",
         "example": "Emma",
         "max": 12
       },
       {
         "id": "years",
-        "label": "Years of friendship",
+        "label": "How many years of friendship?",
         "example": "15",
         "max": 3
       },
       {
         "id": "from",
-        "label": "From the bride",
+        "label": "From the bride to be",
         "example": "Mia",
         "max": 30
       },
       {
         "id": "met",
-        "label": "How you met",
+        "label": "How did you two meet?",
         "example": "Sharing a pencil at school",
         "max": 34
       },
       {
         "id": "trouble",
-        "label": "At the wedding, she is most likely to",
+        "label": "At the wedding, she is most likely to...",
         "example": "Start the conga line",
         "max": 34
       },
       {
         "id": "song",
-        "label": "Your dance floor song",
+        "label": "Your dance floor anthem",
         "example": "The one we know every word to",
         "max": 34
       },
@@ -7218,7 +7218,7 @@
       },
       {
         "id": "moment",
-        "label": "Why you cannot get married without her",
+        "label": "Why can you not get married without her?",
         "example": "Because she held my hair, my hand and my secrets for fifteen years, and she was the first person I called when he proposed",
         "max": 220,
         "type": "textarea"
@@ -7378,43 +7378,43 @@
     "fields": [
       {
         "id": "names",
-        "label": "Your names",
+        "label": "The two of you",
         "example": "Mia & Chris",
         "max": 16
       },
       {
         "id": "year",
-        "label": "This Christmas",
+        "label": "This first Christmas",
         "example": "2026",
         "max": 4
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is this from?",
         "example": "Chris",
         "max": 34
       },
       {
         "id": "where",
-        "label": "Where you spent it",
+        "label": "Where did you spend it?",
         "example": "Our tiny flat, and both mums",
         "max": 34
       },
       {
         "id": "tradition",
-        "label": "Your new tradition",
+        "label": "The brand new tradition you started",
         "example": "Matching pyjamas, no exceptions",
         "max": 34
       },
       {
         "id": "jumper",
-        "label": "Who wore the silliest jumper",
+        "label": "Who wore the silliest jumper?",
         "example": "Chris, it lit up and played music",
         "max": 34
       },
       {
         "id": "words",
-        "label": "Three words for your Christmas",
+        "label": "Three words for your first Christmas",
         "example": "Cosy, chaotic, ours",
         "max": 28
       },
@@ -7580,37 +7580,37 @@
     "fields": [
       {
         "id": "names",
-        "label": "Your names",
+        "label": "Mr and Mrs, or whichever you are",
         "example": "Emma & Chris",
         "max": 16
       },
       {
         "id": "year",
-        "label": "Year you married",
+        "label": "The year you married",
         "example": "2025",
         "max": 4
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is this from?",
         "example": "Emma",
         "max": 34
       },
       {
         "id": "where",
-        "label": "Best day of year one",
+        "label": "The best day of your first year",
         "example": "Our first holiday as Mr and Mrs",
         "max": 34
       },
       {
         "id": "nerves",
-        "label": "Silliest argument",
+        "label": "The silliest argument of the year",
         "example": "Which way the toilet roll goes",
         "max": 34
       },
       {
         "id": "next",
-        "label": "What you learned",
+        "label": "The most important thing you learned in year one",
         "example": "Never touch his chips",
         "max": 34
       },
@@ -7622,7 +7622,7 @@
       },
       {
         "id": "moment",
-        "label": "The moment being married felt real",
+        "label": "The moment being married suddenly felt real",
         "example": "Signing for a parcel with my new surname, then running inside to tell Chris like it was the biggest news in the world",
         "max": 220,
         "type": "textarea"

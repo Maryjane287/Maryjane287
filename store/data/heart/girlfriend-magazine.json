@@ -3,14 +3,14 @@
   "fields": [
     {
       "id": "s_first",
-      "label": "The first thing you noticed about her",
+      "label": "What did you notice about her first?",
       "example": "Her laugh, from the other side of the room",
       "max": 70,
       "chapter": "The first time I saw you"
     },
     {
       "id": "s_fav",
-      "label": "When she is at her very best",
+      "label": "When is she at her very best?",
       "example": "Singing in the car with every window down",
       "max": 70,
       "chapter": "My favourite version of you"
@@ -325,5 +325,44 @@
         ""
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "s_first"
+      ],
+      "text": "{from} noticed it straight away. {s_first}. That was the beginning of the end of being sensible."
+    },
+    {
+      "need": [
+        "date"
+      ],
+      "text": "The first date was {date|low}. Not exactly smooth. Absolutely perfect."
+    },
+    {
+      "need": [
+        "cute"
+      ],
+      "text": "Now the little things are the big things. {cute}. {from} could watch it forever."
+    },
+    {
+      "need": [
+        "moment"
+      ],
+      "text": "And then there was the moment. {moment}. After that, there was no one else."
+    },
+    {
+      "need": [
+        "s_fav"
+      ],
+      "text": "She is at her very best like this: {s_fav|low}. If you have seen it, you will understand everything."
+    },
+    {
+      "need": [
+        "s_secret"
+      ],
+      "text": "One more thing, just between us. {s_secret}. It only makes her more wonderful."
+    }
+  ],
+  "weaveTitle": "All about {first}"
 }

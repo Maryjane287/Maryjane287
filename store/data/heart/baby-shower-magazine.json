@@ -11,7 +11,7 @@
     {
       "id": "s_ready",
       "chapter": "Most ready for",
-      "label": "What they are most ready for",
+      "label": "What are they most ready for?",
       "example": "Tiny socks, sleepy cuddles and the first smile",
       "max": 80
     },
@@ -319,5 +319,45 @@
         "The best surprise is on its way."
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "moment"
+      ],
+      "text": "The news arrived like this. {moment}. Some moments you remember for the rest of your life, and that was one."
+    },
+    {
+      "need": [
+        "nickname"
+      ],
+      "text": "Since then, the bump has had a name. Everybody calls it {nickname}, and everybody is already completely in love."
+    },
+    {
+      "need": [
+        "craving"
+      ],
+      "text": "There have been cravings. Mostly {craving|low}. Nobody is judging. Well, nobody is judging out loud."
+    },
+    {
+      "need": [
+        "guess"
+      ],
+      "text": "The evidence so far suggests one thing. {guess}. We will see."
+    },
+    {
+      "need": [
+        "s_ready"
+      ],
+      "text": "And {first} is ready. Ready for {s_ready|low}. Ready for all of it."
+    },
+    {
+      "need": [
+        "s_wish"
+      ],
+      "text": "Our wish for the baby is simple. {s_wish}. With parents like these, it is already coming true."
+    }
+  ],
+  "weaveTitle": "Waiting for {nickname}",
+  "weaveKicker": "The baby shower issue"
 }

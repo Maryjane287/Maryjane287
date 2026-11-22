@@ -3,7 +3,7 @@
   "fields": [
     {
       "id": "s_first",
-      "label": "The first thing you noticed about them",
+      "label": "What did you notice about them first?",
       "example": "Their laugh, before I even saw their face",
       "max": 70,
       "chapter": "The first time I saw you"
@@ -325,5 +325,43 @@
         ""
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "s_first"
+      ],
+      "text": "It started with one small thing. {s_first}. {from} did not know it then, but that was the first page of the best story."
+    },
+    {
+      "need": [
+        "date"
+      ],
+      "text": "The first date: {date|low}. Neither of them wanted it to end. In a way, it never did."
+    },
+    {
+      "need": [
+        "moment"
+      ],
+      "text": "Then came the moment that changed everything. {moment}. That was when {from} knew. Forever, or nothing."
+    },
+    {
+      "need": [
+        "s_fav"
+      ],
+      "text": "Home is not a place. It is this: {s_fav|low}."
+    },
+    {
+      "need": [
+        "s_secret"
+      ],
+      "text": "Close your eyes and look ten years ahead. {s_secret}. It sounds like a dream. It is really a plan."
+    },
+    {
+      "alt": "And so, after all of this, there is only one thing left to ask. Turn the page slowly.",
+      "text": "And so, after all of this, there is only one thing left to ask. Turn the page slowly."
+    }
+  ],
+  "weaveTitle": "A question for {first}",
+  "weaveKicker": "A love story, so far"
 }

@@ -4,14 +4,14 @@
     {
       "id": "s_proud",
       "chapter": "The work we are proudest of",
-      "label": "Work of theirs you are proudest of",
+      "label": "Their work you are proudest of",
       "example": "The project everyone said could not be done",
       "max": 80
     },
     {
       "id": "s_next",
       "chapter": "What comes next",
-      "label": "What you predict comes next",
+      "label": "Your prediction for where they end up",
       "example": "Running the whole place within five years",
       "max": 80
     },
@@ -317,5 +317,39 @@
         "{words}"
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "moment"
+      ],
+      "text": "{from} knew it long before the offer came through. {moment}. Some people are simply built for the big job."
+    },
+    {
+      "need": [
+        "s_proud"
+      ],
+      "text": "Ask about the proudest piece of work and there is no hesitation. {s_proud}."
+    },
+    {
+      "need": [
+        "weapon"
+      ],
+      "text": "Colleagues, take note. {first}'s secret weapon is {weapon|low}. Resistance is useless."
+    },
+    {
+      "need": [
+        "coffee"
+      ],
+      "text": "All of it powered by {coffee|low}. A small price for greatness."
+    },
+    {
+      "need": [
+        "s_next"
+      ],
+      "text": "And the prediction for where this ends? {s_next}. We will hold you to it."
+    }
+  ],
+  "weaveTitle": "Introducing {first}, {job}",
+  "weaveKicker": "The career feature"
 }

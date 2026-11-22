@@ -17,7 +17,7 @@
     },
     {
       "id": "s_secret",
-      "label": "What you will need her for on the day",
+      "label": "What will you need her for on the day?",
       "example": "Keeping me calm, and keeping my aunt off the microphone",
       "max": 70,
       "chapter": "What I will need you for"
@@ -325,5 +325,45 @@
         ""
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "met"
+      ],
+      "text": "It started small. {met}. {years} years later, {from} cannot imagine a single big moment without her."
+    },
+    {
+      "need": [
+        "s_first"
+      ],
+      "text": "The day they became proper friends, {from} remembers exactly. {s_first}."
+    },
+    {
+      "need": [
+        "s_fav"
+      ],
+      "text": "There are stories, obviously. The best one? {s_fav}. Nobody else would believe it. They were both there."
+    },
+    {
+      "need": [
+        "trouble"
+      ],
+      "text": "At the wedding, she is most likely to {trouble|low}. {from} is counting on it."
+    },
+    {
+      "need": [
+        "s_secret"
+      ],
+      "text": "On the day itself, there is a job only she can do. {s_secret}."
+    },
+    {
+      "need": [
+        "moment"
+      ],
+      "text": "Because the truth is simple. {moment}."
+    }
+  ],
+  "weaveTitle": "{first}, will you stand beside me?",
+  "weaveKicker": "A very important question"
 }

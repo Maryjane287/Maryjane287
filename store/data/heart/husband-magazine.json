@@ -3,7 +3,7 @@
   "fields": [
     {
       "id": "s_first",
-      "label": "The first thing you noticed about him",
+      "label": "What did you notice about him first?",
       "example": "He was the only one helping clear up the cups",
       "max": 70,
       "chapter": "The first time I saw you"
@@ -325,5 +325,44 @@
         "{words}"
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "date"
+      ],
+      "text": "They met at {date|low}. {from} would like it on record that it was love at first sight, on at least one side."
+    },
+    {
+      "need": [
+        "s_first"
+      ],
+      "text": "What came first? {s_first}. A small thing. It told her everything."
+    },
+    {
+      "need": [
+        "years"
+      ],
+      "text": "{years} years married now, and the love has become something quieter and stronger, the kind you lean on without thinking."
+    },
+    {
+      "need": [
+        "cute"
+      ],
+      "text": "Ask {from} what would be missed most and the answer is nothing grand. {cute}. That is what a marriage is made of."
+    },
+    {
+      "need": [
+        "s_fav"
+      ],
+      "text": "The favourite moment of any week? {s_fav}. Nothing happens. Everything is right."
+    },
+    {
+      "need": [
+        "s_secret"
+      ],
+      "text": "And a secret, shared with love. {s_secret}. He would never tell you that himself."
+    }
+  ],
+  "weaveTitle": "Still him, always"
 }

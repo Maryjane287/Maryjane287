@@ -1,0 +1,288 @@
+{
+  "baby-shower-magazine": {
+    "labels": {
+      "name": "The mum, or parents, to be",
+      "due": "When is the little one due?",
+      "from": "Who is showering them with love?",
+      "nickname": "What does everyone call the bump?",
+      "craving": "The strangest craving so far",
+      "guess": "Your guess about the baby, based on the evidence",
+      "words": "Three words for them right now",
+      "moment": "How did you find out? Tell it like a story",
+      "message": "What do you want the parents to be to hear right now? (This becomes your letter)",
+      "s_wish": "Your wish for the baby",
+      "s_ready": "What are they most ready for?",
+      "s_promise": "A promise to them"
+    },
+    "weaveTitle": "Waiting for {nickname}",
+    "weaveKicker": "The baby shower issue",
+    "weave": [
+      {"need": ["moment"], "text": "The news arrived like this. {moment}. Some moments you remember for the rest of your life, and that was one."},
+      {"need": ["nickname"], "text": "Since then, the bump has had a name. Everybody calls it {nickname}, and everybody is already completely in love."},
+      {"need": ["craving"], "text": "There have been cravings. Mostly {craving|low}. Nobody is judging. Well, nobody is judging out loud."},
+      {"need": ["guess"], "text": "The evidence so far suggests one thing. {guess}. We will see."},
+      {"need": ["s_ready"], "text": "And {first} is ready. Ready for {s_ready|low}. Ready for all of it."},
+      {"need": ["s_wish"], "text": "Our wish for the baby is simple. {s_wish}. With parents like these, it is already coming true."}
+    ]
+  },
+  "eighteenth-birthday-magazine": {
+    "labels": {
+      "name": "The new grown up",
+      "age": "The big number",
+      "from": "Who has watched them grow?",
+      "likely": "Most likely to...",
+      "dream": "Their big dream, the one they say out loud",
+      "talent": "A secret talent the world should know about",
+      "words": "Three words that are so them",
+      "moment": "The childhood moment the family still tells",
+      "message": "What do you want them to know as they step into adulthood? (This becomes your letter)",
+      "s_advice": "Your best piece of grown up advice",
+      "s_proud": "The moment you were proudest of them",
+      "s_promise": "A promise to them"
+    },
+    "weaveTitle": "{first} at eighteen",
+    "weave": [
+      {"need": ["moment"], "text": "Before the keys and the passport and the plans, there was a small person who did things like this. {moment}. The family has never let it go. The family never will."},
+      {"need": ["talent"], "text": "Now look. {first} is grown, and still in possession of a rare gift: {talent|low}. Some skills improve with age."},
+      {"need": ["s_proud"], "text": "But ask {from} about the proudest moment and the joking stops. {s_proud}. That is the person {first} has become."},
+      {"need": ["dream"], "text": "And the dream? {dream}. Go and get it."},
+      {"need": ["s_advice"], "text": "One last piece of advice, folded small and slipped in here: {s_advice|low}."}
+    ]
+  },
+  "thank-you-magazine": {
+    "labels": {
+      "name": "The person you want to thank",
+      "role": "Who are they to you?",
+      "from": "Who is saying thank you?",
+      "always": "They always...",
+      "power": "Their quiet superpower",
+      "year": "The year they made a difference",
+      "words": "Three words that are so them",
+      "moment": "The moment you will never forget",
+      "message": "What did they do that you will never forget? (This becomes your letter)",
+      "s_did": "Something they did that they probably do not even remember",
+      "s_changed": "How did they change things for you?",
+      "s_promise": "A promise to them"
+    },
+    "weaveTitle": "Thank you, {first}",
+    "weaveKicker": "A thank you feature",
+    "weave": [
+      {"need": ["role"], "text": "To most people, {first} is {role|low}. To {from}, {first} is the reason the hardest time became bearable."},
+      {"need": ["always"], "text": "They always {always|low}. Small things, done every day, add up to something enormous."},
+      {"need": ["s_did"], "text": "{first} probably does not even remember this. {s_did}. {from} will never forget it."},
+      {"need": ["moment"], "text": "And there was one moment above all. {moment}."},
+      {"need": ["s_changed"], "text": "What changed? {s_changed}. That is the thing about kindness. It travels much further than you think."}
+    ]
+  },
+  "new-job-magazine": {
+    "labels": {
+      "name": "The new starter",
+      "job": "The shiny new job title",
+      "from": "Who is cheering them on?",
+      "year": "The year it happened",
+      "weapon": "Their secret weapon at work",
+      "coffee": "What fuels them, honestly?",
+      "words": "Three words that are so them",
+      "moment": "The moment you knew they would make it",
+      "message": "What do you want them to know on day one? (This becomes your letter)",
+      "s_proud": "Their work you are proudest of",
+      "s_next": "Your prediction for where they end up",
+      "s_promise": "A promise to them"
+    },
+    "weaveTitle": "Introducing {first}, {job}",
+    "weaveKicker": "The career feature",
+    "weave": [
+      {"need": ["moment"], "text": "{from} knew it long before the offer came through. {moment}. Some people are simply built for the big job."},
+      {"need": ["s_proud"], "text": "Ask about the proudest piece of work and there is no hesitation. {s_proud}."},
+      {"need": ["weapon"], "text": "Colleagues, take note. {first}'s secret weapon is {weapon|low}. Resistance is useless."},
+      {"need": ["coffee"], "text": "All of it powered by {coffee|low}. A small price for greatness."},
+      {"need": ["s_next"], "text": "And the prediction for where this ends? {s_next}. We will hold you to it."}
+    ]
+  },
+  "girlfriend-magazine": {
+    "labels": {
+      "name": "Her name, or what you call her when nobody is listening",
+      "years": "How long has she been yours?",
+      "from": "And this is from...?",
+      "date": "Your first date, including the wobbly bits",
+      "cute": "The little habit of hers you could watch all day",
+      "song": "The song that will always be her",
+      "words": "Three words that are so her",
+      "moment": "The moment you knew she was the one",
+      "message": "What do you wish you told her more often? (This becomes your letter)",
+      "s_first": "What did you notice about her first?",
+      "s_fav": "When is she at her very best?",
+      "s_secret": "Something only you know about her",
+      "s_promise": "A promise to her"
+    },
+    "weaveTitle": "All about {first}",
+    "weave": [
+      {"need": ["s_first"], "text": "{from} noticed it straight away. {s_first}. That was the beginning of the end of being sensible."},
+      {"need": ["date"], "text": "The first date was {date|low}. Not exactly smooth. Absolutely perfect."},
+      {"need": ["cute"], "text": "Now the little things are the big things. {cute}. {from} could watch it forever."},
+      {"need": ["moment"], "text": "And then there was the moment. {moment}. After that, there was no one else."},
+      {"need": ["s_fav"], "text": "She is at her very best like this: {s_fav|low}. If you have seen it, you will understand everything."},
+      {"need": ["s_secret"], "text": "One more thing, just between us. {s_secret}. It only makes her more wonderful."}
+    ]
+  },
+  "husband-magazine": {
+    "labels": {
+      "name": "Your husband's name, or the one you use",
+      "years": "How many years married?",
+      "from": "From his wife, with love",
+      "date": "Where did you first meet?",
+      "cute": "The little habit of his you would miss the most",
+      "song": "The song you danced to as newlyweds",
+      "words": "Three words that are so him",
+      "moment": "Why would you marry him all over again?",
+      "message": "What does he not hear enough from you? (This becomes your letter)",
+      "s_first": "What did you notice about him first?",
+      "s_fav": "Your favourite ordinary moment together",
+      "s_secret": "Something about him only you know",
+      "s_promise": "A promise to him"
+    },
+    "weaveTitle": "Still him, always",
+    "weave": [
+      {"need": ["date"], "text": "They met at {date|low}. {from} would like it on record that it was love at first sight, on at least one side."},
+      {"need": ["s_first"], "text": "What came first? {s_first}. A small thing. It told her everything."},
+      {"need": ["years"], "text": "{years} years married now, and the love has become something quieter and stronger, the kind you lean on without thinking."},
+      {"need": ["cute"], "text": "Ask {from} what would be missed most and the answer is nothing grand. {cute}. That is what a marriage is made of."},
+      {"need": ["s_fav"], "text": "The favourite moment of any week? {s_fav}. Nothing happens. Everything is right."},
+      {"need": ["s_secret"], "text": "And a secret, shared with love. {s_secret}. He would never tell you that himself."}
+    ]
+  },
+  "wife-magazine": {
+    "labels": {
+      "name": "Your wife's name, or what you call her",
+      "years": "How many years married?",
+      "from": "From her husband, with love",
+      "date": "Where did you first meet?",
+      "cute": "The little habit of hers you would miss the most",
+      "song": "The song you still slow dance to",
+      "words": "Three words that are so her",
+      "moment": "Why would you marry her all over again?",
+      "message": "What does she not hear enough from you? (This becomes your letter)",
+      "s_first": "What did you notice about her first?",
+      "s_fav": "Your favourite ordinary moment together",
+      "s_secret": "Something about her only you know",
+      "s_promise": "A promise to her"
+    },
+    "weaveTitle": "The woman behind everything",
+    "weave": [
+      {"need": ["date"], "text": "They met {date|low}. {from} still calls it the luckiest wait in history."},
+      {"need": ["s_first"], "text": "The first thing {from} noticed? {s_first}. The noticing has never stopped."},
+      {"need": ["years"], "text": "{years} years married, and she is still full of surprises. Not with grand gestures, but with the steady, brilliant way she holds everything together."},
+      {"need": ["cute"], "text": "The thing {from} would miss most is small and perfectly her. {cute}."},
+      {"need": ["s_fav"], "text": "The best part of any week is this: {s_fav|low}. Life does not get better than that."},
+      {"need": ["s_secret"], "text": "And one more thing nobody else knows. {s_secret}. She is softer than she lets on."}
+    ]
+  },
+  "will-you-marry-me-magazine": {
+    "labels": {
+      "name": "The one you are asking",
+      "years": "How long have you been together?",
+      "from": "Who is asking? (That is you)",
+      "date": "Your first date, every detail you remember",
+      "cute": "Their sweetest little habit",
+      "song": "The song you will ask them to dance to",
+      "words": "Three words for what they are to you",
+      "moment": "The moment you knew you wanted forever",
+      "message": "Everything you want to say before you ask (This becomes your letter)",
+      "s_first": "What did you notice about them first?",
+      "s_fav": "A moment you felt completely at home with them",
+      "s_secret": "Picture your life together in ten years",
+      "s_promise": "A promise for your marriage"
+    },
+    "weaveTitle": "A question for {first}",
+    "weaveKicker": "A love story, so far",
+    "weave": [
+      {"need": ["s_first"], "text": "It started with one small thing. {s_first}. {from} did not know it then, but that was the first page of the best story."},
+      {"need": ["date"], "text": "The first date: {date|low}. Neither of them wanted it to end. In a way, it never did."},
+      {"need": ["moment"], "text": "Then came the moment that changed everything. {moment}. That was when {from} knew. Forever, or nothing."},
+      {"need": ["s_fav"], "text": "Home is not a place. It is this: {s_fav|low}."},
+      {"need": ["s_secret"], "text": "Close your eyes and look ten years ahead. {s_secret}. It sounds like a dream. It is really a plan."},
+      {"alt": "And so, after all of this, there is only one thing left to ask. Turn the page slowly.", "text": "And so, after all of this, there is only one thing left to ask. Turn the page slowly."}
+    ]
+  },
+  "bridesmaid-proposal-magazine": {
+    "labels": {
+      "name": "Your future bridesmaid",
+      "years": "How many years of friendship?",
+      "from": "From the bride to be",
+      "met": "How did you two meet?",
+      "trouble": "At the wedding, she is most likely to...",
+      "song": "Your dance floor anthem",
+      "words": "Three words that are so her",
+      "moment": "Why can you not get married without her?",
+      "message": "What do you want her to know before you ask? (This becomes your letter)",
+      "s_first": "The moment you became proper friends",
+      "s_fav": "Your best story together",
+      "s_secret": "What will you need her for on the day?",
+      "s_promise": "A promise to her"
+    },
+    "weaveTitle": "{first}, will you stand beside me?",
+    "weaveKicker": "A very important question",
+    "weave": [
+      {"need": ["met"], "text": "It started small. {met}. {years} years later, {from} cannot imagine a single big moment without her."},
+      {"need": ["s_first"], "text": "The day they became proper friends, {from} remembers exactly. {s_first}."},
+      {"need": ["s_fav"], "text": "There are stories, obviously. The best one? {s_fav}. Nobody else would believe it. They were both there."},
+      {"need": ["trouble"], "text": "At the wedding, she is most likely to {trouble|low}. {from} is counting on it."},
+      {"need": ["s_secret"], "text": "On the day itself, there is a job only she can do. {s_secret}."},
+      {"need": ["moment"], "text": "Because the truth is simple. {moment}."}
+    ]
+  },
+  "first-christmas-together-magazine": {
+    "labels": {
+      "names": "The two of you",
+      "year": "This first Christmas",
+      "from": "Who is this from?",
+      "where": "Where did you spend it?",
+      "tradition": "The brand new tradition you started",
+      "jumper": "Who wore the silliest jumper?",
+      "words": "Three words for your first Christmas",
+      "moment": "The moment it felt like home",
+      "message": "What do you want to say this first Christmas? (This becomes your letter)",
+      "s_heard": "The first moment it felt like Christmas with them",
+      "s_knew": "The most thoughtful gift, given or received",
+      "s_guess": "Something you want to do next Christmas",
+      "s_promise": "A Christmas wish for the two of you"
+    },
+    "weaveTitle": "Our very first Christmas",
+    "weaveKicker": "The Christmas special",
+    "weave": [
+      {"need": ["s_heard"], "text": "It began to feel like Christmas the moment this happened. {s_heard}. Something about it just felt like the start of something."},
+      {"need": ["where"], "text": "They spent it at {where|low}. It did not need to be anywhere grand. It only needed to be together."},
+      {"need": ["tradition"], "text": "A brand new tradition was born: {tradition|low}. In fifty years, someone will ask how it started. This is how."},
+      {"need": ["s_knew"], "text": "The gift that meant the most was {s_knew|low}. It is never about the price."},
+      {"need": ["moment"], "text": "And the moment it felt like home? {moment}."},
+      {"need": ["s_guess"], "text": "Next year's plan is already made. {s_guess}."}
+    ]
+  },
+  "first-anniversary-magazine": {
+    "labels": {
+      "names": "Mr and Mrs, or whichever you are",
+      "year": "The year you married",
+      "from": "Who is this from?",
+      "where": "The best day of your first year",
+      "nerves": "The silliest argument of the year",
+      "next": "The most important thing you learned in year one",
+      "words": "Year one in three words",
+      "moment": "The moment being married suddenly felt real",
+      "message": "What do you want to say after one year married? (This becomes your letter)",
+      "s_heard": "Your favourite memory from the wedding day",
+      "s_knew": "Your first married home, described honestly",
+      "s_guess": "Something you want to do in year two",
+      "s_promise": "A wish for your marriage"
+    },
+    "weaveTitle": "Year one",
+    "weaveKicker": "The first anniversary",
+    "weave": [
+      {"need": ["s_heard"], "text": "A year ago they said yes in front of everyone they love. The memory that still glows? {s_heard}."},
+      {"need": ["moment"], "text": "It took a while to feel real. Then, suddenly, it did. {moment}."},
+      {"need": ["s_knew"], "text": "Their first married home was {s_knew|low}. Exactly as it should be."},
+      {"need": ["where"], "text": "The best day of the year? {where}. Ask either of them and they will smile before they answer."},
+      {"need": ["nerves"], "text": "There have been disagreements, of course. The silliest was about {nerves|low}. It remains unresolved."},
+      {"need": ["next"], "text": "And the most important lesson of year one: {next|low}. Wise words. Hard won."}
+    ]
+  }
+}

@@ -323,5 +323,45 @@
         "Next year, and every year after."
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "s_heard"
+      ],
+      "text": "It began to feel like Christmas the moment this happened. {s_heard}. Something about it just felt like the start of something."
+    },
+    {
+      "need": [
+        "where"
+      ],
+      "text": "They spent it at {where|low}. It did not need to be anywhere grand. It only needed to be together."
+    },
+    {
+      "need": [
+        "tradition"
+      ],
+      "text": "A brand new tradition was born: {tradition|low}. In fifty years, someone will ask how it started. This is how."
+    },
+    {
+      "need": [
+        "s_knew"
+      ],
+      "text": "The gift that meant the most was {s_knew|low}. It is never about the price."
+    },
+    {
+      "need": [
+        "moment"
+      ],
+      "text": "And the moment it felt like home? {moment}."
+    },
+    {
+      "need": [
+        "s_guess"
+      ],
+      "text": "Next year's plan is already made. {s_guess}."
+    }
+  ],
+  "weaveTitle": "Our very first Christmas",
+  "weaveKicker": "The Christmas special"
 }

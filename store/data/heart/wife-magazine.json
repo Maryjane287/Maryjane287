@@ -3,7 +3,7 @@
   "fields": [
     {
       "id": "s_first",
-      "label": "The first thing you noticed about her",
+      "label": "What did you notice about her first?",
       "example": "She was laughing so hard she had to sit down",
       "max": 70,
       "chapter": "The first time I saw you"
@@ -325,5 +325,44 @@
         "{words}"
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "date"
+      ],
+      "text": "They met {date|low}. {from} still calls it the luckiest wait in history."
+    },
+    {
+      "need": [
+        "s_first"
+      ],
+      "text": "The first thing {from} noticed? {s_first}. The noticing has never stopped."
+    },
+    {
+      "need": [
+        "years"
+      ],
+      "text": "{years} years married, and she is still full of surprises. Not with grand gestures, but with the steady, brilliant way she holds everything together."
+    },
+    {
+      "need": [
+        "cute"
+      ],
+      "text": "The thing {from} would miss most is small and perfectly her. {cute}."
+    },
+    {
+      "need": [
+        "s_fav"
+      ],
+      "text": "The best part of any week is this: {s_fav|low}. Life does not get better than that."
+    },
+    {
+      "need": [
+        "s_secret"
+      ],
+      "text": "And one more thing nobody else knows. {s_secret}. She is softer than she lets on."
+    }
+  ],
+  "weaveTitle": "The woman behind everything"
 }
