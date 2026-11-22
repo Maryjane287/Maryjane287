@@ -3,51 +3,58 @@
   "fields": [
     {
       "id": "s_met",
-      "chapter": "Where it all began",
-      "label": "How you met, or your very first memory of them",
+      "chapter": "The opening scene",
+      "label": "The opening scene: the very first time you remember them",
       "example": "Sharing the last umbrella at a bus stop in the pouring rain",
       "max": 80
     },
     {
       "id": "s_kind",
-      "chapter": "The day they had my back",
-      "label": "Something they did for you that you have never forgotten",
+      "chapter": "The night they had my back",
+      "label": "The time they had your back, and you never forgot it",
       "example": "Drove two hours at midnight when my car broke down, with snacks",
       "max": 90
     },
     {
       "id": "s_laugh",
-      "chapter": "Guaranteed to make us laugh",
-      "label": "The thing that makes you both laugh, every single time",
+      "chapter": "The inside joke",
+      "label": "The inside joke. A few words that still set you both off, years later",
       "example": "That holiday photo. You know the one.",
       "max": 80
     },
     {
       "id": "s_best",
-      "chapter": "Best day together",
-      "label": "Your favourite day together, ever",
+      "chapter": "Rewind to this day",
+      "label": "If you could rewind to one ordinary day with them, which day would it be?",
       "example": "Pancakes at midnight after the surprise party",
       "max": 70
     },
     {
+      "id": "s_look",
+      "chapter": "The signature look",
+      "label": "Describe their signature look, the way a stylist would",
+      "example": "Gold hoops, an oversized blazer, trainers, and always five minutes late",
+      "max": 80
+    },
+    {
       "id": "s_promise",
-      "label": "Something you promise them this year",
+      "label": "Your promise for their new year: something you will actually do",
       "example": "To plan the next adventure, and actually book it",
       "max": 70
     }
   ],
   "labels": {
     "age": "This year's big number",
-    "talent": "A secret talent",
-    "obsession": "Currently obsessed with",
+    "talent": "Quiet superpower",
+    "obsession": "Right now, obsessed with",
     "words": "In three words"
   },
   "story": {
-    "legend": "A few more things about them",
-    "hint": "Only if you have a minute. These are the answers that make people cry happy tears. Skip any and we fill that page with a lovely one we have written.",
+    "legend": "The interview: a few more things only you know",
+    "hint": "Answer like you are talking to our reporter over coffee. Skip any you like, and we write that page for you.",
     "kicker": "The story so far",
     "title": "The Making of a Legend",
-    "hand": "And this is only the trailer. The best scenes are still to come, {who}."
+    "hand": "Happy birthday, {who}. The best chapters are still being written."
   },
   "picks": {
     "legend": "Ten things you love about them",
@@ -336,5 +343,58 @@
         "Not on their birthday. Not this year."
       ]
     ]
-  }
+  },
+  "weaveKicker": "The cover story",
+  "weaveTitle": "Everybody needs a {first}",
+  "weave": [
+    {
+      "need": [
+        "words"
+      ],
+      "text": "Some people walk into a room and the whole place gets a little warmer. {first} is one of those people. Ask anyone and the same words come back, almost word for word: {words|low}. Nobody had to agree on that. It is just true."
+    },
+    {
+      "need": [
+        "s_met"
+      ],
+      "text": "{from} still remembers the very first scene. {s_met}. It did not feel like the start of anything at the time. It was, though. It was the start of everything.",
+      "alt": "{from} cannot quite remember a time before {first}. That is how it is with the people who matter most. They arrive quietly, and then life simply does not make sense without them."
+    },
+    {
+      "need": [
+        "talent"
+      ],
+      "text": "There is a quiet magic to the way {first} moves through the world. Take this, for example. {talent}. Most of us would never notice. {from} always does."
+    },
+    {
+      "need": [
+        "obsession"
+      ],
+      "text": "And right now? {obsession}. Do not interrupt. You have been warned."
+    },
+    {
+      "need": [
+        "s_kind"
+      ],
+      "text": "Ask {from} about the time {first} came through for them and the answer comes straight away. {s_kind}. Some kindness you never pay back. You just carry it with you."
+    },
+    {
+      "need": [
+        "s_laugh"
+      ],
+      "text": "Mention {s_laugh|low} anywhere near them and you will lose them both for a good five minutes. Some jokes never get old."
+    },
+    {
+      "need": [
+        "s_look"
+      ],
+      "text": "You would know {first} anywhere. {s_look}. It is not really a look. It is a whole feeling."
+    },
+    {
+      "need": [
+        "s_best"
+      ],
+      "text": "If {from} could rewind to one ordinary day, it would be this one. {s_best}. Nothing big happened. That was the beauty of it."
+    }
+  ]
 }

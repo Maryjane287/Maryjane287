@@ -311,50 +311,50 @@
     "fields": [
       {
         "id": "name",
-        "label": "Their first name or nickname",
+        "label": "Who is the cover star? Their first name, or the nickname only you get to use",
         "example": "Mia",
         "max": 14
       },
       {
         "id": "age",
-        "label": "The age they are turning",
+        "label": "The big number they are turning",
         "example": "30",
         "max": 3
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "And who is the editor? That is you: your name, or all your names",
         "example": "Chris",
         "max": 30
       },
       {
         "id": "talent",
-        "label": "Something they are secretly brilliant at",
+        "label": "Their quiet superpower. What can they do that still amazes you?",
         "example": "Finds anything you have lost in under a minute",
         "max": 70
       },
       {
         "id": "obsession",
-        "label": "What they cannot stop talking about lately",
+        "label": "Our reporter catches them on a lazy Saturday. What are they completely into right now?",
         "example": "Iced coffee and true crime podcasts",
         "max": 60
       },
       {
         "id": "words",
-        "label": "Three words that are so them",
+        "label": "The three words everyone uses about them the minute they leave the room",
         "example": "Kind, chaotic, magnificent",
         "max": 40
       },
       {
         "id": "moment",
-        "label": "A moment with them you would happily live again tomorrow",
+        "label": "Play us one scene from the film of their life: the moment you would live again tomorrow, exactly as it was",
         "example": "Singing the wrong words to a song at a wedding, very loudly, and getting a standing ovation",
         "type": "textarea",
         "max": 220
       },
       {
         "id": "message",
-        "label": "What do you wish you told them more often? (This becomes your letter on page 3)",
+        "label": "The thing you feel every time you see them but never quite say. Say it here. (This becomes your letter on page 3)",
         "example": "I do not say it enough, but you are the first person I call with good news and bad. Thank you for being exactly you. Happy birthday.",
         "type": "textarea",
         "max": 400
@@ -483,11 +483,11 @@
           "{name} on turning {age}"
         ],
         [
-          "Secret talent",
+          "Superpower",
           "{talent}"
         ],
         [
-          "Obsessed",
+          "Right now",
           "{obsession}"
         ]
       ],

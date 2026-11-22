@@ -1095,3 +1095,12 @@
 .fm-strip::before { left: 1.8cqw; } .fm-strip::after { right: 1.8cqw; }
 .fm-fr { overflow: hidden; background: #333; min-height: 0; }
 .fm-fr img { filter: grayscale(1) contrast(1.08); }
+
+/* The woven cover story: answers told as a feature, no labels */
+.ed-woven .ed-cols { font-size: 2.62cqw; line-height: 1.48; column-gap: 4.4cqw; }
+.ed-woven .ed-drop::first-letter { font-size: 9.4cqw; }
+.ed-woven .ed-cols p { margin: 0 0 1.6cqw; }
+.ed-w-title { font-size: 7cqw; margin: 0 0 3cqw; }
+.ed-pull-soft { margin: 2.6cqw 0 0; border-bottom: 0; padding: 2.4cqw 0 0; font-size: 3.8cqw; text-align: center; }
+.ed-woven .ed-hand { padding-top: 1.6cqw; font-size: 4.6cqw; }
+.ed-woven .ed-hand { display: none; }
