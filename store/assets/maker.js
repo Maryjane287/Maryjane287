@@ -24,7 +24,7 @@ const store = {
 const state = {
   slug: params.get('m') || store.get('maker:slug') || mags[0].slug,
   palette: null,
-  design: DESIGNS[params.get('d')] ? params.get('d') : (DESIGNS[store.get('maker:design')] ? store.get('maker:design') : 'signature'),
+  design: DESIGNS[params.get('d')] ? params.get('d') : (DESIGNS[store.get('maker:design')] ? store.get('maker:design') : ''),
   values: {},
   photos: {},
   tab: 0,
@@ -53,7 +53,7 @@ function choose(slug) {
   const on = document.querySelector('.pick-btn[aria-checked="true"]');
   if (on) on.parentElement.scrollLeft = on.offsetLeft - on.parentElement.offsetLeft - (on.parentElement.clientWidth - on.offsetWidth) / 2;
   if (!designsFor(m).includes(state.design)) state.design = baseDesign(m);
-  if (state.design !== 'signature' && state.palette === 'paper') state.palette = DESIGNS[state.design].palettes[0];
+  if (state.design !== 'signature' && state.palette === 'paper') state.palette = (DESIGNS[state.design].palettes || ['midnight'])[0];
   renderPalette();
   renderDesigns();
   renderFields();
@@ -119,6 +119,9 @@ function funPages(m) {
   return `<fieldset class="fun-pages wide"><legend>Make the fun pages about them too <small>(optional)</small></legend><p class="small">These fill ${[m.heart ? '' : 'the list of reasons we love them', 'the awards night', gentle ? '' : 'the vouchers', m.heart ? '' : 'the recipe'].filter(Boolean).join(', ')} and the passport. Leave any blank and we will write something warm for that page.</p><div class="fun-grid">${rows}</div></fieldset>`;
 }
 
+// Gentle examples for the album captions, so nobody stares at an empty box.
+const ALBUM_TIPS = ['Paris, 2019. We got lost and found the best pizza of our lives', 'The face they make when the music comes on', 'First day at the new flat, sitting on boxes', 'Laughing so hard nobody could take a straight photo', 'The Sunday walk that turned into a whole day', 'Pretending to be calm before the big day', 'Our usual table', 'Caught mid dance, as always', 'The last photo of the night, everyone sleepy'];
+
 function renderFields() {
   const m = mag();
   const text = m.fields.filter(f => f.type !== 'photo');
@@ -133,7 +136,7 @@ function renderFields() {
   // Optional questions sit in their own box: skip any, and that page swaps to one we write.
   const story = extra.length ? `<fieldset class="fun-pages wide"><legend>${esc(m.heart?.story?.legend || 'Your love story')} <small>(optional)</small></legend><p class="small">${esc(m.heart?.story?.hint || 'Only if you have a minute. Skip any of these and we fill those pages with beautiful ones we have written for her.')}</p><div class="fun-grid">${extra.map(f => f.chapter ? `<div class="story-q wide">${field(f)}<label class="photo-drop photo-mini"><span><b>+</b>Add a photo of this</span><input type="file" name="p_${f.id}" data-photo="p_${f.id}" accept="image/*"></label></div>` : field(f)).join('')}</div><p class="small story-tip">Add a photo to any memory and it sits right beside the story in the magazine, like a little album.</p></fieldset>` : '';
   $('#fields').innerHTML = text.filter(f => !f.optional).map(field).join('') + conceptPick(m) + (m.love || m.heart?.picks ? lovePicks(m) : '') + story + (m.heart ? '' : funPages(m)) + talkExtras(m) + `<fieldset class="friend-notes wide"><legend>Little notes from family and friends <small>(optional)</small></legend><p class="small">Ask a few people who love them for one sweet line each. They all appear together on a special page in the magazine, each one signed with their name.</p>${familyInvite()}${[1, 2, 3, 4].map(i => `<div class="friend-note"><input type="text" data-f="note${i}_from" maxlength="30" placeholder="${['Grandma', 'Uncle Sam', 'Emma', 'Leo'][i - 1]}" aria-label="Note ${i}: who it is from" value="${esc(state.values[`note${i}_from`] || '')}"><input type="text" data-f="note${i}_msg" maxlength="110" placeholder="${['You make every room brighter.', 'Still the best dancer I know!', 'Here is to many more adventures together.', 'Love you to the moon and back.'][i - 1]}" aria-label="Note ${i}: their message" value="${esc(state.values[`note${i}_msg`] || '')}"></div>`).join('')}</fieldset><div class="photos">${photos.map(f => `
-    <label class="photo-drop"><span><b>+</b>${esc(f.label)}</span><input type="file" name="${f.id}" data-photo="${f.id}" accept="image/*"></label>`).join('')}</div>${m.heart ? `<fieldset class="more-photos wide"><legend>More photos <small>(optional, up to 9)</small></legend><p class="small">The more photos you add, the more pages become full page photos, with no picture used twice. Old ones, silly ones, any you love.</p><div class="photos photos-more">${[1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => `<label class="photo-drop photo-mini"><span><b>+</b>Photo ${i + 3}</span><input type="file" name="p_more${i}" data-photo="p_more${i}" accept="image/*"></label>`).join('')}</div></fieldset>` : ''}`;
+    <label class="photo-drop"><span><b>+</b>${esc(f.label)}</span><input type="file" name="${f.id}" data-photo="${f.id}" accept="image/*"></label>`).join('')}</div>${m.heart ? `<fieldset class="more-photos wide"><legend>Your photo album <small>(optional, up to 9 photos)</small></legend><p class="small">These fill two album pages: the first five make a photo spread, the rest sit on a black and white film strip. Under each photo, write a line or two about it, like you would on the back of a print. Where it was, what was funny, why you love it.</p><div class="album-slots">${[1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => `<div class="album-slot"><label class="photo-drop photo-mini"><span><b>+</b>Photo ${i}</span><input type="file" name="p_more${i}" data-photo="p_more${i}" accept="image/*"></label><textarea class="album-cap" rows="4" data-f="cap_more${i}" maxlength="140" placeholder="${esc(ALBUM_TIPS[i - 1])}" aria-label="What is happening in photo ${i}?">${esc(state.values[`cap_more${i}`] || '')}</textarea></div>`).join('')}</div></fieldset>` : ''}`;
   updateCounts();
   wireTalk();
 }
@@ -300,7 +303,7 @@ $('.designs').addEventListener('click', e => {
   if (!b || b.dataset.d === state.design) return;
   state.design = b.dataset.d;
   store.set('maker:design', state.design);
-  if (state.design !== 'signature' && state.palette === 'paper') state.palette = DESIGNS[state.design].palettes[0];
+  if (state.design !== 'signature' && state.palette === 'paper') state.palette = (DESIGNS[state.design].palettes || ['midnight'])[0];
   document.querySelectorAll('.design-btn').forEach(x => x.setAttribute('aria-checked', String(x === b)));
   renderPalette();
   state.tab = 0; renderTabs();

@@ -1029,3 +1029,69 @@
 .pg.lv-tight h3 { margin-bottom: 2cqw; }
 .ed-fl-s { top: 76cqw; gap: 2.4cqw 4.4cqw; }
 .ed-fl-s dd { font-size: 3.3cqw; line-height: 1.12; }
+
+/* Editorial: the newsstand look. Full bleed photo, their name as a huge fashion
+   serif masthead, white type with one champagne accent, three cover lines. */
+.cv-editorial { background: #17131a; color: #fff; --gold: #ecd3ad; }
+.cv-editorial .dz-photo { inset: 0; z-index: 0; }
+.cv-editorial .dz-photo img { object-position: 50% 22%; }
+.eo-shade { position: absolute; inset: 0; z-index: 1; pointer-events: none; background:
+  linear-gradient(180deg, rgba(10, 8, 12, .62) 0%, rgba(10, 8, 12, .18) 30%, transparent 44%, transparent 58%, rgba(10, 8, 12, .3) 72%, rgba(10, 8, 12, .86) 100%),
+  linear-gradient(90deg, rgba(10, 8, 12, .38) 0%, transparent 46%); }
+.eo-top { position: absolute; z-index: 3; top: 3.2cqw; left: 5cqw; right: 5cqw; display: flex; justify-content: space-between; gap: 3cqw; white-space: nowrap; overflow: hidden; font-size: 1.9cqw; font-weight: 600; letter-spacing: .34em; text-transform: uppercase; color: #fff; }
+.eo-top span:last-child { color: var(--gold); }
+.eo-mast { position: absolute; z-index: 2; top: 5.6cqw; left: 3cqw; right: 3cqw; margin: 0; text-align: center; white-space: nowrap; font-family: 'Playfair Display', 'Didot', Georgia, serif; font-weight: 700; line-height: .84; letter-spacing: -.035em; color: #fff; text-shadow: 0 .4cqw 3cqw rgba(0, 0, 0, .25); }
+.eo-lines { position: absolute; z-index: 3; left: 5cqw; top: 44%; width: 34cqw; display: grid; gap: 3.4cqw; }
+.eo-lines p { margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 3.3cqw; line-height: 1.08; color: #fff; text-shadow: 0 .3cqw 1.6cqw rgba(0, 0, 0, .5); }
+.eo-lines b { display: block; font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 1.85cqw; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); margin-bottom: .9cqw; }
+.eo-lines .eo-lead { font-style: italic; font-size: 4.4cqw; }
+.eo-lines .eo-lead::after { content: ''; display: block; width: 9cqw; height: .25cqw; background: var(--gold); margin-top: 2.6cqw; }
+.eo-num { position: absolute; z-index: 3; right: 5cqw; bottom: 17cqw; text-align: right; color: #fff; }
+.eo-num b { display: block; font-family: 'Playfair Display', serif; font-weight: 400; font-style: italic; font-size: 15cqw; line-height: .8; letter-spacing: -.04em; text-shadow: 0 .4cqw 2.6cqw rgba(0, 0, 0, .35); }
+.eo-num span { display: block; margin-top: 1.4cqw; font-size: 1.85cqw; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); }
+.eo-foot { position: absolute; z-index: 3; left: 5cqw; right: 5cqw; bottom: 4.2cqw; display: flex; align-items: flex-end; justify-content: space-between; gap: 4cqw; }
+.eo-quote { margin: 0; font-family: 'Playfair Display', serif; color: #fff; line-height: 1; }
+.eo-quote em { display: block; font-weight: 400; font-style: italic; letter-spacing: -.01em; }
+.eo-quote span { display: block; margin-top: 1.8cqw; font-family: 'Outfit', sans-serif; font-size: 1.85cqw; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); }
+.eo-code { flex: none; display: grid; justify-items: center; gap: .7cqw; background: #fff; padding: 1.2cqw 1.3cqw 1cqw; }
+.eo-code i { display: block; width: 12cqw; height: 5cqw; background: repeating-linear-gradient(90deg, #111 0 .45cqw, transparent .45cqw .75cqw, #111 .75cqw 1.4cqw, transparent 1.4cqw 1.8cqw, #111 1.8cqw 2cqw, transparent 2cqw 2.5cqw); }
+.eo-code span { max-width: 13cqw; font-size: 1.3cqw; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #111; text-align: center; line-height: 1.15; }
+.eo-quote { max-width: 64cqw; }
+
+/* Album pages: "The camera roll" grid and the "Frame by frame" film strip.
+   Every photo carries the buyer's own short write up. */
+.ed-roll h3 { font-size: 8.4cqw; margin-bottom: 3.4cqw; }
+.al-grid { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1.2fr 1fr; gap: 3.4cqw; }
+.al-n1 .al-grid { grid-template-rows: 1fr; }
+.al-f { margin: 0; min-height: 0; display: flex; flex-direction: column; gap: 1.4cqw; }
+.al-ph { flex: 1; min-height: 0; overflow: hidden; background: #eee5da; }
+.al-f1 { grid-column: 1 / -1; display: grid; grid-template-columns: 60% 1fr; align-items: end; gap: 3.4cqw; }
+.al-f1 .al-ph { height: 100%; }
+.al-n1 .al-f1 { grid-template-columns: 1fr; grid-template-rows: 1fr auto; }
+.al-n2 .al-f2, .al-n4 .al-f4 { grid-column: 1 / -1; }
+.al-n5 .al-grid { grid-template-columns: repeat(4, 1fr); }
+.al-n5 .al-f1 { grid-column: 1 / -1; }
+.al-n5 .al-f2, .al-n5 .al-f3, .al-n5 .al-f4, .al-n5 .al-f5 { grid-column: span 1; }
+.al-n4 .al-grid { grid-template-columns: repeat(3, 1fr); }
+.al-n4 .al-f4 { grid-column: auto; }
+.al-f figcaption { flex: none; font-family: 'Playfair Display', serif; font-size: 2.4cqw; line-height: 1.25; color: #3a3340; }
+.al-f figcaption i { display: block; font-family: 'Outfit', sans-serif; font-style: normal; font-weight: 800; font-size: 1.8cqw; letter-spacing: .24em; color: var(--edk); margin-bottom: .6cqw; }
+.al-f figcaption b { display: block; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.75cqw; letter-spacing: .14em; text-transform: uppercase; color: #1d1a2f; margin-bottom: .5cqw; }
+.al-f figcaption span { font-style: italic; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; overflow: hidden; }
+.al-f1 figcaption { font-size: 3.1cqw; padding-bottom: 1cqw; }
+.al-f1 figcaption span { -webkit-line-clamp: 7; }
+.al-n5 .al-f:not(.al-f1) figcaption { font-size: 2cqw; }
+
+.ed-film { background: #f4eee6; }
+.fm-col { position: absolute; z-index: 2; left: 0; top: 0; bottom: 0; width: 55cqw; padding: 9cqw 3cqw 9cqw 7cqw; display: flex; flex-direction: column; }
+.ed-film h3 { font-size: 11cqw; line-height: .9; }
+.fm-intro { margin: 3cqw 0 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: 3cqw; line-height: 1.3; color: #3a3340; }
+.fm-caps { list-style: none; margin: auto 0 0; padding: 0; display: grid; gap: 3.2cqw; }
+.fm-caps li { font-family: 'Playfair Display', serif; font-size: 2.55cqw; line-height: 1.28; color: #2b2530; border-top: .2cqw solid color-mix(in srgb, var(--edk) 45%, transparent); padding-top: 1.6cqw; }
+.fm-caps i { font-family: 'Outfit', sans-serif; font-style: normal; font-weight: 800; font-size: 1.9cqw; letter-spacing: .24em; color: var(--edk); margin-right: 1.4cqw; }
+.fm-caps b { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.85cqw; letter-spacing: .14em; text-transform: uppercase; margin-right: 1cqw; }
+.fm-strip { position: absolute; z-index: 1; top: -4cqw; bottom: -4cqw; right: 5cqw; width: 37cqw; background: #111; padding: 6cqw 6cqw; display: grid; grid-template-rows: repeat(4, 1fr); gap: 3.4cqw; transform: rotate(2.2deg); box-shadow: -1cqw 0 4cqw rgba(0,0,0,.28); }
+.fm-strip::before, .fm-strip::after { content: ''; position: absolute; top: 0; bottom: 0; width: 2.4cqw; background: repeating-linear-gradient(180deg, transparent 0 1.4cqw, #f4eee6 1.4cqw 3.2cqw, transparent 3.2cqw 4.2cqw); }
+.fm-strip::before { left: 1.8cqw; } .fm-strip::after { right: 1.8cqw; }
+.fm-fr { overflow: hidden; background: #333; min-height: 0; }
+.fm-fr img { filter: grayscale(1) contrast(1.08); }

@@ -278,6 +278,7 @@ const LAYOUTS = {
 // the magazine's own layout above; the rest read the magazine's `cover` slots
 // (masthead, lines, badge, quote), so one design works for every category.
 export const DESIGNS = {
+  editorial: { label: 'Editorial', palettes: null },
   signature: { label: 'Signature', palettes: null },
   glossy: { label: 'Glossy celebrity', palettes: ['coral', 'midnight'] },
   fashion: { label: 'High fashion', palettes: ['midnight', 'rose'] },
@@ -292,6 +293,8 @@ export const DESIGNS = {
 // Magazines with their own layout offer it as "signature"; newer ones start
 // from the glossy design. The first design in the list is the main product.
 export const designsFor = mag => Object.keys(DESIGNS).filter(d => d !== (mag.layout ? 'glossy' : 'signature') && !(mag.skipDesigns || []).includes(d));
+// The month the magazine is made, printed on the cover like a real issue date.
+const issueDate = () => new Date().toLocaleString('en-GB', { month: 'long', year: 'numeric' }).toUpperCase();
 export const baseDesign = mag => designsFor(mag)[0];
 
 export function designExamples(mag, design = baseDesign(mag)) {
@@ -320,6 +323,20 @@ const FLAKE = '<svg viewBox="0 0 24 24"><path d="M12 2v20M3.3 7l17.4 10M3.3 17 2
 const SNOW = `<div class="cv-snow" aria-hidden="true">${Array.from({ length: 14 }, (_, i) => `<i style="left:${(i * 37) % 94}%;top:${(i * 53) % 90}%;width:calc(${2.4 + (i % 3) * 1.2} * var(--cq));opacity:${0.35 + (i % 3) * 0.15}">${FLAKE}</i>`).join('')}</div>`;
 
 const DESIGN_LAYOUTS = {
+  // The newsstand look from the best loved gift magazines: a full bleed photo,
+  // their name as a huge fashion serif masthead, two colours, three cover lines.
+  editorial(s, photo) {
+    const big = String(s.big || '').replace(/<[^>]+>/g, '');
+    const num = /^\s*\d{1,3}\s*$/.test(big);
+    return `
+      ${photo}
+      <div class="eo-shade" aria-hidden="true"></div>
+      <div class="eo-top"><span>${s.issue}</span><span>${issueDate()}</span></div>
+      <h2 class="eo-mast" style="font-size:calc(${fit(s.raw, 94, 0.66, 31)} * var(--cq))">${s.up}</h2>
+      <div class="eo-lines">${s.lines.map(([l, t], i) => `<p${i ? '' : ' class="eo-lead"'}><b>${l}</b>${t}</p>`).join('')}</div>
+      ${num ? `<div class="eo-num"><b>${s.badge[1]}</b><span>${s.badge[0]} ${s.badge[2]}</span></div>` : ''}
+      <div class="eo-foot"><p class="eo-quote" style="font-size:calc(${fit(String(s.quote).replace(/&[^;]+;/g, 'x'), 150, 0.46, 7.4)} * var(--cq))"><em>&ldquo;${s.quote}&rdquo;</em><span>${s.credit}</span></p><div class="eo-code"><i></i><span>${s.edition}</span></div></div>`;
+  },
   glossy(s, photo) {
     return `
       ${photo}
@@ -382,9 +399,10 @@ const DESIGN_LAYOUTS = {
   },
 };
 
-export function renderCover(mag, values = {}, { palette = 'coral', portraitOpts = {}, photos = {}, design = 'signature' } = {}) {
+export function renderCover(mag, values = {}, { palette = 'coral', portraitOpts = {}, photos = {}, design } = {}) {
   const p = PALETTES[palette] || PALETTES.coral;
   const v = fillValues(mag, values);
+  if (!design || !DESIGNS[design]) design = baseDesign(mag);
   if (design === 'signature' && !mag.layout) design = 'glossy';
   if (design !== 'signature' && DESIGN_LAYOUTS[design] && mag.cover) {
     // The glossy cover prints its headlines on the left, so a drawn family stands a little to the right.
@@ -717,7 +735,7 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
     const knew = gentle ? 'knew' : 'knows';
     const ch = [...chapters.filter(c => String(c[1] || '').length > 14 && !/^\d/.test(String(c[1]))), ...chapters.filter(c => c[1])].filter((c, i, a) => a.indexOf(c) === i);
     const pull = String(feature[1] || '');
-    const toc = [[3, mag.letterTitle || 'A letter for you'], [4, 'The cover story'], [8, H.picks?.title], [9, H.timeline?.title], [11, H.letters?.title], [12, H.sig?.title], ...(friendNotes.length ? [[15, 'Voices']] : []), [16, H.facts?.title], [17, H.world?.title], [20, H.promises?.title], [22, 'Now showing']].filter(([, x]) => x);
+    const toc = [[3, mag.letterTitle || 'A letter for you'], [4, 'The cover story'], [8, H.picks?.title], [9, H.timeline?.title], [11, H.letters?.title], [12, H.sig?.title], ...(friendNotes.length ? [[15, 'Voices']] : []), [16, H.facts?.title], [17, H.world?.title], [18, H.album?.title || (gentle ? `${first}, always` : `${first}, unfiltered`)], [20, H.promises?.title], [21, H.album?.filmTitle || 'Frame by frame'], [22, 'Now showing']].filter(([, x]) => x);
     const facts6 = own.filter(f => v[f.id]).slice(0, 6);
     const nums = own.filter(f => /^\s*\d[\d,.]*\s*$/.test(String(v[f.id] || ''))).slice(0, 2).map(f => [esc(v[f.id]), t(L[f.id] || f.label)]);
     const bigNums = [...nums, ['100%', gentle ? 'Loved, always' : 'Loved'], ['1', 'One of a kind']].slice(0, 4);
@@ -747,6 +765,19 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
       if (G.style === 'statement') return ed('ed-sig sg-state', `<div class="sg-in">${pic(slot(14, 1), 'sg-round')}${head}<ol class="sg-lines">${rows.map(([, b]) => `<li>${b}</li>`).join('')}</ol></div>`);
       return ed('ed-sig sg-time', `${pic(slot(14, 1), 'sg-band')}<div class="sg-in">${head}<ol class="sg-rows">${rows.map(([a, b, c]) => `<li><span>${a}</span><div><b>${b}</b><p>${c}</p></div></li>`).join('')}</ol></div>`);
     };
+    // The two album pages: the buyer's extra photos, each with its own little
+    // write up. "The camera roll" is a magazine photo grid, "Frame by frame" a
+    // black and white film strip with a caption beside every frame.
+    const albumAll = Array.from({ length: 10 }, (_, i) => [photos[`p_more${i + 1}`], String(values[`cap_more${i + 1}`] || '').trim()]).filter(([src]) => src);
+    const capFill = [...ch.map(c => [t(c[0]), esc(c[1])]), ...own.filter(f => v[f.id]).map(f => [t(L[f.id] || f.label), esc(v[f.id])])].filter(([, x], i, a) => String(x).length > 6 && a.findIndex(y => y[1] === x) === i);
+    const albumPics = albumAll.length ? albumAll : pool.map(src => [src, '']);
+    const A = H.album || {};
+    const capOf = (j, cap) => cap ? ['', esc(cap)] : capFill[j % Math.max(capFill.length, 1)] || ['', ''];
+    const roll = albumPics.slice(0, 5);
+    const film = (albumPics.length > 5 ? albumPics.slice(5, 9) : [...albumPics.slice(Math.min(roll.length, albumPics.length - 1)), ...albumPics]).slice(0, 4);
+    const fig = ([src, cap], j, cls) => { const [l, x] = capOf(j, cap); return `<figure class="${cls}"><div class="al-ph">${src ? `<img src="${esc(src)}" alt="">` : ''}</div><figcaption><i>${String(j + 1).padStart(2, '0')}</i>${l ? `<b>${l}</b>` : ''}<span>${x}</span></figcaption></figure>`; };
+    const rollPage = ed(`ed-roll al-n${roll.length}`, `<div class="ed-pad"><p class="ed-k">${t(A.kicker || 'The camera roll')}</p><h3>${t(A.title || (gentle ? `${first}, always` : `${first}, unfiltered`))}</h3><div class="al-grid">${roll.map((x, j) => fig(x, j, `al-f al-f${j + 1}`)).join('')}</div></div>`);
+    const filmPage = ed('ed-film', `<div class="fm-col"><p class="ed-k">${t(A.filmKicker || 'Frame by frame')}</p><h3>${t(A.filmTitle || 'Frame by frame')}</h3><p class="fm-intro">${t(A.filmIntro || `The little moments that make ${first} who they are, one frame at a time.`)}</p><ol class="fm-caps">${film.map((x, j) => { const [l, c] = capOf(j + roll.length, x[1]); return `<li><i>${String(j + roll.length + 1).padStart(2, '0')}</i>${l ? `<b>${l}</b>` : ''}<span>${c}</span></li>`; }).join('')}</ol></div><div class="fm-strip">${film.map(([src]) => `<div class="fm-fr">${src ? `<img src="${esc(src)}" alt="">` : ''}</div>`).join('')}</div>`);
     const editorial = [
       pages[0],
       ed('ed-contents', `${pic(slot(3, 1), 'ed-c-ph')}<div class="ed-c-col"><p class="ed-k">Inside this issue</p><h3>Inside</h3><ol class="ed-toc">${toc.map(([n, x]) => `<li><b>${n}</b><span>${t(x)}</span></li>`).join('')}</ol><p class="ed-c-note">Made for ${esc(who)}, with love.</p></div>`),
@@ -765,10 +796,10 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
       friendNotes.length ? ed('ed-voices', `<div class="ed-pad"><p class="ed-k">Voices</p><h3>${friendNotes.length ? `What everyone says about ${esc(first)}` : `Leave a little message for ${esc(first)}`}</h3><div class="ed-vs">${voices}</div></div>`) : ed('ed-full', `${pic(slot(15, 0), 'ed-full-ph')}${ch[3] ? `<p class="ed-cap"><b>${t(ch[3][0])}</b>${esc(ch[3][1])}</p>` : words ? `<p class="ed-cap"><b>In a word</b>${words}</p>` : ''}`),
       pages[11],
       pages[16],
-      ed('ed-trio', `${pic(slot(9, 0), 'ed-t ed-t1')}${pic(slot(10, 1), 'ed-t ed-t2')}${pic(slot(11, 2), 'ed-t ed-t3')}<p class="ed-k ed-t-k">The scrapbook</p><p class="ed-t-cap">${words ? `&ldquo;${words}&rdquo;` : ''}</p>`),
+      rollPage,
       gentle ? ed('ed-full', `${pic(slot(16, 2), 'ed-full-ph')}<p class="ed-cap"><b>Forever loved</b>${esc(first)}, always with us.</p>`) : pages[12],
       prPage,
-      pages[6],
+      filmPage,
       pages[22],
       pages[23],
       ed('ed-back', `${pic(slot(2, 1), 'ed-b-ph')}<div class="ed-b-shade"></div><div class="ed-b-in"><p class="ed-k">Made with love for</p><h3 style="font-size:calc(${fit(String(who), 84, 0.5, 16)} * var(--cq))">${esc(who)}</h3><p class="ed-b-q">${words ? `&ldquo;${words}&rdquo;` : ''}</p><p class="ed-b-from">From ${esc(from)}</p></div><div class="ed-b-foot"><span>Cover Story</span>${songOk(values.songLink) ? `<div class="ed-song">${qrSvg(String(values.songLink).trim())}<span>Scan to play<b>${esc(v.song && String(v.song).length < 34 ? v.song : 'our song')}</b></span></div>` : ''}${barcode()}</div>`),
