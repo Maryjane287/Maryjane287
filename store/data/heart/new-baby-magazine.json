@@ -4,14 +4,14 @@
     {
       "id": "s_name",
       "chapter": "Why we chose your name",
-      "label": "Why you chose their name",
+      "label": "Why did you choose their name?",
       "example": "It means bright, and you lit up the room",
       "max": 80
     },
     {
       "id": "s_home",
       "chapter": "Your first night home",
-      "label": "Their first night at home",
+      "label": "What was the very first night at home like?",
       "example": "Nobody slept, everybody smiled, the dog kept guard",
       "max": 80
     },
@@ -24,7 +24,7 @@
     },
     {
       "id": "s_promise",
-      "label": "A promise to them",
+      "label": "A promise to them, from the bottom of your heart",
       "example": "To read you a story every single night",
       "max": 70
     }
@@ -332,5 +332,45 @@
         "{loves}"
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "born"
+      ],
+      "text": "On {born}, at {weight}, the whole world changed shape. {first} arrived, and nothing has been the same since. Nothing has been better, either."
+    },
+    {
+      "need": [
+        "s_name"
+      ],
+      "text": "The name was chosen with so much care. {s_name}. It suits {first} perfectly already."
+    },
+    {
+      "need": [
+        "s_home"
+      ],
+      "text": "The first night at home went exactly as you would expect. {s_home}. Nobody would change a second of it."
+    },
+    {
+      "need": [
+        "looks"
+      ],
+      "text": "The family debate is ongoing. Who does {first} look like? The official answer is {looks|low}. The unofficial answer is the most beautiful baby who ever lived."
+    },
+    {
+      "need": [
+        "loves"
+      ],
+      "text": "{first} already has opinions. Top of the list are {loves|low}. Bottom of the list is being put down."
+    },
+    {
+      "need": [
+        "s_dream"
+      ],
+      "text": "And the dream, the big one, is simple. {s_dream}."
+    }
+  ],
+  "weaveTitle": "Hello, {first}",
+  "weaveKicker": "Welcome to the world"
 }

@@ -1,0 +1,268 @@
+{
+  "graduation-magazine": {
+    "labels": {
+      "name": "Our graduate's name",
+      "year": "The year they threw the hat",
+      "subject": "What they studied, officially",
+      "from": "Who is cheering loudest?",
+      "fuel": "What actually got them through? Be honest",
+      "next": "What comes next, in their words",
+      "words": "Three words their tutors would never guess",
+      "moment": "The moment you knew they had done it",
+      "message": "What do you want them to hear as they walk into the world? (This becomes your letter)",
+      "s_little": "What did they want to be when they were small?",
+      "s_hard": "A hard moment they pushed through when it would have been easier to stop",
+      "s_always": "Among their friends, they were always the one who...",
+      "s_promise": "A promise to them"
+    },
+    "weaveTitle": "Class of {year}: {first}",
+    "weaveKicker": "The graduation feature",
+    "weave": [
+      {"need": ["s_little"], "text": "Long before {subject|low}, there was a small person with big plans. {s_little}. The plans changed. The ambition never did."},
+      {"need": ["fuel"], "text": "The degree was earned the honest way, powered by {fuel|low}. Nobody said it would be glamorous."},
+      {"need": ["s_hard"], "text": "It was not always easy, and that is what makes today matter. {s_hard}. That is the bit {from} is proudest of."},
+      {"need": ["s_always"], "text": "Friends will tell you {first} was always the one who {s_always|low}. Some things you cannot teach."},
+      {"need": ["moment"], "text": "And then the moment it was real. {moment}."},
+      {"need": ["next"], "text": "Next? {next}. The world has no idea what is coming."}
+    ]
+  },
+  "mothers-day-magazine": {
+    "labels": {
+      "name": "What do you call her? Mum, Mam, Mummy, Ma",
+      "from": "Who is this from? All her favourite people",
+      "power": "Her superpower, the one she does not even know she has",
+      "says": "The thing she always says, word for word",
+      "dish": "The dish that tastes like home",
+      "words": "Three words you would put on her mug",
+      "moment": "A moment with her you would give anything to live again",
+      "message": "What do you wish you told her more often? (This becomes your letter)",
+      "s_taught": "The best thing she ever taught you",
+      "s_sad": "What does she do when you are sad?",
+      "s_home": "Close your eyes. Home smells like...",
+      "s_promise": "A promise to her"
+    },
+    "weaveTitle": "Everything we know, we learned from {first}",
+    "weaveKicker": "A love letter to Mum",
+    "weave": [
+      {"need": ["says"], "text": "You can hear her before you see her. {says}. Every family has a soundtrack, and that line is ours."},
+      {"need": ["power"], "text": "She has powers the rest of us can only dream of. {power}. Science cannot explain it. We have stopped trying."},
+      {"need": ["s_sad"], "text": "On the hard days she does not need telling. {s_sad}. That is what love looks like when nobody is watching."},
+      {"need": ["s_home"], "text": "Home has a smell, and it is {s_home|low}. Wherever we go, that is the smell of being safe."},
+      {"need": ["dish"], "text": "And nothing in the world tastes like {dish|low}. Restaurants have tried. Restaurants have failed."},
+      {"need": ["s_taught"], "text": "The lesson she gave us without ever sitting us down? {s_taught}. We are still learning it. We are still grateful."}
+    ]
+  },
+  "fathers-day-magazine": {
+    "labels": {
+      "name": "What do you call him? Dad, Papa, Pops",
+      "from": "Who is this from? His biggest fans",
+      "joke": "His worst joke, word for word. Groans welcome",
+      "skill": "The hidden skill that saves the day",
+      "says": "The thing he always says",
+      "words": "Three words for him that would make him go quiet",
+      "moment": "The moment that made him a family legend",
+      "message": "What do you wish you told him more often? (This becomes your letter)",
+      "s_taught": "The best thing he ever taught you",
+      "s_fix": "What does he do when something goes wrong?",
+      "s_sound": "The sound that means he is home",
+      "s_promise": "A promise to him"
+    },
+    "weaveTitle": "The legend that is {first}",
+    "weaveKicker": "A tribute to Dad",
+    "weave": [
+      {"need": ["s_sound"], "text": "You always know when he is home. {s_sound}. It is the best sound in the house, though nobody will admit it."},
+      {"need": ["joke"], "text": "He has a joke. You know the one. {joke}. Groan if you like. You will be telling it to your own children one day."},
+      {"need": ["s_fix"], "text": "When things go wrong, he does not panic. {s_fix}. That steadiness is the thing you only understand when you are grown."},
+      {"need": ["skill"], "text": "And if anything breaks, there is always {skill|low}. Engineers hate him. We love him."},
+      {"need": ["s_taught"], "text": "The thing he taught that stuck? {s_taught}. Some lessons you do not learn in school."},
+      {"need": ["moment"], "text": "The legendary moment, told at every family gathering: {moment|low}."}
+    ]
+  },
+  "best-friend-magazine": {
+    "labels": {
+      "name": "Your person's name",
+      "since": "Friends since...?",
+      "from": "And you are their...?",
+      "met": "How did you find each other? The real story",
+      "joke": "The inside joke you could never explain to anyone else",
+      "best": "The thing about them you would brag about to strangers",
+      "words": "Three words you would put on their headstone (in about ninety years)",
+      "moment": "Your wildest adventure together",
+      "message": "What do you wish you told them more often? (This becomes your letter)",
+      "s_first": "What did you think of them the very first time? Be honest",
+      "s_rescue": "What do they do on your very worst days?",
+      "s_song": "The song that is so you two",
+      "s_promise": "A promise to them"
+    },
+    "weaveTitle": "Everybody needs a friend like {first}",
+    "weaveKicker": "The friendship issue",
+    "weave": [
+      {"need": ["s_first"], "text": "First impressions are funny things. {from} remembers thinking {s_first|low}. Reader, that did not last."},
+      {"need": ["met"], "text": "The way they met still makes them laugh. {met}. Since {since}, they have been impossible to separate."},
+      {"need": ["s_rescue"], "text": "On the worst days, {first} does not ask what is wrong. {s_rescue}. That is what real friendship looks like, and it is rare."},
+      {"need": ["best"], "text": "If you asked {from} to brag, it would be about this. {best}. Everyone should be so lucky."},
+      {"need": ["joke"], "text": "And whatever you do, do not mention {joke|low}. You will lose them both for the rest of the evening."},
+      {"need": ["moment"], "text": "Their wildest adventure? {moment}. Some friendships are built on years. This one was also built on stories like that."}
+    ]
+  },
+  "teacher-magazine": {
+    "labels": {
+      "name": "The teacher's name, as the children say it",
+      "year": "Which school year?",
+      "from": "Who is this from? The class, or your child",
+      "says": "The thing they say that every child can repeat",
+      "lesson": "The lesson the children are still talking about at dinner",
+      "power": "Their teacher superpower",
+      "words": "Three words the children would use about them",
+      "moment": "The day the class will remember forever",
+      "message": "What do you want them to know they did for your child? (This becomes your letter)",
+      "s_learned": "The biggest thing your child learned this year (not on the curriculum)",
+      "s_kind": "A kindness from them that you will never forget",
+      "s_class": "Their classroom in three words",
+      "s_promise": "A promise to them"
+    },
+    "weaveTitle": "The teacher we will never forget",
+    "weaveKicker": "A thank you feature",
+    "weave": [
+      {"need": ["says"], "text": "Ask any child in the class and they will say it in the same voice. {says}. It is the sound of a room where everyone feels they belong."},
+      {"need": ["lesson"], "text": "There was one lesson that came home with every child. {lesson}. Dinner tables have not been quiet since."},
+      {"need": ["s_kind"], "text": "The parents remember something else. {s_kind}. You never forget the person who was gentle with your child."},
+      {"need": ["s_learned"], "text": "The biggest lesson of the year was not in any book. {s_learned}."},
+      {"need": ["power"], "text": "And yes, {first} has a superpower. {power}. Every teacher should be so gifted."},
+      {"need": ["moment"], "text": "The day nobody will forget? {moment}."}
+    ]
+  },
+  "milestone-birthday-magazine": {
+    "labels": {
+      "name": "The birthday legend",
+      "age": "The big number",
+      "born": "The year it all began",
+      "from": "Who is celebrating them?",
+      "famous": "What are they famous for in your circle?",
+      "decade": "Their best decade so far, according to them",
+      "still": "Something they still cannot do after all these years",
+      "moment": "The story everyone tells about them",
+      "message": "What do you wish you told them more often? (This becomes your letter)",
+      "s_young": "What were they like when they were younger? Photos optional, details essential",
+      "s_proud": "Their proudest moment, the one they rarely mention",
+      "s_lesson": "Something they taught you about life",
+      "s_promise": "A promise for the next chapter"
+    },
+    "weaveTitle": "{age} and only getting started",
+    "weave": [
+      {"need": ["born"], "text": "In {born} the world gained {first}, and the world has been a livelier place ever since."},
+      {"need": ["s_young"], "text": "If you had met {first} back then, this is who you would have found. {s_young}. Some things change. The spark never did."},
+      {"need": ["famous"], "text": "These days {first} is famous for {famous|low}. Fame is relative. Love is not."},
+      {"need": ["s_proud"], "text": "There is one thing they rarely talk about, so we will. {s_proud}. It deserves a page of its own."},
+      {"need": ["still"], "text": "And after all these years, {first} still cannot {still|low}. We would not change a thing."},
+      {"need": ["s_lesson"], "text": "The best advice they ever gave, without meaning to: {s_lesson|low}."}
+    ]
+  },
+  "new-home-magazine": {
+    "labels": {
+      "names": "The new homeowners",
+      "year": "The year they got the keys",
+      "from": "Who is welcoming them home?",
+      "room": "The room they will live in most",
+      "first": "Their first night dinner, in all its glory",
+      "dream": "Their big dream for the place",
+      "words": "Three words for their new home",
+      "moment": "The moving day story that will be told for years",
+      "message": "What do you wish for them in their new home? (This becomes your letter)",
+      "s_detail": "The little detail that made them fall in love with it",
+      "s_guest": "The first guest through the door",
+      "s_morning": "Their first morning there",
+      "s_wish": "A wish for their new home"
+    },
+    "weaveTitle": "Home, sweet home",
+    "weaveKicker": "The house issue",
+    "weave": [
+      {"need": ["s_detail"], "text": "Every home has the detail that sealed the deal. For {first}, it was {s_detail|low}. That is when it stopped being a viewing and started being theirs."},
+      {"need": ["moment"], "text": "Moving day went as moving days do. {moment}. It will be the first story told at every dinner party."},
+      {"need": ["first"], "text": "The first dinner was {@first|low}. Five stars. Would recommend."},
+      {"need": ["s_morning"], "text": "Then came the first morning. {s_morning}. Quiet, new, and full of everything ahead."},
+      {"need": ["room"], "text": "Already there is a favourite room: {room|low}. That is where the best of life will happen."},
+      {"need": ["dream"], "text": "And the dream for the place? {dream}. We will be round to see it."}
+    ]
+  },
+  "travel-magazine": {
+    "labels": {
+      "place": "Where did you go?",
+      "days": "How many days of adventure?",
+      "who": "Who was on the trip?",
+      "from": "Who is putting this together?",
+      "meal": "The meal you still dream about",
+      "view": "The view that made everyone go quiet",
+      "lost": "What did you get lost trying to find?",
+      "moment": "The moment that will make you laugh forever",
+      "message": "What do you want to remember about this trip forever? (This becomes your letter)",
+      "s_song": "The song of the trip",
+      "s_word": "A word or phrase you brought home",
+      "s_again": "What would you do again in a heartbeat?",
+      "s_next": "A promise for the next adventure"
+    },
+    "weaveTitle": "{days} days in {place}",
+    "weaveKicker": "The travel issue",
+    "weave": [
+      {"need": ["who"], "text": "{who} went to {place}. They came back with full hearts, sore feet and stories they will be telling for years."},
+      {"need": ["meal"], "text": "The food first, obviously. {meal}. No meal at home has quite measured up since."},
+      {"need": ["view"], "text": "Then there was the view. {view}. Nobody said anything for a while. Nobody needed to."},
+      {"need": ["lost"], "text": "There were wrong turns, of course. They got lost finding {lost|low}. The best trips always involve getting lost."},
+      {"need": ["s_song"], "text": "Every trip has a soundtrack, and this one was {s_song|low}. Play it now and you are straight back there."},
+      {"need": ["s_again"], "text": "Would they do it again? In a heartbeat, especially {s_again|low}."}
+    ]
+  },
+  "pet-memorial-magazine": {
+    "labels": {
+      "name": "Their name",
+      "years": "How many years did you share?",
+      "from": "Who is remembering them?",
+      "spot": "Their favourite spot in the house",
+      "habit": "Their sweetest habit, the one you still look for",
+      "silly": "The silliest thing they ever did",
+      "words": "Three words that were so them",
+      "moment": "Your favourite memory together",
+      "message": "If you could say one more thing to them, what would it be? (This becomes your letter)",
+      "s_hello": "How did they greet you?",
+      "s_comfort": "How did they comfort you on a hard day?",
+      "s_sound": "A sound you will always remember",
+      "s_promise": "A promise to them"
+    },
+    "weaveTitle": "Forever our {first}",
+    "weaveKicker": "With love",
+    "weave": [
+      {"need": ["years"], "text": "For {years} years, {first} was part of every single day. Not part of the family. The heart of it."},
+      {"need": ["s_hello"], "text": "Coming home meant this: {s_hello|low}. It is the welcome everyone misses most."},
+      {"need": ["spot"], "text": "There is a spot that will always belong to {first}. {spot}. Sometimes we still glance at it, just in case."},
+      {"need": ["s_comfort"], "text": "On the hard days, {first} always knew. {s_comfort}. No words. None were ever needed."},
+      {"need": ["silly"], "text": "And it was not all quiet love. {silly}. We laugh every time we remember it, and we hope we always will."},
+      {"need": ["s_sound"], "text": "Some sounds stay with you. {s_sound}. Forever."}
+    ]
+  },
+  "memorial-magazine": {
+    "labels": {
+      "name": "Their name, the way the family says it",
+      "years": "Their age",
+      "from": "Who is remembering them?",
+      "known": "What were they always known for?",
+      "saying": "Something they always said",
+      "loved": "Something they loved with their whole heart",
+      "words": "Three words that were so them",
+      "moment": "A memory that makes you smile through the tears",
+      "message": "If you could say one more thing to them, what would it be? (This becomes your letter)",
+      "s_taught": "Something they taught you that you still live by",
+      "s_laugh": "A story about them that still makes you laugh",
+      "s_carry": "Something you will carry on for them"
+    },
+    "weaveTitle": "Remembering {first}",
+    "weaveKicker": "A life of love",
+    "weave": [
+      {"need": ["known"], "text": "Everyone who knew {first} knew about {known|low}. It was more than a talent. It was how {first} loved people."},
+      {"need": ["saying"], "text": "We can still hear it. {saying}. Some voices stay in a family forever."},
+      {"need": ["loved"], "text": "{first} loved {loved|low}. When we think of that, we think of joy."},
+      {"need": ["s_laugh"], "text": "And there were stories, so many of them. {s_laugh}. It is good to laugh. {first} would want us to."},
+      {"need": ["s_taught"], "text": "The lesson we keep is simple. {s_taught}. We pass it on, and in that way {first} is still teaching."},
+      {"need": ["s_carry"], "text": "Something we will carry on, always: {s_carry|low}."}
+    ]
+  }
+}

@@ -4,27 +4,27 @@
     {
       "id": "s_laugh",
       "chapter": "What makes {first} giggle",
-      "label": "What makes them laugh the most",
+      "label": "What makes them laugh so hard they can't breathe?",
       "example": "Grown ups pretending to be grumpy dinosaurs",
       "max": 60
     },
     {
       "id": "s_kind",
       "chapter": "A time {first} was kind",
-      "label": "A time they were really kind",
+      "label": "A time they were kind and nobody asked them to be",
       "example": "Gave their last biscuit to a crying friend",
       "max": 60
     },
     {
       "id": "s_says",
       "chapter": "Our favourite thing {first} says",
-      "label": "A funny word or thing they say",
+      "label": "A word they say wrong that you secretly never want them to fix",
       "example": "Calls spaghetti pasghetti",
       "max": 60
     },
     {
       "id": "s_promise",
-      "label": "A promise to them",
+      "label": "A promise to them, pinky swear",
       "example": "To build the biggest blanket fort ever",
       "max": 60
     }
@@ -332,5 +332,44 @@
         "{age} and totally awesome"
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "expert"
+      ],
+      "text": "Meet {first}, aged {age} and already the leading expert in {expert|low}. Ask a question. You will get an answer, and then about forty more."
+    },
+    {
+      "need": [
+        "s_says"
+      ],
+      "text": "{first} has a language all of their own. {s_says}. Nobody in the house is ever going to correct it. Some words are too perfect to fix."
+    },
+    {
+      "need": [
+        "fact"
+      ],
+      "text": "There is a story the grown ups tell whenever they need cheering up. {fact}. Big imagination, bigger heart."
+    },
+    {
+      "need": [
+        "s_kind"
+      ],
+      "text": "And then there is the moment that made everyone's eyes go a bit watery. {s_kind}. Nobody told {first} to do it. That is just who {first} is."
+    },
+    {
+      "need": [
+        "s_laugh"
+      ],
+      "text": "Want to hear the best sound in the world? Try {s_laugh|low}. Guaranteed giggles, every single time."
+    },
+    {
+      "need": [
+        "dream"
+      ],
+      "text": "When {first} grows up, the plan is to be {dream|low}. We believe it completely."
+    }
+  ],
+  "weaveTitle": "The amazing world of {first}"
 }

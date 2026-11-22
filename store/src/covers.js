@@ -484,7 +484,7 @@ export function magFamily(mag) {
   const k = `${mag.slug} ${mag.occasion || ''}`.toLowerCase();
   if (/memorial|in loving memory/.test(k)) return 'tribute';
   if (/kids|baby|first-birthday|cake-smash|sibling|twins|little|junior|childhood|chosen|christening|tiny-steps|first-day-school|twelve-months|toddler|children/.test(k)) return 'little';
-  if (/love|valentine|boyfriend|girlfriend|husband|wife|marry|engagement|wedding|anniversary|first-date|forever|still-falling|adventures-with-you|long-distance|first-christmas-together|soulmate|hundred-reasons/.test(k)) return 'love';
+  if (!/self-love/.test(k) && /\blove\b|valentine|boyfriend|girlfriend|husband|wife|marry|engagement|wedding|anniversary|first-date|forever|still-falling|adventures-with-you|long-distance|first-christmas-together|soulmate|hundred-reasons/.test(k)) return 'love';
   if (/grand|mother|mum|father|dad|family|generations|matriarch|siblings|sister|brother|aunt|uncle|new-parents|heritage|reunion|newspaper/.test(k)) return 'family';
   if (/friend|girls-club|brotherhood|bridesmaid|maid-of-honour|unfiltered|lads|tour/.test(k)) return 'friends';
   return 'celebration';
@@ -796,7 +796,9 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
     // Mid sentence answers start in lower case, unless they begin with I or a name from the magazine.
     const names = new Set(Object.values(v).join(' ').match(/\b[A-Z][a-z]+/g)?.filter(w => [who, from, first].join(' ').includes(w)) || []);
     const soft = x => { const w = (x.match(/^[A-Za-z']+/) || [''])[0]; return !w || /^I('|$)/.test(w) || names.has(w) || /^[A-Z]{2,}/.test(w) ? x : x.charAt(0).toLowerCase() + x.slice(1); };
-    const weaveLine = txt => esc(String(txt)).replace(/\{(\w+)(\|low)?\}/g, (m, k, low) => {
+    // {@id} always means the answer, for magazines with a question called "first".
+    const weaveLine = txt => esc(String(txt)).replace(/\{(@?)(\w+)(\|low)?\}/g, (m, at, k, low) => {
+      if (at) { const x = answer(k); return esc(low ? soft(x) : x); }
       if (k === 'first') return esc(first); if (k === 'who') return esc(who); if (k === 'from') return esc(from); if (k === 'bare') return esc(bare);
       const x = answer(k); return esc(low ? soft(x) : x);
     });

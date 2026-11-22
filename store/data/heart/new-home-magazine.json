@@ -4,7 +4,7 @@
     {
       "id": "s_detail",
       "chapter": "The little detail that sold it",
-      "label": "The little detail that made them fall for it",
+      "label": "The little detail that made them fall in love with it",
       "example": "The crooked old door handle",
       "max": 60
     },
@@ -18,7 +18,7 @@
     {
       "id": "s_morning",
       "chapter": "The first morning",
-      "label": "The first morning there",
+      "label": "Their first morning there",
       "example": "Coffee on the doorstep in pyjamas",
       "max": 60
     },
@@ -334,5 +334,45 @@
         "{words}"
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "s_detail"
+      ],
+      "text": "Every home has the detail that sealed the deal. For {first}, it was {s_detail|low}. That is when it stopped being a viewing and started being theirs."
+    },
+    {
+      "need": [
+        "moment"
+      ],
+      "text": "Moving day went as moving days do. {moment}. It will be the first story told at every dinner party."
+    },
+    {
+      "need": [
+        "first"
+      ],
+      "text": "The first dinner was {@first|low}. Five stars. Would recommend."
+    },
+    {
+      "need": [
+        "s_morning"
+      ],
+      "text": "Then came the first morning. {s_morning}. Quiet, new, and full of everything ahead."
+    },
+    {
+      "need": [
+        "room"
+      ],
+      "text": "Already there is a favourite room: {room|low}. That is where the best of life will happen."
+    },
+    {
+      "need": [
+        "dream"
+      ],
+      "text": "And the dream for the place? {dream}. We will be round to see it."
+    }
+  ],
+  "weaveTitle": "Home, sweet home",
+  "weaveKicker": "The house issue"
 }

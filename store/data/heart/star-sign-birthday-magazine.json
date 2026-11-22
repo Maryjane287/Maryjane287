@@ -4,21 +4,21 @@
     {
       "id": "s_shine",
       "chapter": "When {first} shines brightest",
-      "label": "When they shine the brightest",
+      "label": "When do they shine the very brightest?",
       "example": "Telling stories with everyone in stitches",
       "max": 60
     },
     {
       "id": "s_orbit",
       "chapter": "The people in their orbit",
-      "label": "Who they pull into their orbit",
+      "label": "Who gets pulled into their orbit?",
       "example": "Strangers, dogs and every waiter we meet",
       "max": 60
     },
     {
       "id": "s_wish",
       "chapter": "A wish on a shooting star",
-      "label": "What they would wish for on a shooting star",
+      "label": "What would they wish for on a shooting star?",
       "example": "A little house by the sea with a big telescope",
       "max": 60
     },
@@ -333,5 +333,44 @@
         "{prediction}"
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "born"
+      ],
+      "text": "On {born} the universe got a little brighter. {first} arrived, a true {sign}, and the stars have been showing off ever since."
+    },
+    {
+      "need": [
+        "power"
+      ],
+      "text": "Every sign has a gift. {first}'s is this: {power|low}. Astronomers cannot explain it. Friends simply enjoy it."
+    },
+    {
+      "need": [
+        "s_shine"
+      ],
+      "text": "They shine brightest like this: {s_shine|low}. If you have seen it, you know. If you have not, you are missing out."
+    },
+    {
+      "need": [
+        "s_orbit"
+      ],
+      "text": "Gravity is a funny thing. {first} pulls everyone in. {s_orbit}. Nobody ever really wants to leave."
+    },
+    {
+      "need": [
+        "s_wish"
+      ],
+      "text": "On a shooting star, {first} would wish for {s_wish|low}. The universe has been informed."
+    },
+    {
+      "need": [
+        "prediction"
+      ],
+      "text": "And the forecast for the year ahead? {prediction}. The stars are rarely wrong."
+    }
+  ],
+  "weaveTitle": "Written in the stars"
 }

@@ -4,14 +4,14 @@
     {
       "id": "s_first",
       "chapter": "My first impression of you",
-      "label": "Your first impression of them",
+      "label": "What did you think of them the very first time? Be honest",
       "example": "Way too cool to ever talk to me",
       "max": 70
     },
     {
       "id": "s_rescue",
       "chapter": "On my worst day, you...",
-      "label": "What they do on your worst days",
+      "label": "What do they do on your very worst days?",
       "example": "Turn up with snacks and a terrible film",
       "max": 80
     },
@@ -331,5 +331,45 @@
         "Old, loud and still causing trouble together."
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "s_first"
+      ],
+      "text": "First impressions are funny things. {from} remembers thinking {s_first|low}. Reader, that did not last."
+    },
+    {
+      "need": [
+        "met"
+      ],
+      "text": "The way they met still makes them laugh. {met}. Since {since}, they have been impossible to separate."
+    },
+    {
+      "need": [
+        "s_rescue"
+      ],
+      "text": "On the worst days, {first} does not ask what is wrong. {s_rescue}. That is what real friendship looks like, and it is rare."
+    },
+    {
+      "need": [
+        "best"
+      ],
+      "text": "If you asked {from} to brag, it would be about this. {best}. Everyone should be so lucky."
+    },
+    {
+      "need": [
+        "joke"
+      ],
+      "text": "And whatever you do, do not mention {joke|low}. You will lose them both for the rest of the evening."
+    },
+    {
+      "need": [
+        "moment"
+      ],
+      "text": "Their wildest adventure? {moment}. Some friendships are built on years. This one was also built on stories like that."
+    }
+  ],
+  "weaveTitle": "Everybody needs a friend like {first}",
+  "weaveKicker": "The friendship issue"
 }

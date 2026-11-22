@@ -4,21 +4,21 @@
     {
       "id": "s_taught",
       "chapter": "The best thing she taught us",
-      "label": "The best thing she taught you",
+      "label": "The best thing she ever taught you",
       "example": "To always say thank you, and to mean it",
       "max": 80
     },
     {
       "id": "s_sad",
       "chapter": "When we are sad, she...",
-      "label": "What she does when you are sad",
+      "label": "What does she do when you are sad?",
       "example": "Makes hot chocolate and sits with us until it passes",
       "max": 80
     },
     {
       "id": "s_home",
       "chapter": "Home smells like",
-      "label": "Home smells like...",
+      "label": "Close your eyes. Home smells like...",
       "example": "Fresh bread and her perfume on a Sunday",
       "max": 60
     },
@@ -318,5 +318,45 @@
         ""
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "says"
+      ],
+      "text": "You can hear her before you see her. {says}. Every family has a soundtrack, and that line is ours."
+    },
+    {
+      "need": [
+        "power"
+      ],
+      "text": "She has powers the rest of us can only dream of. {power}. Science cannot explain it. We have stopped trying."
+    },
+    {
+      "need": [
+        "s_sad"
+      ],
+      "text": "On the hard days she does not need telling. {s_sad}. That is what love looks like when nobody is watching."
+    },
+    {
+      "need": [
+        "s_home"
+      ],
+      "text": "Home has a smell, and it is {s_home|low}. Wherever we go, that is the smell of being safe."
+    },
+    {
+      "need": [
+        "dish"
+      ],
+      "text": "And nothing in the world tastes like {dish|low}. Restaurants have tried. Restaurants have failed."
+    },
+    {
+      "need": [
+        "s_taught"
+      ],
+      "text": "The lesson she gave us without ever sitting us down? {s_taught}. We are still learning it. We are still grateful."
+    }
+  ],
+  "weaveTitle": "Everything we know, we learned from {first}",
+  "weaveKicker": "A love letter to Mum"
 }

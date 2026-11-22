@@ -4,14 +4,14 @@
     {
       "id": "s_taught",
       "chapter": "What you taught us",
-      "label": "Something they taught you",
+      "label": "Something they taught you that you still live by",
       "example": "That a cup of tea fixes most things",
       "max": 80
     },
     {
       "id": "s_laugh",
       "chapter": "The story that still makes us laugh",
-      "label": "A story that still makes you laugh",
+      "label": "A story about them that still makes you laugh",
       "example": "The Christmas you set the pudding on fire, on purpose",
       "max": 80
     },
@@ -321,5 +321,45 @@
         ""
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "known"
+      ],
+      "text": "Everyone who knew {first} knew about {known|low}. It was more than a talent. It was how {first} loved people."
+    },
+    {
+      "need": [
+        "saying"
+      ],
+      "text": "We can still hear it. {saying}. Some voices stay in a family forever."
+    },
+    {
+      "need": [
+        "loved"
+      ],
+      "text": "{first} loved {loved|low}. When we think of that, we think of joy."
+    },
+    {
+      "need": [
+        "s_laugh"
+      ],
+      "text": "And there were stories, so many of them. {s_laugh}. It is good to laugh. {first} would want us to."
+    },
+    {
+      "need": [
+        "s_taught"
+      ],
+      "text": "The lesson we keep is simple. {s_taught}. We pass it on, and in that way {first} is still teaching."
+    },
+    {
+      "need": [
+        "s_carry"
+      ],
+      "text": "Something we will carry on, always: {s_carry|low}."
+    }
+  ],
+  "weaveTitle": "Remembering {first}",
+  "weaveKicker": "A life of love"
 }

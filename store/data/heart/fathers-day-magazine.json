@@ -4,21 +4,21 @@
     {
       "id": "s_taught",
       "chapter": "The best thing he taught us",
-      "label": "The best thing he taught you",
+      "label": "The best thing he ever taught you",
       "example": "How to ride a bike, and how to get back on",
       "max": 80
     },
     {
       "id": "s_fix",
       "chapter": "When things go wrong, he...",
-      "label": "What he does when things go wrong",
+      "label": "What does he do when something goes wrong?",
       "example": "Puts the kettle on and says we will sort it out together",
       "max": 80
     },
     {
       "id": "s_sound",
       "chapter": "The sound of Dad",
-      "label": "The sound that means Dad is home",
+      "label": "The sound that means he is home",
       "example": "Keys in the door and terrible whistling",
       "max": 60
     },
@@ -324,5 +324,45 @@
         ""
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "s_sound"
+      ],
+      "text": "You always know when he is home. {s_sound}. It is the best sound in the house, though nobody will admit it."
+    },
+    {
+      "need": [
+        "joke"
+      ],
+      "text": "He has a joke. You know the one. {joke}. Groan if you like. You will be telling it to your own children one day."
+    },
+    {
+      "need": [
+        "s_fix"
+      ],
+      "text": "When things go wrong, he does not panic. {s_fix}. That steadiness is the thing you only understand when you are grown."
+    },
+    {
+      "need": [
+        "skill"
+      ],
+      "text": "And if anything breaks, there is always {skill|low}. Engineers hate him. We love him."
+    },
+    {
+      "need": [
+        "s_taught"
+      ],
+      "text": "The thing he taught that stuck? {s_taught}. Some lessons you do not learn in school."
+    },
+    {
+      "need": [
+        "moment"
+      ],
+      "text": "The legendary moment, told at every family gathering: {moment|low}."
+    }
+  ],
+  "weaveTitle": "The legend that is {first}",
+  "weaveKicker": "A tribute to Dad"
 }

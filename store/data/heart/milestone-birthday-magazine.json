@@ -4,14 +4,14 @@
     {
       "id": "s_young",
       "chapter": "Back in the day",
-      "label": "What they were like when they were younger",
+      "label": "What were they like when they were younger? Photos optional, details essential",
       "example": "Big hair, bigger dreams and a bike that went everywhere",
       "max": 80
     },
     {
       "id": "s_proud",
       "chapter": "Proudest moment",
-      "label": "Their proudest moment (that you know of)",
+      "label": "Their proudest moment, the one they rarely mention",
       "example": "Running the whole race in the rain, and finishing with a grin",
       "max": 80
     },
@@ -331,5 +331,44 @@
         "{still}"
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "born"
+      ],
+      "text": "In {born} the world gained {first}, and the world has been a livelier place ever since."
+    },
+    {
+      "need": [
+        "s_young"
+      ],
+      "text": "If you had met {first} back then, this is who you would have found. {s_young}. Some things change. The spark never did."
+    },
+    {
+      "need": [
+        "famous"
+      ],
+      "text": "These days {first} is famous for {famous|low}. Fame is relative. Love is not."
+    },
+    {
+      "need": [
+        "s_proud"
+      ],
+      "text": "There is one thing they rarely talk about, so we will. {s_proud}. It deserves a page of its own."
+    },
+    {
+      "need": [
+        "still"
+      ],
+      "text": "And after all these years, {first} still cannot {still|low}. We would not change a thing."
+    },
+    {
+      "need": [
+        "s_lesson"
+      ],
+      "text": "The best advice they ever gave, without meaning to: {s_lesson|low}."
+    }
+  ],
+  "weaveTitle": "{age} and only getting started"
 }

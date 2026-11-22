@@ -57,62 +57,62 @@
     "fields": [
       {
         "id": "family",
-        "label": "Your family name",
+        "label": "Whose Christmas is this? Your family name",
         "example": "The Taylors",
         "max": 18
       },
       {
         "id": "year",
-        "label": "Which Christmas?",
+        "label": "Which Christmas are we remembering?",
         "example": "2026",
         "max": 4
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is wrapping up this gift?",
         "example": "Grandma and Grandpa",
         "max": 30
       },
       {
         "id": "tradition",
-        "label": "Your funniest Christmas tradition",
+        "label": "The tradition you would never, ever skip, however silly",
         "example": "Matching pyjamas, even the dog",
         "max": 45
       },
       {
         "id": "naughty",
-        "label": "Most likely to be on the naughty list",
+        "label": "Who is most likely to end up on the naughty list, and why?",
         "example": "Dad, for eating the chocolate coins",
         "max": 45
       },
       {
         "id": "dinner",
-        "label": "The best bit of Christmas dinner",
+        "label": "The bit of Christmas dinner everybody fights over",
         "example": "Roast potatoes, fought over every year",
         "max": 45
       },
       {
         "id": "jumper",
-        "label": "The best Christmas jumper goes to",
+        "label": "Who wins the award for the most outrageous jumper?",
         "example": "Grandpa, the one that lights up",
         "max": 40
       },
       {
         "id": "words",
-        "label": "Three words for your Christmas",
+        "label": "Three words that sum up Christmas in your house",
         "example": "Cosy, chaotic, magical",
         "max": 28
       },
       {
         "id": "wishes",
-        "label": "Everyone's Christmas wishes, for the letter to Santa",
+        "label": "Everyone's wishes for the letter to Santa",
         "example": "Mia would like a puppy (again). Leo wants a snowball that never melts. Mum wishes for one quiet cup of tea, and Dad just wants everyone home.",
         "type": "textarea",
         "max": 220
       },
       {
         "id": "moment",
-        "label": "The best moment of your year",
+        "label": "The moment this year you would wrap up and keep forever",
         "example": "The morning Leo found real snow on the doorstep and ran out in his pyjamas to catch it",
         "type": "textarea",
         "max": 220
@@ -952,43 +952,43 @@
     "fields": [
       {
         "id": "forWho",
-        "label": "Who is it for?",
+        "label": "Who gets the front page? Grandma, Grandad, Nana, Pops",
         "example": "Grandma",
         "max": 14
       },
       {
         "id": "fromWho",
-        "label": "Who is it from?",
+        "label": "Who are the reporters? The grandchildren, the whole family",
         "example": "Leo, Mia and Sam",
         "max": 40
       },
       {
         "id": "headline",
-        "label": "The biggest family news",
+        "label": "The biggest family news they have missed",
         "example": "Leo lost his first tooth and the tooth fairy paid a whole £2",
         "max": 90
       },
       {
         "id": "miss",
-        "label": "What you miss most about them",
+        "label": "What do you miss most about being in the same room?",
         "example": "Sunday pancakes and those terrible jokes",
         "max": 70
       },
       {
         "id": "quote",
-        "label": "Something funny the kids said",
+        "label": "The funniest thing one of the children said recently",
         "example": "Grandma is a hundred and cool",
         "max": 70
       },
       {
         "id": "weather",
-        "label": "Family weather report",
+        "label": "Today's weather in your house, as a forecast",
         "example": "Sunny with a strong chance of cuddles",
         "max": 50
       },
       {
         "id": "message",
-        "label": "What do you miss telling them in person? (This becomes your letter)",
+        "label": "What would you tell them if they were sitting at your kitchen table today? (This becomes your letter)",
         "example": "We think about you every day. The house is louder than ever and we cannot wait to see you soon.",
         "type": "textarea",
         "max": 400
@@ -1152,43 +1152,43 @@
     "fields": [
       {
         "id": "name",
-        "label": "Your child's first name or nickname",
+        "label": "Our little cover star's name, or the nickname they answer to",
         "example": "Leo",
         "max": 12
       },
       {
         "id": "age",
-        "label": "Their age",
+        "label": "How old are they, in proper years?",
         "example": "6",
         "max": 2
       },
       {
         "id": "expert",
-        "label": "What they are an expert in",
+        "label": "What are they the world's biggest expert in?",
         "example": "Dinosaurs",
         "max": 30
       },
       {
         "id": "food",
-        "label": "Their favourite food",
+        "label": "The food they would eat for every meal if you let them",
         "example": "Pancakes with far too much syrup",
         "max": 50
       },
       {
         "id": "dream",
-        "label": "When I grow up I want to be",
+        "label": "What do they say they will be when they grow up?",
         "example": "A volcano scientist",
         "max": 40
       },
       {
         "id": "fact",
-        "label": "A funny fact about them",
+        "label": "The funniest true story about them",
         "example": "Once tried to post a letter to a real T rex",
         "max": 80
       },
       {
         "id": "message",
-        "label": "What do you want them to always remember? (This becomes your letter)",
+        "label": "What do you want them to remember when they are all grown up? (This becomes your letter)",
         "example": "We are so proud of you, our brave, clever, dinosaur loving boy. Never stop asking questions.",
         "type": "textarea",
         "max": 400
@@ -1352,50 +1352,50 @@
     "fields": [
       {
         "id": "family",
-        "label": "Who is this year about?",
+        "label": "Whose year was it?",
         "example": "The Taylors",
         "max": 22
       },
       {
         "id": "year",
-        "label": "Which year?",
+        "label": "Which year are we looking back on?",
         "example": "2026",
         "max": 4
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is telling the story?",
         "example": "Mum and Dad",
         "max": 30
       },
       {
         "id": "adventure",
-        "label": "The biggest adventure",
+        "label": "The biggest adventure of the year, rain or shine",
         "example": "Our first camping trip, in the rain, and we loved it",
         "max": 70
       },
       {
         "id": "proud",
-        "label": "The proudest moment",
+        "label": "The moment that made you burst with pride",
         "example": "Leo rode his bike with no stabilisers",
         "max": 60
       },
       {
         "id": "word",
-        "label": "Your word of the year",
+        "label": "If this year was one word, what would it be?",
         "example": "Together",
         "max": 24
       },
       {
         "id": "moment",
-        "label": "The moment you will laugh about forever",
+        "label": "The moment you will still be laughing about when you are old",
         "example": "Dad setting off the smoke alarm making pancakes on Christmas morning, again",
         "type": "textarea",
         "max": 220
       },
       {
         "id": "message",
-        "label": "What would you say to your family about this year? (This becomes your letter)",
+        "label": "What would you say to everyone about this year? (This becomes your letter)",
         "example": "What a year. Thank you for every muddy walk, every late night chat and every silly dance in the kitchen. Here is to the next one.",
         "type": "textarea",
         "max": 400
@@ -1559,56 +1559,56 @@
     "fields": [
       {
         "id": "name",
-        "label": "Your pet's name",
+        "label": "Our furry cover star's name",
         "example": "Biscuit",
         "max": 12
       },
       {
         "id": "award",
-        "label": "Their official title",
+        "label": "Their official title around the house",
         "example": "Good Boy of the Year",
         "max": 26
       },
       {
         "id": "age",
-        "label": "How old are they?",
+        "label": "How old are they, in human years?",
         "example": "3",
         "max": 3
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who loves them most? (Your name)",
         "example": "Mia",
         "max": 30
       },
       {
         "id": "talent",
-        "label": "Their secret talent",
+        "label": "Their most impressive skill, the one that baffles visitors",
         "example": "Hears a cheese wrapper from three rooms away",
         "max": 60
       },
       {
         "id": "crime",
-        "label": "Most wanted for",
+        "label": "What are they wanted for? List the charges",
         "example": "Stealing socks, then looking innocent",
         "max": 50
       },
       {
         "id": "snack",
-        "label": "Favourite snack",
+        "label": "The snack they would sell you for",
         "example": "Anything you are eating",
         "max": 40
       },
       {
         "id": "moment",
-        "label": "Their most legendary moment",
+        "label": "The moment that made them a household legend",
         "example": "Walking into the kitchen wearing the Christmas tinsel like a crown and refusing to take it off",
         "type": "textarea",
         "max": 220
       },
       {
         "id": "message",
-        "label": "What would you say to them if they understood every word? (This becomes your letter)",
+        "label": "If they understood every word, what would you tell them? (This becomes your letter)",
         "example": "You are the best thing that ever happened to our sofa. Thank you for every wag, every cuddle and every stolen sock.",
         "type": "textarea",
         "max": 400
@@ -1778,7 +1778,7 @@
     "fields": [
       {
         "id": "name",
-        "label": "Their first name or nickname",
+        "label": "The star of the show",
         "example": "Emma",
         "max": 12
       },
@@ -1802,31 +1802,31 @@
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is sending the stars?",
         "example": "Sam",
         "max": 30
       },
       {
         "id": "crystal",
-        "label": "Their lucky crystal",
+        "label": "If they were a crystal, which one would they be?",
         "example": "Citrine",
         "max": 24
       },
       {
         "id": "power",
-        "label": "Their cosmic superpower",
+        "label": "Their cosmic superpower, the thing they do to every room",
         "example": "Lighting up every room they walk into",
         "max": 60
       },
       {
         "id": "prediction",
-        "label": "This year the stars predict",
+        "label": "What do the stars predict for their year? Be bold",
         "example": "A spontaneous trip and a very good haircut",
         "max": 80
       },
       {
         "id": "message",
-        "label": "What do you wish you told them more often? (This becomes your letter)",
+        "label": "What do you wish the universe would tell them every morning? (This becomes your letter)",
         "example": "Happy birthday to the brightest star I know. The universe got it very right when it made you.",
         "type": "textarea",
         "max": 400
@@ -2204,56 +2204,56 @@
     "fields": [
       {
         "id": "name",
-        "label": "Baby's name",
+        "label": "Our newest arrival's name",
         "example": "Olivia",
         "max": 12
       },
       {
         "id": "weight",
-        "label": "Birth weight",
+        "label": "Birth weight, the number you will never forget",
         "example": "7lb 4oz",
         "max": 8
       },
       {
         "id": "born",
-        "label": "Date of birth",
+        "label": "The day they arrived",
         "example": "14 March 2026",
         "max": 18
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who are their very lucky grown ups?",
         "example": "Mummy and Daddy",
         "max": 30
       },
       {
         "id": "looks",
-        "label": "Looks just like",
+        "label": "Who do they look like? Be honest",
         "example": "Grandad, when he's grumpy",
         "max": 40
       },
       {
         "id": "skill",
-        "label": "First talent",
+        "label": "Their first talent, already",
         "example": "Sleeping through anything but the night",
         "max": 45
       },
       {
         "id": "loves",
-        "label": "Already loves",
+        "label": "Three things they already love",
         "example": "Milk, cuddles and the hoover noise",
         "max": 40
       },
       {
         "id": "moment",
-        "label": "The moment we first met",
+        "label": "Tell us the very first moment you met",
         "example": "You opened one eye, gave us a very serious look, then held on to a finger and never let go",
         "type": "textarea",
         "max": 220
       },
       {
         "id": "message",
-        "label": "What do you want them to know one day? (This becomes your letter)",
+        "label": "What do you want them to read one day, when they are grown? (This becomes your letter)",
         "example": "We waited so long to meet you and you are even better than we dreamed. Welcome to the world, little one. You are so loved.",
         "type": "textarea",
         "max": 400
@@ -2400,50 +2400,50 @@
     "fields": [
       {
         "id": "name",
-        "label": "Their name",
+        "label": "The birthday baby",
         "example": "Leo",
         "max": 12
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is celebrating them? Every grown up, and the pets",
         "example": "Mummy, Daddy and Biscuit the dog",
         "max": 34
       },
       {
         "id": "word",
-        "label": "First word",
+        "label": "Their first word, and the ones that followed",
         "example": "Dog, then Mama, then more dog",
         "max": 34
       },
       {
         "id": "food",
-        "label": "Best food face",
+        "label": "The food that got the funniest face",
         "example": "Lemon, never again",
         "max": 34
       },
       {
         "id": "toy",
-        "label": "Favourite thing",
+        "label": "Their favourite thing in the whole house (it is never a toy)",
         "example": "The box the present came in",
         "max": 34
       },
       {
         "id": "nick",
-        "label": "Nickname",
+        "label": "The nickname that stuck",
         "example": "Little Chunk",
         "max": 18
       },
       {
         "id": "moment",
-        "label": "The moment that made us melt",
+        "label": "The moment this year that made you melt completely",
         "example": "The first time you clapped for yourself after standing up, then sat straight back down with the biggest grin",
         "type": "textarea",
         "max": 220
       },
       {
         "id": "message",
-        "label": "What do you want them to know one day? (This becomes your letter)",
+        "label": "What do you want them to know one day about this first year? (This becomes your letter)",
         "example": "One year ago you changed everything. Thank you for every giggle, every sleepy cuddle and every tiny first. Happy first birthday, our darling.",
         "type": "textarea",
         "max": 400
@@ -2587,56 +2587,56 @@
     "fields": [
       {
         "id": "name",
-        "label": "Their name",
+        "label": "The guest of honour",
         "example": "Chris",
         "max": 12
       },
       {
         "id": "years",
-        "label": "Years at work",
+        "label": "How many years of hard work?",
         "example": "35",
         "max": 3
       },
       {
         "id": "job",
-        "label": "Their job",
+        "label": "What do they do, in their own words?",
         "example": "Head of maths",
         "max": 30
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is sending them off with love?",
         "example": "Everyone in the staff room",
         "max": 34
       },
       {
         "id": "known",
-        "label": "Famous for",
+        "label": "What will they be remembered for around the place?",
         "example": "The biscuit tin nobody else could open",
         "max": 42
       },
       {
         "id": "plans",
-        "label": "Big plans now",
+        "label": "Big plans now the alarm clock is retired too",
         "example": "Golf, gardening and very long lunches",
         "max": 42
       },
       {
         "id": "miss",
-        "label": "We will miss",
+        "label": "What will everyone miss most?",
         "example": "Your laugh down the corridor",
         "max": 36
       },
       {
         "id": "moment",
-        "label": "The story everyone still tells",
+        "label": "The story that gets told every time their name comes up",
         "example": "The Christmas party when the photocopier jammed and you fixed it in a paper crown while leading the singing",
         "type": "textarea",
         "max": 220
       },
       {
         "id": "message",
-        "label": "What do you want them to know as they leave? (This becomes your letter)",
+        "label": "What do you want them to know as they walk out of the door? (This becomes your letter)",
         "example": "Work will not be the same without you. Thank you for the wisdom, the patience and the terrible puns. Enjoy every single lie in, you have earned it.",
         "type": "textarea",
         "max": 400
@@ -2789,56 +2789,56 @@
     "fields": [
       {
         "id": "name",
-        "label": "Their name",
+        "label": "Our graduate's name",
         "example": "Mia",
         "max": 12
       },
       {
         "id": "year",
-        "label": "Graduation year",
+        "label": "The year they threw the hat",
         "example": "2026",
         "max": 4
       },
       {
         "id": "subject",
-        "label": "What they studied",
+        "label": "What they studied, officially",
         "example": "Marine biology",
         "max": 30
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is cheering loudest?",
         "example": "Mum, Dad and Grandma",
         "max": 34
       },
       {
         "id": "fuel",
-        "label": "Powered by",
+        "label": "What actually got them through? Be honest",
         "example": "Instant noodles and three alarms",
         "max": 38
       },
       {
         "id": "next",
-        "label": "Next big move",
+        "label": "What comes next, in their words",
         "example": "Saving the ocean, one fish at a time",
         "max": 40
       },
       {
         "id": "words",
-        "label": "Three words that are so them",
+        "label": "Three words their tutors would never guess",
         "example": "Clever, stubborn, unstoppable",
         "max": 30
       },
       {
         "id": "moment",
-        "label": "Their proudest moment",
+        "label": "The moment you knew they had done it",
         "example": "Handing in the final essay four minutes before the deadline, then sleeping for fourteen hours straight",
         "type": "textarea",
         "max": 220
       },
       {
         "id": "message",
-        "label": "What do you wish you told them more often? (This becomes your letter)",
+        "label": "What do you want them to hear as they walk into the world? (This becomes your letter)",
         "example": "We have watched you work so hard for this. Whatever comes next, you have already made us the proudest family in the world. Congratulations, graduate.",
         "type": "textarea",
         "max": 400
@@ -2991,43 +2991,43 @@
     "fields": [
       {
         "id": "name",
-        "label": "What you call her",
+        "label": "What do you call her? Mum, Mam, Mummy, Ma",
         "example": "Mum",
         "max": 12
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is this from? All her favourite people",
         "example": "Your favourite children",
         "max": 34
       },
       {
         "id": "power",
-        "label": "Her superpower",
+        "label": "Her superpower, the one she does not even know she has",
         "example": "Finding things before we even lose them",
         "max": 42
       },
       {
         "id": "says",
-        "label": "She always says",
+        "label": "The thing she always says, word for word",
         "example": "Have you eaten?",
         "max": 36
       },
       {
         "id": "dish",
-        "label": "Her famous dish",
+        "label": "The dish that tastes like home",
         "example": "Sunday roast, nobody does it better",
         "max": 40
       },
       {
         "id": "words",
-        "label": "Three words that are so her",
+        "label": "Three words you would put on her mug",
         "example": "Warm, wise, wonderful",
         "max": 28
       },
       {
         "id": "moment",
-        "label": "The moment we will never forget",
+        "label": "A moment with her you would give anything to live again",
         "example": "The rainy day you turned the living room into a campsite, complete with torches, songs and far too many marshmallows",
         "type": "textarea",
         "max": 220
@@ -3181,43 +3181,43 @@
     "fields": [
       {
         "id": "name",
-        "label": "What you call him",
+        "label": "What do you call him? Dad, Papa, Pops",
         "example": "Dad",
         "max": 12
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is this from? His biggest fans",
         "example": "Your biggest fans",
         "max": 34
       },
       {
         "id": "joke",
-        "label": "His worst joke",
+        "label": "His worst joke, word for word. Groans welcome",
         "example": "Hi hungry, I am Dad",
         "max": 36
       },
       {
         "id": "skill",
-        "label": "Hidden skill",
+        "label": "The hidden skill that saves the day",
         "example": "Fixing anything with tape",
         "max": 36
       },
       {
         "id": "says",
-        "label": "He always says",
+        "label": "The thing he always says",
         "example": "Ask your mother",
         "max": 32
       },
       {
         "id": "words",
-        "label": "Three words that are so him",
+        "label": "Three words for him that would make him go quiet",
         "example": "Funny, patient, legendary",
         "max": 30
       },
       {
         "id": "moment",
-        "label": "His most legendary moment",
+        "label": "The moment that made him a family legend",
         "example": "Building the flat pack wardrobe without the instructions, having three screws left over, and declaring it stronger than ever",
         "type": "textarea",
         "max": 220
@@ -3371,49 +3371,49 @@
     "fields": [
       {
         "id": "name",
-        "label": "Your friend's name",
+        "label": "Your person's name",
         "example": "Emma",
         "max": 12
       },
       {
         "id": "since",
-        "label": "Friends since",
+        "label": "Friends since...?",
         "example": "2012",
         "max": 4
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "And you are their...?",
         "example": "Mia",
         "max": 30
       },
       {
         "id": "met",
-        "label": "How you met",
+        "label": "How did you find each other? The real story",
         "example": "Stuck in the same broken lift",
         "max": 40
       },
       {
         "id": "joke",
-        "label": "Inside joke",
+        "label": "The inside joke you could never explain to anyone else",
         "example": "The goose incident",
         "max": 34
       },
       {
         "id": "best",
-        "label": "Their best quality",
+        "label": "The thing about them you would brag about to strangers",
         "example": "Always answers the phone at 2am",
         "max": 40
       },
       {
         "id": "words",
-        "label": "Three words that are so them",
+        "label": "Three words you would put on their headstone (in about ninety years)",
         "example": "Loyal, hilarious, iconic",
         "max": 28
       },
       {
         "id": "moment",
-        "label": "Our wildest adventure",
+        "label": "Your wildest adventure together",
         "example": "The road trip where the car broke down, we sang in a field for three hours and still call it the best day ever",
         "type": "textarea",
         "max": 220
@@ -3570,49 +3570,49 @@
     "fields": [
       {
         "id": "name",
-        "label": "Teacher's name",
+        "label": "The teacher's name, as the children say it",
         "example": "Mrs Taylor",
         "max": 14
       },
       {
         "id": "year",
-        "label": "School year",
+        "label": "Which school year?",
         "example": "2026",
         "max": 4
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is this from? The class, or your child",
         "example": "Class 3B",
         "max": 30
       },
       {
         "id": "says",
-        "label": "They always say",
+        "label": "The thing they say that every child can repeat",
         "example": "Eyes on me, superstars",
         "max": 34
       },
       {
         "id": "lesson",
-        "label": "Best lesson",
+        "label": "The lesson the children are still talking about at dinner",
         "example": "Volcanoes, with real explosions",
         "max": 38
       },
       {
         "id": "power",
-        "label": "Their superpower",
+        "label": "Their teacher superpower",
         "example": "Knowing who talked, without looking",
         "max": 40
       },
       {
         "id": "words",
-        "label": "Three words that are so them",
+        "label": "Three words the children would use about them",
         "example": "Patient, funny, amazing",
         "max": 28
       },
       {
         "id": "moment",
-        "label": "The lesson we will never forget",
+        "label": "The day the class will remember forever",
         "example": "The day the class hamster escaped and you turned the search into a maths lesson about hiding places",
         "type": "textarea",
         "max": 220
@@ -3769,49 +3769,49 @@
     "fields": [
       {
         "id": "name",
-        "label": "Their name",
+        "label": "The birthday legend",
         "example": "Sam",
         "max": 12
       },
       {
         "id": "age",
-        "label": "Age they are turning",
+        "label": "The big number",
         "example": "50",
         "max": 3
       },
       {
         "id": "born",
-        "label": "Year they were born",
+        "label": "The year it all began",
         "example": "1976",
         "max": 4
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is celebrating them?",
         "example": "The whole family",
         "max": 34
       },
       {
         "id": "famous",
-        "label": "Famous for",
+        "label": "What are they famous for in your circle?",
         "example": "Dancing at every wedding, invited or not",
         "max": 42
       },
       {
         "id": "decade",
-        "label": "Best decade so far",
+        "label": "Their best decade so far, according to them",
         "example": "This one, obviously",
         "max": 32
       },
       {
         "id": "still",
-        "label": "Still can't",
+        "label": "Something they still cannot do after all these years",
         "example": "Whistle, or fold a fitted sheet",
         "max": 36
       },
       {
         "id": "moment",
-        "label": "The story everyone still tells",
+        "label": "The story everyone tells about them",
         "example": "The holiday where you got us completely lost, found the best restaurant in town and pretended it was the plan all along",
         "type": "textarea",
         "max": 220
@@ -4170,49 +4170,49 @@
     "fields": [
       {
         "id": "names",
-        "label": "Their names",
+        "label": "The new homeowners",
         "example": "Emma & Chris",
         "max": 16
       },
       {
         "id": "year",
-        "label": "Year they moved in",
+        "label": "The year they got the keys",
         "example": "2026",
         "max": 4
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is welcoming them home?",
         "example": "Your new neighbours, the Browns",
         "max": 34
       },
       {
         "id": "room",
-        "label": "Favourite room",
+        "label": "The room they will live in most",
         "example": "The kitchen, where the snacks live",
         "max": 38
       },
       {
         "id": "first",
-        "label": "First night dinner",
+        "label": "Their first night dinner, in all its glory",
         "example": "Pizza on the floor, no chairs",
         "max": 36
       },
       {
         "id": "dream",
-        "label": "Big dream for it",
+        "label": "Their big dream for the place",
         "example": "A garden full of tomatoes",
         "max": 34
       },
       {
         "id": "words",
-        "label": "Three words for it",
+        "label": "Three words for their new home",
         "example": "Cosy, chaotic, ours",
         "max": 28
       },
       {
         "id": "moment",
-        "label": "The moving day story",
+        "label": "The moving day story that will be told for years",
         "example": "The sofa got stuck in the doorway for two hours, so everyone ate lunch sitting on it in the front garden",
         "type": "textarea",
         "max": 220
@@ -4369,49 +4369,49 @@
     "fields": [
       {
         "id": "place",
-        "label": "Where you went",
+        "label": "Where did you go?",
         "example": "Lisbon",
         "max": 14
       },
       {
         "id": "days",
-        "label": "How many days?",
+        "label": "How many days of adventure?",
         "example": "7",
         "max": 3
       },
       {
         "id": "who",
-        "label": "Who went",
+        "label": "Who was on the trip?",
         "example": "Mia and Leo",
         "max": 30
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is putting this together?",
         "example": "Mia",
         "max": 30
       },
       {
         "id": "meal",
-        "label": "Best meal",
+        "label": "The meal you still dream about",
         "example": "Custard tarts for breakfast, every day",
         "max": 40
       },
       {
         "id": "view",
-        "label": "Best view",
+        "label": "The view that made everyone go quiet",
         "example": "Sunset from the castle walls",
         "max": 36
       },
       {
         "id": "lost",
-        "label": "Got lost finding",
+        "label": "What did you get lost trying to find?",
         "example": "Our own hotel, twice",
         "max": 32
       },
       {
         "id": "moment",
-        "label": "The moment we will laugh about forever",
+        "label": "The moment that will make you laugh forever",
         "example": "Missing the last tram, walking up the steepest hill in the city at midnight and finding the best ice cream of our lives",
         "type": "textarea",
         "max": 220
@@ -4565,56 +4565,56 @@
     "fields": [
       {
         "id": "name",
-        "label": "Your pet's name",
+        "label": "Their name",
         "example": "Bailey",
         "max": 12
       },
       {
         "id": "years",
-        "label": "Years together",
+        "label": "How many years did you share?",
         "example": "14",
         "max": 3
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is remembering them?",
         "example": "Your family, forever",
         "max": 34
       },
       {
         "id": "spot",
-        "label": "Favourite spot",
+        "label": "Their favourite spot in the house",
         "example": "The sunny patch by the back door",
         "max": 38
       },
       {
         "id": "habit",
-        "label": "Sweetest habit",
+        "label": "Their sweetest habit, the one you still look for",
         "example": "Waiting at the window every evening",
         "max": 40
       },
       {
         "id": "silly",
-        "label": "Silliest moment",
+        "label": "The silliest thing they ever did",
         "example": "Chasing their own tail at the vet",
         "max": 38
       },
       {
         "id": "words",
-        "label": "Three words that are so them",
+        "label": "Three words that were so them",
         "example": "Gentle, loyal, ours",
         "max": 28
       },
       {
         "id": "moment",
-        "label": "Our favourite memory",
+        "label": "Your favourite memory together",
         "example": "Every Sunday morning when you climbed onto the bed, sighed the biggest sigh and fell asleep across all of our feet",
         "type": "textarea",
         "max": 220
       },
       {
         "id": "message",
-        "label": "What would you tell them, if you could say one more thing? (This becomes your letter)",
+        "label": "If you could say one more thing to them, what would it be? (This becomes your letter)",
         "example": "Thank you for every walk, every wag and every quiet cuddle when we needed it most. You were the best friend we could ever have asked for. Forever loved.",
         "type": "textarea",
         "max": 400
@@ -4969,7 +4969,7 @@
     "fields": [
       {
         "id": "name",
-        "label": "Their name",
+        "label": "Their name, the way the family says it",
         "example": "Grandad Sam",
         "max": 16
       },
@@ -4981,44 +4981,44 @@
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is remembering them?",
         "example": "All of your family",
         "max": 34
       },
       {
         "id": "known",
-        "label": "Always known for",
+        "label": "What were they always known for?",
         "example": "The best roast potatoes in the world",
         "max": 40
       },
       {
         "id": "saying",
-        "label": "What they always said",
+        "label": "Something they always said",
         "example": "Put the kettle on, love",
         "max": 36
       },
       {
         "id": "loved",
-        "label": "Something they loved",
+        "label": "Something they loved with their whole heart",
         "example": "Dancing in the kitchen to old records",
         "max": 40
       },
       {
         "id": "words",
-        "label": "Three words that are so them",
+        "label": "Three words that were so them",
         "example": "Kind, funny, ours",
         "max": 28
       },
       {
         "id": "moment",
-        "label": "Our favourite memory",
+        "label": "A memory that makes you smile through the tears",
         "example": "Every summer when you taught the grandchildren to fish, and pretended not to notice when we let them all go",
         "type": "textarea",
         "max": 220
       },
       {
         "id": "message",
-        "label": "What would you tell them, if you could say one more thing? (This becomes your letter)",
+        "label": "If you could say one more thing to them, what would it be? (This becomes your letter)",
         "example": "Thank you for every story, every hug and every cup of tea. You made us who we are. We will carry you with us, always.",
         "type": "textarea",
         "max": 400

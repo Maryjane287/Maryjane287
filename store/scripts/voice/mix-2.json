@@ -1,0 +1,238 @@
+{
+  "christmas-magazine": {
+    "labels": {
+      "family": "Whose Christmas is this? Your family name",
+      "year": "Which Christmas are we remembering?",
+      "from": "Who is wrapping up this gift?",
+      "tradition": "The tradition you would never, ever skip, however silly",
+      "naughty": "Who is most likely to end up on the naughty list, and why?",
+      "dinner": "The bit of Christmas dinner everybody fights over",
+      "jumper": "Who wins the award for the most outrageous jumper?",
+      "words": "Three words that sum up Christmas in your house",
+      "wishes": "Everyone's wishes for the letter to Santa",
+      "moment": "The moment this year you would wrap up and keep forever",
+      "message": "What made this year special for your family? (This becomes your letter)",
+      "s_eve": "Paint us a picture of Christmas Eve at yours",
+      "s_bauble": "The decoration that comes out every year with a story attached",
+      "s_hero": "Who quietly makes Christmas happen, and how do they do it?",
+      "s_promise": "A wish or a promise for next Christmas"
+    },
+    "weaveTitle": "Christmas with {who}",
+    "weaveKicker": "The Christmas special",
+    "weave": [
+      {"need": ["s_eve"], "text": "It starts the night before. {s_eve}. The house hums, the lights blink, and somebody is always still wrapping at midnight."},
+      {"need": ["tradition"], "text": "Every family has the thing it does every year without question. For {who}, it is this: {tradition|low}. Outsiders may laugh. Insiders would never dream of skipping it."},
+      {"need": ["s_bauble"], "text": "When the boxes come down from the loft, one decoration always gets held a little longer. {s_bauble}. It is not the prettiest thing on the tree. It is the most loved."},
+      {"need": ["dinner"], "text": "Dinner is a serious business. {dinner}. Diplomacy has been attempted. Diplomacy has failed."},
+      {"need": ["naughty"], "text": "As for the naughty list, the evidence is in. {naughty}. The jury is unanimous, and slightly jealous."},
+      {"need": ["s_hero"], "text": "And behind all of it, someone is quietly holding the whole thing together. {s_hero}. Christmas does not just happen. Somebody makes it happen, out of love."},
+      {"need": ["moment"], "text": "If this year could be wrapped up and kept, it would be this moment. {moment}."}
+    ]
+  },
+  "grandparents-newspaper": {
+    "labels": {
+      "forWho": "Who gets the front page? Grandma, Grandad, Nana, Pops",
+      "fromWho": "Who are the reporters? The grandchildren, the whole family",
+      "headline": "The biggest family news they have missed",
+      "miss": "What do you miss most about being in the same room?",
+      "quote": "The funniest thing one of the children said recently",
+      "weather": "Today's weather in your house, as a forecast",
+      "message": "What would you tell them if they were sitting at your kitchen table today? (This becomes your letter)",
+      "s_taught": "The best thing they ever taught the family",
+      "s_visit": "The very first thing you will do when you see them next",
+      "s_house": "Close your eyes. What does their house smell like?",
+      "s_promise": "A promise to them, from all of you"
+    },
+    "weaveTitle": "Home news for {first}",
+    "weaveKicker": "Front page story",
+    "weave": [
+      {"need": ["headline"], "text": "The big news first, because it could not wait. {headline}. Reporters at the scene describe the mood as delighted, loud and missing you."},
+      {"need": ["miss"], "text": "There is an empty chair at the table that nobody ever quite gets used to. What everyone misses most is {miss|low}. Distance is long. Love is longer."},
+      {"need": ["quote"], "text": "Overheard in the kitchen this week: {quote|low}. The family stands by every word."},
+      {"need": ["s_house"], "text": "Some memories live in your nose. Ask anyone and they will tell you that the house smells of {s_house|low}. It is the smell of being safe and fed and loved."},
+      {"need": ["s_taught"], "text": "The lesson that stuck? {s_taught}. It gets passed on now, at every meal, to people who were not even born when it was first said."},
+      {"need": ["s_visit"], "text": "And when the day comes, the plan is already made. {s_visit}. Then probably more of the same."}
+    ]
+  },
+  "kids-magazine": {
+    "labels": {
+      "name": "Our little cover star's name, or the nickname they answer to",
+      "age": "How old are they, in proper years?",
+      "expert": "What are they the world's biggest expert in?",
+      "food": "The food they would eat for every meal if you let them",
+      "dream": "What do they say they will be when they grow up?",
+      "fact": "The funniest true story about them",
+      "message": "What do you want them to remember when they are all grown up? (This becomes your letter)",
+      "s_laugh": "What makes them laugh so hard they can't breathe?",
+      "s_kind": "A time they were kind and nobody asked them to be",
+      "s_says": "A word they say wrong that you secretly never want them to fix",
+      "s_promise": "A promise to them, pinky swear"
+    },
+    "weaveTitle": "The amazing world of {first}",
+    "weave": [
+      {"need": ["expert"], "text": "Meet {first}, aged {age} and already the leading expert in {expert|low}. Ask a question. You will get an answer, and then about forty more."},
+      {"need": ["s_says"], "text": "{first} has a language all of their own. {s_says}. Nobody in the house is ever going to correct it. Some words are too perfect to fix."},
+      {"need": ["fact"], "text": "There is a story the grown ups tell whenever they need cheering up. {fact}. Big imagination, bigger heart."},
+      {"need": ["s_kind"], "text": "And then there is the moment that made everyone's eyes go a bit watery. {s_kind}. Nobody told {first} to do it. That is just who {first} is."},
+      {"need": ["s_laugh"], "text": "Want to hear the best sound in the world? Try {s_laugh|low}. Guaranteed giggles, every single time."},
+      {"need": ["dream"], "text": "When {first} grows up, the plan is to be {dream|low}. We believe it completely."}
+    ]
+  },
+  "year-in-review-magazine": {
+    "labels": {
+      "family": "Whose year was it?",
+      "year": "Which year are we looking back on?",
+      "from": "Who is telling the story?",
+      "adventure": "The biggest adventure of the year, rain or shine",
+      "proud": "The moment that made you burst with pride",
+      "word": "If this year was one word, what would it be?",
+      "moment": "The moment you will still be laughing about when you are old",
+      "message": "What would you say to everyone about this year? (This becomes your letter)",
+      "s_ordinary": "The best ordinary day of the year, the one nobody photographed enough",
+      "s_firsts": "Something someone did for the very first time",
+      "s_learned": "What did this year teach you?",
+      "s_wish": "A wish for next year"
+    },
+    "weaveTitle": "{year}, the year of {first}",
+    "weaveKicker": "The year in review",
+    "weave": [
+      {"need": ["word"], "text": "If you had to sum up {year} in a single word, {from} would choose {word|low}. Read on and you will see why."},
+      {"need": ["adventure"], "text": "The big one was {adventure|low}. Things went wrong. Everyone was there. It was perfect."},
+      {"need": ["s_firsts"], "text": "There were firsts, too. {s_firsts}. Small steps, big cheers."},
+      {"need": ["proud"], "text": "And the proudest moment of all? {proud}. Hearts were full. Phones were out. Some tears may have happened."},
+      {"need": ["s_ordinary"], "text": "But ask what they will really remember and it is something quieter. {s_ordinary}. The best days rarely make the calendar."},
+      {"need": ["s_learned"], "text": "What did the year teach them? {s_learned}. Not a bad thing to carry into next year."}
+    ]
+  },
+  "pet-magazine": {
+    "labels": {
+      "name": "Our furry cover star's name",
+      "award": "Their official title around the house",
+      "age": "How old are they, in human years?",
+      "from": "Who loves them most? (Your name)",
+      "talent": "Their most impressive skill, the one that baffles visitors",
+      "crime": "What are they wanted for? List the charges",
+      "snack": "The snack they would sell you for",
+      "moment": "The moment that made them a household legend",
+      "message": "If they understood every word, what would you tell them? (This becomes your letter)",
+      "s_hello": "Describe the welcome you get when you walk through the door",
+      "s_nap": "Their favourite place to sleep, usually the most inconvenient one",
+      "s_taught": "Something they have taught you without saying a word",
+      "s_promise": "A promise to them"
+    },
+    "weaveTitle": "Every home needs a {first}",
+    "weave": [
+      {"need": ["s_hello"], "text": "Walk through the door and you will understand immediately. {s_hello}. Nobody else on earth is that pleased to see you, every single time."},
+      {"need": ["talent"], "text": "{first} has gifts. Some might call them ridiculous. We call them talent. {talent}."},
+      {"need": ["crime"], "text": "Of course, there is a criminal record. {crime}. All charges have been dropped in exchange for cuddles."},
+      {"need": ["s_nap"], "text": "Naps are taken seriously and always in the same place: {s_nap|low}. Do not even think about it."},
+      {"need": ["moment"], "text": "The moment that made {first} a family legend? {moment}. It gets told at every gathering. It gets better every time."},
+      {"need": ["s_taught"], "text": "And the quiet truth is that {first} has taught {from} more than any book. {s_taught}."}
+    ]
+  },
+  "star-sign-birthday-magazine": {
+    "labels": {
+      "name": "The star of the show",
+      "sign": "Their star sign",
+      "age": "The age they are turning",
+      "born": "Their birthday",
+      "from": "Who is sending the stars?",
+      "crystal": "If they were a crystal, which one would they be?",
+      "power": "Their cosmic superpower, the thing they do to every room",
+      "prediction": "What do the stars predict for their year? Be bold",
+      "message": "What do you wish the universe would tell them every morning? (This becomes your letter)",
+      "s_shine": "When do they shine the very brightest?",
+      "s_orbit": "Who gets pulled into their orbit?",
+      "s_wish": "What would they wish for on a shooting star?",
+      "s_promise": "A birthday promise to them"
+    },
+    "weaveTitle": "Written in the stars",
+    "weave": [
+      {"need": ["born"], "text": "On {born} the universe got a little brighter. {first} arrived, a true {sign}, and the stars have been showing off ever since."},
+      {"need": ["power"], "text": "Every sign has a gift. {first}'s is this: {power|low}. Astronomers cannot explain it. Friends simply enjoy it."},
+      {"need": ["s_shine"], "text": "They shine brightest like this: {s_shine|low}. If you have seen it, you know. If you have not, you are missing out."},
+      {"need": ["s_orbit"], "text": "Gravity is a funny thing. {first} pulls everyone in. {s_orbit}. Nobody ever really wants to leave."},
+      {"need": ["s_wish"], "text": "On a shooting star, {first} would wish for {s_wish|low}. The universe has been informed."},
+      {"need": ["prediction"], "text": "And the forecast for the year ahead? {prediction}. The stars are rarely wrong."}
+    ]
+  },
+  "new-baby-magazine": {
+    "labels": {
+      "name": "Our newest arrival's name",
+      "weight": "Birth weight, the number you will never forget",
+      "born": "The day they arrived",
+      "from": "Who are their very lucky grown ups?",
+      "looks": "Who do they look like? Be honest",
+      "skill": "Their first talent, already",
+      "loves": "Three things they already love",
+      "moment": "Tell us the very first moment you met",
+      "message": "What do you want them to read one day, when they are grown? (This becomes your letter)",
+      "s_name": "Why did you choose their name?",
+      "s_home": "What was the very first night at home like?",
+      "s_dream": "Something you dream for them",
+      "s_promise": "A promise to them, from the bottom of your heart"
+    },
+    "weaveTitle": "Hello, {first}",
+    "weaveKicker": "Welcome to the world",
+    "weave": [
+      {"need": ["born"], "text": "On {born}, at {weight}, the whole world changed shape. {first} arrived, and nothing has been the same since. Nothing has been better, either."},
+      {"need": ["s_name"], "text": "The name was chosen with so much care. {s_name}. It suits {first} perfectly already."},
+      {"need": ["s_home"], "text": "The first night at home went exactly as you would expect. {s_home}. Nobody would change a second of it."},
+      {"need": ["looks"], "text": "The family debate is ongoing. Who does {first} look like? The official answer is {looks|low}. The unofficial answer is the most beautiful baby who ever lived."},
+      {"need": ["loves"], "text": "{first} already has opinions. Top of the list are {loves|low}. Bottom of the list is being put down."},
+      {"need": ["s_dream"], "text": "And the dream, the big one, is simple. {s_dream}."}
+    ]
+  },
+  "first-birthday-magazine": {
+    "labels": {
+      "name": "The birthday baby",
+      "from": "Who is celebrating them? Every grown up, and the pets",
+      "word": "Their first word, and the ones that followed",
+      "food": "The food that got the funniest face",
+      "toy": "Their favourite thing in the whole house (it is never a toy)",
+      "nick": "The nickname that stuck",
+      "moment": "The moment this year that made you melt completely",
+      "message": "What do you want them to know one day about this first year? (This becomes your letter)",
+      "s_laugh": "What makes them giggle every single time?",
+      "s_song": "The song that calms them, and who sings it",
+      "s_first": "Your favourite first of the whole year",
+      "s_wish": "A wish for their next year"
+    },
+    "weaveTitle": "One whole year of {first}",
+    "weave": [
+      {"need": ["nick"], "text": "A year ago, {first} arrived. These days most people call them {nick}, and it fits like a tiny, perfect sock."},
+      {"need": ["word"], "text": "The first word was {word|low}. The family is still recovering from the pride."},
+      {"need": ["s_first"], "text": "This year was full of firsts, but one stands out. {s_first}. Grown adults cried."},
+      {"need": ["s_laugh"], "text": "If you want the best sound in the house, try {s_laugh|low}. Instant giggles. Every time."},
+      {"need": ["s_song"], "text": "And when it is time to settle, there is only one thing that works. {s_song}."},
+      {"need": ["food"], "text": "Food reviews have been mixed. The worst score of the year went to {food|low}. The face said everything."}
+    ]
+  },
+  "retirement-magazine": {
+    "labels": {
+      "name": "The guest of honour",
+      "years": "How many years of hard work?",
+      "job": "What do they do, in their own words?",
+      "from": "Who is sending them off with love?",
+      "known": "What will they be remembered for around the place?",
+      "plans": "Big plans now the alarm clock is retired too",
+      "miss": "What will everyone miss most?",
+      "moment": "The story that gets told every time their name comes up",
+      "message": "What do you want them to know as they walk out of the door? (This becomes your letter)",
+      "s_start": "How did it all start? The very first day",
+      "s_taught": "The best thing they taught everyone",
+      "s_saying": "Something they always said",
+      "s_promise": "A promise to them"
+    },
+    "weaveTitle": "Thank you, {first}",
+    "weaveKicker": "A farewell feature",
+    "weave": [
+      {"need": ["s_start"], "text": "It began {years} years ago. {s_start}. Nobody could have guessed what a mark {first} would leave."},
+      {"need": ["known"], "text": "Ask around and you will hear it straight away. {first} is famous for {known|low}. Legends are made of less."},
+      {"need": ["s_saying"], "text": "There was always a saying, usually at exactly the right moment. {s_saying}. People will be repeating it for years."},
+      {"need": ["s_taught"], "text": "The lesson everyone will keep? {s_taught}."},
+      {"need": ["miss"], "text": "The place will feel different on Monday. What everyone will miss most is {miss|low}. Some people are not easily replaced. Some people simply cannot be."},
+      {"need": ["plans"], "text": "As for what comes next: {plans|low}. They have earned every minute of it."}
+    ]
+  }
+}

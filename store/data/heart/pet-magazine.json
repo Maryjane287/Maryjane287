@@ -4,21 +4,21 @@
     {
       "id": "s_hello",
       "chapter": "The welcome home",
-      "label": "How they greet you when you come home",
+      "label": "Describe the welcome you get when you walk through the door",
       "example": "Three happy spins, then a toy dropped at your feet",
       "max": 70
     },
     {
       "id": "s_nap",
       "chapter": "Favourite place to nap",
-      "label": "Their favourite place to nap",
+      "label": "Their favourite place to sleep, usually the most inconvenient one",
       "example": "Exactly where you were about to sit",
       "max": 60
     },
     {
       "id": "s_taught",
       "chapter": "What they taught us",
-      "label": "Something they have taught you",
+      "label": "Something they have taught you without saying a word",
       "example": "That a nap and a snack fix almost anything",
       "max": 70
     },
@@ -332,5 +332,44 @@
         "{talent}"
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "s_hello"
+      ],
+      "text": "Walk through the door and you will understand immediately. {s_hello}. Nobody else on earth is that pleased to see you, every single time."
+    },
+    {
+      "need": [
+        "talent"
+      ],
+      "text": "{first} has gifts. Some might call them ridiculous. We call them talent. {talent}."
+    },
+    {
+      "need": [
+        "crime"
+      ],
+      "text": "Of course, there is a criminal record. {crime}. All charges have been dropped in exchange for cuddles."
+    },
+    {
+      "need": [
+        "s_nap"
+      ],
+      "text": "Naps are taken seriously and always in the same place: {s_nap|low}. Do not even think about it."
+    },
+    {
+      "need": [
+        "moment"
+      ],
+      "text": "The moment that made {first} a family legend? {moment}. It gets told at every gathering. It gets better every time."
+    },
+    {
+      "need": [
+        "s_taught"
+      ],
+      "text": "And the quiet truth is that {first} has taught {from} more than any book. {s_taught}."
+    }
+  ],
+  "weaveTitle": "Every home needs a {first}"
 }

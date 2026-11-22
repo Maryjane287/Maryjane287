@@ -11,20 +11,20 @@
     {
       "id": "s_word",
       "chapter": "A word we picked up",
-      "label": "A word or phrase you picked up",
+      "label": "A word or phrase you brought home",
       "example": "Thank you, in three new languages",
       "max": 60
     },
     {
       "id": "s_again",
       "chapter": "Do it all again",
-      "label": "What you would do again in a heartbeat",
+      "label": "What would you do again in a heartbeat?",
       "example": "The sunrise walk on the last morning",
       "max": 60
     },
     {
       "id": "s_next",
-      "label": "A promise for the next trip",
+      "label": "A promise for the next adventure",
       "example": "To finally see the northern lights together",
       "max": 70
     }
@@ -336,5 +336,45 @@
         "{lost}"
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "who"
+      ],
+      "text": "{who} went to {place}. They came back with full hearts, sore feet and stories they will be telling for years."
+    },
+    {
+      "need": [
+        "meal"
+      ],
+      "text": "The food first, obviously. {meal}. No meal at home has quite measured up since."
+    },
+    {
+      "need": [
+        "view"
+      ],
+      "text": "Then there was the view. {view}. Nobody said anything for a while. Nobody needed to."
+    },
+    {
+      "need": [
+        "lost"
+      ],
+      "text": "There were wrong turns, of course. They got lost finding {lost|low}. The best trips always involve getting lost."
+    },
+    {
+      "need": [
+        "s_song"
+      ],
+      "text": "Every trip has a soundtrack, and this one was {s_song|low}. Play it now and you are straight back there."
+    },
+    {
+      "need": [
+        "s_again"
+      ],
+      "text": "Would they do it again? In a heartbeat, especially {s_again|low}."
+    }
+  ],
+  "weaveTitle": "{days} days in {place}",
+  "weaveKicker": "The travel issue"
 }

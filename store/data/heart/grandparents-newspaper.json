@@ -4,27 +4,27 @@
     {
       "id": "s_taught",
       "chapter": "The best thing you taught us",
-      "label": "The best thing they taught the family",
+      "label": "The best thing they ever taught the family",
       "example": "That there is always room for one more at the table",
       "max": 80
     },
     {
       "id": "s_visit",
       "chapter": "The first thing we will do together",
-      "label": "The first thing you will do when you see them",
+      "label": "The very first thing you will do when you see them next",
       "example": "A huge hug at the door, then pancakes",
       "max": 70
     },
     {
       "id": "s_house",
       "chapter": "Your house smells like",
-      "label": "Their house smells like...",
+      "label": "Close your eyes. What does their house smell like?",
       "example": "Toast, roses and the good biscuits",
       "max": 60
     },
     {
       "id": "s_promise",
-      "label": "A promise to them",
+      "label": "A promise to them, from all of you",
       "example": "To send a drawing every single week",
       "max": 70
     }
@@ -332,5 +332,45 @@
         "{fromWho}"
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "headline"
+      ],
+      "text": "The big news first, because it could not wait. {headline}. Reporters at the scene describe the mood as delighted, loud and missing you."
+    },
+    {
+      "need": [
+        "miss"
+      ],
+      "text": "There is an empty chair at the table that nobody ever quite gets used to. What everyone misses most is {miss|low}. Distance is long. Love is longer."
+    },
+    {
+      "need": [
+        "quote"
+      ],
+      "text": "Overheard in the kitchen this week: {quote|low}. The family stands by every word."
+    },
+    {
+      "need": [
+        "s_house"
+      ],
+      "text": "Some memories live in your nose. Ask anyone and they will tell you that the house smells of {s_house|low}. It is the smell of being safe and fed and loved."
+    },
+    {
+      "need": [
+        "s_taught"
+      ],
+      "text": "The lesson that stuck? {s_taught}. It gets passed on now, at every meal, to people who were not even born when it was first said."
+    },
+    {
+      "need": [
+        "s_visit"
+      ],
+      "text": "And when the day comes, the plan is already made. {s_visit}. Then probably more of the same."
+    }
+  ],
+  "weaveTitle": "Home news for {first}",
+  "weaveKicker": "Front page story"
 }

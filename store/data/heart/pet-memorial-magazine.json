@@ -4,14 +4,14 @@
     {
       "id": "s_hello",
       "chapter": "How you said hello",
-      "label": "How they greeted you",
+      "label": "How did they greet you?",
       "example": "A happy little wiggle from nose to tail",
       "max": 60
     },
     {
       "id": "s_comfort",
       "chapter": "When we needed you",
-      "label": "How they comforted you on a hard day",
+      "label": "How did they comfort you on a hard day?",
       "example": "Rested their head on a knee and simply stayed",
       "max": 70
     },
@@ -336,5 +336,45 @@
         ""
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "years"
+      ],
+      "text": "For {years} years, {first} was part of every single day. Not part of the family. The heart of it."
+    },
+    {
+      "need": [
+        "s_hello"
+      ],
+      "text": "Coming home meant this: {s_hello|low}. It is the welcome everyone misses most."
+    },
+    {
+      "need": [
+        "spot"
+      ],
+      "text": "There is a spot that will always belong to {first}. {spot}. Sometimes we still glance at it, just in case."
+    },
+    {
+      "need": [
+        "s_comfort"
+      ],
+      "text": "On the hard days, {first} always knew. {s_comfort}. No words. None were ever needed."
+    },
+    {
+      "need": [
+        "silly"
+      ],
+      "text": "And it was not all quiet love. {silly}. We laugh every time we remember it, and we hope we always will."
+    },
+    {
+      "need": [
+        "s_sound"
+      ],
+      "text": "Some sounds stay with you. {s_sound}. Forever."
+    }
+  ],
+  "weaveTitle": "Forever our {first}",
+  "weaveKicker": "With love"
 }

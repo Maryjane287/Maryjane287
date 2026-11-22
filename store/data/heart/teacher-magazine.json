@@ -4,14 +4,14 @@
     {
       "id": "s_learned",
       "chapter": "The biggest thing we learned",
-      "label": "The biggest thing your child learned this year",
+      "label": "The biggest thing your child learned this year (not on the curriculum)",
       "example": "That being brave means trying, even when it is hard",
       "max": 80
     },
     {
       "id": "s_kind",
       "chapter": "A kindness we will never forget",
-      "label": "A kindness you will never forget",
+      "label": "A kindness from them that you will never forget",
       "example": "Sitting with Leo on his first wobbly morning",
       "max": 80
     },
@@ -332,5 +332,45 @@
         "A star, with a gold sticker"
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "says"
+      ],
+      "text": "Ask any child in the class and they will say it in the same voice. {says}. It is the sound of a room where everyone feels they belong."
+    },
+    {
+      "need": [
+        "lesson"
+      ],
+      "text": "There was one lesson that came home with every child. {lesson}. Dinner tables have not been quiet since."
+    },
+    {
+      "need": [
+        "s_kind"
+      ],
+      "text": "The parents remember something else. {s_kind}. You never forget the person who was gentle with your child."
+    },
+    {
+      "need": [
+        "s_learned"
+      ],
+      "text": "The biggest lesson of the year was not in any book. {s_learned}."
+    },
+    {
+      "need": [
+        "power"
+      ],
+      "text": "And yes, {first} has a superpower. {power}. Every teacher should be so gifted."
+    },
+    {
+      "need": [
+        "moment"
+      ],
+      "text": "The day nobody will forget? {moment}."
+    }
+  ],
+  "weaveTitle": "The teacher we will never forget",
+  "weaveKicker": "A thank you feature"
 }

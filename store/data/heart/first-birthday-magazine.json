@@ -4,21 +4,21 @@
     {
       "id": "s_laugh",
       "chapter": "What makes you laugh most",
-      "label": "What makes them laugh most",
+      "label": "What makes them giggle every single time?",
       "example": "Peekaboo behind the curtain, every single time",
       "max": 70
     },
     {
       "id": "s_song",
       "chapter": "The song that calms you",
-      "label": "The song that calms them",
+      "label": "The song that calms them, and who sings it",
       "example": "Twinkle, twinkle, sung very quietly by Dad",
       "max": 60
     },
     {
       "id": "s_first",
       "chapter": "Our favourite first",
-      "label": "Your favourite first this year",
+      "label": "Your favourite first of the whole year",
       "example": "The first time you waved goodbye to the postman",
       "max": 80
     },
@@ -332,5 +332,44 @@
         "{toy}"
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "nick"
+      ],
+      "text": "A year ago, {first} arrived. These days most people call them {nick}, and it fits like a tiny, perfect sock."
+    },
+    {
+      "need": [
+        "word"
+      ],
+      "text": "The first word was {word|low}. The family is still recovering from the pride."
+    },
+    {
+      "need": [
+        "s_first"
+      ],
+      "text": "This year was full of firsts, but one stands out. {s_first}. Grown adults cried."
+    },
+    {
+      "need": [
+        "s_laugh"
+      ],
+      "text": "If you want the best sound in the house, try {s_laugh|low}. Instant giggles. Every time."
+    },
+    {
+      "need": [
+        "s_song"
+      ],
+      "text": "And when it is time to settle, there is only one thing that works. {s_song}."
+    },
+    {
+      "need": [
+        "food"
+      ],
+      "text": "Food reviews have been mixed. The worst score of the year went to {food|low}. The face said everything."
+    }
+  ],
+  "weaveTitle": "One whole year of {first}"
 }

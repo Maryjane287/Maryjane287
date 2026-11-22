@@ -4,21 +4,21 @@
     {
       "id": "s_little",
       "chapter": "Little you wanted to be",
-      "label": "What they wanted to be when they were little",
+      "label": "What did they want to be when they were small?",
       "example": "An astronaut, then a chef, then a dinosaur",
       "max": 70
     },
     {
       "id": "s_hard",
       "chapter": "The hard bit you pushed through",
-      "label": "A hard moment they pushed through",
+      "label": "A hard moment they pushed through when it would have been easier to stop",
       "example": "Failing the first exam, then smashing the retake",
       "max": 80
     },
     {
       "id": "s_always",
       "chapter": "Always the one who",
-      "label": "Among friends, they were always the one who...",
+      "label": "Among their friends, they were always the one who...",
       "example": "Brought snacks to every single study session",
       "max": 70
     },
@@ -330,5 +330,45 @@
         "{next}"
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "s_little"
+      ],
+      "text": "Long before {subject|low}, there was a small person with big plans. {s_little}. The plans changed. The ambition never did."
+    },
+    {
+      "need": [
+        "fuel"
+      ],
+      "text": "The degree was earned the honest way, powered by {fuel|low}. Nobody said it would be glamorous."
+    },
+    {
+      "need": [
+        "s_hard"
+      ],
+      "text": "It was not always easy, and that is what makes today matter. {s_hard}. That is the bit {from} is proudest of."
+    },
+    {
+      "need": [
+        "s_always"
+      ],
+      "text": "Friends will tell you {first} was always the one who {s_always|low}. Some things you cannot teach."
+    },
+    {
+      "need": [
+        "moment"
+      ],
+      "text": "And then the moment it was real. {moment}."
+    },
+    {
+      "need": [
+        "next"
+      ],
+      "text": "Next? {next}. The world has no idea what is coming."
+    }
+  ],
+  "weaveTitle": "Class of {year}: {first}",
+  "weaveKicker": "The graduation feature"
 }

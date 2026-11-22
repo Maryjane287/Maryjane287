@@ -4,27 +4,27 @@
     {
       "id": "s_eve",
       "chapter": "Christmas Eve at ours",
-      "label": "What Christmas Eve looks like at yours",
+      "label": "Paint us a picture of Christmas Eve at yours",
       "example": "Carols, a film and far too many mince pies",
       "max": 70
     },
     {
       "id": "s_bauble",
       "chapter": "The decoration with a story",
-      "label": "The decoration with a story",
+      "label": "The decoration that comes out every year with a story attached",
       "example": "A wonky star Leo made when he was four",
       "max": 60
     },
     {
       "id": "s_hero",
       "chapter": "The one who makes Christmas happen",
-      "label": "Who makes Christmas happen, and how",
+      "label": "Who quietly makes Christmas happen, and how do they do it?",
       "example": "Mum, with a list, a timer and a lot of patience",
       "max": 70
     },
     {
       "id": "s_promise",
-      "label": "A wish or promise for next Christmas",
+      "label": "A wish or a promise for next Christmas",
       "example": "Fewer arguments about the rules of board games",
       "max": 60
     }
@@ -337,5 +337,51 @@
         "{naughty}"
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "s_eve"
+      ],
+      "text": "It starts the night before. {s_eve}. The house hums, the lights blink, and somebody is always still wrapping at midnight."
+    },
+    {
+      "need": [
+        "tradition"
+      ],
+      "text": "Every family has the thing it does every year without question. For {who}, it is this: {tradition|low}. Outsiders may laugh. Insiders would never dream of skipping it."
+    },
+    {
+      "need": [
+        "s_bauble"
+      ],
+      "text": "When the boxes come down from the loft, one decoration always gets held a little longer. {s_bauble}. It is not the prettiest thing on the tree. It is the most loved."
+    },
+    {
+      "need": [
+        "dinner"
+      ],
+      "text": "Dinner is a serious business. {dinner}. Diplomacy has been attempted. Diplomacy has failed."
+    },
+    {
+      "need": [
+        "naughty"
+      ],
+      "text": "As for the naughty list, the evidence is in. {naughty}. The jury is unanimous, and slightly jealous."
+    },
+    {
+      "need": [
+        "s_hero"
+      ],
+      "text": "And behind all of it, someone is quietly holding the whole thing together. {s_hero}. Christmas does not just happen. Somebody makes it happen, out of love."
+    },
+    {
+      "need": [
+        "moment"
+      ],
+      "text": "If this year could be wrapped up and kept, it would be this moment. {moment}."
+    }
+  ],
+  "weaveTitle": "Christmas with {who}",
+  "weaveKicker": "The Christmas special"
 }

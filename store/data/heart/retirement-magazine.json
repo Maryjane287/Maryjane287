@@ -4,7 +4,7 @@
     {
       "id": "s_start",
       "chapter": "Where it all began",
-      "label": "How they started out",
+      "label": "How did it all start? The very first day",
       "example": "As a nervous trainee in a borrowed tie",
       "max": 70
     },
@@ -330,5 +330,45 @@
         "{plans}"
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "s_start"
+      ],
+      "text": "It began {years} years ago. {s_start}. Nobody could have guessed what a mark {first} would leave."
+    },
+    {
+      "need": [
+        "known"
+      ],
+      "text": "Ask around and you will hear it straight away. {first} is famous for {known|low}. Legends are made of less."
+    },
+    {
+      "need": [
+        "s_saying"
+      ],
+      "text": "There was always a saying, usually at exactly the right moment. {s_saying}. People will be repeating it for years."
+    },
+    {
+      "need": [
+        "s_taught"
+      ],
+      "text": "The lesson everyone will keep? {s_taught}."
+    },
+    {
+      "need": [
+        "miss"
+      ],
+      "text": "The place will feel different on Monday. What everyone will miss most is {miss|low}. Some people are not easily replaced. Some people simply cannot be."
+    },
+    {
+      "need": [
+        "plans"
+      ],
+      "text": "As for what comes next: {plans|low}. They have earned every minute of it."
+    }
+  ],
+  "weaveTitle": "Thank you, {first}",
+  "weaveKicker": "A farewell feature"
 }

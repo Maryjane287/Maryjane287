@@ -4,27 +4,27 @@
     {
       "id": "s_ordinary",
       "chapter": "The best ordinary day",
-      "label": "The best ordinary day of the year",
+      "label": "The best ordinary day of the year, the one nobody photographed enough",
       "example": "A rainy Sunday building a blanket fort",
       "max": 70
     },
     {
       "id": "s_firsts",
       "chapter": "Our first time",
-      "label": "Something you did for the first time",
+      "label": "Something someone did for the very first time",
       "example": "Mia tried sushi and loved it",
       "max": 70
     },
     {
       "id": "s_learned",
       "chapter": "What this year taught us",
-      "label": "What this year taught you",
+      "label": "What did this year teach you?",
       "example": "That the best plans are the ones that go wrong",
       "max": 70
     },
     {
       "id": "s_wish",
-      "label": "A wish or promise for next year",
+      "label": "A wish for next year",
       "example": "More weekends away, all together",
       "max": 70
     }
@@ -332,5 +332,45 @@
         "Back where we started, and happier for it."
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "word"
+      ],
+      "text": "If you had to sum up {year} in a single word, {from} would choose {word|low}. Read on and you will see why."
+    },
+    {
+      "need": [
+        "adventure"
+      ],
+      "text": "The big one was {adventure|low}. Things went wrong. Everyone was there. It was perfect."
+    },
+    {
+      "need": [
+        "s_firsts"
+      ],
+      "text": "There were firsts, too. {s_firsts}. Small steps, big cheers."
+    },
+    {
+      "need": [
+        "proud"
+      ],
+      "text": "And the proudest moment of all? {proud}. Hearts were full. Phones were out. Some tears may have happened."
+    },
+    {
+      "need": [
+        "s_ordinary"
+      ],
+      "text": "But ask what they will really remember and it is something quieter. {s_ordinary}. The best days rarely make the calendar."
+    },
+    {
+      "need": [
+        "s_learned"
+      ],
+      "text": "What did the year teach them? {s_learned}. Not a bad thing to carry into next year."
+    }
+  ],
+  "weaveTitle": "{year}, the year of {first}",
+  "weaveKicker": "The year in review"
 }
