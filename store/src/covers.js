@@ -478,6 +478,18 @@ function searchWords(v, facts, who, extra = ['LOVE', 'SMILE', 'LEGEND', 'MAGIC',
   return [...out];
 }
 
+// Which family of running order a magazine follows (see ORDER in renderFullMagazine).
+export function magFamily(mag) {
+  if (mag.structure) return mag.structure;
+  const k = `${mag.slug} ${mag.occasion || ''}`.toLowerCase();
+  if (/memorial|in loving memory/.test(k)) return 'tribute';
+  if (/kids|baby|first-birthday|cake-smash|sibling|twins|little|junior|childhood|chosen|christening|tiny-steps|first-day-school|twelve-months|toddler|children/.test(k)) return 'little';
+  if (/love|valentine|boyfriend|girlfriend|husband|wife|marry|engagement|wedding|anniversary|first-date|forever|still-falling|adventures-with-you|long-distance|first-christmas-together|soulmate|hundred-reasons/.test(k)) return 'love';
+  if (/grand|mother|mum|father|dad|family|generations|matriarch|siblings|sister|brother|aunt|uncle|new-parents|heritage|reunion|newspaper/.test(k)) return 'family';
+  if (/friend|girls-club|brotherhood|bridesmaid|maid-of-honour|unfiltered|lads|tour/.test(k)) return 'friends';
+  return 'celebration';
+}
+
 export function renderFullMagazine(mag, values = {}, opts = {}) {
   const p = PALETTES[opts.palette] || PALETTES.coral;
   const photos = opts.photos || {};
@@ -735,7 +747,6 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
     const knew = gentle ? 'knew' : 'knows';
     const ch = [...chapters.filter(c => String(c[1] || '').length > 14 && !/^\d/.test(String(c[1]))), ...chapters.filter(c => c[1])].filter((c, i, a) => a.indexOf(c) === i);
     const pull = String(feature[1] || '');
-    const toc = [[3, mag.letterTitle || 'A letter for you'], [4, 'The cover story'], [8, H.picks?.title], [9, H.timeline?.title], [11, H.letters?.title], [12, H.sig?.title], ...(friendNotes.length ? [[15, 'Voices']] : []), [16, H.facts?.title], [17, H.world?.title], [18, H.album?.title || (gentle ? `${first}, always` : `${first}, unfiltered`)], [20, H.promises?.title], [21, H.album?.filmTitle || 'Frame by frame'], [22, 'Now showing']].filter(([, x]) => x);
     const facts6 = own.filter(f => v[f.id]).slice(0, 6);
     const nums = own.filter(f => /^\s*\d[\d,.]*\s*$/.test(String(v[f.id] || ''))).slice(0, 2).map(f => [esc(v[f.id]), t(L[f.id] || f.label)]);
     const bigNums = [...nums, ['100%', gentle ? 'Loved, always' : 'Loved'], ['1', 'One of a kind']].slice(0, 4);
@@ -777,7 +788,7 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
     const film = (albumPics.length > 5 ? albumPics.slice(5, 9) : [...albumPics.slice(Math.min(roll.length, albumPics.length - 1)), ...albumPics]).slice(0, 4);
     const fig = ([src, cap], j, cls) => { const [l, x] = capOf(j, cap); return `<figure class="${cls}"><div class="al-ph">${src ? `<img src="${esc(src)}" alt="">` : ''}</div><figcaption><i>${String(j + 1).padStart(2, '0')}</i>${l ? `<b>${l}</b>` : ''}<span>${x}</span></figcaption></figure>`; };
     const rollPage = ed(`ed-roll al-n${roll.length}`, `<div class="ed-pad"><p class="ed-k">${t(A.kicker || 'The camera roll')}</p><h3>${t(A.title || (gentle ? `${first}, always` : `${first}, unfiltered`))}</h3><div class="al-grid">${roll.map((x, j) => fig(x, j, `al-f al-f${j + 1}`)).join('')}</div></div>`);
-    const filmPage = ed('ed-film', `<div class="fm-col"><p class="ed-k">${t(A.filmKicker || 'Frame by frame')}</p><h3>${t(A.filmTitle || 'Frame by frame')}</h3><p class="fm-intro">${t(A.filmIntro || `The little moments that make ${first} who they are, one frame at a time.`)}</p><ol class="fm-caps">${film.map((x, j) => { const [l, c] = capOf(j + roll.length, x[1]); return `<li><i>${String(j + roll.length + 1).padStart(2, '0')}</i>${l ? `<b>${l}</b>` : ''}<span>${c}</span></li>`; }).join('')}</ol></div><div class="fm-strip">${film.map(([src]) => `<div class="fm-fr">${src ? `<img src="${esc(src)}" alt="">` : ''}</div>`).join('')}</div>`);
+    const filmPage = ed('ed-film', `<div class="fm-col"><p class="ed-k">${t(A.filmKicker || 'Frame by frame')}</p><h3>${t(A.filmTitle || 'Frame by frame')}</h3><p class="fm-intro">${t(A.filmIntro || `The little moments that make ${first}, ${first}. One frame at a time.`)}</p><ol class="fm-caps">${film.map((x, j) => { const [l, c] = capOf(j + roll.length, x[1]); return `<li><i>${String(j + roll.length + 1).padStart(2, '0')}</i>${l ? `<b>${l}</b>` : ''}<span>${c}</span></li>`; }).join('')}</ol></div><div class="fm-strip">${film.map(([src]) => `<div class="fm-fr">${src ? `<img src="${esc(src)}" alt="">` : ''}</div>`).join('')}</div>`);
     // The cover story written as a real feature: the buyer's answers woven into
     // warm sentences (data/heart/<slug>.json "weave"), never shown as a form.
     // Each paragraph names the answers it needs; "alt" is used when one is missing.
@@ -788,32 +799,55 @@ export function renderFullMagazine(mag, values = {}, opts = {}) {
       const x = answer(k); return esc(low ? soft(x) : x);
     });
     const woven = (H.weave || []).map(w => (w.need || []).every(k => answer(k)) ? weaveLine(w.text) : w.alt ? weaveLine(w.alt) : '').filter(Boolean);
-    const editorial = [
-      pages[0],
-      ed('ed-contents', `${pic(slot(3, 1), 'ed-c-ph')}<div class="ed-c-col"><p class="ed-k">Inside this issue</p><h3>Inside</h3><ol class="ed-toc">${toc.map(([n, x]) => `<li><b>${n}</b><span>${t(x)}</span></li>`).join('')}</ol><p class="ed-c-note">Made for ${esc(who)}, with love.</p></div>`),
-      ed(`ed-letter${msg.length > 260 ? ' ed-long' : msg.length > 150 ? ' ed-mid' : ''}`, `${pic(slot(0, 0), 'ed-l-ph')}${voiceOk(values.v_letter) ? `<div class="ed-l-qr">${qrSvg(listenUrl(values.v_letter, from))}<span>Scan to hear<br>me say it</span></div>` : ''}<div class="ed-l-body"><p class="ed-k">${esc(mag.letterTitle || 'A letter for you')}</p><h3>Dear ${esc(greet)},</h3><p class="ed-l-txt">${esc(msg)}</p><p class="ed-sign">With love, ${esc(from)}</p></div>`),
-      ed('ed-open', `${pic(slot(1, 2), 'ed-o-ph')}<div class="ed-o-shade"></div><div class="ed-o-txt"><p class="ed-k">The cover story</p><h3 style="font-size:calc(${fit(String(t(H.story?.title || who)), 150, 0.5, 13)} * var(--cq))">${t(H.story?.title || who)}</h3><p class="ed-o-dek">${leadLine(s, mag)}</p></div>`),
-      woven.length ? ed('ed-article ed-woven', `<div class="ed-pad"><p class="ed-k">${t(H.weaveKicker || 'The cover story')}</p>${H.weaveTitle ? `<h3 class="ed-w-title">${t(H.weaveTitle)}</h3>` : ''}<div class="ed-cols">${woven.map((x, i) => `<p${i ? '' : ' class="ed-drop"'}>${x}</p>`).join('')}</div>${pull ? `<p class="ed-pull ed-pull-soft${pull.length > 130 ? ' ed-pull-s' : ''}">${esc(pull.replace(/[.!]?\s*$/, ''))}.</p>` : ''}<p class="ed-hand">${t(H.story?.hand || '')}</p></div>`) : ed('ed-article', `<div class="ed-pad"><p class="ed-k">The cover story</p>${pull ? `<blockquote class="ed-pull${pull.length > 130 ? ' ed-pull-s' : ''}">&ldquo;${esc(pull)}&rdquo;</blockquote>` : ''}<div class="ed-cols"><p class="ed-drop">Ask anyone who ${knew} ${esc(first)} to sum them up${words ? `, and you will hear the same words: ${words}` : ''}. ${t('{from}')} told us the rest of the story.</p>${ch.filter(c => !/^\s*\d+\s*$/.test(String(c[1]))).map(([l, x]) => `<h4>${t(l)}</h4><p>${esc(x)}</p>`).join('')}</div><p class="ed-hand">${t(H.story?.hand || '')}</p></div>`),
-      ed('ed-file', `${pic(slot(4, 1), 'ed-f-ph')}<div class="ed-f-shade"></div><p class="ed-k ed-f-k">The fact file</p><h3 class="ed-f-name" style="font-size:calc(${fit(String(first).toUpperCase(), 86, 0.48, 20)} * var(--cq))">${esc(String(first).toUpperCase())}</h3><dl class="ed-fl${facts6.reduce((n, f) => n + String(v[f.id]).length, 0) > 150 ? ' ed-fl-s' : ''}">${facts6.map(f => `<div><dt>${t(L[f.id] || f.label)}</dt><dd>${esc(v[f.id])}</dd></div>`).join('')}</dl>`),
-      ed('ed-full', `${pic(slot(5, 0), 'ed-full-ph')}${ch[0] ? `<p class="ed-cap"><b>${t(ch[0][0])}</b>${esc(ch[0][1])}</p>` : ''}`),
-      tenPage,
-      pages[8],
-      ed('ed-duo', `${pic(slot(6, 1), 'ed-d1')}${pic(slot(7, 2), `ed-d2${pool.length > 3 ? ' ed-nozoom' : ''}`)}${ch[1] ? `<p class="ed-cap ed-cap1"><b>${t(ch[1][0])}</b>${esc(ch[1][1])}</p>` : ''}${ch[2] ? `<p class="ed-cap ed-cap2"><b>${t(ch[2][0])}</b>${esc(ch[2][1])}</p>` : ''}`),
-      pages[10],
-      H.sig ? sigPage(H.sig) : ed('ed-nums', `<div class="ed-pad"><p class="ed-k">By the numbers</p><h3>${esc(first)}, in numbers</h3><div class="ed-big">${bigNums.map(([n, l]) => `<div><b style="font-size:calc(${fit(String(n).replace(/&[^;]+;/g, 'x'), 38, 0.55, 20)} * var(--cq))">${n}</b><span>${l}</span></div>`).join('')}</div><div class="ed-bars">${stats.map(([k, n]) => `<div><span>${k}</span><i><em style="width:${n}%"></em></i><b>${n}%</b></div>`).join('')}</div></div>`),
-      ed('ed-quote', `${pic(slot(8, 2), 'ed-q-ph')}<div class="ed-q-shade"></div><div class="ed-q-in"><p class="ed-k">In a word</p><p class="ed-q-txt" style="font-size:calc(${fit(String(words).replace(/&[^;]+;/g, 'x'), 260, 0.5, 13)} * var(--cq))">&ldquo;${words}&rdquo;</p><p class="ed-q-by">Everyone who ${knew} ${esc(first)}</p></div>`),
-      pages[14],
-      friendNotes.length ? ed('ed-voices', `<div class="ed-pad"><p class="ed-k">Voices</p><h3>${friendNotes.length ? `What everyone says about ${esc(first)}` : `Leave a little message for ${esc(first)}`}</h3><div class="ed-vs">${voices}</div></div>`) : ed('ed-full', `${pic(slot(15, 0), 'ed-full-ph')}${ch[3] ? `<p class="ed-cap"><b>${t(ch[3][0])}</b>${esc(ch[3][1])}</p>` : words ? `<p class="ed-cap"><b>In a word</b>${words}</p>` : ''}`),
-      pages[11],
-      pages[16],
-      rollPage,
-      gentle ? ed('ed-full', `${pic(slot(16, 2), 'ed-full-ph')}<p class="ed-cap"><b>Forever loved</b>${esc(first)}, always with us.</p>`) : pages[12],
-      prPage,
-      filmPage,
-      pages[22],
-      pages[23],
-      ed('ed-back', `${pic(slot(2, 1), 'ed-b-ph')}<div class="ed-b-shade"></div><div class="ed-b-in"><p class="ed-k">Made with love for</p><h3 style="font-size:calc(${fit(String(who), 84, 0.5, 16)} * var(--cq))">${esc(who)}</h3><p class="ed-b-q">${words ? `&ldquo;${words}&rdquo;` : ''}</p><p class="ed-b-from">From ${esc(from)}</p></div><div class="ed-b-foot"><span>Cover Story</span>${songOk(values.songLink) ? `<div class="ed-song">${qrSvg(String(values.songLink).trim())}<span>Scan to play<b>${esc(v.song && String(v.song).length < 34 ? v.song : 'our song')}</b></span></div>` : ''}${barcode()}</div>`),
-    ];
+    const PG = {
+      cover: pages[0],
+      contents: null,
+      letter: ed(`ed-letter${msg.length > 260 ? ' ed-long' : msg.length > 150 ? ' ed-mid' : ''}`, `${pic(slot(0, 0), 'ed-l-ph')}${voiceOk(values.v_letter) ? `<div class="ed-l-qr">${qrSvg(listenUrl(values.v_letter, from))}<span>Scan to hear<br>me say it</span></div>` : ''}<div class="ed-l-body"><p class="ed-k">${esc(mag.letterTitle || 'A letter for you')}</p><h3>Dear ${esc(greet)},</h3><p class="ed-l-txt">${esc(msg)}</p><p class="ed-sign">With love, ${esc(from)}</p></div>`),
+      open: ed('ed-open', `${pic(slot(1, 2), 'ed-o-ph')}<div class="ed-o-shade"></div><div class="ed-o-txt"><p class="ed-k">The cover story</p><h3 style="font-size:calc(${fit(String(t(H.story?.title || who)), 150, 0.5, 13)} * var(--cq))">${t(H.story?.title || who)}</h3><p class="ed-o-dek">${leadLine(s, mag)}</p></div>`),
+      article: woven.length ? ed('ed-article ed-woven', `<div class="ed-pad"><p class="ed-k">${t(H.weaveKicker || 'The cover story')}</p>${H.weaveTitle ? `<h3 class="ed-w-title">${t(H.weaveTitle)}</h3>` : ''}<div class="ed-cols">${woven.map((x, i) => `<p${i ? '' : ' class="ed-drop"'}>${x}</p>`).join('')}</div>${pull ? `<p class="ed-pull ed-pull-soft${pull.length > 130 ? ' ed-pull-s' : ''}">${esc(pull.replace(/[.!]?\s*$/, ''))}.</p>` : ''}<p class="ed-hand">${t(H.story?.hand || '')}</p></div>`) : ed('ed-article', `<div class="ed-pad"><p class="ed-k">The cover story</p>${pull ? `<blockquote class="ed-pull${pull.length > 130 ? ' ed-pull-s' : ''}">&ldquo;${esc(pull)}&rdquo;</blockquote>` : ''}<div class="ed-cols"><p class="ed-drop">Ask anyone who ${knew} ${esc(first)} to sum them up${words ? `, and you will hear the same words: ${words}` : ''}. ${t('{from}')} told us the rest of the story.</p>${ch.filter(c => !/^\s*\d+\s*$/.test(String(c[1]))).map(([l, x]) => `<h4>${t(l)}</h4><p>${esc(x)}</p>`).join('')}</div><p class="ed-hand">${t(H.story?.hand || '')}</p></div>`),
+      file: ed('ed-file', `${pic(slot(4, 1), 'ed-f-ph')}<div class="ed-f-shade"></div><p class="ed-k ed-f-k">The fact file</p><h3 class="ed-f-name" style="font-size:calc(${fit(String(first).toUpperCase(), 86, 0.48, 20)} * var(--cq))">${esc(String(first).toUpperCase())}</h3><dl class="ed-fl${facts6.reduce((n, f) => n + String(v[f.id]).length, 0) > 150 ? ' ed-fl-s' : ''}">${facts6.map(f => `<div><dt>${t(L[f.id] || f.label)}</dt><dd>${esc(v[f.id])}</dd></div>`).join('')}</dl>`),
+      full1: ed('ed-full', `${pic(slot(5, 0), 'ed-full-ph')}${ch[0] ? `<p class="ed-cap"><b>${t(ch[0][0])}</b>${esc(ch[0][1])}</p>` : ''}`),
+      ten: tenPage,
+      day: pages[8],
+      duo: ed('ed-duo', `${pic(slot(6, 1), 'ed-d1')}${pic(slot(7, 2), `ed-d2${pool.length > 3 ? ' ed-nozoom' : ''}`)}${ch[1] ? `<p class="ed-cap ed-cap1"><b>${t(ch[1][0])}</b>${esc(ch[1][1])}</p>` : ''}${ch[2] ? `<p class="ed-cap ed-cap2"><b>${t(ch[2][0])}</b>${esc(ch[2][1])}</p>` : ''}`),
+      little: pages[10],
+      sig: H.sig ? sigPage(H.sig) : ed('ed-nums', `<div class="ed-pad"><p class="ed-k">By the numbers</p><h3>${esc(first)}, in numbers</h3><div class="ed-big">${bigNums.map(([n, l]) => `<div><b style="font-size:calc(${fit(String(n).replace(/&[^;]+;/g, 'x'), 38, 0.55, 20)} * var(--cq))">${n}</b><span>${l}</span></div>`).join('')}</div><div class="ed-bars">${stats.map(([k, n]) => `<div><span>${k}</span><i><em style="width:${n}%"></em></i><b>${n}%</b></div>`).join('')}</div></div>`),
+      quote: ed('ed-quote', `${pic(slot(8, 2), 'ed-q-ph')}<div class="ed-q-shade"></div><div class="ed-q-in"><p class="ed-k">In a word</p><p class="ed-q-txt" style="font-size:calc(${fit(String(words).replace(/&[^;]+;/g, 'x'), 260, 0.5, 13)} * var(--cq))">&ldquo;${words}&rdquo;</p><p class="ed-q-by">Everyone who ${knew} ${esc(first)}</p></div>`),
+      poster: pages[14],
+      voices: friendNotes.length ? ed('ed-voices', `<div class="ed-pad"><p class="ed-k">Voices</p><h3>${friendNotes.length ? `What everyone says about ${esc(first)}` : `Leave a little message for ${esc(first)}`}</h3><div class="ed-vs">${voices}</div></div>`) : ed('ed-full', `${pic(slot(15, 0), 'ed-full-ph')}${ch[3] ? `<p class="ed-cap"><b>${t(ch[3][0])}</b>${esc(ch[3][1])}</p>` : words ? `<p class="ed-cap"><b>In a word</b>${words}</p>` : ''}`),
+      guide: pages[11],
+      world: pages[16],
+      roll: rollPage,
+      full2: gentle ? ed('ed-full', `${pic(slot(16, 2), 'ed-full-ph')}<p class="ed-cap"><b>Forever loved</b>${esc(first)}, always with us.</p>`) : pages[12],
+      promises: prPage,
+      film: filmPage,
+      movie: pages[22],
+      note: pages[23],
+      back: ed('ed-back', `${pic(slot(2, 1), 'ed-b-ph')}<div class="ed-b-shade"></div><div class="ed-b-in"><p class="ed-k">Made with love for</p><h3 style="font-size:calc(${fit(String(who), 84, 0.5, 16)} * var(--cq))">${esc(who)}</h3><p class="ed-b-q">${words ? `&ldquo;${words}&rdquo;` : ''}</p><p class="ed-b-from">From ${esc(from)}</p></div><div class="ed-b-foot"><span>Cover Story</span>${songOk(values.songLink) ? `<div class="ed-song">${qrSvg(String(values.songLink).trim())}<span>Scan to play<b>${esc(v.song && String(v.song).length < 34 ? v.song : 'our song')}</b></span></div>` : ''}${barcode()}</div>`),
+    };
+    // A second full photo page, for structures that want more pictures.
+    if (PG.full2 === pages[12]) PG.full2 = ed('ed-full', `${pic(slot(16, 2), 'ed-full-ph')}${ch[3] ? `<p class="ed-cap"><b>${t(ch[3][0])}</b>${esc(ch[3][1])}</p>` : ''}`);
+    PG.quiz = pages[12];
+    // Each family of magazines has its own running order, so a love story, a
+    // family album, a little one's first year and a tribute read differently.
+    const fam = magFamily(mag);
+    const ORDER = {
+      celebration: ['cover', 'contents', 'letter', 'open', 'article', 'file', 'full1', 'ten', 'day', 'duo', 'little', 'sig', 'quote', 'poster', 'voices', 'guide', 'world', 'roll', gentle ? 'full2' : 'quiz', 'promises', 'film', 'movie', 'note', 'back'],
+      love: ['cover', 'contents', 'open', 'article', 'letter', 'full1', 'roll', 'ten', 'duo', 'sig', 'little', 'quote', 'film', 'day', 'voices', 'world', 'full2', 'promises', 'poster', 'guide', 'quiz', 'movie', 'note', 'back'],
+      family: ['cover', 'contents', 'letter', 'open', 'article', 'roll', 'file', 'sig', 'voices', 'full1', 'ten', 'little', 'duo', 'quote', 'film', 'day', 'world', 'guide', 'full2', 'promises', 'poster', 'movie', 'note', 'back'],
+      little: ['cover', 'contents', 'open', 'letter', 'roll', 'full1', 'file', 'day', 'duo', 'ten', 'film', 'guide', 'poster', 'quote', 'sig', 'little', 'full2', 'world', 'voices', 'quiz', 'promises', 'movie', 'note', 'back'],
+      tribute: ['cover', 'contents', 'open', 'article', 'letter', 'full1', 'roll', 'sig', 'quote', 'voices', 'little', 'ten', 'duo', 'film', 'world', 'full2', 'day', 'guide', 'promises', 'poster', 'file', 'movie', 'note', 'back'],
+      friends: ['cover', 'contents', 'open', 'article', 'roll', 'letter', 'file', 'quote', 'duo', 'ten', 'film', 'voices', 'day', 'little', 'guide', 'sig', 'full1', 'world', 'quiz', 'poster', 'promises', 'movie', 'note', 'back'],
+    };
+    const order = (ORDER[gentle ? 'tribute' : fam] || ORDER.celebration).filter(k => PG[k] !== undefined);
+    const TITLES = {
+      letter: mag.letterTitle || 'A letter for you', open: 'The cover story', ten: H.picks?.title, day: H.timeline?.title, little: H.letters?.title,
+      sig: H.sig?.title, voices: friendNotes.length ? 'Voices' : '', guide: H.facts?.title, world: H.world?.title,
+      roll: H.album?.title || (gentle ? `${first}, always` : `${first}, unfiltered`), promises: H.promises?.title, film: H.album?.filmTitle || 'Frame by frame', movie: 'Now showing',
+    };
+    const toc = order.map((k, i) => [i + 1, TITLES[k]]).filter(([, x]) => x).slice(0, 12);
+    PG.contents = ed('ed-contents', `${pic(slot(3, 1), 'ed-c-ph')}<div class="ed-c-col"><p class="ed-k">Inside this issue</p><h3>Inside</h3><ol class="ed-toc">${toc.map(([n, x]) => `<li><b>${n}</b><span>${t(x)}</span></li>`).join('')}</ol><p class="ed-c-note">Made for ${esc(who)}, with love.</p></div>`);
+    const editorial = order.map(k => PG[k]);
     return editorial.map((html, i) => i ? renum(html, i + 1) : html);
   }
 

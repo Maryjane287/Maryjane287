@@ -1104,3 +1104,9 @@
 .ed-pull-soft { margin: 2.6cqw 0 0; border-bottom: 0; padding: 2.4cqw 0 0; font-size: 3.8cqw; text-align: center; }
 .ed-woven .ed-hand { padding-top: 1.6cqw; font-size: 4.6cqw; }
 .ed-woven .ed-hand { display: none; }
+
+/* Pull out poster in the editorial look: fashion serif name, no sticker */
+.pg-poster .po-name { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -.03em; line-height: .84; top: 5cqw; text-shadow: 0 .4cqw 3cqw rgba(0,0,0,.28); }
+.pg-poster .po-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,8,12,.45), transparent 32%, transparent 70%, rgba(10,8,12,.55)); }
+.pg-poster .po-badge { width: auto; height: auto; border-radius: 0; background: none; color: #fff; right: 6cqw; bottom: 7cqw; text-align: right; display: block; font: italic 400 15cqw/.8 'Playfair Display', serif; text-shadow: 0 .4cqw 2.6cqw rgba(0,0,0,.35); }
+.pg-poster .po-badge small { font: 600 1.9cqw/1.4 'Outfit', sans-serif; letter-spacing: .3em; color: #ecd3ad; margin-top: 1cqw; }
