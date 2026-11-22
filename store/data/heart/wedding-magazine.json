@@ -4,27 +4,27 @@
     {
       "id": "s_knew",
       "chapter": "When we knew they were the ones",
-      "label": "When you knew they were meant to be",
+      "label": "When did you know, really know, they were meant for each other?",
       "example": "The day they ordered for each other without asking",
       "max": 80
     },
     {
       "id": "s_best",
       "chapter": "The best bit of the big day",
-      "label": "The best bit of the big day",
+      "label": "The best bit of the big day, the one you will still tell in twenty years",
       "example": "The speech that had the whole room in tears and stitches",
       "max": 80
     },
     {
       "id": "s_advice",
       "chapter": "Our advice for married life",
-      "label": "A little advice for married life",
+      "label": "The one piece of advice you would slip into their pocket",
       "example": "Never go to sleep on an argument or an empty stomach",
       "max": 80
     },
     {
       "id": "s_promise",
-      "label": "A wish for their future",
+      "label": "Your wish for the two of them, years from now",
       "example": "A lifetime of lie ins and dancing in the kitchen",
       "max": 70
     }
@@ -331,5 +331,50 @@
         "{secret}"
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "met"
+      ],
+      "text": "Long before the flowers and the seating plan, there was this. {met}. It is the kind of beginning that only makes sense looking back, and now it makes all the sense in the world."
+    },
+    {
+      "need": [
+        "s_knew"
+      ],
+      "text": "{from} knew before they did, of course. {s_knew}. Some people simply fit, and the rest of us just watch it happen."
+    },
+    {
+      "need": [
+        "secret"
+      ],
+      "text": "What they have is hard to put into words, so {from} tried anyway: {secret|low}. Every couple has a secret recipe. Theirs is the sweetest one going."
+    },
+    {
+      "need": [
+        "song"
+      ],
+      "text": "When the music starts it will be {song|low}, and for three minutes the whole room will go very quiet and very soft."
+    },
+    {
+      "need": [
+        "s_best"
+      ],
+      "text": "Ask anyone who was there about the day and you will hear the same thing first. {s_best}. Weddings are made of moments like that."
+    },
+    {
+      "need": [
+        "s_advice"
+      ],
+      "text": "As for married life, {from} has one piece of advice, and it is a good one. {s_advice}."
+    },
+    {
+      "need": [
+        "words"
+      ],
+      "text": "Three words for the two of them, said with a full heart: {words|low}. That is how they will be remembered, and how they will go on."
+    }
+  ],
+  "weaveTitle": "And so, {first}"
 }

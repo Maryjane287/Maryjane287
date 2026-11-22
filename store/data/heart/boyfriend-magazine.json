@@ -3,14 +3,14 @@
   "fields": [
     {
       "id": "s_first",
-      "label": "The first thing you noticed about him",
+      "label": "What did you notice about him first?",
       "example": "His laugh, before I even saw his face",
       "max": 70,
       "chapter": "The first time I saw you"
     },
     {
       "id": "s_fav",
-      "label": "When he is at his very best",
+      "label": "When is he at his absolute best?",
       "example": "Making breakfast for everyone, badly, with music on",
       "max": 70,
       "chapter": "My favourite version of you"
@@ -331,5 +331,44 @@
         "Five stars. Keeping him."
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "s_first"
+      ],
+      "text": "Before anything else there was this. {s_first}. {from} did not stand a chance."
+    },
+    {
+      "need": [
+        "date"
+      ],
+      "text": "The first date: {date|low}. It was not smooth. It did not need to be."
+    },
+    {
+      "need": [
+        "moment"
+      ],
+      "text": "Then one day it happened. {moment}. That was the moment {from} stopped pretending to be casual about it."
+    },
+    {
+      "need": [
+        "cute"
+      ],
+      "text": "Ask about his habits and you will get an eye roll, then a smile. {cute}. Officially annoying. Unofficially the best thing ever."
+    },
+    {
+      "need": [
+        "s_fav"
+      ],
+      "text": "He is at his very best like this: {s_fav|low}. If you have seen it, you understand."
+    },
+    {
+      "need": [
+        "s_secret"
+      ],
+      "text": "And one more thing, between us. {s_secret}. Do not tell him we told you."
+    }
+  ],
+  "weaveTitle": "The one and only {first}"
 }

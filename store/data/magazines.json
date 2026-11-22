@@ -756,43 +756,43 @@
     "fields": [
       {
         "id": "names",
-        "label": "Your two names",
+        "label": "The two of you, as you sign your cards",
         "example": "Chris & Emma",
         "max": 22
       },
       {
         "id": "years",
-        "label": "How many years together?",
+        "label": "How many years of you two?",
         "example": "5",
         "max": 3
       },
       {
         "id": "met",
-        "label": "How you met",
+        "label": "Tell us how it started. The real version, not the one you tell at parties",
         "example": "Arguing over the last croissant in a tiny bakery",
         "max": 90
       },
       {
         "id": "joke",
-        "label": "An inside joke",
+        "label": "The inside joke nobody else is allowed to understand",
         "example": "The Great Sofa Incident of 2021",
         "max": 60
       },
       {
         "id": "trip",
-        "label": "Your favourite trip or day together",
+        "label": "The day or trip you still talk about in bed at night",
         "example": "Getting lost in Lisbon and finding the best dinner of our lives",
         "max": 90
       },
       {
         "id": "love",
-        "label": "What you love most about them",
+        "label": "The tiny thing they do that makes you fall for them all over again",
         "example": "The way you laugh at your own jokes before the punchline",
         "max": 120
       },
       {
         "id": "message",
-        "label": "What do you wish you told them more often? (This becomes your letter)",
+        "label": "If you could only say one thing to them this year, what would it be? (This becomes your letter)",
         "example": "Five years and I would still choose you in every bakery, in every city, every single time.",
         "type": "textarea",
         "max": 400
@@ -2005,56 +2005,56 @@
     "fields": [
       {
         "id": "names",
-        "label": "The couple's names",
+        "label": "The happy couple, as their names will look on the cake",
         "example": "Emma & Leo",
         "max": 16
       },
       {
         "id": "year",
-        "label": "Wedding year",
+        "label": "The year they say I do",
         "example": "2026",
         "max": 4
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is this gift from? Your name, or all of you",
         "example": "All your friends",
         "max": 30
       },
       {
         "id": "met",
-        "label": "How they met",
+        "label": "How did these two find each other?",
         "example": "Spilled coffee on each other on a train",
         "max": 45
       },
       {
         "id": "song",
-        "label": "Their first dance song",
+        "label": "The song they will dance to first, or the one they should",
         "example": "A slow one they both pretended to know",
         "max": 45
       },
       {
         "id": "secret",
-        "label": "The secret to their love",
+        "label": "What do they have that everyone secretly wants?",
         "example": "Terrible jokes and endless snacks",
         "max": 40
       },
       {
         "id": "words",
-        "label": "Three words that are so them",
+        "label": "Three words you would whisper about them during the vows",
         "example": "Soppy, silly, soulmates",
         "max": 28
       },
       {
         "id": "moment",
-        "label": "The moment everyone cried",
+        "label": "The moment from the day that made everyone reach for a tissue",
         "example": "When Leo tried to read his vows and had to start again three times, and the whole room cheered him on",
         "type": "textarea",
         "max": 220
       },
       {
         "id": "message",
-        "label": "What do you want them to know as they start this new chapter? (This becomes your letter)",
+        "label": "What do you want them to carry into married life? (This becomes your letter)",
         "example": "Watching you two find each other has been one of the best stories we know. Here is to a lifetime of adventures, lie ins and dancing in the kitchen.",
         "type": "textarea",
         "max": 400
@@ -3971,56 +3971,56 @@
     "fields": [
       {
         "id": "names",
-        "label": "The couple's names",
+        "label": "The newly engaged pair",
         "example": "Mia & Sam",
         "max": 16
       },
       {
         "id": "year",
-        "label": "Year of the proposal",
+        "label": "The year of the big question",
         "example": "2026",
         "max": 4
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is sending all this love?",
         "example": "Your very excited friends",
         "max": 34
       },
       {
         "id": "where",
-        "label": "Where it happened",
+        "label": "Where exactly did the question get popped?",
         "example": "On top of a very windy hill",
         "max": 38
       },
       {
         "id": "nerves",
-        "label": "Nerves rating",
+        "label": "On a scale of calm to completely forgot their own name, how nervous were they?",
         "example": "Forgot own name, twice",
         "max": 34
       },
       {
         "id": "next",
-        "label": "What comes next",
+        "label": "What happens next, according to them (or according to you)",
         "example": "A wedding, then a nap",
         "max": 32
       },
       {
         "id": "words",
-        "label": "Three words that are so them",
+        "label": "Three words for how they looked the day the news broke",
         "example": "Giddy, gorgeous, glowing",
         "max": 28
       },
       {
         "id": "moment",
-        "label": "The proposal, as it happened",
+        "label": "Tell us the proposal like you are telling it at the wedding",
         "example": "Sam dropped the ring in the grass, spent five minutes searching on hands and knees, then proposed while still covered in mud",
         "type": "textarea",
         "max": 220
       },
       {
         "id": "message",
-        "label": "What do you want them to know as they start this new chapter? (This becomes your letter)",
+        "label": "What do you want them to know before the wedding madness begins? (This becomes your letter)",
         "example": "We have been waiting for this news for ages. Congratulations to two people who make each other shine. We cannot wait to celebrate you.",
         "type": "textarea",
         "max": 400
@@ -4766,56 +4766,56 @@
     "fields": [
       {
         "id": "name",
-        "label": "Their name",
+        "label": "Your Valentine's name, or what you actually call them",
         "example": "Leo",
         "max": 12
       },
       {
         "id": "years",
-        "label": "Years together",
+        "label": "How many years of being yours?",
         "example": "4",
         "max": 3
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "And you are...?",
         "example": "Mia",
         "max": 30
       },
       {
         "id": "date",
-        "label": "First date",
+        "label": "Your first date, honestly. Even the awkward bits",
         "example": "Mini golf, I lost on purpose",
         "max": 34
       },
       {
         "id": "cute",
-        "label": "Cutest habit",
+        "label": "The habit of theirs that melts you every single time",
         "example": "Humming while cooking",
         "max": 34
       },
       {
         "id": "song",
-        "label": "Our song",
+        "label": "The song that is secretly about the two of you",
         "example": "The one from the kitchen disco",
         "max": 34
       },
       {
         "id": "words",
-        "label": "Three words that are so them",
+        "label": "Three words you would write on their arm in pen",
         "example": "Mine, all mine",
         "max": 28
       },
       {
         "id": "moment",
-        "label": "The moment I knew",
+        "label": "The exact moment you knew. Where were you, what happened?",
         "example": "When you drove an hour in the rain to bring me soup and then fell asleep on the sofa before I could say thank you",
         "type": "textarea",
         "max": 220
       },
       {
         "id": "message",
-        "label": "What do you wish you told them more often? (This becomes your letter)",
+        "label": "What do you wish you said out loud more often? (This becomes your letter)",
         "example": "You make ordinary days feel like the best ones. Thank you for the laughs, the patience and the last biscuit. I love you more every year.",
         "type": "textarea",
         "max": 400
@@ -5563,56 +5563,56 @@
     "fields": [
       {
         "id": "names",
-        "label": "Their names",
+        "label": "The golden couple, the names the whole family calls them",
         "example": "Nana & Grandad",
         "max": 24
       },
       {
         "id": "years",
-        "label": "Years married",
+        "label": "How many years married?",
         "example": "50",
         "max": 3
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "Who is this from? Children, grandchildren, everyone",
         "example": "All your children and grandchildren",
         "max": 40
       },
       {
         "id": "married",
-        "label": "Year they married",
+        "label": "The year they married",
         "example": "1976",
         "max": 4
       },
       {
         "id": "met",
-        "label": "How they met",
+        "label": "How did they meet? The story they have told at every family dinner",
         "example": "At a dance, where he trod on her feet all night",
         "max": 80
       },
       {
         "id": "secret",
-        "label": "Their secret to a happy marriage",
+        "label": "What would they say is the secret, if you asked them over a cup of tea?",
         "example": "Never go to bed angry, and always share the biscuits",
         "max": 60
       },
       {
         "id": "words",
-        "label": "Three words that are so them",
+        "label": "Three words the whole family would use about them",
         "example": "Devoted, daft, golden",
         "max": 28
       },
       {
         "id": "moment",
-        "label": "The family story everyone still tells",
+        "label": "The family story that still makes everyone cry with laughter",
         "example": "The camping holiday when the tent blew away and you both laughed so hard you had to sit down in the rain",
         "type": "textarea",
         "max": 220
       },
       {
         "id": "message",
-        "label": "What have they shown you about love? (This becomes your letter)",
+        "label": "What have they taught you about love, just by living it? (This becomes your letter)",
         "example": "Thank you for showing us what love looks like. Everything good in this family started with the two of you. Happy anniversary.",
         "type": "textarea",
         "max": 400
@@ -6166,37 +6166,37 @@
     "fields": [
       {
         "id": "name",
-        "label": "His name",
+        "label": "His name, or the one only you get to use",
         "example": "Chris",
         "max": 12
       },
       {
         "id": "years",
-        "label": "Years together",
+        "label": "How long has he been yours?",
         "example": "3",
         "max": 3
       },
       {
         "id": "from",
-        "label": "Who is it from?",
+        "label": "And this is from...?",
         "example": "Mia",
         "max": 30
       },
       {
         "id": "date",
-        "label": "Your first date",
+        "label": "Your first date, including the part you would rather forget",
         "example": "Pizza, then a very long walk",
         "max": 34
       },
       {
         "id": "cute",
-        "label": "His cutest habit",
+        "label": "The habit of his you pretend to find annoying but secretly adore",
         "example": "Narrating what the cat is thinking",
         "max": 34
       },
       {
         "id": "song",
-        "label": "Your song",
+        "label": "The song you two always end up singing in the car",
         "example": "The one from the car, windows down",
         "max": 34
       },
@@ -6208,7 +6208,7 @@
       },
       {
         "id": "moment",
-        "label": "The moment you knew he was the one",
+        "label": "The moment you realised you were in real trouble, the falling kind",
         "example": "He remembered the name of my childhood teddy, months after I mentioned it once, and bought me a new one for my birthday",
         "max": 220,
         "type": "textarea"

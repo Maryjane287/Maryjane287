@@ -1,0 +1,159 @@
+{
+  "anniversary-magazine": {
+    "labels": {
+      "names": "The two of you, as you sign your cards",
+      "years": "How many years of you two?",
+      "met": "Tell us how it started. The real version, not the one you tell at parties",
+      "joke": "The inside joke nobody else is allowed to understand",
+      "trip": "The day or trip you still talk about in bed at night",
+      "love": "The tiny thing they do that makes you fall for them all over again",
+      "message": "If you could only say one thing to them this year, what would it be? (This becomes your letter)",
+      "s_first": "What caught your eye before you even knew their name?",
+      "s_ordinary": "Describe a perfectly ordinary day together, the kind you would never swap",
+      "s_tradition": "A little ritual that belongs only to you two",
+      "s_promise": "A promise for the year ahead, one you fully intend to keep"
+    },
+    "weaveTitle": "The story of {first}",
+    "weave": [
+      {"need": ["met"], "text": "Every love story has an opening scene, and theirs was not the stuff of films. {met}. Neither of them knew it yet. That ordinary moment was quietly rearranging the rest of their lives."},
+      {"need": ["s_first"], "text": "Ask what came first and the answer arrives without a pause. {s_first}. Some things you notice once. Some things you keep noticing for the rest of your life."},
+      {"need": ["years"], "text": "{years} years later, the details have only grown sweeter. There are a thousand cups of tea in there, a few slammed doors, far more apologies than anyone counted, and a love that got stronger every time it was tested."},
+      {"need": ["love"], "text": "If you want to know how love actually looks after all this time, it looks like this: {love|low}. Small enough to miss. Big enough to build a life on."},
+      {"need": ["joke"], "text": "Then there is {joke}. Do not ask. You will not get a straight answer, only two people trying very hard not to laugh."},
+      {"need": ["trip"], "text": "The memory they go back to most is this one. {trip}. Not because it was perfect, but because they were together for every second of it."},
+      {"need": ["s_ordinary"], "text": "Their idea of a perfect day is beautifully simple. {s_ordinary}. Nothing to prove, nowhere to be, nobody else they would rather be with."},
+      {"need": ["s_tradition"], "text": "And every week, without fail, there is {s_tradition|low}. Some traditions are passed down. The best ones you make up together."}
+    ]
+  },
+  "wedding-magazine": {
+    "labels": {
+      "names": "The happy couple, as their names will look on the cake",
+      "year": "The year they say I do",
+      "from": "Who is this gift from? Your name, or all of you",
+      "met": "How did these two find each other?",
+      "song": "The song they will dance to first, or the one they should",
+      "secret": "What do they have that everyone secretly wants?",
+      "words": "Three words you would whisper about them during the vows",
+      "moment": "The moment from the day that made everyone reach for a tissue",
+      "message": "What do you want them to carry into married life? (This becomes your letter)",
+      "s_knew": "When did you know, really know, they were meant for each other?",
+      "s_best": "The best bit of the big day, the one you will still tell in twenty years",
+      "s_advice": "The one piece of advice you would slip into their pocket",
+      "s_promise": "Your wish for the two of them, years from now"
+    },
+    "weaveTitle": "And so, {first}",
+    "weave": [
+      {"need": ["met"], "text": "Long before the flowers and the seating plan, there was this. {met}. It is the kind of beginning that only makes sense looking back, and now it makes all the sense in the world."},
+      {"need": ["s_knew"], "text": "{from} knew before they did, of course. {s_knew}. Some people simply fit, and the rest of us just watch it happen."},
+      {"need": ["secret"], "text": "What they have is hard to put into words, so {from} tried anyway: {secret|low}. Every couple has a secret recipe. Theirs is the sweetest one going."},
+      {"need": ["song"], "text": "When the music starts it will be {song|low}, and for three minutes the whole room will go very quiet and very soft."},
+      {"need": ["s_best"], "text": "Ask anyone who was there about the day and you will hear the same thing first. {s_best}. Weddings are made of moments like that."},
+      {"need": ["s_advice"], "text": "As for married life, {from} has one piece of advice, and it is a good one. {s_advice}."},
+      {"need": ["words"], "text": "Three words for the two of them, said with a full heart: {words|low}. That is how they will be remembered, and how they will go on."}
+    ]
+  },
+  "engagement-magazine": {
+    "labels": {
+      "names": "The newly engaged pair",
+      "year": "The year of the big question",
+      "from": "Who is sending all this love?",
+      "where": "Where exactly did the question get popped?",
+      "nerves": "On a scale of calm to completely forgot their own name, how nervous were they?",
+      "next": "What happens next, according to them (or according to you)",
+      "words": "Three words for how they looked the day the news broke",
+      "moment": "Tell us the proposal like you are telling it at the wedding",
+      "message": "What do you want them to know before the wedding madness begins? (This becomes your letter)",
+      "s_heard": "How did the news reach you, and what did you do?",
+      "s_knew": "The little thing that told you they were perfect together",
+      "s_guess": "Your bold prediction for the wedding day",
+      "s_promise": "A wish for the two of them"
+    },
+    "weaveTitle": "{first} said yes",
+    "weave": [
+      {"need": ["where"], "text": "It happened {where|low}. Not a bad spot to change your whole life, all things considered."},
+      {"need": ["moment"], "text": "Here is how it went, according to people who have heard it told a hundred times already. {moment}. It was not perfect. It was much better than perfect."},
+      {"need": ["nerves"], "text": "Nerves, you ask? {nerves}. Love makes fools of us all, and the best ones admit it."},
+      {"need": ["s_heard"], "text": "{from} found out like this: {s_heard|low}. There may have been screaming. There was definitely crying."},
+      {"need": ["s_knew"], "text": "Nobody was really surprised, though. {s_knew}. Some couples you just know about."},
+      {"need": ["next"], "text": "What comes next? {next}. In that order, ideally."},
+      {"need": ["s_guess"], "text": "And a prediction, for the record: {s_guess|low}. We will check back on the day."}
+    ]
+  },
+  "valentines-magazine": {
+    "labels": {
+      "name": "Your Valentine's name, or what you actually call them",
+      "years": "How many years of being yours?",
+      "from": "And you are...?",
+      "date": "Your first date, honestly. Even the awkward bits",
+      "cute": "The habit of theirs that melts you every single time",
+      "song": "The song that is secretly about the two of you",
+      "words": "Three words you would write on their arm in pen",
+      "moment": "The exact moment you knew. Where were you, what happened?",
+      "message": "What do you wish you said out loud more often? (This becomes your letter)",
+      "s_first": "What did you notice first, before anything else?",
+      "s_fav": "What does a perfect hour together look like?",
+      "s_secret": "Something only you know about them, the soft secret",
+      "s_promise": "A promise, small or huge, for this year"
+    },
+    "weaveTitle": "Be mine, {first}",
+    "weave": [
+      {"need": ["s_first"], "text": "{from} remembers the very first thing. {s_first}. It still works, by the way, every single time."},
+      {"need": ["date"], "text": "Their first date went like this: {date|low}. If you had told them then where it would lead, neither of them would have believed you."},
+      {"need": ["moment"], "text": "And then came the moment. {moment}. That was it. No going back, and no wanting to."},
+      {"need": ["cute"], "text": "These days the little things carry the most weight. {cute}. Nobody else would think twice about it. {from} thinks about it all the time."},
+      {"need": ["s_secret"], "text": "Here is something the rest of the world does not know: {s_secret|low}. Consider it shared with love, and with permission pending."},
+      {"need": ["s_fav"], "text": "The perfect hour? {s_fav}. That is the whole wish list."}
+    ]
+  },
+  "golden-anniversary-magazine": {
+    "labels": {
+      "names": "The golden couple, the names the whole family calls them",
+      "years": "How many years married?",
+      "from": "Who is this from? Children, grandchildren, everyone",
+      "married": "The year they married",
+      "met": "How did they meet? The story they have told at every family dinner",
+      "secret": "What would they say is the secret, if you asked them over a cup of tea?",
+      "words": "Three words the whole family would use about them",
+      "moment": "The family story that still makes everyone cry with laughter",
+      "message": "What have they taught you about love, just by living it? (This becomes your letter)",
+      "s_built": "The family they built, counted with pride",
+      "s_learned": "Something you only understood about love after watching them",
+      "s_promise": "A promise to them, from all of you"
+    },
+    "weaveTitle": "{years} golden years",
+    "weave": [
+      {"need": ["married"], "text": "In {married} two young people stood side by side and promised each other forever. They had no idea what forever would ask of them. They said yes anyway, and then they kept saying it, every single day."},
+      {"need": ["met"], "text": "It began like this: {met|low}. A small, funny start to something enormous."},
+      {"need": ["s_built"], "text": "Look at what they built. {s_built}. Every one of those people exists because two people chose each other and did not let go."},
+      {"need": ["secret"], "text": "Ask them the secret and they will laugh, then say it as though it is obvious. {secret}. Perhaps it is. Perhaps the hard part is doing it for {years} years."},
+      {"need": ["moment"], "text": "And there is always one story that gets told. {moment}. Every family has its legends. This one is theirs."},
+      {"need": ["s_learned"], "text": "The grandchildren will tell you the real lesson. {s_learned}. Nobody had to teach it. They just watched."}
+    ]
+  },
+  "boyfriend-magazine": {
+    "labels": {
+      "name": "His name, or the one only you get to use",
+      "years": "How long has he been yours?",
+      "from": "And this is from...?",
+      "date": "Your first date, including the part you would rather forget",
+      "cute": "The habit of his you pretend to find annoying but secretly adore",
+      "song": "The song you two always end up singing in the car",
+      "words": "Three words that are so him",
+      "moment": "The moment you realised you were in real trouble, the falling kind",
+      "message": "What do you wish you told him more often? (This becomes your letter)",
+      "s_first": "What did you notice about him first?",
+      "s_fav": "When is he at his absolute best?",
+      "s_secret": "Something only you know about him",
+      "s_promise": "A promise to him"
+    },
+    "weaveTitle": "The one and only {first}",
+    "weave": [
+      {"need": ["s_first"], "text": "Before anything else there was this. {s_first}. {from} did not stand a chance."},
+      {"need": ["date"], "text": "The first date: {date|low}. It was not smooth. It did not need to be."},
+      {"need": ["moment"], "text": "Then one day it happened. {moment}. That was the moment {from} stopped pretending to be casual about it."},
+      {"need": ["cute"], "text": "Ask about his habits and you will get an eye roll, then a smile. {cute}. Officially annoying. Unofficially the best thing ever."},
+      {"need": ["s_fav"], "text": "He is at his very best like this: {s_fav|low}. If you have seen it, you understand."},
+      {"need": ["s_secret"], "text": "And one more thing, between us. {s_secret}. Do not tell him we told you."}
+    ]
+  }
+}

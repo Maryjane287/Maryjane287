@@ -4,20 +4,20 @@
     {
       "id": "s_built",
       "chapter": "The family you built",
-      "label": "The family they built",
+      "label": "The family they built, counted with pride",
       "example": "Three children, six grandchildren and one very spoilt dog",
       "max": 80
     },
     {
       "id": "s_learned",
       "chapter": "What you taught us about love",
-      "label": "What they taught you about love",
+      "label": "Something you only understood about love after watching them",
       "example": "That love is a cup of tea brought without asking",
       "max": 80
     },
     {
       "id": "s_promise",
-      "label": "A promise to them",
+      "label": "A promise to them, from all of you",
       "example": "To visit more, and bring cake",
       "max": 70
     }
@@ -318,5 +318,44 @@
         "Still holding hands."
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "married"
+      ],
+      "text": "In {married} two young people stood side by side and promised each other forever. They had no idea what forever would ask of them. They said yes anyway, and then they kept saying it, every single day."
+    },
+    {
+      "need": [
+        "met"
+      ],
+      "text": "It began like this: {met|low}. A small, funny start to something enormous."
+    },
+    {
+      "need": [
+        "s_built"
+      ],
+      "text": "Look at what they built. {s_built}. Every one of those people exists because two people chose each other and did not let go."
+    },
+    {
+      "need": [
+        "secret"
+      ],
+      "text": "Ask them the secret and they will laugh, then say it as though it is obvious. {secret}. Perhaps it is. Perhaps the hard part is doing it for {years} years."
+    },
+    {
+      "need": [
+        "moment"
+      ],
+      "text": "And there is always one story that gets told. {moment}. Every family has its legends. This one is theirs."
+    },
+    {
+      "need": [
+        "s_learned"
+      ],
+      "text": "The grandchildren will tell you the real lesson. {s_learned}. Nobody had to teach it. They just watched."
+    }
+  ],
+  "weaveTitle": "{years} golden years"
 }

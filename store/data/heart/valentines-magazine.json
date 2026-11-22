@@ -4,27 +4,27 @@
     {
       "id": "s_first",
       "chapter": "The first time I saw you",
-      "label": "The first thing you noticed about them",
+      "label": "What did you notice first, before anything else?",
       "example": "That smile, across a very crowded room",
       "max": 70
     },
     {
       "id": "s_fav",
       "chapter": "My favourite thing to do with you",
-      "label": "Your favourite thing to do together",
+      "label": "What does a perfect hour together look like?",
       "example": "Lazy Sunday mornings and far too much coffee",
       "max": 70
     },
     {
       "id": "s_secret",
       "chapter": "A little secret about you",
-      "label": "Something only you know about them",
+      "label": "Something only you know about them, the soft secret",
       "example": "Cries at every single film with a dog in it",
       "max": 70
     },
     {
       "id": "s_promise",
-      "label": "A promise to them",
+      "label": "A promise, small or huge, for this year",
       "example": "To always let you have the last bite",
       "max": 70
     }
@@ -325,5 +325,44 @@
         "{words}"
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "s_first"
+      ],
+      "text": "{from} remembers the very first thing. {s_first}. It still works, by the way, every single time."
+    },
+    {
+      "need": [
+        "date"
+      ],
+      "text": "Their first date went like this: {date|low}. If you had told them then where it would lead, neither of them would have believed you."
+    },
+    {
+      "need": [
+        "moment"
+      ],
+      "text": "And then came the moment. {moment}. That was it. No going back, and no wanting to."
+    },
+    {
+      "need": [
+        "cute"
+      ],
+      "text": "These days the little things carry the most weight. {cute}. Nobody else would think twice about it. {from} thinks about it all the time."
+    },
+    {
+      "need": [
+        "s_secret"
+      ],
+      "text": "Here is something the rest of the world does not know: {s_secret|low}. Consider it shared with love, and with permission pending."
+    },
+    {
+      "need": [
+        "s_fav"
+      ],
+      "text": "The perfect hour? {s_fav}. That is the whole wish list."
+    }
+  ],
+  "weaveTitle": "Be mine, {first}"
 }

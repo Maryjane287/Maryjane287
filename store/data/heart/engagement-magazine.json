@@ -4,21 +4,21 @@
     {
       "id": "s_heard",
       "chapter": "How we heard the news",
-      "label": "How you heard the news",
+      "label": "How did the news reach you, and what did you do?",
       "example": "A blurry photo of a ring at two in the morning",
       "max": 80
     },
     {
       "id": "s_knew",
       "chapter": "We always knew because",
-      "label": "How you knew they were perfect together",
+      "label": "The little thing that told you they were perfect together",
       "example": "They share their chips, and nobody shares chips",
       "max": 80
     },
     {
       "id": "s_guess",
       "chapter": "Our wedding predictions",
-      "label": "Your prediction for the wedding",
+      "label": "Your bold prediction for the wedding day",
       "example": "Someone will cry before the first song even ends",
       "max": 80
     },
@@ -331,5 +331,50 @@
         ""
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "where"
+      ],
+      "text": "It happened {where|low}. Not a bad spot to change your whole life, all things considered."
+    },
+    {
+      "need": [
+        "moment"
+      ],
+      "text": "Here is how it went, according to people who have heard it told a hundred times already. {moment}. It was not perfect. It was much better than perfect."
+    },
+    {
+      "need": [
+        "nerves"
+      ],
+      "text": "Nerves, you ask? {nerves}. Love makes fools of us all, and the best ones admit it."
+    },
+    {
+      "need": [
+        "s_heard"
+      ],
+      "text": "{from} found out like this: {s_heard|low}. There may have been screaming. There was definitely crying."
+    },
+    {
+      "need": [
+        "s_knew"
+      ],
+      "text": "Nobody was really surprised, though. {s_knew}. Some couples you just know about."
+    },
+    {
+      "need": [
+        "next"
+      ],
+      "text": "What comes next? {next}. In that order, ideally."
+    },
+    {
+      "need": [
+        "s_guess"
+      ],
+      "text": "And a prediction, for the record: {s_guess|low}. We will check back on the day."
+    }
+  ],
+  "weaveTitle": "{first} said yes"
 }

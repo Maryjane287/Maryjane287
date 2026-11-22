@@ -4,27 +4,27 @@
     {
       "id": "s_first",
       "chapter": "The first thing I noticed",
-      "label": "The first thing you noticed about them",
+      "label": "What caught your eye before you even knew their name?",
       "example": "That laugh, from all the way across the room",
       "max": 70
     },
     {
       "id": "s_ordinary",
       "chapter": "Our perfect ordinary day",
-      "label": "Your perfect ordinary day together",
+      "label": "Describe a perfectly ordinary day together, the kind you would never swap",
       "example": "Coffee in bed, a long walk, then takeaway on the sofa",
       "max": 80
     },
     {
       "id": "s_tradition",
       "chapter": "A little tradition of ours",
-      "label": "A little tradition only you two have",
+      "label": "A little ritual that belongs only to you two",
       "example": "Pancakes every Sunday, no matter what",
       "max": 70
     },
     {
       "id": "s_promise",
-      "label": "A promise for the year ahead",
+      "label": "A promise for the year ahead, one you fully intend to keep",
       "example": "To always save you the last croissant",
       "max": 70
     }
@@ -332,5 +332,56 @@
         "Same people, a little wiser, even more in love."
       ]
     ]
-  }
+  },
+  "weave": [
+    {
+      "need": [
+        "met"
+      ],
+      "text": "Every love story has an opening scene, and theirs was not the stuff of films. {met}. Neither of them knew it yet. That ordinary moment was quietly rearranging the rest of their lives."
+    },
+    {
+      "need": [
+        "s_first"
+      ],
+      "text": "Ask what came first and the answer arrives without a pause. {s_first}. Some things you notice once. Some things you keep noticing for the rest of your life."
+    },
+    {
+      "need": [
+        "years"
+      ],
+      "text": "{years} years later, the details have only grown sweeter. There are a thousand cups of tea in there, a few slammed doors, far more apologies than anyone counted, and a love that got stronger every time it was tested."
+    },
+    {
+      "need": [
+        "love"
+      ],
+      "text": "If you want to know how love actually looks after all this time, it looks like this: {love|low}. Small enough to miss. Big enough to build a life on."
+    },
+    {
+      "need": [
+        "joke"
+      ],
+      "text": "Then there is {joke}. Do not ask. You will not get a straight answer, only two people trying very hard not to laugh."
+    },
+    {
+      "need": [
+        "trip"
+      ],
+      "text": "The memory they go back to most is this one. {trip}. Not because it was perfect, but because they were together for every second of it."
+    },
+    {
+      "need": [
+        "s_ordinary"
+      ],
+      "text": "Their idea of a perfect day is beautifully simple. {s_ordinary}. Nothing to prove, nowhere to be, nobody else they would rather be with."
+    },
+    {
+      "need": [
+        "s_tradition"
+      ],
+      "text": "And every week, without fail, there is {s_tradition|low}. Some traditions are passed down. The best ones you make up together."
+    }
+  ],
+  "weaveTitle": "The story of {first}"
 }
